@@ -1,1 +1,1 @@
-This is the documentation for RDA Agents
+This is the documentation for RDA Agent properties
