@@ -1,0 +1,2498 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
+@prefix status: <http://metadataregistry.org/uri/RegStatus/> .
+
+<http://metadataregistry.org/uri/RegStatus/1001>
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
+
+<http://rdaregistry.info/Elements/m/>
+    dc:title "RDA Manifestation properties"@en ;
+    skos:note "Properties derived from RDA elements and relationship designators with the domain of RDA Manifestation."@en .
+
+<http://rdaregistry.info/Elements/m/P30001>
+    reg:name "carrierType"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has carrier type"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60048> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/carrierType> ;
+    skos:definition "Relates a manifestation to a categorization reflecting the format of the storage medium and housing of a carrier in combination with the type of intermediation device required to view, play, run, etc., the content of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30002>
+    reg:name "mediaType"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has media type"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60050> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/mediaType> ;
+    skos:definition "Relates a manifestation to a categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30003>
+    reg:name "modeOfIssuance"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has mode of issuance"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60051> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/modeOfIssuance> ;
+    skos:definition "Relates a manifestation to a categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination."@en .
+
+<http://rdaregistry.info/Elements/m/P30004>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30065>, <http://rdaregistry.info/Elements/m/P30066> ;
+    reg:name "identifierForTheManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has identifier for the manifestation"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60052> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/identifierForTheManifestation> ;
+    skos:definition "Relates a manifestation to a character string associated with a manifestation that serves to differentiate that manifestation from other manifestations."@en .
+
+<http://rdaregistry.info/Elements/m/P30005>
+    reg:name "preferredCitation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has preferred citation"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60057> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/preferredCitation> ;
+    skos:definition "Relates a manifestation to a citation for a resource in the form preferred by a creator, publisher, custodian, indexing or abstracting service, etc."@en .
+
+<http://rdaregistry.info/Elements/m/P30006>
+    reg:name "regionalEncoding"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has regional encoding"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30124>, <http://rdaregistry.info/Elements/u/P60059> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/regionalEncoding> ;
+    skos:definition "Relates a manifestation to a code identifying the region of the world for which a videodisc has been encoded and preventing the disc from being played on a player sold in a different region."@en .
+
+<http://rdaregistry.info/Elements/m/P30007>
+    reg:name "copyrightDate"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has copyright date"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60069> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/copyrightDate> ;
+    skos:definition "Relates a manifestation to a date associated with a claim of protection under copyright or a similar regime."@en .
+
+<http://rdaregistry.info/Elements/m/P30008>
+    reg:name "dateOfDistribution"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has date of distribution"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60070> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/dateOfDistribution> ;
+    skos:definition "Relates a manifestation to a date associated with the distribution of a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30009>
+    reg:name "dateOfProduction"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has date of production"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60071> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/dateOfProduction> ;
+    skos:definition "Relates a manifestation to a date associated with the inscription, fabrication, construction, etc., of a resource in an unpublished form."@en .
+
+<http://rdaregistry.info/Elements/m/P30010>
+    reg:name "dateOfManufacture"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has date of manufacture"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60072> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/dateOfManufacture> ;
+    skos:definition "Relates a manifestation to a date associated with the printing, duplicating, casting, etc., of a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30011>
+    reg:name "dateOfPublication"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has date of publication"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60073> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/dateOfPublication> ;
+    skos:definition "Relates a manifestation to a date associated with the publication, release, or issuing of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30012>
+    reg:name "parallelDesignationOfANamedRevisionOfAnEdition"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel designation of a named revision of an edition"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60077> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelDesignationOfANamedRevisionOfAnEdition> ;
+    skos:definition "Relates a manifestation to a designation of a named revision of an edition in a language and/or script that differs from that recorded in the designation of a named revision of an edition element."@en .
+
+<http://rdaregistry.info/Elements/m/P30013>
+    reg:name "parallelDesignationOfEdition"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel designation of edition"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60078> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelDesignationOfEdition> ;
+    skos:definition "Relates a manifestation to a designation of edition in a language and/or script that differs from that recorded in the designation of edition element."@en .
+
+<http://rdaregistry.info/Elements/m/P30014>
+    reg:name "numberingWithinSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has numbering within series"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60081> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/numberingWithinSeries> ;
+    skos:definition "Relates a manifestation to a designation of the sequencing of a part or parts within a series. numbering within series may include a numeral, a letter, any other character, or the combination of these with or without an accompanying caption (volume, number, etc.) and/or a chronological designation."@en .
+
+<http://rdaregistry.info/Elements/m/P30015>
+    reg:name "numberingWithinSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has numbering within subseries"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60082> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/numberingWithinSubseries> ;
+    skos:definition "Relates a manifestation to a designation of the sequencing of a part or parts within a subseries. numbering within subseries may include a numeral, a letter, any other character, or the combination of these with or without an accompanying caption (volume, number, etc.) and/or a chronological designation."@en .
+
+<http://rdaregistry.info/Elements/m/P30016>
+    reg:name "electronicReproduction"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is electronic reproduction"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30039>, <http://rdaregistry.info/Elements/u/P60083> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30136> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/electronicReproduction> ;
+    skos:definition "Relates a manifestation to a digital manifestation resulting from the reproduction of an analog manifestation."@en .
+
+<http://rdaregistry.info/Elements/m/P30017>
+    reg:name "parallelDistributorsName"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel distributor's name"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60087> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelDistributorsName> ;
+    skos:definition "Relates a manifestation to a distributor’s name in a language and/or script that differs from that recorded in the distributor’s name element."@en .
+
+<http://rdaregistry.info/Elements/m/P30018>
+    reg:name "fileType"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has file type"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30124>, <http://rdaregistry.info/Elements/u/P60093> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/fileType> ;
+    skos:definition "Relates a manifestation to a general type of data content encoded in a computer file."@en .
+
+<http://rdaregistry.info/Elements/m/P30019>
+    reg:name "facsimileContainedIn"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is facsimile contained in"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30020>, <http://rdaregistry.info/Elements/u/P60100> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30046> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/facsimileContainedIn> ;
+    skos:definition "Relates a manifestation to a larger manifestation of which a part is a discrete component that exactly reproduces another manifestation embodying the same expression of a work."@en .
+
+<http://rdaregistry.info/Elements/m/P30020>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30019>, <http://rdaregistry.info/Elements/m/P30025>, <http://rdaregistry.info/Elements/m/P30101> ;
+    reg:name "containedInManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is contained in (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30213>, <http://rdaregistry.info/Elements/u/P60101> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30033> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/containedInManifestation> ;
+    skos:definition "Relates a manifestation to a larger manifestation of which a part is a discrete component."@en .
+
+<http://rdaregistry.info/Elements/m/P30021>
+    reg:name "preservationFacsimile"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is preservation facsimile"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30031>, <http://rdaregistry.info/Elements/u/P60179> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30045> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/preservationFacsimile> ;
+    skos:definition "Relates a manifestation to a manifestation consisting of an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper."@en .
+
+<http://rdaregistry.info/Elements/m/P30022>
+    reg:name "insert"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is insert"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30033>, <http://rdaregistry.info/Elements/u/P60183> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30025> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/insert> ;
+    skos:definition "Relates a manifestation to a manifestation consisting of separately issued material that is not an integral part of the larger manifestation into which it has been inserted."@en .
+
+<http://rdaregistry.info/Elements/m/P30023>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30032>, <http://rdaregistry.info/Elements/m/P30034>, <http://rdaregistry.info/Elements/m/P30041>, <http://rdaregistry.info/Elements/m/P30042>, <http://rdaregistry.info/Elements/m/P30044> ;
+    reg:name "descriptionOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is description of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30211>, <http://rdaregistry.info/Elements/u/P60190> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/descriptionOfManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation described by a describing entity."@en .
+
+<http://rdaregistry.info/Elements/m/P30024>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30026>, <http://rdaregistry.info/Elements/m/P30028>, <http://rdaregistry.info/Elements/m/P30039>, <http://rdaregistry.info/Elements/m/P30043> ;
+    reg:name "equivalentManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is equivalent manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30212>, <http://rdaregistry.info/Elements/u/P60191> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30024> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/equivalentManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation embodying the same expression of a work."@en .
+
+<http://rdaregistry.info/Elements/m/P30025>
+    reg:name "insertedIn"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is inserted in"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30020>, <http://rdaregistry.info/Elements/u/P60194> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30022> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/insertedIn> ;
+    skos:definition "Relates a manifestation to a manifestation into which material has been inserted that is not an integral part of the publication."@en .
+
+<http://rdaregistry.info/Elements/m/P30026>
+    reg:name "alsoIssuedAs"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is also issued as"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30024>, <http://rdaregistry.info/Elements/u/P60195> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30026> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/alsoIssuedAs> ;
+    skos:definition "Relates a manifestation to a manifestation issued in a different format embodying the same expression of a work as the resource being described."@en .
+
+<http://rdaregistry.info/Elements/m/P30027>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30035> ;
+    reg:name "accompaniedByManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is accompanied by (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30210>, <http://rdaregistry.info/Elements/u/P60196> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30027> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/accompaniedByManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation issued with another manifestation, without any relationship to its content."@en .
+
+<http://rdaregistry.info/Elements/m/P30028>
+    reg:name "mirrorSite"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is mirror site"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30024>, <http://rdaregistry.info/Elements/u/P60197> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30028> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/mirrorSite> ;
+    skos:definition "Relates a manifestation to a manifestation of a website that is an exact copy, used to reduce network traffic or improve the availability of the original site."@en .
+
+<http://rdaregistry.info/Elements/m/P30029>
+    reg:name "digitalTransfer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is digital transfer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30039>, <http://rdaregistry.info/Elements/u/P60200> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30040> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/digitalTransfer> ;
+    skos:definition "Relates a manifestation to a manifestation resulting from the transfer of a resource from one digital format to another."@en .
+
+<http://rdaregistry.info/Elements/m/P30030>
+    reg:name "specialIssue"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is special issue"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30033>, <http://rdaregistry.info/Elements/u/P60207> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30101> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/specialIssue> ;
+    skos:definition "Relates a manifestation to a manifestation that consists of a single issue or a supplementary section of a serial or newspaper devoted to a special subject."@en .
+
+<http://rdaregistry.info/Elements/m/P30031>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30021> ;
+    reg:name "facsimile"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is facsimile"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30039>, <http://rdaregistry.info/Elements/u/P60217> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30047> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/facsimile> ;
+    skos:definition "Relates a manifestation to a manifestation that exactly reproduces another manifestation embodying the same expression of a work."@en .
+
+<http://rdaregistry.info/Elements/m/P30032>
+    reg:name "analysisOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is analysis of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30023>, <http://rdaregistry.info/Elements/u/P60239> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/analysisOfManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation that has been examined to identify its components and their relations."@en .
+
+<http://rdaregistry.info/Elements/m/P30033>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30022>, <http://rdaregistry.info/Elements/m/P30030>, <http://rdaregistry.info/Elements/m/P30046> ;
+    reg:name "containsManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is contains (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30213>, <http://rdaregistry.info/Elements/u/P60249> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30020> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/containsManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation that is a discrete component of a larger entity."@en .
+
+<http://rdaregistry.info/Elements/m/P30034>
+    reg:name "evaluationOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is evaluation of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30023>, <http://rdaregistry.info/Elements/u/P60255> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/evaluationOfManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation that is examined or judged."@en .
+
+<http://rdaregistry.info/Elements/m/P30035>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30036>, <http://rdaregistry.info/Elements/m/P30037> ;
+    reg:name "issuedWith"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is issued with"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30027>, <http://rdaregistry.info/Elements/u/P60256> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30035> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/issuedWith> ;
+    skos:definition "Relates a manifestation to a manifestation that is issued on the same carrier as the manifestation being described."@en .
+
+<http://rdaregistry.info/Elements/m/P30036>
+    reg:name "onDiscWithManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is on disc with (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30035>, <http://rdaregistry.info/Elements/u/P60257> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30036> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/onDiscWithManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation that is issued on the same disc with the manifestation being described."@en .
+
+<http://rdaregistry.info/Elements/m/P30037>
+    reg:name "filmedWithManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is filmed with (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30035>, <http://rdaregistry.info/Elements/u/P60258> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30037> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/filmedWithManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation that is issued on the same microform with the manifestation being described."@en .
+
+<http://rdaregistry.info/Elements/m/P30038>
+    reg:name "reprintedAs"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is reprinted as"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30039>, <http://rdaregistry.info/Elements/u/P60271> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30093> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/reprintedAs> ;
+    skos:definition "Relates a manifestation to a manifestation that reissues the same expression of the work as the printed resource being described."@en .
+
+<http://rdaregistry.info/Elements/m/P30039>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30016>, <http://rdaregistry.info/Elements/m/P30029>, <http://rdaregistry.info/Elements/m/P30031>, <http://rdaregistry.info/Elements/m/P30038> ;
+    reg:name "reproducedAs"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is reproduced as"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30024>, <http://rdaregistry.info/Elements/u/P60272> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30043> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/reproducedAs> ;
+    skos:definition "Relates a manifestation to a manifestation that reproduces another manifestation embodying the same expression of a work."@en .
+
+<http://rdaregistry.info/Elements/m/P30040>
+    reg:name "digitalTransferManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is digital transfer of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30043>, <http://rdaregistry.info/Elements/u/P60287> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30029> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/digitalTransferManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation transferred from one digital format to another."@en .
+
+<http://rdaregistry.info/Elements/m/P30041>
+    reg:name "reviewOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is review of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30023>, <http://rdaregistry.info/Elements/u/P60288> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/reviewOfManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation used as the basis for a brief evaluation."@en .
+
+<http://rdaregistry.info/Elements/m/P30042>
+    reg:name "critiqueOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is critique of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30023>, <http://rdaregistry.info/Elements/u/P60292> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/critiqueOfManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation used as the basis for a critical evaluation."@en .
+
+<http://rdaregistry.info/Elements/m/P30043>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30040>, <http://rdaregistry.info/Elements/m/P30047>, <http://rdaregistry.info/Elements/m/P30093>, <http://rdaregistry.info/Elements/m/P30136> ;
+    reg:name "reproductionOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is reproduction of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30024>, <http://rdaregistry.info/Elements/u/P60297> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30039> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/reproductionOfManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation used as the basis for a reproduction."@en .
+
+<http://rdaregistry.info/Elements/m/P30044>
+    reg:name "commentaryOnManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is commentary on (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30023>, <http://rdaregistry.info/Elements/u/P60298> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/commentaryOnManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation used as the basis for a set of explanatory or critical notes."@en .
+
+<http://rdaregistry.info/Elements/m/P30045>
+    reg:name "preservationFacsimileOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is preservation facsimile of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30047>, <http://rdaregistry.info/Elements/u/P60299> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30021> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/preservationFacsimileOfManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation used as the basis for an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper."@en .
+
+<http://rdaregistry.info/Elements/m/P30046>
+    reg:name "containsFacsimileOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is contains facsimile of"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30033>, <http://rdaregistry.info/Elements/u/P60300> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30019> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/containsFacsimileOf> ;
+    skos:definition "Relates a manifestation to a manifestation used as the basis for an exact reproduction that is a discrete component of a larger entity."@en .
+
+<http://rdaregistry.info/Elements/m/P30047>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30045> ;
+    reg:name "facsimileOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is facsimile of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30043>, <http://rdaregistry.info/Elements/u/P60301> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30031> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/facsimileOfManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation used as the basis for an exact reproduction."@en .
+
+<http://rdaregistry.info/Elements/m/P30048>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30210>, <http://rdaregistry.info/Elements/m/P30211>, <http://rdaregistry.info/Elements/m/P30212>, <http://rdaregistry.info/Elements/m/P30213> ;
+    reg:name "relatedManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has related manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60313> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30048> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/relatedManifestation> ;
+    skos:definition "Relates a manifestation to a manifestation, represented by an identifier or a description, that is related to the resource being described (e.g., a manifestation in a different format)."@en .
+
+<http://rdaregistry.info/Elements/m/P30049>
+    reg:name "parallelManufacturersName"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel manufacturer's name"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60108> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelManufacturersName> ;
+    skos:definition "Relates a manifestation to a manufacturer’s name in a language and/or script that differs from that recorded in the manufacturer’s name element."@en .
+
+<http://rdaregistry.info/Elements/m/P30050>
+    reg:name "noteOnIssuePartOrIterationUsedAsTheBasisForIdentificationOfTheResource"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on issue, part, or iteration used as the basis for identification of the resource"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60122> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnIssuePartOrIterationUsedAsTheBasisForIdentificationOfTheResource> ;
+    skos:definition "Relates a manifestation to a note identifying the issue or part of a multipart monograph or serial, or the iteration of an integrating resource that has been used as the basis for the identification of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30051>
+    reg:name "noteOnChangesInCarrierCharacteristics"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on changes in carrier characteristics"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60124> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnChangesInCarrierCharacteristics> ;
+    skos:definition "Relates a manifestation to a note on changes in the characteristics of the carrier that occur in subsequent issues or parts of a resource issued in successive parts or between iterations of an integrating resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30052>
+    reg:name "noteOnDistributionStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on distribution statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60125> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnDistributionStatement> ;
+    skos:definition "Relates a manifestation to a note providing details on place of distribution, distributor, or date of distribution, or information on changes in the place of distribution, distributor, or distributor’s name."@en .
+
+<http://rdaregistry.info/Elements/m/P30053>
+    reg:name "noteOnManufactureStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on manufacture statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60126> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnManufactureStatement> ;
+    skos:definition "Relates a manifestation to a note providing details on place of manufacture, manufacturer, or date of manufacture, or information on changes in the place of manufacture, manufacturer, or manufacturer’s name."@en .
+
+<http://rdaregistry.info/Elements/m/P30054>
+    reg:name "noteOnProductionStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on production statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60127> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnProductionStatement> ;
+    skos:definition "Relates a manifestation to a note providing details on place of production, producer, or date of production, or information on changes in the place of production, producer, or producer’s name."@en .
+
+<http://rdaregistry.info/Elements/m/P30055>
+    reg:name "noteOnPublicationStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on publication statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60128> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnPublicationStatement> ;
+    skos:definition "Relates a manifestation to a note providing details on place of publication, publisher, or date of publication, information on changes in the place of publication, publisher, or publisher’s name, or on suspension of publication."@en .
+
+<http://rdaregistry.info/Elements/m/P30056>
+    reg:name "noteOnFrequency"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on frequency"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60129> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnFrequency> ;
+    skos:definition "Relates a manifestation to a note providing details on the currency of the contents, on the frequency of release of issues or parts of a serial or the frequency of updates to an integrating resource, or on changes in frequency."@en .
+
+<http://rdaregistry.info/Elements/m/P30057>
+    reg:name "noteOnStatementOfResponsibility"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on statement of responsibility"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60130> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnStatementOfResponsibility> ;
+    skos:definition "Relates a manifestation to a note providing information on a person, family, or corporate body not named in a statement of responsibility to whom responsibility for the intellectual or artistic content of the resource has been attributed, on variant forms of names appearing in the resource, on changes in statements of responsibility, or on other details relating to a statement of responsibility."@en .
+
+<http://rdaregistry.info/Elements/m/P30058>
+    reg:name "noteOnSeriesStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on series statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60131> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnSeriesStatement> ;
+    skos:definition "Relates a manifestation to a note providing information on complex series statements, incorrect numbering within series, or changes in series statements."@en .
+
+<http://rdaregistry.info/Elements/m/P30059>
+    reg:name "noteOnCopyrightDate"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on copyright date"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60132> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnCopyrightDate> ;
+    skos:definition "Relates a manifestation to a note providing information on copyright dates not recorded as part of the copyright date element."@en .
+
+<http://rdaregistry.info/Elements/m/P30060>
+    reg:name "noteOnDimensionsOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on dimensions of manifestation"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60133> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnDimensionsOfManifestation> ;
+    skos:definition "Relates a manifestation to a note providing information on the dimensions of a manifestation that is not recorded as part of the dimensions element."@en .
+
+<http://rdaregistry.info/Elements/m/P30061>
+    reg:name "noteOnExtentOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on extent of manifestation"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60134> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnExtentOfManifestation> ;
+    skos:definition "Relates a manifestation to a note providing information on the extent of a manifestation that is not recorded as part of the extent element."@en .
+
+<http://rdaregistry.info/Elements/m/P30062>
+    reg:name "noteOnNumberingOfSerials"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on numbering of serials"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60135> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnNumberingOfSerials> ;
+    skos:definition "Relates a manifestation to a note providing information on the numbering of the first and/or last issue or part, on complex or irregular numbering (including numbering errors), or on the period covered by a volume, issue, part, etc."@en .
+
+<http://rdaregistry.info/Elements/m/P30063>
+    reg:name "noteOnTitle"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on title"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60136> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnTitle> ;
+    skos:definition "Relates a manifestation to a note providing information on the source from which a title was taken, the date the title was viewed, variations in titles, inaccuracies, deletions, etc., or other information relating to a title."@en .
+
+<http://rdaregistry.info/Elements/m/P30064>
+    reg:name "noteOnEditionStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on edition statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137>, <http://rdaregistry.info/Elements/u/P60137> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnEditionStatement> ;
+    skos:definition "Relates a manifestation to a note providing information on the source of an edition statement, on edition statements relating to issues, parts, etc., on changes in edition statements, or other information relating to an edition statement."@en .
+
+<http://rdaregistry.info/Elements/m/P30065>
+    reg:name "publishersNumberForMusic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has publisher's number for music"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30004>, <http://rdaregistry.info/Elements/u/P60139> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/publishersNumberForMusic> ;
+    skos:definition "Relates a manifestation to a numbering designation assigned to a resource by a music publisher, appearing normally only on the title page, the cover, and/or the first page of music."@en .
+
+<http://rdaregistry.info/Elements/m/P30066>
+    reg:name "plateNumberForMusic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has plate number for music"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30004>, <http://rdaregistry.info/Elements/u/P60140> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/plateNumberForMusic> ;
+    skos:definition "Relates a manifestation to a numbering designation assigned to a resource by a music publisher."@en ;
+    skos:scopeNote "The number is usually printed at the bottom of each page, and sometimes also appears on the title page."@en .
+
+<http://rdaregistry.info/Elements/m/P30067>
+    reg:name "broadcaster"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has broadcaster"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30083>, <http://rdaregistry.info/Elements/u/P60407> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50168> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/broadcaster> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in broadcasting a manifestation to an audience via radio, television, webcast, etc."@en .
+
+<http://rdaregistry.info/Elements/m/P30068>
+    reg:name "filmDistributor"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has film distributor"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30080>, <http://rdaregistry.info/Elements/u/P60408> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50169> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/filmDistributor> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in distributing a moving image manifestation to theatres or other distribution channels."@en .
+
+<http://rdaregistry.info/Elements/m/P30069>
+    reg:name "bookDesigner"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has book designer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60409> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50170> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/bookDesigner> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by being responsible for the entire graphic design of a book, including arrangement of type and illustration, choice of materials, and process used."@en .
+
+<http://rdaregistry.info/Elements/m/P30070>
+    reg:name "engraver"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has engraver"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60410> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50171> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/engraver> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by cutting letters, figures, etc., on a surface such as a wooden or metal plate used for printing."@en .
+
+<http://rdaregistry.info/Elements/m/P30071>
+    reg:name "brailleEmbosser"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has braille embosser"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60411> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50172> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/brailleEmbosser> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by embossing braille cells using a stylus, special embossing printer, or other device."@en .
+
+<http://rdaregistry.info/Elements/m/P30072>
+    reg:name "printmaker"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has printmaker"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60412> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50173> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/printmaker> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by making a relief, intaglio, or planographic printing surface."@en .
+
+<http://rdaregistry.info/Elements/m/P30073>
+    reg:name "caster"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has caster"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60413> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50174> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/caster> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by pouring a liquid or molten substance into a mold and leaving it to solidify to take the shape of the mold."@en .
+
+<http://rdaregistry.info/Elements/m/P30074>
+    reg:name "lithographer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has lithographer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60414> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50175> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/lithographer> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by preparing a stone or plate for lithographic printing, including a graphic artist creating a design directly on the surface from which printing will be done."@en .
+
+<http://rdaregistry.info/Elements/m/P30075>
+    reg:name "platemaker"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has platemaker"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60415> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50176> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/platemaker> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by preparing plates used in the production of printed images and/or text."@en .
+
+<http://rdaregistry.info/Elements/m/P30076>
+    reg:name "etcher"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has etcher"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60416> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50177> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/etcher> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by subjecting metal, glass, or some other surface used for printing, to acid or another corrosive substance."@en .
+
+<http://rdaregistry.info/Elements/m/P30077>
+    reg:name "collotyper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has collotyper"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60417> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50178> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/collotyper> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation of photographic prints from film or other colloid that has ink-receptive and ink-repellent surfaces."@en .
+
+<http://rdaregistry.info/Elements/m/P30078>
+    reg:name "printer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has printer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/u/P60418> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50179> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/printer> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation of printed text, notated music, etc., from type or plates, such as a book, newspaper, magazine, broadside, score, etc."@en .
+
+<http://rdaregistry.info/Elements/m/P30079>
+    reg:name "otherPFCManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has other person, family, or corporate body associated with a manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60374> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50181> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/otherPFCManifestation> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body other than a producer, publisher, distributor or manufacturer associated with a manifestation."@en ;
+    skos:scopeNote "Includes book designers, platemakers, etc."@en .
+
+<http://rdaregistry.info/Elements/m/P30080>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30068> ;
+    reg:name "distributor"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has distributor"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60438> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50199> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/distributor> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body responsible for distributing a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30081>
+    reg:name "producerOfAnUnpublishedResource"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has producer of an unpublished resource"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60440> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50200> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/producerOfAnUnpublishedResource> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body responsible for inscribing, fabricating, constructing, etc., a resource in an unpublished form."@en .
+
+<http://rdaregistry.info/Elements/m/P30082>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30069>, <http://rdaregistry.info/Elements/m/P30070>, <http://rdaregistry.info/Elements/m/P30071>, <http://rdaregistry.info/Elements/m/P30072>, <http://rdaregistry.info/Elements/m/P30073>, <http://rdaregistry.info/Elements/m/P30074>, <http://rdaregistry.info/Elements/m/P30075>, <http://rdaregistry.info/Elements/m/P30076>, <http://rdaregistry.info/Elements/m/P30077>, <http://rdaregistry.info/Elements/m/P30078> ;
+    reg:name "manufacturer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has manufacturer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60443> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50202> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/manufacturer> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body responsible for printing, duplicating, casting, etc., a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30083>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30067> ;
+    reg:name "publisher"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has publisher"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60444> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50203> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/publisher> ;
+    skos:definition "Relates a manifestation to a person, family, or corporate body responsible for publishing, releasing, or issuing a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30084>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30122> ;
+    reg:name "appliedMaterial"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has applied material"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60159> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/appliedMaterial> ;
+    skos:definition "Relates a manifestation to a physical or chemical substance applied to a base material of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30085>
+    reg:name "placeOfDistribution"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has place of distribution"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60160> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/placeOfDistribution> ;
+    skos:definition "Relates a manifestation to a place associated with the distribution of a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30086>
+    reg:name "placeOfProduction"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has place of production"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60161> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/placeOfProduction> ;
+    skos:definition "Relates a manifestation to a place associated with the inscription, fabrication, construction, etc., of a resource in an unpublished form."@en .
+
+<http://rdaregistry.info/Elements/m/P30087>
+    reg:name "placeOfManufacture"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has place of manufacture"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60162> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/placeOfManufacture> ;
+    skos:definition "Relates a manifestation to a place associated with the printing, duplicating, casting, etc., of a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30088>
+    reg:name "placeOfPublication"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has place of publication"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60163> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/placeOfPublication> ;
+    skos:definition "Relates a manifestation to a place associated with the publication, release, or issuing of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30089>
+    reg:name "parallelPlaceOfDistribution"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel place of distribution"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60164> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelPlaceOfDistribution> ;
+    skos:definition "Relates a manifestation to a place of distribution in a language and/or script that differs from that recorded in the place of distribution element."@en .
+
+<http://rdaregistry.info/Elements/m/P30090>
+    reg:name "parallelPlaceOfManufacture"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel place of manufacture"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60165> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelPlaceOfManufacture> ;
+    skos:definition "Relates a manifestation to a place of manufacture in a language and/or script that differs from that recorded in the place of manufacture element."@en .
+
+<http://rdaregistry.info/Elements/m/P30091>
+    reg:name "parallelPlaceOfProduction"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel place of production"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60166> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelPlaceOfProduction> ;
+    skos:definition "Relates a manifestation to a place of production in a language and/or script that differs from that recorded in the place of production element."@en .
+
+<http://rdaregistry.info/Elements/m/P30092>
+    reg:name "parallelPlaceOfPublication"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel place of publication"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60167> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelPlaceOfPublication> ;
+    skos:definition "Relates a manifestation to a place of publication in a language and/or script that differs from that recorded in the place of publication element."@en .
+
+<http://rdaregistry.info/Elements/m/P30093>
+    reg:name "reprintOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is reprint of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30043>, <http://rdaregistry.info/Elements/u/P60168> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30038> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/reprintOfManifestation> ;
+    skos:definition "Relates a manifestation to a printed manifestation that is used as the basis for a reissue with the same content as the resource being described."@en .
+
+<http://rdaregistry.info/Elements/m/P30094>
+    reg:name "parallelProducersName"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel producer's name"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60172> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelProducersName> ;
+    skos:definition "Relates a manifestation to a producer’s name in a language and/or script that differs from that recorded in the producer’s name element."@en .
+
+<http://rdaregistry.info/Elements/m/P30095>
+    reg:name "parallelPublishersName"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel publisher's name"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60173> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelPublishersName> ;
+    skos:definition "Relates a manifestation to a publisher’s name in a language and/or script that differs from that recorded in the publisher’s name element."@en .
+
+<http://rdaregistry.info/Elements/m/P30096>
+    reg:name "encodingFormat"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has encoding format"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30124>, <http://rdaregistry.info/Elements/u/P60314> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/encodingFormat> ;
+    skos:definition "Relates a manifestation to a schema, standard, etc., used to encode the digital content of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30097>
+    reg:name "alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has alternative numeric and/or alphabetic designation of first issue or part of sequence"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30165>, <http://rdaregistry.info/Elements/u/P60499> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence> ;
+    skos:definition "Relates a manifestation to a second or subsequent system of numbering presented in numeric and/or alphabetic form on the first issue or part of a sequence of numbering for a serial."@en .
+
+<http://rdaregistry.info/Elements/m/P30098>
+    reg:name "alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has alternative numeric and/or alphabetic designation of last issue or part of sequence"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30165>, <http://rdaregistry.info/Elements/u/P60500> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence> ;
+    skos:definition "Relates a manifestation to a second or subsequent system of numbering presented in numeric and/or alphabetic form on the last issue or part of a sequence of numbering for a serial."@en .
+
+<http://rdaregistry.info/Elements/m/P30099>
+    reg:name "alternativeChronologicalDesignationOfFirstIssueOrPartOfSequence"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has alternative chronological designation of first issue or part of sequence"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30165>, <http://rdaregistry.info/Elements/u/P60501> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/alternativeChronologicalDesignationOfFirstIssueOrPartOfSequence> ;
+    skos:definition "Relates a manifestation to a second or subsequent system of numbering presented in the form of a date (e.g., a year; year and month; month, day, and year) on the first issue or part of a sequence of numbering for a serial."@en .
+
+<http://rdaregistry.info/Elements/m/P30100>
+    reg:name "alternativeChronologicalDesignationOfLastIssueOrPartOfSequence"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has alternative chronological designation of last issue or part of sequence"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30165>, <http://rdaregistry.info/Elements/u/P60502> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/alternativeChronologicalDesignationOfLastIssueOrPartOfSequence> ;
+    skos:definition "Relates a manifestation to a second or subsequent system of numbering presented in the form of a date (e.g., a year; year and month; month, day, and year) on the last issue or part of a sequence of numbering for a serial."@en .
+
+<http://rdaregistry.info/Elements/m/P30101>
+    reg:name "specialIssueOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is special issue of"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30020>, <http://rdaregistry.info/Elements/u/P60317> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30030> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/specialIssueOf> ;
+    skos:definition "Relates a manifestation to a serial or newspaper containing a single issue or a supplementary section devoted to a special subject, with or without serial numbering, such as an anniversary number of a periodical or newspaper."@en .
+
+<http://rdaregistry.info/Elements/m/P30102>
+    reg:name "digitalRepresentationOfCartographicContent"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has digital representation of cartographic content"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30124>, <http://rdaregistry.info/Elements/u/P60323> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/digitalRepresentationOfCartographicContent> ;
+    skos:definition "Relates a manifestation to a set of technical details relating to the encoding of geospatial information in a cartographic resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30103>
+    reg:name "exemplarOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has exemplar of manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/P40049> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/exemplarOfManifestation> ;
+    skos:definition "Relates a manifestation to a single exemplar or instance of a manifestation."@en .
+
+<http://rdaregistry.info/Elements/m/P30104>
+    reg:name "videoFormat"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has video format"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30126>, <http://rdaregistry.info/Elements/u/P60326> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/videoFormat> ;
+    skos:definition "Relates a manifestation to a standard, etc., used to encode the analog video content of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30105>
+    reg:name "statementOfResponsibilityRelatingToTitleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has statement of responsibility relating to title proper"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30117>, <http://rdaregistry.info/Elements/u/P60327> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToTitleProper> ;
+    skos:definition "Relates a manifestation to a statement associated with the title proper of a resource that relates to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the realization of, the intellectual or artistic content of the resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30106>
+    reg:name "seriesStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has series statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60328> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/seriesStatement> ;
+    skos:definition "Relates a manifestation to a statement identifying a series to which a resource belongs and the numbering of the resource within the series."@en ;
+    skos:scopeNote "A series statement may also include information identifying one or more subseries to which the resource being described belongs."@en .
+
+<http://rdaregistry.info/Elements/m/P30107>
+    reg:name "editionStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has edition statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60329> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/editionStatement> ;
+    skos:definition "Relates a manifestation to a statement identifying the edition to which a resource belongs."@en .
+
+<http://rdaregistry.info/Elements/m/P30108>
+    reg:name "distributionStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has distribution statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60330> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/distributionStatement> ;
+    skos:definition "Relates a manifestation to a statement identifying the place or places of distribution, distributor or distributors, and date or dates of distribution of a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30109>
+    reg:name "manufactureStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has manufacture statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60331> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/manufactureStatement> ;
+    skos:definition "Relates a manifestation to a statement identifying the place or places of manufacture, manufacturer or manufacturers, and date or dates of manufacture of a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30110>
+    reg:name "productionStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has production statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60332> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/productionStatement> ;
+    skos:definition "Relates a manifestation to a statement identifying the place or places of production, producer or producers, and date or dates of production of a resource in an unpublished form."@en .
+
+<http://rdaregistry.info/Elements/m/P30111>
+    reg:name "publicationStatement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has publication statement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60333> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/publicationStatement> ;
+    skos:definition "Relates a manifestation to a statement identifying the place or places of publication, publisher or publishers, and date or dates of publication of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30112>
+    reg:name "parallelStatementOfResponsibilityRelatingToANamedRevisionOfAnEdition"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel statement of responsibility relating to a named revision of an edition"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60334> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToANamedRevisionOfAnEdition> ;
+    skos:definition "Relates a manifestation to a statement of responsibility relating to a named revision of an edition in a language and/or script that differs from that recorded in the statement of responsibility relating to a named revision of an edition element."@en .
+
+<http://rdaregistry.info/Elements/m/P30113>
+    reg:name "parallelStatementOfResponsibilityRelatingToSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel statement of responsibility relating to series"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60335> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToSeries> ;
+    skos:definition "Relates a manifestation to a statement of responsibility relating to series in a language and/or script that differs from that recorded in the statement of responsibility relating to series element."@en .
+
+<http://rdaregistry.info/Elements/m/P30114>
+    reg:name "parallelStatementOfResponsibilityRelatingToSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel statement of responsibility relating to subseries"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60336> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToSubseries> ;
+    skos:definition "Relates a manifestation to a statement of responsibility relating to subseries in a language and/or script that differs from that recorded in the statement of responsibility relating to subseries element."@en .
+
+<http://rdaregistry.info/Elements/m/P30115>
+    reg:name "parallelStatementOfResponsibilityRelatingToTheEdition"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel statement of responsibility relating to the edition"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60337> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToTheEdition> ;
+    skos:definition "Relates a manifestation to a statement of responsibility relating to the edition in a language and/or script that differs from that recorded in the statement of responsibility relating to the edition element."@en .
+
+<http://rdaregistry.info/Elements/m/P30116>
+    reg:name "parallelStatementOfResponsibilityRelatingToTitleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel statement of responsibility relating to title proper"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30117>, <http://rdaregistry.info/Elements/u/P60338> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToTitleProper> ;
+    skos:definition "Relates a manifestation to a statement of responsibility relating to title proper in a language and/or script that differs from that recorded in the statement of responsibility relating to title proper element."@en .
+
+<http://rdaregistry.info/Elements/m/P30117>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30105>, <http://rdaregistry.info/Elements/m/P30116> ;
+    reg:name "statementOfResponsibility"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has statement of responsibility"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60339> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/statementOfResponsibility> ;
+    skos:definition "Relates a manifestation to a statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the realization of, the intellectual or artistic content of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30118>
+    reg:name "statementOfResponsibilityRelatingToANamedRevisionOfAnEdition"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has statement of responsibility relating to a named revision of an edition"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60340> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToANamedRevisionOfAnEdition> ;
+    skos:definition "Relates a manifestation to a statement relating to the identification of any persons, families, or corporate bodies responsible for a named revision of an edition."@en .
+
+<http://rdaregistry.info/Elements/m/P30119>
+    reg:name "statementOfResponsibilityRelatingToSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has statement of responsibility relating to series"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60341> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToSeries> ;
+    skos:definition "Relates a manifestation to a statement relating to the identification of any persons, families, or corporate bodies responsible for a series."@en .
+
+<http://rdaregistry.info/Elements/m/P30120>
+    reg:name "statementOfResponsibilityRelatingToSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has statement of responsibility relating to subseries"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60342> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToSubseries> ;
+    skos:definition "Relates a manifestation to a statement relating to the identification of any persons, families, or corporate bodies responsible for a subseries."@en .
+
+<http://rdaregistry.info/Elements/m/P30121>
+    reg:name "statementOfResponsibilityRelatingToTheEdition"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has statement of responsibility relating to the edition"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60343> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToTheEdition> ;
+    skos:definition "Relates a manifestation to a statement relating to the identification of any persons, families, or corporate bodies responsible for the edition being described but not to all editions."@en .
+
+<http://rdaregistry.info/Elements/m/P30122>
+    reg:name "emulsionOnMicrofilmAndMicrofiche"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has emulsion on microfilm and microfiche"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30084>, <http://rdaregistry.info/Elements/u/P60344> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/emulsionOnMicrofilmAndMicrofiche> ;
+    skos:definition "Relates a manifestation to a suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche (e.g., silver halide)."@en .
+
+<http://rdaregistry.info/Elements/m/P30123>
+    reg:name "broadcastStandard"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has broadcast standard"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30126>, <http://rdaregistry.info/Elements/u/P60349> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/broadcastStandard> ;
+    skos:definition "Relates a manifestation to a system used to format a video resource for television broadcast."@en .
+
+<http://rdaregistry.info/Elements/m/P30124>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30006>, <http://rdaregistry.info/Elements/m/P30018>, <http://rdaregistry.info/Elements/m/P30096>, <http://rdaregistry.info/Elements/m/P30102>, <http://rdaregistry.info/Elements/m/P30159>, <http://rdaregistry.info/Elements/m/P30183>, <http://rdaregistry.info/Elements/m/P30202> ;
+    reg:name "digitalFileCharacteristic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has digital file characteristic"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60350> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/digitalFileCharacteristic> ;
+    skos:definition "Relates a manifestation to a technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30125>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30138>, <http://rdaregistry.info/Elements/m/P30161>, <http://rdaregistry.info/Elements/m/P30164>, <http://rdaregistry.info/Elements/m/P30172>, <http://rdaregistry.info/Elements/m/P30184>, <http://rdaregistry.info/Elements/m/P30185>, <http://rdaregistry.info/Elements/m/P30201>, <http://rdaregistry.info/Elements/m/P30206> ;
+    reg:name "soundCharacteristic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has sound characteristic"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60351> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/soundCharacteristic> ;
+    skos:definition "Relates a manifestation to a technical specification relating to the encoding of sound in a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30126>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30104>, <http://rdaregistry.info/Elements/m/P30123> ;
+    reg:name "videoCharacteristic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has video characteristic"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60352> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/videoCharacteristic> ;
+    skos:definition "Relates a manifestation to a technical specification relating to the encoding of video images in a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30127>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30163>, <http://rdaregistry.info/Elements/m/P30200> ;
+    reg:name "projectionCharacteristicOfMotionPictureFilm"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has projection characteristic of motion picture film"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60353> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/projectionCharacteristicOfMotionPictureFilm> ;
+    skos:definition "Relates a manifestation to a technical specification relating to the projection of a motion picture film."@en .
+
+<http://rdaregistry.info/Elements/m/P30128>
+    reg:name "variantTitle"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has variant title"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60355> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/variantTitle> ;
+    skos:definition "Relates a manifestation to a title associated with a resource that differs from a title recorded as the title proper, a parallel title proper, other title information, parallel other title information, earlier title proper, later title proper, key title, or abbreviated title."@en .
+
+<http://rdaregistry.info/Elements/m/P30129>
+    reg:name "laterTitleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has later title proper"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60357> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/laterTitleProper> ;
+    skos:definition "Relates a manifestation to a title proper appearing on a later issue or part of a multipart monograph or serial that differs from that on the first or earliest issue or part."@en .
+
+<http://rdaregistry.info/Elements/m/P30130>
+    reg:name "earlierTitleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has earlier title proper"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60358> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/earlierTitleProper> ;
+    skos:definition "Relates a manifestation to a title proper appearing on an earlier iteration of an integrating resource that differs from that on the current iteration."@en .
+
+<http://rdaregistry.info/Elements/m/P30131>
+    reg:name "abbreviatedTitle"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has abbreviated title"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60359> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/abbreviatedTitle> ;
+    skos:definition "Relates a manifestation to a title that has been abbreviated for purposes of indexing or identification."@en .
+
+<http://rdaregistry.info/Elements/m/P30132>
+    reg:name "designationOfANamedRevisionOfAnEdition"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has designation of a named revision of an edition"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60364> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/designationOfANamedRevisionOfAnEdition> ;
+    skos:definition "Relates a manifestation to a word, character or group of words and/or characters, identifying a particular revision of a named edition."@en .
+
+<http://rdaregistry.info/Elements/m/P30133>
+    reg:name "designationOfEdition"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has designation of edition"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60365> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/designationOfEdition> ;
+    skos:definition "Relates a manifestation to a word, character or group of words and/or characters, identifying the edition to which a resource belongs."@en .
+
+<http://rdaregistry.info/Elements/m/P30134>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30128>, <http://rdaregistry.info/Elements/m/P30129>, <http://rdaregistry.info/Elements/m/P30130>, <http://rdaregistry.info/Elements/m/P30131>, <http://rdaregistry.info/Elements/m/P30142>, <http://rdaregistry.info/Elements/m/P30151>, <http://rdaregistry.info/Elements/m/P30156>, <http://rdaregistry.info/Elements/m/P30203>, <http://rdaregistry.info/Elements/m/P30209> ;
+    reg:name "title"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has title"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60369> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/title> ;
+    skos:definition "Relates a manifestation to a word, character, or group of words and/or characters that names a resource or a work contained in it."@en .
+
+<http://rdaregistry.info/Elements/m/P30135>
+    reg:name "workManifested"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has work manifested"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/w/P10072> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/workManifested> ;
+    skos:definition "Relates a manifestation to a work embodied in a manifestation."@en .
+
+<http://rdaregistry.info/Elements/m/P30136>
+    reg:name "electronicReproductionOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "is electronic reproduction of (manifestation)"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30043>, <http://rdaregistry.info/Elements/u/P60469> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30016> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/electronicReproductionOfManifestation> ;
+    skos:definition "Relates a manifestation to an analog manifestation used as the basis for an electronic reproduction."@en .
+
+<http://rdaregistry.info/Elements/m/P30137>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30050>, <http://rdaregistry.info/Elements/m/P30051>, <http://rdaregistry.info/Elements/m/P30052>, <http://rdaregistry.info/Elements/m/P30053>, <http://rdaregistry.info/Elements/m/P30054>, <http://rdaregistry.info/Elements/m/P30055>, <http://rdaregistry.info/Elements/m/P30056>, <http://rdaregistry.info/Elements/m/P30057>, <http://rdaregistry.info/Elements/m/P30058>, <http://rdaregistry.info/Elements/m/P30059>, <http://rdaregistry.info/Elements/m/P30060>, <http://rdaregistry.info/Elements/m/P30061>, <http://rdaregistry.info/Elements/m/P30062>, <http://rdaregistry.info/Elements/m/P30063>, <http://rdaregistry.info/Elements/m/P30064> ;
+    reg:name "noteOnManifestationOrItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has note on manifestation or item of manifestation"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60471> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/noteOnManifestationOrItem> ;
+    skos:definition "Relates a manifestation to an annotation providing additional information about manifestation or item attributes."@en .
+
+<http://rdaregistry.info/Elements/m/P30138>
+    reg:name "specialPlaybackCharacteristic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has special playback characteristic"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30125>, <http://rdaregistry.info/Elements/u/P60481> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/specialPlaybackCharacteristic> ;
+    skos:definition "Relates a manifestation to an equalization system, noise reduction system, etc., used in making an audio recording."@en .
+
+<http://rdaregistry.info/Elements/m/P30139>
+    reg:name "expressionManifested"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has expression manifested"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20059> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/expressionManifested> ;
+    skos:definition "Relates a manifestation to an expression embodied in a manifestation."@en .
+
+<http://rdaregistry.info/Elements/m/P30140>
+    reg:name "relatedItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has related item"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60313> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/relatedItem> ;
+    skos:definition "Relates a manifestation to an item, represented by an identifier or a description, that is related to the resource being described (e.g., an item used as the basis for a microform reproduction)."@en .
+
+<http://rdaregistry.info/Elements/m/P30141>
+    reg:name "contactInformation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has contact information"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60490> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/contactInformation> ;
+    skos:definition "Relates a manifestation to information about an organization, etc., from which a resource may be obtained."@en .
+
+<http://rdaregistry.info/Elements/m/P30142>
+    reg:name "otherTitleInformation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has other title information"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60493> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/otherTitleInformation> ;
+    skos:definition "Relates a manifestation to information that appears in conjunction with, and is subordinate to, the title proper of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30143>
+    reg:name "otherTitleInformationOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has other title information of series"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60494> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/otherTitleInformationOfSeries> ;
+    skos:definition "Relates a manifestation to information that appears in conjunction with, and is subordinate to, the title proper of a series."@en .
+
+<http://rdaregistry.info/Elements/m/P30144>
+    reg:name "otherTitleInformationOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has other title information of subseries"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60495> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/otherTitleInformationOfSubseries> ;
+    skos:definition "Relates a manifestation to information that appears in conjunction with, and is subordinate to, the title proper of a subseries."@en .
+
+<http://rdaregistry.info/Elements/m/P30145>
+    reg:name "restrictionsOnAccess"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has restrictions on access"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60496> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/restrictionsOnAccess> ;
+    skos:definition "Relates a manifestation to limitations placed on access to a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30146>
+    reg:name "restrictionsOnUse"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has restrictions on use"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60497> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/restrictionsOnUse> ;
+    skos:definition "Relates a manifestation to limitations placed on uses such as reproduction, publication, exhibition, etc."@en .
+
+<http://rdaregistry.info/Elements/m/P30147>
+    reg:name "numericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has numeric and/or alphabetic designation of first issue or part of sequence"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30165>, <http://rdaregistry.info/Elements/u/P60499> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/numericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence> ;
+    skos:definition "Relates a manifestation to numbering presented in numeric and/or alphabetic form on the first issue or part of a sequence of numbering for a serial."@en .
+
+<http://rdaregistry.info/Elements/m/P30148>
+    reg:name "numericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has numeric and/or alphabetic designation of last issue or part of sequence"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30165>, <http://rdaregistry.info/Elements/u/P60500> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/numericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence> ;
+    skos:definition "Relates a manifestation to numbering presented in numeric and/or alphabetic form on the last issue or part of a sequence of numbering for a serial."@en .
+
+<http://rdaregistry.info/Elements/m/P30149>
+    reg:name "chronologicalDesignationOfFirstIssueOrPartOfSequence"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has chronological designation of first issue or part of sequence"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30165>, <http://rdaregistry.info/Elements/u/P60501> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/chronologicalDesignationOfFirstIssueOrPartOfSequence> ;
+    skos:definition "Relates a manifestation to numbering presented in the form of a date (e.g., a year; year and month; month, day, and year) on the first issue or part of a sequence of numbering for a serial."@en .
+
+<http://rdaregistry.info/Elements/m/P30150>
+    reg:name "chronologicalDesignationOfLastIssueOrPartOfSequence"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has chronological designation of last issue or part of sequence"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30165>, <http://rdaregistry.info/Elements/u/P60502> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/chronologicalDesignationOfLastIssueOrPartOfSequence> ;
+    skos:definition "Relates a manifestation to numbering presented in the form of a date (e.g., a year; year and month; month, day, and year) on the last issue or part of a sequence of numbering for a serial."@en .
+
+<http://rdaregistry.info/Elements/m/P30151>
+    reg:name "parallelOtherTitleInformation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel other title information"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60507> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelOtherTitleInformation> ;
+    skos:definition "Relates a manifestation to other title information in a language and/or script that differs from that recorded in the other title information element."@en .
+
+<http://rdaregistry.info/Elements/m/P30152>
+    reg:name "parallelOtherTitleInformationOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel other title information of series"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60508> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelOtherTitleInformationOfSeries> ;
+    skos:definition "Relates a manifestation to other title information of a series in a language and/or script that differs from that recorded in the other title information of series element."@en .
+
+<http://rdaregistry.info/Elements/m/P30153>
+    reg:name "parallelOtherTitleInformationOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel other title information of subseries"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60509> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelOtherTitleInformationOfSubseries> ;
+    skos:definition "Relates a manifestation to other title information of a subseries in a language and/or script that differs from that recorded in the other title information of subseries element."@en .
+
+<http://rdaregistry.info/Elements/m/P30154>
+    reg:name "uniformResourceLocator"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has uniform resource locator"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60511> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/uniformResourceLocator> ;
+    skos:definition "Relates a manifestation to the address of a remote access resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30155>
+    reg:name "layout"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has layout"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60513> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/layout> ;
+    skos:definition "Relates a manifestation to the arrangement of text, images, tactile notation, etc., in a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30156>
+    reg:name "titleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has title proper"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60515> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/titleProper> ;
+    skos:definition "Relates a manifestation to the chief name of a resource (i.e., the title normally used when citing the resource)."@en .
+
+<http://rdaregistry.info/Elements/m/P30157>
+    reg:name "titleProperOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has title proper of series"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60516> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/titleProperOfSeries> ;
+    skos:definition "Relates a manifestation to the chief name of a series (i.e., the title normally used when citing the series)."@en .
+
+<http://rdaregistry.info/Elements/m/P30158>
+    reg:name "titleProperOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has title proper of subseries"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60517> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/titleProperOfSubseries> ;
+    skos:definition "Relates a manifestation to the chief name of a subseries (i.e., the title normally used when citing the subseries)."@en .
+
+<http://rdaregistry.info/Elements/m/P30159>
+    reg:name "resolution"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has resolution"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30124>, <http://rdaregistry.info/Elements/u/P60519> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/resolution> ;
+    skos:definition "Relates a manifestation to the clarity or fineness of detail in a digital image, expressed by the measurement of the image in pixels, etc."@en .
+
+<http://rdaregistry.info/Elements/m/P30160>
+    reg:name "termsOfAvailability"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has terms of availability"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60521> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/termsOfAvailability> ;
+    skos:definition "Relates a manifestation to the conditions under which the publisher, distributor, etc., will normally supply a resource or the price of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30161>
+    reg:name "trackConfiguration"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has track configuration"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30125>, <http://rdaregistry.info/Elements/u/P60522> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/trackConfiguration> ;
+    skos:definition "Relates a manifestation to the configuration of the audio track on a sound-track film (e.g., centre track)."@en .
+
+<http://rdaregistry.info/Elements/m/P30162>
+    reg:name "equipmentOrSystemRequirement"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has equipment or system requirement"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60528> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/equipmentOrSystemRequirement> ;
+    skos:definition "Relates a manifestation to the equipment or system required for use, playback, etc., of an analog, digital, etc., resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30163>
+    reg:name "presentationFormat"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has presentation format"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30127>, <http://rdaregistry.info/Elements/u/P60529> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/presentationFormat> ;
+    skos:definition "Relates a manifestation to the format used in the production of a projected image (e.g., cinerama, imax)."@en .
+
+<http://rdaregistry.info/Elements/m/P30164>
+    reg:name "grooveCharacteristic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has groove characteristic"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30125>, <http://rdaregistry.info/Elements/u/P60532> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/grooveCharacteristic> ;
+    skos:definition "Relates a manifestation to the groove width of an analog disc or the groove pitch of an analog cylinder."@en .
+
+<http://rdaregistry.info/Elements/m/P30165>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30097>, <http://rdaregistry.info/Elements/m/P30098>, <http://rdaregistry.info/Elements/m/P30099>, <http://rdaregistry.info/Elements/m/P30100>, <http://rdaregistry.info/Elements/m/P30147>, <http://rdaregistry.info/Elements/m/P30148>, <http://rdaregistry.info/Elements/m/P30149>, <http://rdaregistry.info/Elements/m/P30150> ;
+    reg:name "numberingOfSerials"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has numbering of serials"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60533> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/numberingOfSerials> ;
+    skos:definition "Relates a manifestation to the identification of each of the issues or parts of a serial. numbering of serials may include a numeral, a letter, any other character, or the combination of these with or without an accompanying caption (volume, number, etc.) and/or a chronological designation."@en .
+
+<http://rdaregistry.info/Elements/m/P30166>
+    reg:name "issnOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has issn of series"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60534> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/issnOfSeries> ;
+    skos:definition "Relates a manifestation to the identifier assigned to a series by an issn registration agency."@en .
+
+<http://rdaregistry.info/Elements/m/P30167>
+    reg:name "issnOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has issn of subseries"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60535> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/issnOfSubseries> ;
+    skos:definition "Relates a manifestation to the identifier assigned to a subseries by an issn registration agency."@en .
+
+<http://rdaregistry.info/Elements/m/P30168>
+    reg:name "frequency"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has frequency"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60538> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/frequency> ;
+    skos:definition "Relates a manifestation to the intervals at which the issues or parts of a serial or the updates to an integrating resource are issued."@en .
+
+<http://rdaregistry.info/Elements/m/P30169>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30170>, <http://rdaregistry.info/Elements/m/P30171> ;
+    reg:name "dimensions"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has dimensions"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60539> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/dimensions> ;
+    skos:definition "Relates a manifestation to the measurements of the carrier or carriers and/or the container of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30170>
+    reg:name "dimensionsOfMapEtc"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has dimensions of map, etc."@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30169>, <http://rdaregistry.info/Elements/u/P60540> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/dimensionsOfMapEtc> ;
+    skos:definition "Relates a manifestation to the measurements of the face of a map, etc."@en .
+
+<http://rdaregistry.info/Elements/m/P30171>
+    reg:name "dimensionsOfStillImage"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has dimensions of still image"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30169>, <http://rdaregistry.info/Elements/u/P60541> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/dimensionsOfStillImage> ;
+    skos:definition "Relates a manifestation to the measurements of the pictorial area of a still image."@en .
+
+<http://rdaregistry.info/Elements/m/P30172>
+    reg:name "typeOfRecording"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has type of recording"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30125>, <http://rdaregistry.info/Elements/u/P60543> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/typeOfRecording> ;
+    skos:definition "Relates a manifestation to the method used to encode audio content for playback (e.g., analog or digital)."@en .
+
+<http://rdaregistry.info/Elements/m/P30173>
+    reg:name "distributorsName"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has distributor's name"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60544> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/distributorsName> ;
+    skos:definition "Relates a manifestation to the name of a person, family, or corporate body responsible for distributing a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30174>
+    reg:name "producersName"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has producer's name"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60545> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/producersName> ;
+    skos:definition "Relates a manifestation to the name of a person, family, or corporate body responsible for inscribing, fabricating, constructing, etc., a resource in an unpublished form."@en .
+
+<http://rdaregistry.info/Elements/m/P30175>
+    reg:name "manufacturersName"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has manufacturer's name"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60546> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/manufacturersName> ;
+    skos:definition "Relates a manifestation to the name of a person, family, or corporate body responsible for printing, duplicating, casting, etc., a resource in a published form."@en .
+
+<http://rdaregistry.info/Elements/m/P30176>
+    reg:name "publishersName"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has publisher's name"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60547> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/publishersName> ;
+    skos:definition "Relates a manifestation to the name of a person, family, or corporate body responsible for publishing, releasing, or issuing a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30177>
+    reg:name "extentOfCartographicResource"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has extent of cartographic resource"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182>, <http://rdaregistry.info/Elements/u/P60550> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/extentOfCartographicResource> ;
+    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a cartographic resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30178>
+    reg:name "extentOfNotatedMusic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has extent of notated music"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182>, <http://rdaregistry.info/Elements/u/P60550> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/extentOfNotatedMusic> ;
+    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource consisting of notated music, with or without accompanying text and/or illustrations."@en .
+
+<http://rdaregistry.info/Elements/m/P30179>
+    reg:name "extentOfStillImage"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has extent of still image"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182>, <http://rdaregistry.info/Elements/u/P60550> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/extentOfStillImage> ;
+    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource consisting of one or more still images."@en .
+
+<http://rdaregistry.info/Elements/m/P30180>
+    reg:name "extentOfThreeDimensionalForm"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has extent of three-dimensional form"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182>, <http://rdaregistry.info/Elements/u/P60550> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/extentOfThreeDimensionalForm> ;
+    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource consisting of one or more three-dimensional forms."@en .
+
+<http://rdaregistry.info/Elements/m/P30181>
+    reg:name "extentOfText"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has extent of text"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182>, <http://rdaregistry.info/Elements/u/P60550> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/extentOfText> ;
+    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource consisting of text, with or without accompanying illustrations."@en .
+
+<http://rdaregistry.info/Elements/m/P30182>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30177>, <http://rdaregistry.info/Elements/m/P30178>, <http://rdaregistry.info/Elements/m/P30179>, <http://rdaregistry.info/Elements/m/P30180>, <http://rdaregistry.info/Elements/m/P30181> ;
+    reg:name "extent"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has extent"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60550> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/extent> ;
+    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30183>
+    reg:name "fileSize"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has file size"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30124>, <http://rdaregistry.info/Elements/u/P60551> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/fileSize> ;
+    skos:definition "Relates a manifestation to the number of bytes in a digital file."@en .
+
+<http://rdaregistry.info/Elements/m/P30184>
+    reg:name "configurationOfPlaybackChannels"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has configuration of playback channels"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30125>, <http://rdaregistry.info/Elements/u/P60552> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/configurationOfPlaybackChannels> ;
+    skos:definition "Relates a manifestation to the number of sound channels used to make a recording (e.g., one channel for a monophonic recording, two channels for a stereophonic recording)."@en .
+
+<http://rdaregistry.info/Elements/m/P30185>
+    reg:name "tapeConfiguration"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has tape configuration"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30125>, <http://rdaregistry.info/Elements/u/P60553> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/tapeConfiguration> ;
+    skos:definition "Relates a manifestation to the number of tracks on an audiotape."@en .
+
+<http://rdaregistry.info/Elements/m/P30186>
+    reg:name "mount"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has mount"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60554> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/mount> ;
+    skos:definition "Relates a manifestation to the physical material used for the support or backing to which the base material of a resource has been attached."@en .
+
+<http://rdaregistry.info/Elements/m/P30187>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30188>, <http://rdaregistry.info/Elements/m/P30189> ;
+    reg:name "productionMethod"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has production method"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60560> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/productionMethod> ;
+    skos:definition "Relates a manifestation to the process used to produce a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30188>
+    reg:name "productionMethodForTactileResource"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has production method for tactile resource"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30187>, <http://rdaregistry.info/Elements/u/P60561> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/productionMethodForTactileResource> ;
+    skos:definition "Relates a manifestation to the process used to produce a tactile resource (e.g., embossing, thermoform)."@en .
+
+<http://rdaregistry.info/Elements/m/P30189>
+    reg:name "productionMethodForManuscript"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has production method for manuscript"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30187> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/productionMethodForManuscript> ;
+    skos:definition "Relates a manifestation to the process used to produce an original manuscript or a copy."@en .
+
+<http://rdaregistry.info/Elements/m/P30190>
+    reg:name "generationOfAudioRecording"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has generation of audio recording"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30191>, <http://rdaregistry.info/Elements/u/P60567> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/generationOfAudioRecording> ;
+    skos:definition "Relates a manifestation to the relationship between an original audio carrier and the carrier of a reproduction made from the original (e.g., a tape duplication master, a test pressing)."@en .
+
+<http://rdaregistry.info/Elements/m/P30191>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30190>, <http://rdaregistry.info/Elements/m/P30192>, <http://rdaregistry.info/Elements/m/P30193>, <http://rdaregistry.info/Elements/m/P30194>, <http://rdaregistry.info/Elements/m/P30195> ;
+    reg:name "generation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has generation"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60568> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/generation> ;
+    skos:definition "Relates a manifestation to the relationship between an original carrier and the carrier of a reproduction made from the original (e.g., a first generation camera master, a second generation printing master)."@en .
+
+<http://rdaregistry.info/Elements/m/P30192>
+    reg:name "generationOfDigitalResource"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has generation of digital resource"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30191>, <http://rdaregistry.info/Elements/u/P60569> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/generationOfDigitalResource> ;
+    skos:definition "Relates a manifestation to the relationship between an original carrier of a digital resource and the carrier of a reproduction made from the original (e.g., a derivative master)."@en .
+
+<http://rdaregistry.info/Elements/m/P30193>
+    reg:name "generationOfMotionPictureFilm"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has generation of motion picture film"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30191>, <http://rdaregistry.info/Elements/u/P60570> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/generationOfMotionPictureFilm> ;
+    skos:definition "Relates a manifestation to the relationship between an original carrier of a motion picture film resource and the carrier of a reproduction made from the original (e.g., a reference print)."@en .
+
+<http://rdaregistry.info/Elements/m/P30194>
+    reg:name "generationOfVideotape"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has generation of videotape"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30191>, <http://rdaregistry.info/Elements/u/P60571> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/generationOfVideotape> ;
+    skos:definition "Relates a manifestation to the relationship between an original carrier of a videotape resource and the carrier of a reproduction made from the original (e.g., a show copy)."@en .
+
+<http://rdaregistry.info/Elements/m/P30195>
+    reg:name "generationOfMicroform"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has generation of microform"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30191>, <http://rdaregistry.info/Elements/u/P60572> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/generationOfMicroform> ;
+    skos:definition "Relates a manifestation to the relationship between an original microform carrier and the carrier of a reproduction made from the original (e.g., a printing master)."@en .
+
+<http://rdaregistry.info/Elements/m/P30196>
+    reg:name "polarity"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has polarity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60573> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/polarity> ;
+    skos:definition "Relates a manifestation to the relationship of the colours and tones in an image to the colours and tones of the object reproduced (e.g., positive, negative)."@en .
+
+<http://rdaregistry.info/Elements/m/P30197>
+    reg:name "bookFormat"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has book format"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60578> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/bookFormat> ;
+    skos:definition "Relates a manifestation to the result of folding a printed sheet to form a gathering of leaves (e.g., a sheet folded once to form a folio, twice to form a quarto, three times to form an octavo, etc.)."@en .
+
+<http://rdaregistry.info/Elements/m/P30198>
+    reg:name "reductionRatio"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has reduction ratio"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60581> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/reductionRatio> ;
+    skos:definition "Relates a manifestation to the size of a micro-image in relation to the original from which it was produced."@en .
+
+<http://rdaregistry.info/Elements/m/P30199>
+    reg:name "fontSize"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has font size"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60582> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/fontSize> ;
+    skos:definition "Relates a manifestation to the size of the type used to represent the characters and symbols in a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30200>
+    reg:name "projectionSpeed"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has projection speed"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30127>, <http://rdaregistry.info/Elements/u/P60585> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/projectionSpeed> ;
+    skos:definition "Relates a manifestation to the speed at which a projected carrier must be operated to produce the moving image intended."@en .
+
+<http://rdaregistry.info/Elements/m/P30201>
+    reg:name "playingSpeed"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has playing speed"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30125>, <http://rdaregistry.info/Elements/u/P60586> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/playingSpeed> ;
+    skos:definition "Relates a manifestation to the speed at which an audio carrier must be operated to produce the sound intended."@en .
+
+<http://rdaregistry.info/Elements/m/P30202>
+    reg:name "encodedBitrate"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has encoded bitrate"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30124>, <http://rdaregistry.info/Elements/u/P60587> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/encodedBitrate> ;
+    skos:definition "Relates a manifestation to the speed at which streaming audio, video, etc., is designed to play."@en .
+
+<http://rdaregistry.info/Elements/m/P30203>
+    reg:name "parallelTitleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel title proper"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60589> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelTitleProper> ;
+    skos:definition "Relates a manifestation to the title proper in another language and/or script."@en .
+
+<http://rdaregistry.info/Elements/m/P30204>
+    reg:name "parallelTitleProperOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel title proper of series"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60590> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelTitleProperOfSeries> ;
+    skos:definition "Relates a manifestation to the title proper of a series in another language and/or script."@en .
+
+<http://rdaregistry.info/Elements/m/P30205>
+    reg:name "parallelTitleProperOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has parallel title proper of subseries"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60591> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/parallelTitleProperOfSubseries> ;
+    skos:definition "Relates a manifestation to the title proper of a subseries in another language and/or script."@en .
+
+<http://rdaregistry.info/Elements/m/P30206>
+    reg:name "recordingMedium"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has recording medium"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30125>, <http://rdaregistry.info/Elements/u/P60594> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/recordingMedium> ;
+    skos:definition "Relates a manifestation to the type of medium used to record sound on an audio carrier (e.g., magnetic, optical)."@en .
+
+<http://rdaregistry.info/Elements/m/P30207>
+    reg:name "baseMaterialForMicrofilmMicrofichePhotographicFilmAndMotionPictureFilm"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has base material for microfilm, microfiche, photographic film, and motion picture film"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30208>, <http://rdaregistry.info/Elements/u/P60595> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/baseMaterialForMicrofilmMicrofichePhotographicFilmAndMotionPictureFilm> ;
+    skos:definition "Relates a manifestation to the underlying physical material of a microfilm, microfiche, photographic film, or motion picture film resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30208>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30207> ;
+    reg:name "baseMaterial"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has base material"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60596> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/baseMaterial> ;
+    skos:definition "Relates a manifestation to the underlying physical material of a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30209>
+    reg:name "keyTitle"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has key title"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/u/P60597> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/keyTitle> ;
+    skos:definition "Relates a manifestation to the unique name assigned to a resource by an issn registration agency."@en .
+
+<http://rdaregistry.info/Elements/m/P30210>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30027> ;
+    reg:name "accompanyingManifestationRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has accompanying manifestation relationship with"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048>, <http://rdaregistry.info/Elements/u/P60709> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/accompanyingManifestationRelationship> .
+
+<http://rdaregistry.info/Elements/m/P30211>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30023> ;
+    reg:name "descriptiveManifestationRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has descriptive manifestation relationship with"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048>, <http://rdaregistry.info/Elements/u/P60711> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/descriptiveManifestationRelationship> .
+
+<http://rdaregistry.info/Elements/m/P30212>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30024> ;
+    reg:name "equivalentManifestationRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has equivalent manifestation relationship with"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048>, <http://rdaregistry.info/Elements/u/P60712> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30212> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/equivalentManifestationRelationship> .
+
+<http://rdaregistry.info/Elements/m/P30213>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30020>, <http://rdaregistry.info/Elements/m/P30033> ;
+    reg:name "wholePartManifestationRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:label "has whole-part manifestation relationship with"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048>, <http://rdaregistry.info/Elements/u/P60714> ;
+    owl:sameAs <http://rdaregistry.info/Elements/m/wholePartManifestationRelationship> .
+
