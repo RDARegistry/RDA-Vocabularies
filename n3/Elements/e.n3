@@ -93,6 +93,30 @@
     = <http://rdaregistry.info/Elements/e/artisticAndOrTechnicalCredit> ;
     skos:definition "Relates an expression to a listing of persons, families, or corporate bodies making contributions to the artistic and/or technical production of a resource."@en .
 
+<http://rdaregistry.info/Elements/e/P20040> a rdf:Property ;
+    rdfs:label "has court reporter"@en ;
+    reg:name "courtReporter"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60388> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50148> ;
+    = <http://rdaregistry.info/Elements/e/courtReporter> ;
+    skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by preparing a court's opinions for publication."@en .
+
+<http://rdaregistry.info/Elements/e/P20054> a rdf:Property ;
+    rdfs:label "has presenter"@en ;
+    reg:name "presenter"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60419> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50180> ;
+    = <http://rdaregistry.info/Elements/e/presenter> ;
+    skos:definition "Relates an expression to a person, family, or corporate body mentioned in an \"X presents\" credit for moving image materials and who is probably associated with production, finance, or distribution in some way."@en .
+
 <http://rdaregistry.info/Elements/e/P20057> a rdf:Property ;
     rdfs:label "has performer, narrator, and/or presenter"@en ;
     reg:name "performerNarratorAndOrPresenter"@en ;
@@ -619,19 +643,6 @@
     = <http://rdaregistry.info/Elements/e/artDirector> ;
     skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by overseeing the artists and craftspeople who build the sets for moving image productions."@en .
 
-<http://rdaregistry.info/Elements/e/P20040> a rdf:Property ;
-    rdfs:label "has court reporter"@en ;
-    reg:name "courtReporter"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20053>,
-        <http://rdaregistry.info/Elements/u/P60388> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50148> ;
-    = <http://rdaregistry.info/Elements/e/courtReporter> ;
-    skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by preparing a court’s opinions for publication."@en .
-
 <http://rdaregistry.info/Elements/e/P20041> a rdf:Property ;
     rdfs:label "has writer of preface"@en ;
     reg:name "writerOfPreface"@en ;
@@ -775,19 +786,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50160> ;
     = <http://rdaregistry.info/Elements/e/recordist> ;
     skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by using a recording device to capture sound and/or video during a recording session, including field recordings of natural sounds, folkloric events, music, etc."@en .
-
-<http://rdaregistry.info/Elements/e/P20054> a rdf:Property ;
-    rdfs:label "has presenter"@en ;
-    reg:name "presenter"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20053>,
-        <http://rdaregistry.info/Elements/u/P60419> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50180> ;
-    = <http://rdaregistry.info/Elements/e/presenter> ;
-    skos:definition "Relates an expression to a person, family, or corporate body mentioned in an “x presents” credit for moving image materials and who is probably associated with production, finance, or distribution in some way."@en .
 
 <http://rdaregistry.info/Elements/e/P20055> a rdf:Property ;
     rdfs:label "has editor of moving image work"@en ;
@@ -2597,30 +2595,6 @@
         <http://rdaregistry.info/Elements/u/P60710> ;
     = <http://rdaregistry.info/Elements/e/derivativeExpressionRelationship> .
 
-<http://rdaregistry.info/Elements/e/P20235> a rdf:Property ;
-    rdfs:label "has sequential expression relationship with"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20154>,
-        <http://rdaregistry.info/Elements/e/P20169> ;
-    reg:name "sequentialExpressionRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60713> ;
-    = <http://rdaregistry.info/Elements/e/sequentialExpressionRelationship> .
-
-<http://rdaregistry.info/Elements/e/P20236> a rdf:Property ;
-    rdfs:label "has whole-part expression relationship with"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20074>,
-        <http://rdaregistry.info/Elements/e/P20145> ;
-    reg:name "wholePartExpressionRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60714> ;
-    = <http://rdaregistry.info/Elements/e/wholePartExpressionRelationship> .
-
 <http://rdaregistry.info/Elements/e/P20114> a rdf:Property ;
     rdfs:label "is imitated as (expression)"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20142> ;
@@ -2690,6 +2664,32 @@
         <http://rdaregistry.info/Elements/u/P60711> ;
     = <http://rdaregistry.info/Elements/e/descriptiveExpressionRelationship> .
 
+<http://rdaregistry.info/Elements/e/P20235> a rdf:Property ;
+    rdfs:label "has sequential expression relationship with"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20154>,
+        <http://rdaregistry.info/Elements/e/P20169> ;
+    reg:name "sequentialExpressionRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
+        <http://rdaregistry.info/Elements/u/P60713> ;
+    = <http://rdaregistry.info/Elements/e/sequentialExpressionRelationship> .
+
+<http://rdaregistry.info/Elements/e/P20236> a rdf:Property ;
+    rdfs:label "has whole-part expression relationship with"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20074>,
+        <http://rdaregistry.info/Elements/e/P20145> ;
+    reg:name "wholePartExpressionRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
+        <http://rdaregistry.info/Elements/u/P60714> ;
+    = <http://rdaregistry.info/Elements/e/wholePartExpressionRelationship> .
+
 <http://rdaregistry.info/Elements/e/P20062> a rdf:Property ;
     rdfs:label "has form of notation"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20061>,
@@ -2703,21 +2703,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60319> ;
     = <http://rdaregistry.info/Elements/e/formOfNotation> ;
     skos:definition "Relates an expression to a set of characters and/or symbols used to express the content of a resource."@en .
-
-<http://rdaregistry.info/Elements/e/P20205> a rdf:Property ;
-    rdfs:label "has related expression"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20232>,
-        <http://rdaregistry.info/Elements/e/P20233>,
-        <http://rdaregistry.info/Elements/e/P20234> ;
-    reg:name "relatedExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60313> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20205> ;
-    = <http://rdaregistry.info/Elements/e/relatedExpression> ;
-    skos:definition "Relates an expression to an expression, represented by an identifier, an authorized access point, or a description, that is related to the expression being described (e.g., a revised version, a translation)."@en .
 
 <http://rdaregistry.info/Elements/e/P20224> a rdf:Property ;
     rdfs:label "has colour content"@en ;
@@ -2841,6 +2826,23 @@
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20102> ;
     = <http://rdaregistry.info/Elements/e/screenplayExpression> ;
     skos:definition "Relates an expression to an expression of a work that provides the text for a motion picture, television program or video."@en .
+
+<http://rdaregistry.info/Elements/e/P20205> a rdf:Property ;
+    rdfs:label "has related expression"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20232>,
+        <http://rdaregistry.info/Elements/e/P20233>,
+        <http://rdaregistry.info/Elements/e/P20234>,
+        <http://rdaregistry.info/Elements/e/P20235>,
+        <http://rdaregistry.info/Elements/e/P20236> ;
+    reg:name "relatedExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60313> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20205> ;
+    = <http://rdaregistry.info/Elements/e/relatedExpression> ;
+    skos:definition "Relates an expression to an expression, represented by an identifier, an authorized access point, or a description, that is related to the expression being described (e.g., a revised version, a translation)."@en .
 
 <http://rdaregistry.info/Elements/e/P20072> a rdf:Property ;
     rdfs:label "is description of (expression)"@en ;
@@ -3141,7 +3143,6 @@
         <http://rdaregistry.info/Elements/e/P20037>,
         <http://rdaregistry.info/Elements/e/P20038>,
         <http://rdaregistry.info/Elements/e/P20039>,
-        <http://rdaregistry.info/Elements/e/P20040>,
         <http://rdaregistry.info/Elements/e/P20042>,
         <http://rdaregistry.info/Elements/e/P20043>,
         <http://rdaregistry.info/Elements/e/P20046>,
@@ -3151,7 +3152,6 @@
         <http://rdaregistry.info/Elements/e/P20050>,
         <http://rdaregistry.info/Elements/e/P20051>,
         <http://rdaregistry.info/Elements/e/P20052>,
-        <http://rdaregistry.info/Elements/e/P20054>,
         <http://rdaregistry.info/Elements/e/P20055>,
         <http://rdaregistry.info/Elements/e/P20056>,
         <http://rdaregistry.info/Elements/e/P20058> ;

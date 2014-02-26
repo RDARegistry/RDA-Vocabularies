@@ -546,18 +546,6 @@
         <http://rdaregistry.info/Elements/u/P60711> ;
     = <http://rdaregistry.info/Elements/i/descriptiveItemRelationship> .
 
-<http://rdaregistry.info/Elements/i/P40054> a rdf:Property ;
-    rdfs:label "has whole-part item relationship with"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40009>,
-        <http://rdaregistry.info/Elements/i/P40034> ;
-    reg:name "wholePartItemRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60714> ;
-    = <http://rdaregistry.info/Elements/i/wholePartItemRelationship> .
-
 <http://rdaregistry.info/Elements/i/P40017> a rdf:Property ;
     rdfs:label "has curator"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40004>,
@@ -615,19 +603,18 @@
     owl:inverseOf <http://rdaregistry.info/Elements/i/P40053> ;
     = <http://rdaregistry.info/Elements/i/equivalentItemRelationship> .
 
-<http://rdaregistry.info/Elements/i/P40046> a rdf:Property ;
-    rdfs:label "has related item of item"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40051>,
-        <http://rdaregistry.info/Elements/i/P40052>,
-        <http://rdaregistry.info/Elements/i/P40053> ;
-    reg:name "relatedItemOfItem"@en ;
+<http://rdaregistry.info/Elements/i/P40054> a rdf:Property ;
+    rdfs:label "has whole-part item relationship with"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40009>,
+        <http://rdaregistry.info/Elements/i/P40034> ;
+    reg:name "wholePartItemRelationship"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40046> ;
-    = <http://rdaregistry.info/Elements/i/relatedItemOfItem> ;
-    skos:definition "Relates an item to an item, represented by an identifier or a description, that is related to the resource being described (e.g., an item used as the basis for a microform reproduction)."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40046>,
+        <http://rdaregistry.info/Elements/u/P60714> ;
+    = <http://rdaregistry.info/Elements/i/wholePartItemRelationship> .
 
 <http://rdaregistry.info/Elements/i/P40029> a rdf:Property ;
     rdfs:label "is accompanied by (item)"@en ;
@@ -660,6 +647,21 @@
         <http://rdaregistry.info/Elements/u/P60297> ;
     = <http://rdaregistry.info/Elements/i/reproductionOfItem> ;
     skos:definition "Relates an item to an item used as the basis for a reproduction."@en .
+
+<http://rdaregistry.info/Elements/i/P40046> a rdf:Property ;
+    rdfs:label "has related item of item"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40051>,
+        <http://rdaregistry.info/Elements/i/P40052>,
+        <http://rdaregistry.info/Elements/i/P40053>,
+        <http://rdaregistry.info/Elements/i/P40054> ;
+    reg:name "relatedItemOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/P40046> ;
+    = <http://rdaregistry.info/Elements/i/relatedItemOfItem> ;
+    skos:definition "Relates an item to an item, represented by an identifier or a description, that is related to the resource being described (e.g., an item used as the basis for a microform reproduction)."@en .
 
 <http://rdaregistry.info/Elements/i/P40030> a rdf:Property ;
     rdfs:label "is description of (item)"@en ;

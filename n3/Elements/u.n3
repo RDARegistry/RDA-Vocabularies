@@ -2302,16 +2302,6 @@
     = <http://rdaregistry.info/Elements/u/memberOf> ;
     skos:definition "Relates an agent of which the agent is a member to the agent."@en .
 
-<http://rdaregistry.info/Elements/u/P60673> a rdf:Property ;
-    rdfs:label "is director of"@en ;
-    reg:name "directorOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60602> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/u/P60449> ;
-    = <http://rdaregistry.info/Elements/u/directorOf> ;
-    skos:definition "Relates an agent responsible for the general management and supervision of a filmed performance, a radio or television program, etc. to the resource."@en .
-
 <http://rdaregistry.info/Elements/u/P60676> a rdf:Property ;
     rdfs:label "has sponsor"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50028> ;
@@ -2321,17 +2311,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60688> ;
     = <http://rdaregistry.info/Elements/u/sponsor> ;
     skos:definition "Relates an agent sponsoring the agent to the agent."@en .
-
-<http://rdaregistry.info/Elements/u/P60678> a rdf:Property ;
-    rdfs:label "is director of photography of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50207> ;
-    reg:name "directorOfPhotographyOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60602> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/u/P60452> ;
-    = <http://rdaregistry.info/Elements/u/directorOfPhotographyOf> ;
-    skos:definition "Relates an agent that captures images, either electronically or on film or video stock, and often selects and arranges the lighting. the director of photography for a movie is also called the chief cinematographer to the resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60679> a rdf:Property ;
     rdfs:label "has employer"@en ;
@@ -2436,7 +2415,6 @@
 <http://rdaregistry.info/Elements/u/P60712> a rdf:Property ;
     rdfs:label "equivalent relationship"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40053>,
-        <http://rdaregistry.info/Elements/m/P30212>,
         <http://rdaregistry.info/Elements/u/P60191> ;
     reg:name "equivalentRelationship"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6500,6 +6478,16 @@
     = <http://rdaregistry.info/Elements/u/minuteTakerOf> ;
     skos:definition "Relates an agent responsible for recording the minutes of a meeting to the resource."@en .
 
+<http://rdaregistry.info/Elements/u/P60673> a rdf:Property ;
+    rdfs:label "is director of"@en ;
+    reg:name "directorOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60602> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60449> ;
+    = <http://rdaregistry.info/Elements/u/directorOf> ;
+    skos:definition "Relates an agent responsible for the general management and supervision of a filmed performance, a radio or television program, etc. to the resource."@en .
+
 <http://rdaregistry.info/Elements/u/P60674> a rdf:Property ;
     rdfs:label "is restorationist of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50206> ;
@@ -6521,6 +6509,17 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60451> ;
     = <http://rdaregistry.info/Elements/u/sponsoringBodyOf> ;
     skos:definition "Relates an agent sponsoring some aspect of a resource, e.g., funding research, sponsoring an event to the resource."@en .
+
+<http://rdaregistry.info/Elements/u/P60678> a rdf:Property ;
+    rdfs:label "is director of photography of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50207> ;
+    reg:name "directorOfPhotographyOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60602> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60452> ;
+    = <http://rdaregistry.info/Elements/u/directorOfPhotographyOf> ;
+    skos:definition "Relates an agent that captures images, either electronically or on film or video stock, and often selects and arranges the lighting. the director of photography for a movie is also called the chief cinematographer to the resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60689> a rdf:Property ;
     rdfs:label "is dedicatee of"@en ;
@@ -6751,10 +6750,8 @@
 
 <http://rdaregistry.info/Elements/u/P60713> a rdf:Property ;
     rdfs:label "sequential relationship"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20235>,
-        <http://rdaregistry.info/Elements/u/P60261>,
-        <http://rdaregistry.info/Elements/u/P60278>,
-        <http://rdaregistry.info/Elements/w/P10231> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60261>,
+        <http://rdaregistry.info/Elements/u/P60278> ;
     reg:name "sequentialRelationship"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
@@ -6762,10 +6759,7 @@
 
 <http://rdaregistry.info/Elements/u/P60714> a rdf:Property ;
     rdfs:label "whole-part relationship"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20236>,
-        <http://rdaregistry.info/Elements/i/P40054>,
-        <http://rdaregistry.info/Elements/m/P30213>,
-        <http://rdaregistry.info/Elements/u/P60101>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60101>,
         <http://rdaregistry.info/Elements/u/P60249>,
         <http://rdaregistry.info/Elements/w/P10232> ;
     reg:name "wholePartRelationship"@en ;
@@ -7077,6 +7071,17 @@
     skos:closeMatch "http://id.loc.gov/vocabulary/relators/fmo"@en ;
     skos:definition "Relates a resource to an agent formerly having legal possession of a resource."@en .
 
+<http://rdaregistry.info/Elements/u/P60452> a rdf:Property ;
+    rdfs:label "has director of photography"@en ;
+    reg:name "directorOfPhotography"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60374> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60678> ;
+    skos:definition "Relates a resource to an agent that captures images, either electronically or on film or video stock, and often selects and arranges the lighting. the director of photography for a movie is also called the chief cinematographer."@en ;
+    skos:narrowMatch "http://id.loc.gov/vocabulary/relators/cng"@en,
+        "http://id.loc.gov/vocabulary/relators/vdg"@en .
+
 <http://rdaregistry.info/Elements/u/P60533> a rdf:Property ;
     rdfs:label "has numbering of serials"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30165>,
@@ -7244,21 +7249,11 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60374> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/u/P60452> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60673> ;
     = <http://rdaregistry.info/Elements/u/director> ;
     skos:closeMatch "http://id.loc.gov/vocabulary/relators/drt"@en ;
     skos:definition "Relates a resource to an agent responsible for the general management and supervision of a filmed performance, a radio or television program, etc."@en .
 
-<http://rdaregistry.info/Elements/u/P60452> a rdf:Property ;
-    rdfs:label "has director of photography"@en ;
-    reg:name "directorOfPhotography"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60374> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/u/P60678> ;
-    skos:definition "Relates a resource to an agent that captures images, either electronically or on film or video stock, and often selects and arranges the lighting. the director of photography for a movie is also called the chief cinematographer."@en ;
-    skos:narrowMatch "http://id.loc.gov/vocabulary/relators/cng"@en,
-        "http://id.loc.gov/vocabulary/relators/vdg"@en .
 <http://rdaregistry.info/Elements/u/P60568> a rdf:Property ;
     rdfs:label "has generation"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30191>,
