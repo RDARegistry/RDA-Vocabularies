@@ -290,6 +290,32 @@
     = <http://rdaregistry.info/Elements/e/workExpressed> ;
     skos:definition "Relates an expression to the work realized through an expression."@en .
 
+<http://rdaregistry.info/Elements/e/P20237> a rdf:Property ;
+    rdfs:label "has writer of afterword"@en ;
+    reg:name "writerOfAfterword"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20046>,
+        <http://rdaregistry.info/Elements/u/P60715> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50227> ;
+    = <http://rdaregistry.info/Elements/e/writerOfAfterword> ;
+    skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by providing an afterword to the original work."@en .
+
+<http://rdaregistry.info/Elements/e/P20238> a rdf:Property ;
+    rdfs:label "has writer of postface"@en ;
+    reg:name "writerOfPostface"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20046>,
+        <http://rdaregistry.info/Elements/u/P60716> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50228> ;
+    = <http://rdaregistry.info/Elements/e/writerOfPostface> ;
+    skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by providing a postface to the original work."@en .
+
 <http://rdaregistry.info/Elements/e/P20010> a rdf:Property ;
     rdfs:label "has note on changes in content characteristics"@en ;
     reg:name "noteOnChangesInContentCharacteristics"@en ;
@@ -907,6 +933,45 @@
     = <http://rdaregistry.info/Elements/e/noteOnExpression> ;
     skos:definition "Relates an expression to an annotation providing additional information about content recorded as an expression attribute."@en .
 
+<http://rdaregistry.info/Elements/e/P20075> a rdf:Property ;
+    rdfs:label "is replaced in part by (expression)"@en ;
+    reg:name "replacedInPartByExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60103> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20198> ;
+    = <http://rdaregistry.info/Elements/e/replacedInPartByExpression>,
+        <http://rdaregistry.info/Elements/e/supersededInPartByExpression> ;
+    skos:definition "Relates an expression to an expression of a later work used in part in place of the earlier expression, usually because the later work contains updated or new information that makes part of the earlier expression obsolete."@en .
+
+<http://rdaregistry.info/Elements/e/P20085> a rdf:Property ;
+    rdfs:label "is incidental music (expression)"@en ;
+    reg:name "incidentalMusicExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20243>,
+        <http://rdaregistry.info/Elements/u/P60118> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20103> ;
+    = <http://rdaregistry.info/Elements/e/incidentalMusicExpression> ;
+    skos:definition "Relates an expression to an expression of a musical work that that provides the incidental music for a play or other spoken work for the stage."@en .
+
+<http://rdaregistry.info/Elements/e/P20103> a rdf:Property ;
+    rdfs:label "is incidental music for (expression)"@en ;
+    reg:name "incidentalMusicForExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244>,
+        <http://rdaregistry.info/Elements/u/P60202> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20085> ;
+    = <http://rdaregistry.info/Elements/e/incidentalMusicForExpression> ;
+    skos:definition "Relates an expression to an expression of a work such as a play or other spoken work for the stage that uses the musical work as incidental music."@en .
+
 <http://rdaregistry.info/Elements/e/P20213> a rdf:Property ;
     rdfs:label "has additional scale information"@en ;
     reg:name "additionalScaleInformation"@en ;
@@ -995,8 +1060,164 @@
     = <http://rdaregistry.info/Elements/e/verticalScaleOfCartographicContent> ;
     skos:definition "Relates an expression to the scale of elevation or vertical dimension of the cartographic content of a resource."@en .
 
+<http://rdaregistry.info/Elements/e/P20239> a rdf:Property ;
+    rdfs:label "is musical theatre adaptation of (expression)"@en ;
+    reg:name "musicalTheatreAdaptationOfExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20152>,
+        <http://rdaregistry.info/Elements/u/P60719> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20241> ;
+    = <http://rdaregistry.info/Elements/e/musicalTheatreAdaptationOfExpression> ;
+    skos:definition "Relates an expression to an expression of a work that has been adapted as a musical theatre work."@en .
+
+<http://rdaregistry.info/Elements/e/P20240> a rdf:Property ;
+    rdfs:label "is opera adaptation of (expression)"@en ;
+    reg:name "operaAdaptationOfExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20152>,
+        <http://rdaregistry.info/Elements/u/P60720> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20242> ;
+    = <http://rdaregistry.info/Elements/e/operaAdaptationOfExpression> ;
+    skos:definition "Relates an expression to an expression of a work that has been adapted as an opera."@en .
+
+<http://rdaregistry.info/Elements/e/P20241> a rdf:Property ;
+    rdfs:label "is adapted as musical theatre (expression)"@en ;
+    reg:name "adaptedAsMusicalTheatreExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20153>,
+        <http://rdaregistry.info/Elements/u/P60721> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20239> ;
+    = <http://rdaregistry.info/Elements/e/adaptedAsMusicalTheatreExpression> ;
+    skos:definition "Relates an expression to an expression of a musical theatre work based on the source expression."@en .
+
+<http://rdaregistry.info/Elements/e/P20242> a rdf:Property ;
+    rdfs:label "is adapted as opera (expression)"@en ;
+    reg:name "adaptedAsOperaExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20153>,
+        <http://rdaregistry.info/Elements/u/P60722> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20240> ;
+    = <http://rdaregistry.info/Elements/e/adaptedAsOperaExpression> ;
+    skos:definition "Relates an expression to an expression of an opera based on the source expression."@en .
+
+<http://rdaregistry.info/Elements/e/P20245> a rdf:Property ;
+    rdfs:label "is video music (expression)"@en ;
+    reg:name "videoMusicExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20243>,
+        <http://rdaregistry.info/Elements/u/P60725> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20246> ;
+    = <http://rdaregistry.info/Elements/e/videoMusicExpression> ;
+    skos:definition "Relates an expression to an expression of a musical work that is used in a video."@en .
+
+<http://rdaregistry.info/Elements/e/P20246> a rdf:Property ;
+    rdfs:label "is music for video (expression)"@en ;
+    reg:name "musicForVideoExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244>,
+        <http://rdaregistry.info/Elements/u/P60726> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20245> ;
+    = <http://rdaregistry.info/Elements/e/musicForVideoExpression> ;
+    skos:definition "Relates an expression to an expression of a work that uses the musical work in a video."@en .
+
+<http://rdaregistry.info/Elements/e/P20247> a rdf:Property ;
+    rdfs:label "is television program music (expression)"@en ;
+    reg:name "televisionProgramMusicExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20243>,
+        <http://rdaregistry.info/Elements/u/P60727> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20248> ;
+    = <http://rdaregistry.info/Elements/e/televisionProgramMusicExpression> ;
+    skos:definition "Relates an expression to an expression of a musical work that is used in a television program."@en .
+
+<http://rdaregistry.info/Elements/e/P20248> a rdf:Property ;
+    rdfs:label "is music for television program (expression)"@en ;
+    reg:name "musicForTelevisionProgramExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244>,
+        <http://rdaregistry.info/Elements/u/P60728> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20247> ;
+    = <http://rdaregistry.info/Elements/e/musicForTelevisionProgramExpression> ;
+    skos:definition "Relates an expression to an expression of a work that uses the musical work in a television program."@en .
+
+<http://rdaregistry.info/Elements/e/P20249> a rdf:Property ;
+    rdfs:label "is radio program music (expression)"@en ;
+    reg:name "radioProgramMusicExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20243>,
+        <http://rdaregistry.info/Elements/u/P60729> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20250> ;
+    = <http://rdaregistry.info/Elements/e/radioProgramMusicExpression> ;
+    skos:definition "Relates an expression to an expression of a musical work that is used in a radio program."@en .
+
+<http://rdaregistry.info/Elements/e/P20250> a rdf:Property ;
+    rdfs:label "is music for radio program (expression)"@en ;
+    reg:name "musicForRadioProgramExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244>,
+        <http://rdaregistry.info/Elements/u/P60730> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20249> ;
+    = <http://rdaregistry.info/Elements/e/musicForRadioProgramExpression> ;
+    skos:definition "Relates an expression to an expression of a work that uses the musical work in a radio program."@en .
+
+<http://rdaregistry.info/Elements/e/P20251> a rdf:Property ;
+    rdfs:label "is motion picture music (expression)"@en ;
+    reg:name "motionPictureMusicExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20243>,
+        <http://rdaregistry.info/Elements/u/P60731> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20252> ;
+    = <http://rdaregistry.info/Elements/e/motionPictureMusicExpression> ;
+    skos:definition "Relates an expression to an expression of a musical work that is used in a motion picture."@en .
+
+<http://rdaregistry.info/Elements/e/P20252> a rdf:Property ;
+    rdfs:label "is music for motion picture (expression)"@en ;
+    reg:name "musicForMotionPictureExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244>,
+        <http://rdaregistry.info/Elements/u/P60732> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20251> ;
+    = <http://rdaregistry.info/Elements/e/musicForMotionPictureExpression> ;
+    skos:definition "Relates an expression to an expression of a work that uses the musical work in a motion picture."@en .
+
 <http://rdaregistry.info/Elements/e/P20009> a rdf:Property ;
-    rdfs:label "is adapted as a motion picture (expression)"@en ;
+    rdfs:label "is adapted as motion picture (expression)"@en ;
     reg:name "adaptedAsAMotionPictureExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -1006,7 +1227,7 @@
         <http://rdaregistry.info/Elements/u/P60110> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20125> ;
     = <http://rdaregistry.info/Elements/e/adaptedAsAMotionPictureExpression> ;
-    skos:definition "Relates an expression to a motion picture based on the source entity."@en .
+    skos:definition "Relates an expression to a motion picture based on the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20012> a rdf:Property ;
     rdfs:label "has actor"@en ;
@@ -1037,7 +1258,7 @@
     skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a primarily non-textual work by providing text for the non-textual work (e.g., writing captions for photographs, descriptions of maps)."@en .
 
 <http://rdaregistry.info/Elements/e/P20060> a rdf:Property ;
-    rdfs:label "is adapted as a radio program (expression)"@en ;
+    rdfs:label "is adapted as radio program (expression)"@en ;
     reg:name "adaptedAsARadioProgramExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -1047,10 +1268,10 @@
         <http://rdaregistry.info/Elements/u/P60174> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20127> ;
     = <http://rdaregistry.info/Elements/e/adaptedAsARadioProgramExpression> ;
-    skos:definition "Relates an expression to a radio program based on the source entity."@en .
+    skos:definition "Relates an expression to a radio program based on the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20066> a rdf:Property ;
-    rdfs:label "is adapted as a television program (expression)"@en ;
+    rdfs:label "is adapted as television program (expression)"@en ;
     reg:name "adaptedAsATelevisionProgramExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -1060,10 +1281,10 @@
         <http://rdaregistry.info/Elements/u/P60354> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20128> ;
     = <http://rdaregistry.info/Elements/e/adaptedAsATelevisionProgramExpression> ;
-    skos:definition "Relates an expression to a television program based on the source entity."@en .
+    skos:definition "Relates an expression to a television program based on the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20067> a rdf:Property ;
-    rdfs:label "is adapted as a video (expression)"@en ;
+    rdfs:label "is adapted as video (expression)"@en ;
     reg:name "adaptedAsAVideoProgramExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -1073,7 +1294,7 @@
         <http://rdaregistry.info/Elements/u/P60361> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20134> ;
     = <http://rdaregistry.info/Elements/e/adaptedAsAVideoProgramExpression> ;
-    skos:definition "Relates an expression to a video based on the source entity."@en .
+    skos:definition "Relates an expression to a video based on the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20073> a rdf:Property ;
     rdfs:label "is dramatized as (expression)"@en ;
@@ -1086,7 +1307,7 @@
         <http://rdaregistry.info/Elements/u/P60088> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20123> ;
     = <http://rdaregistry.info/Elements/e/dramatizedAsExpression> ;
-    skos:definition "Relates an expression to an expression of a dramatic work adapted from the source entity."@en .
+    skos:definition "Relates an expression to an expression of a dramatic work adapted from the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20074> a rdf:Property ;
     rdfs:label "is contained in (expression)"@en ;
@@ -1099,24 +1320,11 @@
         <http://rdaregistry.info/Elements/u/P60101> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20145> ;
     = <http://rdaregistry.info/Elements/e/containedInExpression> ;
-    skos:definition "Relates an expression to an expression of a larger work of which a part is a discrete component."@en .
-
-<http://rdaregistry.info/Elements/e/P20075> a rdf:Property ;
-    rdfs:label "is superseded in part by (expression)"@en ;
-    reg:name "supersededInPartByExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20169>,
-        <http://rdaregistry.info/Elements/u/P60103> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20198> ;
-    = <http://rdaregistry.info/Elements/e/supersededInPartByExpression> ;
-    skos:definition "Relates an expression to an expression of a later entity used in part in place of the earlier entity, usually because the later entity contains updated or new information that makes part of the earlier entity obsolete."@en .
+    skos:definition "Relates an expression to an expression of a larger work of which the expression is a discrete component."@en .
 
 <http://rdaregistry.info/Elements/e/P20076> a rdf:Property ;
-    rdfs:label "is superseded by (expression)"@en ;
-    reg:name "supersededByExpression"@en ;
+    rdfs:label "is replaced by (expression)"@en ;
+    reg:name "replacedByExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -1124,8 +1332,9 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20169>,
         <http://rdaregistry.info/Elements/u/P60104> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20199> ;
-    = <http://rdaregistry.info/Elements/e/supersededByExpression> ;
-    skos:definition "Relates an expression to an expression of a later entity used in place of the earlier entity, usually because the later entity contains updated or new information that makes the earlier entity obsolete."@en .
+    = <http://rdaregistry.info/Elements/e/replacedByExpression>,
+        <http://rdaregistry.info/Elements/e/supersededByExpression> ;
+    skos:definition "Relates an expression to an expression of a later work used in place of the earlier expression, usually because the later work contains updated or new information that makes the earlier expression obsolete."@en .
 
 <http://rdaregistry.info/Elements/e/P20077> a rdf:Property ;
     rdfs:label "is verse adaptation (expression)"@en ;
@@ -1138,7 +1347,7 @@
         <http://rdaregistry.info/Elements/u/P60106> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20124> ;
     = <http://rdaregistry.info/Elements/e/verseAdaptationExpression> ;
-    skos:definition "Relates an expression to an expression of a literary composition in verse form adapted from the source entity."@en .
+    skos:definition "Relates an expression to an expression of a literary composition in verse form adapted from the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20078> a rdf:Property ;
     rdfs:label "is dubbed version of"@en ;
@@ -1231,19 +1440,6 @@
     = <http://rdaregistry.info/Elements/e/librettoForExpression> ;
     skos:definition "Relates an expression to an expression of a musical work such as an opera or other work for the musical stage, or an oratorio, that uses the text of the related work."@en .
 
-<http://rdaregistry.info/Elements/e/P20085> a rdf:Property ;
-    rdfs:label "is incidental music (expression)"@en ;
-    reg:name "incidentalMusicExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20100>,
-        <http://rdaregistry.info/Elements/u/P60118> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20103> ;
-    = <http://rdaregistry.info/Elements/e/incidentalMusicExpression> ;
-    skos:definition "Relates an expression to an expression of a musical work that that provides the incidental music for a play or other spoken work for the stage."@en .
-
 <http://rdaregistry.info/Elements/e/P20086> a rdf:Property ;
     rdfs:label "is remade as (expression)"@en ;
     reg:name "remadeAsExpression"@en ;
@@ -1281,7 +1477,7 @@
         <http://rdaregistry.info/Elements/u/P60138> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20126> ;
     = <http://rdaregistry.info/Elements/e/novelizationExpression> ;
-    skos:definition "Relates an expression to an expression of a novel adapted from the source entity."@en .
+    skos:definition "Relates an expression to an expression of a novel adapted from the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20089> a rdf:Property ;
     rdfs:label "is appendix to (expression)"@en ;
@@ -1307,7 +1503,7 @@
         <http://rdaregistry.info/Elements/u/P60177> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20193> ;
     = <http://rdaregistry.info/Elements/e/abstractedInExpression> ;
-    skos:definition "Relates an expression to an expression of a work (an abstracting and indexing service) that abstracts the contents of a source entity."@en .
+    skos:definition "Relates an expression to an expression of a work (an abstracting and indexing service) that abstracts the contents of a source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20091> a rdf:Property ;
     rdfs:label "is indexed in (expression)"@en ;
@@ -1320,7 +1516,7 @@
         <http://rdaregistry.info/Elements/u/P60178> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20194> ;
     = <http://rdaregistry.info/Elements/e/indexedInExpression> ;
-    skos:definition "Relates an expression to an expression of a work (an abstracting and indexing service) that indexes the contents of a source entity."@en .
+    skos:definition "Relates an expression to an expression of a work (an abstracting and indexing service) that indexes the contents of a source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20092> a rdf:Property ;
     rdfs:label "is choreography (expression)"@en ;
@@ -1359,10 +1555,10 @@
         <http://rdaregistry.info/Elements/u/P60182> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20148> ;
     = <http://rdaregistry.info/Elements/e/illustrationsExpression> ;
-    skos:definition "Relates an expression to an expression of a work consisting of pictorial content designed to explain or decorate the augmented entity."@en .
+    skos:definition "Relates an expression to an expression of a work consisting of pictorial content designed to explain or decorate the augmented expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20095> a rdf:Property ;
-    rdfs:label "is adapted as a motion picture screenplay (expression)"@en ;
+    rdfs:label "is adapted as motion picture screenplay (expression)"@en ;
     reg:name "adaptedAsAMotionPictureScreenplayExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -1375,7 +1571,7 @@
     skos:definition "Relates an expression to an expression of a work consisting of the screenplay for a motion picture, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/e/P20097> a rdf:Property ;
-    rdfs:label "is adapted as a television screenplay (expression)"@en ;
+    rdfs:label "is adapted as television screenplay (expression)"@en ;
     reg:name "adaptedAsATelevisionScreenplayExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -1388,7 +1584,7 @@
     skos:definition "Relates an expression to an expression of a work consisting of the screenplay for a television program, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/e/P20098> a rdf:Property ;
-    rdfs:label "is adapted as a video screenplay (expression)"@en ;
+    rdfs:label "is adapted as video screenplay (expression)"@en ;
     reg:name "adaptedAsAVideoScreenplayExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -1401,7 +1597,7 @@
     skos:definition "Relates an expression to an expression of a work consisting of the screenplay for a video, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/e/P20099> a rdf:Property ;
-    rdfs:label "is adapted as a radio script (expression)"@en ;
+    rdfs:label "is adapted as radio script (expression)"@en ;
     reg:name "adaptedAsARadioScriptExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -1424,20 +1620,7 @@
         <http://rdaregistry.info/Elements/u/P60199> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20168> ;
     = <http://rdaregistry.info/Elements/e/continuedInPartByExpression> ;
-    skos:definition "Relates an expression to an expression of a work part of whose content separated from an earlier entity to form a new entity."@en .
-
-<http://rdaregistry.info/Elements/e/P20103> a rdf:Property ;
-    rdfs:label "is incidental music for (expression)"@en ;
-    reg:name "incidentalMusicForExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20100>,
-        <http://rdaregistry.info/Elements/u/P60202> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20085> ;
-    = <http://rdaregistry.info/Elements/e/incidentalMusicForExpression> ;
-    skos:definition "Relates an expression to an expression of a work such as a play or other spoken work for the stage that uses the musical work as incidental music."@en .
+    skos:definition "Relates an expression to an expression of a work part of whose content separated from an earlier expression to form a new expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20104> a rdf:Property ;
     rdfs:label "is abstract (expression)"@en ;
@@ -1450,7 +1633,7 @@
         <http://rdaregistry.info/Elements/u/P60203> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20122> ;
     = <http://rdaregistry.info/Elements/e/abstractExpression> ;
-    skos:definition "Relates an expression to an expression of a work that abbreviates the source entity in a brief, objective manner."@en .
+    skos:definition "Relates an expression to an expression of a work that abbreviates the source expression in a brief, objective manner."@en .
 
 <http://rdaregistry.info/Elements/e/P20106> a rdf:Property ;
     rdfs:label "is summary (expression)"@en ;
@@ -1463,7 +1646,7 @@
         <http://rdaregistry.info/Elements/u/P60205> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20179> ;
     = <http://rdaregistry.info/Elements/e/summaryExpression> ;
-    skos:definition "Relates an expression to an expression of a work that consists of a brief recapitulation of the content of the source entity."@en .
+    skos:definition "Relates an expression to an expression of a work that consists of a brief recapitulation of the content of the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20107> a rdf:Property ;
     rdfs:label "is catalogue (expression)"@en ;
@@ -1489,7 +1672,7 @@
         <http://rdaregistry.info/Elements/u/P60208> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20181> ;
     = <http://rdaregistry.info/Elements/e/concordanceExpression> ;
-    skos:definition "Relates an expression to an expression of a work that consists of an index of all the words in the predominant entity."@en .
+    skos:definition "Relates an expression to an expression of a work that consists of an index of all the words in the predominant expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20109> a rdf:Property ;
     rdfs:label "is addenda (expression)"@en ;
@@ -1528,7 +1711,7 @@
         <http://rdaregistry.info/Elements/u/P60211> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20178> ;
     = <http://rdaregistry.info/Elements/e/reviewedInExpression> ;
-    skos:definition "Relates an expression to an expression of a work that contains a brief evaluation of the described entity."@en .
+    skos:definition "Relates an expression to an expression of a work that contains a brief evaluation of the described expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20112> a rdf:Property ;
     rdfs:label "is critiqued in (expression)"@en ;
@@ -1541,7 +1724,7 @@
         <http://rdaregistry.info/Elements/u/P60212> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20182> ;
     = <http://rdaregistry.info/Elements/e/critiquedInExpression> ;
-    skos:definition "Relates an expression to an expression of a work that contains a critical evaluation of the described entity."@en .
+    skos:definition "Relates an expression to an expression of a work that contains a critical evaluation of the described expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20113> a rdf:Property ;
     rdfs:label "is commentary in (expression)"@en ;
@@ -1554,7 +1737,7 @@
         <http://rdaregistry.info/Elements/u/P60213> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20187> ;
     = <http://rdaregistry.info/Elements/e/commentaryInExpression> ;
-    skos:definition "Relates an expression to an expression of a work that contains a set of explanatory or critical notes on the described entity."@en .
+    skos:definition "Relates an expression to an expression of a work that contains a set of explanatory or critical notes on the described expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20115> a rdf:Property ;
     rdfs:label "is expanded as (expression)"@en ;
@@ -1580,7 +1763,7 @@
         <http://rdaregistry.info/Elements/u/P60218> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20150> ;
     = <http://rdaregistry.info/Elements/e/evaluatedInExpression> ;
-    skos:definition "Relates an expression to an expression of a work that examines or judges the described entity."@en .
+    skos:definition "Relates an expression to an expression of a work that examines or judges the described expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20117> a rdf:Property ;
     rdfs:label "is analysed in (expression)"@en ;
@@ -1593,7 +1776,7 @@
         <http://rdaregistry.info/Elements/u/P60219> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20136> ;
     = <http://rdaregistry.info/Elements/e/analysedInExpression> ;
-    skos:definition "Relates an expression to an expression of a work that examines the source entity to identify its components and their relations."@en .
+    skos:definition "Relates an expression to an expression of a work that examines the source expression to identify its components and their relations."@en .
 
 <http://rdaregistry.info/Elements/e/P20118> a rdf:Property ;
     rdfs:label "is appendix (expression)"@en ;
@@ -1830,8 +2013,8 @@
     skos:definition "Relates an expression to an expression of a work that has been examined to identify its components and their relations."@en .
 
 <http://rdaregistry.info/Elements/e/P20137> a rdf:Property ;
-    rdfs:label "is absorbed (expression)"@en ;
-    reg:name "absorbedExpression"@en ;
+    rdfs:label "is absorption of (expression)"@en ;
+    reg:name "absorptionOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -1839,12 +2022,13 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20154>,
         <http://rdaregistry.info/Elements/u/P60574> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20143> ;
-    = <http://rdaregistry.info/Elements/e/absorbedExpression> ;
-    skos:definition "Relates an expression to an expression of a work that has been incorporated into another entity."@en .
+    = <http://rdaregistry.info/Elements/e/absorbedExpression>,
+        <http://rdaregistry.info/Elements/e/absorptionOfExpression> ;
+    skos:definition "Relates an expression to an expression of a work that has been incorporated into another expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20138> a rdf:Property ;
-    rdfs:label "is absorbed in part (expression)"@en ;
-    reg:name "absorbedInPartExpression"@en ;
+    rdfs:label "is absorption in part of (expression)"@en ;
+    reg:name "absorptionInPartOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -1852,8 +2036,9 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20154>,
         <http://rdaregistry.info/Elements/u/P60575> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20144> ;
-    = <http://rdaregistry.info/Elements/e/absorbedInPartExpression> ;
-    skos:definition "Relates an expression to an expression of a work that has been partially incorporated into another entity."@en .
+    = <http://rdaregistry.info/Elements/e/absorbedInPartExpression>,
+        <http://rdaregistry.info/Elements/e/absorptionInPartOfExpression> ;
+    skos:definition "Relates an expression to an expression of a work that has been partially incorporated into another expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20139> a rdf:Property ;
     rdfs:label "is musical arrangement of"@en ;
@@ -1905,7 +2090,7 @@
         <http://rdaregistry.info/Elements/u/P60247> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20137> ;
     = <http://rdaregistry.info/Elements/e/absorbedByExpression> ;
-    skos:definition "Relates an expression to an expression of a work that incorporates another entity."@en .
+    skos:definition "Relates an expression to an expression of a work that incorporates another expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20144> a rdf:Property ;
     rdfs:label "is absorbed in part by (expression)"@en ;
@@ -1918,11 +2103,11 @@
         <http://rdaregistry.info/Elements/u/P60248> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20138> ;
     = <http://rdaregistry.info/Elements/e/absorbedInPartByExpression> ;
-    skos:definition "Relates an expression to an expression of a work that incorporates part of the content of another entity."@en .
+    skos:definition "Relates an expression to an expression of a work that incorporates part of the content of another expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20145> a rdf:Property ;
-    rdfs:label "is contains (expression)"@en ;
-    reg:name "containsExpression"@en ;
+    rdfs:label "is container of (expression)"@en ;
+    reg:name "containerOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -1930,8 +2115,9 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20236>,
         <http://rdaregistry.info/Elements/u/P60249> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20074> ;
-    = <http://rdaregistry.info/Elements/e/containsExpression> ;
-    skos:definition "Relates an expression to an expression of a work that is a discrete component of a larger entity."@en .
+    = <http://rdaregistry.info/Elements/e/containerOfExpression>,
+        <http://rdaregistry.info/Elements/e/containsExpression> ;
+    skos:definition "Relates an expression to an expression of a work that is a discrete component of a larger expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20146> a rdf:Property ;
     rdfs:label "is errata to (expression)"@en ;
@@ -1973,8 +2159,8 @@
     skos:definition "Relates an expression to an expression of a work that is augmented by pictorial content designed to explain or decorate it."@en .
 
 <http://rdaregistry.info/Elements/e/P20149> a rdf:Property ;
-    rdfs:label "is continues (expression)"@en ;
-    reg:name "continuesExpression"@en ;
+    rdfs:label "is continuation of (expression)"@en ;
+    reg:name "continuationOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -1982,8 +2168,9 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20154>,
         <http://rdaregistry.info/Elements/u/P60576> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20191> ;
-    = <http://rdaregistry.info/Elements/e/continuesExpression> ;
-    skos:definition "Relates an expression to an expression of a work that is continued by the content of a later entity under a new title."@en .
+    = <http://rdaregistry.info/Elements/e/continuationOfExpression>,
+        <http://rdaregistry.info/Elements/e/continuesExpression> ;
+    skos:definition "Relates an expression to an expression of a work that is continued by the content of an expression of a later work."@en .
 
 <http://rdaregistry.info/Elements/e/P20150> a rdf:Property ;
     rdfs:label "is evaluation of (expression)"@en ;
@@ -2009,7 +2196,7 @@
         <http://rdaregistry.info/Elements/u/P60259> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20172> ;
     = <http://rdaregistry.info/Elements/e/supplementToExpression> ;
-    skos:definition "Relates an expression to an expression of a work that is updated or otherwise complemented by the augmenting entity."@en .
+    skos:definition "Relates an expression to an expression of a work that is updated or otherwise complemented by the augmenting expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20155> a rdf:Property ;
     rdfs:label "is finding aid (expression)"@en ;
@@ -2035,7 +2222,7 @@
         <http://rdaregistry.info/Elements/u/P60263> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20188> ;
     = <http://rdaregistry.info/Elements/e/indexExpression> ;
-    skos:definition "Relates an expression to an expression of a work that provides a systematic, alphabetical guide to the contents of the predominant entity, usually keyed to page numbers or other reference codes."@en .
+    skos:definition "Relates an expression to an expression of a work that provides a systematic, alphabetical guide to the contents of the predominant expression, usually keyed to page numbers or other reference codes."@en .
 
 <http://rdaregistry.info/Elements/e/P20158> a rdf:Property ;
     rdfs:label "is motion picture screenplay (expression)"@en ;
@@ -2139,7 +2326,7 @@
         <http://rdaregistry.info/Elements/u/P60274> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20139> ;
     = <http://rdaregistry.info/Elements/e/musicalArrangement> ;
-    skos:definition "Relates an expression to an expression of a work that rewrites the source entity for a medium of performance different from that for which the work was originally intended."@en .
+    skos:definition "Relates an expression to an expression of a work that rewrites the source expression for a medium of performance different from that for which the work was originally intended."@en .
 
 <http://rdaregistry.info/Elements/e/P20166> a rdf:Property ;
     rdfs:label "is abridged as (expression)"@en ;
@@ -2152,11 +2339,11 @@
         <http://rdaregistry.info/Elements/u/P60275> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20121> ;
     = <http://rdaregistry.info/Elements/e/abridgedAsExpression> ;
-    skos:definition "Relates an expression to an expression of a work that shortens the source entity without changing the general meaning or manner of presentation."@en .
+    skos:definition "Relates an expression to an expression of a work that shortens the source expression without changing the general meaning or manner of presentation."@en .
 
 <http://rdaregistry.info/Elements/e/P20167> a rdf:Property ;
-    rdfs:label "is continues in part (expression)"@en ;
-    reg:name "continuesInPartExpression"@en ;
+    rdfs:label "is continuation in part of (expression)"@en ;
+    reg:name "continuationInPartOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -2164,8 +2351,9 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20154>,
         <http://rdaregistry.info/Elements/u/P60276> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20200> ;
-    = <http://rdaregistry.info/Elements/e/continuesInPartExpression> ;
-    skos:definition "Relates an expression to an expression of a work that split into two or more separate entities with new titles."@en .
+    = <http://rdaregistry.info/Elements/e/continuationInPartOfExpression>,
+        <http://rdaregistry.info/Elements/e/continuesInPartExpression> ;
+    skos:definition "Relates an expression to an expression of a work that split into two or more separate expressions with new titles."@en .
 
 <http://rdaregistry.info/Elements/e/P20168> a rdf:Property ;
     rdfs:label "is separated from (expression)"@en ;
@@ -2178,7 +2366,7 @@
         <http://rdaregistry.info/Elements/u/P60277> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20101> ;
     = <http://rdaregistry.info/Elements/e/separatedFromExpression> ;
-    skos:definition "Relates an expression to an expression of a work that spun off a part of its content to form a new entity."@en .
+    skos:definition "Relates an expression to an expression of a work that spun off a part of its content to form a new expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20170> a rdf:Property ;
     rdfs:label "is digest (expression)"@en ;
@@ -2191,7 +2379,7 @@
         <http://rdaregistry.info/Elements/u/P60279> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20135> ;
     = <http://rdaregistry.info/Elements/e/digestExpression> ;
-    skos:definition "Relates an expression to an expression of a work that systematically and comprehensively condenses the source entity."@en .
+    skos:definition "Relates an expression to an expression of a work that systematically and comprehensively condenses the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20172> a rdf:Property ;
     rdfs:label "is supplement (expression)"@en ;
@@ -2204,10 +2392,10 @@
         <http://rdaregistry.info/Elements/u/P60281> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20151> ;
     = <http://rdaregistry.info/Elements/e/supplementExpression> ;
-    skos:definition "Relates an expression to an expression of a work that updates or otherwise complements the predominant entity."@en .
+    skos:definition "Relates an expression to an expression of a work that updates or otherwise complements the predominant expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20173> a rdf:Property ;
-    rdfs:label "is screenplay for the motion picture (expression)"@en ;
+    rdfs:label "is screenplay for motion picture (expression)"@en ;
     reg:name "screenplayForTheMotionPictureExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -2220,7 +2408,7 @@
     skos:definition "Relates an expression to an expression of a work that uses the text as a screenplay for a motion picture."@en .
 
 <http://rdaregistry.info/Elements/e/P20174> a rdf:Property ;
-    rdfs:label "is screenplay for the television program (expression)"@en ;
+    rdfs:label "is screenplay for television program (expression)"@en ;
     reg:name "screenplayForTheTelevisionProgramExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -2233,7 +2421,7 @@
     skos:definition "Relates an expression to an expression of a work that uses the text as a screenplay for a television program."@en .
 
 <http://rdaregistry.info/Elements/e/P20175> a rdf:Property ;
-    rdfs:label "is screenplay for the video (expression)"@en ;
+    rdfs:label "is screenplay for video (expression)"@en ;
     reg:name "screenplayForTheVideoExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -2246,7 +2434,7 @@
     skos:definition "Relates an expression to an expression of a work that uses the text as a screenplay for a video."@en .
 
 <http://rdaregistry.info/Elements/e/P20176> a rdf:Property ;
-    rdfs:label "is script for the radio program (expression)"@en ;
+    rdfs:label "is script for radio program (expression)"@en ;
     reg:name "scriptForTheRadioProgramExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -2321,7 +2509,7 @@
         <http://rdaregistry.info/Elements/u/P60291> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20108> ;
     = <http://rdaregistry.info/Elements/e/concordanceToExpression> ;
-    skos:definition "Relates an expression to an expression of a work used as the basis for a concordance, i.e., an index of all the words in the predominant entity."@en .
+    skos:definition "Relates an expression to an expression of a work used as the basis for a concordance, i.e., an index of all the words in the predominant expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20182> a rdf:Property ;
     rdfs:label "is critique of (expression)"@en ;
@@ -2412,7 +2600,7 @@
         <http://rdaregistry.info/Elements/u/P60302> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20156> ;
     = <http://rdaregistry.info/Elements/e/indexToExpression> ;
-    skos:definition "Relates an expression to an expression of a work used as the basis for an index, i.e., a systematic, alphabetical guide to the contents of the predominant entity, usually keyed to page numbers or other reference codes."@en .
+    skos:definition "Relates an expression to an expression of a work used as the basis for an index, i.e., a systematic, alphabetical guide to the contents of the predominant expression, usually keyed to page numbers or other reference codes."@en .
 
 <http://rdaregistry.info/Elements/e/P20189> a rdf:Property ;
     rdfs:label "is revision of"@en ;
@@ -2451,7 +2639,7 @@
         <http://rdaregistry.info/Elements/u/P60306> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20149> ;
     = <http://rdaregistry.info/Elements/e/continuedByExpression> ;
-    skos:definition "Relates an expression to an expression of a work whose content continues an earlier entity under a new title."@en .
+    skos:definition "Relates an expression to an expression of a work whose content continues an expression of an earlier work."@en .
 
 <http://rdaregistry.info/Elements/e/P20193> a rdf:Property ;
     rdfs:label "is abstracts for (expression)"@en ;
@@ -2506,8 +2694,8 @@
     skos:definition "Relates an expression to an expression of an archival collection that is described in a finding aid, i.e., a guide to the organization, arrangement, and contents of the collection."@en .
 
 <http://rdaregistry.info/Elements/e/P20198> a rdf:Property ;
-    rdfs:label "is supersedes in part (expression)"@en ;
-    reg:name "supersedesInPartExpression"@en ;
+    rdfs:label "is replacement in part of (expression)"@en ;
+    reg:name "replacementInPartOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -2515,12 +2703,13 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20154>,
         <http://rdaregistry.info/Elements/u/P60479> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20075> ;
-    = <http://rdaregistry.info/Elements/e/supersedesInPartExpression> ;
-    skos:definition "Relates an expression to an expression of an earlier work whose content has been partially replaced by a later entity, usually because the later entity contains updated or new information that makes the earlier entity obsolete."@en .
+    = <http://rdaregistry.info/Elements/e/replacementInPartOfExpression>,
+        <http://rdaregistry.info/Elements/e/supersedesInPartExpression> ;
+    skos:definition "Relates an expression to an expression of an earlier work whose content has been partially replaced by a later expression, usually because the later work contains updated or new information that makes the earlier expression obsolete."@en .
 
 <http://rdaregistry.info/Elements/e/P20199> a rdf:Property ;
-    rdfs:label "is supersedes (expression)"@en ;
-    reg:name "supersedesExpression"@en ;
+    rdfs:label "is replacement of (expression)"@en ;
+    reg:name "replacementOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -2528,8 +2717,9 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20154>,
         <http://rdaregistry.info/Elements/u/P60480> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20076> ;
-    = <http://rdaregistry.info/Elements/e/supersedesExpression> ;
-    skos:definition "Relates an expression to an expression of an earlier work whose content has been replaced by a later entity, usually because the later entity contains updated or new information that makes the earlier entity obsolete."@en .
+    = <http://rdaregistry.info/Elements/e/replacementOfExpression>,
+        <http://rdaregistry.info/Elements/e/supersedesExpression> ;
+    skos:definition "Relates an expression to an expression of an earlier work whose content has been replaced by a later expression, usually because the later work contains updated or new information that makes the earlier expression obsolete."@en .
 
 <http://rdaregistry.info/Elements/e/P20200> a rdf:Property ;
     rdfs:label "is split into (expression)"@en ;
@@ -2542,7 +2732,7 @@
         <http://rdaregistry.info/Elements/u/P60503> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20167> ;
     = <http://rdaregistry.info/Elements/e/splitIntoExpression> ;
-    skos:definition "Relates an expression to an expression of one of two or more works resulting from the division of an earlier entity into separate entities."@en .
+    skos:definition "Relates an expression to an expression of one of two or more works resulting from the division of an earlier expression into separate expressions."@en .
 
 <http://rdaregistry.info/Elements/e/P20201> a rdf:Property ;
     rdfs:label "is merger of (expression)"@en ;
@@ -2555,7 +2745,7 @@
         <http://rdaregistry.info/Elements/u/P60505> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20212> ;
     = <http://rdaregistry.info/Elements/e/mergerOfExpression> ;
-    skos:definition "Relates an expression to one of the expressions which come together to form the expression."@en .
+    skos:definition "Relates an expression to an expression of one of two or more works which came together to form a new expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20211> a rdf:Property ;
     rdfs:label "is revised as"@en ;
@@ -2568,7 +2758,7 @@
         <http://rdaregistry.info/Elements/u/P60245> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20189> ;
     = <http://rdaregistry.info/Elements/e/revisedAs> ;
-    skos:definition "Relates an expression to n expression of a work that has been updated, corrected, or expanded."@en .
+    skos:definition "Relates an expression to an expression of a work that has been updated, corrected, or expanded."@en .
 
 <http://rdaregistry.info/Elements/e/P20212> a rdf:Property ;
     rdfs:label "is merged to form (expression)"@en ;
@@ -2581,19 +2771,7 @@
         <http://rdaregistry.info/Elements/u/P60504> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20201> ;
     = <http://rdaregistry.info/Elements/e/mergedToFormExpression> ;
-    skos:definition "Relates an expression to an expression which brings the expression together with another expression."@en .
-
-<http://rdaregistry.info/Elements/e/P20233> a rdf:Property ;
-    rdfs:label "has derivative expression relationship with"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20203> ;
-    reg:name "derivativeExpressionRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
-        <http://rdaregistry.info/Elements/u/P60710> ;
-    = <http://rdaregistry.info/Elements/e/derivativeExpressionRelationship> .
+    skos:definition "Relates an expression to one of two or more expressions of works that come together to form a new expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20114> a rdf:Property ;
     rdfs:label "is imitated as (expression)"@en ;
@@ -2635,7 +2813,7 @@
         <http://rdaregistry.info/Elements/u/P60280> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20141> ;
     = <http://rdaregistry.info/Elements/e/translatedAs> ;
-    skos:definition "Relates an expression to an expression of a work that translates the text of the source entity into a language different from that of the original work."@en .
+    skos:definition "Relates an expression to an expression of a work that translates the text of the source expression into a language different from that of the original work."@en .
 
 <http://rdaregistry.info/Elements/e/P20195> a rdf:Property ;
     rdfs:label "is imitation of (expression)"@en ;
@@ -2651,6 +2829,20 @@
     = <http://rdaregistry.info/Elements/e/imitationOfExpression> ;
     skos:definition "Relates an expression to an expression of a work whose style or content is copied in a derivative work."@en .
 
+<http://rdaregistry.info/Elements/e/P20233> a rdf:Property ;
+    rdfs:label "has derivative expression relationship with"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20203> ;
+    reg:name "derivativeExpressionRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
+        <http://rdaregistry.info/Elements/u/P60710> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20233> ;
+    = <http://rdaregistry.info/Elements/e/derivativeExpressionRelationship> ;
+    skos:definition "Relates an expression to an expression of a work that is based on or is a derivative of the expression."@en .
+
 <http://rdaregistry.info/Elements/e/P20234> a rdf:Property ;
     rdfs:label "has descriptive expression relationship with"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20072>,
@@ -2662,7 +2854,8 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
         <http://rdaregistry.info/Elements/u/P60711> ;
-    = <http://rdaregistry.info/Elements/e/descriptiveExpressionRelationship> .
+    = <http://rdaregistry.info/Elements/e/descriptiveExpressionRelationship> ;
+    skos:definition "Relates an expression to an expression of a work that is described in or is a description of the expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20235> a rdf:Property ;
     rdfs:label "has sequential expression relationship with"@en ;
@@ -2675,7 +2868,8 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
         <http://rdaregistry.info/Elements/u/P60713> ;
-    = <http://rdaregistry.info/Elements/e/sequentialExpressionRelationship> .
+    = <http://rdaregistry.info/Elements/e/sequentialExpressionRelationship> ;
+    skos:definition "Relates an expression to an expression of a work that is preceded by or succeeded by the expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20236> a rdf:Property ;
     rdfs:label "has whole-part expression relationship with"@en ;
@@ -2688,7 +2882,8 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
         <http://rdaregistry.info/Elements/u/P60714> ;
-    = <http://rdaregistry.info/Elements/e/wholePartExpressionRelationship> .
+    = <http://rdaregistry.info/Elements/e/wholePartExpressionRelationship> ;
+    skos:definition "Relates an expression to an expression that is contained in or contains the expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20062> a rdf:Property ;
     rdfs:label "has form of notation"@en ;
@@ -2742,29 +2937,13 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
-        <http://rdaregistry.info/Elements/u/P60709> ;
-    = <http://rdaregistry.info/Elements/e/accompanyingExpressionRelationship> .
-
-<http://rdaregistry.info/Elements/e/P20046> a rdf:Property ;
-    rdfs:label "has writer of supplementary textual content"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20030>,
-        <http://rdaregistry.info/Elements/e/P20041>,
-        <http://rdaregistry.info/Elements/e/P20044>,
-        <http://rdaregistry.info/Elements/e/P20045> ;
-    reg:name "writerOfSupplementaryTextualContent"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20053>,
-        <http://rdaregistry.info/Elements/u/P60392> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50154> ;
-    = <http://rdaregistry.info/Elements/e/writerOfSupplementaryTextualContent> ;
-    skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by providing supplementary textual content (e.g., an appendix, an introduction, a preface) to the original work."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60709> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20232> ;
+    = <http://rdaregistry.info/Elements/e/accompanyingExpressionRelationship> ;
+    skos:definition "Relates an expression to an expression of a work that is an augmentation of, or is augmented by, or is complemented by the expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20096> a rdf:Property ;
-    rdfs:label "is adapted as a screenplay (expression)"@en ;
+    rdfs:label "is adapted as screenplay (expression)"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20095>,
         <http://rdaregistry.info/Elements/e/P20097>,
         <http://rdaregistry.info/Elements/e/P20098> ;
@@ -2829,8 +3008,7 @@
 
 <http://rdaregistry.info/Elements/e/P20205> a rdf:Property ;
     rdfs:label "has related expression"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20232>,
-        <http://rdaregistry.info/Elements/e/P20233>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20233>,
         <http://rdaregistry.info/Elements/e/P20234>,
         <http://rdaregistry.info/Elements/e/P20235>,
         <http://rdaregistry.info/Elements/e/P20236> ;
@@ -2843,6 +3021,49 @@
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20205> ;
     = <http://rdaregistry.info/Elements/e/relatedExpression> ;
     skos:definition "Relates an expression to an expression, represented by an identifier, an authorized access point, or a description, that is related to the expression being described (e.g., a revised version, a translation)."@en .
+
+<http://rdaregistry.info/Elements/e/P20243> a rdf:Property ;
+    rdfs:label "is music (expression)"@en ;
+    reg:name "musicExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20100>,
+        <http://rdaregistry.info/Elements/u/P60723> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20244> ;
+    = <http://rdaregistry.info/Elements/e/musicExpression> ;
+    skos:definition "Relates an expression to an expression of a musical work that is used in a motion picture, play, television program, etc."@en .
+
+<http://rdaregistry.info/Elements/e/P20244> a rdf:Property ;
+    rdfs:label "is music for (expression)"@en ;
+    reg:name "musicForExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20100>,
+        <http://rdaregistry.info/Elements/u/P60724> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20243> ;
+    = <http://rdaregistry.info/Elements/e/musicForExpression> ;
+    skos:definition "Relates an expression to an expression of a work such as a motion picture, play, television program, etc. that uses the musical work."@en .
+
+<http://rdaregistry.info/Elements/e/P20046> a rdf:Property ;
+    rdfs:label "has writer of supplementary textual content"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20030>,
+        <http://rdaregistry.info/Elements/e/P20041>,
+        <http://rdaregistry.info/Elements/e/P20044>,
+        <http://rdaregistry.info/Elements/e/P20045> ;
+    reg:name "writerOfSupplementaryTextualContent"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20053>,
+        <http://rdaregistry.info/Elements/u/P60392> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/a/P50154> ;
+    = <http://rdaregistry.info/Elements/e/writerOfSupplementaryTextualContent> ;
+    skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by providing supplementary textual content (e.g., an appendix, an introduction, a preface) to the original work."@en .
 
 <http://rdaregistry.info/Elements/e/P20072> a rdf:Property ;
     rdfs:label "is description of (expression)"@en ;
@@ -2860,7 +3081,7 @@
         <http://rdaregistry.info/Elements/u/P60190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20202> ;
     = <http://rdaregistry.info/Elements/e/descriptionOfExpression> ;
-    skos:definition "Relates an expression to an expression described by a describing entity."@en .
+    skos:definition "Relates an expression to an expression described by an expression of a describing work."@en .
 
 <http://rdaregistry.info/Elements/e/P20202> a rdf:Property ;
     rdfs:label "is described in (expression)"@en ;
@@ -2878,14 +3099,32 @@
         <http://rdaregistry.info/Elements/u/P60215> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20072> ;
     = <http://rdaregistry.info/Elements/e/describedInExpression> ;
-    skos:definition "Relates an expression to an expression that describes a described entity."@en .
+    skos:definition "Relates an expression to an expression of a work that describes an expression."@en .
+
+<http://rdaregistry.info/Elements/e/P20169> a rdf:Property ;
+    rdfs:label "is succeeded by (expression)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20076>,
+        <http://rdaregistry.info/Elements/e/P20101>,
+        <http://rdaregistry.info/Elements/e/P20143>,
+        <http://rdaregistry.info/Elements/e/P20144>,
+        <http://rdaregistry.info/Elements/e/P20191>,
+        <http://rdaregistry.info/Elements/e/P20200>,
+        <http://rdaregistry.info/Elements/e/P20212> ;
+    reg:name "succeededByExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20235>,
+        <http://rdaregistry.info/Elements/u/P60278> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20154> ;
+    = <http://rdaregistry.info/Elements/e/succeededByExpression> ;
+    skos:definition "Relates an expression to an expression of a work that succeeds (e.g., later in time or after in a narrative) the preceding expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20100> a rdf:Property ;
     rdfs:label "is complemented by (expression)"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20084>,
-        <http://rdaregistry.info/Elements/e/P20085>,
         <http://rdaregistry.info/Elements/e/P20102>,
-        <http://rdaregistry.info/Elements/e/P20103>,
         <http://rdaregistry.info/Elements/e/P20157>,
         <http://rdaregistry.info/Elements/e/P20160>,
         <http://rdaregistry.info/Elements/e/P20163>,
@@ -2899,7 +3138,7 @@
         <http://rdaregistry.info/Elements/u/P60198> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20100> ;
     = <http://rdaregistry.info/Elements/e/complementedByExpression> ;
-    skos:definition "Relates an expression to an expression of a work paired with another entity without either entity being considered to predominate."@en .
+    skos:definition "Relates an expression to an expression of a work paired with another expression without either expression being considered to predominate."@en .
 
 <http://rdaregistry.info/Elements/e/P20154> a rdf:Property ;
     rdfs:label "is preceded by (expression)"@en ;
@@ -2920,50 +3159,7 @@
         <http://rdaregistry.info/Elements/u/P60261> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20169> ;
     = <http://rdaregistry.info/Elements/e/precededByExpression> ;
-    skos:definition "Relates an expression to an expression of a work that precedes (e.g., is earlier in time or before in narrative) the succeeding entity."@en .
-
-<http://rdaregistry.info/Elements/e/P20169> a rdf:Property ;
-    rdfs:label "is succeeded by (expression)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20075>,
-        <http://rdaregistry.info/Elements/e/P20076>,
-        <http://rdaregistry.info/Elements/e/P20101>,
-        <http://rdaregistry.info/Elements/e/P20143>,
-        <http://rdaregistry.info/Elements/e/P20144>,
-        <http://rdaregistry.info/Elements/e/P20191>,
-        <http://rdaregistry.info/Elements/e/P20200>,
-        <http://rdaregistry.info/Elements/e/P20212> ;
-    reg:name "succeededByExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20235>,
-        <http://rdaregistry.info/Elements/u/P60278> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20154> ;
-    = <http://rdaregistry.info/Elements/e/succeededByExpression> ;
-    skos:definition "Relates an expression to an expression of a work that succeeds (e.g., later in time or after in a narrative) the preceding entity."@en .
-
-<http://rdaregistry.info/Elements/e/P20152> a rdf:Property ;
-    rdfs:label "is adaptation of (expression)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20123>,
-        <http://rdaregistry.info/Elements/e/P20124>,
-        <http://rdaregistry.info/Elements/e/P20125>,
-        <http://rdaregistry.info/Elements/e/P20126>,
-        <http://rdaregistry.info/Elements/e/P20127>,
-        <http://rdaregistry.info/Elements/e/P20128>,
-        <http://rdaregistry.info/Elements/e/P20129>,
-        <http://rdaregistry.info/Elements/e/P20133>,
-        <http://rdaregistry.info/Elements/e/P20134> ;
-    reg:name "adaptationOfExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20204>,
-        <http://rdaregistry.info/Elements/u/P60241> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20153> ;
-    = <http://rdaregistry.info/Elements/e/adaptationOfExpression> ;
-    skos:definition "Relates an expression to an expression of a work that modifies the source entity for a purpose, use, or medium other than that for which it was originally intended."@en .
+    skos:definition "Relates an expression to an expression of a work that precedes (e.g., is earlier in time or before in narrative) the succeeding expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20153> a rdf:Property ;
     rdfs:label "is adapted as (expression)"@en ;
@@ -2981,11 +3177,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20203>,
-        <http://rdaregistry.info/Elements/u/P60260> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60260> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20152> ;
     = <http://rdaregistry.info/Elements/e/adaptedAsExpression> ;
-    skos:definition "Relates an expression to an expression of a work that modifies the source entity for a purpose, use, or medium other than that for which it was originally intended."@en .
+    skos:definition "Relates an expression to an expression of a work based on the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20105> a rdf:Property ;
     rdfs:label "is augmented by (expression)"@en ;
@@ -3009,7 +3204,29 @@
         <http://rdaregistry.info/Elements/u/P60204> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20192> ;
     = <http://rdaregistry.info/Elements/e/augmentedByExpression> ;
-    skos:definition "Relates an expression to an expression of a work that adds to the content of a predominant entity."@en .
+    skos:definition "Relates an expression to an expression of a work that adds to the content of a predominant expression."@en .
+
+<http://rdaregistry.info/Elements/e/P20152> a rdf:Property ;
+    rdfs:label "is adaptation of (expression)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20123>,
+        <http://rdaregistry.info/Elements/e/P20124>,
+        <http://rdaregistry.info/Elements/e/P20125>,
+        <http://rdaregistry.info/Elements/e/P20126>,
+        <http://rdaregistry.info/Elements/e/P20127>,
+        <http://rdaregistry.info/Elements/e/P20128>,
+        <http://rdaregistry.info/Elements/e/P20129>,
+        <http://rdaregistry.info/Elements/e/P20133>,
+        <http://rdaregistry.info/Elements/e/P20134> ;
+    reg:name "adaptationOfExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20204>,
+        <http://rdaregistry.info/Elements/u/P60241> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20153> ;
+    = <http://rdaregistry.info/Elements/e/adaptationOfExpression> ;
+    skos:definition "Relates an expression to an expression of a work that modifies the source expression for a purpose, use, or medium other than that for which it was originally intended."@en .
 
 <http://rdaregistry.info/Elements/e/P20192> a rdf:Property ;
     rdfs:label "is augmentation of (expression)"@en ;
@@ -3033,7 +3250,7 @@
         <http://rdaregistry.info/Elements/u/P60307> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20105> ;
     = <http://rdaregistry.info/Elements/e/augmentationOfExpression> ;
-    skos:definition "Relates an expression to an expression of a work whose content is added to by another entity."@en .
+    skos:definition "Relates an expression to an expression of a work whose content is added to by another expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20039> a rdf:Property ;
     rdfs:label "has performer"@en ;
@@ -3062,6 +3279,38 @@
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50147> ;
     = <http://rdaregistry.info/Elements/e/performer> ;
     skos:definition "Relates an expression to a person, family, or corporate body contributing to an expression of a work by performing music, acting, dancing, speaking, etc., often in a musical or dramatic presentation, etc."@en .
+
+<http://rdaregistry.info/Elements/e/P20203> a rdf:Property ;
+    rdfs:label "is derivative (expression)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20082>,
+        <http://rdaregistry.info/Elements/e/P20086>,
+        <http://rdaregistry.info/Elements/e/P20087>,
+        <http://rdaregistry.info/Elements/e/P20090>,
+        <http://rdaregistry.info/Elements/e/P20091>,
+        <http://rdaregistry.info/Elements/e/P20092>,
+        <http://rdaregistry.info/Elements/e/P20104>,
+        <http://rdaregistry.info/Elements/e/P20106>,
+        <http://rdaregistry.info/Elements/e/P20110>,
+        <http://rdaregistry.info/Elements/e/P20114>,
+        <http://rdaregistry.info/Elements/e/P20115>,
+        <http://rdaregistry.info/Elements/e/P20119>,
+        <http://rdaregistry.info/Elements/e/P20164>,
+        <http://rdaregistry.info/Elements/e/P20165>,
+        <http://rdaregistry.info/Elements/e/P20166>,
+        <http://rdaregistry.info/Elements/e/P20170>,
+        <http://rdaregistry.info/Elements/e/P20171>,
+        <http://rdaregistry.info/Elements/e/P20204>,
+        <http://rdaregistry.info/Elements/e/P20211> ;
+    reg:name "derivativeExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20233>,
+        <http://rdaregistry.info/Elements/u/P60250> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20204> ;
+    = <http://rdaregistry.info/Elements/e/derivativeExpression> ;
+    skos:definition "Relates an expression to an expression that is a modification of a source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20204> a rdf:Property ;
     rdfs:label "is based on (expression)"@en ;
@@ -3093,40 +3342,7 @@
         <http://rdaregistry.info/Elements/u/P60305> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20203> ;
     = <http://rdaregistry.info/Elements/e/basedOnExpression> ;
-    skos:definition "Relates an expression to an expression used as the basis for a derivative entity."@en .
-
-<http://rdaregistry.info/Elements/e/P20203> a rdf:Property ;
-    rdfs:label "is derivative expression"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20082>,
-        <http://rdaregistry.info/Elements/e/P20086>,
-        <http://rdaregistry.info/Elements/e/P20087>,
-        <http://rdaregistry.info/Elements/e/P20090>,
-        <http://rdaregistry.info/Elements/e/P20091>,
-        <http://rdaregistry.info/Elements/e/P20092>,
-        <http://rdaregistry.info/Elements/e/P20104>,
-        <http://rdaregistry.info/Elements/e/P20106>,
-        <http://rdaregistry.info/Elements/e/P20110>,
-        <http://rdaregistry.info/Elements/e/P20114>,
-        <http://rdaregistry.info/Elements/e/P20115>,
-        <http://rdaregistry.info/Elements/e/P20119>,
-        <http://rdaregistry.info/Elements/e/P20153>,
-        <http://rdaregistry.info/Elements/e/P20164>,
-        <http://rdaregistry.info/Elements/e/P20165>,
-        <http://rdaregistry.info/Elements/e/P20166>,
-        <http://rdaregistry.info/Elements/e/P20170>,
-        <http://rdaregistry.info/Elements/e/P20171>,
-        <http://rdaregistry.info/Elements/e/P20204>,
-        <http://rdaregistry.info/Elements/e/P20211> ;
-    reg:name "derivativeExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20233>,
-        <http://rdaregistry.info/Elements/u/P60250> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20204> ;
-    = <http://rdaregistry.info/Elements/e/derivativeExpression> ;
-    skos:definition "Relates an expression to an expression that is a modification of a source entity."@en .
+    skos:definition "Relates an expression to an expression used as the basis for a derivative expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20053> a rdf:Property ;
     rdfs:label "has contributor"@en ;

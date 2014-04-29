@@ -47,10 +47,11 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40046" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60709" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/accompanyingItemRelationship" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40029" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40051" />
+  <skos:definition xml:lang="en">Relates an item to an item that accompanies or is accompanied by the item.</skos:definition>
 </rdf:Description>
 
 
@@ -205,12 +206,12 @@
 </rdf:Description>
 
 
-<!--Property: is contains (item)-->
+<!--Property: is container of (item)-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40034">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">containsItem</reg:name>
-  <rdfs:label xml:lang="en">is contains (item)</rdfs:label>
+  <reg:name xml:lang="en">containerOfItem</reg:name>
+  <rdfs:label xml:lang="en">is container of (item)</rdfs:label>
   <skos:definition xml:lang="en">Relates an item to an item that is a discrete component of a larger item.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
@@ -219,6 +220,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60249" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/containsItem" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40009" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/containerOfItem" />
 </rdf:Description>
 
 
@@ -305,12 +307,12 @@
 </rdf:Description>
 
 
-<!--Property: has dedicatee of item-->
+<!--Property: has dedicatee (item)-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40025">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">dedicateeOfItem</reg:name>
-  <rdfs:label xml:lang="en">has dedicatee of item</rdfs:label>
+  <rdfs:label xml:lang="en">has dedicatee (item)</rdfs:label>
   <skos:definition xml:lang="en">Relates an item to a person, family, or corporate body to whom an item is dedicated.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
@@ -345,7 +347,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">descriptionOfItem</reg:name>
   <rdfs:label xml:lang="en">is description of (item)</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to an item described by a describing entity.</skos:definition>
+  <skos:definition xml:lang="en">Relates an item to an item described by a describing work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
@@ -373,6 +375,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60711" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/descriptiveItemRelationship" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40030" />
+  <skos:definition xml:lang="en">Relates an item to a work that is a description of the item.</skos:definition>
 </rdf:Description>
 
 
@@ -425,12 +428,12 @@
 </rdf:Description>
 
 
-<!--Property: is equivalent item-->
+<!--Property: is equivalent (item)-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40031">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">equivalentItem</reg:name>
-  <rdfs:label xml:lang="en">is equivalent item</rdfs:label>
+  <rdfs:label xml:lang="en">is equivalent (item)</rdfs:label>
   <skos:definition xml:lang="en">Relates an item to an item embodying the same expression of a work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
@@ -457,6 +460,7 @@
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/equivalentItemRelationship" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40053" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40031" />
+  <skos:definition xml:lang="en">Relates an item to an item that is equivalent to the item.</skos:definition>
 </rdf:Description>
 
 
@@ -529,12 +533,12 @@
 </rdf:Description>
 
 
-<!--Property: has honouree of item-->
+<!--Property: has honouree (item)-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40022">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">honoureeOfItem</reg:name>
-  <rdfs:label xml:lang="en">has honouree of item</rdfs:label>
+  <rdfs:label xml:lang="en">has honouree (item)</rdfs:label>
   <skos:definition xml:lang="en">Relates an item to a person, family, or corporate body honoured by an item, e.g., a person to whom a copy is presented.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
@@ -608,32 +612,15 @@
 </rdf:Description>
 
 
-<!--Property: has item-specific carrier characteristic-->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40003">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">itemSpecificCarrierCharacteristic</reg:name>
-  <rdfs:label xml:lang="en">has item-specific carrier characteristic</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to a characteristic that applies to the carrier or carriers of the specific item being described and is assumed not to apply to other items exemplifying the same manifestation.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60056" />
-  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/itemSpecificCarrierCharacteristic" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40002" />
-</rdf:Description>
-
-
 <!--Property: has item-specific carrier characteristic of early printed resource-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40002">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
   <reg:name xml:lang="en">itemSpecificCarrierCharacteristicOfEarlyPrintedResource</reg:name>
   <rdfs:label xml:lang="en">has item-specific carrier characteristic of early printed resource</rdfs:label>
   <skos:definition xml:lang="en">Relates an item to a characteristic that applies to the carrier or carriers of the specific early printed item being described and is assumed not to apply to other items exemplifying the same manifestation. includes rubrication, illumination, and other hand colouring, manuscript additions, and binding.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40003" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60055" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/itemSpecificCarrierCharacteristicOfEarlyPrintedResource" />
 </rdf:Description>
 
@@ -662,9 +649,9 @@
   <skos:definition xml:lang="en">Relates an item to a note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40028" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60133" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/noteOnDimensionsOfItem" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40003" />
 </rdf:Description>
 
 
@@ -674,28 +661,41 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">noteOnExtentOfItem</reg:name>
   <rdfs:label xml:lang="en">has note on extent of item</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to a note providing information on the extent of a manifestation that is not recorded as part of the extent element.</skos:definition>
+  <skos:definition xml:lang="en">Relates an item to a note providing information on the extent of the specific being described that is not recorded as part of the extent element.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40028" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60134" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/noteOnExtentOfItem" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40003" />
 </rdf:Description>
 
 
-<!--Property: has note on manifestation or item of item-->
+<!--Property: has note on item-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40028">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">noteOnManifestationOrItem</reg:name>
-  <rdfs:label xml:lang="en">has note on manifestation or item of item</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to an annotation providing additional information about manifestation or item attributes.</skos:definition>
+  <reg:name xml:lang="en">noteOnItem</reg:name>
+  <rdfs:label xml:lang="en">has note on item</rdfs:label>
+  <skos:definition xml:lang="en">Relates an item to an annotation providing additional information about item attributes</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60471" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/noteOnManifestationOrItem" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40010" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40011" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60470" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/noteOnItem" />
+</rdf:Description>
+
+
+<!--Property: has note on item-specific carrier characteristic-->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40003">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">noteOnItemSpecificCarrierCharacteristic</reg:name>
+  <rdfs:label xml:lang="en">has note on item-specific carrier characteristic</rdfs:label>
+  <skos:definition xml:lang="en">Relates an item to a note providing additional information about carrier characteristics that are specific to the item being described and are assumed not to apply to other items exemplifying the same manifestation.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/itemSpecificCarrierCharacteristic" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/noteOnItemSpecificCarrierCharacteristic" />
 </rdf:Description>
 
 
@@ -782,13 +782,12 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">relatedItemOfItem</reg:name>
   <rdfs:label xml:lang="en">has related item of item</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to an item, represented by an identifier or a description, that is related to the resource being described (e.g., an item used as the basis for a microform reproduction).</skos:definition>
+  <skos:definition xml:lang="en">Relates an item to an item, represented by an identifier or a description, that is related to the item being described (e.g., an item used as the basis for a microform reproduction).</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/i/relatedItemOfItem" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40046" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40051" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40052" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40053" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40054" />
@@ -923,11 +922,15 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40034" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40046" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60714" />
+  <skos:definition xml:lang="en">Relates an item to an item that is contained in or contains the item.</skos:definition>
 </rdf:Description>
 
 
 <!-- Status properties used in this document  -->
     <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
         <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
+        <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
     </skos:Concept>
 </rdf:RDF>

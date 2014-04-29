@@ -60,10 +60,10 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30048" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60709" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/accompanyingManifestationRelationship" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30027" />
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that accompanies or is accompanied by the manifestation.</skos:definition>
 </rdf:Description>
 
 
@@ -414,7 +414,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">containedInManifestation</reg:name>
   <rdfs:label xml:lang="en">is contained in (manifestation)</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a larger manifestation of which a part is a discrete component.</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to a larger manifestation of which the manifestation is a discrete component.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
@@ -428,40 +428,23 @@
 </rdf:Description>
 
 
-<!--Property: is contains facsimile of-->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30046">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">containsFacsimileOf</reg:name>
-  <rdfs:label xml:lang="en">is contains facsimile of</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation used as the basis for an exact reproduction that is a discrete component of a larger entity.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
-  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30033" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60300" />
-  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/containsFacsimileOf" />
-  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/m/P30019" />
-</rdf:Description>
-
-
-<!--Property: is contains (manifestation)-->
+<!--Property: is container of (manifestation)-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30033">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">containsManifestation</reg:name>
-  <rdfs:label xml:lang="en">is contains (manifestation)</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is a discrete component of a larger entity.</skos:definition>
+  <reg:name xml:lang="en">containerOfManifestation</reg:name>
+  <rdfs:label xml:lang="en">is container of (manifestation)</rdfs:label>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is a discrete component of a larger manifestation.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30213" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60249" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/containsManifestation" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/m/P30020" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30022" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30030" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30046" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/containerOfManifestation" />
 </rdf:Description>
 
 
@@ -557,7 +540,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">descriptionOfManifestation</reg:name>
   <rdfs:label xml:lang="en">is description of (manifestation)</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation described by a describing entity.</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation described by a describing work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
@@ -585,6 +568,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60711" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/descriptiveManifestationRelationship" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30023" />
+  <skos:definition xml:lang="en">Relates a manifestation to a work that is a description of the manifestation.</skos:definition>
 </rdf:Description>
 
 
@@ -916,12 +900,12 @@
 </rdf:Description>
 
 
-<!--Property: is equivalent manifestation-->
+<!--Property: is equivalent (manifestation)-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30024">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">equivalentManifestation</reg:name>
-  <rdfs:label xml:lang="en">is equivalent manifestation</rdfs:label>
+  <rdfs:label xml:lang="en">is equivalent (manifestation)</rdfs:label>
   <skos:definition xml:lang="en">Relates a manifestation to a manifestation embodying the same expression of a work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
@@ -951,6 +935,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30024" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30048" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60712" />
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is equivalent to the manifestation.</skos:definition>
 </rdf:Description>
 
 
@@ -1143,6 +1128,24 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60100" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/facsimileContainedIn" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/m/P30046" />
+</rdf:Description>
+
+
+<!--Property: is facsimile container of-->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30046">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">facsimileContainerOf</reg:name>
+  <rdfs:label xml:lang="en">is facsimile container of</rdfs:label>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation used as the basis for an exact reproduction that is a discrete component of a larger manifestation.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30033" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60300" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/containsFacsimileOf" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/m/P30019" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/facsimileContainerOf" />
 </rdf:Description>
 
 
@@ -1636,6 +1639,19 @@
 </rdf:Description>
 
 
+<!--Property: has note on carrier-->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30214">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">noteOnCarrier</reg:name>
+  <rdfs:label xml:lang="en">has note on carrier</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60470" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/noteOnCarrier" />
+</rdf:Description>
+
+
 <!--Property: has note on changes in carrier characteristics-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30051">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
@@ -1675,7 +1691,6 @@
   <skos:definition xml:lang="en">Relates a manifestation to a note providing information on the dimensions of a manifestation that is not recorded as part of the dimensions element.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30137" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60133" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/noteOnDimensionsOfManifestation" />
 </rdf:Description>
@@ -1720,7 +1735,6 @@
   <skos:definition xml:lang="en">Relates a manifestation to a note providing information on the extent of a manifestation that is not recorded as part of the extent element.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30137" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60134" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/noteOnExtentOfManifestation" />
 </rdf:Description>
@@ -1756,16 +1770,15 @@
 </rdf:Description>
 
 
-<!--Property: has note on manifestation or item of manifestation-->
+<!--Property: has note on manifestation-->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30137">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">noteOnManifestationOrItem</reg:name>
-  <rdfs:label xml:lang="en">has note on manifestation or item of manifestation</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to an annotation providing additional information about manifestation or item attributes.</skos:definition>
+  <reg:name xml:lang="en">noteOnManifestation</reg:name>
+  <rdfs:label xml:lang="en">has note on manifestation</rdfs:label>
+  <skos:definition xml:lang="en">Relates a manifestation to an annotation providing additional information about manifestation attributes.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60471" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/noteOnManifestationOrItem" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30050" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30051" />
@@ -1777,11 +1790,10 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30057" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30058" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30059" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30060" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30061" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30062" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30063" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30064" />
+  <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/noteOnManifestation" />
 </rdf:Description>
 
 
@@ -2789,7 +2801,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">relatedItem</reg:name>
   <rdfs:label xml:lang="en">has related item</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to an item, represented by an identifier or a description, that is related to the resource being described (e.g., an item used as the basis for a microform reproduction).</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to an item, represented by an identifier or a description, that is related to the manifestation being described (e.g., an item used as the basis for a microform reproduction).</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
@@ -2804,14 +2816,13 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">relatedManifestation</reg:name>
   <rdfs:label xml:lang="en">has related manifestation</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation, represented by an identifier or a description, that is related to the resource being described (e.g., a manifestation in a different format).</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation, represented by an identifier or a description, that is related to the manifestation being described (e.g., a manifestation in a different format).</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60313" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/relatedManifestation" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/m/P30048" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30210" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30211" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30212" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30213" />
@@ -3322,9 +3333,9 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <owl:sameAs rdf:resource="http://rdaregistry.info/Elements/m/wholePartManifestationRelationship" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30020" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30033" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30048" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60714" />
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is contained in or contains the manifestation.</skos:definition>
 </rdf:Description>
 
 

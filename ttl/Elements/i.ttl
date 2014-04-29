@@ -12,6 +12,10 @@
     a skos:Concept ;
     skos:prefLabel "Published"@en .
 
+<http://metadataregistry.org/uri/RegStatus/1008>
+    a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
+
 <http://rdaregistry.info/Elements/i/>
     dc:title "RDA Item properties"@en ;
     skos:note "Properties derived from RDA elements and relationship designators with the domain of RDA Item."@en .
@@ -29,26 +33,23 @@
 
 <http://rdaregistry.info/Elements/i/P40002>
     reg:name "itemSpecificCarrierCharacteristicOfEarlyPrintedResource"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "has item-specific carrier characteristic of early printed resource"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003>, <http://rdaregistry.info/Elements/u/P60055> ;
     owl:sameAs <http://rdaregistry.info/Elements/i/itemSpecificCarrierCharacteristicOfEarlyPrintedResource> ;
     skos:definition "Relates an item to a characteristic that applies to the carrier or carriers of the specific early printed item being described and is assumed not to apply to other items exemplifying the same manifestation. includes rubrication, illumination, and other hand colouring, manuscript additions, and binding."@en .
 
 <http://rdaregistry.info/Elements/i/P40003>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40002> ;
-    reg:name "itemSpecificCarrierCharacteristic"@en ;
+    reg:name "noteOnItemSpecificCarrierCharacteristic"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "has item-specific carrier characteristic"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60056> ;
-    owl:sameAs <http://rdaregistry.info/Elements/i/itemSpecificCarrierCharacteristic> ;
-    skos:definition "Relates an item to a characteristic that applies to the carrier or carriers of the specific item being described and is assumed not to apply to other items exemplifying the same manifestation."@en .
+    rdfs:label "has note on item-specific carrier characteristic"@en ;
+    owl:sameAs <http://rdaregistry.info/Elements/i/itemSpecificCarrierCharacteristic>, <http://rdaregistry.info/Elements/i/noteOnItemSpecificCarrierCharacteristic> ;
+    skos:definition "Relates an item to a note providing additional information about carrier characteristics that are specific to the item being described and are assumed not to apply to other items exemplifying the same manifestation."@en .
 
 <http://rdaregistry.info/Elements/i/P40004>
     reg:name "collector"@en ;
@@ -135,7 +136,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "has note on dimensions of item"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40028>, <http://rdaregistry.info/Elements/u/P60133> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003>, <http://rdaregistry.info/Elements/u/P60133> ;
     owl:sameAs <http://rdaregistry.info/Elements/i/noteOnDimensionsOfItem> ;
     skos:definition "Relates an item to a note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element."@en .
 
@@ -146,9 +147,9 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "has note on extent of item"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40028>, <http://rdaregistry.info/Elements/u/P60134> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003>, <http://rdaregistry.info/Elements/u/P60134> ;
     owl:sameAs <http://rdaregistry.info/Elements/i/noteOnExtentOfItem> ;
-    skos:definition "Relates an item to a note providing information on the extent of a manifestation that is not recorded as part of the extent element."@en .
+    skos:definition "Relates an item to a note providing information on the extent of the specific being described that is not recorded as part of the extent element."@en .
 
 <http://rdaregistry.info/Elements/i/P40012>
     reg:name "illuminator"@en ;
@@ -290,7 +291,7 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "has honouree of item"@en ;
+    rdfs:label "has honouree (item)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023>, <http://rdaregistry.info/Elements/u/P60406> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50167> ;
@@ -331,7 +332,7 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "has dedicatee of item"@en ;
+    rdfs:label "has dedicatee (item)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023>, <http://rdaregistry.info/Elements/u/P60455> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50210> ;
@@ -362,16 +363,15 @@
     skos:definition "Relates an item to an analog item used as the basis for an electronic reproduction."@en .
 
 <http://rdaregistry.info/Elements/i/P40028>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40010>, <http://rdaregistry.info/Elements/i/P40011> ;
-    reg:name "noteOnManifestationOrItem"@en ;
+    reg:name "noteOnItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "has note on manifestation or item of item"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60471> ;
-    owl:sameAs <http://rdaregistry.info/Elements/i/noteOnManifestationOrItem> ;
-    skos:definition "Relates an item to an annotation providing additional information about manifestation or item attributes."@en .
+    rdfs:label "has note on item"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60470> ;
+    owl:sameAs <http://rdaregistry.info/Elements/i/noteOnItem>, <http://rdaregistry.info/Elements/i/noteOnManifestationOrItem> ;
+    skos:definition "Relates an item to an annotation providing additional information about item attributes"@en .
 
 <http://rdaregistry.info/Elements/i/P40029>
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40032>, <http://rdaregistry.info/Elements/i/P40035>, <http://rdaregistry.info/Elements/i/P40036> ;
@@ -398,7 +398,7 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40052>, <http://rdaregistry.info/Elements/u/P60190> ;
     owl:sameAs <http://rdaregistry.info/Elements/i/descriptionOfItem> ;
-    skos:definition "Relates an item to an item described by a describing entity."@en .
+    skos:definition "Relates an item to an item described by a describing work."@en .
 
 <http://rdaregistry.info/Elements/i/P40031>
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40042> ;
@@ -407,7 +407,7 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "is equivalent item"@en ;
+    rdfs:label "is equivalent (item)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40053>, <http://rdaregistry.info/Elements/u/P60191> ;
     owl:inverseOf <http://rdaregistry.info/Elements/i/P40031> ;
@@ -440,16 +440,16 @@
     skos:definition "Relates an item to an item that has been examined to identify its components and their relations."@en .
 
 <http://rdaregistry.info/Elements/i/P40034>
-    reg:name "containsItem"@en ;
+    reg:name "containerOfItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "is contains (item)"@en ;
+    rdfs:label "is container of (item)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40054>, <http://rdaregistry.info/Elements/u/P60249> ;
     owl:inverseOf <http://rdaregistry.info/Elements/i/P40009> ;
-    owl:sameAs <http://rdaregistry.info/Elements/i/containsItem> ;
+    owl:sameAs <http://rdaregistry.info/Elements/i/containerOfItem>, <http://rdaregistry.info/Elements/i/containsItem> ;
     skos:definition "Relates an item to an item that is a discrete component of a larger item."@en .
 
 <http://rdaregistry.info/Elements/i/P40035>
@@ -589,7 +589,7 @@
     skos:definition "Relates an item to an item used as the basis for an exact reproduction."@en .
 
 <http://rdaregistry.info/Elements/i/P40046>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40051>, <http://rdaregistry.info/Elements/i/P40052>, <http://rdaregistry.info/Elements/i/P40053>, <http://rdaregistry.info/Elements/i/P40054> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40052>, <http://rdaregistry.info/Elements/i/P40053>, <http://rdaregistry.info/Elements/i/P40054> ;
     reg:name "relatedItemOfItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
@@ -599,7 +599,7 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     owl:inverseOf <http://rdaregistry.info/Elements/i/P40046> ;
     owl:sameAs <http://rdaregistry.info/Elements/i/relatedItemOfItem> ;
-    skos:definition "Relates an item to an item, represented by an identifier or a description, that is related to the resource being described (e.g., an item used as the basis for a microform reproduction)."@en .
+    skos:definition "Relates an item to an item, represented by an identifier or a description, that is related to the item being described (e.g., an item used as the basis for a microform reproduction)."@en .
 
 <http://rdaregistry.info/Elements/i/P40047>
     reg:name "restrictionsOnAccess"@en ;
@@ -655,8 +655,10 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "has accompanying item relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40046>, <http://rdaregistry.info/Elements/u/P60709> ;
-    owl:sameAs <http://rdaregistry.info/Elements/i/accompanyingItemRelationship> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60709> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/P40051> ;
+    owl:sameAs <http://rdaregistry.info/Elements/i/accompanyingItemRelationship> ;
+    skos:definition "Relates an item to an item that accompanies or is accompanied by the item."@en .
 
 <http://rdaregistry.info/Elements/i/P40052>
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40030> ;
@@ -668,7 +670,8 @@
     rdfs:label "has descriptive item relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40046>, <http://rdaregistry.info/Elements/u/P60711> ;
-    owl:sameAs <http://rdaregistry.info/Elements/i/descriptiveItemRelationship> .
+    owl:sameAs <http://rdaregistry.info/Elements/i/descriptiveItemRelationship> ;
+    skos:definition "Relates an item to a work that is a description of the item."@en .
 
 <http://rdaregistry.info/Elements/i/P40053>
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40031> ;
@@ -681,7 +684,8 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40046>, <http://rdaregistry.info/Elements/u/P60712> ;
     owl:inverseOf <http://rdaregistry.info/Elements/i/P40053> ;
-    owl:sameAs <http://rdaregistry.info/Elements/i/equivalentItemRelationship> .
+    owl:sameAs <http://rdaregistry.info/Elements/i/equivalentItemRelationship> ;
+    skos:definition "Relates an item to an item that is equivalent to the item."@en .
 
 <http://rdaregistry.info/Elements/i/P40054>
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40009>, <http://rdaregistry.info/Elements/i/P40034> ;
@@ -693,5 +697,6 @@
     rdfs:label "has whole-part item relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40046>, <http://rdaregistry.info/Elements/u/P60714> ;
-    owl:sameAs <http://rdaregistry.info/Elements/i/wholePartItemRelationship> .
+    owl:sameAs <http://rdaregistry.info/Elements/i/wholePartItemRelationship> ;
+    skos:definition "Relates an item to an item that is contained in or contains the item."@en .
 
