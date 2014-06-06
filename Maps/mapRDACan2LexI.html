@@ -10,7 +10,8 @@
 <meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
 <meta name="generator" content="DocPad v6.64.0" />
 <meta name="viewport" content="width=device-width">
-<title>Elements | RDA Registry</title>
+<title>Maps | RDA Registry</title>
+
 <!-- Icons-->
 <link rel="shortcut icon" href="/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
@@ -33,17 +34,17 @@
 </div>
 <div id="navbar-main" class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
-<li class="dropdown"><a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Elements <b class="caret"></b></a>
+<li class="dropdown"><a href="../Elements/index.html" class="dropdown-toggle" data-toggle="dropdown">Elements <b class="caret"></b></a>
 <ul class="dropdown-menu">
-<li><a href="index.html">Elements</a></li>
+<li><a href="../Elements/index.html">Elements</a></li>
 <li class="divider"></li>
-<li><a href="c.html">Classes</a></li>
-<li><a href="w.html">Work properties</a></li>
-<li><a href="e.html">Expression properties</a></li>
-<li><a href="m.html">Manifestation properties</a></li>
-<li><a href="i.html">Item properties</a></li>
-<li><a href="a.html">Agent properties</a></li>
-<li><a href="u.html">Unconstrained properties</a></li>
+<li><a href="../Elements/c.html">Classes</a></li>
+<li><a href="../Elements/w.html">Work properties</a></li>
+<li><a href="../Elements/e.html">Expression properties</a></li>
+<li><a href="../Elements/m.html">Manifestation properties</a></li>
+<li><a href="../Elements/i.html">Item properties</a></li>
+<li><a href="../Elements/a.html">Agent properties</a></li>
+<li><a href="../Elements/u.html">Unconstrained properties</a></li>
 </ul>
 </li>
 <li><a href="../rgValues/index.html">Values</a></li>
@@ -59,7 +60,7 @@
 <ul class="dropdown-menu">
 <li><a href="../rgTools/index.html">Tools</a></li>
 <li class="divider"></li>
-<li><a href="../Maps/index.html">Maps</a></li>
+<li><a href="index.html">Maps</a></li>
 <li><a href="../Aligns/index.html">Alignments</a></li>
 <li><a href="../Profiles/index.html">Profiles</a></li>
 </ul>
@@ -87,32 +88,85 @@
 <article id="page" class="page">
 <div class="page-content">
 <div class="rg-pagecontent">
-<h1>RDA element sets</h1>
+<h1>RDA maps</h1>
+<h2>Map from  canonical to lexical URIs in the Item properties element set</h2>
 <div class="row">
 <div class="col-md-6">
-<ul>
-<li><a href="c.html">Classes</a></li>
-<li><a href="w.html">Work properties</a></li>
-<li><a href="e.html">Expression properties</a></li>
-<li><a href="m.html">Manifestation properties</a></li>
-<li><a href="i.html">Item properties</a></li>
-<li><a href="a.html">Agent properties</a></li>
-<li><a href="u.html">Unconstrained properties</a></li>
-</ul>
-<ul>
-<li><a href="https://github.com/RDARegistry/RDA-Vocabularies/zipball/master">Download <strong>ZIP
-    File</strong></a></li>
-<li><a href="https://github.com/RDARegistry/RDA-Vocabularies/tarball/master">Download <strong>TAR
-    Ball</strong></a></li>
-</ul>
+<pre>
+
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdai: &lt;http://rdaregistry.info/Elements/i/&gt; .
+#
+# Map from RDA canonical to lexical URIs in the Item properties element set
+# 7 May 2014
+#
+rdai:P40001 owl:sameAs rdai:identifierForTheItem .
+rdai:P40003 owl:sameAs rdai:noteOnItemSpecificCarrierCharacteristic .
+rdai:P40004 owl:sameAs rdai:collector .
+rdai:P40005 owl:sameAs rdai:collectionRegistrar .
+rdai:P40006 owl:sameAs rdai:depositor .
+rdai:P40007 owl:sameAs rdai:donor .
+rdai:P40008 owl:sameAs rdai:seller .
+rdai:P40009 owl:sameAs rdai:containedInItem .
+rdai:P40010 owl:sameAs rdai:noteOnDimensionsOfItem .
+rdai:P40011 owl:sameAs rdai:noteOnExtentOfItem .
+rdai:P40012 owl:sameAs rdai:illuminator .
+rdai:P40013 owl:sameAs rdai:binder .
+rdai:P40014 owl:sameAs rdai:inscriber .
+rdai:P40015 owl:sameAs rdai:annotator .
+rdai:P40016 owl:sameAs rdai:autographer .
+rdai:P40017 owl:sameAs rdai:curator .
+rdai:P40018 owl:sameAs rdai:currentOwner .
+rdai:P40019 owl:sameAs rdai:formerOwner .
+rdai:P40020 owl:sameAs rdai:custodian .
+rdai:P40021 owl:sameAs rdai:owner .
+rdai:P40022 owl:sameAs rdai:honoureeOfItem .
+rdai:P40023 owl:sameAs rdai:otherPFCItem .
+rdai:P40024 owl:sameAs rdai:restorationist .
+rdai:P40025 owl:sameAs rdai:dedicateeOfItem .
+rdai:P40026 owl:sameAs rdai:custodialHistoryOfItem .
+rdai:P40027 owl:sameAs rdai:electronicReproductionOfItem .
+rdai:P40028 owl:sameAs rdai:noteOnItem .
+rdai:P40029 owl:sameAs rdai:accompaniedByItem .
+rdai:P40030 owl:sameAs rdai:descriptionOfItem .
+rdai:P40031 owl:sameAs rdai:equivalentItem .
+rdai:P40032 owl:sameAs rdai:boundWith .
+rdai:P40033 owl:sameAs rdai:analysisOfItem .
+rdai:P40034 owl:sameAs rdai:containerOfItem .
+rdai:P40035 owl:sameAs rdai:onDiscWithItem .
+rdai:P40036 owl:sameAs rdai:filmedWithItem .
+rdai:P40037 owl:sameAs rdai:evaluationOfItem .
+rdai:P40038 owl:sameAs rdai:reprintOfItem .
+rdai:P40039 owl:sameAs rdai:digitalTransferOfItem .
+rdai:P40040 owl:sameAs rdai:reviewOfItem .
+rdai:P40041 owl:sameAs rdai:critiqueOfItem .
+rdai:P40042 owl:sameAs rdai:reproductionOfItem .
+rdai:P40043 owl:sameAs rdai:commentaryOnItem .
+rdai:P40044 owl:sameAs rdai:preservationFacsimileOfItem .
+rdai:P40045 owl:sameAs rdai:facsimileOfItem .
+rdai:P40046 owl:sameAs rdai:relatedItemOfItem .
+rdai:P40047 owl:sameAs rdai:restrictionsOnAccess .
+rdai:P40048 owl:sameAs rdai:restrictionsOnUse .
+rdai:P40049 owl:sameAs rdai:manifestationExemplified .
+rdai:P40050 owl:sameAs rdai:immediateSourceOfAcquisitionOfItem .
+rdai:P40051 owl:sameAs rdai:accompanyingItemRelationship .
+rdai:P40052 owl:sameAs rdai:descriptiveItemRelationship .
+rdai:P40053 owl:sameAs rdai:equivalentItemRelationship .
+rdai:P40054 owl:sameAs rdai:wholePartItemRelationship .
+ 
+</pre>
 </div>
 <div class="col-md-6">
-<p>RDA element sets include:</p>
+<h3>Downloads</h3>
 <ul>
-<li>a set of <a href="c.html">classes</a> representing the RDA entities Work, Expression, Manifestation, Item, Person, Family, and Corporate Body, taken from FRBR and FRAD.</li>
-<li>a set for each of the RDA entity <a href="w.html">Work properties</a>, <a href="e.html">Expression properties</a>, <a href="m.html">Manifestation properties</a>, and <a href="i.html">Item properties</a> representing the RDA elements for their attributes and relationships.</li>
-<li>a set for the RDA  super-entity <a href="a.html">Agent properties</a> including the RDA entities Person, Family, Corporate Body, representing the RDA elements for their attributes and relationships.</li>
-<li>a set of <a href="u.html">unconstrained properties</a> without links to the RDA entities for use by non-FRBR applications, representing generalized RDA elements for attributes and relationships.</li>
+<li><a href="http://rdaregistry.info/Maps/mapRDACan2LexI.ttl" target="_blank">Turtle (text/turtle)</a></li>
+</ul>
+<p>This map relates the canonical URIs in the RDA Item properties element set to equivalent English lexical URIs.</p>
+<p>The map is given in a terse triple language (ttl) serialization.</p>
+<!-- #EndLibraryItem -->
+<h3>Alignments</h3>
+<ul>
+<li><a href="../Aligns/alignRDACan2LexI.html" target="_blank">Alignment from canonical to lexical URIs in the RDA Item properties element set (csv)</a></li>
 </ul>
 </div>
 </div>
