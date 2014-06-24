@@ -972,6 +972,18 @@
     = <http://rdaregistry.info/Elements/e/incidentalMusicForExpression> ;
     skos:definition "Relates an expression to an expression of a work such as a play or other spoken work for the stage that uses the musical work as incidental music."@en .
 
+<http://rdaregistry.info/Elements/e/P20212> a rdf:Property ;
+    rdfs:label "is merged to form (expression)"@en ;
+    reg:name "mergedToFormExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60504> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20201> ;
+    = <http://rdaregistry.info/Elements/e/mergedToFormExpression> ;
+    skos:definition "Relates an expression to an expression of a work which brings the expression together with another expression."@en .
+
 <http://rdaregistry.info/Elements/e/P20213> a rdf:Property ;
     rdfs:label "has additional scale information"@en ;
     reg:name "additionalScaleInformation"@en ;
@@ -2745,7 +2757,7 @@
         <http://rdaregistry.info/Elements/u/P60505> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20212> ;
     = <http://rdaregistry.info/Elements/e/mergerOfExpression> ;
-    skos:definition "Relates an expression to an expression of one of two or more works which came together to form a new expression."@en .
+    skos:definition "Relates an expression to one of the expressions which come together to form the expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20211> a rdf:Property ;
     rdfs:label "is revised as"@en ;
@@ -2759,19 +2771,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20189> ;
     = <http://rdaregistry.info/Elements/e/revisedAs> ;
     skos:definition "Relates an expression to an expression of a work that has been updated, corrected, or expanded."@en .
-
-<http://rdaregistry.info/Elements/e/P20212> a rdf:Property ;
-    rdfs:label "is merged to form (expression)"@en ;
-    reg:name "mergedToFormExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20169>,
-        <http://rdaregistry.info/Elements/u/P60504> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20201> ;
-    = <http://rdaregistry.info/Elements/e/mergedToFormExpression> ;
-    skos:definition "Relates an expression to one of two or more expressions of works that come together to form a new expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20114> a rdf:Property ;
     rdfs:label "is imitated as (expression)"@en ;
@@ -3108,8 +3107,7 @@
         <http://rdaregistry.info/Elements/e/P20143>,
         <http://rdaregistry.info/Elements/e/P20144>,
         <http://rdaregistry.info/Elements/e/P20191>,
-        <http://rdaregistry.info/Elements/e/P20200>,
-        <http://rdaregistry.info/Elements/e/P20212> ;
+        <http://rdaregistry.info/Elements/e/P20200> ;
     reg:name "succeededByExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;

@@ -467,6 +467,18 @@
     = <http://rdaregistry.info/Elements/a/courtReporterOf> ;
     skos:definition "Relates a person, family, or corporate body contributing to an expression of a work by preparing a court's opinions for publication to the expression."@en .
 
+<http://rdaregistry.info/Elements/a/P50164> a rdf:Property ;
+    rdfs:label "is custodian of"@en ;
+    reg:name "custodianOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60631> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/P40020> ;
+    = <http://rdaregistry.info/Elements/a/custodianOf> ;
+    skos:definition "Relates a person, family, or corporate body having legal custody of an item to the item."@en .
+
 <http://rdaregistry.info/Elements/a/P50180> a rdf:Property ;
     rdfs:label "is presenter of"@en ;
     reg:name "presenterOf"@en ;
@@ -2223,6 +2235,32 @@
     = <http://rdaregistry.info/Elements/a/productionDesignerOf> ;
     skos:definition "Relates a person, family, or corporate body responsible for designing the overall visual appearance of a moving image production to the expression."@en .
 
+<http://rdaregistry.info/Elements/a/P50199> a rdf:Property ;
+    rdfs:label "is distributor of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50169> ;
+    reg:name "distributorOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60667> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30080> ;
+    = <http://rdaregistry.info/Elements/a/distributorOf> ;
+    skos:definition "Relates a person, family, or corporate body responsible for distributing a resource to the manifestation."@en .
+
+<http://rdaregistry.info/Elements/a/P50203> a rdf:Property ;
+    rdfs:label "is publisher of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50168> ;
+    reg:name "publisherOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/:P60670> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/P30083> ;
+    = <http://rdaregistry.info/Elements/a/publisherOf> ;
+    skos:definition "Relates a person, family, or corporate body responsible for publishing, releasing, or issuing a resource to the manifestation."@en .
+
 <http://rdaregistry.info/Elements/a/P50206> a rdf:Property ;
     rdfs:label "is restorationist of"@en ;
     reg:name "restorationistOf"@en ;
@@ -2572,8 +2610,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10008> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60648>,
-        <http://rdaregistry.info/Elements/u/P60697> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60648> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50233> ;
     = <http://rdaregistry.info/Elements/a/familyMember> ;
     skos:definition "Relates a family to a person who is a member of the family."@en .
@@ -2657,18 +2694,19 @@
     = <http://rdaregistry.info/Elements/a/currentOwnerOf> ;
     skos:definition "Relates a person, family, or corporate body currently having legal possession of an item to the item."@en .
 
-<http://rdaregistry.info/Elements/a/P50164> a rdf:Property ;
-    rdfs:label "is custodian of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50164> ;
-    reg:name "custodianOf"@en ;
+<http://rdaregistry.info/Elements/a/P50165> a rdf:Property ;
+    rdfs:label "is owner of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50162>,
+        <http://rdaregistry.info/Elements/a/P50163> ;
+    reg:name "ownerOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50164> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40020> ;
-    = <http://rdaregistry.info/Elements/a/custodianOf> ;
-    skos:definition "Relates a person, family, or corporate body having legal custody of an item to the item."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60632> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/P40021> ;
+    = <http://rdaregistry.info/Elements/a/ownerOf> ;
+    skos:definition "Relates a person, family, or corporate body having legal possession of an item to the item."@en .
 
 <http://rdaregistry.info/Elements/a/P50192> a rdf:Property ;
     rdfs:label "is artist of"@en ;
@@ -2781,49 +2819,6 @@
     = <http://rdaregistry.info/Elements/a/formerOwnerOf> ;
     skos:definition "Relates a person, family, or corporate body formerly having legal possession of an item to the item."@en .
 
-<http://rdaregistry.info/Elements/a/P50199> a rdf:Property ;
-    rdfs:label "is distributor of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50169>,
-        <http://rdaregistry.info/Elements/a/P50199> ;
-    reg:name "distributorOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50199> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/m/P30080> ;
-    = <http://rdaregistry.info/Elements/a/distributorOf> ;
-    skos:definition "Relates a person, family, or corporate body responsible for distributing a resource to the manifestation."@en .
-
-<http://rdaregistry.info/Elements/a/P50203> a rdf:Property ;
-    rdfs:label "is publisher of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50168>,
-        <http://rdaregistry.info/Elements/a/P50203> ;
-    reg:name "publisherOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50203> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/m/P30083> ;
-    = <http://rdaregistry.info/Elements/a/publisherOf> ;
-    skos:definition "Relates a person, family, or corporate body responsible for publishing, releasing, or issuing a resource to the manifestation."@en .
-
-<http://rdaregistry.info/Elements/a/P50165> a rdf:Property ;
-    rdfs:label "is owner of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50162>,
-        <http://rdaregistry.info/Elements/a/P50163>,
-        <http://rdaregistry.info/Elements/a/P50165> ;
-    reg:name "ownerOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50165> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40021> ;
-    = <http://rdaregistry.info/Elements/a/ownerOf> ;
-    skos:definition "Relates a person, family, or corporate body having legal possession of an item to the item."@en .
-
 <http://rdaregistry.info/Elements/a/P50195> a rdf:Property ;
     rdfs:label "is author of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50223>,
@@ -2868,7 +2863,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50131>,
-        <http://rdaregistry.info/Elements/u/P60452> ;
+        <http://rdaregistry.info/Elements/u/P60673> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10066> ;
     = <http://rdaregistry.info/Elements/a/directorOf> ;
     skos:definition "Relates a person, family, or corporate body responsible for the general management and supervision of a filmed performance, a radio or television program, etc. to the work."@en .
@@ -2923,14 +2918,13 @@
         <http://rdaregistry.info/Elements/a/P50176>,
         <http://rdaregistry.info/Elements/a/P50177>,
         <http://rdaregistry.info/Elements/a/P50178>,
-        <http://rdaregistry.info/Elements/a/P50179>,
-        <http://rdaregistry.info/Elements/a/P50202> ;
+        <http://rdaregistry.info/Elements/a/P50179> ;
     reg:name "manufacturerOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50202> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60669> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/P30082> ;
     = <http://rdaregistry.info/Elements/a/manufacturerOf> ;
     skos:definition "Relates a person, family, or corporate body responsible for printing, duplicating, casting, etc to the manifestation."@en .
@@ -2980,14 +2974,13 @@
         <http://rdaregistry.info/Elements/a/P50194>,
         <http://rdaregistry.info/Elements/a/P50195>,
         <http://rdaregistry.info/Elements/a/P50196>,
-        <http://rdaregistry.info/Elements/a/P50197>,
-        <http://rdaregistry.info/Elements/a/P50204> ;
+        <http://rdaregistry.info/Elements/a/P50197> ;
     reg:name "creatorOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50204> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60672> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10065> ;
     = <http://rdaregistry.info/Elements/a/creatorOf> ;
     skos:definition "Relates a person, family, or corporate body responsible for the creation of a work to the work."@en .
