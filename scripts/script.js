@@ -74,7 +74,7 @@ function makeCurie (uri) {
 }
 
 function makeUrl (uri) {
-  return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2#$3");
+  return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
 }
 
 if (location.href.indexOf('#') > -1) {
