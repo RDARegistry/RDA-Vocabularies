@@ -84,7 +84,7 @@ if (location.hash.indexOf('#') > -1) {
 $(document).ready(
     function () {
       var t8lines = 2;
-      var dtable = $("table#pindex");
+      var dtable = $("#pindex");
       var table = dtable.DataTable({
         "createdRow": function (row, data, index) {
           //$('td', row).eq(3).addClass('too-long');
