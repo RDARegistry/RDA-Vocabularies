@@ -77,8 +77,8 @@ function makeUrl (uri) {
   return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
 }
 
-if (location.href.indexOf('#') > -1) {
-  var initFilter = location.href.substr(location.href.indexOf('#')+1);
+if (location.hash.indexOf('#') > -1) {
+  var initFilter = location.hash.substr(1);
 }
 
 $(document).ready(
