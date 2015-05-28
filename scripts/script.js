@@ -77,14 +77,14 @@ function makeUrl (uri) {
   return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
 }
 
-if (location.href.indexOf('#') > -1) {
-  var initFilter = location.href.substr(location.href.indexOf('#')+1);
+if (location.hash.indexOf('#') > -1) {
+  var initFilter = location.hash.substr(1);
 }
 
 $(document).ready(
     function () {
       var t8lines = 2;
-      var dtable = $("table#pindex");
+      var dtable = $("#pindex");
       var table = dtable.DataTable({
         "createdRow": function (row, data, index) {
           //$('td', row).eq(3).addClass('too-long');
