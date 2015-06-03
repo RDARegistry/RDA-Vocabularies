@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- InstanceBegin template="/Templates/rdagitMaps.dwt" codeOutsideHTMLIsLocked="false" -->
+<!-- InstanceBegin template="/Templates/rdagitMapsPage.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Meta-->
 <meta charset="utf-8">
@@ -10,9 +10,8 @@
 <meta name="keywords" content="RDA, vocabularies, documentation, registry">
 <meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
 <meta name="viewport" content="width=device-width">
-<!-- InstanceBeginEditable name="Title" -->
 <title>RDA Registry | Maps</title>
-<!-- InstanceEndEditable -->
+
 <!-- Icons-->
 <link rel="shortcut icon" href="http://www.rdatoolkit.org/sites/default/files/garland_favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
@@ -100,69 +99,78 @@
    <div class="page-content">
     <div class="rg-pagecontent">
      <h1>RDA maps</h1>
-     <!-- InstanceBeginEditable name="PageContent" -->
+     <h2><!-- InstanceBeginEditable name="MapTitle" -->Map from ISBD content forms to RDA/ONIX Framework<!-- InstanceEndEditable --></h2>
      <div class="row">
       <div class="col-md-6">
-       <ul>
-        <li><a href="#deprecated">Deprecated RDA vocabularies</a></li>
-        <li><a href="#rofisbd">ISBD and RDA/ONIX Framework</a></li>
-        <li><a href="#lexical-en">Lexical URIs in English</a></li>
-        <li><a href="#marcrelator">MARC Relator Codes</a></li>
-        <li><a href="#rofrda">RDA and RDA/ONIX Framework</a></li>
-        <li><a href="#unconstrained">Unconstrained properties</a></li>
-       </ul>
+       <pre>
+<!-- InstanceBeginEditable name="MapCode" -->
+@prefix isbdcf: <http://iflastandards.info/ns/isbd/terms/contentform/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rof: <http://rdaregistry.info/Elements/rof/> .
+@prefix rofch: <http://rdaregistry.info/termList/rofch/> .
+@prefix rofid: <http://rdaregistry.info/termList/rofid/> .
+@prefix rofim: <http://rdaregistry.info/termList/rofim/> .
+@prefix rofsm: <http://rdaregistry.info/termList/rofsm/> .
+#
+# Map from ISBD content form values to RDA/ONIX Framework
+# 3 June 2015
+#
+isbdcf:1001
+  rof:P10012 rofch:T1001 ;
+  rof:P10013 rofsm:T1006 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 ;
+  a rof:C10008 .
+isbdcf:1002 rof:P10012 rofch:T1003 .
+isbdcf:1004
+  rof:P10012 rofch:T1002 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 .
+isbdcf:1006
+  rof:P10012 rofch:T1004 ;
+  rof:P10013 rofsm:T1006 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 ;
+  a rof:C10008 .
+isbdcf:1007
+  rof:P10012 rofch:T1004 ;
+  rof:P10013 rofsm:T1002 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 ;
+  a rof:C10008 .
+isbdcf:1008
+  rof:P10012 rofch:T1001 ;
+  rof:P10013 rofsm:T1002 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 ;
+  a rof:C10008 .
+isbdcf:1009
+  rof:P10012 rofch:T1001 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 .
+isbdcf:1005 rof:P10024 rofid:T1002 .
+isbdcf:1003 rof:P10025 rofim:T1002 .
+<!-- InstanceEndEditable --> 
+</pre>
       </div>
       <div class="col-md-6">
-       <p>This section contains maps to and from RDA element sets and value vocabularies. We use the term &quot;map&quot; to refer to a set of mappings. We use the term &quot;mapping&quot; to refer to a single relationship between two classes, properties, or concepts taken from different element sets and value vocabularies.</p>
-       <p>Some maps are based on <a href="../Aligns/index.html">alignments</a>.</p>
-       <a id="unconstrained"></a>
-       <h2>Unconstrained properties</h2>
+       <h3>Downloads</h3>
+       <!-- InstanceBeginEditable name="MapDownload" -->
        <ul>
-        <li><a href="mapRDA2UncA.html">Map from RDA Agent properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDA2UncE.html">Map from RDA Expression properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDA2UncI.html">Map from RDA Item properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDA2UncM.html">Map from RDA Manifestation properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDA2UncW.html">Map from RDA Work properties to unconstrained RDA properties</a></li>
+        <li><a href="http://rdaregistry.info/Maps/mapISBDCF2ROF.ttl" target="_blank">Turtle (text/turtle)</a></li>
        </ul>
-       <a id="rofrda"></a>
-       <h2>RDA and RDA/ONIX Framework</h2>
+       <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="MapDescription" -->
+       <p>This map relates the <a href="http://metadataregistry.org/vocabulary/show/id/113.html">ISBD Content Form</a> value vocabulary to the RDA/ONIX Framework element set and value vocabularies.</p>
+       <!-- #BeginLibraryItem "/Library/ttlMap.lbi" -->
+       <p>The map is given in a terse triple language (ttl) serialization.</p>
+       <!-- #EndLibraryItem -->
+       <h3>Alignments</h3>
        <ul>
-        <li><a href="mapRDARef2ROF.html">Map from RDA refinements to RDA/ONIX Framework concepts</a></li>
-        <li><a href="mapRDACT2ROF.html">Map from RDA carrier types to RDA/ONIX Framework</a></li>
-        <li><a href="mapRDACO2ROF.html">Map from RDA content types to RDA/ONIX Framework</a></li>
-        <li><a href="mapRDAMT2ROF.html">Map from RDA media types to RDA/ONIX Framework</a></li>
+        <li><a href="../Aligns/alignISBDCF2ROF.html" target="_blank">Alignment from ISBD content forms to RDA/ONIX Framework</a></li>
        </ul>
-       <a id="lexical-en"></a>
-       <h2>Lexical URIs in English</h2>
-       <ul>
-        <li><a href="mapRDACan2LexA.html">Map from canonical to lexical URIs in the Agent properties element set</a></li>
-        <li><a href="mapRDACan2LexE.html">Map from canonical to lexical URIs in the Expression properties element set</a></li>
-        <li><a href="mapRDACan2LexI.html">Map from canonical to lexical URIs in the Item properties element set</a></li>
-        <li><a href="mapRDACan2LexM.html">Map from canonical to lexical URIs in the Manifestation properties element set</a></li>
-        <li><a href="mapRDACan2LexU.html">Map from canonical to lexical URIs in the Unconstrained properties element set</a></li>
-        <li><a href="mapRDACan2LexW.html">Map from canonical to lexical URIs in the Work properties element set</a></li>
-       </ul>
-       <a id="deprecated"></a>
-       <h2>Deprecated RDA vocabularies</h2>
-       <ul>
-        <li><a href="mapRDAOld2NewClass.html">Map from deprecated to published RDA classes</a></li>
-        <li><a href="mapRDAOld2NewProp.html">Map from deprecated to published RDA properties</a></li>
-       </ul>
-       <a id="rofisbd"></a>
-       <h2>ISBD and RDA/ONIX Framework</h2>
-       <ul>
-        <li><a href="mapISBDCF2ROF.html">Map from ISBD content forms to RDA/ONIX Framework</a></li>
-        <li><a href="mapISBDMT2ROF.html">Map from ISBD media types to RDA/ONIX Framework</a></li>
-       </ul>
-       <a id="marcrelator"></a>
-       <h2>MARC Relator Codes</h2>
-       <ul>
-        <li><a href="mapRDA2MRC.html">Map from RDA properties to MARC Code List for Relators</a></li>
-        <li><a href="mapMRC2RDA.html">Map from MARC Code List for Relators to RDA properties</a></li>
-       </ul>
+       <!-- InstanceEndEditable --> <!-- InstanceEndEditable -->
       </div>
      </div>
-     <!-- InstanceEndEditable -->
     </div>
    </div>
   </article>
