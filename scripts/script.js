@@ -26,7 +26,7 @@ function format (d) {
   '</tr>' +
   '<tr>' +
   '<td>Scope Notes:</td>' +
-  '<td>' + formatRefArray(d.scopeNnote, "vscopeNote") + '</td>' +
+  '<td>' + formatRefArray(d.note, "vnote") + '</td>' +
   '</tr>' +
   '<tr>' +
   '<td>Status:</td>' +
@@ -134,9 +134,9 @@ $(document).ready(
           },
           {
             "defaultContent": "",
-            "data": "unconstrained",
+            "data": "hasunconstrained",
             "render": function (data, type, row) {
-              return formatRefArray(data, "vunconstrained");
+              return formatRefArray(data, "vhasunconstrained");
             }
           }
         ],
