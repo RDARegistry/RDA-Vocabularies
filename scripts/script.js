@@ -40,11 +40,9 @@ function formatRef (data, classname) {
   if (typeof data != "undefined") {
     if (typeof data.lexicalAlias != "undefined") {
       var url = makeUrl(data["@id"]);
-      return '<div class="' + classname + '" title="' +
-      data.label + '"><div class="vurllabel"><a href="' + url + '">"' +
-      data.label + '"</a></div><div class="vlex"><a href="' + url + '">' +
-      makeCurie(data.lexicalAlias) + '</a></div><div class="vcanon"><a href="' + url + '">' +
-      makeCurie(data["@id"]) + '</a></div></div>';
+      return '<div class="' + classname + '" title="Lexical Alias: ' +
+          makeCurie(data.lexicalAlias) + '"><div class="vurllabel"><a href="' + url + '">"' +
+      data.label + '"</a></div>';
     }
     else {
       return '<div class="' + classname + '">' + data + '</div>';
@@ -123,7 +121,7 @@ $(document).ready(
           },
           {
             "render": function (data, type, row) {
-              return '<div class="vlabel">' + row["label"] + '</div>' + formatRefArray(row["description"], "description");
+              return formatRefArray(row["description"], "description");
             }
           },
           {
