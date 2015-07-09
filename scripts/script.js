@@ -77,8 +77,9 @@ function makeUrl (uri) {
   return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
 }
 
-if (location.hash.indexOf('#') > -1) {
-  var initFilter = location.hash.substr(1);
+var initFilter = null;
+if (window.location.hash.indexOf('#') > -1) {
+  initFilter = window.location.hash.substr(1);
 }
 
 $(document).ready(
@@ -127,14 +128,14 @@ $(document).ready(
           },
           {
             "defaultContent": "",
-            "data": "subpropertyOf",
+            "data": "subPropertyOf",
             "render": function (data, type, row) {
               return formatRefArray(data, "vsubPropertyOf");
             }
           },
           {
             "defaultContent": "",
-            "data": "hasunconstrained",
+            "data": "hasUnconstrained",
             "render": function (data, type, row) {
               return formatRefArray(data, "vhasunconstrained");
             }
