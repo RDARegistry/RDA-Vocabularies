@@ -12,26 +12,38 @@ function format (d) {
   if (typeof d != "undefined"){
   var i;
   return '<table class="pindex_detail">' +
+      '<tr>' +
+      '<td>Lexical Alias:</td>' +
+      '<td>' + makeLink(d.lexicalAlias) + '</td>' +
+      '</tr>' +
   '<tr>' +
-  '<td>Domain:</td>' +
-  '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
+    '<td>Domain:</td>' +
+    '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
   '</tr>' +
   '<tr>' +
-  '<td>Range:</td>' +
-  '<td>' + formatRef(d.range, "vrange") + '</td>' +
+    '<td>Range:</td>' +
+    '<td>' + formatRef(d.range, "vrange") + '</td>' +
   '</tr>' +
+      '<tr>' +
+      '<td>inverseOf:</td>' +
+      '<td>' + formatRefArray(d.inverseOf, "vinverseOf") + '</td>' +
+      '</tr>' +
+      '<tr>' +
+      '<td>SubProperties:</td>' +
+      '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' +
+      '</tr>' +
   '<tr>' +
-  '<td>SubProperties:</td>' +
-  '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' +
+    '<td>Scope Notes:</td>' +
+    '<td>' + formatRefArray(d.note, "vnote") + '</td>' +
   '</tr>' +
-  '<tr>' +
-  '<td>Scope Notes:</td>' +
-  '<td>' + formatRefArray(d.note, "vnote") + '</td>' +
-  '</tr>' +
-  '<tr>' +
-  '<td>Status:</td>' +
-  '<td>' + formatRef(d.status, "vstatus") + '</td>' +
-  '</tr>' +
+      '<tr>' +
+      '<td>URL:</td>' +
+      '<td>' + makeLink(d.url) + '</td>' +
+      '</tr>' +
+      '<tr>' +
+      '<td>Status:</td>' +
+      '<td>' + formatRef(d.status, "vstatus") + '</td>' +
+      '</tr>' +
   '</table>';
   }
 }
@@ -73,6 +85,10 @@ function makeCurie (uri) {
 
 function makeUrl (uri) {
   return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+}
+
+function makeLink (uri) {
+  return '<a href="' + uri + '">' + uri + '</a>';
 }
 
 var initFilter = null;
