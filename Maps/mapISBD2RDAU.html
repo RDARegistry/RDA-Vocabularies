@@ -193,6 +193,20 @@ isbd:P1184 rdfs:subPropertyOf rdau:P60589 .
        <!-- InstanceEndEditable -->
        <!-- InstanceBeginEditable name="MapDescription" -->
        <p>This map relates the <a href="http://metadataregistry.org/schema/show/id/25.html" target="_blank">ISBD elements</a> element set to the <a href="http://metadataregistry.org/schema/show/id/82.html" target="_blank">RDA Unconstrained properties</a> element set.</p>
+	   <p>The map consists of shortcut mappings entailed from adding the <a href="mapISBDU2RDAU.html" target="_blank">Map from unconstrained ISBD properties to unconstrained RDA properties</a> to the <a href="http://metadataregistry.org/schema/show/id/25.html" target="_blank">ISBD elements</a> element set, which includes mappings to the ISBD elements (unconstrained) element set.</p>
+	   <p>For example:</p>
+	   <pre>
+# from ISBD elements:
+isbd:P1001 reg:hasUnconstrained isbdu:P1001 .
+# from http://metadataregistry.org/uri/profile/RegAp/ (reg):
+reg:hasUnconstrained rdfs:subPropertyOf rdfs:subPropertyOf .
+# entails:
+isbd:P1001 rdfs:subPropertyOf isbdu:P1001 .
+# from map of unconstrained ISBD to unconstrained RDA:
+isbdu:P1001 rdfs:subPropertyOf rdau:P60049 .
+# entails:
+isbd:P1001 rdfs:subPropertyOf rdau:P60049 .
+	   </pre>
        <!-- #BeginLibraryItem "/Library/ttlMap.lbi" -->
        <p>The map is given in a terse triple language (ttl) serialization.</p>
        <!-- #EndLibraryItem -->
