@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/rdagitMapsPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- Meta-->
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="This is the technical documentation for the RDA: Resource Description and Access published vocabularies and element set.">
+<meta name="keywords" content="RDA, vocabularies, documentation, registry">
+<meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
+<meta name="viewport" content="width=device-width">
+
+
+<title>RDA Registry | Maps</title>
+
+<!-- Icons-->
+<link rel="shortcut icon" href="http://www.rdatoolkit.org/sites/default/files/garland_favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+<!--[if lt IE 9]><script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- Styles -->
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="/styles/style.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+<link rel="stylesheet" href="/styles/rdagit.css" />
+</head>
+<body>
+<!-- Markup-->
+<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+<div class="navbar-header">
+<button type="button" data-toggle="collapse" data-target="#navbar-main" class="navbar-toggle"><span class="sr-only">Toggle navigation</span></button>
+<a href="/" class="navbar-brand">RDA Registry</a>
+</div>
+<div id="navbar-main" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown"><a href="/Elements/" class="dropdown-toggle" data-toggle="dropdown">Elements <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/Elements/">Elements</a></li>
+<li class="divider"></li>
+<li><a href="/Elements/c/">Classes</a></li>
+<li><a href="/Elements/w/">Work properties</a></li>
+<li><a href="/Elements/e/">Expression properties</a></li>
+<li><a href="/Elements/m/">Manifestation properties</a></li>
+<li><a href="/Elements/i/">Item properties</a></li>
+<li><a href="/Elements/a/">Agent properties</a></li>
+<li><a href="/Elements/u/">Unconstrained properties</a></li>
+<li><a href="/Elements/z/">Meta-element properties</a></li>
+<li><a href="/Elements/rof/">RDA/ONIX Framework elements</a></li>
+</ul>
+</li>
+<li class="dropdown"><a href="/termList/" class="dropdown-toggle" data-toggle="dropdown">Values <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/termList/">Values</a></li>
+<li class="divider"></li>
+<li><a href="/termList/">RDA values</a></li>
+<li><a href="/termList/#rof">RDA/ONIX Framework values</a></li>
+</ul>
+</li>
+<li class="dropdown"><a href="/rgData/" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/rgData/">Data</a></li>
+<li class="divider"></li>
+<li><a href="/Examples/">Examples</a></li>
+<li><a href="http://rballs.info/">R-Balls</a></li>
+<li><a href="/rgDatasets/">Datasets</a></li>
+</ul>
+</li>
+<li class="dropdown"><a href="/rgTools/" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/rgTools/">Tools</a></li>
+<li class="divider"></li>
+<li><a href="/Maps/">Maps</a></li>
+<li><a href="/Aligns/">Alignments</a></li>
+<li><a href="/Profiles/">Profiles</a></li>
+<li><a href="/rimmf/">RIMMF</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown"><a href="/rgAbout/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/rgAbout/">About</a></li>
+<li class="divider"></li>
+<li><a href="/rgAbout/issues.html">Issues</a></li>
+<li><a href="/rgAbout/versions.html">Versions</a></li>
+<li><a href="/rgAbout/deprecation.html">Deprecation</a></li>
+<li><a href="/rgAbout/rof.html">RDA/ONIX Framework</a></li>
+</ul>
+</li>
+<li><a href="/rgFAQ">FAQ</a></li>
+<li><a href="/rgGuide">Guide</a></li>
+<li><a href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank">Project</a></li>
+<li><a href="http://access.rdatoolkit.org" target="_blank">RDA Toolkit</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container">
+<section id="content" class="content">
+<article id="page" class="page">
+<div class="page-content">
+<div class="rg-pagecontent">
+<h1>RDA maps</h1>
+
+     <h2><!-- InstanceBeginEditable name="MapTitle" -->Map from ISBD properties to unconstrained RDA properties<!-- InstanceEndEditable --></h2>
+     <div class="row">
+      <div class="col-md-6">
+       <pre>
+<!-- InstanceBeginEditable name="MapCode" -->
+@prefix isbd: <http://iflastandards.info/ns/isbd/elements/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+#
+# Map from ISBD properties to unconstrained RDA properties
+# 23 September 2015
+#
+isbd:P1001 rdfs:subPropertyOf rdau:P60049 .
+isbd:P1002 rdfs:subPropertyOf rdau:P60049 .
+isbd:P1004 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1024 rdfs:subPropertyOf rdau:P60539 .
+isbd:P1025 rdfs:subPropertyOf rdau:P60249 .
+isbd:P1034 rdfs:subPropertyOf rdau:P60521 .
+isbd:P1041 rdfs:subPropertyOf rdau:P60101 .
+isbd:P1047 rdfs:subPropertyOf rdau:P60565 .
+isbd:P1054 rdfs:subPropertyOf rdau:P60550 .
+isbd:P1055 rdfs:subPropertyOf rdau:P60557 .
+isbd:P1060 rdfs:subPropertyOf rdau:P60558 .
+isbd:P1063 rdfs:subPropertyOf rdau:P60513 .
+isbd:P1064 rdfs:subPropertyOf rdau:P60215 .
+isbd:P1065 rdfs:subPropertyOf rdau:P60129 .
+isbd:P1068 rdfs:subPropertyOf rdau:P60136 .
+isbd:P1075 rdfs:subPropertyOf rdau:P60052 .
+isbd:P1078 rdfs:subPropertyOf rdau:P60470 .
+isbd:P1086 rdfs:subPropertyOf rdau:P60136 .
+isbd:P1094 rdfs:subPropertyOf rdau:P60137 .
+isbd:P1095 rdfs:subPropertyOf rdau:P60470 .
+isbd:P1096 rdfs:subPropertyOf rdau:P60244 .
+isbd:P1097 rdfs:subPropertyOf rdau:P60313 .
+isbd:P1098 rdfs:subPropertyOf rdau:P60297 .
+isbd:P1100 rdfs:subPropertyOf rdau:P60281 .
+isbd:P1101 rdfs:subPropertyOf rdau:P60713 .
+isbd:P1116 rdfs:subPropertyOf rdau:P60533 .
+isbd:P1117 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1118 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1119 rdfs:subPropertyOf rdau:P60488 .
+isbd:P1120 rdfs:subPropertyOf rdau:P60533 .
+isbd:P1123 rdfs:subPropertyOf rdau:P60259 .
+isbd:P1126 rdfs:subPropertyOf rdau:P60560 .
+isbd:P1128 rdfs:subPropertyOf rdau:P60543 .
+isbd:P1129 rdfs:subPropertyOf rdau:P60532 .
+isbd:P1130 rdfs:subPropertyOf rdau:P60532 .
+isbd:P1134 rdfs:subPropertyOf rdau:P60481 .
+isbd:P1135 rdfs:subPropertyOf rdau:P60481 .
+isbd:P1136 rdfs:subPropertyOf rdau:P60470 .
+isbd:P1137 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1137 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1138 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1138 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1139 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1139 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1146 rdfs:subPropertyOf rdau:P60550 .
+isbd:P1147 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1147 rdfs:subPropertyOf rdau:P60516 .
+isbd:P1148 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1148 rdfs:subPropertyOf rdau:P60516 .
+isbd:P1149 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1149 rdfs:subPropertyOf rdau:P60516 .
+isbd:P1150 rdfs:subPropertyOf rdau:P60521 .
+isbd:P1178 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1178 rdfs:subPropertyOf rdau:P60590 .
+isbd:P1179 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1179 rdfs:subPropertyOf rdau:P60590 .
+isbd:P1180 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1180 rdfs:subPropertyOf rdau:P60590 .
+isbd:P1181 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1181 rdfs:subPropertyOf rdau:P60589 .
+isbd:P1183 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1183 rdfs:subPropertyOf rdau:P60589 .
+isbd:P1184 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1184 rdfs:subPropertyOf rdau:P60589 .
+<!-- InstanceEndEditable --> 
+</pre>
+      </div>
+      <div class="col-md-6">
+       <h3>Downloads</h3>
+       <!-- InstanceBeginEditable name="MapDownload" -->
+       <ul>
+        <li><a href="http://rdaregistry.info/Maps/mapISBD2RDAU.ttl" target="_blank">Turtle (text/turtle)</a></li>
+       </ul>
+       <!-- InstanceEndEditable -->
+       <!-- InstanceBeginEditable name="MapDescription" -->
+       <p>This map relates the <a href="http://metadataregistry.org/schema/show/id/25.html">ISBD elements</a> element set to the <a href="http://metadataregistry.org/schema/show/id/82.html">RDA Unconstrained properties</a> element set.</p>
+       <!-- #BeginLibraryItem "/Library/ttlMap.lbi" -->
+       <p>The map is given in a terse triple language (ttl) serialization.</p>
+       <!-- #EndLibraryItem -->
+       <h3>Alignments</h3>
+       <ul>
+        <li><a href="../Aligns/alignISBD2RDA.html" target="_blank">Alignment of the ISBD: International Standard Bibliographic Description element set with RDA: Resource Description and Access element set</a></li>
+       </ul>
+       <!-- InstanceEndEditable -->
+      </div>
+     </div>
+     
+</div>
+</div>
+</article>
+</section>
+<footer>
+<div class="rg-footer">
+<div class="row">
+<div class="col-md-6">
+<div class="rg-footer-part">
+<strong><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA Vocabularies</span></strong> and <strong><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA Registry</span></strong> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.
+</div>
+</div>
+<div class="col-md-2">
+<div class="rg-footer-part">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="rg-footer-part">
+<img src="../rgImages/RDAlogo_rgbSized.gif" width="184" height="50" alt="RDA logo">
+</div>
+</div>
+</div>
+<div class="date-updated">
+<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->3 Oct 2015<!-- InstanceEndEditable -->.</p>
+</div>
+</div>
+</footer>
+</div>
+<!-- Scripts--> 
+<!-- InstanceBeginEditable name="Scripts" --> 
+<script defer src="/bower_components/jquery/dist/jquery.js">
+</script> 
+<script defer src="/bower_components/bootstrap/dist/js/bootstrap.js">
+</script> 
+<script defer src="/bower_components/modernizer/modernizr.js">
+</script> 
+<script defer src="/scripts/script.js">
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
