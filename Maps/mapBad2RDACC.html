@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/rdagitMaps.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/rdagitMapsPage.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Meta-->
 <meta charset="utf-8">
@@ -9,9 +9,10 @@
 <meta name="keywords" content="RDA, vocabularies, documentation, registry">
 <meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
 <meta name="viewport" content="width=device-width">
-<!-- InstanceBeginEditable name="Title" -->
+
+
 <title>RDA Registry | Maps</title>
-<!-- InstanceEndEditable -->
+
 <!-- Icons-->
 <link rel="shortcut icon" href="http://www.rdatoolkit.org/sites/default/files/garland_favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
@@ -103,78 +104,39 @@
 <div class="page-content">
 <div class="rg-pagecontent">
 <h1>RDA maps</h1>
-<!-- InstanceBeginEditable name="PageContent" -->
+
+     <h2><!-- InstanceBeginEditable name="MapTitle" -->Map from bad to correct URIs for RDA Colour Content value vocabulary<!-- InstanceEndEditable --></h2>
      <div class="row">
       <div class="col-md-6">
-       <ul>
-        <li><a href="#deprecated">Deprecated RDA vocabularies</a></li>
-        <li><a href="#isbdrda">ISBD and RDA</a></li>
-        <li><a href="#rofisbd">ISBD and RDA/ONIX Framework</a></li>
-        <li><a href="#lexical-en">Lexical URIs in English</a></li>
-        <li><a href="#marcrelator">MARC Relator Codes</a></li>
-        <li><a href="#rofrda">RDA and RDA/ONIX Framework</a></li>
-        <li><a href="#unconstrained">Unconstrained properties</a></li>
-       </ul>
+       <pre>
+<!-- InstanceBeginEditable name="MapCode" -->
+@prefix rdacc: &lt;http://rdaregistry.info/termList/RDAColourContent#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+#
+# Map from bad to good RDA Colour content URIs
+# 17 October 2015
+#
+&lt;http://metadataregistry.org/uri/RDAColourContent/1002&gt; owl:sameAs rdacc:1002 .
+&lt;http://metadataregistry.org/uri/RDAColourContent/1001&gt; owl:sameAs rdacc:1001 .
+<!-- InstanceEndEditable --> 
+</pre>
       </div>
       <div class="col-md-6">
-       <p>This section contains maps to and from RDA element sets and value vocabularies. We use the term &quot;map&quot; to refer to a set of mappings. We use the term &quot;mapping&quot; to refer to a single relationship between two classes, properties, or concepts taken from different element sets and value vocabularies.</p>
-       <p>Some maps are based on <a href="../Aligns/index.html">alignments</a>.</p>
-       <a id="unconstrained"></a>
-       <h2>Unconstrained properties</h2>
+       <h3>Downloads</h3>
+       <!-- InstanceBeginEditable name="MapDownload" -->
        <ul>
-        <li><a href="mapRDA2UncA.html">Map from RDA Agent properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDA2UncE.html">Map from RDA Expression properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDA2UncI.html">Map from RDA Item properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDA2UncM.html">Map from RDA Manifestation properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDA2UncW.html">Map from RDA Work properties to unconstrained RDA properties</a></li>
+        <li><a href="http://rdaregistry.info/Maps/mapBad2RDACC.ttl" target="_blank">Turtle (text/turtle)</a></li>
        </ul>
-       <a id="rofrda"></a>
-       <h2>RDA and RDA/ONIX Framework</h2>
-       <ul>
-        <li><a href="mapRDARef2ROF.html">Map from RDA refinements to RDA/ONIX Framework concepts</a></li>
-        <li><a href="mapRDACT2ROF.html">Map from RDA carrier types to RDA/ONIX Framework</a></li>
-        <li><a href="mapRDACO2ROF.html">Map from RDA content types to RDA/ONIX Framework</a></li>
-        <li><a href="mapRDAMT2ROF.html">Map from RDA media types to RDA/ONIX Framework</a></li>
-       </ul>
-       <a id="lexical-en"></a>
-       <h2>Lexical URIs in English</h2>
-       <ul>
-        <li><a href="mapRDACan2LexA.html">Map from canonical to lexical URIs in the Agent properties element set</a></li>
-        <li><a href="mapRDACan2LexE.html">Map from canonical to lexical URIs in the Expression properties element set</a></li>
-        <li><a href="mapRDACan2LexI.html">Map from canonical to lexical URIs in the Item properties element set</a></li>
-        <li><a href="mapRDACan2LexM.html">Map from canonical to lexical URIs in the Manifestation properties element set</a></li>
-        <li><a href="mapRDACan2LexU.html">Map from canonical to lexical URIs in the Unconstrained properties element set</a></li>
-        <li><a href="mapRDACan2LexW.html">Map from canonical to lexical URIs in the Work properties element set</a></li>
-       </ul>
-       <a id="deprecated"></a>
-       <h2>Deprecated RDA vocabularies</h2>
-       <ul>
-        <li><a href="mapRDAOld2NewClass.html">Map from deprecated to published RDA classes</a></li>
-        <li><a href="mapRDAOld2NewProp.html">Map from deprecated to published RDA properties</a></li>
-        <li><a href="mapBad2RDACC.html">Map from bad to correct URIs for RDA Colour Content value vocabulary</a></li>
-       </ul>
-       <a id="isbdrda"></a>
-       <h2>ISBD and RDA</h2>
-       <ul>
-        <li><a href="mapISBD2RDAU.html">Map from ISBD properties to unconstrained RDA properties</a></li>
-        <li><a href="mapISBDU2RDAU.html">Map from unconstrained ISBD properties to unconstrained RDA properties</a></li>
-        <li><a href="mapRDAU2ISBDU.html">Map from unconstrained RDA properties to unconstrainted ISBD properties</a></li>
-       </ul>
-       <a id="rofisbd"></a>
-       <h2>ISBD and RDA/ONIX Framework</h2>
-       <ul>
-        <li><a href="mapISBDCF2ROF.html">Map from ISBD content forms to RDA/ONIX Framework</a></li>
-        <li><a href="mapISBDMT2ROF.html">Map from ISBD media types to RDA/ONIX Framework</a></li>
-       </ul>
-       <a id="marcrelator"></a>
-       <h2>MARC Relator Codes</h2>
-       <ul>
-        <li><a href="mapRDA2MRC.html">Map from RDA properties to MARC Code List for Relators</a></li>
-        <li><a href="mapMRC2RDA.html">Map from MARC Code List for Relators to RDA properties</a></li>
-       </ul>
+       <!-- InstanceEndEditable -->
+       <!-- InstanceBeginEditable name="MapDescription" -->
+       <p>This map relates the incorrect URIs originally published for the <a href="http://www.rdaregistry.info/termList/RDAColourContent/">RDA Colour Content</a> value vocabulary to the current, correct URIs.</p>
+       <!-- #BeginLibraryItem "/Library/ttlMap.lbi" -->
+       <p>The map is given in a terse triple language (ttl) serialization.</p>
+       <!-- #EndLibraryItem -->
+       <!-- InstanceEndEditable -->
       </div>
      </div>
-     <!-- InstanceEndEditable -->
+     
 </div>
 </div>
 </article>
