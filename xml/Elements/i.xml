@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xml:base="http://rdaregistry.info/Elements/i/"
+  xml:base="http://rdaregistry.info/Elements/a/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -8,6 +8,7 @@
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:reg="http://metadataregistry.org/uri/profile/RegAp/"
+  xmlns:rdakit="http://metadataregistry.org/uri/rdakit/"
   xmlns:status="http://metadataregistry.org/uri/RegStatus/">
 
 <!-- Element Set: RDA Item properties -->
@@ -18,55 +19,6 @@
 </rdf:Description>
 
 <!-- Properties -->
-
-<!-- Property: DEPRECATED -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40030">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-</rdf:Description>
-
-<!-- Property: DEPRECATED -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40033">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-</rdf:Description>
-
-<!-- Property: DEPRECATED -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40037">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-</rdf:Description>
-
-<!-- Property: DEPRECATED -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40040">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-</rdf:Description>
-
-<!-- Property: DEPRECATED -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40041">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-</rdf:Description>
-
-<!-- Property: DEPRECATED -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40043">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-</rdf:Description>
-
-<!-- Property: DEPRECATED -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40052">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-</rdf:Description>
 
 <!-- Property: is accompanied by (item) -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40029">
@@ -85,6 +37,8 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40036" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/accompaniedByItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60196" />
+  <rdakit:toolkitLabel xml:lang="en">accompanied by (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item brought together with another item after being issued.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has accompanying item relationship with -->
@@ -102,6 +56,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40046" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/accompanyingItemRelationship.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60709" />
+  <rdakit:toolkitLabel xml:lang="en">accompanying item relationship</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that accompanies or is accompanied by the item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is analysed in (item) -->
@@ -118,6 +74,15 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60219" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/P10266" />
+  <rdakit:toolkitLabel xml:lang="en">analysed in (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that examines the source item to identify its components and their relations.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40033">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
 </rdf:Description>
 
 <!-- Property: has annotator -->
@@ -134,6 +99,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50128" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/annotator.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60464" />
+  <rdakit:toolkitLabel xml:lang="en">annotator</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who makes manuscript annotations on an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has autographer -->
@@ -150,6 +117,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50129" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/autographer.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60466" />
+  <rdakit:toolkitLabel xml:lang="en">autographer</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person whose manuscript signature appears on an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has binder -->
@@ -166,6 +135,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50123" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/binder.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60458" />
+  <rdakit:toolkitLabel xml:lang="en">binder</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who binds an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is bound with -->
@@ -182,6 +153,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40032" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/boundWith.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60237" />
+  <rdakit:toolkitLabel xml:lang="en">bound with</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that has been bound within the same binding as the item being described.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has collection registrar -->
@@ -198,6 +171,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50046" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectionRegistrar.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60067" />
+  <rdakit:toolkitLabel xml:lang="en">collection registrar</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A curator who lists or inventories the items in an aggregate work such as a collection of items or works.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has collector -->
@@ -214,6 +189,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50045" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collector.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60066" />
+  <rdakit:toolkitLabel xml:lang="en">collector</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A curator who brings together items from various sources that are then arranged, described, and cataloged as a collection.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is commentary in (item) -->
@@ -230,6 +207,15 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60213" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/P10270" />
+  <rdakit:toolkitLabel xml:lang="en">commentary in (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that contains a set of explanatory or critical notes on the described item.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40043">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
 </rdf:Description>
 
 <!-- Property: is contained in (item) -->
@@ -246,6 +232,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40034" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/containedInItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60101" />
+  <rdakit:toolkitLabel xml:lang="en">contained in (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A larger item of which the item is a discrete component.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is container of (item) -->
@@ -262,6 +250,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40009" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/containerOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60249" />
+  <rdakit:toolkitLabel xml:lang="en">container of (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is a discrete component of a larger item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is critiqued in (item) -->
@@ -278,6 +268,15 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60212" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/P10269" />
+  <rdakit:toolkitLabel xml:lang="en">critiqued in (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that contains a critical evaluation of the described item.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40041">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
 </rdf:Description>
 
 <!-- Property: has curator -->
@@ -296,6 +295,8 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40005" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/curator.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60376" />
+  <rdakit:toolkitLabel xml:lang="en">curator</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body conceiving, aggregating, and/or organizing an exhibition, collection, or other item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has current owner -->
@@ -313,6 +314,8 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40006" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/currentOwner.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60400" />
+  <rdakit:toolkitLabel xml:lang="en">current owner</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body currently having legal possession of an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has custodial history of item -->
@@ -326,6 +329,9 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/custodialHistoryOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60176" />
+  <rdakit:instructionNumber xml:lang="">2.18</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">custodial history of item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A record of previous ownership or custodianship of an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has custodian -->
@@ -341,6 +347,9 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50164" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/custodian.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60402" />
+  <rdakit:instructionNumber xml:lang="">22.3</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">custodian</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body having legal custody of an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has dedicatee (item) -->
@@ -357,6 +366,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50210" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/dedicateeOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60455" />
+  <rdakit:toolkitLabel xml:lang="en">dedicatee (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body to whom an item is dedicated.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has depositor -->
@@ -373,6 +384,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50047" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/depositor.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60068" />
+  <rdakit:toolkitLabel xml:lang="en">depositor</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A current owner of an item who deposited the item into the custody of another person, family, or corporate body, while still retaining ownership.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is described in (item) -->
@@ -394,6 +407,22 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40065" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40066" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40067" />
+  <rdakit:toolkitLabel xml:lang="en">described in (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that describes a described item.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40030">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40052">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
 </rdf:Description>
 
 <!-- Property: is digital transfer (item) -->
@@ -410,6 +439,8 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60200" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40039" />
+  <rdakit:toolkitLabel xml:lang="en">digital transfer (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item in a digital format that results from the transfer of an item in another digital format.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is digital transfer of (item) -->
@@ -426,6 +457,8 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/digitalTransferOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60287" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40056" />
+  <rdakit:toolkitLabel xml:lang="en">digital transfer of (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item in a digital format that is transferred to another digital format.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has donor -->
@@ -442,6 +475,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50066" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/donor.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60091" />
+  <rdakit:toolkitLabel xml:lang="en">donor</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A former owner of an item who donated that item to another owner.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is electronic reproduction (item) -->
@@ -458,6 +493,8 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60083" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40027" />
+  <rdakit:toolkitLabel xml:lang="en">electronic reproduction (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item in a digital format that is the result of the transfer of an item in analog format.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is electronic reproduction of (item) -->
@@ -474,6 +511,8 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/electronicReproductionOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60469" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40057" />
+  <rdakit:toolkitLabel xml:lang="en">electronic reproduction of (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item in an analog format that is transferred to a digital format.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is equivalent (item) -->
@@ -492,6 +531,8 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/equivalentItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60191" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40055" />
+  <rdakit:toolkitLabel xml:lang="en">equivalent (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that exemplifies a manifestation that embodies the same expression of a work.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has equivalent item relationship with -->
@@ -509,6 +550,8 @@
   <skos:definition xml:lang="en">Relates an item to an item that is equivalent to the item.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/equivalentItemRelationship.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60712" />
+  <rdakit:toolkitLabel xml:lang="en">equivalent item relationship</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is equivalent to the item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is evaluated in (item) -->
@@ -525,6 +568,15 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60218" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/P10267" />
+  <rdakit:toolkitLabel xml:lang="en">evaluated in (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that examines or judges the described item.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40037">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
 </rdf:Description>
 
 <!-- Property: is facsimile (item) -->
@@ -542,6 +594,8 @@
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60217" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40045" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40059" />
+  <rdakit:toolkitLabel xml:lang="en">facsimile (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that exactly reproduces an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is facsimile of (item) -->
@@ -559,6 +613,8 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/facsimileOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60301" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40058" />
+  <rdakit:toolkitLabel xml:lang="en">facsimile of (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is used as the basis for an exact reproduction.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is filmed with (item) -->
@@ -575,6 +631,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40036" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/filmedWithItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60258" />
+  <rdakit:toolkitLabel xml:lang="en">filmed with (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is contained on the same microform with the item being described.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has former owner -->
@@ -593,6 +651,8 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40008" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/formerOwner.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60401" />
+  <rdakit:toolkitLabel xml:lang="en">former owner</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body formerly having legal possession of an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has honouree (item) -->
@@ -609,6 +669,9 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50167" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/honoureeOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60406" />
+  <skos:altLabel xml:lang="en">has honoree (item)</skos:altLabel>
+  <rdakit:toolkitLabel xml:lang="en">honouree (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body honoured by an item, e.g., a person to whom a copy is presented.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has identifier for the item -->
@@ -622,6 +685,9 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/identifierForTheItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60052" />
+  <rdakit:instructionNumber xml:lang="">2.20</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">identifier for the item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A character string associated with an item that serves to differentiate that item from other items.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has illuminator -->
@@ -638,6 +704,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50092" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/illuminator.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60421" />
+  <rdakit:toolkitLabel xml:lang="en">illuminator</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person providing decoration to a specific item using precious metals or color, often with elaborate designs and motifs.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has immediate source of acquisition of item -->
@@ -651,6 +719,9 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/immediateSourceOfAcquisitionOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60583" />
+  <rdakit:instructionNumber xml:lang="">2.19</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">immediate source of acquisition of item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">The source from which the agency directly acquired an item and the circumstances under which it was received.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has inscriber -->
@@ -667,6 +738,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50125" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/inscriber.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60460" />
+  <rdakit:toolkitLabel xml:lang="en">inscriber</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who has written a statement of dedication or gift on an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: DEPRECATED -->
@@ -687,6 +760,9 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/m/P30103" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/manifestationExemplified.en" />
+  <rdakit:instructionNumber xml:lang="">17.12</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">manifestation exemplified</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">The manifestation exemplified by an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has note on dimensions of item -->
@@ -701,6 +777,9 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/noteOnDimensionsOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60133" />
+  <rdakit:instructionNumber xml:lang="">3.22.3</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">note on dimensions of item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has note on extent of item -->
@@ -715,6 +794,9 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/noteOnExtentOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60134" />
+  <rdakit:instructionNumber xml:lang="">3.22.2</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">note on extent of item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A note providing information on the extent of the specific item being described that is not recorded as part of the extent element.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has note on item -->
@@ -728,6 +810,9 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/noteOnItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60470" />
+  <rdakit:instructionNumber xml:lang="">2.21</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">note on item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A note providing information on attributes of the item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has note on item-specific carrier characteristic -->
@@ -741,6 +826,9 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/noteOnItemSpecificCarrierCharacteristic.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60056" />
+  <rdakit:instructionNumber xml:lang="">3.22</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">note on item-specific carrier characteristic</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A note providing additional information about carrier characteristics that are specific to the item being described and are assumed not to apply to other items exemplifying the same manifestation.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is on disc with (item) -->
@@ -757,6 +845,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40035" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/onDiscWithItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60257" />
+  <rdakit:toolkitLabel xml:lang="en">on disc with (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is contained on the same disc with the item being described.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has other person, family, or corporate body associated with an item -->
@@ -782,6 +872,9 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40025" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/otherPFCItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60374" />
+  <rdakit:instructionNumber xml:lang="">22.4</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">other person, family, or corporate body associated with an item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body other than an owner or custodian associated with an item. Includes curators, binders, restorationists, etc.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has owner -->
@@ -799,6 +892,9 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40019" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/owner.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60404" />
+  <rdakit:instructionNumber xml:lang="">22.2</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">owner</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body having legal possession of an item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is preservation facsimile (item) -->
@@ -815,6 +911,8 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60179" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40044" />
+  <rdakit:toolkitLabel xml:lang="en">preservation facsimile (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that consists of an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is preservation facsimile of (item) -->
@@ -831,6 +929,8 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/preservationFacsimileOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60299" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40059" />
+  <rdakit:toolkitLabel xml:lang="en">preservation facsimile of (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is used as the basis for an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has related item of item -->
@@ -848,6 +948,9 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/relatedItemOfItem.en" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40051" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40054" />
+  <rdakit:instructionNumber xml:lang="">28.1</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">related item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item, represented by an identifier or a description, that is related to the item being described (e.g., an item used as the basis for a microform reproduction).</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is reprinted as (item) -->
@@ -864,6 +967,8 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60271" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40038" />
+  <rdakit:toolkitLabel xml:lang="en">reprinted as (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is a reissue of an item that exemplifies another printed manifestation.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is reprint of (item) -->
@@ -880,6 +985,8 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/reprintOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60168" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40060" />
+  <rdakit:toolkitLabel xml:lang="en">reprint of (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that exemplifies a printed manifestation that is used as the basis for a reissue of a manifestation.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is reproduced as (item) -->
@@ -900,6 +1007,8 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40057" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40058" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40060" />
+  <rdakit:toolkitLabel xml:lang="en">reproduced as (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that reproduces another item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is reproduction of (item) -->
@@ -920,6 +1029,8 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/reproductionOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60297" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/P40055" />
+  <rdakit:toolkitLabel xml:lang="en">reproduction of (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is used as the basis for a reproduction.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has restorationist -->
@@ -936,6 +1047,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50206" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/restorationist.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60450" />
+  <rdakit:toolkitLabel xml:lang="en">restorationist</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person, family, or corporate body responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of an item by bringing it back to a state as close as possible to its original condition.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has restrictions on access to item -->
@@ -949,6 +1062,9 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/restrictionsOnAccessToItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60496" />
+  <rdakit:instructionNumber xml:lang="">4.4</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">restrictions on access</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">Limitations placed on access to a resource.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has restrictions on use of item -->
@@ -962,6 +1078,9 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/restrictionsOnUseOfItem.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60497" />
+  <rdakit:instructionNumber xml:lang="">4.5</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">restrictions on use</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">Limitations placed on uses such as reproduction, publication, exhibition, etc.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is reviewed in (item) -->
@@ -978,6 +1097,15 @@
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60211" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/P10268" />
+  <rdakit:toolkitLabel xml:lang="en">reviewed in (item)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that contains a brief evaluation of the described item.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40040">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
 </rdf:Description>
 
 <!-- Property: has seller -->
@@ -994,6 +1122,8 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/P50067" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/seller.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60092" />
+  <rdakit:toolkitLabel xml:lang="en">seller</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A former owner of an item who sold that item to another owner.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is subject of (item) -->
@@ -1028,14 +1158,16 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40046" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/wholePartItemRelationship.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60714" />
+  <rdakit:toolkitLabel xml:lang="en">whole-part item relationship</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is contained in or contains the item.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 
 <!-- Status properties used in this document  -->
-    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
-        <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
-    </skos:Concept>
     <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
         <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
+        <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
     </skos:Concept>
 </rdf:RDF>
