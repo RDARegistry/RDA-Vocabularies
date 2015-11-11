@@ -187,6 +187,7 @@ $(document).ready(
             row.child(format(row.data())).show();
             tr.addClass('shown');
           }
+          $("div#pindex_filter input").val(initFilter);
         }
       });
 
@@ -217,20 +218,31 @@ $(document).ready(
 
     });
 
-$.fn.dataTableExt.oApi.clearSearch = function ( oSettings )
-{
-
+$.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
     var table = this;
-
     var clearSearch = $('<img title="Delete" alt="" src="data:image/png;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD2SURBVHjaxFM7DoMwDH2pOESHHgDPcB223gKpAxK34EAMMIe1FCQOgFQxuflARVBSVepQS5Ht2PHn2RHMjF/ohB8p2gSZpprtyxEHX8dGTeMG0A5UlsD5rCSGvF55F4SpqpSm1GmCzPO3LXJy1LXllwvodoMsCpNVy2hbYBjCLRiaZ8u7Dng+QXlu9b4H7ncvBmKbwoYBWR4kaXv3YmAMyoEpjv2PdWUHcP1j1ECqFpyj777YA6Yss9KyuEeDaW0cCsCUJMDjYUE8kr5TNuOzC+JiMI5uz2rmJvNWvidwcJXXx8IAuwb6uMqrY2iVgzbx99/4EmAAarFu0IJle5oAAAAASUVORK5CYII=" style="vertical-align:text-bottom;cursor:pointer;" />');
-        $(clearSearch).click(function () {
-          var table = $("table#pindex").DataTable();
-          table
-              .search('')
-              .columns().search('')
-              .draw();
-          $('input[type=search]').val('');
-        });
+    $(clearSearch).click(function () {
+        var table = $("table#pindex").DataTable();
+        table
+            .search('')
+            .columns().search('')
+            .draw();
+        $('input[type=search]').val('');
+        if (initFilter) {
+            var tr = $("#" + initFilter).closest('tr');
+            var row = table.row(tr);
+            if (typeof row.child(format(row.data())) != "undefined") {
+                row.child(format(row.data())).hide();
+                tr.removeClass('shown');
+            }
+            if (history.pushState) {
+                history.pushState(null, null, document.location.pathname);
+            }
+            else {
+                location.hash = '';
+            }
+        }
+    });
     $(oSettings.nTableWrapper).find('div.dataTables_filter').append(clearSearch);
     $(oSettings.nTableWrapper).find('div.dataTables_filter label').css('margin-right', '-16px');//16px the image width
     $(oSettings.nTableWrapper).find('div.dataTables_filter input').css('padding-right', '16px');
