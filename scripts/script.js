@@ -192,7 +192,7 @@ $(document).ready(
       });
 
 // Add event listener for opening and closing details
-      dtable.children("tbody").on('click', 'td.details-control', function () {
+      dtable.children("tbody").on('click', 'td.permalink', function () {
         var tr = $(this).closest('tr');
         var t8 = tr.children("td.too-long");
         var row = table.row(tr);
