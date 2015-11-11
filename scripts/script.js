@@ -85,15 +85,21 @@ function formatRefArray (data, classname) {
 }
 
 function makeCurie (uri) {
-  return uri.replace(/^(http:\/\/rdaregistry\.info\/Elements\/)(.*)\/(.*)$/ig, "rda$2:$3");
+  if (typeof uri.replace === "function"){
+    return uri.replace(/^(http:\/\/rdaregistry\.info\/Elements\/)(.*)\/(.*)$/ig, "rda$2:$3");
+  }
 }
 
 function makeUrl (uri) {
-  return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+  if (typeof uri.replace === "function"){
+    return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+  }
 }
 
 function makeLink (uri) {
-  return '<a href="' + uri + '">' + uri + '</a>';
+  if (typeof uri.replace === "function"){
+    return '<a href="' + uri + '">' + uri + '</a>';
+  }
 }
 
 var initFilter = null;
@@ -113,7 +119,7 @@ $(document).ready(
         "ajax": {
           url: dataSource,
           dataType: 'json',
-          cache: false,
+          cache: true,
           crossDomain: true,
           dataSrc: "@graph"
         },
