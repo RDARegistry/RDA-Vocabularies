@@ -211,7 +211,7 @@ $(document).ready(
         }
       });
 // Add event listener for hash click
-        dtable.children("tbody").on('click', 'td.permalink', function () {
+        dtable.children("tbody").on('click', 'td.permalink', function (table) {
             initFilter = $(this).children('a')[0].id;
             table.column(2).search(initFilter);
             $("div#pindex_filter input").val(initFilter);
