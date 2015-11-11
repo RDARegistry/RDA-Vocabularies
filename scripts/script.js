@@ -210,6 +210,12 @@ $(document).ready(
           t8.trunk8('revert');
         }
       });
+// Add event listener for hash click
+        dtable.children("tbody").on('click', 'td.permalink', function () {
+            initFilter = $(this).val.substr(1);
+            table.column(2).search(initFilter);
+            $("div#pindex_filter input").val(initFilter);
+        });
 
       if (initFilter) {
         table.column(2).search(initFilter);
