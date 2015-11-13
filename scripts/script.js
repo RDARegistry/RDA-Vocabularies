@@ -233,13 +233,15 @@ $(document).ready(
         }
       });
 
-        $('input[type=search]').on('keyup click', function () {
-            var searchbox = this;
-            $("table#pindex").DataTable().search(
-                searchbox.val(),
-                '',
-                '')
-                .draw();
+
+        $('input[type=search]').on('click', function () {
+            if (history.pushState) {
+                history.pushState(null, null, document.location.pathname);
+            }
+            else {
+                location.hash = '';
+            }
+            setSearch('');
         });
 
         if (initFilter) {
@@ -262,7 +264,7 @@ $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
                 tr.removeClass('shown');
             }
             if (history.pushState) {
-                history.pushState(null, null, document.location.pathname);
+                history.pushState(null, '', document.location.pathname);
             }
             else {
                 location.hash = '';
