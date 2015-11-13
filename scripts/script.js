@@ -102,24 +102,31 @@ function makeLink (uri) {
   }
 }
 
-var initFilter = null;
-if (window.location.hash.indexOf('#') > -1) {
-  initFilter = window.location.hash.substr(1);
-}
+function setFilter() {
 
-//$(window).on('hashchange', function(){
-window.onhashchange = function () {
-    var initFilter = '';
+    var initFilter = null;
     if (window.location.hash.indexOf('#') > -1) {
         initFilter = window.location.hash.substr(1);
     }
+    return initFilter;
+}
+
+function setSearch(filter){
     var table = $("table#pindex").DataTable();
     table
         .search('')
-        .column(2).search(initFilter)
+        .column(2).search(filter)
         .draw();
-    $('input[type=search]').val(initFilter);
+    $('input[type=search]').val(filter);
 
+}
+
+var initFilter = setFilter();
+
+//make sure we initiate a search when the hash changes
+window.onhashchange = function () {
+    var initFilter = setFilter();
+    setSearch(initFilter);
 };
 
 $(document).ready(
@@ -225,17 +232,6 @@ $(document).ready(
           t8.trunk8('revert');
         }
       });
-// Add event listener for hash click
-        dtable.children("tbody").on('click', 'td.permalink', function () {
-            var initFilter = $(this).children('a')[0].id;
-            var table = $("table#pindex").DataTable();
-        table
-            .search(initFilter)
-            .columns(2).search(initFilter)
-            .draw();
-            $('input[type=search]').val(initFilter);
-
-        });
 
       if (initFilter) {
         table.column(2).search(initFilter);
@@ -248,12 +244,7 @@ $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
     var table = this;
     var clearSearch = $('<img title="Delete" alt="" src="data:image/png;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD2SURBVHjaxFM7DoMwDH2pOESHHgDPcB223gKpAxK34EAMMIe1FCQOgFQxuflARVBSVepQS5Ht2PHn2RHMjF/ohB8p2gSZpprtyxEHX8dGTeMG0A5UlsD5rCSGvF55F4SpqpSm1GmCzPO3LXJy1LXllwvodoMsCpNVy2hbYBjCLRiaZ8u7Dng+QXlu9b4H7ncvBmKbwoYBWR4kaXv3YmAMyoEpjv2PdWUHcP1j1ECqFpyj777YA6Yss9KyuEeDaW0cCsCUJMDjYUE8kr5TNuOzC+JiMI5uz2rmJvNWvidwcJXXx8IAuwb6uMqrY2iVgzbx99/4EmAAarFu0IJle5oAAAAASUVORK5CYII=" style="vertical-align:text-bottom;cursor:pointer;" />');
     $(clearSearch).click(function () {
-        var table = $("table#pindex").DataTable();
-        table
-            .search('')
-            .columns().search('')
-            .draw();
-        $('input[type=search]').val('');
+        setSearch('');
         if (initFilter) {
             var tr = $("#" + initFilter).closest('tr');
             var row = table.row(tr);
