@@ -233,7 +233,16 @@ $(document).ready(
         }
       });
 
-      if (initFilter) {
+        $('input[type=search]').on('keyup click', function () {
+            var searchbox = this;
+            $("table#pindex").DataTable().search(
+                searchbox.val(),
+                '',
+                '')
+                .draw();
+        });
+
+        if (initFilter) {
         table.column(2).search(initFilter);
         $("div#pindex_filter input").val(initFilter);
       }
