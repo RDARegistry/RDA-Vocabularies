@@ -107,6 +107,21 @@ if (window.location.hash.indexOf('#') > -1) {
   initFilter = window.location.hash.substr(1);
 }
 
+//$(window).on('hashchange', function(){
+window.onhashchange = function () {
+    var initFilter = '';
+    if (window.location.hash.indexOf('#') > -1) {
+        initFilter = window.location.hash.substr(1);
+    }
+    var table = $("table#pindex").DataTable();
+    table
+        .search('')
+        .column(2).search(initFilter)
+        .draw();
+    $('input[type=search]').val(initFilter);
+
+};
+
 $(document).ready(
     function () {
       var t8lines = 2;
@@ -212,9 +227,14 @@ $(document).ready(
       });
 // Add event listener for hash click
         dtable.children("tbody").on('click', 'td.permalink', function () {
-            initFilter = $(this).children('a')[0].id;
-            table.column(2).search(initFilter);
-            $("div#pindex_filter input").val(initFilter);
+            var initFilter = $(this).children('a')[0].id;
+            var table = $("table#pindex").DataTable();
+        table
+            .search(initFilter)
+            .columns(2).search(initFilter)
+            .draw();
+            $('input[type=search]').val(initFilter);
+
         });
 
       if (initFilter) {
