@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/rdagitExamplesPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- Meta-->
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="This is the technical documentation for the RDA: Resource Description and Access published vocabularies and element set.">
+<meta name="keywords" content="RDA, vocabularies, documentation, registry">
+<meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
+<meta name="viewport" content="width=device-width">
+
+
+<title>RDA Registry | Examples</title>
+
+<!-- Icons-->
+<link rel="shortcut icon" href="http://www.rdatoolkit.org/sites/default/files/garland_favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+<!--[if lt IE 9]><script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- Styles -->
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="/styles/style.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+<link rel="stylesheet" href="/styles/rdagit.css" />
+</head>
+<body>
+<!-- Markup-->
+<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+<div class="navbar-header">
+<button type="button" data-toggle="collapse" data-target="#navbar-main" class="navbar-toggle"><span class="sr-only">Toggle navigation</span></button>
+<a href="/" class="navbar-brand">RDA Registry</a>
+</div>
+<div id="navbar-main" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown"><a href="/Elements/" class="dropdown-toggle" data-toggle="dropdown">Elements <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/Elements/">Elements</a></li>
+<li class="divider"></li>
+<li><a href="/Elements/c/">Classes</a></li>
+<li><a href="/Elements/w/">Work properties</a></li>
+<li><a href="/Elements/e/">Expression properties</a></li>
+<li><a href="/Elements/m/">Manifestation properties</a></li>
+<li><a href="/Elements/i/">Item properties</a></li>
+<li><a href="/Elements/a/">Agent properties</a></li>
+<li><a href="/Elements/u/">Unconstrained properties</a></li>
+<li><a href="/Elements/z/">Meta-element properties</a></li>
+<li><a href="/Elements/rof/">RDA/ONIX Framework elements</a></li>
+</ul>
+</li>
+<li class="dropdown"><a href="/termList/" class="dropdown-toggle" data-toggle="dropdown">Values <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/termList/">Values</a></li>
+<li class="divider"></li>
+<li><a href="/termList/">RDA values</a></li>
+<li><a href="/termList/#rof">RDA/ONIX Framework values</a></li>
+</ul>
+</li>
+<li class="dropdown"><a href="/rgData/" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/rgData/">Data</a></li>
+<li class="divider"></li>
+<li><a href="/Examples/">Examples</a></li>
+<li><a href="http://rballs.info/">R-Balls</a></li>
+<li><a href="/rgDatasets/">Datasets</a></li>
+</ul>
+</li>
+<li class="dropdown"><a href="/rgTools/" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/rgTools/">Tools</a></li>
+<li class="divider"></li>
+<li><a href="/Maps/">Maps</a></li>
+<li><a href="/Aligns/">Alignments</a></li>
+<li><a href="/Profiles/">Profiles</a></li>
+<li><a href="/rimmf/">RIMMF</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown"><a href="/rgAbout/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/rgAbout/">About</a></li>
+<li class="divider"></li>
+<li><a href="/rgAbout/issues.html">Issues</a></li>
+<li><a href="/rgAbout/versions.html">Versions</a></li>
+<li><a href="/rgAbout/deprecation.html">Deprecation</a></li>
+<li><a href="/rgAbout/rof.html">RDA/ONIX Framework</a></li>
+</ul>
+</li>
+<li><a href="/rgFAQ">FAQ</a></li>
+<li><a href="/rgGuide">Guide</a></li>
+<li><a href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank">Project</a></li>
+<li><a href="http://access.rdatoolkit.org" target="_blank">RDA Toolkit</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container">
+<section id="content" class="content">
+<article id="page" class="page">
+<div class="page-content">
+<div class="rg-pagecontent">
+<h1>Examples using the RDA vocabularies</h1>
+
+     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Audio recording book from Examples of full RDA records (JSC) – bibliographic records (unconstrained)<!-- InstanceEndEditable --></h2>
+     <div class="row">
+     <div class="col-md-6">
+      <pre><code><!-- InstanceBeginEditable name="ExampleCode" -->
+@prefix ex: &lt;http://example.com/&gt; .
+@prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
+#
+# Example: Audio disc (spoken word) from Examples of full RDA records (JSC) – bibliographic records (unconstrained)
+# 2 Dec 2015
+#
+ex:A1 rdau:P60053 "Munro, Alice, 1931-" .
+ex:A1 rdau:P60368 "Alice Munro" .
+ex:A1 rdau:P60599 "1931" .
+ex:A2 rdau:P60053 "Fraser, Ruth" .
+ex:A2 rdau:P60368 "Ruth Fraser" .
+ex:A3 rdau:P60053 "Mahbey, Judy" .
+ex:A3 rdau:P60368 "Judy Mahbey" .
+ex:A4 rdau:P60053 "Seligman, Lawrie" .
+ex:A4 rdau:P60368 "Lawrie Seligman" .
+ex:A5 rdau:P60053 "Wagers, Eric" .
+ex:A5 rdau:P60368 "Eric Wagers" .
+ex:R1 rdau:P60048 rdact:1004 .
+ex:R1 rdau:P60048 rdact:1013 .
+ex:R1 rdau:P60049 rdaco:1013 .
+ex:R1 rdau:P60050 rdamt:1001 .
+ex:R1 rdau:P60050 rdamt:1003 .
+ex:R1 rdau:P60051 rdami:1002 .
+ex:R1 rdau:P60052 "ISBD 0-86492-398-8" .
+ex:R1 rdau:P60052 "Munro, Alice, 1931- . Lives of girls and women" .
+ex:R1 rdau:P60069 "\u00A92005" .
+ex:R1 rdau:P60099 "English" .
+ex:R1 rdau:P60073 "[date of publication not identified]" .
+ex:R1 rdau:P60093 "audio file" .
+ex:R1 rdau:P60153 "Mahbey, Judy" .
+ex:R1 rdau:P60163 "Fredericton, NB, Canada" .
+ex:R1 rdau:P60313 "Originally broadcast on CBC Radio 1981" .
+ex:R1 rdau:P60313 "Abridgement of the first print edition published by McGraw-Hill Ryerson, 1971" .
+ex:R1 rdau:P60314 "CD audio" .
+ex:R1 rdau:P60327 "Alice Munro" .
+ex:R1 rdau:P60327 "narrated by Judy Mahbey" .
+ex:R1 rdau:P60327 "produced by Lawrie Seligman" .
+ex:R1 rdau:P60327 "recording engineer: Eric Wagers" .
+ex:R1 rdau:P60343 "by Ruth Fraser" .
+ex:R1 rdau:P60365 "Abridged" .
+ex:R1 rdau:P60372 "Born on the backwards &quot;Flats Road,&quot; Del Jordan is a &quot;nice girl&quot; with big dreams in a small town that expects little from women beyond marriage and babies. In linked short stories, Del suffers embarrassment at the hands of her encyclopedia-selling mother, endures her body's insistent desires, and falls passionately in love with a young lumberyard worker, only to lose her chance of a university scholarship" .
+ex:R1 rdau:P60394 ex:A2 .
+ex:R1 rdau:P60395 ex:A5 .
+ex:R1 rdau:P60434 ex:A1 .
+ex:R1 rdau:P60441 ex:A4 .
+ex:R1 rdau:P60490 "http://www.gooselane.com" .
+ex:R1 rdau:P60515 "Lives of girls and women" .
+ex:R1 rdau:P60521 "$29.95 (Canada)" .
+ex:R1 rdau:P60521 "$24.95 (United States)" .
+ex:R1 rdau:P60539 "12 cm" .
+ex:R1 rdau:P60543 rdatr:1002 .
+ex:R1 rdau:P60547 "BTC Audiobooks" .
+ex:R1 rdau:P60550 "3 audio discs" .
+ex:R1 rdau:P60557 "61:46" .
+ex:R1 rdau:P60557 "62:09" .
+ex:R1 rdau:P60557 "61:18" .
+ex:R1 rdau:P60594 rdarm:1003 .
+rdaco:1013 skos:prefLabel "spoken word" .
+rdact:1004 skos:prefLabel "audio disc" .
+rdact:1013 skos:prefLabel "computer disc" .
+rdami:1002 skos:prefLabel "multipart monograph" .
+rdamt:1001 skos:prefLabel "audio" .
+rdamt:1003 skos:prefLabel "computer" .
+rdarm:1003 skos:prefLabel "optical" .
+rdatr:1002 skos:prefLabel "digital" .
+<!-- InstanceEndEditable --></code></pre>
+     </div>
+     <div class="col-md-6">
+      <h3>Downloads</h3>
+      <!-- InstanceBeginEditable name="ExampleDownload" -->
+      <ul>
+       <li><a href="http://rdaregistry.info/Examples/exJSCFullAudioDiscSpokenWordUnc.ttl" target="_blank">Turtle (text/turtle)</a></li>
+      </ul>
+      <!-- InstanceEndEditable -->
+     </div>
+     <!-- InstanceBeginEditable name="ExampleDescription" -->
+      <p>This example corresponds to <em>Audio disc (spoken word)</em> from <a href="http://www.rdatoolkit.org/sites/default/files/6jsc_rda_complete_examples_bibliographic_revisedoct2015.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
+      <p>The example uses unconstrained RDA properties.</p>
+      <!-- InstanceEndEditable --> 
+</div>
+</div>
+</article>
+</section>
+<footer>
+<div class="rg-footer">
+<div class="row">
+<div class="col-md-6">
+<div class="rg-footer-part">
+<strong><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA Vocabularies</span></strong> and <strong><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA Registry</span></strong> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.
+</div>
+</div>
+<div class="col-md-2">
+<div class="rg-footer-part">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="rg-footer-part">
+<img src="../rgImages/RDAlogo_rgbSized.gif" width="184" height="50" alt="RDA logo">
+</div>
+</div>
+</div>
+<div class="date-updated">
+<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->2 Dec 2015<!-- InstanceEndEditable -->.</p>
+</div>
+</div>
+</footer>
+</div>
+<!-- Scripts--> 
+<!-- InstanceBeginEditable name="Scripts" --> 
+<script defer src="/bower_components/jquery/dist/jquery.js"></script>
+<script defer src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script defer src="/bower_components/modernizer/modernizr.js"></script>
+<script defer src="/scripts/script.js"></script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
