@@ -110,17 +110,22 @@
      <div class="col-md-6">
       <pre><code><!-- InstanceBeginEditable name="ExampleCode" -->
 @prefix ex: &lt;http://example.com/&gt; .
+@prefix rdaco: &lt;http://rdvocab.info/termList/RDAContentType/&gt; .
+@prefix rdact: &lt;http://rdvocab.info/termList/RDACarrierType/&gt; .
+@prefix rdami: &lt;http://rdvocab.info/termList/ModeIssue/&gt; .
+@prefix rdamt: &lt;http://rdvocab.info/termList/RDAMediaType/&gt; .
 @prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
 #
 # Example: Volume (text) 1 from Complete examples – bibliographic records (unconstrained)
-# 2 Dec 2015
+# 8 Dec 2015
 #
 ex:A1 rdau:P60119 "Arlene G. Taylor" .
 ex:A1 rdau:P60549 "Taylor, Arlene G., 1941-" .
-ex:R1 rdau:P60048 "volume"@en .
-ex:R1 rdau:P60049 "text"@en .
-ex:R1 rdau:P60050 "unmediated"@en .
-ex:R1 rdau:P60051 "single unit"@en .
+ex:R1 rdau:P60048 rdact:1049 .
+ex:R1 rdau:P60049 rdaco:1020 .
+ex:R1 rdau:P60050 rdamt:1007 .
+ex:R1 rdau:P60051 rdami:1001 .
 ex:R1 rdau:P60052 "ISBN 1-56308-969-6 (paperback)" .
 ex:R1 rdau:P60052 "ISBN 1-56308-976-9" .
 ex:R1 rdau:P60052 "Taylor, Arlene G., 1941- . The organization of information" .
@@ -137,16 +142,19 @@ ex:R1 rdau:P60515 "The organization of information" .
 ex:R1 rdau:P60516 "Library and information science text series" .
 ex:R1 rdau:P60539 "26 cm" .
 ex:R1 rdau:P60547 "Libraries Unlimited, a member of the Greenwood Publishing Group" .
-ex:R1 rdau:P60550 "xxvii, 417 pages" .
+ex:R1 rdau:P60550 "xxvii, 417 pages"@en .
 ex:R1 rdau:P60805 "Information organization"@en .
 ex:R2 rdau:P60515 "Library and information science text series" .
-<!-- InstanceEndEditable --></code></pre>
+rdaco:1020 skos:prefLabel "text"@en .
+rdact:1049 skos:prefLabel "volume"@en .
+rdami:1001 skos:prefLabel "single unit"@en .
+rdamt:1007 skos:prefLabel "unmediated"@en .<!-- InstanceEndEditable --></code></pre>
      </div>
      <div class="col-md-6">
       <h3>Downloads</h3>
       <!-- InstanceBeginEditable name="ExampleDownload" -->
       <ul>
-       <li><a href="http://rdaregistry.info/Examples/exJSCFullTextVolume1Unc.ttl" target="_blank">Turtle (text/turtle)</a></li>
+       <li>Turtle (text/turtle)</li>
       </ul>
       <!-- InstanceEndEditable -->
      </div>
@@ -178,7 +186,7 @@ ex:R2 rdau:P60515 "Library and information science text series" .
 </div>
 </div>
 <div class="date-updated">
-<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->2 Dec 2015<!-- InstanceEndEditable -->.</p>
+<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->8 Dec 2015<!-- InstanceEndEditable -->.</p>
 </div>
 </div>
 </footer>
