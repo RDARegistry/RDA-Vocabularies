@@ -136,6 +136,9 @@ window.onhashchange = function () {
 
 $(document).ready(
     function () {
+
+      $.protip();
+
       var t8lines = 2;
       var dtable = $("#pindex");
       var table = dtable.DataTable({
