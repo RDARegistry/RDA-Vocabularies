@@ -138,7 +138,7 @@ $(document).ready(
     function () {
 
       $.protip({
-          position: top,
+          position: 'top',
       });
 
       var t8lines = 2;
