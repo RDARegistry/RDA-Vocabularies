@@ -138,7 +138,8 @@ $(document).ready(
     function () {
 
       $.protip({
-          position: 'top',
+          position: 'top-left',
+          gravity: '1'
       });
 
       var t8lines = 2;
