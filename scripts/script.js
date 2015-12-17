@@ -52,12 +52,12 @@ function formatRef (data, classname) {
   if (typeof data != "undefined") {
     if (typeof data.lexicalAlias != "undefined") {
       var url = data["@id"];
-      return  '<div class="' + classname + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">' +
+      return  '<div class="' + classname + '">' +
                 '<div class="vcanon">' +
-                  '<a href="' + url + '">' + makeCurie(data["@id"]) + '</a>' +
+                  '<a href="' + url + '" title="Canonical URI: ' + url + '">' + makeCurie(data["@id"]) + '</a>' +
                 '</div>' +
                 '<div class="vurllabel">' +
-                  '<a href="' + url + '">"' + data.label + '"</a>' +
+                  '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">"' + data.label + '"</a>' +
                 '</div>' +
               '</div>';
     }
