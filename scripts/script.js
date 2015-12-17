@@ -51,7 +51,7 @@ function format (d) {
 function formatRef (data, classname) {
   if (typeof data != "undefined") {
     if (typeof data.lexicalAlias != "undefined") {
-      var url = makeUrl(data["@id"]);
+      var url = makeUri(data["@id"]);
       return  '<div class="' + classname + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">' +
                 '<div class="vcanon">' +
                   '<a href="' + url + '">' + makeCurie(data["@id"]) + '</a>' +
@@ -91,8 +91,13 @@ function makeCurie (uri) {
 }
 
 function makeUrl (uri) {
+    if (typeof uri.replace === "function"){
+        return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+    }
+}
+function makeUri (uri) {
   if (typeof uri.replace === "function"){
-    return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+    return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/$3");
   }
 }
 
