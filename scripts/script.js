@@ -259,7 +259,7 @@ $(document).ready(
           defaults: {
             position: 'top-left',
             gravity: true,
-            delayIn: 1000}
+            delayIn: 500}
         })
     }
 );
