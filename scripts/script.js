@@ -256,9 +256,10 @@ $(document).ready(
         }
 
         $.protip({
+          defaults: {
             position: 'top-left',
             gravity: '1',
-            delayIn: 2000
+            delayIn: 2000}
         })
     }
 );
