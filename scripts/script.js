@@ -258,8 +258,8 @@ $(document).ready(
         $.protip({
           defaults: {
             position: 'top-left',
-            gravity: '1',
-            delayIn: 2000}
+            gravity: true,
+            delayIn: 1000}
         })
     }
 );
