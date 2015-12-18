@@ -135,13 +135,8 @@ window.onhashchange = function () {
 };
 
 $(document).ready(
-    function () {
-
-      $.protip({
-          position: 'top-left',
-          gravity: '1'
-      });
-
+    function ()
+    {
       var t8lines = 2;
       var dtable = $("#pindex");
       var table = dtable.DataTable({
@@ -256,11 +251,17 @@ $(document).ready(
         });
 
         if (initFilter) {
-        table.column(2).search(initFilter);
-        $("div#pindex_filter input").val(initFilter);
-      }
+            table.column(2).search(initFilter);
+            $("div#pindex_filter input").val(initFilter);
+        }
 
-    });
+        $.protip({
+            position: 'top-left',
+            gravity: '1',
+            delayIn: 2000
+        })
+    }
+);
 
 $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
     var table = this;
