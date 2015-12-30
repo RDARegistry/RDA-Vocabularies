@@ -1,59 +1,37 @@
 {
   "@context": {
     "dc": "http://purl.org/dc/elements/1.1/",
+    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/schema/registry/",
+    "reg": "http://metadataregistry.org/uri/profile/RegAp/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "http://rdaregistry.info/termList/typeRec/1002",
+      "@id": "http://rdaregistry.info/termList/typeRec/1001",
       "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "862"
+      "rdakit:ToolkitDefinition": {
+        "@language": "en",
+        "@value": "A type of recording in which the content is stored as continuous variable quantities in or on the media."
       },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "de",
-          "@value": "Eine Art der Erfassung, bei der der Inhalt kontinuierlich in Abschnitte zerlegt wird und als Abfolge von einzelnen Binärwerten gespeichert wird, um die Schwingungen jedes Samples in Wellenform darzustellen."
-        },
-        {
-          "@language": "en",
-          "@value": "A type of recording in which the content is continuously sampled and a sequence of discrete binary values is stored to represent the amplitude of each sample in the waveform."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/typeRec"
-      },
-      "skos:prefLabel": [
+      "rdakit:ToolkitLabel": [
         {
           "@language": "fr",
-          "@value": "numérique"
-        },
-        {
-          "@language": "de",
-          "@value": "digital"
-        },
-        {
-          "@language": "en",
-          "@value": "digital"
+          "@value": "analogique"
         },
         {
           "@language": "es",
-          "@value": "digital"
+          "@value": "análogo"
+        },
+        {
+          "@language": "en",
+          "@value": "analog"
         }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/typeRec/1001",
-      "@type": "skos:Concept",
+      ],
       "reg:identifier": {
-        "@id": "861"
+        "@id": "http://metadataregistry.org/concepts/861"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
@@ -77,16 +55,16 @@
           "@value": "analogique"
         },
         {
+          "@language": "en",
+          "@value": "analog"
+        },
+        {
           "@language": "de",
           "@value": "analog"
         },
         {
           "@language": "es",
           "@value": "análogo"
-        },
-        {
-          "@language": "en",
-          "@value": "analog"
         }
       ]
     },
@@ -94,6 +72,65 @@
       "@id": "http://rdaregistry.info/termList/typeRec",
       "@type": "skos:ConceptScheme",
       "dc:title": "RDA Type of Recording"
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/typeRec/1002",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": {
+        "@language": "en",
+        "@value": "A type of recording in which the content is continuously sampled and a sequence of discrete binary values is stored to represent the amplitude of each sample in the waveform."
+      },
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "es",
+          "@value": "digital"
+        },
+        {
+          "@language": "en",
+          "@value": "digital"
+        },
+        {
+          "@language": "fr",
+          "@value": "numérique"
+        }
+      ],
+      "reg:identifier": {
+        "@id": "http://metadataregistry.org/concepts/862"
+      },
+      "reg:status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
+      },
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A type of recording in which the content is continuously sampled and a sequence of discrete binary values is stored to represent the amplitude of each sample in the waveform."
+        },
+        {
+          "@language": "de",
+          "@value": "Eine Art der Erfassung, bei der der Inhalt kontinuierlich in Abschnitte zerlegt wird und als Abfolge von einzelnen Binärwerten gespeichert wird, um die Schwingungen jedes Samples in Wellenform darzustellen."
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "http://rdaregistry.info/termList/typeRec"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "digital"
+        },
+        {
+          "@language": "es",
+          "@value": "digital"
+        },
+        {
+          "@language": "de",
+          "@value": "digital"
+        },
+        {
+          "@language": "fr",
+          "@value": "numérique"
+        }
+      ]
     },
     {
       "@id": "http://metadataregistry.org/uri/RegStatus/1001",

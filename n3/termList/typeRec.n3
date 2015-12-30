@@ -1,14 +1,19 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix reg: <http://metadataregistry.org/uri/schema/registry/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://rdaregistry.info/termList/typeRec/1001> a skos:Concept ;
-    reg:identifier <861> ;
+    reg:identifier <http://metadataregistry.org/concepts/861> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "A type of recording in which the content is stored as continuous variable quantities in or on the media."@en ;
+    rdakit:ToolkitLabel "analog"@en,
+        "análogo"@es,
+        "analogique"@fr ;
     skos:definition "Eine Art der Erfassung, bei der der Inhalt als kontinuierliche variable Größen in oder auf den Medien gespeichert wird."@de,
         "A type of recording in which the content is stored as continuous variable quantities in or on the media."@en ;
     skos:inScheme <http://rdaregistry.info/termList/typeRec> ;
@@ -18,8 +23,12 @@
         "analogique"@fr .
 
 <http://rdaregistry.info/termList/typeRec/1002> a skos:Concept ;
-    reg:identifier <862> ;
+    reg:identifier <http://metadataregistry.org/concepts/862> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "A type of recording in which the content is continuously sampled and a sequence of discrete binary values is stored to represent the amplitude of each sample in the waveform."@en ;
+    rdakit:ToolkitLabel "digital"@en,
+        "digital"@es,
+        "numérique"@fr ;
     skos:definition "Eine Art der Erfassung, bei der der Inhalt kontinuierlich in Abschnitte zerlegt wird und als Abfolge von einzelnen Binärwerten gespeichert wird, um die Schwingungen jedes Samples in Wellenform darzustellen."@de,
         "A type of recording in which the content is continuously sampled and a sequence of discrete binary values is stored to represent the amplitude of each sample in the waveform."@en ;
     skos:inScheme <http://rdaregistry.info/termList/typeRec> ;

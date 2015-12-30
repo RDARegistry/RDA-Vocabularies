@@ -2,7 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdakit: <http://metadataregistry.org/uri/rdakit/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
@@ -17,7 +17,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/identifierForTheItem.en> ;
     reg:name "identifierForTheItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:instructionNumber "2.20" ;
+    rdakit:instructionNumber "2.2" ;
     rdakit:toolkitDefinition "A character string associated with an item that serves to differentiate that item from other items."@en ;
     rdakit:toolkitLabel "identifier for the item"@en ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
@@ -26,34 +26,6 @@
 
 <http://rdaregistry.info/Elements/i/P40002> reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> .
-
-<http://rdaregistry.info/Elements/i/P40010> a rdf:Property ;
-    rdfs:label "has note on dimensions of item"@en ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60133> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnDimensionsOfItem.en> ;
-    reg:name "noteOnDimensionsOfItem"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:instructionNumber "3.22.3" ;
-    rdakit:toolkitDefinition "A note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element."@en ;
-    rdakit:toolkitLabel "note on dimensions of item"@en ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003> ;
-    skos:definition "Relates an item to a note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element."@en .
-
-<http://rdaregistry.info/Elements/i/P40011> a rdf:Property ;
-    rdfs:label "has note on extent of item"@en ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60134> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnExtentOfItem.en> ;
-    reg:name "noteOnExtentOfItem"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:instructionNumber "3.22.2" ;
-    rdakit:toolkitDefinition "A note providing information on the extent of the specific item being described that is not recorded as part of the extent element."@en ;
-    rdakit:toolkitLabel "note on extent of item"@en ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003> ;
-    skos:definition "Relates an item to a note providing information on the extent of the specific item being described that is not recorded as part of the extent element."@en .
 
 <http://rdaregistry.info/Elements/i/P40020> a rdf:Property ;
     rdfs:label "has custodian"@en ;
@@ -252,6 +224,34 @@
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50067> ;
     skos:definition "Relates an item to a former owner of an item who sold that item to another owner."@en .
 
+<http://rdaregistry.info/Elements/i/P40010> a rdf:Property ;
+    rdfs:label "has note on dimensions of item"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60133> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnDimensionsOfItem.en> ;
+    reg:name "noteOnDimensionsOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:instructionNumber "3.22.3" ;
+    rdakit:toolkitDefinition "A note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element."@en ;
+    rdakit:toolkitLabel "note on dimensions of item"@en ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003> ;
+    skos:definition "Relates an item to a note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element."@en .
+
+<http://rdaregistry.info/Elements/i/P40011> a rdf:Property ;
+    rdfs:label "has note on extent of item"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60134> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnExtentOfItem.en> ;
+    reg:name "noteOnExtentOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:instructionNumber "3.22.2" ;
+    rdakit:toolkitDefinition "A note providing information on the extent of the specific item being described that is not recorded as part of the extent element."@en ;
+    rdakit:toolkitLabel "note on extent of item"@en ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003> ;
+    skos:definition "Relates an item to a note providing information on the extent of the specific item being described that is not recorded as part of the extent element."@en .
+
 <http://rdaregistry.info/Elements/i/P40012> a rdf:Property ;
     rdfs:label "has illuminator"@en ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60421> ;
@@ -380,6 +380,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/subjectOfItem.en> ;
     reg:name "subjectOfItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work that is about the item."@en ;
+    rdakit:toolkitLabel "subject of (item)"@en ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
@@ -464,6 +466,8 @@
 
 <http://rdaregistry.info/Elements/i/P40003> a rdf:Property ;
     rdfs:label "has note on item-specific carrier characteristic"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40010>,
+        <http://rdaregistry.info/Elements/i/P40011> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60056> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnItemSpecificCarrierCharacteristic.en> ;
     reg:name "noteOnItemSpecificCarrierCharacteristic"@en ;

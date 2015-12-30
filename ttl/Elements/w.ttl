@@ -6,7 +6,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
-@prefix rdakit: <http://metadataregistry.org/uri/rdakit/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix status: <http://metadataregistry.org/uri/RegStatus/> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
@@ -34,8 +34,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has respondent"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60045>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50001> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/respondent> ;
     skos:definition "Relates a work to a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation."@en .
 
 <http://rdaregistry.info/Elements/w/P10002>
@@ -50,6 +51,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has identifier for the work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60052> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/identifierForTheWork> ;
     skos:definition "Relates a work to a character string uniquely associated with a work, or with a surrogate for a work (e.g., an authority record)."@en ;
     skos:scopeNote "The identifier serves to differentiate that work from other works."@en .
 
@@ -65,6 +68,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has other distinguishing characteristic of the work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60054> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/otherDistinguishingCharacteristicOfTheWork> ;
     skos:definition "Relates a work to a characteristic other than form of work, date of work, or place of origin of the work."@en ;
     skos:scopeNote "It serves to differentiate a work from another work with the same title or from the name of a person, family, or corporate body."@en .
 
@@ -80,6 +85,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has form of work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60058> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/formOfWork> ;
     skos:definition "Relates a work to a class or genre to which a work belongs."@en .
 
 <http://rdaregistry.info/Elements/w/P10005>
@@ -87,13 +94,16 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/appelleeCorporateBody.en> ;
     reg:name "appelleeCorporateBody"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A corporate body against whom an appeal is taken on the decision of a lower court recorded in a legal work of a higher court."@en ;
+    rdakit:toolkitLabel "has appellee corporate body"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has appellee corporate body"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10037> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60373>, <http://rdaregistry.info/Elements/w/P10037> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50002> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/appelleeCorporateBody> ;
     skos:definition "Relates a work to a corporate body against whom an appeal is taken on the decision of a lower court recorded in a legal work of a higher court."@en .
 
 <http://rdaregistry.info/Elements/w/P10006>
@@ -108,8 +118,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has degree granting institution"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60060>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50003> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/degreeGrantingInstitution> ;
     skos:definition "Relates a work to a corporate body granting an academic degree."@en .
 
 <http://rdaregistry.info/Elements/w/P10007>
@@ -124,8 +135,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has host institution"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60061>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50004> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/hostInstitution> ;
     skos:definition "Relates a work to a corporate body hosting the event, exhibit, conference, etc., which gave rise to a work, but having little or no responsibility for the content of the work."@en .
 
 <http://rdaregistry.info/Elements/w/P10008>
@@ -140,8 +152,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has production company"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60062>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50005> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/productionCompany> ;
     skos:definition "Relates a work to a corporate body that is responsible for financial, technical, and organizational management of a production for stage, screen, sound recording, television, webcast, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10009>
@@ -149,13 +162,16 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/appellantCorporateBody.en> ;
     reg:name "appellantCorporateBody"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A corporate body who appeals the decision of a lower court recorded in a legal work of a higher court."@en ;
+    rdakit:toolkitLabel "appellant corporate body"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has appellant corporate body"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10038> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60457>, <http://rdaregistry.info/Elements/w/P10038> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50042> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/appellantCorporateBody> ;
     skos:definition "Relates a work to a corporate body who appeals the decision of a lower court recorded in a legal work of a higher court."@en .
 
 <http://rdaregistry.info/Elements/w/P10010>
@@ -163,13 +179,16 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/plaintiffCorporateBody.en> ;
     reg:name "plaintiffCorporateBody"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A corporate body who brings a suit in a civil proceeding."@en ;
+    rdakit:toolkitLabel "plaintiff corporate body"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has plaintiff corporate body"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10039> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60459>, <http://rdaregistry.info/Elements/w/P10039> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50043> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/plaintiffCorporateBody> ;
     skos:definition "Relates a work to a corporate body who brings a suit in a civil proceeding."@en .
 
 <http://rdaregistry.info/Elements/w/P10011>
@@ -184,8 +203,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has court governed"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60065>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50044> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/courtGoverned> ;
     skos:definition "Relates a work to a court governed by court rules, regardless of their official nature (e.g., laws, administrative regulations)."@en .
 
 <http://rdaregistry.info/Elements/w/P10012>
@@ -200,6 +220,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has numbering of part"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60080> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/numberingOfPart> ;
     skos:definition "Relates a work to a designation of the sequencing of a part or parts within a larger work."@en ;
     skos:scopeNote "Numbering of part may include a numeral, a letter, any other character, or the combination of these with or without an accompanying caption (volume, number, etc.) and/or a chronological designation."@en .
 
@@ -215,8 +237,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has film director"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10066> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60084>, <http://rdaregistry.info/Elements/w/P10066> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50048> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/filmDirector> ;
     skos:definition "Relates a work to a director responsible for the general management and supervision of a filmed performance."@en .
 
 <http://rdaregistry.info/Elements/w/P10014>
@@ -231,8 +254,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has radio director"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10066> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60085>, <http://rdaregistry.info/Elements/w/P10066> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50049> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/radioDirector> ;
     skos:definition "Relates a work to a director responsible for the general management and supervision of a radio program."@en .
 
 <http://rdaregistry.info/Elements/w/P10015>
@@ -247,8 +271,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has television director"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10066> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60086>, <http://rdaregistry.info/Elements/w/P10066> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50050> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/televisionDirector> ;
     skos:definition "Relates a work to a director responsible for the general management and supervision of a television program."@en .
 
 <http://rdaregistry.info/Elements/w/P10016>
@@ -263,8 +288,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is dramatized as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60088>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10127> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/dramatizedAsWork> ;
     skos:definition "Relates a work to a dramatic work adapted from the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10017>
@@ -279,8 +305,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has enacting jurisdiction"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60096>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50068> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/enactingJurisdiction> ;
     skos:definition "Relates a work to a jurisdiction enacting a law, regulation, constitution, court rule, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10018>
@@ -295,8 +322,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has jurisdiction governed"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60097>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50069> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/jurisdictionGoverned> ;
     skos:definition "Relates a work to a jurisdiction governed by a law, regulation, etc., that was enacted by another jurisdiction."@en .
 
 <http://rdaregistry.info/Elements/w/P10019>
@@ -312,8 +340,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is contained in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10232> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60101>, <http://rdaregistry.info/Elements/w/P10232> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10147> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/containedInWork> ;
     skos:definition "Relates a work to a larger work of which the work is a discrete component."@en .
 
 <http://rdaregistry.info/Elements/w/P10020>
@@ -328,8 +357,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is sequel"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60102>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10227> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/sequel> ;
     skos:definition "Relates a work to a later work that continues the narrative of an earlier work."@en .
 
 <http://rdaregistry.info/Elements/w/P10021>
@@ -344,8 +374,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is replaced in part by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60103>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10206> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/replacedInPartByWork> ;
     skos:definition "Relates a work to a later work used in part in place of an earlier work, usually because the later work contains updated or new information that makes part of the earlier work obsolete."@en .
 
 <http://rdaregistry.info/Elements/w/P10022>
@@ -360,8 +391,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is replaced by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60104>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10207> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/replacedByWork> ;
     skos:definition "Relates a work to a later work used in place of an earlier work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en .
 
 <http://rdaregistry.info/Elements/w/P10023>
@@ -376,8 +408,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted in verse as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60106>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10128> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/verseAdaptationWork> ;
     skos:definition "Relates a work to a literary composition in verse form adapted from the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10024>
@@ -393,6 +426,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has coordinates of cartographic content"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60109> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/coordinatesOfCartographicContent> ;
     skos:definition "Relates a work to a mathematical system for identifying the area covered by the cartographic content of a resource."@en ;
     skos:scopeNote "Coordinates may be expressed by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial charts."@en .
 
@@ -408,8 +443,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as motion picture (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60110>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10129> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsAMotionPictureWork> ;
     skos:definition "Relates a work to a motion picture based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10026>
@@ -424,8 +460,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is cadenza (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60113>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10029> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/cadenzaWork> ;
     skos:definition "Relates a work to a musical work consisting of an ornamental passage for a soloist, added to a musical work such as a concerto, either by the same or a different composer."@en .
 
 <http://rdaregistry.info/Elements/w/P10027>
@@ -440,8 +477,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is variations based on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60114>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10028> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicalVariationsBasedOnWork> ;
     skos:definition "Relates a work to a musical work from which melodic, thematic, or harmonic material is taken to form a discrete theme, which is repeated one or more times with subsequent modifications."@en .
 
 <http://rdaregistry.info/Elements/w/P10028>
@@ -456,8 +494,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is modified by variation as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60115>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10027> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicalVariationsWork> ;
     skos:definition "Relates a work to a musical work in which melodic, thematic, or harmonic material is taken from the source work to form a discrete theme, which is repeated one or more times with subsequent modifications."@en .
 
 <http://rdaregistry.info/Elements/w/P10029>
@@ -472,8 +511,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is cadenza composed for (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60116>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10026> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/cadenzaComposedForWork> ;
     skos:definition "Relates a work to a musical work such as a concerto for which an ornamental passage for a soloist has been composed, either by the same or a different composer."@en .
 
 <http://rdaregistry.info/Elements/w/P10030>
@@ -488,8 +528,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is libretto for (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60117>, <http://rdaregistry.info/Elements/w/P10103> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10165> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/librettoForWork> ;
     skos:definition "Relates a work to a musical work such as an opera or other work for the musical stage, or an oratorio, that uses the text of the related work as a libretto."@en .
 
 <http://rdaregistry.info/Elements/w/P10031>
@@ -504,8 +545,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is incidental music (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60118> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10106> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/incidentalMusicWork> ;
     skos:definition "Relates a work to a musical work that provides the incidental music for a play or other spoken work for the stage."@en .
 
 <http://rdaregistry.info/Elements/w/P10032>
@@ -520,8 +562,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is remade as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60120>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10185> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/remadeAsWork> ;
     skos:definition "Relates a work to a new motion picture, radio program, television program, or video based on an earlier work."@en .
 
 <http://rdaregistry.info/Elements/w/P10033>
@@ -536,8 +579,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is set to music as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60121>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10161> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicalSettingWork> ;
     skos:definition "Relates a work to a non-dramatic musical work, other than an oratorio, that uses the text of the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10034>
@@ -552,8 +596,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as novel (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60138>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10130> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/novelizationWork> ;
     skos:definition "Relates a work to a novel adapted from the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10035>
@@ -561,13 +606,16 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/appelleePerson.en> ;
     reg:name "appelleePerson"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A person against whom an appeal is taken on the decision of a lower court recorded in a legal work of a higher court."@en ;
+    rdakit:toolkitLabel "appellee person"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has appellee person"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10037> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60373>, <http://rdaregistry.info/Elements/w/P10037> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50085> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/appelleePerson> ;
     skos:definition "Relates a work to a person against whom an appeal is taken on the decision of a lower court recorded in a legal work of a higher court."@en .
 
 <http://rdaregistry.info/Elements/w/P10036>
@@ -582,8 +630,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has medium"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60157>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50086> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/medium> ;
     skos:definition "Relates a work to a person held to be a channel of communication between the earthly world and a world of spirits."@en .
 
 <http://rdaregistry.info/Elements/w/P10037>
@@ -598,12 +647,13 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has appellee"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60373>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50087> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/appellee> ;
     skos:definition "Relates a work to a person or corporate body against whom an appeal is taken on the decision of a lower court recorded in a legal work of a higher court."@en .
 
 <http://rdaregistry.info/Elements/w/P10038>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10009>, <http://rdaregistry.info/Elements/w/P10042> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10009> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60457> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/appellant.en> ;
     reg:name "appellant"@en ;
@@ -614,8 +664,9 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has appellant"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60457>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50088> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/appellant> ;
     skos:definition "Relates a work to a person or corporate body who appeals the decision of a lower court recorded in a legal work of a higher court."@en .
 
 <http://rdaregistry.info/Elements/w/P10039>
@@ -630,8 +681,9 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has plaintiff"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60459>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50089> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/plaintiff> ;
     skos:definition "Relates a work to a person or corporate body who brings a suit in a civil proceeding."@en .
 
 <http://rdaregistry.info/Elements/w/P10040>
@@ -646,8 +698,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has defendant"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60462>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50090> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/defendant> ;
     skos:definition "Relates a work to a person or corporate body who is accused in a criminal proceeding or sued in a civil proceeding."@en .
 
 <http://rdaregistry.info/Elements/w/P10041>
@@ -662,8 +716,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has degree supervisor"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60420>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50091> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/degreeSupervisor> ;
     skos:definition "Relates a work to a person, such as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis."@en .
 
 <http://rdaregistry.info/Elements/w/P10042>
@@ -671,13 +726,16 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/appellantPerson.en> ;
     reg:name "appellantPerson"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A person who appeals the decision of a lower court recorded in a legal work of a higher court."@en ;
+    rdakit:toolkitLabel "appellant person"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has appellant person"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10038> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60457> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50122> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/appellantPerson> ;
     skos:definition "Relates a work to a person who appeals the decision of a lower court recorded in a legal work of a higher court."@en .
 
 <http://rdaregistry.info/Elements/w/P10043>
@@ -685,13 +743,16 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/plaintiffPerson.en> ;
     reg:name "plaintiffPerson"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work to a person who brings a suit in a civil proceeding."@en ;
+    rdakit:toolkitLabel "plaintiff person"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has plaintiff person"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10039> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60459>, <http://rdaregistry.info/Elements/w/P10039> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50124> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/plaintiffPerson> ;
     skos:definition "Relates a work to a person who brings a suit in a civil proceeding."@en .
 
 <http://rdaregistry.info/Elements/w/P10044>
@@ -706,8 +767,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has judge"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60461>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50126> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/judge> ;
     skos:definition "Relates a work to a person who hears and decides on legal matters in court."@en .
 
 <http://rdaregistry.info/Elements/w/P10045>
@@ -722,8 +784,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has praeses"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60463>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50127> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/praeses> ;
     skos:definition "Relates a work to a person who is the faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation."@en .
 
 <http://rdaregistry.info/Elements/w/P10046>
@@ -738,8 +801,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has issuing body"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60467>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50130> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/issuingBody> ;
     skos:definition "Relates a work to a person, family, or corporate body issuing a work, such as an official organ of the body."@en .
 
 <http://rdaregistry.info/Elements/w/P10047>
@@ -756,7 +820,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has other person, family, or corporate body associated with a work"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60374> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50131> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/otherPFCWork> ;
     skos:definition "Relates a work to a person, family, or corporate body associated with a work other than as a creator."@en ;
     skos:scopeNote "Includes persons, etc., to whom correspondence is addressed, persons, etc., honoured by a festschrift, directors, cinematographers, sponsoring bodies, production companies, institutions, etc., hosting an exhibition or event, etc"@en .
 
@@ -772,8 +838,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has dedicator"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60375>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50132> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/dedicator> ;
     skos:definition "Relates a work to a person, family, or corporate body by whom a work is dedicated."@en .
 
 <http://rdaregistry.info/Elements/w/P10049>
@@ -788,8 +855,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has honouree"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60406>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50166> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/honouree> ;
     skos:altLabel "has honoree"@en ;
     skos:definition "Relates a work to a person, family, or corporate body honoured by a work (e.g., the honouree of a festschrift)."@en .
 
@@ -805,8 +873,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has programmer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60423>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50184> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/programmer> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a computer program."@en .
 
 <http://rdaregistry.info/Elements/w/P10051>
@@ -821,8 +890,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has designer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60424>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50185> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/designer> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a design for an object."@en .
 
 <http://rdaregistry.info/Elements/w/P10052>
@@ -837,8 +907,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has cartographer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60425>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50186> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/cartographer> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a map, atlas, globe, or other cartographic work."@en .
 
 <http://rdaregistry.info/Elements/w/P10053>
@@ -853,8 +924,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has composer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60426>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50187> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/composer> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a musical work."@en .
 
 <http://rdaregistry.info/Elements/w/P10054>
@@ -869,8 +941,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has inventor"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60427>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50188> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/inventor> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a new device or process."@en .
 
 <http://rdaregistry.info/Elements/w/P10055>
@@ -885,8 +958,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has compiler"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60428>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50189> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/compiler> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a new work (e.g., a bibliography, a directory) by selecting, arranging, aggregating, and editing data, information, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10056>
@@ -901,8 +975,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has photographer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60429>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50190> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/photographer> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a photographic work."@en .
 
 <http://rdaregistry.info/Elements/w/P10057>
@@ -917,8 +992,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has interviewer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60430>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50191> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/interviewer> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a work by acting as an interviewer, reporter, pollster, or some other information gathering agent."@en .
 
 <http://rdaregistry.info/Elements/w/P10058>
@@ -934,8 +1010,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has artist"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60431>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50192> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/artist> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a work by conceiving, and often implementing, an original graphic design, drawing, painting, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10059>
@@ -950,8 +1027,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has interviewee"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60432>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50193> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/interviewee> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a work by responding to an interviewer, usually a reporter, pollster, or some other information gathering agent."@en .
 
 <http://rdaregistry.info/Elements/w/P10060>
@@ -966,8 +1044,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has choreographer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60433>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50194> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/choreographer> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a work of movement."@en .
 
 <http://rdaregistry.info/Elements/w/P10061>
@@ -983,8 +1062,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has author"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60434>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50195> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/author> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs)."@en ;
     skos:scopeNote "Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator if the modification has substantially changed the nature and content of the original or changed the medium of expression."@en .
 
@@ -1001,8 +1081,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has architect"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60435>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50196> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/architect> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating an architectural design, including a pictorial representation intended to show how a building, etc., will look when completed."@en .
 
 <http://rdaregistry.info/Elements/w/P10063>
@@ -1017,8 +1098,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has filmmaker"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60436>, <http://rdaregistry.info/Elements/w/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50197> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/filmmaker> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for creating an independent or personal film."@en ;
     skos:scopeNote "A filmmaker is individually responsible for the conception and execution of all aspects of the film."@en .
 
@@ -1035,8 +1117,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has producer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60441>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50201> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/producer> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for most of the business aspects of a production for screen, sound recording, television, webcast, etc."@en ;
     skos:scopeNote "The producer is generally responsible for fund raising, managing the production, hiring key personnel, arranging for distributors, etc."@en .
 
@@ -1054,7 +1137,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has creator"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60447> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50204> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/creator> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for the creation of a work."@en .
 
 <http://rdaregistry.info/Elements/w/P10066>
@@ -1070,8 +1155,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has director"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60449>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50205> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/director> ;
     skos:definition "Relates a work to a person, family, or corporate body responsible for the general management and supervision of a filmed performance, a radio or television program, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10067>
@@ -1086,8 +1172,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has sponsoring body"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60451>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50226> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/sponsoringBody> ;
     skos:definition "Relates a work to a person, family, or corporate body sponsoring some aspect of a work, e.g., funding research, sponsoring an event."@en .
 
 <http://rdaregistry.info/Elements/w/P10068>
@@ -1102,8 +1189,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has director of photography"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60452>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50207> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/directorOfPhotography> ;
     skos:definition "Relates a work to a person, family, or corporate body that captures images, either electronically or on film or video stock, and often selects and arranges the lighting."@en ;
     skos:scopeNote "The director of photography for a movie is also called the chief cinematographer."@en .
 
@@ -1119,8 +1207,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has dedicatee"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60455>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50208> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/dedicatee> ;
     skos:definition "Relates a work to a person, family, or corporate body to whom a work is dedicated."@en .
 
 <http://rdaregistry.info/Elements/w/P10070>
@@ -1135,8 +1224,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has addressee"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60456>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50209> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/addressee> ;
     skos:definition "Relates a work to a person, family, or corporate body to whom a work or part of a work is addressed."@en .
 
 <http://rdaregistry.info/Elements/w/P10071>
@@ -1151,8 +1241,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has consultant"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60465>, <http://rdaregistry.info/Elements/w/P10047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50211> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/consultant> ;
     skos:definition "Relates a work to a person, family, or corporate body who provides consultation services, and often makes recommendations, for another person, family, or corporate body that is represented as the creator of a work."@en .
 
 <http://rdaregistry.info/Elements/w/P10072>
@@ -1168,6 +1259,7 @@
     rdfs:label "has manifestation of work"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/P30135> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/manifestationOfWork> ;
     skos:definition "Relates a work to a physical embodiment of an expression of a work."@en .
 
 <http://rdaregistry.info/Elements/w/P10073>
@@ -1182,8 +1274,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has film producer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10064> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60169>, <http://rdaregistry.info/Elements/w/P10064> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50213> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/filmProducer> ;
     skos:definition "Relates a work to a producer responsible for most of the business aspects of a film."@en .
 
 <http://rdaregistry.info/Elements/w/P10074>
@@ -1198,8 +1291,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has radio producer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10064> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60170>, <http://rdaregistry.info/Elements/w/P10064> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50214> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/radioProducer> ;
     skos:definition "Relates a work to a producer responsible for most of the business aspects of a radio program."@en .
 
 <http://rdaregistry.info/Elements/w/P10075>
@@ -1214,8 +1308,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has television producer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10064> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60171>, <http://rdaregistry.info/Elements/w/P10064> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50215> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/televisionProducer> ;
     skos:definition "Relates a work to a producer responsible for most of the business aspects of a television program."@en .
 
 <http://rdaregistry.info/Elements/w/P10076>
@@ -1230,8 +1325,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as radio program (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60174>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10131> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsARadioProgramWork> ;
     skos:definition "Relates a work to a radio program based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10077>
@@ -1246,6 +1342,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has academic degree"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60175> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/academicDegree> ;
     skos:definition "Relates a work to a rank conferred as a guarantee of academic proficiency."@en .
 
 <http://rdaregistry.info/Elements/w/P10078>
@@ -1261,6 +1359,7 @@
     rdfs:label "has expression of work"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20231> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/expressionOfWork> ;
     skos:definition "Relates a work to a realization of a work in the form of alpha-numeric, musical or choreographic notation, sound, image, object, movement, etc., or any combination of such forms."@en .
 
 <http://rdaregistry.info/Elements/w/P10079>
@@ -1275,6 +1374,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has numeric designation of a musical work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60315> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/numericDesignationOfAMusicalWork> ;
     skos:definition "Relates a work to a serial number, opus number, or thematic index number assigned to a musical work by a composer, publisher, or a musicologist."@en .
 
 <http://rdaregistry.info/Elements/w/P10080>
@@ -1289,8 +1390,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is subseries"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10147> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60316>, <http://rdaregistry.info/Elements/w/P10147> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10101> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/subseries> ;
     skos:definition "Relates a work to a serial or multipart work that consistently appears in a larger work; the title of the larger work appears on all issues or parts of the subseries"@en .
 
 <http://rdaregistry.info/Elements/w/P10081>
@@ -1305,7 +1407,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has longitude and latitude"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10024> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60345>, <http://rdaregistry.info/Elements/w/P10024> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/longitudeAndLatitude> ;
     skos:definition "Relates a work to a system for identifying the area covered by the cartographic content of a resource using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries."@en .
 
 <http://rdaregistry.info/Elements/w/P10082>
@@ -1320,7 +1423,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has right ascension and declination"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10024> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60346>, <http://rdaregistry.info/Elements/w/P10024> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/rightAscensionAndDeclination> ;
     skos:definition "Relates a work to a system for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination."@en .
 
 <http://rdaregistry.info/Elements/w/P10083>
@@ -1335,7 +1439,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has strings of coordinate pairs"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10024> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60347>, <http://rdaregistry.info/Elements/w/P10024> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/stringsOfCoordinatePairs> ;
     skos:definition "Relates a work to a system for identifying the precise area covered by the cartographic content of a resource using coordinates for each vertex of a polygon."@en .
 
 <http://rdaregistry.info/Elements/w/P10084>
@@ -1350,6 +1455,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has system of organization"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60348> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/systemOfOrganization> ;
     skos:definition "Relates a work to a system of arranging materials in an archival resource or a collection."@en .
 
 <http://rdaregistry.info/Elements/w/P10085>
@@ -1364,8 +1471,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as television program (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60354>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10132> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsATelevisionProgramWork> ;
     skos:definition "Relates a work to a television program based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10086>
@@ -1380,7 +1488,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has variant title for the work"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10088> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60355>, <http://rdaregistry.info/Elements/w/P10088> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/variantTitleForTheWork> ;
     skos:definition "Relates a work to a title or form of title by which a work is known that differs from the title or form of title chosen as the preferred title for the work."@en .
 
 <http://rdaregistry.info/Elements/w/P10087>
@@ -1395,8 +1504,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as video (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60361>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10138> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsAVideoWork> ;
     skos:definition "Relates a work to a video based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10088>
@@ -1412,6 +1522,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has title of the work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60367> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/titleOfTheWork> ;
     skos:definition "Relates a work to a word, character, or group of words and/or characters by which a work is known."@en .
 
 <http://rdaregistry.info/Elements/w/P10089>
@@ -1426,8 +1538,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is abstracted in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60177>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10193> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/abstractedInWork> ;
     skos:definition "Relates a work to a work (an abstracting and indexing service) that abstracts the contents of a source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10090>
@@ -1442,8 +1555,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is indexed in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60178>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10194> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/indexedInWork> ;
     skos:definition "Relates a work to a work (an abstracting and indexing service) that indexes the contents of the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10091>
@@ -1458,8 +1572,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as choreography (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60180>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10183> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/choreographyWork> ;
     skos:definition "Relates a work to a work consisting of movement (e.g., dance) based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10092>
@@ -1474,8 +1589,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is errata (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60181>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10149> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/errataWork> ;
     skos:definition "Relates a work to a work consisting of errors discovered after the publication of the predominant work, with their corrections."@en .
 
 <http://rdaregistry.info/Elements/w/P10093>
@@ -1490,8 +1606,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is illustrations (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60182>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10152> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/illustrationsWork> ;
     skos:definition "Relates a work to a work consisting of pictorial content designed to explain or decorate the augmented work."@en .
 
 <http://rdaregistry.info/Elements/w/P10094>
@@ -1506,8 +1623,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as motion picture screenplay (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10095> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60184>, <http://rdaregistry.info/Elements/w/P10095> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10134> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsAMotionPictureScreenplayWork> ;
     skos:definition "Relates a work to a work consisting of the screenplay for a motion picture, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10095>
@@ -1523,8 +1641,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as screenplay (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60185>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10133> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsAScreenplayWork> ;
     skos:definition "Relates a work to a work consisting of the screenplay for a motion picture, television program, or video, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10096>
@@ -1539,8 +1658,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as television screenplay (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10095> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60186>, <http://rdaregistry.info/Elements/w/P10095> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10135> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsATelevisionScreenplayWork> ;
     skos:definition "Relates a work to a work consisting of the screenplay for a television program, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10097>
@@ -1555,8 +1675,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as video screenplay (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10095> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60187>, <http://rdaregistry.info/Elements/w/P10095> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10136> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsAVideoScreenplayWork> ;
     skos:definition "Relates a work to a work consisting of the screenplay for a video, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10098>
@@ -1571,8 +1692,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as radio script (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60188>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10137> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsARadioScriptWork> ;
     skos:definition "Relates a work to a work consisting of the script for a radio program, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10099>
@@ -1587,8 +1709,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is freely translated as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60189>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10143> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/freelyTranslatedAsWork> ;
     skos:definition "Relates a work to a work created by freely translating the source work into another language, preserving the spirit of the original, but not its linguistic details."@en .
 
 <http://rdaregistry.info/Elements/w/P10100>
@@ -1604,8 +1727,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is description of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10257> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60190>, <http://rdaregistry.info/Elements/w/P10257> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10118> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/descriptionOfWork> ;
     skos:definition "Relates a work to a work described by a describing work."@en .
 
 <http://rdaregistry.info/Elements/w/P10101>
@@ -1620,8 +1744,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is subseries of"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10019> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60192>, <http://rdaregistry.info/Elements/w/P10019> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10080> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/subseriesOf> ;
     skos:definition "Relates a work to a work in which the part consistently appears; the title of the larger work appears on all issues or parts of the subseries."@en .
 
 <http://rdaregistry.info/Elements/w/P10102>
@@ -1636,8 +1761,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is in series"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10019> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60193>, <http://rdaregistry.info/Elements/w/P10019> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10141> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/inSeries> ;
     skos:definition "Relates a work to a work in which the part has been issued; the title of the larger work appears on the part."@en .
 
 <http://rdaregistry.info/Elements/w/P10103>
@@ -1653,8 +1779,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is complemented by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10228> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60198>, <http://rdaregistry.info/Elements/w/P10228> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10103> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/complementedByWork> ;
     skos:definition "Relates a work to a work paired with another work without either work being considered to predominate."@en .
 
 <http://rdaregistry.info/Elements/w/P10104>
@@ -1669,8 +1796,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is continued in part by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60199>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10169> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/continuedInPartByWork> ;
     skos:definition "Relates a work to a work part of whose content separated from an earlier work to form a new work."@en .
 
 <http://rdaregistry.info/Elements/w/P10105>
@@ -1686,8 +1814,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is screenplay for (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60201>, <http://rdaregistry.info/Elements/w/P10103> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10159> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/screenplayForWork> ;
     skos:definition "Relates a work to a work such as a motion picture, television program, or video, that uses the text of the work as a screenplay."@en .
 
 <http://rdaregistry.info/Elements/w/P10106>
@@ -1702,8 +1831,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is incidental music for (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60202> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10031> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/incidentalMusicForWork> ;
     skos:definition "Relates a work to a work such as a play or other spoken work for the stage that uses the musical work as incidental music."@en .
 
 <http://rdaregistry.info/Elements/w/P10107>
@@ -1718,8 +1848,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is abstracted as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60203>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10126> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/abstractWork> ;
     skos:definition "Relates a work to a work that abbreviates the source work in a brief, objective manner."@en .
 
 <http://rdaregistry.info/Elements/w/P10108>
@@ -1735,8 +1866,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is augmented by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10228> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60204>, <http://rdaregistry.info/Elements/w/P10228> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10192> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/augmentedByWork> ;
     skos:definition "Relates a work to a work that adds to the content of a predominant work."@en .
 
 <http://rdaregistry.info/Elements/w/P10109>
@@ -1751,8 +1883,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is summarized as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60205>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10179> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/summaryWork> ;
     skos:definition "Relates a work to a work that consists of a brief recapitulation of the content of the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10110>
@@ -1767,8 +1900,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is catalogue (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60206>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10180> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/catalogueWork> ;
     skos:definition "Relates a work to a work that consists of a complete enumeration of items arranged systematically."@en .
 
 <http://rdaregistry.info/Elements/w/P10111>
@@ -1783,8 +1917,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is concordance (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60208>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10181> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/concordanceWork> ;
     skos:definition "Relates a work to a work that consists of an index of all the words in the predominant work."@en .
 
 <http://rdaregistry.info/Elements/w/P10112>
@@ -1799,8 +1934,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is addenda (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60209>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10177> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/addendaWork> ;
     skos:definition "Relates a work to a work that consists of brief additional material, less extensive than a supplement, but essential to the completeness of the text of the predominant work; it is usually added at the end of the content, but is sometimes issued separately."@en .
 
 <http://rdaregistry.info/Elements/w/P10113>
@@ -1815,8 +1951,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as libretto (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60210>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10189> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/basisForLibrettoWork> ;
     skos:definition "Relates a work to a work consisting of the text of an opera or other work for the musical stage, or an oratorio, based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10114>
@@ -1831,8 +1968,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is reviewed in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10118> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60211>, <http://rdaregistry.info/Elements/w/P10118> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10178> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/reviewedInWork> ;
     skos:definition "Relates a work to a work that contains a brief evaluation of the described work."@en .
 
 <http://rdaregistry.info/Elements/w/P10115>
@@ -1847,8 +1985,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is critiqued in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10118> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60212>, <http://rdaregistry.info/Elements/w/P10118> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10182> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/critiquedInWork> ;
     skos:definition "Relates a work to a work that contains a critical evaluation of the described work."@en .
 
 <http://rdaregistry.info/Elements/w/P10116>
@@ -1863,8 +2002,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is commentary in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10118> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60213>, <http://rdaregistry.info/Elements/w/P10118> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10187> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/commentaryInWork> ;
     skos:definition "Relates a work to a work that contains a set of explanatory or critical notes on the described work."@en .
 
 <http://rdaregistry.info/Elements/w/P10117>
@@ -1880,8 +2020,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is imitated as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60214>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10196> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/imitatedAsWork> ;
     skos:definition "Relates a work to a work that copies the style or content of the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10118>
@@ -1897,8 +2038,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is described in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60215>, <http://rdaregistry.info/Elements/w/P10264> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10100> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/describedInWork> ;
     skos:definition "Relates a work to a work that describes a described work."@en .
 
 <http://rdaregistry.info/Elements/w/P10119>
@@ -1913,8 +2055,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is expanded as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60216>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10184> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/expandedAsWork> ;
     skos:definition "Relates a work to a work that enlarges upon the content of the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10120>
@@ -1929,8 +2072,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is evaluated in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10118> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60218>, <http://rdaregistry.info/Elements/w/P10118> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10153> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/evaluatedInWork> ;
     skos:definition "Relates a work to a work that examines or judges the described work."@en .
 
 <http://rdaregistry.info/Elements/w/P10121>
@@ -1945,8 +2089,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is analysed in (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10118> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60219>, <http://rdaregistry.info/Elements/w/P10118> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10140> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/zxd> ;
     skos:definition "Relates a work to a work that examines the source work to identify its components and their relations."@en .
 
 <http://rdaregistry.info/Elements/w/P10122>
@@ -1961,8 +2106,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is prequel"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60220>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10195> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/prequel> ;
     skos:definition "Relates a work to a work that extends the narrative of an earlier work backwards in time."@en .
 
 <http://rdaregistry.info/Elements/w/P10123>
@@ -1977,8 +2123,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is appendix (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60221>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10151> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/appendixWork> ;
     skos:definition "Relates a work to a work that forms an augmenting part of another work which is not essential to the completeness of the content, such as a list of references, statistical tables, and explanatory matter; it can either be material which comes at the end of the content of the predominant work, or be issued separately."@en .
 
 <http://rdaregistry.info/Elements/w/P10124>
@@ -1993,8 +2140,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is guide (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60222>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10150> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/guideWork> ;
     skos:definition "Relates a work to a work that guides a user through the use of the predominant work, using notes, learning and study aids, exercises, problems, questions and answers, instructor or student materials, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10125>
@@ -2009,8 +2157,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is abridgement of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60223>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10167> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/abridgementOfWork> ;
     skos:definition "Relates a work to a work that has been abridged, i.e., shortened without changing the general meaning or manner of presentation of the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10126>
@@ -2025,8 +2174,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is abstract of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60224>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10107> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/abstractOfWork> ;
     skos:definition "Relates a work to a work that has been abstracted, i.e., abbreviated in a brief, objective manner."@en .
 
 <http://rdaregistry.info/Elements/w/P10127>
@@ -2041,8 +2191,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is dramatization of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60225>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10016> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/dramatizationOfWork> ;
     skos:definition "Relates a work to a work that has been adapted as a drama."@en .
 
 <http://rdaregistry.info/Elements/w/P10128>
@@ -2057,8 +2208,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is verse adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60226>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10023> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/verseAdaptationOfWork> ;
     skos:definition "Relates a work to a work that has been adapted as a literary composition in verse form."@en .
 
 <http://rdaregistry.info/Elements/w/P10129>
@@ -2073,8 +2225,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is motion picture adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60227>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10025> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/motionPictureAdaptationOfWork> ;
     skos:definition "Relates a work to a work that has been adapted as a motion picture."@en .
 
 <http://rdaregistry.info/Elements/w/P10130>
@@ -2089,8 +2242,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is novelization of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60228>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10034> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/novelizationOfWork> ;
     skos:definition "Relates a work to a work that has been adapted as a novel."@en .
 
 <http://rdaregistry.info/Elements/w/P10131>
@@ -2105,8 +2259,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is radio adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60229>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10076> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/radioAdaptationOfWork> ;
     skos:definition "Relates a work to a work that has been adapted as a radio program."@en .
 
 <http://rdaregistry.info/Elements/w/P10132>
@@ -2121,8 +2276,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is television adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60230>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10085> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/televisionAdaptationOfWork> ;
     skos:definition "Relates a work to a work that has been adapted as a television program."@en .
 
 <http://rdaregistry.info/Elements/w/P10133>
@@ -2138,8 +2294,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is screenplay based on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60231>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10095> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/screenplayBasedOnWork> ;
     skos:definition "Relates a work to a work that has been adapted as the screenplay for a motion picture, television program, or video."@en .
 
 <http://rdaregistry.info/Elements/w/P10134>
@@ -2154,8 +2311,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is motion picture screenplay based on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10133> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60232>, <http://rdaregistry.info/Elements/w/P10133> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10094> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/motionPictureScreenplayBasedOnWork> ;
     skos:definition "Relates a work to a work that has been adapted as the screenplay for a motion picture."@en .
 
 <http://rdaregistry.info/Elements/w/P10135>
@@ -2170,8 +2328,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is television screenplay based on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10133> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60233>, <http://rdaregistry.info/Elements/w/P10133> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10096> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/televisionScreenplayBasedOnWork> ;
     skos:definition "Relates a work to a work that has been adapted as the screenplay for a television program."@en .
 
 <http://rdaregistry.info/Elements/w/P10136>
@@ -2186,8 +2345,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is video screenplay based on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10133> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60234>, <http://rdaregistry.info/Elements/w/P10133> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10097> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/videoScreenplayBasedOnWork> ;
     skos:definition "Relates a work to a work that has been adapted as the screenplay for a video."@en .
 
 <http://rdaregistry.info/Elements/w/P10137>
@@ -2202,8 +2362,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is radio script based on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60235>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10098> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/radioScriptBasedOnWork> ;
     skos:definition "Relates a work to a work that has been adapted as the script for a radio program."@en .
 
 <http://rdaregistry.info/Elements/w/P10138>
@@ -2218,8 +2379,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is video adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60236>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10087> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/videoAdaptationOfWork> ;
     skos:definition "Relates a work to a work that has been adapted for video."@en .
 
 <http://rdaregistry.info/Elements/w/P10139>
@@ -2234,8 +2396,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is digest of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60238>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10171> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/digestOfWork> ;
     skos:definition "Relates a work to a work that has been digested, i.e., systematically and comprehensively condensed."@en .
 
 <http://rdaregistry.info/Elements/w/P10140>
@@ -2250,8 +2413,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is analysis of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10100> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60239>, <http://rdaregistry.info/Elements/w/P10100> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10121> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/analysisOfWork> ;
     skos:definition "Relates a work to a work that has been examined to identify its components and their relations."@en .
 
 <http://rdaregistry.info/Elements/w/P10141>
@@ -2266,8 +2430,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is series container of"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10147> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60240>, <http://rdaregistry.info/Elements/w/P10147> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10102> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/seriesContains> ;
     skos:definition "Relates a work to a work that has been issued as part of a series."@en .
 
 <http://rdaregistry.info/Elements/w/P10142>
@@ -2283,8 +2448,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60241>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10155> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptationOfWork> ;
     skos:definition "Relates a work to a work that has been modified for a purpose, use, or medium other than that for which it was originally intended."@en ;
     skos:scopeNote "Applies to changes in form or to works completely rewritten in the same form."@en .
 
@@ -2300,8 +2466,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is free translation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60243>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10099> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/freeTranslationOfWork> ;
     skos:definition "Relates a work to a work that has been translated freely, preserving the spirit of the original, but not its linguistic details."@en .
 
 <http://rdaregistry.info/Elements/w/P10144>
@@ -2316,8 +2483,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is parodied as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10117> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60246>, <http://rdaregistry.info/Elements/w/P10117> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10197> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/parodiedAsWork> ;
     skos:definition "Relates a work to a work that imitates the style or content of the source work for comic effect."@en .
 
 <http://rdaregistry.info/Elements/w/P10145>
@@ -2332,8 +2500,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is absorbed by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60247>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10224> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/absorbedByWork> ;
     skos:definition "Relates a work to a work that incorporates another work."@en .
 
 <http://rdaregistry.info/Elements/w/P10146>
@@ -2348,8 +2517,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is absorbed in part by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60248>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10225> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/absorbedInPartByWork> ;
     skos:definition "Relates a work to a work that incorporates part of the content of another work."@en .
 
 <http://rdaregistry.info/Elements/w/P10147>
@@ -2365,8 +2535,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is container of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10232> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60249>, <http://rdaregistry.info/Elements/w/P10232> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10019> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/containerOfWork> ;
     skos:definition "Relates a work to a work that is a discrete component of a larger work."@en .
 
 <http://rdaregistry.info/Elements/w/P10148>
@@ -2382,8 +2553,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is derivative (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10229> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60250>, <http://rdaregistry.info/Elements/w/P10229> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10190> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/derivativeWork> ;
     skos:definition "Relates a work to a work that is a modification of a source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10149>
@@ -2398,8 +2570,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is errata to (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60251>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10092> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/errataToWork> ;
     skos:definition "Relates a work to a work that is augmented by a list of errors in the predominant work, discovered after publication, with their corrections."@en .
 
 <http://rdaregistry.info/Elements/w/P10150>
@@ -2414,8 +2587,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is guide to (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60252>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10124> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/guideToWork> ;
     skos:definition "Relates a work to a work that is augmented by another work consisting of material to help the user of the predominant work, such as notes, learning and study aids, exercises, problems, questions and answers, instructor or student materials, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10151>
@@ -2430,8 +2604,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is appendix to (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60253>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10123> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/appendixToWork> ;
     skos:definition "Relates a work to a work that is augmented by another work that consists of material that is not essential to the completeness of the content, such as a list of references, statistical tables, and explanatory matter; the augmenting work can either come at the end of the content, or be issued separately."@en .
 
 <http://rdaregistry.info/Elements/w/P10152>
@@ -2446,8 +2621,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is illustrations for (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60254>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10093> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/illustrationsForWork> ;
     skos:definition "Relates a work to a work that is augmented by pictorial content designed to explain or decorate it."@en .
 
 <http://rdaregistry.info/Elements/w/P10153>
@@ -2462,8 +2638,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is evaluation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10100> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60255>, <http://rdaregistry.info/Elements/w/P10100> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10120> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/evaluationOfWork> ;
     skos:definition "Relates a work to a work that is examined or judged."@en .
 
 <http://rdaregistry.info/Elements/w/P10154>
@@ -2478,8 +2655,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is supplement to (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60259>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10172> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/supplementToWork> ;
     skos:definition "Relates a work to a work that is updated or otherwise complemented by the augmenting work."@en .
 
 <http://rdaregistry.info/Elements/w/P10155>
@@ -2495,8 +2673,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60260>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10142> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsWork> ;
     skos:definition "Relates a work to a work that modifies the source work for a purpose, use, or medium other than that for which it was originally intended."@en ;
     skos:scopeNote "Applies to changes in form or to works completely rewritten in the same form."@en .
 
@@ -2513,8 +2692,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is preceded by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10231> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60261>, <http://rdaregistry.info/Elements/w/P10231> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10170> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/precededByWork> ;
     skos:definition "Relates a work to a work that precedes (e.g., is earlier in time or before in a narrative) the succeeding work."@en .
 
 <http://rdaregistry.info/Elements/w/P10157>
@@ -2529,8 +2709,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is finding aid (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60262>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10201> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/findingAidWork> ;
     skos:definition "Relates a work to a work that provides a guide to the organization, arrangement, and contents of an archival collection."@en .
 
 <http://rdaregistry.info/Elements/w/P10158>
@@ -2545,8 +2726,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is index (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60263>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10188> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/indexWork> ;
     skos:definition "Relates a work to a work that provides a systematic, alphabetical guide to the contents of the predominant work, usually keyed to page numbers or other reference codes."@en .
 
 <http://rdaregistry.info/Elements/w/P10159>
@@ -2562,8 +2744,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is screenplay (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60264>, <http://rdaregistry.info/Elements/w/P10103> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10105> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/screenplayWork> ;
     skos:definition "Relates a work to a work that provides the text for a motion picture, television program or video."@en .
 
 <http://rdaregistry.info/Elements/w/P10160>
@@ -2578,8 +2761,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is motion picture screenplay (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10159> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60265>, <http://rdaregistry.info/Elements/w/P10159> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10173> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/motionPictureScreenplayWork> ;
     skos:definition "Relates a work to a work that provides the text for a motion picture."@en .
 
 <http://rdaregistry.info/Elements/w/P10161>
@@ -2594,8 +2778,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is musical setting of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60266>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10033> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicalSettingOfWork> ;
     skos:definition "Relates a work to a work that provides the text for a non-dramatic musical work, other than an oratorio."@en .
 
 <http://rdaregistry.info/Elements/w/P10162>
@@ -2610,8 +2795,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is radio script (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60267>, <http://rdaregistry.info/Elements/w/P10103> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10176> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/radioScriptWork> ;
     skos:definition "Relates a work to a work that provides the text for a radio program."@en .
 
 <http://rdaregistry.info/Elements/w/P10163>
@@ -2626,8 +2812,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is television screenplay (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10159> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60268>, <http://rdaregistry.info/Elements/w/P10159> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10174> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/televisionScreenplayWork> ;
     skos:definition "Relates a work to a work that provides the text for a television program."@en .
 
 <http://rdaregistry.info/Elements/w/P10164>
@@ -2642,8 +2829,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is video screenplay (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10159> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60269>, <http://rdaregistry.info/Elements/w/P10159> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10175> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/videoScreenplayWork> ;
     skos:definition "Relates a work to a work that provides the text for a video."@en .
 
 <http://rdaregistry.info/Elements/w/P10165>
@@ -2658,8 +2846,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is libretto (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60270>, <http://rdaregistry.info/Elements/w/P10103> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10030> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/librettoWork> ;
     skos:definition "Relates a work to a work that provides the text of an opera or other work for the musical stage, or an oratorio."@en .
 
 <http://rdaregistry.info/Elements/w/P10166>
@@ -2674,8 +2863,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is paraphrased as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60273>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10186> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/paraphrasedAsWork> ;
     skos:definition "Relates a work to a work that restates the content of the source work in a different form."@en .
 
 <http://rdaregistry.info/Elements/w/P10167>
@@ -2690,8 +2880,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is abridged as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60275>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10125> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/abridgedAsWork> ;
     skos:definition "Relates a work to a work that shortens the source work without changing the general meaning or manner of presentation."@en .
 
 <http://rdaregistry.info/Elements/w/P10168>
@@ -2706,8 +2897,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is continuation in part of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60276>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10211> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/continuationInPartOfWork> ;
     skos:definition "Relates a work to a work that split into two or more separate works with new titles."@en .
 
 <http://rdaregistry.info/Elements/w/P10169>
@@ -2722,8 +2914,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is separated from (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60277>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10104> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/separatedFromWork> ;
     skos:definition "Relates a work to a work that spun off a part of its content to form a new work."@en .
 
 <http://rdaregistry.info/Elements/w/P10170>
@@ -2739,8 +2932,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is succeeded by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10231> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60278>, <http://rdaregistry.info/Elements/w/P10231> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10156> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/succeededByWork> ;
     skos:definition "Relates a work to a work that succeeds (e.g., later in time or after in a narrative) the preceding work."@en .
 
 <http://rdaregistry.info/Elements/w/P10171>
@@ -2755,8 +2949,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is digested as (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10148> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60279>, <http://rdaregistry.info/Elements/w/P10148> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10139> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/digestWork> ;
     skos:definition "Relates a work to a work that systematically and comprehensively condenses the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10172>
@@ -2771,8 +2966,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is supplement (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10108> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60281>, <http://rdaregistry.info/Elements/w/P10108> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10154> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/supplementWork> ;
     skos:definition "Relates a work to a work that updates or otherwise complements the predominant work."@en .
 
 <http://rdaregistry.info/Elements/w/P10173>
@@ -2787,8 +2983,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is screenplay for motion picture (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10105> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60282>, <http://rdaregistry.info/Elements/w/P10105> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10160> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/screenplayForTheMotionPictureWork> ;
     skos:definition "Relates a work to a work that uses the text as a screenplay for a motion picture."@en .
 
 <http://rdaregistry.info/Elements/w/P10174>
@@ -2803,8 +3000,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is screenplay for television program (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10105> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60283>, <http://rdaregistry.info/Elements/w/P10105> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10163> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/screenplayForTheTelevisionProgramWork> ;
     skos:definition "Relates a work to a work that uses the text as a screenplay for a television program."@en .
 
 <http://rdaregistry.info/Elements/w/P10175>
@@ -2819,8 +3017,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is screenplay for video (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10105> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60284>, <http://rdaregistry.info/Elements/w/P10105> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10164> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/screenplayForTheVideoWork> ;
     skos:definition "Relates a work to a work that uses the text as a screenplay for a video."@en .
 
 <http://rdaregistry.info/Elements/w/P10176>
@@ -2835,8 +3034,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is script for radio program (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60285>, <http://rdaregistry.info/Elements/w/P10103> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10162> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/scriptForTheRadioProgramWork> ;
     skos:definition "Relates a work to a work that uses the text as the script for a radio program."@en .
 
 <http://rdaregistry.info/Elements/w/P10177>
@@ -2851,8 +3051,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is addenda to (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60286>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10112> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/addendaToWork> ;
     skos:definition "Relates a work to a work to which is added brief additional material, less extensive than a supplement, but essential to the completeness of the content of the work; it is usually added at the end of the work, but is sometimes issued separately."@en .
 
 <http://rdaregistry.info/Elements/w/P10178>
@@ -2867,8 +3068,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is review of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10100> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60288>, <http://rdaregistry.info/Elements/w/P10100> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10114> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/reviewOfWork> ;
     skos:definition "Relates a work to a work used as the basis for a brief evaluation."@en .
 
 <http://rdaregistry.info/Elements/w/P10179>
@@ -2883,8 +3085,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is summary of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60289>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10109> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/summaryOfWork> ;
     skos:definition "Relates a work to a work used as the basis for a brief recapitulation of its content."@en .
 
 <http://rdaregistry.info/Elements/w/P10180>
@@ -2899,8 +3102,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is catalogue of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60290>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10110> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/catalogueOfWork> ;
     skos:definition "Relates a work to a work used as the basis for a catalogue, i.e., a complete enumeration of items arranged systematically."@en .
 
 <http://rdaregistry.info/Elements/w/P10181>
@@ -2915,8 +3119,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is concordance to (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60291>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10111> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/concordanceToWork> ;
     skos:definition "Relates a work to a work used as the basis for a concordance, i.e. an index of all the words in the predominant work."@en .
 
 <http://rdaregistry.info/Elements/w/P10182>
@@ -2931,8 +3136,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is critique of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10100> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60292>, <http://rdaregistry.info/Elements/w/P10100> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10115> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/critiqueOfWork> ;
     skos:definition "Relates a work to a work used as the basis for a critical evaluation."@en .
 
 <http://rdaregistry.info/Elements/w/P10183>
@@ -2947,8 +3153,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is choreographic adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60293>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10091> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/choreographyForWork> ;
     skos:definition "Relates a work to a work that has been adapted as a work consisting of movement (e.g., dance)."@en .
 
 <http://rdaregistry.info/Elements/w/P10184>
@@ -2963,8 +3170,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is expanded version of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60294>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10119> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/expandedVersionOfWork> ;
     skos:definition "Relates a work to a work used as the basis for a derivative work that enlarges upon the content of the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10185>
@@ -2979,8 +3187,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is remake of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60295>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10032> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/remakeOfWork> ;
     skos:definition "Relates a work to a work used as the basis for a new motion picture, radio program, television program, or video."@en .
 
 <http://rdaregistry.info/Elements/w/P10186>
@@ -2995,8 +3204,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is paraphrase of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60296>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10166> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/paraphraseOfWork> ;
     skos:definition "Relates a work to a work used as the basis for a paraphrase, i.e., a restating of the content of the source work in a different form."@en .
 
 <http://rdaregistry.info/Elements/w/P10187>
@@ -3011,8 +3221,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is commentary on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10100> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60298>, <http://rdaregistry.info/Elements/w/P10100> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10116> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/commentaryOnWork> ;
     skos:definition "Relates a work to a work used as the basis for a set of explanatory or critical notes."@en .
 
 <http://rdaregistry.info/Elements/w/P10188>
@@ -3027,8 +3238,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is index to (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60302>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10158> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/indexToWork> ;
     skos:definition "Relates a work to a work used as the basis for an index, i.e., a systematic, alphabetical guide to the contents of the predominant work, usually keyed to page numbers or other reference codes."@en .
 
 <http://rdaregistry.info/Elements/w/P10189>
@@ -3043,8 +3255,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is libretto based on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60304>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10113> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/librettoBasedOnWork> ;
     skos:definition "Relates a work to a work that has been adapted as the text of an opera or other work for the musical stage, or an oratorio."@en .
 
 <http://rdaregistry.info/Elements/w/P10190>
@@ -3060,8 +3273,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is based on (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10229> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60305>, <http://rdaregistry.info/Elements/w/P10229> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10148> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/basedOnWork> ;
     skos:definition "Relates a work to a work used as the source for a derivative work."@en .
 
 <http://rdaregistry.info/Elements/w/P10191>
@@ -3076,8 +3290,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is continued by (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60306>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10226> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/continuedByWork> ;
     skos:definition "Relates a work to a work whose content continues an earlier work."@en .
 
 <http://rdaregistry.info/Elements/w/P10192>
@@ -3093,8 +3308,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is augmentation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10228> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60307>, <http://rdaregistry.info/Elements/w/P10228> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10108> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/augmentationOfWork> ;
     skos:definition "Relates a work to a work whose content is added to by another work."@en .
 
 <http://rdaregistry.info/Elements/w/P10193>
@@ -3109,8 +3325,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is abstracts for (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60308>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10089> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/abstractsForWork> ;
     skos:definition "Relates a work to a work whose contents have been abstracted by an abstracting and indexing service."@en .
 
 <http://rdaregistry.info/Elements/w/P10194>
@@ -3125,8 +3342,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is indexing for (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60309>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10090> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/indexingForWork> ;
     skos:definition "Relates a work to a work whose contents have been indexed by an abstracting and indexing service."@en .
 
 <http://rdaregistry.info/Elements/w/P10195>
@@ -3141,8 +3359,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is prequel to"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60310>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10122> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/prequelTo> ;
     skos:definition "Relates a work to a work whose narrative is extended backwards in time by the later work."@en .
 
 <http://rdaregistry.info/Elements/w/P10196>
@@ -3158,8 +3377,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is imitation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10190> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60311>, <http://rdaregistry.info/Elements/w/P10190> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10117> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/imitationOfWork> ;
     skos:definition "Relates a work to a work whose style or content is copied in a derivative work."@en .
 
 <http://rdaregistry.info/Elements/w/P10197>
@@ -3174,12 +3394,13 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is parody of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10196> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60312>, <http://rdaregistry.info/Elements/w/P10196> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10144> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/parodyOfWork> ;
     skos:definition "Relates a work to a work whose style or content is imitated for comic effect."@en .
 
 <http://rdaregistry.info/Elements/w/P10198>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10228>, <http://rdaregistry.info/Elements/w/P10229>, <http://rdaregistry.info/Elements/w/P10231>, <http://rdaregistry.info/Elements/w/P10232>, <http://rdaregistry.info/Elements/w/P10296> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10228>, <http://rdaregistry.info/Elements/w/P10229>, <http://rdaregistry.info/Elements/w/P10232>, <http://rdaregistry.info/Elements/w/P10296> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/relatedWork.en> ;
     reg:name "relatedWork"@en ;
@@ -3192,7 +3413,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has related work"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60313> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10198> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/relatedWork> ;
     skos:definition "Relates a work to a work, represented by an identifier, an authorized access point, or a description, that is related to the work being described (e.g., an adaptation, commentary, supplement, sequel, part of a larger work)."@en .
 
 <http://rdaregistry.info/Elements/w/P10199>
@@ -3207,6 +3430,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has epoch"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60472> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/epoch> ;
     skos:definition "Relates a work to an arbitrary moment in time to which measurements of position for a body or orientation for an orbit are referred."@en .
 
 <http://rdaregistry.info/Elements/w/P10200>
@@ -3221,8 +3446,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has landscape architect"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10062> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60473>, <http://rdaregistry.info/Elements/w/P10062> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50221> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/landscapeArchitect> ;
     skos:definition "Relates a work to an architect responsible for creating landscape works."@en .
 
 <http://rdaregistry.info/Elements/w/P10201>
@@ -3237,8 +3463,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is finding aid for (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10192> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60474>, <http://rdaregistry.info/Elements/w/P10192> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10157> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/findingAidForWork> ;
     skos:definition "Relates a work to an archival collection that is described in a finding aid, i.e., a guide to the organization, arrangement, and contents of the collection."@en .
 
 <http://rdaregistry.info/Elements/w/P10202>
@@ -3253,8 +3480,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has sculptor"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10058> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60475>, <http://rdaregistry.info/Elements/w/P10058> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50222> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/sculptor> ;
     skos:definition "Relates a work to an artist responsible for creating a three-dimensional work by modeling, carving, or similar technique."@en .
 
 <http://rdaregistry.info/Elements/w/P10203>
@@ -3269,8 +3497,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has screenwriter"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10061> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60476>, <http://rdaregistry.info/Elements/w/P10061> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50223> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/screenwriter> ;
     skos:definition "Relates a work to an author of a screenplay, script, or scene."@en .
 
 <http://rdaregistry.info/Elements/w/P10204>
@@ -3285,8 +3514,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has lyricist"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10061> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60477>, <http://rdaregistry.info/Elements/w/P10061> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50224> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/lyricist> ;
     skos:definition "Relates a work to an author of the words of a popular song, including a song or songs from a musical."@en .
 
 <http://rdaregistry.info/Elements/w/P10205>
@@ -3301,8 +3531,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has librettist"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10061> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60478>, <http://rdaregistry.info/Elements/w/P10061> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50225> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/librettist> ;
     skos:definition "Relates a work to an author of the words of an opera or other musical stage work, or an oratorio."@en .
 
 <http://rdaregistry.info/Elements/w/P10206>
@@ -3317,8 +3548,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is replacement in part of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60479>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10021> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/supersedesInPartWork> ;
     skos:definition "Relates a work to an earlier work whose content has been partially replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en .
 
 <http://rdaregistry.info/Elements/w/P10207>
@@ -3333,8 +3565,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is replacement of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60480>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10022> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/supersedesWork> ;
     skos:definition "Relates a work to an earlier work whose content has been replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en .
 
 <http://rdaregistry.info/Elements/w/P10208>
@@ -3349,6 +3582,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has granting institution or faculty"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60483> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty> ;
     skos:definition "Relates a work to an institution or faculty conferring an academic degree on a candidate."@en .
 
 <http://rdaregistry.info/Elements/w/P10209>
@@ -3363,6 +3598,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has dissertation or thesis information"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60489> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/dissertationOrThesisInformation> ;
     skos:definition "Relates a work to information about a work presented as part of the formal requirements for an academic degree."@en .
 
 <http://rdaregistry.info/Elements/w/P10210>
@@ -3377,6 +3614,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has history of the work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60491> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/historyOfTheWork> ;
     skos:definition "Relates a work to information about the history of a work."@en .
 
 <http://rdaregistry.info/Elements/w/P10211>
@@ -3391,8 +3630,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is split into (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60503>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10168> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/splitIntoWork> ;
     skos:definition "Relates a work to one of two or more works resulting from the division of an earlier work into separate works."@en .
 
 <http://rdaregistry.info/Elements/w/P10212>
@@ -3407,8 +3647,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is merged to form (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60504>, <http://rdaregistry.info/Elements/w/P10170> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10213> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/mergedToFormWork> ;
     skos:definition "Relates a work to a work formed from the coming together of two or more works."@en .
 
 <http://rdaregistry.info/Elements/w/P10213>
@@ -3423,8 +3664,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is merger of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60505>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10212> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/mergerOfWork> ;
     skos:definition "Relates a work to a work that came together with one or more other works to form the new work."@en .
 
 <http://rdaregistry.info/Elements/w/P10214>
@@ -3433,12 +3675,14 @@
     reg:name "equinox"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdakit:instructionNumber "7.5" ;
-    rdakit:toolkitDefinition ""@en ;
+    rdakit:toolkitDefinition "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0�."@en ;
     rdakit:toolkitLabel "equinox"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has equinox"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60506> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/equinox> ;
     skos:definition "Relates a work to one of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°."@en .
 
 <http://rdaregistry.info/Elements/w/P10215>
@@ -3453,6 +3697,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has year degree granted"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60514> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/yearDegreeGranted> ;
     skos:definition "Relates a work to the calendar year in which a granting institution or faculty conferred an academic degree on a candidate."@en .
 
 <http://rdaregistry.info/Elements/w/P10216>
@@ -3467,6 +3713,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has coverage of the content"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60518> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/coverageOfTheContent> ;
     skos:definition "Relates a work to the chronological or geographic coverage of the content of a resource."@en .
 
 <http://rdaregistry.info/Elements/w/P10217>
@@ -3481,6 +3729,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has intended audience"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60520> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/intendedAudience> ;
     skos:definition "Relates a work to the class of user for which the content of a resource is intended, or for whom the content is considered suitable."@en ;
     skos:scopeNote "The class of user is defined by age group (e.g., children, young adults, adults), educational level (e.g., primary, secondary), type of disability, or another categorization."@en .
 
@@ -3496,6 +3746,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has place of origin of the work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60523> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/placeOfOriginOfTheWork> ;
     skos:definition "Relates a work to the country or other territorial jurisdiction from which a work originated."@en .
 
 <http://rdaregistry.info/Elements/w/P10219>
@@ -3510,6 +3762,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has date of work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60527> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/dateOfWork> ;
     skos:definition "Relates a work to the earliest date associated with a work."@en .
 
 <http://rdaregistry.info/Elements/w/P10220>
@@ -3524,6 +3778,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has medium of performance"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60536> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/mediumOfPerformance> ;
     skos:definition "Relates a work to the instrument, instruments, voice, voices, etc., for which a musical work was originally conceived."@en .
 
 <http://rdaregistry.info/Elements/w/P10221>
@@ -3538,6 +3794,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has key"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60580> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/key> ;
     skos:definition "Relates a work to the set of pitch relationships that establishes the tonal centre, or principal tonal centre, of a musical work."@en ;
     skos:scopeNote "Key is indicated by its pitch name and its mode, when it is major or minor."@en .
 
@@ -3553,6 +3811,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has nature of the content"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60584> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/natureOfTheContent> ;
     skos:definition "Relates a work to the specific character of the primary content of a resource (e.g., legal articles, interim report)."@en .
 
 <http://rdaregistry.info/Elements/w/P10223>
@@ -3567,8 +3827,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has preferred title for the work"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10088> ;
-    skos:definition "Relates a work to the title or form of title chosen to identify the work."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60588>, <http://rdaregistry.info/Elements/w/P10088> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/preferredTitleForTheWork> ;
+    skos:definition "Relates a work to the title or form of title chosen to identify the work."@en ;
+    skos:scopeNote "The preferred title is also the basis for the authorized access point representing that work."@en .
 
 <http://rdaregistry.info/Elements/w/P10224>
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60574> ;
@@ -3582,8 +3844,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is absorption of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60574>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10145> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/absorbedWork> ;
     skos:definition "Relates a work to the work that has been incorporated into another work."@en .
 
 <http://rdaregistry.info/Elements/w/P10225>
@@ -3598,8 +3861,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is absorption in part of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60575>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10146> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/absorbedInPartWork> ;
     skos:definition "Relates a work to the work that has been partially incorporated into another work."@en .
 
 <http://rdaregistry.info/Elements/w/P10226>
@@ -3614,8 +3878,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is continuation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60576>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10191> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/continuesWork> ;
     skos:definition "Relates a work to the work that is continued by the content of a later work."@en .
 
 <http://rdaregistry.info/Elements/w/P10227>
@@ -3630,8 +3895,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is sequel to"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60577>, <http://rdaregistry.info/Elements/w/P10156> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10020> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/sequelTo> ;
     skos:definition "Relates a work to the work whose narrative is continued by the later work."@en .
 
 <http://rdaregistry.info/Elements/w/P10228>
@@ -3647,8 +3913,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has accompanying work relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60709>, <http://rdaregistry.info/Elements/w/P10198> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10228> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/accompanyingWorkRelationship> ;
     skos:definition "Relates a work to a work that is an augmentation of, or is augmented by, or is complemented by the work."@en ;
     skos:scopeNote "Accompanying works include supplements, concordances, indexes, catalogues, teacher’s guides, music for a motion picture, etc."@en .
 
@@ -3665,8 +3932,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has derivative work relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60710>, <http://rdaregistry.info/Elements/w/P10198> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10229> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/derivativeWorkRelationship> ;
     skos:definition "Relates a work to a work that is based on or is a derivative of the work."@en ;
     skos:scopeNote "Derivative works include summaries, abstracts, digests, adaptations, dramatizations, novelizations, screenplays, free translations, paraphrases, imitations, parodies, etc."@en .
 
@@ -3689,7 +3957,8 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has sequential work relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60713> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/sequentialWorkRelationship> ;
     skos:definition "Relates a work to a work that is preceded by or succeeded by the work."@en ;
     skos:scopeNote "Sequential works include sequels, prequels, continuations, superseding works, etc."@en .
 
@@ -3707,6 +3976,7 @@
     rdfs:label "has whole-part work relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/wholePartWorkRelationship> ;
     skos:definition "Relates a work to a work that is contained in or contains the work."@en ;
     skos:scopeNote "Parts of works include discrete components such as subseries, and individual poems, stories, or essays in a collection or anthology."@en .
 
@@ -3722,8 +3992,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is musical theatre adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60719>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10235> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicalTheatreAdaptationOfWork> ;
     skos:definition "Relates a work to a work that has been adapted as a musical theatre work."@en .
 
 <http://rdaregistry.info/Elements/w/P10234>
@@ -3738,8 +4009,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is opera adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60720>, <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10236> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/operaAdaptationOf> ;
     skos:definition "Relates a work to a work that has been adapted as opera."@en .
 
 <http://rdaregistry.info/Elements/w/P10235>
@@ -3754,8 +4026,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as musical theatre (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60721>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10233> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsMusicalTheatreWork> ;
     skos:definition "Relates a work to a musical theatre work based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10236>
@@ -3770,12 +4043,12 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is adapted as opera (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10155> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60722>, <http://rdaregistry.info/Elements/w/P10155> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10234> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/adaptedAsOperaWork> ;
     skos:definition "Relates a work to an opera based on the source work."@en .
 
 <http://rdaregistry.info/Elements/w/P10237>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10031> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60723> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/musicWork.en> ;
     reg:name "musicWork"@en ;
@@ -3789,10 +4062,10 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10238> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicWork> ;
     skos:definition "Relates a work to a musical work that is used in a motion picture, play, television program, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10238>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10106> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60724> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/musicForWork.en> ;
     reg:name "musicForWork"@en ;
@@ -3806,6 +4079,7 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10237> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicForWork> ;
     skos:definition "Relates a work to a work such as a motion picture, play, television program, etc. that uses the musical work."@en .
 
 <http://rdaregistry.info/Elements/w/P10239>
@@ -3820,8 +4094,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is video music (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60725>, <http://rdaregistry.info/Elements/w/P10237> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10240> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/videoMusicWork> ;
     skos:definition "Relates a work to a musical work that is used in a video."@en .
 
 <http://rdaregistry.info/Elements/w/P10240>
@@ -3836,8 +4111,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is music for video (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60726>, <http://rdaregistry.info/Elements/w/P10238> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10239> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicForVideoWork> ;
     skos:definition "Relates a work to a work that uses the musical work in a video."@en .
 
 <http://rdaregistry.info/Elements/w/P10241>
@@ -3852,8 +4128,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is television program music (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60727>, <http://rdaregistry.info/Elements/w/P10237> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10242> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/televisionProgramMusicWork> ;
     skos:definition "Relates a work to a musical work that is used in a television program."@en .
 
 <http://rdaregistry.info/Elements/w/P10242>
@@ -3868,8 +4145,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is music for television program (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60728>, <http://rdaregistry.info/Elements/w/P10238> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10241> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicForTelevisionProgramWork> ;
     skos:definition "Relates a work to a work that uses the musical work in a television program."@en .
 
 <http://rdaregistry.info/Elements/w/P10243>
@@ -3884,8 +4162,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is radio program music (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60729>, <http://rdaregistry.info/Elements/w/P10237> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10244> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/radioProgramMusicWork> ;
     skos:definition "Relates a work to a musical work that is used in a radio program."@en .
 
 <http://rdaregistry.info/Elements/w/P10244>
@@ -3900,8 +4179,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is music for radio program (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60730>, <http://rdaregistry.info/Elements/w/P10238> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10243> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicForRadioProgramWork> ;
     skos:definition "Relates a work to a work that uses the musical work in a radio program."@en .
 
 <http://rdaregistry.info/Elements/w/P10245>
@@ -3916,8 +4196,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is music for motion picture (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60731>, <http://rdaregistry.info/Elements/w/P10237> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10246> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/musicForMotionPictureWork> ;
     skos:definition "Relates a work to a work that uses the musical work in a motion picture."@en .
 
 <http://rdaregistry.info/Elements/w/P10246>
@@ -3932,8 +4213,9 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is motion picture music (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60732>, <http://rdaregistry.info/Elements/w/P10238> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10245> ;
+    owl:sameAs <http://rdaregistry.info/Elements/w/motionPictureMusicWork> ;
     skos:definition "Relates a work to a musical work that is used in a motion picture."@en .
 
 <http://rdaregistry.info/Elements/w/P10247>
@@ -4101,6 +4383,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectWork.en> ;
     reg:name "subjectWork"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work that the work is about."@en ;
+    rdakit:toolkitLabel "subject (work)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4116,6 +4400,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectExpression.en> ;
     reg:name "subjectExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "An expression that the work is about."@en ;
+    rdakit:toolkitLabel "subject (expression)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4131,6 +4417,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectManifestation.en> ;
     reg:name "subjectManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work to a manifestation that the work is about."@en ;
+    rdakit:toolkitLabel "subject (manifestation)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4146,6 +4434,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectItem.en> ;
     reg:name "subjectItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "An item that the work is about."@en ;
+    rdakit:toolkitLabel "subject (item)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4160,6 +4450,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectPerson.en> ;
     reg:name "subjectPerson"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A person that the work is about."@en ;
+    rdakit:toolkitLabel "subject (person)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4174,6 +4466,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectFamily.en> ;
     reg:name "subjectFamily"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A family that the work is about."@en ;
+    rdakit:toolkitLabel "subject (family)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4188,6 +4482,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectCorporateBody.en> ;
     reg:name "subjectCorporateBody"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A corporate body that the work is about."@en ;
+    rdakit:toolkitLabel "subject (corporate body)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4202,6 +4498,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectOfWork.en> ;
     reg:name "subjectOfWork"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work to a work that is about the work."@en ;
+    rdakit:toolkitLabel "subject of (work)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4503,17 +4801,19 @@
     skos:definition "Relates a work to an expression used as the basis for a set of explanatory or critical notes."@en .
 
 <http://rdaregistry.info/Elements/w/P10283>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50249>, <http://rdaregistry.info/Elements/a/P50250>, <http://rdaregistry.info/Elements/a/P50251>, <http://rdaregistry.info/Elements/w/P10264> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50249>, <http://rdaregistry.info/Elements/a/P50250>, <http://rdaregistry.info/Elements/a/P50251>, <http://rdaregistry.info/Elements/e/P20268>, <http://rdaregistry.info/Elements/i/P40061>, <http://rdaregistry.info/Elements/m/P30253>, <http://rdaregistry.info/Elements/w/P10264> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60806> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/SubjectRelationshipOf.en> ;
     reg:name "subjectOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work that is about the entity."@en ;
+    rdakit:toolkitLabel "subject relationship of"@en ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "is subject relationship of"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10256> ;
-    skos:definition "Relates an entity  to a work that is about the entity."@en .
+    skos:definition "Relates an entity to a work that is about the entity."@en .
 
 <http://rdaregistry.info/Elements/w/P10284>
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60815> ;
@@ -4536,6 +4836,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/defendantCorporateBody.en> ;
     reg:name "defendantCorporateBody"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A corporate body who is accused in a criminal proceeding or sued in a civil proceeding."@en ;
+    rdakit:toolkitLabel "defendant corporate body"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4550,6 +4852,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/defendantPerson.en> ;
     reg:name "defendantPerson"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A person who is accused in a criminal proceeding or sued in a civil proceeding."@en ;
+    rdakit:toolkitLabel "defendant person"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
@@ -4585,7 +4889,7 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:label "is oratorio adaptation of  (work)"@en ;
+    rdfs:label "is oratorio adaptation of  (work)"@en, "is oratorio adaptation of (work)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10142> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/P10289> ;
@@ -4728,7 +5032,7 @@
     rdakit:toolkitDefinition "A person, family, or corporate body organizing the exhibit, event, conference, etc., which gave rise to a work."@en ;
     rdakit:toolkitLabel "organizer"@en ;
     a rdf:Property ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:label "has organizer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;

@@ -1,36 +1,100 @@
 {
   "@context": {
     "dc": "http://purl.org/dc/elements/1.1/",
+    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/schema/registry/",
+    "reg": "http://metadataregistry.org/uri/profile/RegAp/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    },
     {
       "@id": "http://rdaregistry.info/termList/RDAReductionRatio",
       "@type": "skos:ConceptScheme",
       "dc:title": "RDA Reduction Ratio"
     },
     {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1005",
+      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1004",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "es",
+          "@value": "Reducción de un recurso en microforma entre 61x y 90x."
+        },
+        {
+          "@language": "fr",
+          "@value": "Facteur de réduction entre 61× et 90× pour une ressource sur microforme."
+        },
+        {
+          "@language": "en",
+          "@value": "A reduction ratio between 61× and 90× for a microform resource."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "es",
+          "@value": "reducción muy alta"
+        },
+        {
+          "@language": "en",
+          "@value": "very high reduction"
+        },
+        {
+          "@language": "fr",
+          "@value": "très haute réduction"
+        }
+      ],
       "reg:identifier": {
-        "@id": "490"
+        "@id": "http://metadataregistry.org/concepts/489"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
       "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 61× und 90×."
+        },
+        {
+          "@language": "fr",
+          "@value": "Facteur de réduction entre 61× et 90× pour une ressource sur microforme."
+        },
+        {
+          "@language": "es",
+          "@value": "Reducción de un recurso en microforma entre 61x y 90x."
+        },
+        {
+          "@language": "en",
+          "@value": "A reduction ratio between 61× and 90× for a microform resource."
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "de",
+          "@value": "sehr starke Verkleinerung"
+        },
+        {
+          "@language": "fr",
+          "@value": "très haute réduction"
+        },
+        {
+          "@language": "es",
+          "@value": "reducción muy alta"
+        },
+        {
+          "@language": "en",
+          "@value": "very high reduction"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1005",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
         {
           "@language": "fr",
           "@value": "Facteur de réduction supérieur à 90× pour une ressource sur microforme."
@@ -38,6 +102,36 @@
         {
           "@language": "en",
           "@value": "A reduction ratio over 90× for a microform resource."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "en",
+          "@value": "ultra high reduction"
+        },
+        {
+          "@language": "es",
+          "@value": "reducción ultra alta"
+        },
+        {
+          "@language": "fr",
+          "@value": "réduction ultra-haute"
+        }
+      ],
+      "reg:identifier": {
+        "@id": "http://metadataregistry.org/concepts/490"
+      },
+      "reg:status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
+      },
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A reduction ratio over 90× for a microform resource."
+        },
+        {
+          "@language": "fr",
+          "@value": "Facteur de réduction supérieur à 90× pour une ressource sur microforme."
         },
         {
           "@language": "de",
@@ -49,6 +143,10 @@
       },
       "skos:prefLabel": [
         {
+          "@language": "de",
+          "@value": "maximal starke Verkleinerung"
+        },
+        {
           "@language": "fr",
           "@value": "réduction ultra-haute"
         },
@@ -59,121 +157,47 @@
         {
           "@language": "en",
           "@value": "ultra high reduction"
-        },
-        {
-          "@language": "de",
-          "@value": "maximal starke Verkleinerung"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1004",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "489"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction entre 61× et 90× pour une ressource sur microforme."
-        },
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 61× und 90×."
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio between 61× and 90× for a microform resource."
-        },
-        {
-          "@language": "es",
-          "@value": "Reducción de un recurso en microforma entre 61x y 90x."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "very high reduction"
-        },
-        {
-          "@language": "fr",
-          "@value": "très haute réduction"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción muy alta"
-        },
-        {
-          "@language": "de",
-          "@value": "sehr starke Verkleinerung"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1003",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "488"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "en",
-          "@value": "A reduction ratio between 31× and 60× for a microform resource."
-        },
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction entre 31× et 60× pour une ressource sur microforme."
-        },
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 31× und 60×."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "de",
-          "@value": "starke Verkleinerung"
-        },
-        {
-          "@language": "fr",
-          "@value": "haute réduction"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción alta"
-        },
-        {
-          "@language": "en",
-          "@value": "high reduction"
         }
       ]
     },
     {
       "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1002",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "en",
+          "@value": "A reduction ratio between 16× and 30× for a microform resource."
+        },
+        {
+          "@language": "es",
+          "@value": "Escala de reducción entre 16x y 30x para un recurso en microforma."
+        },
+        {
+          "@language": "fr",
+          "@value": "Facteur de réduction entre 16× et 30× pour une ressource sur microforme."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "es",
+          "@value": "reducción normal"
+        },
+        {
+          "@language": "fr",
+          "@value": "réduction normale"
+        },
+        {
+          "@language": "en",
+          "@value": "normal reduction"
+        }
+      ],
       "reg:identifier": {
-        "@id": "487"
+        "@id": "http://metadataregistry.org/concepts/487"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
       "skos:definition": [
-        {
-          "@language": "es",
-          "@value": "Escala de reducción entre 16x y 30x para un recurso en microforma."
-        },
         {
           "@language": "en",
           "@value": "A reduction ratio between 16× and 30× for a microform resource."
@@ -181,6 +205,10 @@
         {
           "@language": "fr",
           "@value": "Facteur de réduction entre 16× et 30× pour une ressource sur microforme."
+        },
+        {
+          "@language": "es",
+          "@value": "Escala de reducción entre 16x y 30x para un recurso en microforma."
         },
         {
           "@language": "de",
@@ -192,16 +220,16 @@
       },
       "skos:prefLabel": [
         {
-          "@language": "es",
-          "@value": "reducción normal"
+          "@language": "de",
+          "@value": "normale Verkleinerung"
         },
         {
           "@language": "fr",
           "@value": "réduction normale"
         },
         {
-          "@language": "de",
-          "@value": "normale Verkleinerung"
+          "@language": "es",
+          "@value": "reducción normal"
         },
         {
           "@language": "en",
@@ -210,10 +238,107 @@
       ]
     },
     {
+      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1003",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "fr",
+          "@value": "Facteur de réduction entre 31× et 60× pour une ressource sur microforme."
+        },
+        {
+          "@language": "en",
+          "@value": "A reduction ratio between 31× and 60× for a microform resource."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "fr",
+          "@value": "haute réduction"
+        },
+        {
+          "@language": "en",
+          "@value": "high reduction"
+        },
+        {
+          "@language": "es",
+          "@value": "reducción alta"
+        }
+      ],
+      "reg:identifier": {
+        "@id": "http://metadataregistry.org/concepts/488"
+      },
+      "reg:status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
+      },
+      "skos:definition": [
+        {
+          "@language": "de",
+          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 31× und 60×."
+        },
+        {
+          "@language": "fr",
+          "@value": "Facteur de réduction entre 31× et 60× pour une ressource sur microforme."
+        },
+        {
+          "@language": "en",
+          "@value": "A reduction ratio between 31× and 60× for a microform resource."
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "es",
+          "@value": "reducción alta"
+        },
+        {
+          "@language": "en",
+          "@value": "high reduction"
+        },
+        {
+          "@language": "de",
+          "@value": "starke Verkleinerung"
+        },
+        {
+          "@language": "fr",
+          "@value": "haute réduction"
+        }
+      ]
+    },
+    {
       "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1001",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "es",
+          "@value": "Escala de reducción menor que 16x para un recurso en microforma."
+        },
+        {
+          "@language": "en",
+          "@value": "A reduction ratio less than 16× for a microform resource."
+        },
+        {
+          "@language": "fr",
+          "@value": "Facteur de réduction inférieur à 16× pour une ressource sur microforme."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "fr",
+          "@value": "basse réduction"
+        },
+        {
+          "@language": "en",
+          "@value": "low reduction"
+        },
+        {
+          "@language": "es",
+          "@value": "reducción baja"
+        }
+      ],
       "reg:identifier": {
-        "@id": "486"
+        "@id": "http://metadataregistry.org/concepts/486"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
@@ -224,16 +349,16 @@
           "@value": "Escala de reducción menor que 16x para un recurso en microforma."
         },
         {
+          "@language": "en",
+          "@value": "A reduction ratio less than 16× for a microform resource."
+        },
+        {
           "@language": "fr",
           "@value": "Facteur de réduction inférieur à 16× pour une ressource sur microforme."
         },
         {
           "@language": "de",
           "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource von weniger als 16×."
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio less than 16× for a microform resource."
         }
       ],
       "skos:inScheme": {
@@ -257,6 +382,14 @@
           "@value": "low reduction"
         }
       ]
+    },
+    {
+      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Published"
+      }
     }
   ]
 }

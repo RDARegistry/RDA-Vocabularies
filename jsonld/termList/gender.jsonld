@@ -1,18 +1,55 @@
 {
   "@context": {
     "dc": "http://purl.org/dc/elements/1.1/",
+    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/schema/registry/",
+    "reg": "http://metadataregistry.org/uri/profile/RegAp/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "http://rdaregistry.info/termList/gender/1001",
+      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
       "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Published"
+      }
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/gender/1003",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "en",
+          "@value": "The gender designation when specific gender is unknown."
+        },
+        {
+          "@language": "es",
+          "@value": "Designación de género cuando el género específico es desconocido."
+        },
+        {
+          "@language": "fr",
+          "@value": "Indication du sexe lorsque le sexe exact est inconnu."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "es",
+          "@value": "desconocido"
+        },
+        {
+          "@language": "fr",
+          "@value": "inconnu"
+        },
+        {
+          "@language": "en",
+          "@value": "not known"
+        }
+      ],
       "reg:identifier": {
-        "@id": "1133"
+        "@id": "http://metadataregistry.org/concepts/1135"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
@@ -20,19 +57,19 @@
       "skos:definition": [
         {
           "@language": "fr",
-          "@value": "Indication du sexe pour une femme ou une fille."
-        },
-        {
-          "@language": "es",
-          "@value": "La designación de género para una mujer o una joven."
-        },
-        {
-          "@language": "en",
-          "@value": "The gender designation for woman or girl."
+          "@value": "Indication du sexe lorsque le sexe exact est inconnu."
         },
         {
           "@language": "de",
-          "@value": "Die Geschlechtskennzeichnung für eine Frau oder ein Mädchen."
+          "@value": "Die Geschlechtskennzeichnung, wenn das spezifische Geschlecht unbekannt ist."
+        },
+        {
+          "@language": "en",
+          "@value": "The gender designation when specific gender is unknown."
+        },
+        {
+          "@language": "es",
+          "@value": "Designación de género cuando el género específico es desconocido."
         }
       ],
       "skos:inScheme": {
@@ -40,9 +77,159 @@
       },
       "skos:prefLabel": [
         {
+          "@language": "fr",
+          "@value": "inconnu"
+        },
+        {
+          "@language": "es",
+          "@value": "desconocido"
+        },
+        {
+          "@language": "en",
+          "@value": "not known"
+        },
+        {
+          "@language": "de",
+          "@value": "unbekannt"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/gender/1002",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "en",
+          "@value": "The gender designation for man or boy."
+        },
+        {
+          "@language": "es",
+          "@value": "Designación de género para un hombre o un joven."
+        },
+        {
+          "@language": "fr",
+          "@value": "Indication du sexe pour un homme ou un garçon."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "fr",
+          "@value": "masculin"
+        },
+        {
+          "@language": "en",
+          "@value": "male"
+        },
+        {
+          "@language": "es",
+          "@value": "masculino"
+        }
+      ],
+      "reg:identifier": {
+        "@id": "http://metadataregistry.org/concepts/1134"
+      },
+      "reg:status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
+      },
+      "skos:definition": [
+        {
+          "@language": "es",
+          "@value": "Designación de género para un hombre o un joven."
+        },
+        {
+          "@language": "en",
+          "@value": "The gender designation for man or boy."
+        },
+        {
+          "@language": "de",
+          "@value": "Die Geschlechtskennzeichnung für einen Mann oder einen Jungen."
+        },
+        {
+          "@language": "fr",
+          "@value": "Indication du sexe pour un homme ou un garçon."
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "http://rdaregistry.info/termList/gender"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "fr",
+          "@value": "masculin"
+        },
+        {
+          "@language": "de",
+          "@value": "männlich"
+        },
+        {
+          "@language": "en",
+          "@value": "male"
+        },
+        {
+          "@language": "es",
+          "@value": "masculino"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/gender/1001",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "en",
+          "@value": "The gender designation for woman or girl."
+        },
+        {
+          "@language": "fr",
+          "@value": "Indication du sexe pour une femme ou une fille."
+        },
+        {
+          "@language": "es",
+          "@value": "La designación de género para una mujer o una joven."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "en",
+          "@value": "female"
+        },
+        {
+          "@language": "fr",
+          "@value": "féminin"
+        },
+        {
           "@language": "es",
           "@value": "femenino"
+        }
+      ],
+      "reg:identifier": {
+        "@id": "http://metadataregistry.org/concepts/1133"
+      },
+      "reg:status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
+      },
+      "skos:definition": [
+        {
+          "@language": "es",
+          "@value": "La designación de género para una mujer o una joven."
         },
+        {
+          "@language": "de",
+          "@value": "Die Geschlechtskennzeichnung für eine Frau oder ein Mädchen."
+        },
+        {
+          "@language": "en",
+          "@value": "The gender designation for woman or girl."
+        },
+        {
+          "@language": "fr",
+          "@value": "Indication du sexe pour une femme ou une fille."
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "http://rdaregistry.info/termList/gender"
+      },
+      "skos:prefLabel": [
         {
           "@language": "fr",
           "@value": "féminin"
@@ -54,114 +241,12 @@
         {
           "@language": "de",
           "@value": "weiblich"
+        },
+        {
+          "@language": "es",
+          "@value": "femenino"
         }
       ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/gender/1002",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "1134"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "fr",
-          "@value": "Indication du sexe pour un homme ou un garçon."
-        },
-        {
-          "@language": "es",
-          "@value": "Designación de género para un hombre o un joven."
-        },
-        {
-          "@language": "de",
-          "@value": "Die Geschlechtskennzeichnung für einen Mann oder einen Jungen."
-        },
-        {
-          "@language": "en",
-          "@value": "The gender designation for man or boy."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/gender"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "de",
-          "@value": "männlich"
-        },
-        {
-          "@language": "es",
-          "@value": "masculino"
-        },
-        {
-          "@language": "en",
-          "@value": "male"
-        },
-        {
-          "@language": "fr",
-          "@value": "masculin"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/gender/1003",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "1135"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "es",
-          "@value": "Designación de género cuando el género específico es desconocido."
-        },
-        {
-          "@language": "en",
-          "@value": "The gender designation when specific gender is unknown."
-        },
-        {
-          "@language": "de",
-          "@value": "Die Geschlechtskennzeichnung, wenn das spezifische Geschlecht unbekannt ist."
-        },
-        {
-          "@language": "fr",
-          "@value": "Indication du sexe lorsque le sexe exact est inconnu."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/gender"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "de",
-          "@value": "unbekannt"
-        },
-        {
-          "@language": "es",
-          "@value": "desconocido"
-        },
-        {
-          "@language": "en",
-          "@value": "not known"
-        },
-        {
-          "@language": "fr",
-          "@value": "inconnu"
-        }
-      ]
-    },
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
     },
     {
       "@id": "http://rdaregistry.info/termList/gender",

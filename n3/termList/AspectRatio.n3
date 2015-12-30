@@ -1,14 +1,25 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix reg: <http://metadataregistry.org/uri/schema/registry/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://rdaregistry.info/termList/AspectRatio/1001> a skos:Concept ;
-    reg:identifier <727> ;
+    reg:identifier <http://metadataregistry.org/concepts/727> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Bildformat einer Bewegtbildressource von weniger als 1.5:1."@de,
+        "Aspect ratio for a moving image resource of less than 1.5:1."@en,
+        "Proporción dimensional de un recurso de imagen en movimiento menor que 1.5:1."@es,
+        "Format de l’image d’une ressource d’images animées inférieur à 1,5:1."@fr ;
+    rdakit:ToolkitLabel "Vollbild"@de,
+        "full screen"@en,
+        "pantalla completa"@es,
+        "plein écran"@fr ;
+    skos:altLabel "full-screen"@en,
+        "fullscreen"@en ;
     skos:definition "Bildformat einer Bewegtbildressource von weniger als 1.5:1."@de,
         "Aspect ratio for a moving image resource of less than 1.5:1."@en,
         "Proporción dimensional de un recurso de imagen en movimiento menor que 1.5:1."@es,
@@ -20,8 +31,17 @@
         "plein écran"@fr .
 
 <http://rdaregistry.info/termList/AspectRatio/1002> a skos:Concept ;
-    reg:identifier <728> ;
+    reg:identifier <http://metadataregistry.org/concepts/728> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Bildformat einer Bewegtbildressource von 1.5:1 oder höher."@de,
+        "Aspect ratio for a moving image resource of 1.5:1 or greater."@en,
+        "Format de l’image d’une ressource d’images animées égal ou supérieur à 1,5:1."@fr ;
+    rdakit:ToolkitLabel "Breitbild"@de,
+        "wide screen"@en,
+        "pantalla ancha"@es,
+        "écran large"@fr ;
+    skos:altLabel "wide-screen"@en,
+        "widescreen"@en ;
     skos:definition "Bildformat einer Bewegtbildressource von 1.5:1 oder höher."@de,
         "Aspect ratio for a moving image resource of 1.5:1 or greater."@en,
         "Format de l’image d’une ressource d’images animées égal ou supérieur à 1,5:1."@fr ;
@@ -32,11 +52,17 @@
         "écran large"@fr .
 
 <http://rdaregistry.info/termList/AspectRatio/1003> a skos:Concept ;
-    reg:identifier <729> ;
+    reg:identifier <http://metadataregistry.org/concepts/729> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Bildformat einer Bewegtbildressource, die mehrere Bildformate innerhalb derselben Ressource enthält."@de,
+        "Aspect ratio for a moving image resource that includes multiple aspect ratios within thesame resource."@en,
+        "Format de l’image d’une ressource d’images animées comprenant divers formats de l’image à l’intérieur de la même ressource."@fr ;
+    rdakit:ToolkitLabel "gemischt"@de,
+        "mixed"@en,
+        "mixta"@es,
+        "mixte"@fr ;
     skos:definition "Bildformat einer Bewegtbildressource, die mehrere Bildformate innerhalb derselben Ressource enthält."@de,
-        """Aspect ratio for a moving image resource that includes multiple aspect ratios within the
-same resource."""@en,
+        "Aspect ratio for a moving image resource that includes multiple aspect ratios within thesame resource."@en,
         "Format de l’image d’une ressource d’images animées comprenant divers formats de l’image à l’intérieur de la même ressource."@fr ;
     skos:inScheme <http://rdaregistry.info/termList/AspectRatio> ;
     skos:prefLabel "gemischt"@de,

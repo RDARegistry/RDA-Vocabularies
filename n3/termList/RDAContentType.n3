@@ -1,17 +1,22 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix reg: <http://metadataregistry.org/uri/schema/registry/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://rdaregistry.info/termList/RDAContentType/1008> a skos:Concept ;
-    reg:identifier <517> ;
+    reg:identifier <http://metadataregistry.org/concepts/517> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through digitally encoded instructions intended to be processed and performed by a computer."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch digital kodierte Anweisungen ausgedrückt wird und für Verarbeitung und Ausführung mit Hilfe eines Computers konzipiert ist."@de,
+        "Content expressed through digitally encoded instructions intended to be processed and performed by a computer."@en,
+        "Contenido expresado mediante instrucciones codificadas digitalmente pensadas para ser procesadas y ejecutadas por una computadora."@es,
         "Contenu exprimé au moyen d’instructions encodées numériquement, en vue d’un traitement et d’une exécution par ordinateur."@fr ;
-    skos:ToolkitLabel "computer program"@en,
+    rdakit:ToolkitLabel "Computerprogramm"@de,
+        "computer program"@en,
+        "programa para computadora"@es,
         "programme informatique"@fr ;
     skos:definition "Inhalt, der durch digital kodierte Anweisungen ausgedrückt wird und für Verarbeitung und Ausführung mit Hilfe eines Computers konzipiert ist."@de,
         "Content expressed through digitally encoded instructions intended to be processed and performed by a computer."@en,
@@ -28,11 +33,15 @@
         "Comprend les systèmes d’exploitation, les logiciels d’application, etc."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1004> a skos:Concept ;
-    reg:identifier <513> ;
+    reg:identifier <http://metadataregistry.org/concepts/513> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Cartographic content expressed through line, shape, and/or other forms, intended to be perceived through touch as a still image in two dimensions."@en,
+    rdakit:ToolkitDefinition "Kartografischer Inhalt, der durch Linie, Form und/oder andere Gestaltungen ausgedrückt wird und konzipiert ist, um über den Tastsinn zweidimensional als unbewegtes Bild wahrgenommen zu werden."@de,
+        "Cartographic content expressed through line, shape, and/or other forms, intended to be perceived through touch as a still image in two dimensions."@en,
+        "Contenido cartográfico expresado mediante línea, forma, y/u otras formas, pensado para ser percibido mediante el tacto como imagen fija en dos dimensiones."@es,
         "Contenu cartographique exprimé au moyen de lignes, contours et/ou d’autres formes destinés à être perçus au toucher comme une image fixe en deux dimensions."@fr ;
-    skos:ToolkitLabel "cartographic tactile image"@en,
+    rdakit:ToolkitLabel "kartografisches taktiles Bild"@de,
+        "cartographic tactile image"@en,
+        "imagen cartográfica táctil"@es,
         "image cartographique tactile"@fr ;
     skos:definition "Kartografischer Inhalt, der durch Linie, Form und/oder andere Gestaltungen ausgedrückt wird und konzipiert ist, um über den Tastsinn zweidimensional als unbewegtes Bild wahrgenommen zu werden."@de,
         "Cartographic content expressed through line, shape, and/or other forms, intended to be perceived through touch as a still image in two dimensions."@en,
@@ -46,29 +55,37 @@
     skos:related <http://rdaregistry.info/termList/RDAContentType/1001> .
 
 <http://rdaregistry.info/termList/RDAContentType/1005> a skos:Concept ;
-    reg:identifier <514> ;
+    reg:identifier <http://metadataregistry.org/concepts/514> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Cartographic content expressed through a form or forms intended to be perceived through touch as a three-dimensional form or forms."@en,
+    rdakit:ToolkitDefinition "Kartografischer Inhalt, der durch eine Form oder mehrere Formen ausgedrückt wird, und konzipiert ist, um über den Tastsinn als dreidimensionale Form oder Formen wahrgenommen zu werden"@de,
+        "Cartographic content expressed through a form or forms intended to be perceived through touch as a three-dimensional form or forms."@en,
+        "Contenido cartográfico expresado mediante una forma o formas pensadas para ser percibidas mediante el tacto como una forma o formas tridimensionales."@es,
         "Contenu cartographique exprimé au moyen d’une ou de plusieurs formes destinées à être perçues au toucher comme une ou plusieurs formes tridimensionnelles."@fr ;
-    skos:ToolkitLabel "cartographic tactile three-dimensional form"@en,
+    rdakit:ToolkitLabel "kartografische taktile dreidimensionale Form"@de,
+        "cartographic tactile three-dimensional form"@en,
+        "forma cartográfica táctil tridimensional"@es,
         "forme cartographique tridimensionnelle tactile"@fr ;
     skos:definition "Kartografischer Inhalt, der durch eine Form oder mehrere Formen ausgedrückt wird, und konzipiert ist, um über den Tastsinn als dreidimensionale Form oder Formen wahrgenommen zu werden"@de,
         "Cartographic content expressed through a form or forms intended to be perceived through touch as a three-dimensional form or forms."@en,
         "Contenido cartográfico expresado mediante una forma o formas pensadas para ser percibidas mediante el tacto como una forma o formas tridimensionales."@es,
         "Contenu cartographique exprimé au moyen d’une ou de plusieurs formes destinées à être perçues au toucher comme une ou plusieurs formes tridimensionnelles."@fr ;
     skos:inScheme <http://rdaregistry.info/termList/RDAContentType> ;
-    skos:prefLabel "kartografische taktile dreidimensionale Form "@de,
+    skos:prefLabel "kartografische taktile dreidimensionale Form"@de,
         "cartographic tactile three-dimensional form"@en,
         "forma cartográfica táctil tridimensional"@es,
         "forme cartographique tridimensionnelle tactile"@fr ;
     skos:related <http://rdaregistry.info/termList/RDAContentType/1001> .
 
 <http://rdaregistry.info/termList/RDAContentType/1011> a skos:Concept ;
-    reg:identifier <520> ;
+    reg:identifier <http://metadataregistry.org/concepts/520> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through music in an audible form."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch Musik in hörbarer Form ausgedrückt wird."@de,
+        "Content expressed through music in an audible form."@en,
+        "Contenido expresado mediante música en una forma audible."@es,
         "Contenu exprimé au moyen de musique sous une forme audible."@fr ;
-    skos:ToolkitLabel "performed music"@en,
+    rdakit:ToolkitLabel "aufgeführte Musik"@de,
+        "performed music"@en,
+        "música interpretada"@es,
         "musique exécutée"@fr ;
     skos:definition "Inhalt, der durch Musik in hörbarer Form ausgedrückt wird."@de,
         "Content expressed through music in an audible form."@en,
@@ -86,11 +103,15 @@
         "Comprend les exécutions de musique enregistrées, la musique créée par ordinateur, etc."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1012> a skos:Concept ;
-    reg:identifier <521> ;
+    reg:identifier <http://metadataregistry.org/concepts/521> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content other than language or music, expressed in an audible form."@en,
+    rdakit:ToolkitDefinition "Inhalt (außer Sprache oder Musik), der in einer hörbaren Form ausgedrückt wird."@de,
+        "Content other than language or music, expressed in an audible form."@en,
+        "Contenido diferente del lenguaje o la música, expresado en forma audible."@es,
         "Contenu, différent du langage ou de la musique, exprimé sous une forme audible."@fr ;
-    skos:ToolkitLabel "sounds"@en,
+    rdakit:ToolkitLabel "Geräusche"@de,
+        "sounds"@en,
+        "sonidos"@es,
         "sons"@fr ;
     skos:definition "Inhalt (außer Sprache oder Musik), der in einer hörbaren Form ausgedrückt wird."@de,
         "Content other than language or music, expressed in an audible form."@en,
@@ -108,11 +129,15 @@
         "Comprend les sons naturels, les sons artificiellement produits, etc."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1013> a skos:Concept ;
-    reg:identifier <522> ;
+    reg:identifier <http://metadataregistry.org/concepts/522> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through language in an audible form."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch Sprache in einer hörbaren Form ausgedrückt wird."@de,
+        "Content expressed through language in an audible form."@en,
+        "Contenido expresado mediante lenguaje en una forma audible."@es,
         "Contenu exprimé au moyen du langage sous une forme audible."@fr ;
-    skos:ToolkitLabel "spoken word"@en,
+    rdakit:ToolkitLabel "gesprochenes Wort"@de,
+        "spoken word"@en,
+        "palabra hablada"@es,
         "parole énoncée"@fr ;
     skos:definition "Inhalt, der durch Sprache in einer hörbaren Form ausgedrückt wird."@de,
         "Content expressed through language in an audible form."@en,
@@ -130,11 +155,15 @@
         "Comprend les lectures enregistrées, les récitations, les discours, les entretiens, les récits oraux, etc., la parole créée par ordinateur, etc."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1015> a skos:Concept ;
-    reg:identifier <524> ;
+    reg:identifier <http://metadataregistry.org/concepts/524> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through line, shape, and/or other forms, intended to be perceived through touch as a still image in two dimensions."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch Linie, Form und/oder andere Gestaltung ausgedrückt wird und konzipiert ist, um über den Tastsinn zweidimensional als unbewegtes Bild oder Bilder wahrgenommen zu werden."@de,
+        "Content expressed through line, shape, and/or other forms, intended to be perceived through touch as a still image in two dimensions."@en,
+        "Contenido expresado mediante línea, forma, y/u otras formas, destinadas para ser percibidas mediante el tacto como imagen fija en dos dimensiones."@es,
         "Contenu exprimé au moyen de lignes, contours et/ou d’autres formes destinés à être perçus au toucher comme une image fixe en deux dimensions."@fr ;
-    skos:ToolkitLabel "tactile image"@en,
+    rdakit:ToolkitLabel "taktiles Bild"@de,
+        "tactile image"@en,
+        "imagen táctil"@es,
         "image tactile"@fr ;
     skos:definition "Inhalt, der durch Linie, Form und/oder andere Gestaltung ausgedrückt wird und konzipiert ist, um über den Tastsinn zweidimensional als unbewegtes Bild oder Bilder wahrgenommen zu werden."@de,
         "Content expressed through line, shape, and/or other forms, intended to be perceived through touch as a still image in two dimensions."@en,
@@ -148,11 +177,15 @@
     skos:related <http://rdaregistry.info/termList/RDAContentType/1014> .
 
 <http://rdaregistry.info/termList/RDAContentType/1016> a skos:Concept ;
-    reg:identifier <525> ;
+    reg:identifier <http://metadataregistry.org/concepts/525> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a form of musical notation intended to be perceived through touch."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch eine Notationsform für Musik ausgedrückt wird und konzipiert ist, um über den Tastsinn wahrgenommen zu werden."@de,
+        "Content expressed through a form of musical notation intended to be perceived through touch."@en,
+        "Contenido expresado mediante una forma de notación musical pensada para ser percibida mediante el tacto."@es,
         "Contenu exprimé au moyen d’une forme de notation musicale destinée à être perçue au toucher."@fr ;
-    skos:ToolkitLabel "tactile notated music"@en,
+    rdakit:ToolkitLabel "taktile Noten"@de,
+        "tactile notated music"@en,
+        "música notada táctil"@es,
         "musique notée tactile"@fr ;
     skos:definition "Inhalt, der durch eine Notationsform für Musik ausgedrückt wird und konzipiert ist, um über den Tastsinn wahrgenommen zu werden."@de,
         "Content expressed through a form of musical notation intended to be perceived through touch."@en,
@@ -170,11 +203,15 @@
         "Comprend la musique en braille et les autres formes tactiles de notation musicale."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1017> a skos:Concept ;
-    reg:identifier <526> ;
+    reg:identifier <http://metadataregistry.org/concepts/526> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a form of notation for movement intended to be perceived through touch."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch eine Notationsform für Bewegung ausgedrückt wird und konzipiert ist, um über den Tastsinn wahrgenommen zu werden."@de,
+        "Content expressed through a form of notation for movement intended to be perceived through touch."@en,
+        "Contenido expresado mediante una forma de notación para movimiento pensado para ser percibido mediante el tacto."@es,
         "Contenu exprimé au moyen d’une forme de notation du mouvement destinée à être perçue au toucher."@fr ;
-    skos:ToolkitLabel "tactile notated movement"@en,
+    rdakit:ToolkitLabel "taktile Bewegungsnotation"@de,
+        "tactile notated movement"@en,
+        "movimiento notado táctil"@es,
         "mouvement noté tactile"@fr ;
     skos:definition "Inhalt, der durch eine Notationsform für Bewegung ausgedrückt wird und konzipiert ist, um über den Tastsinn wahrgenommen zu werden."@de,
         "Content expressed through a form of notation for movement intended to be perceived through touch."@en,
@@ -188,11 +225,15 @@
     skos:related <http://rdaregistry.info/termList/RDAContentType/1009> .
 
 <http://rdaregistry.info/termList/RDAContentType/1018> a skos:Concept ;
-    reg:identifier <527> ;
+    reg:identifier <http://metadataregistry.org/concepts/527> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a form of notation for language intended to be perceived through touch."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch eine Notationsform für Sprache ausgedrückt wird und konzipiert ist, um über den Tastsinn wahrgenommen zu werden."@de,
+        "Content expressed through a form of notation for language intended to be perceived through touch."@en,
+        "Contenido expresado mediante una forma de notación de lenguaje pensado para ser percibido mediante el tacto."@es,
         "Contenu exprimé au moyen d’une forme de notation du langage destinée à être perçue au toucher."@fr ;
-    skos:ToolkitLabel "tactile text"@en,
+    rdakit:ToolkitLabel "taktiler Text"@de,
+        "tactile text"@en,
+        "texto táctil"@es,
         "texte tactile"@fr ;
     skos:definition "Inhalt, der durch eine Notationsform für Sprache ausgedrückt wird und konzipiert ist, um über den Tastsinn wahrgenommen zu werden."@de,
         "Content expressed through a form of notation for language intended to be perceived through touch."@en,
@@ -210,11 +251,15 @@
         "Comprend les textes en braille et les autres formes tactiles de notation du langage."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1022> a skos:Concept ;
-    reg:identifier <531> ;
+    reg:identifier <http://metadataregistry.org/concepts/531> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through images intended to be perceived to be moving, and in three dimensions."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch Bilder dargestellt wird und konzipiert ist, um als dreidimensionale Bewegung wahrgenommen zu werden."@de,
+        "Content expressed through images intended to be perceived to be moving, and in three dimensions."@en,
+        "Contenido expresado mediante imágenes pensadas para ser percibidas como moviéndose en tres dimensiones."@es,
         "Contenu exprimé au moyen d’images destinées à être perçues comme animées en trois dimensions."@fr ;
-    skos:ToolkitLabel "three-dimensional moving image"@en,
+    rdakit:ToolkitLabel "dreidimensionales bewegtes Bild"@de,
+        "three-dimensional moving image"@en,
+        "Imagen móvil tridimensional"@es,
         "image animée tridimensionnelle"@fr ;
     skos:definition "Inhalt, der durch Bilder dargestellt wird und konzipiert ist, um als dreidimensionale Bewegung wahrgenommen zu werden."@de,
         "Content expressed through images intended to be perceived to be moving, and in three dimensions."@en,
@@ -234,11 +279,15 @@
         "Comprend les films en 3-D (avec prise de vue en direct et/ou animation), les jeux vidéo en 3-D, etc. Les images animées tridimensionnelles peuvent ou non être accompagnées de son."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1002> a skos:Concept ;
-    reg:identifier <511> ;
+    reg:identifier <http://metadataregistry.org/concepts/511> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Cartographic content expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions."@en,
+    rdakit:ToolkitDefinition "Kartografischer Inhalt, der durch Linie, Form, Schattierung usw. ausgedrückt wird und konzipiert ist, um visuell zweidimensional als unbewegtes Bild oder Bilder wahrgenommen zu werden."@de,
+        "Cartographic content expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions."@en,
+        "Contenido cartográfico expresado mediante línea, forma, sombreado, etc., pensado para ser percibido visualmente como una imagen fija o imágenes en dos dimensiones."@es,
         "Contenu cartographique exprimé au moyen de lignes, contours, estompage, etc. destinés à être perçus visuellement comme une ou plusieurs images fixes en deux dimensions."@fr ;
-    skos:ToolkitLabel "cartographic image"@en,
+    rdakit:ToolkitLabel "kartografisches Bild"@de,
+        "cartographic image"@en,
+        "imagen cartográfica"@es,
         "image cartographique"@fr ;
     skos:definition "Kartografischer Inhalt, der durch Linie, Form, Schattierung usw. ausgedrückt wird und konzipiert ist, um visuell zweidimensional als unbewegtes Bild oder Bilder wahrgenommen zu werden."@de,
         "Cartographic content expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions."@en,
@@ -256,11 +305,15 @@
         "Comprend les cartes, les vues, les atlas, les images de télédétection, etc."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1003> a skos:Concept ;
-    reg:identifier <512> ;
+    reg:identifier <http://metadataregistry.org/concepts/512> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Cartographic content expressed through images intended to be perceived as moving, in two dimensions."@en,
+    rdakit:ToolkitDefinition "Kartografischer Inhalt, der durch Bilder ausgedrückt wird und konzipiert ist, um als zweidimensionale Bewegung wahrgenommen zu werden."@de,
+        "Cartographic content expressed through images intended to be perceived as moving, in two dimensions."@en,
+        "Contenido cartográfico expresado mediante imágenes proyectadas para ser percibidas en movimiento, en dos dimensiones."@es,
         "Contenu cartographique exprimé au moyen d’images destinées à être perçues comme animées en deux dimensions."@fr ;
-    skos:ToolkitLabel "cartographic moving image"@en,
+    rdakit:ToolkitLabel "kartografisches bewegtes Bild"@de,
+        "cartographic moving image"@en,
+        "imagen cartográfica en movimiento"@es,
         "image cartographique animée"@fr ;
     skos:definition "Kartografischer Inhalt, der durch Bilder ausgedrückt wird und konzipiert ist, um als zweidimensionale Bewegung wahrgenommen zu werden."@de,
         "Cartographic content expressed through images intended to be perceived as moving, in two dimensions."@en,
@@ -278,11 +331,15 @@
         "Comprend les images satellite de la Terre ou d’autres corps célestes en mouvement."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1006> a skos:Concept ;
-    reg:identifier <515> ;
+    reg:identifier <http://metadataregistry.org/concepts/515> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Cartographic content expressed through a form or forms intended to be perceived visually in three-dimensions."@en,
+    rdakit:ToolkitDefinition "Kartografischer Inhalt, der durch eine Form oder mehrere Formen ausgedrückt wird, und konzipiert ist, um visuell dreidimensional wahrgenommen zu werden."@de,
+        "Cartographic content expressed through a form or forms intended to be perceived visually in three-dimensions."@en,
+        "Contenido cartográfico expresado mediante una forma o formas pensadas para ser percibidas visualmente en tres dimensiones."@es,
         "Contenu cartographique exprimé au moyen d’une ou de plusieurs formes destinées à être perçues visuellement en trois dimensions."@fr ;
-    skos:ToolkitLabel "cartographic three-dimensional form"@en,
+    rdakit:ToolkitLabel "kartografische dreidimensionale Form"@de,
+        "cartographic three-dimensional form"@en,
+        "forma cartográfica tridimensional"@es,
         "forme cartographique tridimensionnelle"@fr ;
     skos:definition "Kartografischer Inhalt, der durch eine Form oder mehrere Formen ausgedrückt wird, und konzipiert ist, um visuell dreidimensional wahrgenommen zu werden."@de,
         "Cartographic content expressed through a form or forms intended to be perceived visually in three-dimensions."@en,
@@ -301,11 +358,15 @@
         "Comprend : les globes, les modèles en relief, etc."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1009> a skos:Concept ;
-    reg:identifier <518> ;
+    reg:identifier <http://metadataregistry.org/concepts/518> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a form of notation for movement intended to be perceived visually."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch eine Notationsform für Bewegung ausgedrückt wird und konzipiert ist, um visuell wahrgenommen zu werden."@de,
+        "Content expressed through a form of notation for movement intended to be perceived visually."@en,
+        "Contenido expresado mediante una forma de notación para movimiento pensado para ser percibido visualmente."@es,
         "Contenu exprimé au moyen d’une forme de notation du mouvement destinée à être perçue visuellement."@fr ;
-    skos:ToolkitLabel "notated movement"@en,
+    rdakit:ToolkitLabel "Bewegungsnotation"@de,
+        "notated movement"@en,
+        "notación de movimientos"@es,
         "mouvement noté"@fr ;
     skos:definition "Inhalt, der durch eine Notationsform für Bewegung ausgedrückt wird und konzipiert ist, um visuell wahrgenommen zu werden."@de,
         "Content expressed through a form of notation for movement intended to be perceived visually."@en,
@@ -324,11 +385,15 @@
         "Comprend toutes les formes de notation du mouvement différentes de celles devant être perçues au toucher."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1010> a skos:Concept ;
-    reg:identifier <519> ;
+    reg:identifier <http://metadataregistry.org/concepts/519> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a form of musical notation intended to be perceived visually."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch eine Notationsform für Musik ausgedrückt wird und konzipiert ist, um visuell wahrgenommen zu werden."@de,
+        "Content expressed through a form of musical notation intended to be perceived visually."@en,
+        "Contenido expresado mediante una forma de notación musical pensado para ser percibido visualmente."@es,
         "Contenu exprimé au moyen d’une forme de notation de la musique destinée à être perçue visuellement."@fr ;
-    skos:ToolkitLabel "notated music"@en,
+    rdakit:ToolkitLabel "Noten"@de,
+        "notated music"@en,
+        "música notada"@es,
         "musique notée"@fr ;
     skos:definition "Inhalt, der durch eine Notationsform für Musik ausgedrückt wird und konzipiert ist, um visuell wahrgenommen zu werden."@de,
         "Content expressed through a form of musical notation intended to be perceived visually."@en,
@@ -347,11 +412,15 @@
         "Comprend toutes les formes de notation de la musique différentes de celles devant être perçues au toucher."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1019> a skos:Concept ;
-    reg:identifier <528> ;
+    reg:identifier <http://metadataregistry.org/concepts/528> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a form or forms intended to be perceived through touch as a three-dimensional form or forms."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch eine Form bzw. Formen ausgedrückt wird und konzipiert ist, um über den Tastsinn als dreidimensionale Form oder Formen wahrgenommen zu werden."@de,
+        "Content expressed through a form or forms intended to be perceived through touch as a three-dimensional form or forms."@en,
+        "Contenido expresado mediante una forma o formas pensadas para ser percibidas mediante el tacto como forma o formas tridimensionales."@es,
         "Contenu exprimé au moyen d’une ou de plusieurs formes destinées à être perçues au toucher comme une ou plusieurs formes tridimensionnelles."@fr ;
-    skos:ToolkitLabel "tactile three-dimensional form"@en,
+    rdakit:ToolkitLabel "taktile dreidimensionale Form"@de,
+        "tactile three-dimensional form"@en,
+        "forma tridimensional táctil"@es,
         "forme tridimensionnelle tactile"@fr ;
     skos:definition "Inhalt, der durch eine Form bzw. Formen ausgedrückt wird und konzipiert ist, um über den Tastsinn als dreidimensionale Form oder Formen wahrgenommen zu werden."@de,
         "Content expressed through a form or forms intended to be perceived through touch as a three-dimensional form or forms."@en,
@@ -366,11 +435,15 @@
         <http://rdaregistry.info/termList/RDAContentType/1021> .
 
 <http://rdaregistry.info/termList/RDAContentType/1020> a skos:Concept ;
-    reg:identifier <529> ;
+    reg:identifier <http://metadataregistry.org/concepts/529> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a form of notation for language intended to be perceived visually."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch eine Notationsform für Sprache ausgedrückt wird und für die visuelle Wahrnehmung konzipiert ist."@de,
+        "Content expressed through a form of notation for language intended to be perceived visually."@en,
+        "Contenido expresado mediante una forma de notación de lenguaje pensado para ser percibido visualmente."@es,
         "Contenu exprimé au moyen d’une forme de notation du langage destinée à être perçue visuellement."@fr ;
-    skos:ToolkitLabel "text"@en,
+    rdakit:ToolkitLabel "Text"@de,
+        "text"@en,
+        "texto"@es,
         "texte"@fr ;
     skos:definition "Inhalt, der durch eine Notationsform für Sprache ausgedrückt wird und für die visuelle Wahrnehmung konzipiert ist."@de,
         "Content expressed through a form of notation for language intended to be perceived visually."@en,
@@ -389,11 +462,15 @@
         "Comprend toutes les formes de notation du langage différentes de celles devant être perçues au toucher."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1001> a skos:Concept ;
-    reg:identifier <510> ;
+    reg:identifier <http://metadataregistry.org/concepts/510> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Cartographic content expressed through a digitally encoded dataset intended to be processed by a computer."@en,
+    rdakit:ToolkitDefinition "Kartografischer Inhalt, der über einen digital kodierten Datenbestand ausgedrückt wird, der für die Verarbeitung durch einen Computer konzipiert ist."@de,
+        "Cartographic content expressed through a digitally encoded dataset intended to be processed by a computer."@en,
+        "Contenido cartográfico expresado mediante un conjunto de datos codificados digitalmente para ser procesados por un computador."@es,
         "Contenu cartographique exprimé au moyen de données encodées numériquement en vue d’un traitement par ordinateur."@fr ;
-    skos:ToolkitLabel "cartographic dataset"@en,
+    rdakit:ToolkitLabel "kartografischer Datensatz"@de,
+        "cartographic dataset"@en,
+        "conjunto de datos cartográficos"@es,
         "données cartographiques"@fr ;
     skos:definition "Kartografischer Inhalt, der über einen digital kodierten Datenbestand ausgedrückt wird, der für die Verarbeitung durch einen Computer konzipiert ist."@de,
         "Cartographic content expressed through a digitally encoded dataset intended to be processed by a computer."@en,
@@ -413,11 +490,15 @@
     skos:scopeNote "Excludes cartographic data intended to be perceived in the form of an image or three-dimensional form."@en .
 
 <http://rdaregistry.info/termList/RDAContentType/1014> a skos:Concept ;
-    reg:identifier <523> ;
+    reg:identifier <http://metadataregistry.org/concepts/523> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch Linie, Form, Schattierung usw. ausgedrückt wird und konzipiert ist, um visuell zweidimensional als unbewegtes Bild oder Bilder wahrgenommen zu werden."@de,
+        "Content expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions."@en,
+        "Contenido expresado mediante línea, forma, sombreado, etc., pensado para ser percibido visualmente como una imagen fija o imágenes en dos dimensiones."@es,
         "Contenu exprimé au moyen de lignes, contours, estompage, etc. destinés à être perçus visuellement en deux dimensions."@fr ;
-    skos:ToolkitLabel "still image"@en,
+    rdakit:ToolkitLabel "unbewegtes Bild"@de,
+        "still image"@en,
+        "imagen fija"@es,
         "image fixe"@fr ;
     skos:definition "Inhalt, der durch Linie, Form, Schattierung usw. ausgedrückt wird und konzipiert ist, um visuell zweidimensional als unbewegtes Bild oder Bilder wahrgenommen zu werden."@de,
         "Content expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions."@en,
@@ -438,11 +519,15 @@
         "Comprend les dessins, les peintures, les diagrammes, les images photographiques (fixes), etc."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1021> a skos:Concept ;
-    reg:identifier <530> ;
+    reg:identifier <http://metadataregistry.org/concepts/530> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a form or forms intended to be perceived visually in three-dimensions."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch eine Form bzw. Formen dargestellt wird und konzipiert ist, um visuell dreidimensional wahrgenommen zu werden."@de,
+        "Content expressed through a form or forms intended to be perceived visually in three-dimensions."@en,
+        "Contenido expresado mediante una forma o formas pensadas para ser percibidas visualmente en tres dimensiones."@es,
         "Contenu exprimé au moyen d’une ou de formes destinées à être perçues visuellement en trois dimensions."@fr ;
-    skos:ToolkitLabel "three-dimensional form"@en,
+    rdakit:ToolkitLabel "dreidimensionale Form"@de,
+        "three-dimensional form"@en,
+        "forma tridimensional"@es,
         "forme tridimensionnelle"@fr ;
     skos:definition "Inhalt, der durch eine Form bzw. Formen dargestellt wird und konzipiert ist, um visuell dreidimensional wahrgenommen zu werden."@de,
         "Content expressed through a form or forms intended to be perceived visually in three-dimensions."@en,
@@ -463,11 +548,15 @@
         "Comprend les sculptures, les maquettes, les objets et spécimens naturels, les hologrammes, etc."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1023> a skos:Concept ;
-    reg:identifier <532> ;
+    reg:identifier <http://metadataregistry.org/concepts/532> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through images intended to be perceived to be moving, and in two dimensions."@en,
+    rdakit:ToolkitDefinition "Inhalt, der durch Bilder dargestellt wird und konzipiert ist, um als zweidimensionale Bewegung wahrgenommen zu werden."@de,
+        "Content expressed through images intended to be perceived to be moving, and in two dimensions."@en,
+        "Contenido expresado mediante imágines pensadas para ser percibidas como moviendose, en dos dimensiones."@es,
         "Contenu exprimé au moyen d’images destinées à être perçues comme animées en deux dimensions."@fr ;
-    skos:ToolkitLabel "two-dimensional moving image"@en,
+    rdakit:ToolkitLabel "zweidimensionales bewegtes Bild"@de,
+        "two-dimensional moving image"@en,
+        "imagen en movimiento bidimensional"@es,
         "image animée bidimensionnelle"@fr ;
     skos:definition "Inhalt, der durch Bilder dargestellt wird und konzipiert ist, um als zweidimensionale Bewegung wahrgenommen zu werden."@de,
         "Content expressed through images intended to be perceived to be moving, and in two dimensions."@en,
@@ -488,11 +577,15 @@
         "Comprend les films cinématographiques (avec prise de vue en direct et/ou animation), les enregistrements sur film ou vidéo de spectacles, d’événements, etc., les jeux vidéo, etc., différents de ceux devant être perçus en trois dimensions. Les images animées peuvent ou non être accompagnées de son."@fr .
 
 <http://rdaregistry.info/termList/RDAContentType/1007> a skos:Concept ;
-    reg:identifier <516> ;
+    reg:identifier <http://metadataregistry.org/concepts/516> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    skos:ToolkitDefinition "Content expressed through a digitally encoded dataset intended to be processed by a computer."@en,
+    rdakit:ToolkitDefinition "Inhalt, der über digital kodierte Daten dargestellt wird und für die Verarbeitung durch einen Computer konzipiert ist."@de,
+        "Content expressed through a digitally encoded dataset intended to be processed by a computer."@en,
+        "Contenido expresado mediante un conjunto de datos codificado digitalmente pensado para ser procesado por una computadora."@es,
         "Contenu exprimé au moyen de données encodées numériquement, en vue d’un traitement par ordinateur."@fr ;
-    skos:ToolkitLabel "computer dataset"@en,
+    rdakit:ToolkitLabel "Computerdaten"@de,
+        "computer dataset"@en,
+        "conjunto de datos para computadora"@es,
         "données informatiques"@fr ;
     skos:definition "Inhalt, der über digital kodierte Daten dargestellt wird und für die Verarbeitung durch einen Computer konzipiert ist."@de,
         "Content expressed through a digitally encoded dataset intended to be processed by a computer."@en,

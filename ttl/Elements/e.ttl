@@ -6,7 +6,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
-@prefix rdakit: <http://metadataregistry.org/uri/rdakit/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix status: <http://metadataregistry.org/uri/RegStatus/> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
@@ -359,7 +359,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/storyteller.en> ;
     reg:name "storyteller"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:toolkitDefinition ""@en ;
+    rdakit:toolkitDefinition "A performer contributing to an expression of a work by relaying a creator"@en ;
     rdakit:toolkitLabel "storyteller"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -865,7 +865,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/presenter.en> ;
     reg:name "presenter"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:toolkitDefinition ""@en ;
+    rdakit:toolkitDefinition "A person, family, or corporate body mentioned in an"@en ;
     rdakit:toolkitLabel "presenter"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -3205,7 +3205,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/formatOfNotatedMusic.en> ;
     reg:name "formatOfNotatedMusic"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:instructionNumber "7.20" ;
+    rdakit:instructionNumber "7.2" ;
     rdakit:toolkitDefinition "The musical or physical layout of the content of a resource that is presented in the form of musical notation."@en ;
     rdakit:toolkitLabel "format of notated music"@en ;
     a rdf:Property ;
@@ -3280,7 +3280,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/dateOfExpression.en> ;
     reg:name "dateOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:instructionNumber "6.10" ;
+    rdakit:instructionNumber "6.1" ;
     rdakit:toolkitDefinition "The earliest date associated with an expression."@en ;
     rdakit:toolkitLabel "date of expression"@en ;
     a rdf:Property ;
@@ -3666,6 +3666,7 @@
     skos:definition "Relates an expression to an expression of an opera based on the source expression."@en .
 
 <http://rdaregistry.info/Elements/e/P20243>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20085> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60723> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/musicExpression.en> ;
     reg:name "musicExpression"@en ;
@@ -3682,6 +3683,7 @@
     skos:definition "Relates an expression to an expression of a musical work that is used in a motion picture, play, television program, etc."@en .
 
 <http://rdaregistry.info/Elements/e/P20244>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20103> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60724> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/musicForExpression.en> ;
     reg:name "musicForExpression"@en ;
@@ -4056,6 +4058,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/subjectOfExpression.en> ;
     reg:name "subjectOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work that is about the expression."@en ;
+    rdakit:toolkitLabel "subject of (expression)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;

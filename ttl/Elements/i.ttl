@@ -6,7 +6,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
-@prefix rdakit: <http://metadataregistry.org/uri/rdakit/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix status: <http://metadataregistry.org/uri/RegStatus/> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
@@ -27,7 +27,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/identifierForTheItem.en> ;
     reg:name "identifierForTheItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:instructionNumber "2.20" ;
+    rdakit:instructionNumber "2.2" ;
     rdakit:toolkitDefinition "A character string associated with an item that serves to differentiate that item from other items."@en ;
     rdakit:toolkitLabel "identifier for the item"@en ;
     a rdf:Property ;
@@ -41,6 +41,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> .
 
 <http://rdaregistry.info/Elements/i/P40003>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40010>, <http://rdaregistry.info/Elements/i/P40011> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60056> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnItemSpecificCarrierCharacteristic.en> ;
     reg:name "noteOnItemSpecificCarrierCharacteristic"@en ;
@@ -897,6 +898,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/subjectOfItem.en> ;
     reg:name "subjectOfItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work that is about the item."@en ;
+    rdakit:toolkitLabel "subject of (item)"@en ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;

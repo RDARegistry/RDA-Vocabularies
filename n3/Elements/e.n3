@@ -2,7 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdakit: <http://metadataregistry.org/uri/rdakit/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
@@ -233,7 +233,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/formatOfNotatedMusic.en> ;
     reg:name "formatOfNotatedMusic"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:instructionNumber "7.20" ;
+    rdakit:instructionNumber "7.2" ;
     rdakit:toolkitDefinition "The musical or physical layout of the content of a resource that is presented in the form of musical notation."@en ;
     rdakit:toolkitLabel "format of notated music"@en ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -259,7 +259,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/dateOfExpression.en> ;
     reg:name "dateOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:instructionNumber "6.10" ;
+    rdakit:instructionNumber "6.1" ;
     rdakit:toolkitDefinition "The earliest date associated with an expression."@en ;
     rdakit:toolkitLabel "date of expression"@en ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
@@ -724,7 +724,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/storyteller.en> ;
     reg:name "storyteller"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:toolkitDefinition ""@en ;
+    rdakit:toolkitDefinition "A performer contributing to an expression of a work by relaying a creator"@en ;
     rdakit:toolkitLabel "storyteller"@en ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -1118,7 +1118,7 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/presenter.en> ;
     reg:name "presenter"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:toolkitDefinition ""@en ;
+    rdakit:toolkitDefinition "A person, family, or corporate body mentioned in an"@en ;
     rdakit:toolkitLabel "presenter"@en ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
@@ -1271,36 +1271,6 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
     skos:definition "Relates an expression to an annotation providing additional information about content recorded as an expression attribute."@en .
-
-<http://rdaregistry.info/Elements/e/P20085> a rdf:Property ;
-    rdfs:label "is incidental music (expression)"@en ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60118> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/e/incidentalMusicExpression.en> ;
-    reg:name "incidentalMusicExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:toolkitDefinition "An expression of a musical work that that provides the incidental music for a play or other spoken work for the stage."@en ;
-    rdakit:toolkitLabel "incidental music (expression)"@en ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20243> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20103> ;
-    skos:definition "Relates an expression to an expression of a musical work that that provides the incidental music for a play or other spoken work for the stage."@en .
-
-<http://rdaregistry.info/Elements/e/P20103> a rdf:Property ;
-    rdfs:label "is incidental music for (expression)"@en ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60202> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/e/incidentalMusicForExpression.en> ;
-    reg:name "incidentalMusicForExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:toolkitDefinition "An expression of a work such as a play or other spoken work for the stage that uses the musical work as incidental music."@en ;
-    rdakit:toolkitLabel "incidental music for (expression)"@en ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/P20085> ;
-    skos:definition "Relates an expression to an expression of a work such as a play or other spoken work for the stage that uses the musical work as incidental music."@en .
 
 <http://rdaregistry.info/Elements/e/P20213> a rdf:Property ;
     rdfs:label "has additional scale information"@en ;
@@ -1590,6 +1560,8 @@
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/subjectOfExpression.en> ;
     reg:name "subjectOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "A work that is about the expression."@en ;
+    rdakit:toolkitLabel "subject of (expression)"@en ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
@@ -2095,6 +2067,21 @@
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20163> ;
     skos:definition "Relates an expression to an expression of a musical work such as an opera or other work for the musical stage, or an oratorio, that uses the text of the related work."@en .
 
+<http://rdaregistry.info/Elements/e/P20085> a rdf:Property ;
+    rdfs:label "is incidental music (expression)"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60118> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/incidentalMusicExpression.en> ;
+    reg:name "incidentalMusicExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "An expression of a musical work that that provides the incidental music for a play or other spoken work for the stage."@en ;
+    rdakit:toolkitLabel "incidental music (expression)"@en ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20243> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20103> ;
+    skos:definition "Relates an expression to an expression of a musical work that that provides the incidental music for a play or other spoken work for the stage."@en .
+
 <http://rdaregistry.info/Elements/e/P20086> a rdf:Property ;
     rdfs:label "is remade as (expression)"@en ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60120> ;
@@ -2304,6 +2291,21 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20169> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/P20168> ;
     skos:definition "Relates an expression to an expression of a work part of whose content separated from an earlier expression to form a new expression."@en .
+
+<http://rdaregistry.info/Elements/e/P20103> a rdf:Property ;
+    rdfs:label "is incidental music for (expression)"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60202> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/incidentalMusicForExpression.en> ;
+    reg:name "incidentalMusicForExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:toolkitDefinition "An expression of a work such as a play or other spoken work for the stage that uses the musical work as incidental music."@en ;
+    rdakit:toolkitLabel "incidental music for (expression)"@en ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/P20085> ;
+    skos:definition "Relates an expression to an expression of a work such as a play or other spoken work for the stage that uses the musical work as incidental music."@en .
 
 <http://rdaregistry.info/Elements/e/P20104> a rdf:Property ;
     rdfs:label "is abstracted as (expression)"@en ;
@@ -3840,6 +3842,7 @@
 
 <http://rdaregistry.info/Elements/e/P20243> a rdf:Property ;
     rdfs:label "is music (expression)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20085> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60723> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/musicExpression.en> ;
     reg:name "musicExpression"@en ;
@@ -3855,6 +3858,7 @@
 
 <http://rdaregistry.info/Elements/e/P20244> a rdf:Property ;
     rdfs:label "is music for (expression)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20103> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60724> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/musicForExpression.en> ;
     reg:name "musicForExpression"@en ;

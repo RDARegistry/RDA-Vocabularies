@@ -1,14 +1,23 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix reg: <http://metadataregistry.org/uri/schema/registry/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://rdaregistry.info/termList/RDACarrierType/1006> a skos:Concept ;
-    reg:identifier <538> ;
+    reg:identifier <http://metadataregistry.org/concepts/538> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Papierrolle, auf der Musiknoten in Form von Perforationen repräsentiert werden und die konzipiert ist, um Musik in einem mechanischen Klavier, einer mechanischen Orgel usw. wiederzugeben."@de,
+        "A roll of paper on which musical notes are represented by perforations, designed to mechanically reproduce the music when used in a player piano, player organ, etc."@en,
+        "Rollo de papel en el que las notas musicales están representadas mediante perforaciones, diseñado para reproducir en forma mecánica la música cuando se utiliza en una pianola, órgano mecánico, etc."@es,
+        "Rouleau de papier sur lequel les notes de musique sont représentées par des perforations, destiné à reproduire mécaniquement la musique lorsqu’il est utilisé avec un piano mécanique, un orgue mécanique, etc."@fr ;
+    rdakit:ToolkitLabel "Notenrolle"@de,
+        "audio roll"@en,
+        "rollo sonoro"@es,
+        "rouleau audio"@fr ;
     skos:altLabel "piano roll"@en ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1001> ;
     skos:definition "Eine Papierrolle, auf der Musiknoten in Form von Perforationen repräsentiert werden und die konzipiert ist, um Musik in einem mechanischen Klavier, einer mechanischen Orgel usw. wiederzugeben."@de,
@@ -26,22 +35,34 @@
         "Comprend les rouleaux pour piano, etc."@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1070> a skos:Concept ;
-    reg:identifier <6763> ;
+    reg:identifier <http://metadataregistry.org/concepts/6763> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "A loop of flexible plastic or magnetic film on which audio signals are mechanically recorded, commonly known under the trade name Dictabelt."@en ;
+    rdakit:ToolkitLabel "audio belt"@en ;
     skos:definition "A loop of flexible plastic or magnetic film on which audio signals are mechanically recorded, commonly known under the trade name Dictabelt."@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:prefLabel "audio belt"@en .
 
 <http://rdaregistry.info/termList/RDACarrierType/1071> a skos:Concept ;
-    reg:identifier <6764> ;
+    reg:identifier <http://metadataregistry.org/concepts/6764> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "A reel or spool of steel or stainless steel wire upon which audio signals are magnetically recorded."@en ;
+    rdakit:ToolkitLabel "audio wire reel"@en ;
     skos:definition "A reel or spool of steel or stainless steel wire upon which audio signals are magnetically recorded."@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:prefLabel "audio wire reel"@en .
 
 <http://rdaregistry.info/termList/RDACarrierType/1002> a skos:Concept ;
-    reg:identifier <534> ;
+    reg:identifier <http://metadataregistry.org/concepts/534> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Cartridge, die ein Tonband enthält."@de,
+        "A cartridge containing an audio tape."@en,
+        "Cartucho que contiene una cinta de audio."@es,
+        "Cartouche contenant une bande audio."@fr ;
+    rdakit:ToolkitLabel "Audiocartridge"@de,
+        "audio cartridge"@en,
+        "cartucho sonoro"@es,
+        "cartouche audio"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1001> ;
     skos:definition "Eine Cartridge, die ein Tonband enthält."@de,
         "A cartridge containing an audio tape."@en,
@@ -54,8 +75,16 @@
         "cartouche audio"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1003> a skos:Concept ;
-    reg:identifier <535> ;
+    reg:identifier <http://metadataregistry.org/concepts/535> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein rollenförmiges Objekt, auf dem Schallwellen in einer fortlaufend gewundenen Rille graviert oder eingeprägt sind."@de,
+        "A roller-shaped object on which sound waves are incised or indented in a continuous circular groove."@en,
+        "Objeto con forma de rollo en el cual se han hecho incisiones o muescas en un surco circular contínuo."@es,
+        "Objet en forme de rouleau sur lequel des ondulations sonores ont été gravées au moyen d’une entaille ou d’empreintes en créant un sillon circulaire continu."@fr ;
+    rdakit:ToolkitLabel "Phonographenzylinder"@de,
+        "audio cylinder"@en,
+        "cilindro sonoro"@es,
+        "cylindre audio"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1001> ;
     skos:definition "Ein rollenförmiges Objekt, auf dem Schallwellen in einer fortlaufend gewundenen Rille graviert oder eingeprägt sind."@de,
         "A roller-shaped object on which sound waves are incised or indented in a continuous circular groove."@en,
@@ -72,8 +101,16 @@
         "Comprend les cylindres de cire, cylindres de fil, etc."@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1004> a skos:Concept ;
-    reg:identifier <536> ;
+    reg:identifier <http://metadataregistry.org/concepts/536> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Disk, auf der als Modulation, Pulse usw. aufgenommene Schallwellen in einer fortlaufend gewundenen Rille graviert oder eingeprägt sind."@de,
+        "A disc on which sound waves, recorded as modulations, pulses, etc., are incised or indented in a continuous spiral groove."@en,
+        "Disco en el que las ondas sonoras, registradas como modulaciones, pulsos, etc., se registraron mediante incisiones o muescas en un surco en espiral continua."@es,
+        "Disque sur lequel les ondulations sonores, enregistrées sous forme de modulations, impulsions, etc. ont été gravées au moyen d’une entaille ou d’empreintes en créant un sillon continu en spirale."@fr ;
+    rdakit:ToolkitLabel "Audiodisk"@de,
+        "audio disc"@en,
+        "disco sonoro"@es,
+        "disque audio"@fr ;
     skos:altLabel "sound disc"@en ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1001> ;
     skos:definition "Eine Disk, auf der als Modulation, Pulse usw. aufgenommene Schallwellen in einer fortlaufend gewundenen Rille graviert oder eingeprägt sind."@de,
@@ -87,11 +124,19 @@
         "disque audio"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1005> a skos:Concept ;
-    reg:identifier <537> ;
+    reg:identifier <http://metadataregistry.org/concepts/537> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine offene Spule, die einen Filmstreifen hält, auf dem der Ton zum Film aufgezeichnet ist."@de,
+        "An open reel holding a length of film on which sound is recorded."@en,
+        "Carrete abierto que sujeta un tramo de película en la cual se ha grabado el sonido."@es,
+        "Bobine ouverte contenant un métrage de film sur lequel est enregistré du son."@fr ;
+    rdakit:ToolkitLabel "Tonspurspule"@de,
+        "sound-track reel"@en,
+        "carrete de banda sonora"@es,
+        "bobine de piste sonore"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1001> ;
     skos:definition "Eine offene Spule, die einen Filmstreifen hält, auf dem der Ton zum Film aufgezeichnet ist."@de,
-        "An open reel holding a length of film on which sound is recorded. "@en,
+        "An open reel holding a length of film on which sound is recorded."@en,
         "Carrete abierto que sujeta un tramo de película en la cual se ha grabado el sonido."@es,
         "Bobine ouverte contenant un métrage de film sur lequel est enregistré du son."@fr ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
@@ -102,8 +147,16 @@
     skos:scopeNote "Use for sound-track films, whether or not they are intended to accompany visual images on film."@en .
 
 <http://rdaregistry.info/termList/RDACarrierType/1007> a skos:Concept ;
-    reg:identifier <539> ;
+    reg:identifier <http://metadataregistry.org/concepts/539> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Kassette, die ein Tonband enthält."@de,
+        "A cassette containing an audio tape."@en,
+        "Casete que contiene una cinta de audio."@es,
+        "Cassette contenant une bande audio."@fr ;
+    rdakit:ToolkitLabel "Audiokassette"@de,
+        "audiocassette"@en,
+        "audiocasete"@es,
+        "cassette audio"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1001> ;
     skos:definition "Eine Kassette, die ein Tonband enthält."@de,
         "A cassette containing an audio tape."@en,
@@ -116,8 +169,16 @@
         "cassette audio"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1008> a skos:Concept ;
-    reg:identifier <540> ;
+    reg:identifier <http://metadataregistry.org/concepts/540> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine offene Spule, die ein Stück Tonband hält, das mit einem Tonbandgerät abzuspielen ist."@de,
+        "An open reel holding a length of audio tape to be used with reel-to-reel audio equipment."@en,
+        "Carrete abierto que contiene un tramo de cinta de audio que se utiliza con equipo de audio de carrete a carrete."@es,
+        "Bobine ouverte contenant un métrage de bande magnétique à utiliser avec un lecteur audio à bobines."@fr ;
+    rdakit:ToolkitLabel "Tonbandspule"@de,
+        "audiotape reel"@en,
+        "carrete de cinta sonora"@es,
+        "bobine de bande audio"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1001> ;
     skos:definition "Eine offene Spule, die ein Stück Tonband hält, das mit einem Tonbandgerät abzuspielen ist."@de,
         "An open reel holding a length of audio tape to be used with reel-to-reel audio equipment."@en,
@@ -130,8 +191,16 @@
         "bobine de bande audio"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1011> a skos:Concept ;
-    reg:identifier <542> ;
+    reg:identifier <http://metadataregistry.org/concepts/542> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Karte, die digital kodierte Daten enthält und die für die Anwendung mit einem Computer konzipiert ist."@de,
+        "A card containing digitally encoded data designed for use with a computer."@en,
+        "Tarjeta que contiene datos codificados digitalmente concebida para ser utilizada con una computadora."@es,
+        "Carte contenant des données encodées numériquement prévues pour une utilisation au moyen d’un ordinateur."@fr ;
+    rdakit:ToolkitLabel "Speicherkarte"@de,
+        "computer card"@en,
+        "tarjeta de computadora"@es,
+        "carte informatique"@fr ;
     skos:definition "Eine Karte, die digital kodierte Daten enthält und die für die Anwendung mit einem Computer konzipiert ist."@de,
         "A card containing digitally encoded data designed for use with a computer."@en,
         "Tarjeta que contiene datos codificados digitalmente concebida para ser utilizada con una computadora."@es,
@@ -143,8 +212,16 @@
         "carte informatique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1012> a skos:Concept ;
-    reg:identifier <543> ;
+    reg:identifier <http://metadataregistry.org/concepts/543> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Cartridge, die ein miniaturisiertes elektronisches Schaltsystem auf einem Mikroplättchen aus Halbleitersilicium enthält."@de,
+        "A cartridge containing a miniaturized electronic circuit on a small wafer of semiconductor silicon."@en,
+        "Cartucho que contiene un circuito electrónico miniaturizado sobre un pequeño disco de silicona semiconductora."@es,
+        "Cartouche contenant un circuit informatique miniature sur une petite plaque de silicium semi-conducteur."@fr ;
+    rdakit:ToolkitLabel "Computerchip-Cartridge"@de,
+        "computer chip cartridge"@en,
+        "cartucho de chip para computadora"@es,
+        "cartouche à puce informatique"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1010> ;
     skos:definition "Eine Cartridge, die ein miniaturisiertes elektronisches Schaltsystem auf einem Mikroplättchen aus Halbleitersilicium enthält."@de,
         "A cartridge containing a miniaturized electronic circuit on a small wafer of semiconductor silicon."@en,
@@ -157,8 +234,16 @@
         "cartouche à puce informatique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1013> a skos:Concept ;
-    reg:identifier <544> ;
+    reg:identifier <http://metadataregistry.org/concepts/544> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Disk, die digital kodierte Daten enthält, die magnetisch oder optisch aufgenommen sind."@de,
+        "A disc containing digitally encoded data, magnetically or optically recorded."@en,
+        "Un disco que contiene datos codificados digitalmente, registrados en forma magnética u óptica."@es,
+        "Disque contenant des données encodées numériquement, enregistrées de façon magnétique ou optique."@fr ;
+    rdakit:ToolkitLabel "Computerdisk"@de,
+        "computer disc"@en,
+        "disco de computadora"@es,
+        "disque informatique"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1010> ;
     skos:definition "Eine Disk, die digital kodierte Daten enthält, die magnetisch oder optisch aufgenommen sind."@de,
         "A disc containing digitally encoded data, magnetically or optically recorded."@en,
@@ -171,8 +256,16 @@
         "disque informatique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1014> a skos:Concept ;
-    reg:identifier <545> ;
+    reg:identifier <http://metadataregistry.org/concepts/545> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Cartridge, die eine oder mehrere Computerdisks enthält."@de,
+        "A cartridge containing one or more computer discs."@en,
+        "Un cartucho que contiene uno o más discos de computadora."@es,
+        "Cartouche contenant un ou plusieurs disques informatiques."@fr ;
+    rdakit:ToolkitLabel "Computerdisk-Cartridge"@de,
+        "computer disc cartridge"@en,
+        "cartucho de discos de computadora"@es,
+        "cartouche de disque informatique"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1010> ;
     skos:definition "Eine Cartridge, die eine oder mehrere Computerdisks enthält."@de,
         "A cartridge containing one or more computer discs."@en,
@@ -185,8 +278,16 @@
         "cartouche de disque informatique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1015> a skos:Concept ;
-    reg:identifier <546> ;
+    reg:identifier <http://metadataregistry.org/concepts/546> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Cartridge, die ein Magnetband enthält."@de,
+        "A cartridge containing a computer tape."@en,
+        "Un cartucho que contiene una cinta de computadora."@es,
+        "Cartouche contenant une bande informatique."@fr ;
+    rdakit:ToolkitLabel "Magnetbandcartridge"@de,
+        "computer tape cartridge"@en,
+        "cartucho de cinta de computadora"@es,
+        "cartouche de bande informatique"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1010> ;
     skos:definition "Eine Cartridge, die ein Magnetband enthält."@de,
         "A cartridge containing a computer tape."@en,
@@ -199,8 +300,16 @@
         "cartouche de bande informatique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1016> a skos:Concept ;
-    reg:identifier <547> ;
+    reg:identifier <http://metadataregistry.org/concepts/547> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Kassette, die ein Magnetband enthält."@de,
+        "A cassette containing a computer tape."@en,
+        "Un casete que contiene una cinta de computadora."@es,
+        "Cassette contenant une bande informatique."@fr ;
+    rdakit:ToolkitLabel "Magnetbandkassette"@de,
+        "computer tape cassette"@en,
+        "casete de cinta de computadora"@es,
+        "cassette de bande informatique"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1010> ;
     skos:definition "Eine Kassette, die ein Magnetband enthält."@de,
         "A cassette containing a computer tape."@en,
@@ -213,8 +322,16 @@
         "cassette de bande informatique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1017> a skos:Concept ;
-    reg:identifier <548> ;
+    reg:identifier <http://metadataregistry.org/concepts/548> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine offene Spule, die ein Stück Magnetband hält, das mit einem Magnetband-Laufwerk verwendet wird."@de,
+        "An open reel holding a length of computer tape to be used with a computer tape drive."@en,
+        "Carrete abierto, que contiene un tramo de cinta para ser usado con una unidad de cinta de computadora."@es,
+        "Bobine ouverte contenant un métrage de bande informatique à utiliser avec un lecteur de bande informatique."@fr ;
+    rdakit:ToolkitLabel "Magnetbandspule"@de,
+        "computer tape reel"@en,
+        "carrete de cinta de computadora"@es,
+        "bobine de bande informatique"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1010> ;
     skos:definition "Eine offene Spule, die ein Stück Magnetband hält, das mit einem Magnetband-Laufwerk verwendet wird."@de,
         "An open reel holding a length of computer tape to be used with a computer tape drive."@en,
@@ -227,8 +344,16 @@
         "bobine de bande informatique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1018> a skos:Concept ;
-    reg:identifier <549> ;
+    reg:identifier <http://metadataregistry.org/concepts/549> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine digitale Ressource, die mithilfe von Hardware und Softwareverbindungen zu einem Kommunikationsnetzwerk zugänglich ist."@de,
+        "A digital resource accessed by means of hardware and software connections to a communications network."@en,
+        "Recurso digital al que se accede mediante equipo y software conectados a una red de comunicaciones."@es,
+        "Ressource numérique à laquelle on accède au moyen de connexions matérielles et logicielles avec un réseau de communication."@fr ;
+    rdakit:ToolkitLabel "Online-Ressource"@de,
+        "online resource"@en,
+        "recurso en línea"@es,
+        "ressource en ligne"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1010> ;
     skos:definition "Eine digitale Ressource, die mithilfe von Hardware und Softwareverbindungen zu einem Kommunikationsnetzwerk zugänglich ist."@de,
         "A digital resource accessed by means of hardware and software connections to a communications network."@en,
@@ -241,8 +366,16 @@
         "ressource en ligne"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1021> a skos:Concept ;
-    reg:identifier <551> ;
+    reg:identifier <http://metadataregistry.org/concepts/551> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Karte mit einer oder mehreren rechteckigen Öffnungen oder Blenden, die Einzelbilder des Mikrofilms hält."@de,
+        "A card with one or more rectangular openings or apertures holding frames of microfilm."@en,
+        "Una tarjeta con uno o más orificios o aberturas rectangulares que sujetan fotogramas de microfilme."@es,
+        "Carte comprenant une ou plusieurs ouvertures ou fenêtres rectangulaires sur lesquelles sont montées des images de microfilm."@fr ;
+    rdakit:ToolkitLabel "Mikrofilmlochkarte"@de,
+        "aperture card"@en,
+        "tarjeta de apertura"@es,
+        "carte à fenêtre"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Eine Karte mit einer oder mehreren rechteckigen Öffnungen oder Blenden, die Einzelbilder des Mikrofilms hält."@de,
         "A card with one or more rectangular openings or apertures holding frames of microfilm."@en,
@@ -255,8 +388,16 @@
         "carte à fenêtre"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1022> a skos:Concept ;
-    reg:identifier <552> ;
+    reg:identifier <http://metadataregistry.org/concepts/552> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein Blatt Filmmaterial, das einige Mikrobilder in zweidimensionaler Anordnung trägt."@de,
+        "A sheet of film bearing a number of microimages in a two-dimensional array."@en,
+        "Hoja de película que presenta un número de microimágenes forma bidimensional."@es,
+        "Feuille de film portant une série de micro-images disposées selon deux axes."@fr ;
+    rdakit:ToolkitLabel "Mikrofiche"@de,
+        "microfiche"@en,
+        "microficha"@es,
+        "microfiche"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Ein Blatt Filmmaterial, das einige Mikrobilder in zweidimensionaler Anordnung trägt."@de,
         "A sheet of film bearing a number of microimages in a two-dimensional array."@en,
@@ -269,8 +410,16 @@
         "microfiche"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1023> a skos:Concept ;
-    reg:identifier <553> ;
+    reg:identifier <http://metadataregistry.org/concepts/553> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Kassette, die ungeschnittene Mikrofiches enthält."@de,
+        "A cassette containing uncut microfiches."@en,
+        "Casete que contiene microfichas sin cortar."@es,
+        "Cassette contenant des microfiches non coupées."@fr ;
+    rdakit:ToolkitLabel "Mikrofichekassette"@de,
+        "microfiche cassette"@en,
+        "casete de microficha"@es,
+        "cassette de microfiches"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Eine Kassette, die ungeschnittene Mikrofiches enthält."@de,
         "A cassette containing uncut microfiches."@en,
@@ -283,8 +432,16 @@
         "cassette de microfiches"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1024> a skos:Concept ;
-    reg:identifier <554> ;
+    reg:identifier <http://metadataregistry.org/concepts/554> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Cartridge, die einen Mikrofilm enthält."@de,
+        "A cartridge containing a microfilm."@en,
+        "Cartucho que contiene un microfilme."@es,
+        "Cartouche contenant un microfilm."@fr ;
+    rdakit:ToolkitLabel "Mikrofilm-Cartridge"@de,
+        "microfilm cartridge"@en,
+        "cartucho de microfilme"@es,
+        "cartouche de microfilm"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Eine Cartridge, die einen Mikrofilm enthält."@de,
         "A cartridge containing a microfilm."@en,
@@ -297,8 +454,16 @@
         "cartouche de microfilm"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1025> a skos:Concept ;
-    reg:identifier <555> ;
+    reg:identifier <http://metadataregistry.org/concepts/555> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Kassette, die einen Mikrofilm enthält."@de,
+        "A cassette containing a microfilm."@en,
+        "Casete que contiene un microfilme."@es,
+        "Cassette contenant un microfilm."@fr ;
+    rdakit:ToolkitLabel "Mikrofilmkassette"@de,
+        "microfilm cassette"@en,
+        "casete de microfilme"@es,
+        "cassette de microfilm"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Eine Kassette, die einen Mikrofilm enthält."@de,
         "A cassette containing a microfilm."@en,
@@ -311,8 +476,16 @@
         "cassette de microfilm"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1026> a skos:Concept ;
-    reg:identifier <556> ;
+    reg:identifier <http://metadataregistry.org/concepts/556> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine offene Spule, die einen Mikrofilm hält, der durch ein Lesegerät eingefädelt wird."@de,
+        "An open reel holding a microfilm, to be threaded into a microfilm reader."@en,
+        "Carrete abierto que contiene microfilme que será insertado en un lector de microfilme."@es,
+        "Bobine ouverte contenant un microfilm, à glisser dans un lecteur de microfilm."@fr ;
+    rdakit:ToolkitLabel "Mikrofilmspule"@de,
+        "microfilm reel"@en,
+        "carrete de microfilme"@es,
+        "bobine de microfilm"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Eine offene Spule, die einen Mikrofilm hält, der durch ein Lesegerät eingefädelt wird."@de,
         "An open reel holding a microfilm, to be threaded into a microfilm reader."@en,
@@ -325,8 +498,16 @@
         "bobine de microfilm"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1027> a skos:Concept ;
-    reg:identifier <557> ;
+    reg:identifier <http://metadataregistry.org/concepts/557> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein kurzer Streifen Mikrofilm, der von einer Rolle geschnitten wird."@de,
+        "A short strip of microfilm cut from a roll."@en,
+        "Una tira corta de microfilme cortada de un rollo."@es,
+        "Courte bande de microfilm découpée dans un rouleau."@fr ;
+    rdakit:ToolkitLabel "Mikrofilmstreifen"@de,
+        "microfilm slip"@en,
+        "tira de microfilme"@es,
+        "bande de microfilm"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Ein kurzer Streifen Mikrofilm, der von einer Rolle geschnitten wird."@de,
         "A short strip of microfilm cut from a roll."@en,
@@ -339,8 +520,16 @@
         "bande de microfilm"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1028> a skos:Concept ;
-    reg:identifier <558> ;
+    reg:identifier <http://metadataregistry.org/concepts/558> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Karte oder ein Blatt lichtundurchlässiges Material, das einige Mikrobilder in zweidimensionaler Anordnung trägt."@de,
+        "A card or sheet of opaque material bearing a number of microimages in a two-dimensional array."@en,
+        "Tarjeta u hoja de material opaco que presenta un número de microimágenes en forma bidimensional."@es,
+        "Fiche ou feuille de matériau opaque comportant une série de micro-images disposées selon deux axes."@fr ;
+    rdakit:ToolkitLabel "Lichtundurchlässiger Mikrofiche"@de,
+        "microopaque"@en,
+        "microopaco"@es,
+        "rouleau de microfilm"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Eine Karte oder ein Blatt lichtundurchlässiges Material, das einige Mikrobilder in zweidimensionaler Anordnung trägt."@de,
         "A card or sheet of opaque material bearing a number of microimages in a two-dimensional array."@en,
@@ -353,8 +542,16 @@
         "rouleau de microfilm"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1032> a skos:Concept ;
-    reg:identifier <562> ;
+    reg:identifier <http://metadataregistry.org/concepts/562> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Cartridge, die einen Bewegtbildfilm enthält."@de,
+        "A cartridge containing a motion picture film."@en,
+        "Cartucho que contiene una película cinematográfica."@es,
+        "Cartouche contenant un film cinématographique."@fr ;
+    rdakit:ToolkitLabel "Filmdose"@de,
+        "film cartridge"@en,
+        "cartucho de película"@es,
+        "cartouche de film"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1031> ;
     skos:definition "Eine Cartridge, die einen Bewegtbildfilm enthält."@de,
         "A cartridge containing a motion picture film."@en,
@@ -367,8 +564,16 @@
         "cartouche de film"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1033> a skos:Concept ;
-    reg:identifier <563> ;
+    reg:identifier <http://metadataregistry.org/concepts/563> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Kassette, die einen Bewegtbildfilm enthält."@de,
+        "A cassette containing a motion picture film."@en,
+        "Casete que contiene una película cinematográfica."@es,
+        "Cassette contenant un film cinématographique."@fr ;
+    rdakit:ToolkitLabel "Filmkassette"@de,
+        "film cassette"@en,
+        "casete de película"@es,
+        "cassette de film"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1031> ;
     skos:definition "Eine Kassette, die einen Bewegtbildfilm enthält."@de,
         "A cassette containing a motion picture film."@en,
@@ -381,8 +586,16 @@
         "cassette de film"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1034> a skos:Concept ;
-    reg:identifier <564> ;
+    reg:identifier <http://metadataregistry.org/concepts/564> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine offene Spule, die einen Bewegtbildfilm enthält, die mit einem Filmprojektor zu verwenden ist."@de,
+        "An open reel holding a motion picture film to be used with a motion picture film projector."@en,
+        "Carrete abierto que sujeta una película cinematográfica que se utilizará con un proyector de películas cinematográficas."@es,
+        "Bobine ouverte contenant un film cinématographique à utiliser avec un projecteur de film cinématographique."@fr ;
+    rdakit:ToolkitLabel "Filmspule"@de,
+        "film reel"@en,
+        "carrete de película"@es,
+        "bobine de film"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1031> ;
     skos:definition "Eine offene Spule, die einen Bewegtbildfilm enthält, die mit einem Filmprojektor zu verwenden ist."@de,
         "An open reel holding a motion picture film to be used with a motion picture film projector."@en,
@@ -395,8 +608,16 @@
         "bobine de film"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1035> a skos:Concept ;
-    reg:identifier <565> ;
+    reg:identifier <http://metadataregistry.org/concepts/565> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein kurzer Streifen Film, der in der Regel eher in starrer Form als in aufgerollter ist."@de,
+        "A short strip of film, usually in rigid format rather than rolled."@en,
+        "Banda corta de película, usualmente en formato rígido (más bien que enrollada)."@es,
+        "Courte bande de film, généralement sous une forme droite plutôt qu’enroulée."@fr ;
+    rdakit:ToolkitLabel "Filmstreifen"@de,
+        "filmslip"@en,
+        "filmina"@es,
+        "film fixe court"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1031> ;
     skos:definition "Ein kurzer Streifen Film, der in der Regel eher in starrer Form als in aufgerollter ist."@de,
         "A short strip of film, usually in rigid format rather than rolled."@en,
@@ -409,8 +630,16 @@
         "film fixe court"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1036> a skos:Concept ;
-    reg:identifier <566> ;
+    reg:identifier <http://metadataregistry.org/concepts/566> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Filmrolle, mit oder ohne aufgenommenen Ton, die eine für Einzelbildvorführungen konzipierte Folge von Bildern enthält."@de,
+        "A roll of film, with or without recorded sound, containing a succession of images intended for projection one at a time."@en,
+        "Rollo de película, con o sin sonido grabado que contiene una sucesión de imágenes que tienen como propósito ser proyectadas una a la vez."@es,
+        "Rouleau de film, avec son enregistré ou non, contenant une succession d’images devant être projetées une par une."@fr ;
+    rdakit:ToolkitLabel "Filmstreifen für Einzelbildvorführung"@de,
+        "filmstrip"@en,
+        "fotobanda"@es,
+        "film fixe"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1031> ;
     skos:definition "Eine Filmrolle, mit oder ohne aufgenommenen Ton, die eine für Einzelbildvorführungen konzipierte Folge von Bildern enthält."@de,
         "A roll of film, with or without recorded sound, containing a succession of images intended for projection one at a time."@en,
@@ -423,8 +652,16 @@
         "film fixe"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1037> a skos:Concept ;
-    reg:identifier <567> ;
+    reg:identifier <http://metadataregistry.org/concepts/567> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Cartridge, die einen Filmstreifen enthält."@de,
+        "A cartridge containing a filmstrip."@en,
+        "Cartucho que contiene una fotobanda."@es,
+        "Cartouche contenant un film fixe."@fr ;
+    rdakit:ToolkitLabel "Filmstreifen-Cartridge"@de,
+        "filmstrip cartridge"@en,
+        "cartucho de fotobanda"@es,
+        "cartouche de film fixe"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1031> ;
     skos:definition "Eine Cartridge, die einen Filmstreifen enthält."@de,
         "A cartridge containing a filmstrip."@en,
@@ -437,8 +674,16 @@
         "cartouche de film fixe"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1039> a skos:Concept ;
-    reg:identifier <568> ;
+    reg:identifier <http://metadataregistry.org/concepts/568> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein Blatt transparentes Material (mit oder ohne Schutzfassung), das ein Bild trägt und das für die Betrachtung mit einem Overheadprojektor konzipiert ist."@de,
+        "A sheet of transparent material (with or without a protective mount) bearing an image designed for use with an overhead projector."@en,
+        "Hoja de material transparente (con o sin montura protectora) que presenta una imagen diseñada para utilizarse con un retroproyector."@es,
+        "Feuille de matériau transparent (avec ou sans monture de protection) comportant une image et conçue pour être utilisée avec un rétroprojecteur."@fr ;
+    rdakit:ToolkitLabel "Overheadfolie"@de,
+        "overhead transparency"@en,
+        "transparencia de retroproyector"@es,
+        "transparent pour rétroprojecteur"@fr ;
     skos:altLabel "Folie"@de,
         "Overheadprojektion"@de,
         "overhead projectural"@en,
@@ -455,8 +700,16 @@
         "transparent pour rétroprojecteur"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1042> a skos:Concept ;
-    reg:identifier <571> ;
+    reg:identifier <http://metadataregistry.org/concepts/571> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Karte mit stereografischen Bildern."@de,
+        "A card bearing stereographic images."@en,
+        "Tarjeta que contiene imágenes estereográficas."@es,
+        "Carte portant des images stéréoscopiques."@fr ;
+    rdakit:ToolkitLabel "Stereobild"@de,
+        "stereograph card"@en,
+        "tarjeta estereográfica"@es,
+        "carte stéréoscopique"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1041> ;
     skos:definition "Eine Karte mit stereografischen Bildern."@de,
         "A card bearing stereographic images."@en,
@@ -469,8 +722,15 @@
         "carte stéréoscopique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1043> a skos:Concept ;
-    reg:identifier <572> ;
+    reg:identifier <http://metadataregistry.org/concepts/572> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Scheibe mit Öffnungen am Rand, die Paare von unbewegten Bildern hält und für die Betrachtung mit einem Stereobild-Betrachter konzipiert ist."@de,
+        "A disc with openings around the perimeter holding pairs of still images designed for use with a stereograph viewer."@en,
+        "Disque avec des ouvertures sur sa circonférence, contenant des images fixes montées en paires, conçu pour être utilisé avec une visionneuse stéréoscopique."@fr ;
+    rdakit:ToolkitLabel "Stereografische Disk"@de,
+        "stereograph disc"@en,
+        "disco estereográfico"@es,
+        "disque stéréoscopique"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1041> ;
     skos:definition "Eine Scheibe mit Öffnungen am Rand, die Paare von unbewegten Bildern hält und für die Betrachtung mit einem Stereobild-Betrachter konzipiert ist."@de,
         "A disc with openings around the perimeter holding pairs of still images designed for use with a stereograph viewer."@en,
@@ -482,8 +742,16 @@
         "disque stéréoscopique"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1045> a skos:Concept ;
-    reg:identifier <574> ;
+    reg:identifier <http://metadataregistry.org/concepts/574> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein kleines Blatt aus lichtundurchlässigem Material."@de,
+        "A small sheet of opaque material."@en,
+        "Una hoja pequeña de material opaco."@es,
+        "Petite feuille de matériau opaque."@fr ;
+    rdakit:ToolkitLabel "Karte"@de,
+        "card"@en,
+        "tarjeta"@es,
+        "fiche"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1044> ;
     skos:definition "Ein kleines Blatt aus lichtundurchlässigem Material."@de,
         "A small sheet of opaque material."@en,
@@ -496,8 +764,16 @@
         "fiche"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1046> a skos:Concept ;
-    reg:identifier <575> ;
+    reg:identifier <http://metadataregistry.org/concepts/575> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Hängevorrichtung, die mehrere Blätter hält, die zur Verwendung an einer Staffelei konzipiert sind."@de,
+        "A hinging device holding two or more sheets designed for use on an easel."@en,
+        "Dispositivo con goznes que sujetan dos o más hojas, diseñado para usarse sobre un atril."@es,
+        "Dispositif à charnière maintenant au moins deux feuilles et conçu pour une utilisation sur chevalet."@fr ;
+    rdakit:ToolkitLabel "Flipchart"@de,
+        "flipchart"@en,
+        "rotafolio"@es,
+        "tableau à feuilles mobiles"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1044> ;
     skos:definition "Eine Hängevorrichtung, die mehrere Blätter hält, die zur Verwendung an einer Staffelei konzipiert sind."@de,
         "A hinging device holding two or more sheets designed for use on an easel."@en,
@@ -510,8 +786,16 @@
         "tableau à feuilles mobiles"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1047> a skos:Concept ;
-    reg:identifier <576> ;
+    reg:identifier <http://metadataregistry.org/concepts/576> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein aufgerolltes Stück Material (Papier, Film, Band usw.)."@de,
+        "A wound length of material (paper, film, tape, etc.)."@en,
+        "Tramo largo de material (papel, película, cinta, etc.)."@es,
+        "Métrage de matériau enroulé (papier, film, bande magnétique, etc.)."@fr ;
+    rdakit:ToolkitLabel "Rolle"@de,
+        "roll"@en,
+        "rollo"@es,
+        "rouleau"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1044> ;
     skos:definition "Ein aufgerolltes Stück Material (Papier, Film, Band usw.)."@de,
         "A wound length of material (paper, film, tape, etc.)."@en,
@@ -524,8 +808,16 @@
         "rouleau"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1048> a skos:Concept ;
-    reg:identifier <577> ;
+    reg:identifier <http://metadataregistry.org/concepts/577> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein flaches Stück dünnes Material (Papier, Plastik usw.)."@de,
+        "A flat piece of thin material (paper, plastic, etc.)."@en,
+        "Una pieza plana de un material delgado (papel, plástico, etc.)."@es,
+        "Morceau plat de matériau fin (papier, plastique, etc.)."@fr ;
+    rdakit:ToolkitLabel "Blatt"@de,
+        "sheet"@en,
+        "hoja"@es,
+        "feuille"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1044> ;
     skos:definition "Ein flaches Stück dünnes Material (Papier, Plastik usw.)."@de,
         "A flat piece of thin material (paper, plastic, etc.)."@en,
@@ -538,8 +830,16 @@
         "feuille"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1049> a skos:Concept ;
-    reg:identifier <578> ;
+    reg:identifier <http://metadataregistry.org/concepts/578> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein oder mehrere Blätter, die geheftet oder zusammengebunden sind, um eine einzelne Einheit zu bilden."@de,
+        "One or more sheets bound or fastened together to form a single unit."@en,
+        "Una o más hojas encuadernadas o atadas juntas para que formen una unidad individual."@es,
+        "Une ou plusieurs feuilles reliées ou attachées ensemble pour former une seule unité."@fr ;
+    rdakit:ToolkitLabel "Band"@de,
+        "volume"@en,
+        "volumen"@es,
+        "volume"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1044> ;
     skos:definition "Ein oder mehrere Blätter, die geheftet oder zusammengebunden sind, um eine einzelne Einheit zu bilden."@de,
         "One or more sheets bound or fastened together to form a single unit."@en,
@@ -552,8 +852,16 @@
         "volume"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1051> a skos:Concept ;
-    reg:identifier <580> ;
+    reg:identifier <http://metadataregistry.org/concepts/580> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Cartridge, die ein Videoband enthält."@de,
+        "A cartridge containing a video tape."@en,
+        "Cartucho que contiene una videocinta."@es,
+        "Cartouche contenant une bande vidéo."@fr ;
+    rdakit:ToolkitLabel "Videocartridge"@de,
+        "video cartridge"@en,
+        "cartucho de vídeo"@es,
+        "cartouche vidéo"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1050> ;
     skos:definition "Eine Cartridge, die ein Videoband enthält."@de,
         "A cartridge containing a video tape."@en,
@@ -566,8 +874,16 @@
         "cartouche vidéo"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1052> a skos:Concept ;
-    reg:identifier <581> ;
+    reg:identifier <http://metadataregistry.org/concepts/581> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Kassette, die ein Videoband enthält."@de,
+        "A cassette containing a video tape."@en,
+        "Casete que contiene una videocinta."@es,
+        "Cassette contenant une bande vidéo."@fr ;
+    rdakit:ToolkitLabel "Videokassette"@de,
+        "videocassette"@en,
+        "casete de vídeo"@es,
+        "cassette vidéo"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1050> ;
     skos:definition "Eine Kassette, die ein Videoband enthält."@de,
         "A cassette containing a video tape."@en,
@@ -580,8 +896,15 @@
         "cassette vidéo"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1053> a skos:Concept ;
-    reg:identifier <582> ;
+    reg:identifier <http://metadataregistry.org/concepts/582> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine offene Spule, die ein Videoband zum Abspielen mit einem Videobandgerät hält."@de,
+        "An open reel holding a video tape for use with reel-to-reel video equipment."@en,
+        "Bobine ouverte contenant une bande vidéo à utiliser avec un équipement vidéo bobine à bobine."@fr ;
+    rdakit:ToolkitLabel "Videobandspule"@de,
+        "videotape reel"@en,
+        "rollo de videocinta"@es,
+        "bobine de bande vidéo"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1050> ;
     skos:definition "Eine offene Spule, die ein Videoband zum Abspielen mit einem Videobandgerät hält."@de,
         "An open reel holding a video tape for use with reel-to-reel video equipment."@en,
@@ -593,8 +916,16 @@
         "bobine de bande vidéo"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1056> a skos:Concept ;
-    reg:identifier <1083> ;
+    reg:identifier <http://metadataregistry.org/concepts/1083> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein gewickeltes Stück Mikrofilm."@de,
+        "A wound length of microfilm."@en,
+        "Un tramo enrollado de microfilme."@es,
+        "Métrage de microfilm enroulé."@fr ;
+    rdakit:ToolkitLabel "Mikrofilmrolle"@de,
+        "microfilm roll"@en,
+        "rollo de microfilme"@es,
+        "rouleau de microfilm"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1020> ;
     skos:definition "Ein gewickeltes Stück Mikrofilm."@de,
         "A wound length of microfilm."@en,
@@ -607,10 +938,18 @@
         "rouleau de microfilm"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1059> a skos:Concept ;
-    reg:identifier <1112> ;
+    reg:identifier <http://metadataregistry.org/concepts/1112> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein dreidimensionales Artefakt (oder eine Kopie eines Artefakts) oder ein natürlich vorkommendes Objekt."@de,
+        "A three-dimensional artifact (or a replica of an artifact) or a naturally-occurring object."@en,
+        "Artefacto tridimensional (o una réplica de un artefacto) o un objeto natural."@es,
+        "Artefact tridimensionnel (ou réplique d’un artefact) ou objet naturel."@fr ;
+    rdakit:ToolkitLabel "Gegenstand"@de,
+        "object"@en,
+        "objeto"@es,
+        "objet"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1044> ;
-    skos:definition "Ein dreidimensionales Artefakt (oder eine Kopie eines Artefakts) oder ein natürlich vorkommendes Objekt. "@de,
+    skos:definition "Ein dreidimensionales Artefakt (oder eine Kopie eines Artefakts) oder ein natürlich vorkommendes Objekt."@de,
         "A three-dimensional artifact (or a replica of an artifact) or a naturally-occurring object."@en,
         "Artefacto tridimensional (o una réplica de un artefacto) o un objeto natural."@es,
         "Artefact tridimensionnel (ou réplique d’un artefact) ou objet naturel."@fr ;
@@ -621,8 +960,16 @@
         "objet"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1060> a skos:Concept ;
-    reg:identifier <1113> ;
+    reg:identifier <http://metadataregistry.org/concepts/1113> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Eine Disk, auf der Video-Signale mit oder ohne Ton aufgezeichnet sind"@de,
+        "A disc on which video signals, with or without sound, are recorded."@en,
+        "Disco sobre el que se han grabado señales de video, con o sin sonido."@es,
+        "Disque sur lequel des signaux vidéo, accompagnés de son ou non, sont enregistrés."@fr ;
+    rdakit:ToolkitLabel "Videodisk"@de,
+        "videodisc"@en,
+        "videodisco"@es,
+        "vidéodisque"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1050> ;
     skos:definition "Eine Disk, auf der Video-Signale mit oder ohne Ton aufgezeichnet sind"@de,
         "A disc on which video signals, with or without sound, are recorded."@en,
@@ -635,8 +982,14 @@
         "vidéodisque"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1069> a skos:Concept ;
-    reg:identifier <4656> ;
+    reg:identifier <http://metadataregistry.org/concepts/4656> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "A wound length of film."@en,
+        "Tramo enrollado de película."@es,
+        "Métrage de film enroulé."@fr ;
+    rdakit:ToolkitLabel "film roll"@en,
+        "rollo de película"@es,
+        "rouleau de film"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1031> ;
     skos:definition "A wound length of film."@en,
         "Tramo enrollado de película."@es,
@@ -647,8 +1000,10 @@
         "rouleau de film"@fr .
 
 <http://rdaregistry.info/termList/RDACarrierType/1029> a skos:Concept ;
-    reg:identifier <559> ;
+    reg:identifier <http://metadataregistry.org/concepts/559> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
+    rdakit:ToolkitLabel "Trägermedien für Mikroskop-Anwendungen"@de,
+        "Microscopic carriers"@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:narrower <http://rdaregistry.info/termList/RDACarrierType/1030> ;
     skos:prefLabel "Trägermedien für Mikroskop-Anwendungen"@de,
@@ -656,8 +1011,16 @@
     skos:topConceptOf <http://rdaregistry.info/termList/RDACarrierType> .
 
 <http://rdaregistry.info/termList/RDACarrierType/1030> a skos:Concept ;
-    reg:identifier <560> ;
+    reg:identifier <http://metadataregistry.org/concepts/560> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein kleines Blatt aus transparentem Material (mit oder ohne Schutzfassung), das winzige Objekte trägt und für die Anwendung mit einem Gerät wie einem Mikroskop konzipiert ist."@de,
+        "A small sheet of transparent material (with or without a protective mount) bearing a minute object designed for use with a device such as a microscope."@en,
+        "Placa pequeña de material transparente (con o sin montura protectora) que contiene un objeto diminuto diseñada para utilizarse con un dispositivo tal como un microscopio."@es,
+        "Petite feuille de matériau transparent (avec ou sans monture de protection) comportant un objet minuscule, conçue pour une utilisation au moyen d’un dispositif tel qu’un microscope."@fr ;
+    rdakit:ToolkitLabel "Objektträger"@de,
+        "microscope slide"@en,
+        "portaobjeto de microscopio"@es,
+        "lame pour microscope"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1029> ;
     skos:definition "Ein kleines Blatt aus transparentem Material (mit oder ohne Schutzfassung), das winzige Objekte trägt und für die Anwendung mit einem Gerät wie einem Mikroskop konzipiert ist."@de,
         "A small sheet of transparent material (with or without a protective mount) bearing a minute object designed for use with a device such as a microscope."@en,
@@ -671,8 +1034,16 @@
     skos:related <http://rdaregistry.info/termList/RDACarrierType/1040> .
 
 <http://rdaregistry.info/termList/RDACarrierType/1040> a skos:Concept ;
-    reg:identifier <569> ;
+    reg:identifier <http://metadataregistry.org/concepts/569> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdakit:ToolkitDefinition "Ein kleines Blatt aus transparentem Material (in der Regel in einer schützenden Fassung), das ein Bild trägt, das für die Betrachtung mit einem Diaprojektor oder Diabetrachter konzipiert ist."@de,
+        "A small sheet of transparent material (usually in a protective mount) bearing an image designed for use with an slide projector or viewer."@en,
+        "Hoja pequeña de material transparente (normalmente en una montura protectora) que presenta una imagen diseñada para utilizarse con un proyector o visor de diapositivas."@es,
+        "Petite feuille en matériau transparent (habituellement dans un cadre protecteur) portant une image conçue pour être utilisée avec un projecteur ou une visionneuse."@fr ;
+    rdakit:ToolkitLabel "Dia"@de,
+        "slide"@en,
+        "diapositiva"@es,
+        "diapositive"@fr ;
     skos:broader <http://rdaregistry.info/termList/RDACarrierType/1031> ;
     skos:definition "Ein kleines Blatt aus transparentem Material (in der Regel in einer schützenden Fassung), das ein Bild trägt, das für die Betrachtung mit einem Diaprojektor oder Diabetrachter konzipiert ist."@de,
         "A small sheet of transparent material (usually in a protective mount) bearing an image designed for use with an slide projector or viewer."@en,
@@ -687,8 +1058,10 @@
     skos:scopeNote "For slides designed to be used with a microscope, use microscope slide."@en .
 
 <http://rdaregistry.info/termList/RDACarrierType/1041> a skos:Concept ;
-    reg:identifier <570> ;
+    reg:identifier <http://metadataregistry.org/concepts/570> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
+    rdakit:ToolkitLabel "Stereografische Datenträger"@de,
+        "Stereographic carriers"@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:narrower <http://rdaregistry.info/termList/RDACarrierType/1042>,
         <http://rdaregistry.info/termList/RDACarrierType/1043>,
@@ -698,8 +1071,10 @@
     skos:topConceptOf <http://rdaregistry.info/termList/RDACarrierType> .
 
 <http://rdaregistry.info/termList/RDACarrierType/1050> a skos:Concept ;
-    reg:identifier <579> ;
+    reg:identifier <http://metadataregistry.org/concepts/579> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
+    rdakit:ToolkitLabel "Video-Datenträger"@de,
+        "Video carriers"@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:narrower <http://rdaregistry.info/termList/RDACarrierType/1051>,
         <http://rdaregistry.info/termList/RDACarrierType/1052>,
@@ -710,8 +1085,10 @@
     skos:topConceptOf <http://rdaregistry.info/termList/RDACarrierType> .
 
 <http://rdaregistry.info/termList/RDACarrierType/1044> a skos:Concept ;
-    reg:identifier <573> ;
+    reg:identifier <http://metadataregistry.org/concepts/573> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
+    rdakit:ToolkitLabel "Datenträger, die ohne Hilfsmittel zu benutzen sind"@de,
+        "Unmediated carriers"@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:narrower <http://rdaregistry.info/termList/RDACarrierType/1045>,
         <http://rdaregistry.info/termList/RDACarrierType/1046>,
@@ -727,8 +1104,10 @@
     skos:prefLabel "New-Proposed"@en .
 
 <http://rdaregistry.info/termList/RDACarrierType/1001> a skos:Concept ;
-    reg:identifier <533> ;
+    reg:identifier <http://metadataregistry.org/concepts/533> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
+    rdakit:ToolkitLabel "Tonträger"@de,
+        "Audio carriers"@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:narrower <http://rdaregistry.info/termList/RDACarrierType/1002>,
         <http://rdaregistry.info/termList/RDACarrierType/1003>,
@@ -741,8 +1120,10 @@
     skos:topConceptOf <http://rdaregistry.info/termList/RDACarrierType> .
 
 <http://rdaregistry.info/termList/RDACarrierType/1010> a skos:Concept ;
-    reg:identifier <541> ;
+    reg:identifier <http://metadataregistry.org/concepts/541> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
+    rdakit:ToolkitLabel "Datenträger"@de,
+        "Computer carriers"@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:narrower <http://rdaregistry.info/termList/RDACarrierType/1011>,
         <http://rdaregistry.info/termList/RDACarrierType/1012>,
@@ -757,8 +1138,10 @@
     skos:topConceptOf <http://rdaregistry.info/termList/RDACarrierType> .
 
 <http://rdaregistry.info/termList/RDACarrierType/1020> a skos:Concept ;
-    reg:identifier <550> ;
+    reg:identifier <http://metadataregistry.org/concepts/550> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
+    rdakit:ToolkitLabel "Datenträger für Mikroformen"@de,
+        "Microform carriers"@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:narrower <http://rdaregistry.info/termList/RDACarrierType/1021>,
         <http://rdaregistry.info/termList/RDACarrierType/1022>,
@@ -775,8 +1158,10 @@
     skos:topConceptOf <http://rdaregistry.info/termList/RDACarrierType> .
 
 <http://rdaregistry.info/termList/RDACarrierType/1031> a skos:Concept ;
-    reg:identifier <561> ;
+    reg:identifier <http://metadataregistry.org/concepts/561> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
+    rdakit:ToolkitLabel "Datenträger von projizierbaren Bildern"@de,
+        "Projected image carriers"@en ;
     skos:inScheme <http://rdaregistry.info/termList/RDACarrierType> ;
     skos:narrower <http://rdaregistry.info/termList/RDACarrierType/1032>,
         <http://rdaregistry.info/termList/RDACarrierType/1033>,

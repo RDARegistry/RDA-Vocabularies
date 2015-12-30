@@ -1,18 +1,51 @@
 {
   "@context": {
     "dc": "http://purl.org/dc/elements/1.1/",
+    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/schema/registry/",
+    "reg": "http://metadataregistry.org/uri/profile/RegAp/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "http://rdaregistry.info/termList/RDAMediaType/1008",
+      "@id": "http://rdaregistry.info/termList/RDAMediaType/1002",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "zh",
+          "@value": "用于存储尺寸缩小、非肉眼可读图像的媒介，需与缩微胶卷或缩微平片阅读器等设备配合使用。"
+        },
+        {
+          "@language": "en",
+          "@value": "Media used to store reduced-size images not readable to the human eye, designed for use with a device such as a microfilm or microfiche reader."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "es",
+          "@value": "microformas"
+        },
+        {
+          "@language": "zh",
+          "@value": "缩微"
+        },
+        {
+          "@language": "en",
+          "@value": "microform"
+        },
+        {
+          "@language": "fr",
+          "@value": "microforme"
+        },
+        {
+          "@language": "de",
+          "@value": "Mikroform"
+        }
+      ],
       "reg:identifier": {
-        "@id": "482"
+        "@id": "http://metadataregistry.org/concepts/476"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
@@ -20,19 +53,23 @@
       "skos:definition": [
         {
           "@language": "en",
-          "@value": "Media used to store moving or still images, designed for use with a playback device such as a videocassette player or DVD player."
-        },
-        {
-          "@language": "de",
-          "@value": "Medien, die zur Speicherung von bewegten oder unbewegten Bildern verwendet werden, und die für die Benutzung mit einem Wiedergabegerät wie zum Beispiel einem Videokassetten- oder DVD-Player konzipiert sind."
+          "@value": "Media used to store reduced-size images not readable to the human eye, designed for use with a device such as a microfilm or microfiche reader."
         },
         {
           "@language": "fr",
-          "@value": "Média servant à emmagasiner des images animées ou fixes et conçu pour une utilisation au moyen d’un dispositif de lecture tel qu’un lecteur de cassette vidéo ou de DVD."
+          "@value": "Média servant à emmagasiner des images de taille réduite non lisibles à l’œil nu, et conçu pour une utilisation au moyen d’un dispositif tel que : lecteur de microfilm ou de microfiche."
         },
         {
           "@language": "es",
-          "@value": "Medios utilizados para almacenar imágenes fijas o en movimiento, diseñados para usarse con aparatos de reproducción tales como videocaseteras o lectores de DVD."
+          "@value": "Medios utilizados para almacenar imágenes de tamaños reducidos no leíbles por el ojo humano, diseñados para ser usados con aparatos tales como lectores de micropelícula o microficha."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储尺寸缩小、非肉眼可读图像的媒介，需与缩微胶卷或缩微平片阅读器等设备配合使用。"
+        },
+        {
+          "@language": "de",
+          "@value": "Medien, die zur Speicherung von verkleinerten Bildern verwendet werden, die für das menschliche Auge nicht lesbar sind und die für die Benutzung mithilfe von Geräten wie z. B. Mikrofilm- oder Mikrofiche-Lesegeräten konzipiert sind."
         }
       ],
       "skos:inScheme": {
@@ -40,95 +77,91 @@
       },
       "skos:prefLabel": [
         {
-          "@language": "es",
-          "@value": "video"
-        },
-        {
           "@language": "en",
-          "@value": "video"
+          "@value": "microform"
         },
         {
-          "@language": "de",
-          "@value": "video"
+          "@language": "es",
+          "@value": "microformas"
         },
         {
           "@language": "fr",
-          "@value": "vidéo"
+          "@value": "microforme"
+        },
+        {
+          "@language": "zh",
+          "@value": "缩微"
+        },
+        {
+          "@language": "de",
+          "@value": "Mikroform"
         }
       ],
       "skos:scopeNote": [
         {
-          "@language": "en",
-          "@value": "Includes media used to store digitally encoded as well as analog images."
-        },
-        {
-          "@language": "fr",
-          "@value": "Comprend tout média servant à emmagasiner des images encodées numériquement aussi bien que des images analogiques."
-        },
-        {
           "@language": "de",
-          "@value": "Dazu gehören sowohl Medien für die Speicherung von digital kodierten als auch von analogen Bildern."
+          "@value": "Dazu gehören sowohl transparente als auch lichtundurchlässige, mikrografische Medien."
+        },
+        {
+          "@language": "en",
+          "@value": "Includes both transparent and opaque micrographic media."
         },
         {
           "@language": "es",
-          "@value": "Incluye medios usados para almacenar tanto imágenes codificadas digitalmente como imágenes análogas."
+          "@value": "Incluye tanto medios micrográficos transparentes como opacos."
+        },
+        {
+          "@language": "zh",
+          "@value": "包括透明和不透明的缩微媒介。"
+        },
+        {
+          "@language": "fr",
+          "@value": "Comprend les deux médias microphotographiques, transparent et opaque."
         }
       ]
     },
     {
-      "@id": "http://rdaregistry.info/termList/RDAMediaType/1004",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "478"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "de",
-          "@value": "Medien, die zur Speicherung winziger Objekte verwendet werden, die für die Benutzung mithilfe eines Geräts wie z. B. ein Mikroskop konzipiert sind, das Details erkennen lässt, die für das bloße Auge nicht sichtbar sind. "
-        },
-        {
-          "@language": "en",
-          "@value": "Media used to store minute objects, designed for use with a device such as a microscope to reveal details invisible to the naked eye."
-        },
-        {
-          "@language": "es",
-          "@value": "Medios utilizados para almacenar objetos diminutos, diseñados para ser usados con aparatos tales como un microscopio que revela detalles invisibles a simple vista."
-        },
-        {
-          "@language": "fr",
-          "@value": "Média servant à emmagasiner des objets minuscules et conçu pour une utilisation au moyen d’un dispositif tel qu’un microscope, pour faire apparaître des détails invisibles à l’œil nu."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAMediaType"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "es",
-          "@value": "microscópicos"
-        },
-        {
-          "@language": "de",
-          "@value": "mikroskopisch"
-        },
-        {
-          "@language": "en",
-          "@value": "microscopic"
-        },
-        {
-          "@language": "fr",
-          "@value": "microscopique"
-        }
-      ]
+      "@id": "http://rdaregistry.info/termList/RDAMediaType",
+      "@type": "skos:ConceptScheme",
+      "dc:title": "RDA Media Type"
     },
     {
       "@id": "http://rdaregistry.info/termList/RDAMediaType/1005",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "en",
+          "@value": "Media used to store moving or still images, designed for use with a projection device such as a motion picture film projector, slide projector, or overhead projector."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储动态或静态图像的媒介，需与电影放映机、幻灯放映机或高射投影仪等投影设备配合使用。"
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "de",
+          "@value": "projizierbar"
+        },
+        {
+          "@language": "en",
+          "@value": "projected"
+        },
+        {
+          "@language": "es",
+          "@value": "proyectados"
+        },
+        {
+          "@language": "zh",
+          "@value": "投影"
+        },
+        {
+          "@language": "fr",
+          "@value": "projeté"
+        }
+      ],
       "reg:identifier": {
-        "@id": "479"
+        "@id": "http://metadataregistry.org/concepts/479"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
@@ -149,6 +182,10 @@
         {
           "@language": "es",
           "@value": "Medios utilizados para almacenar imágenes fijas o en movimiento, diseñados para usarse con aparatos tales como proyectores de película, proyectores de diapositivas o retroproyector."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储动态或静态图像的媒介，需与电影放映机、幻灯放映机或高射投影仪等投影设备配合使用。"
         }
       ],
       "skos:inScheme": {
@@ -170,52 +207,96 @@
         {
           "@language": "en",
           "@value": "projected"
+        },
+        {
+          "@language": "zh",
+          "@value": "投影"
         }
       ],
       "skos:scopeNote": [
         {
-          "@language": "es",
-          "@value": "Incluye medios diseñandos para proyectar imágenes tanto bidimensionales como tridimensionales."
+          "@language": "zh",
+          "@value": "包括二维或三维图像的投射媒介。"
         },
         {
           "@language": "fr",
           "@value": "Comprend tout média conçu pour projeter des images bidimensionnelles et tridimensionnelles."
         },
         {
-          "@language": "de",
-          "@value": "Dazu gehören sowohl Medien für die Projektion zweidimensionaler als auch dreidimensionaler Bilder."
-        },
-        {
           "@language": "en",
           "@value": "Includes media designed to project both two-dimensional and three-dimensional images."
+        },
+        {
+          "@language": "es",
+          "@value": "Incluye medios diseñandos para proyectar imágenes tanto bidimensionales como tridimensionales."
+        },
+        {
+          "@language": "de",
+          "@value": "Dazu gehören sowohl Medien für die Projektion zweidimensionaler als auch dreidimensionaler Bilder."
         }
       ]
     },
     {
-      "@id": "http://rdaregistry.info/termList/RDAMediaType/1006",
+      "@id": "http://rdaregistry.info/termList/RDAMediaType/1004",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "en",
+          "@value": "Media used to store minute objects, designed for use with a device such as a microscope to reveal details invisible to the naked eye."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储微小物体的媒介，需与显微镜等设备配合使用，才能看到肉眼不可见的细部。"
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "zh",
+          "@value": "显微"
+        },
+        {
+          "@language": "en",
+          "@value": "microscopic"
+        },
+        {
+          "@language": "de",
+          "@value": "mikroskopisch"
+        },
+        {
+          "@language": "es",
+          "@value": "microscópicos"
+        },
+        {
+          "@language": "fr",
+          "@value": "microscopique"
+        }
+      ],
       "reg:identifier": {
-        "@id": "480"
+        "@id": "http://metadataregistry.org/concepts/478"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
       "skos:definition": [
         {
-          "@language": "en",
-          "@value": "Media used to store pairs of still images, designed for use with a device such as a stereoscope or stereograph viewer to give the effect of three dimensions."
+          "@language": "zh",
+          "@value": "用于存储微小物体的媒介，需与显微镜等设备配合使用，才能看到肉眼不可见的细部。"
         },
         {
           "@language": "de",
-          "@value": "Medien, die zur Speicherung von Paaren von unbewegten Bildern verwendet werden, die für die Betrachtung mit einem Gerät wie z. B. einem Stereoskop oder einem stereografischen Betrachter konzipiert sind, um den Eindruck von Dreidimensionalität zu erzeugen."
+          "@value": "Medien, die zur Speicherung winziger Objekte verwendet werden, die für die Benutzung mithilfe eines Geräts wie z. B. ein Mikroskop konzipiert sind, das Details erkennen lässt, die für das bloße Auge nicht sichtbar sind."
+        },
+        {
+          "@language": "en",
+          "@value": "Media used to store minute objects, designed for use with a device such as a microscope to reveal details invisible to the naked eye."
         },
         {
           "@language": "es",
-          "@value": "Medios utilizados para almacenar pares de imágenes fijas, diseñados para usarse con aparatos tales como visores estereoscópicos o estereográficos para producir un efecto tridimensional."
+          "@value": "Medios utilizados para almacenar objetos diminutos, diseñados para ser usados con aparatos tales como un microscopio que revela detalles invisibles a simple vista."
         },
         {
           "@language": "fr",
-          "@value": "Média servant à emmagasiner des paires d’images fixes et conçu pour une utilisation au moyen d’un dispositif tel qu’un stéréoscope ou une visionneuse stéréoscopique pour donner l’impression des trois dimensions."
+          "@value": "Média servant à emmagasiner des objets minuscules et conçu pour une utilisation au moyen d’un dispositif tel qu’un microscope, pour faire apparaître des détails invisibles à l’œil nu."
         }
       ],
       "skos:inScheme": {
@@ -223,8 +304,159 @@
       },
       "skos:prefLabel": [
         {
+          "@language": "de",
+          "@value": "mikroskopisch"
+        },
+        {
+          "@language": "fr",
+          "@value": "microscopique"
+        },
+        {
           "@language": "en",
-          "@value": "stereographic"
+          "@value": "microscopic"
+        },
+        {
+          "@language": "es",
+          "@value": "microscópicos"
+        },
+        {
+          "@language": "zh",
+          "@value": "显微"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/RDAMediaType/1007",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "en",
+          "@value": "Media used to store content designed to be perceived directly through one or more of the human senses without the aid of an intermediating device."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储通过一种或多种人体感官无需借助中间设备的帮助直接感知的内容媒介。"
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "fr",
+          "@value": "sans médiation"
+        },
+        {
+          "@language": "en",
+          "@value": "unmediated"
+        },
+        {
+          "@language": "de",
+          "@value": "ohne Hilfsmittel zu benutzen"
+        },
+        {
+          "@language": "zh",
+          "@value": "无中介"
+        },
+        {
+          "@language": "es",
+          "@value": "sin mediación"
+        }
+      ],
+      "reg:identifier": {
+        "@id": "http://metadataregistry.org/concepts/481"
+      },
+      "reg:status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
+      },
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Media used to store content designed to be perceived directly through one or more of the human senses without the aid of an intermediating device."
+        },
+        {
+          "@language": "fr",
+          "@value": "Média servant à emmagasiner un contenu conçu pour être perçu directement par un ou plusieurs sens humains sans l’aide d’un dispositif de médiation."
+        },
+        {
+          "@language": "es",
+          "@value": "Medios utilizados para almacenar contenido diseñado para ser percibidos directamente mediante uno o más sentidos humanos sin la ayuda de un aparato intermediario."
+        },
+        {
+          "@language": "de",
+          "@value": "Medien, die zur Speicherung von Inhalten verwendet werden, die ohne Hilfsmittel direkt durch einen oder mehrere der menschlichen Sinne wahrgenommen werden können."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储通过一种或多种人体感官无需借助中间设备的帮助直接感知的内容媒介。"
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "http://rdaregistry.info/termList/RDAMediaType"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "es",
+          "@value": "sin mediación"
+        },
+        {
+          "@language": "en",
+          "@value": "unmediated"
+        },
+        {
+          "@language": "zh",
+          "@value": "无中介"
+        },
+        {
+          "@language": "fr",
+          "@value": "sans médiation"
+        },
+        {
+          "@language": "de",
+          "@value": "ohne Hilfsmittel zu benutzen"
+        }
+      ],
+      "skos:scopeNote": [
+        {
+          "@language": "fr",
+          "@value": "Comprend tout média à contenu visuel et/ou tactile produit selon des procédés tels que : impression, gravure, lithographie, etc. ; embossage, texturation, etc. ; ou bien encore au moyen de l’écriture à la main, du dessin, de la peinture, etc. Comprend également tout média servant à communiquer des formes tridimensionnelles telles que : sculptures, maquettes, etc."
+        },
+        {
+          "@language": "es",
+          "@value": "Incluye medios que tienen contenido producido mediante procesos tales como impresión, grabado, litografía, etc., repujado, texturización, etc., o por medios de escritura manual, dibujo, pintura, etc. También incluye medios usados para transmitir formas multidimensionales tales como escultura, modelos, etc."
+        },
+        {
+          "@language": "zh",
+          "@value": "包括通过印刷、雕刻、平版印刷、轧花、编织等方式制作的或是通过手工书写、绘图、绘画等手段展现的视觉和/或触摸内容的媒介，也包括诸如雕塑、模型等三维形式的媒介。"
+        },
+        {
+          "@language": "en",
+          "@value": "Includes media containing visual and/or tactile content produced using processes such as printing, engraving, lithography, etc., embossing, texturing, etc., or by means of handwriting, drawing, painting, etc. Also includes media used to convey three-dimensional forms such as sculptures, models, etc."
+        },
+        {
+          "@language": "en",
+          "@value": "Also includes media used to convey three-dimensional forms such as sculptures, models, etc."
+        },
+        {
+          "@language": "de",
+          "@value": "Dazu gehören Medien mit visuellem und/oder taktilem Inhalt, die mit bestimmten Verfahren wie z. B. Druck, Stich, Lithografie usw. oder Prägung, Texturierung usw. oder durch Handschrift, Zeichnen, Malen usw. hergestellt werden. Dazu gehören auch Medien, die dazu verwendet werden, dreidimensionale Formen wie Skulpturen oder Modelle usw. auszudrücken."
+        }
+      ]
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/RDAMediaType/1006",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "zh",
+          "@value": "用于存储成对静态图像的媒介，需与立体眼镜或立体浏览器等设备配合使用，以提供三维视觉效果。"
+        },
+        {
+          "@language": "en",
+          "@value": "Media used to store pairs of still images, designed for use with a device such as a stereoscope or stereograph viewer to give the effect of three dimensions."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "zh",
+          "@value": "立体"
         },
         {
           "@language": "de",
@@ -235,36 +467,40 @@
           "@value": "stéréoscopique"
         },
         {
+          "@language": "en",
+          "@value": "stereographic"
+        },
+        {
           "@language": "es",
           "@value": "estereográficos"
         }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAMediaType/1007",
-      "@type": "skos:Concept",
+      ],
       "reg:identifier": {
-        "@id": "481"
+        "@id": "http://metadataregistry.org/concepts/480"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
       "skos:definition": [
         {
+          "@language": "en",
+          "@value": "Media used to store pairs of still images, designed for use with a device such as a stereoscope or stereograph viewer to give the effect of three dimensions."
+        },
+        {
           "@language": "es",
-          "@value": "Medios utilizados para almacenar contenido diseñado para ser percibidos directamente mediante uno o más sentidos humanos sin la ayuda de un aparato intermediario."
+          "@value": "Medios utilizados para almacenar pares de imágenes fijas, diseñados para usarse con aparatos tales como visores estereoscópicos o estereográficos para producir un efecto tridimensional."
         },
         {
           "@language": "de",
-          "@value": "Medien, die zur Speicherung von Inhalten verwendet werden, die ohne Hilfsmittel direkt durch einen oder mehrere der menschlichen Sinne wahrgenommen werden können."
-        },
-        {
-          "@language": "en",
-          "@value": "Media used to store content designed to be perceived directly through one or more of the human senses without the aid of an intermediating device."
+          "@value": "Medien, die zur Speicherung von Paaren von unbewegten Bildern verwendet werden, die für die Betrachtung mit einem Gerät wie z. B. einem Stereoskop oder einem stereografischen Betrachter konzipiert sind, um den Eindruck von Dreidimensionalität zu erzeugen."
         },
         {
           "@language": "fr",
-          "@value": "Média servant à emmagasiner un contenu conçu pour être perçu directement par un ou plusieurs sens humains sans l’aide d’un dispositif de médiation."
+          "@value": "Média servant à emmagasiner des paires d’images fixes et conçu pour une utilisation au moyen d’un dispositif tel qu’un stéréoscope ou une visionneuse stéréoscopique pour donner l’impression des trois dimensions."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储成对静态图像的媒介，需与立体眼镜或立体浏览器等设备配合使用，以提供三维视觉效果。"
         }
       ],
       "skos:inScheme": {
@@ -273,62 +509,68 @@
       "skos:prefLabel": [
         {
           "@language": "de",
-          "@value": "ohne Hilfsmittel zu benutzen"
-        },
-        {
-          "@language": "fr",
-          "@value": "sans médiation"
-        },
-        {
-          "@language": "en",
-          "@value": "unmediated"
+          "@value": "stereografisch"
         },
         {
           "@language": "es",
-          "@value": "sin mediación"
-        }
-      ],
-      "skos:scopeNote": [
+          "@value": "estereográficos"
+        },
         {
-          "@language": "es",
-          "@value": "Incluye medios que tienen contenido producido mediante procesos tales como impresión, grabado, litografía, etc., repujado, texturización, etc., o por medios de escritura manual, dibujo, pintura, etc. También incluye medios usados para transmitir formas multidimensionales tales como escultura, modelos, etc."
+          "@language": "zh",
+          "@value": "立体"
         },
         {
           "@language": "en",
-          "@value": "Also includes media used to convey three-dimensional forms such as sculptures, models, etc."
+          "@value": "stereographic"
         },
         {
           "@language": "fr",
-          "@value": "Comprend tout média à contenu visuel et/ou tactile produit selon des procédés tels que : impression, gravure, lithographie, etc. ; embossage, texturation, etc. ; ou bien encore au moyen de l’écriture à la main, du dessin, de la peinture, etc. Comprend également tout média servant à communiquer des formes tridimensionnelles telles que : sculptures, maquettes, etc."
-        },
-        {
-          "@language": "en",
-          "@value": "Includes media containing visual and/or tactile content produced using processes such as printing, engraving, lithography, etc., embossing, texturing, etc., or by means of handwriting, drawing, painting, etc. Also includes media used to convey three-dimensional forms such as sculptures, models, etc."
-        },
-        {
-          "@language": "de",
-          "@value": "Dazu gehören Medien mit visuellem und/oder taktilem Inhalt, die mit bestimmten Verfahren wie z. B. Druck, Stich, Lithografie usw. oder Prägung, Texturierung usw. oder durch Handschrift, Zeichnen, Malen usw. hergestellt werden. Dazu gehören auch Medien, die dazu verwendet werden, dreidimensionale Formen wie Skulpturen oder Modelle usw. auszudrücken."
+          "@value": "stéréoscopique"
         }
       ]
     },
     {
       "@id": "http://rdaregistry.info/termList/RDAMediaType/1001",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "zh",
+          "@value": "用于存储录音的媒介，需与唱机、录音机、CD播放器或MP3播放器等播放设备配合使用。"
+        },
+        {
+          "@language": "en",
+          "@value": "Media used to store recorded sound, designed for use with a playback device such as a turntable, audiocassette player, CD player, or MP3 player."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "de",
+          "@value": "audio"
+        },
+        {
+          "@language": "zh",
+          "@value": "音频"
+        },
+        {
+          "@language": "en",
+          "@value": "audio"
+        },
+        {
+          "@language": "es",
+          "@value": "audio"
+        },
+        {
+          "@language": "fr",
+          "@value": "audio"
+        }
+      ],
       "reg:identifier": {
-        "@id": "475"
+        "@id": "http://metadataregistry.org/concepts/475"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
       "skos:definition": [
-        {
-          "@language": "es",
-          "@value": "Medios utilizados para almacenar registro sonoro, diseñados para usarse en un aparato tal como un tornamesa, audiocasetera, equipo de CD o MP3."
-        },
-        {
-          "@language": "fr",
-          "@value": "Média servant à emmagasiner du son enregistré et conçu pour une utilisation au moyen d’un dispositif de lecture tel qu’une platine, un lecteur de cassette audio, un lecteur de CD ou un lecteur MP3."
-        },
         {
           "@language": "de",
           "@value": "Medien, die zur Speicherung von aufgenommenem Ton verwendet werden, und die für die Benutzung mit einem Wiedergabegerät wie z. B. Plattenspieler, Audiokassetten-Player, CD-Player oder MP3-Player konzipiert sind."
@@ -336,16 +578,24 @@
         {
           "@language": "en",
           "@value": "Media used to store recorded sound, designed for use with a playback device such as a turntable, audiocassette player, CD player, or MP3 player."
+        },
+        {
+          "@language": "es",
+          "@value": "Medios utilizados para almacenar registro sonoro, diseñados para usarse en un aparato tal como un tornamesa, audiocasetera, equipo de CD o MP3."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储录音的媒介，需与唱机、录音机、CD播放器或MP3播放器等播放设备配合使用。"
+        },
+        {
+          "@language": "fr",
+          "@value": "Média servant à emmagasiner du son enregistré et conçu pour une utilisation au moyen d’un dispositif de lecture tel qu’une platine, un lecteur de cassette audio, un lecteur de CD ou un lecteur MP3."
         }
       ],
       "skos:inScheme": {
         "@id": "http://rdaregistry.info/termList/RDAMediaType"
       },
       "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "audio"
-        },
         {
           "@language": "de",
           "@value": "audio"
@@ -355,14 +605,22 @@
           "@value": "audio"
         },
         {
+          "@language": "en",
+          "@value": "audio"
+        },
+        {
           "@language": "fr",
           "@value": "audio"
+        },
+        {
+          "@language": "zh",
+          "@value": "音频"
         }
       ],
       "skos:scopeNote": [
         {
-          "@language": "de",
-          "@value": "Dazu gehören sowohl Medien für die Speicherung von digital kodiertem als auch von analogem Ton."
+          "@language": "en",
+          "@value": "Includes media used to store digitally encoded as well as analog sound."
         },
         {
           "@language": "es",
@@ -373,8 +631,123 @@
           "@value": "Comprend tout média servant à emmagasiner du son encodé numériquement aussi bien que du son analogique."
         },
         {
+          "@language": "de",
+          "@value": "Dazu gehören sowohl Medien für die Speicherung von digital kodiertem als auch von analogem Ton."
+        },
+        {
+          "@language": "zh",
+          "@value": "包括用于存储数码与模拟声音的媒介。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/RDAMediaType/1003",
+      "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "zh",
+          "@value": "用于存储电子文件的媒介，需与计算机配合使用。"
+        },
+        {
           "@language": "en",
-          "@value": "Includes media used to store digitally encoded as well as analog sound."
+          "@value": "Media used to store electronic files, designed for use with a computer."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "fr",
+          "@value": "informatique"
+        },
+        {
+          "@language": "de",
+          "@value": "Computermedien"
+        },
+        {
+          "@language": "es",
+          "@value": "computadora"
+        },
+        {
+          "@language": "en",
+          "@value": "computer"
+        },
+        {
+          "@language": "zh",
+          "@value": "计算机"
+        }
+      ],
+      "reg:identifier": {
+        "@id": "http://metadataregistry.org/concepts/477"
+      },
+      "reg:status": {
+        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
+      },
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Media used to store electronic files, designed for use with a computer."
+        },
+        {
+          "@language": "fr",
+          "@value": "Média servant à emmagasiner des fichiers électroniques et conçu pour une utilisation au moyen d’un ordinateur."
+        },
+        {
+          "@language": "de",
+          "@value": "Medien, die zur Speicherung von elektronischen Dateien verwendet werden, die für die Computeranwendung konzipiert sind."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储电子文件的媒介，需与计算机配合使用。"
+        },
+        {
+          "@language": "es",
+          "@value": "Medios utilizados para almacenar archivos electrónicos, diseñados para usarse en una computadora."
+        }
+      ],
+      "skos:inScheme": {
+        "@id": "http://rdaregistry.info/termList/RDAMediaType"
+      },
+      "skos:prefLabel": [
+        {
+          "@language": "es",
+          "@value": "computadora"
+        },
+        {
+          "@language": "zh",
+          "@value": "计算机"
+        },
+        {
+          "@language": "de",
+          "@value": "Computermedien"
+        },
+        {
+          "@language": "fr",
+          "@value": "informatique"
+        },
+        {
+          "@language": "en",
+          "@value": "computer"
+        }
+      ],
+      "skos:scopeNote": [
+        {
+          "@language": "de",
+          "@value": "Dazu gehören sowohl Medien, die per Fernzugriff über Dateiserver aufgerufen werden als auch Medien im Direktzugriff, wie z. B. Computerbänder, Disketten, CD-ROMs und Festplatten."
+        },
+        {
+          "@language": "en",
+          "@value": "Includes media that are accessed remotely through file servers as well as direct-access media such as computer tapes and discs."
+        },
+        {
+          "@language": "es",
+          "@value": "Incluye medios a los que se accede en forma remota mediante el uso de servidores de archivos y de medios de acceso directo como cintas y discos para computador."
+        },
+        {
+          "@language": "zh",
+          "@value": "包括诸如磁带和光盘这样的直接访问媒介，也包括通过文件服务器远程访问的媒介。"
+        },
+        {
+          "@language": "fr",
+          "@value": "Comprend tout média accessible à distance par serveur aussi bien que tout média en accès direct tel que des bandes et des disques informatiques."
         }
       ]
     },
@@ -387,77 +760,42 @@
       }
     },
     {
-      "@id": "http://rdaregistry.info/termList/RDAMediaType/1003",
+      "@id": "http://rdaregistry.info/termList/RDAMediaType/1008",
       "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "477"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "fr",
-          "@value": "Média servant à emmagasiner des fichiers électroniques et conçu pour une utilisation au moyen d’un ordinateur."
-        },
-        {
-          "@language": "es",
-          "@value": "Medios utilizados para almacenar archivos electrónicos, diseñados para usarse en una computadora."
-        },
+      "rdakit:ToolkitDefinition": [
         {
           "@language": "en",
-          "@value": "Media used to store electronic files, designed for use with a computer."
+          "@value": "Media used to store moving or still images, designed for use with a playback device such as a videocassette player or DVD player."
         },
         {
-          "@language": "de",
-          "@value": "Medien, die zur Speicherung von elektronischen Dateien verwendet werden, die für die Computeranwendung konzipiert sind."
+          "@language": "zh",
+          "@value": "用于存储动态或静态图像的媒介，需与录像带播放机或DVD播放机等播放设备配合使用。"
         }
       ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAMediaType"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "computer"
-        },
+      "rdakit:ToolkitLabel": [
         {
           "@language": "fr",
-          "@value": "informatique"
-        },
-        {
-          "@language": "de",
-          "@value": "Computermedien"
+          "@value": "vidéo"
         },
         {
           "@language": "es",
-          "@value": "computadora"
+          "@value": "video"
+        },
+        {
+          "@language": "en",
+          "@value": "video"
+        },
+        {
+          "@language": "de",
+          "@value": "video"
+        },
+        {
+          "@language": "zh",
+          "@value": "视频"
         }
       ],
-      "skos:scopeNote": [
-        {
-          "@language": "es",
-          "@value": "Incluye medios a los que se accede en forma remota mediante el uso de servidores de archivos y de medios de acceso directo como cintas y discos para computador."
-        },
-        {
-          "@language": "fr",
-          "@value": "Comprend tout média accessible à distance par serveur aussi bien que tout média en accès direct tel que des bandes et des disques informatiques."
-        },
-        {
-          "@language": "de",
-          "@value": "Dazu gehören sowohl Medien, die per Fernzugriff über Dateiserver aufgerufen werden als auch Medien im Direktzugriff, wie z. B. Computerbänder, Disketten, CD-ROMs und Festplatten."
-        },
-        {
-          "@language": "en",
-          "@value": "Includes media that are accessed remotely through file servers as well as direct-access media such as computer tapes and discs."
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAMediaType/1002",
-      "@type": "skos:Concept",
       "reg:identifier": {
-        "@id": "476"
+        "@id": "http://metadataregistry.org/concepts/482"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
@@ -465,19 +803,23 @@
       "skos:definition": [
         {
           "@language": "de",
-          "@value": "Medien, die zur Speicherung von verkleinerten Bildern verwendet werden, die für das menschliche Auge nicht lesbar sind und die für die Benutzung mithilfe von Geräten wie z. B. Mikrofilm- oder Mikrofiche-Lesegeräten konzipiert sind."
-        },
-        {
-          "@language": "en",
-          "@value": "Media used to store reduced-size images not readable to the human eye, designed for use with a device such as a microfilm or microfiche reader."
+          "@value": "Medien, die zur Speicherung von bewegten oder unbewegten Bildern verwendet werden, und die für die Benutzung mit einem Wiedergabegerät wie zum Beispiel einem Videokassetten- oder DVD-Player konzipiert sind."
         },
         {
           "@language": "es",
-          "@value": "Medios utilizados para almacenar imágenes de tamaños reducidos no leíbles por el ojo humano, diseñados para ser usados con aparatos tales como lectores de micropelícula o microficha."
+          "@value": "Medios utilizados para almacenar imágenes fijas o en movimiento, diseñados para usarse con aparatos de reproducción tales como videocaseteras o lectores de DVD."
         },
         {
           "@language": "fr",
-          "@value": "Média servant à emmagasiner des images de taille réduite non lisibles à l’œil nu, et conçu pour une utilisation au moyen d’un dispositif tel que : lecteur de microfilm ou de microfiche."
+          "@value": "Média servant à emmagasiner des images animées ou fixes et conçu pour une utilisation au moyen d’un dispositif de lecture tel qu’un lecteur de cassette vidéo ou de DVD."
+        },
+        {
+          "@language": "zh",
+          "@value": "用于存储动态或静态图像的媒介，需与录像带播放机或DVD播放机等播放设备配合使用。"
+        },
+        {
+          "@language": "en",
+          "@value": "Media used to store moving or still images, designed for use with a playback device such as a videocassette player or DVD player."
         }
       ],
       "skos:inScheme": {
@@ -485,45 +827,48 @@
       },
       "skos:prefLabel": [
         {
-          "@language": "es",
-          "@value": "microformas"
-        },
-        {
-          "@language": "de",
-          "@value": "Mikroform"
+          "@language": "zh",
+          "@value": "视频"
         },
         {
           "@language": "en",
-          "@value": "microform"
+          "@value": "video"
+        },
+        {
+          "@language": "de",
+          "@value": "video"
+        },
+        {
+          "@language": "es",
+          "@value": "video"
         },
         {
           "@language": "fr",
-          "@value": "microforme"
+          "@value": "vidéo"
         }
       ],
       "skos:scopeNote": [
         {
+          "@language": "en",
+          "@value": "Includes media used to store digitally encoded as well as analog images."
+        },
+        {
           "@language": "es",
-          "@value": "Incluye tanto medios micrográficos transparentes como opacos."
+          "@value": "Incluye medios usados para almacenar tanto imágenes codificadas digitalmente como imágenes análogas."
         },
         {
           "@language": "fr",
-          "@value": "Comprend les deux médias microphotographiques, transparent et opaque."
+          "@value": "Comprend tout média servant à emmagasiner des images encodées numériquement aussi bien que des images analogiques."
         },
         {
-          "@language": "en",
-          "@value": "Includes both transparent and opaque micrographic media."
+          "@language": "zh",
+          "@value": "包括用于存储数码或模拟图像的媒介。"
         },
         {
           "@language": "de",
-          "@value": "Dazu gehören sowohl transparente als auch lichtundurchlässige, mikrografische Medien."
+          "@value": "Dazu gehören sowohl Medien für die Speicherung von digital kodierten als auch von analogen Bildern."
         }
       ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAMediaType",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "RDA Media Type"
     }
   ]
 }

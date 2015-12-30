@@ -1,34 +1,67 @@
 {
   "@context": {
     "dc": "http://purl.org/dc/elements/1.1/",
+    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/schema/registry/",
+    "reg": "http://metadataregistry.org/uri/profile/RegAp/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "http://rdaregistry.info/termList/statIdentification/1001",
+      "@id": "http://rdaregistry.info/termList/statIdentification/1002",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "en",
+          "@value": "Status of identification for an authorized access point when the data is insufficient to establish an authorized access point representing the entity."
+        },
+        {
+          "@language": "es",
+          "@value": "Estado de identificación de un punto de acceso cuando los datos son insuficientes para establecer un punto de acceso autorizado que represente la entidad."
+        },
+        {
+          "@language": "fr",
+          "@value": "Statut de l’identification d’un point d’accès lorsque les données sont insuffisantes pour établir un point d’accès autorisé représentant une entité."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "en",
+          "@value": "provisional"
+        },
+        {
+          "@language": "fr",
+          "@value": "provisoire"
+        },
+        {
+          "@language": "es",
+          "@value": "provisional"
+        }
+      ],
       "reg:identifier": {
-        "@id": "1008"
+        "@id": "http://metadataregistry.org/concepts/1009"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
       "skos:definition": [
         {
-          "@language": "en",
-          "@value": "Status of identification for an authorized access point when the data is complete."
+          "@language": "es",
+          "@value": "Estado de identificación de un punto de acceso cuando los datos son insuficientes para establecer un punto de acceso autorizado que represente la entidad."
         },
         {
           "@language": "de",
-          "@value": "Status der Identifizierung für den normierten Sucheinstieg, wenn die Daten vollständig sind."
+          "@value": "Status der Identifizierung für einen Sucheinstieg, wenn die Daten nicht ausreichen, um einen normierten Sucheinstieg zu etablieren, der die Entität repräsentiert."
         },
         {
           "@language": "fr",
-          "@value": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont complètes."
+          "@value": "Statut de l’identification d’un point d’accès lorsque les données sont insuffisantes pour établir un point d’accès autorisé représentant une entité."
+        },
+        {
+          "@language": "en",
+          "@value": "Status of identification for an authorized access point when the data is insufficient to establish an authorized access point representing the entity."
         }
       ],
       "skos:inScheme": {
@@ -36,33 +69,65 @@
       },
       "skos:prefLabel": [
         {
+          "@language": "en",
+          "@value": "provisional"
+        },
+        {
           "@language": "de",
-          "@value": "vollständig etabliert"
+          "@value": "provisorisch"
         },
         {
           "@language": "fr",
-          "@value": "complètement établi "
-        },
-        {
-          "@language": "en",
-          "@value": "fully established"
+          "@value": "provisoire"
         },
         {
           "@language": "es",
-          "@value": "establecido en forma completa"
+          "@value": "provisional"
         }
       ]
     },
     {
       "@id": "http://rdaregistry.info/termList/statIdentification/1003",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "es",
+          "@value": "Estado de identificación de un punto de acceso autorizado cuando los datos son tomados de una descripción sin el recurso descrito a mano."
+        },
+        {
+          "@language": "fr",
+          "@value": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont tirées d’une description faite sans avoir la ressource décrite en main."
+        },
+        {
+          "@language": "en",
+          "@value": "Status of identification for an authorized access point when the data is taken from a description without the resource described in hand."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "en",
+          "@value": "preliminary"
+        },
+        {
+          "@language": "es",
+          "@value": "preliminar"
+        },
+        {
+          "@language": "fr",
+          "@value": "préliminaire"
+        }
+      ],
       "reg:identifier": {
-        "@id": "1010"
+        "@id": "http://metadataregistry.org/concepts/1010"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
       "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Status of identification for an authorized access point when the data is taken from a description without the resource described in hand."
+        },
         {
           "@language": "es",
           "@value": "Estado de identificación de un punto de acceso autorizado cuando los datos son tomados de una descripción sin el recurso descrito a mano."
@@ -74,10 +139,6 @@
         {
           "@language": "de",
           "@value": "Status der Identifizierung für den normierten Sucheinstieg, wenn die Daten aus einer Beschreibung entnommen sind, ohne dass die beschriebene Ressource vorliegt."
-        },
-        {
-          "@language": "en",
-          "@value": "Status of identification for an authorized access point when the data is taken from a description without the resource described in hand."
         }
       ],
       "skos:inScheme": {
@@ -89,12 +150,12 @@
           "@value": "preliminar"
         },
         {
-          "@language": "en",
-          "@value": "preliminary"
-        },
-        {
           "@language": "fr",
           "@value": "préliminaire"
+        },
+        {
+          "@language": "en",
+          "@value": "preliminary"
         },
         {
           "@language": "de",
@@ -103,30 +164,50 @@
       ]
     },
     {
-      "@id": "http://rdaregistry.info/termList/statIdentification/1002",
+      "@id": "http://rdaregistry.info/termList/statIdentification/1001",
       "@type": "skos:Concept",
+      "rdakit:ToolkitDefinition": [
+        {
+          "@language": "fr",
+          "@value": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont complètes."
+        },
+        {
+          "@language": "en",
+          "@value": "Status of identification for an authorized access point when the data is complete."
+        }
+      ],
+      "rdakit:ToolkitLabel": [
+        {
+          "@language": "es",
+          "@value": "establecido en forma completa"
+        },
+        {
+          "@language": "fr",
+          "@value": "complètement établi"
+        },
+        {
+          "@language": "en",
+          "@value": "fully established"
+        }
+      ],
       "reg:identifier": {
-        "@id": "1009"
+        "@id": "http://metadataregistry.org/concepts/1008"
       },
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
       "skos:definition": [
         {
-          "@language": "de",
-          "@value": "Status der Identifizierung für einen Sucheinstieg, wenn die Daten nicht ausreichen, um einen normierten Sucheinstieg zu etablieren, der die Entität repräsentiert."
+          "@language": "fr",
+          "@value": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont complètes."
         },
         {
-          "@language": "es",
-          "@value": "Estado de identificación de un punto de acceso cuando los datos son insuficientes para establecer un punto de acceso autorizado que represente la entidad."
+          "@language": "de",
+          "@value": "Status der Identifizierung für den normierten Sucheinstieg, wenn die Daten vollständig sind."
         },
         {
           "@language": "en",
-          "@value": "Status of identification for an authorized access point when the data is insufficient to establish an authorized access point representing the entity."
-        },
-        {
-          "@language": "fr",
-          "@value": "Statut de l’identification d’un point d’accès lorsque les données sont insuffisantes pour établir un point d’accès autorisé représentant une entité."
+          "@value": "Status of identification for an authorized access point when the data is complete."
         }
       ],
       "skos:inScheme": {
@@ -135,21 +216,26 @@
       "skos:prefLabel": [
         {
           "@language": "fr",
-          "@value": "provisoire"
-        },
-        {
-          "@language": "en",
-          "@value": "provisional"
-        },
-        {
-          "@language": "de",
-          "@value": "provisorisch"
+          "@value": "complètement établi"
         },
         {
           "@language": "es",
-          "@value": "provisional"
+          "@value": "establecido en forma completa"
+        },
+        {
+          "@language": "de",
+          "@value": "vollständig etabliert"
+        },
+        {
+          "@language": "en",
+          "@value": "fully established"
         }
       ]
+    },
+    {
+      "@id": "http://rdaregistry.info/termList/statIdentification",
+      "@type": "skos:ConceptScheme",
+      "dc:title": "RDA Status of Identification"
     },
     {
       "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -158,11 +244,6 @@
         "@language": "en",
         "@value": "Published"
       }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/statIdentification",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "RDA Status of Identification"
     }
   ]
 }
