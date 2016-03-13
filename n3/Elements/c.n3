@@ -1,76 +1,121 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix status: <http://metadataregistry.org/uri/RegStatus/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://rdaregistry.info/Elements/c/C10001> a owl:Class ;
-    rdfs:label "Work"@en ;
+<http://rdaregistry.info/Elements/c/C10001> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "Work"@en,
+        "Œuvre"@fr ;
+    rdakit:toolkitDefinition "A distinct intellectual or artistic creation (i.e., the intellectual or artistic content)."@en,
+        "Création intellectuelle ou artistique déterminée (c’est-à-dire le contenu intellectuel ou artistique)."@fr ;
+    rdakit:toolkitLabel "Work"@en,
+        "Œuvre"@fr ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/c/Work.en> ;
     reg:name "Work"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/c/> ;
-    skos:definition "A distinct intellectual or artistic creation (i.e., the intellectual or artistic content)."@en .
+    skos:definition "A distinct intellectual or artistic creation (i.e., the intellectual or artistic content)."@en,
+        "Création intellectuelle ou artistique déterminée (c’est-à-dire le contenu intellectuel ou artistique)."@fr .
 
-<http://rdaregistry.info/Elements/c/C10003> a owl:Class ;
-    rdfs:label "Item"@en ;
+<http://rdaregistry.info/Elements/c/C10003> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "Item"@en,
+        "Item"@fr ;
+    rdakit:toolkitDefinition "A single exemplar or instance of a manifestation."@en,
+        "Exemplaire isolé ou occurrence d’une manifestation."@fr ;
+    rdakit:toolkitLabel "Item"@en,
+        "Item"@fr ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/c/Item.en> ;
     reg:name "Item"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/c/> ;
-    skos:definition "A single exemplar or instance of a manifestation."@en .
+    skos:definition "A single exemplar or instance of a manifestation."@en,
+        "Exemplaire isolé ou occurrence d’une manifestation."@fr .
 
-<http://rdaregistry.info/Elements/c/C10006> a owl:Class ;
-    rdfs:label "Expression"@en ;
+<http://rdaregistry.info/Elements/c/C10006> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "Expression"@en,
+        "Expression"@fr ;
+    rdakit:toolkitDefinition "The intellectual or artistic realization of a work in the form of alpha-numeric, musical or choreographic notation, sound, image, object, movement, etc., or any combination of such forms."@en,
+        "La réalisation intellectuelle ou artistique d’une œuvre sous la forme d’une notation alphanumérique, musicale ou chorégraphique, de son, d’image, d’objet, de mouvement, etc. ou de toute combinaison de ces formes."@fr ;
+    rdakit:toolkitLabel "Expression"@en,
+        "Expression"@fr ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/c/Expression.en> ;
     reg:name "Expression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/c/> ;
-    skos:definition "The intellectual or artistic realization of a work in the form of alpha-numeric, musical or choreographic notation, sound, image, object, movement, etc., or any combination of such forms."@en .
+    skos:definition "The intellectual or artistic realization of a work in the form of alpha-numeric, musical or choreographic notation, sound, image, object, movement, etc., or any combination of such forms."@en,
+        "La réalisation intellectuelle ou artistique d’une œuvre sous la forme d’une notation alphanumérique, musicale ou chorégraphique, de son, d’image, d’objet, de mouvement, etc. ou de toute combinaison de ces formes."@fr .
 
-<http://rdaregistry.info/Elements/c/C10007> a owl:Class ;
-    rdfs:label "Manifestation"@en ;
+<http://rdaregistry.info/Elements/c/C10007> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "Manifestation"@en,
+        "Manifestation"@fr ;
+    rdakit:toolkitDefinition "The physical embodiment of an expression of a work."@en,
+        "La matérialisation d’une expression d’une œuvre."@fr ;
+    rdakit:toolkitLabel "Manifestation"@en,
+        "Manifestation"@fr ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/c/Manifestation.en> ;
     reg:name "Manifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/c/> ;
-    skos:definition "The physical embodiment of an expression of a work."@en .
+    skos:definition "The physical embodiment of an expression of a work."@en,
+        "La matérialisation d’une expression d’une œuvre."@fr .
 
-<http://rdaregistry.info/Elements/c/C10004> a owl:Class ;
-    rdfs:label "Person"@en ;
+<http://rdaregistry.info/Elements/c/C10004> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "Person"@en,
+        "Personne"@fr ;
+    rdakit:toolkitDefinition "An individual or an identity established by an individual (either alone or in collaboration with one or more other individuals)."@en,
+        "Individu ou identité établie par un individu (seul ou en collaboration avec un ou plusieurs autres individus)."@fr ;
+    rdakit:toolkitLabel "Person"@en,
+        "Personne"@fr ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/c/Person.en> ;
     reg:name "Person"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/c/> ;
     rdfs:subClassOf <http://rdaregistry.info/Elements/c/C10002> ;
-    skos:definition "An individual or an identity established by an individual (either alone or in collaboration with one or more other individuals)."@en .
+    skos:definition "An individual or an identity established by an individual (either alone or in collaboration with one or more other individuals)."@en,
+        "Individu ou identité établie par un individu (seul ou en collaboration avec un ou plusieurs autres individus)."@fr .
 
-<http://rdaregistry.info/Elements/c/C10005> a owl:Class ;
-    rdfs:label "Corporate body"@en ;
+<http://rdaregistry.info/Elements/c/C10005> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "Corporate body"@en,
+        "Collectivité"@fr ;
+    rdakit:toolkitDefinition "An organization or group of persons and/or organizations that is identified by a particular name and that acts, or may act, as a unit."@en,
+        "Organisation, ou groupe de personnes et/ou d’organisations, qui est identifiée par un nom particulier et qui agit ou peut agir comme une unité."@fr ;
+    rdakit:toolkitLabel "Corporate body"@en,
+        "Collectivité"@fr ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/c/CorporateBody.en> ;
     reg:name "CorporateBody"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/c/> ;
     rdfs:subClassOf <http://rdaregistry.info/Elements/c/C10002> ;
-    skos:definition "An organization or group of persons and/or organizations that is identified by a particular name and that acts, or may act, as a unit."@en .
+    skos:definition "An organization or group of persons and/or organizations that is identified by a particular name and that acts, or may act, as a unit."@en,
+        "Organisation, ou groupe de personnes et/ou d’organisations, qui est identifiée par un nom particulier et qui agit ou peut agir comme une unité."@fr .
 
-<http://rdaregistry.info/Elements/c/C10008> a owl:Class ;
-    rdfs:label "Family"@en ;
+<http://rdaregistry.info/Elements/c/C10008> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "Family"@en,
+        "Famille"@fr ;
+    rdakit:toolkitDefinition "Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family."@en,
+        "Deux ou plusieurs personnes liées par la naissance, le mariage, l’adoption, l’union civile ou tout autre statut légal de même ordre ou bien des personnes qui, pour toute autre raison, se présentent elles-mêmes comme une famille."@fr ;
+    rdakit:toolkitLabel "Family"@en,
+        "Famille"@fr ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/c/Family.en> ;
     reg:name "Family"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/c/> ;
     rdfs:subClassOf <http://rdaregistry.info/Elements/c/C10002> ;
-    skos:definition "Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family."@en .
+    skos:definition "Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family."@en,
+        "Deux ou plusieurs personnes liées par la naissance, le mariage, l’adoption, l’union civile ou tout autre statut légal de même ordre ou bien des personnes qui, pour toute autre raison, se présentent elles-mêmes comme une famille."@fr .
 
-<http://rdaregistry.info/Elements/c/C10002> a owl:Class ;
-    rdfs:label "Agent"@en ;
+<http://rdaregistry.info/Elements/c/C10002> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "Agent"@en,
+        "Agent"@fr ;
+    rdakit:toolkitDefinition "A person, family, or corporate body."@en,
+        "Personne, famille ou collectivité."@fr ;
+    rdakit:toolkitLabel "Agent"@en,
+        "Agent"@fr ;
     reg:hasSubClass <http://rdaregistry.info/Elements/c/C10004>,
         <http://rdaregistry.info/Elements/c/C10005>,
         <http://rdaregistry.info/Elements/c/C10008> ;
@@ -78,7 +123,8 @@
     reg:name "Agent"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/c/> ;
-    skos:definition "A person, family, or corporate body."@en .
+    skos:definition "A person, family, or corporate body."@en,
+        "Personne, famille ou collectivité."@fr .
 
 <http://metadataregistry.org/uri/RegStatus/1001> a skos:Concept ;
     skos:prefLabel "Published"@en .

@@ -4,18 +4,31 @@
     "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/RegAp/",
+    "reg": "http://metadataregistry.org/uri/profile/regap/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
+      "@id": "http://rdaregistry.info/termList/AspectRatio/",
+      "@type": "skos:ConceptScheme",
+      "dc:title": "RDA Aspect Ratio"
+    },
+    {
       "@id": "http://rdaregistry.info/termList/AspectRatio/1001",
       "@type": "skos:Concept",
-      "rdakit:ToolkitDefinition": [
+      "rdakit:toolkitDefinition": [
         {
           "@language": "de",
           "@value": "Bildformat einer Bewegtbildressource von weniger als 1.5:1."
+        },
+        {
+          "@language": "zh",
+          "@value": "动态图像资源的宽高比小于1.5：1。"
+        },
+        {
+          "@language": "es",
+          "@value": "Proporción dimensional de un recurso de imagen en movimiento menor que 1.5:1."
         },
         {
           "@language": "en",
@@ -24,28 +37,28 @@
         {
           "@language": "fr",
           "@value": "Format de l’image d’une ressource d’images animées inférieur à 1,5:1."
-        },
-        {
-          "@language": "es",
-          "@value": "Proporción dimensional de un recurso de imagen en movimiento menor que 1.5:1."
         }
       ],
-      "rdakit:ToolkitLabel": [
+      "rdakit:toolkitLabel": [
         {
-          "@language": "fr",
-          "@value": "plein écran"
+          "@language": "en",
+          "@value": "full screen"
+        },
+        {
+          "@language": "zh",
+          "@value": "全屏"
         },
         {
           "@language": "de",
           "@value": "Vollbild"
         },
         {
-          "@language": "en",
-          "@value": "full screen"
-        },
-        {
           "@language": "es",
           "@value": "pantalla completa"
+        },
+        {
+          "@language": "fr",
+          "@value": "plein écran"
         }
       ],
       "reg:identifier": {
@@ -54,16 +67,10 @@
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "fullscreen"
-        },
-        {
-          "@language": "en",
-          "@value": "full-screen"
-        }
-      ],
+      "skos:altLabel": {
+        "@language": "en",
+        "@value": "full-screen"
+      },
       "skos:definition": [
         {
           "@language": "fr",
@@ -78,58 +85,62 @@
           "@value": "Proporción dimensional de un recurso de imagen en movimiento menor que 1.5:1."
         },
         {
+          "@language": "zh",
+          "@value": "动态图像资源的宽高比小于1.5：1。"
+        },
+        {
           "@language": "en",
           "@value": "Aspect ratio for a moving image resource of less than 1.5:1."
         }
       ],
       "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/AspectRatio"
+        "@id": "http://rdaregistry.info/termList/AspectRatio/"
       },
       "skos:prefLabel": [
         {
-          "@language": "fr",
-          "@value": "plein écran"
-        },
-        {
-          "@language": "en",
-          "@value": "full screen"
+          "@language": "es",
+          "@value": "pantalla completa"
         },
         {
           "@language": "de",
           "@value": "Vollbild"
         },
         {
-          "@language": "es",
-          "@value": "pantalla completa"
+          "@language": "zh",
+          "@value": "全屏"
+        },
+        {
+          "@language": "en",
+          "@value": "full screen"
+        },
+        {
+          "@language": "fr",
+          "@value": "plein écran"
         }
       ]
     },
     {
       "@id": "http://rdaregistry.info/termList/AspectRatio/1002",
       "@type": "skos:Concept",
-      "rdakit:ToolkitDefinition": [
-        {
-          "@language": "de",
-          "@value": "Bildformat einer Bewegtbildressource von 1.5:1 oder höher."
-        },
+      "rdakit:toolkitDefinition": [
         {
           "@language": "en",
           "@value": "Aspect ratio for a moving image resource of 1.5:1 or greater."
         },
         {
+          "@language": "zh",
+          "@value": "动态图像的宽高比为1.5:1或更大。"
+        },
+        {
           "@language": "fr",
           "@value": "Format de l’image d’une ressource d’images animées égal ou supérieur à 1,5:1."
-        }
-      ],
-      "rdakit:ToolkitLabel": [
+        },
         {
           "@language": "de",
-          "@value": "Breitbild"
-        },
-        {
-          "@language": "es",
-          "@value": "pantalla ancha"
-        },
+          "@value": "Bildformat einer Bewegtbildressource von 1.5:1 oder höher."
+        }
+      ],
+      "rdakit:toolkitLabel": [
         {
           "@language": "en",
           "@value": "wide screen"
@@ -137,6 +148,18 @@
         {
           "@language": "fr",
           "@value": "écran large"
+        },
+        {
+          "@language": "es",
+          "@value": "pantalla ancha"
+        },
+        {
+          "@language": "de",
+          "@value": "Breitbild"
+        },
+        {
+          "@language": "zh",
+          "@value": "宽屏"
         }
       ],
       "reg:identifier": {
@@ -145,16 +168,10 @@
       "reg:status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001"
       },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "widescreen"
-        },
-        {
-          "@language": "en",
-          "@value": "wide-screen"
-        }
-      ],
+      "skos:altLabel": {
+        "@language": "en",
+        "@value": "wide-screen"
+      },
       "skos:definition": [
         {
           "@language": "de",
@@ -167,43 +184,42 @@
         {
           "@language": "en",
           "@value": "Aspect ratio for a moving image resource of 1.5:1 or greater."
+        },
+        {
+          "@language": "zh",
+          "@value": "动态图像的宽高比为1.5:1或更大。"
         }
       ],
       "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/AspectRatio"
+        "@id": "http://rdaregistry.info/termList/AspectRatio/"
       },
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "wide screen"
-        },
-        {
           "@language": "es",
           "@value": "pantalla ancha"
+        },
+        {
+          "@language": "fr",
+          "@value": "écran large"
+        },
+        {
+          "@language": "en",
+          "@value": "wide screen"
         },
         {
           "@language": "de",
           "@value": "Breitbild"
         },
         {
-          "@language": "fr",
-          "@value": "écran large"
+          "@language": "zh",
+          "@value": "宽屏"
         }
       ]
     },
     {
-      "@id": "http://rdaregistry.info/termList/AspectRatio",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "RDA Aspect Ratio"
-    },
-    {
       "@id": "http://rdaregistry.info/termList/AspectRatio/1003",
       "@type": "skos:Concept",
-      "rdakit:ToolkitDefinition": [
-        {
-          "@language": "en",
-          "@value": "Aspect ratio for a moving image resource that includes multiple aspect ratios within thesame resource."
-        },
+      "rdakit:toolkitDefinition": [
         {
           "@language": "de",
           "@value": "Bildformat einer Bewegtbildressource, die mehrere Bildformate innerhalb derselben Ressource enthält."
@@ -211,24 +227,36 @@
         {
           "@language": "fr",
           "@value": "Format de l’image d’une ressource d’images animées comprenant divers formats de l’image à l’intérieur de la même ressource."
-        }
-      ],
-      "rdakit:ToolkitLabel": [
+        },
+        {
+          "@language": "zh",
+          "@value": "在同一资源中动态图像资源包括多种宽高比。"
+        },
         {
           "@language": "en",
-          "@value": "mixed"
-        },
+          "@value": "Aspect ratio for a moving image resource that includes multiple aspect ratios within thesame resource."
+        }
+      ],
+      "rdakit:toolkitLabel": [
         {
           "@language": "de",
           "@value": "gemischt"
         },
         {
-          "@language": "es",
-          "@value": "mixta"
-        },
-        {
           "@language": "fr",
           "@value": "mixte"
+        },
+        {
+          "@language": "en",
+          "@value": "mixed"
+        },
+        {
+          "@language": "zh",
+          "@value": "混合"
+        },
+        {
+          "@language": "es",
+          "@value": "mixta"
         }
       ],
       "reg:identifier": {
@@ -239,12 +267,16 @@
       },
       "skos:definition": [
         {
-          "@language": "fr",
-          "@value": "Format de l’image d’une ressource d’images animées comprenant divers formats de l’image à l’intérieur de la même ressource."
-        },
-        {
           "@language": "en",
           "@value": "Aspect ratio for a moving image resource that includes multiple aspect ratios within thesame resource."
+        },
+        {
+          "@language": "zh",
+          "@value": "在同一资源中动态图像资源包括多种宽高比。"
+        },
+        {
+          "@language": "fr",
+          "@value": "Format de l’image d’une ressource d’images animées comprenant divers formats de l’image à l’intérieur de la même ressource."
         },
         {
           "@language": "de",
@@ -252,20 +284,24 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/AspectRatio"
+        "@id": "http://rdaregistry.info/termList/AspectRatio/"
       },
       "skos:prefLabel": [
-        {
-          "@language": "fr",
-          "@value": "mixte"
-        },
         {
           "@language": "de",
           "@value": "gemischt"
         },
         {
+          "@language": "zh",
+          "@value": "混合"
+        },
+        {
           "@language": "es",
           "@value": "mixta"
+        },
+        {
+          "@language": "fr",
+          "@value": "mixte"
         },
         {
           "@language": "en",

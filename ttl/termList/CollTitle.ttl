@@ -1,97 +1,116 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
-    a :Concept ;
-    :prefLabel "Published"@en .
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
 
-<http://rdaregistry.info/termList/CollTitle>
+<http://rdaregistry.info/termList/CollTitle/>
     dc:title "RDA Conventional Collective Title" ;
-    a :ConceptScheme .
+    a skos:ConceptScheme .
 
 <http://rdaregistry.info/termList/CollTitle/1001>
+    rdakit:toolkitDefinition "Conventional collective title for compilations of all correspondence of a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant toute la correspondance d’une personne, famille ou collectivité."@fr, "一个个人、家族或团体全部书信汇编的惯用总题名。"@zh ;
+    rdakit:toolkitLabel "Correspondance"@fr, "Correspondence"@en, "书信集"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/583> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Conventional collective title for compilations of all correspondence of a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Briefe einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant toute la correspondance d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de toda la correspondencia de una persona, familia o entidad corporativa."@es ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Briefe"@de, "Correspondance"@fr, "Correspondence"@en, "Correspondencia"@es .
+    a skos:Concept ;
+    skos:definition "Conventional collective title for compilations of all correspondence of a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Briefe einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant toute la correspondance d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de toda la correspondencia de una persona, familia o entidad corporativa."@es, "一个个人、家族或团体全部书信汇编的惯用总题名。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Briefe"@de, "Correspondance"@fr, "Correspondence"@en, "Correspondencia"@es, "书信集"@zh .
 
 <http://rdaregistry.info/termList/CollTitle/1002>
+    rdakit:toolkitDefinition "Conventional collective title for compilations of all essays by a person."@en, "Titre collectif conventionnel utilisé pour les compilations contenant tous les essais d’une personne."@fr, "一个个人全部小品文汇编的惯用总题名。"@zh ;
+    rdakit:toolkitLabel "Essais"@fr, "Essays"@en, "短文集"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/584> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Conventional collective title for compilations of all essays by a person."@en, "Formaltitel für Zusammenstellungen aller Essays einer Person."@de, "Titre collectif conventionnel utilisé pour les compilations contenant tous les essais d’une personne."@fr, "Título colectivo convencional para compilaciones de todos los ensayos de una persona."@es ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Ensayos"@es, "Essais"@fr, "Essays"@de, "Essays"@en .
+    a skos:Concept ;
+    skos:definition "Conventional collective title for compilations of all essays by a person."@en, "Formaltitel für Zusammenstellungen aller Essays einer Person."@de, "Titre collectif conventionnel utilisé pour les compilations contenant tous les essais d’une personne."@fr, "Título colectivo convencional para compilaciones de todos los ensayos de una persona."@es, "一个个人全部小品文汇编的惯用总题名。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Ensayos"@es, "Essais"@fr, "Essays"@de, "Essays"@en, "短文集"@zh .
 
 <http://rdaregistry.info/termList/CollTitle/1003>
+    rdakit:toolkitDefinition "Conventional collective title for compilations of all novels by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant tous les romans d’une personne, famille ou collectivité."@fr, "一个个人、家族或团体全部长篇小说汇编的惯用总题名。"@zh ;
+    rdakit:toolkitLabel "Novels"@en, "Romans"@fr, "长篇小说集"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/585> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Conventional collective title for compilations of all novels by a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Romane einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant tous les romans d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todas las novelas de una persona, familia o entidad corporativa."@es ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Novelas"@es, "Novels"@en, "Romane"@de, "Romans"@fr .
+    a skos:Concept ;
+    skos:definition "Conventional collective title for compilations of all novels by a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Romane einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant tous les romans d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todas las novelas de una persona, familia o entidad corporativa."@es, "一个个人、家族或团体全部长篇小说汇编的惯用总题名。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Novelas"@es, "Novels"@en, "Romane"@de, "Romans"@fr, "长篇小说集"@zh .
 
 <http://rdaregistry.info/termList/CollTitle/1004>
+    rdakit:toolkitDefinition "Conventional collective title for compilations of all plays by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les pièces de théâtre d’une personne, famille ou collectivité."@fr, "一个个人、家族或团体全部戏剧作品汇编的惯用总题名。"@zh ;
+    rdakit:toolkitLabel "Pièces de théâtre"@fr, "Plays"@en, "戏剧集"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/586> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Conventional collective title for compilations of all plays by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les pièces de théâtre d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todas las obras de teatro de una persona, familia o entidad corporativa."@es ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Dramen"@de, "Pièces de théâtre"@fr, "Plays"@en, "Teatro"@es .
+    a skos:Concept ;
+    skos:definition "Conventional collective title for compilations of all plays by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les pièces de théâtre d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todas las obras de teatro de una persona, familia o entidad corporativa."@es, "一个个人、家族或团体全部戏剧作品汇编的惯用总题名。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Dramen"@de, "Pièces de théâtre"@fr, "Plays"@en, "Teatro"@es, "戏剧集"@zh .
 
 <http://rdaregistry.info/termList/CollTitle/1005>
+    rdakit:toolkitDefinition "Conventional collective title for compilations of all poems by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant tous les poèmes d’une personne, famille ou collectivité."@fr, "一个个人、家族或团体全部诗歌作品汇编的惯用总题名。"@zh ;
+    rdakit:toolkitLabel "Poems"@en, "Poèmes"@fr, "诗歌集"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/587> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Conventional collective title for compilations of all poems by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant tous les poèmes d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todos los poemas de una persona, familia o entidad corporativa."@es ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Lyrik"@de, "Poemas"@es, "Poems"@en, "Poèmes"@fr .
+    a skos:Concept ;
+    skos:definition "Conventional collective title for compilations of all poems by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant tous les poèmes d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todos los poemas de una persona, familia o entidad corporativa."@es, "一个个人、家族或团体全部诗歌作品汇编的惯用总题名。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Lyrik"@de, "Poemas"@es, "Poems"@en, "Poèmes"@fr, "诗歌集"@zh .
 
 <http://rdaregistry.info/termList/CollTitle/1006>
+    rdakit:toolkitDefinition "Conventional collective title for compilations of all prose works by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les œuvres en prose d’une personne, famille ou collectivité."@fr, "一个个人、家族或团体全部散文作品汇编的惯用总题名。"@zh ;
+    rdakit:toolkitLabel "Prose works"@en, "Œuvres en prose"@fr, "散文作品集"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/588> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Conventional collective title for compilations of all prose works by a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Prosa-Werke einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les œuvres en prose d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todoas obras en prosa de una persona, familia o entidad corporativa."@es ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Obras en prosa"@es, "Prosa"@de, "Prose works"@en, "Œuvres en prose"@fr .
+    a skos:Concept ;
+    skos:definition "Conventional collective title for compilations of all prose works by a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Prosa-Werke einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les œuvres en prose d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todoas obras en prosa de una persona, familia o entidad corporativa."@es, "一个个人、家族或团体全部散文作品汇编的惯用总题名。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Obras en prosa"@es, "Prosa"@de, "Prose works"@en, "Œuvres en prose"@fr, "散文作品集"@zh .
 
 <http://rdaregistry.info/termList/CollTitle/1007>
+    rdakit:toolkitDefinition "Conventional collective title for compilations of all short stories by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les nouvelles d’une personne, famille ou collectivité."@fr, "一个个人、家族或团体全部短篇小说汇编的惯用总题名。"@zh ;
+    rdakit:toolkitLabel "Short stories"@en, "nouvelles"@fr, "短篇小说集"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/589> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Conventional collective title for compilations of all short stories by a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Kurzgeschichten einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les nouvelles d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todos los cuentos cortos de una persona, familia o entidad corporativa."@es ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Kurzgeschichten"@de, "Short stories"@en, "cuentos cortos"@es, "nouvelles"@fr .
+    a skos:Concept ;
+    skos:definition "Conventional collective title for compilations of all short stories by a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Kurzgeschichten einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant toutes les nouvelles d’une personne, famille ou collectivité."@fr, "Título colectivo convencional para compilaciones de todos los cuentos cortos de una persona, familia o entidad corporativa."@es, "一个个人、家族或团体全部短篇小说汇编的惯用总题名。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Kurzgeschichten"@de, "Nouvelles"@fr, "Short stories"@en, "cuentos cortos"@es, "短篇小说集"@zh .
 
 <http://rdaregistry.info/termList/CollTitle/1008>
+    rdakit:toolkitDefinition "Conventional collective title for compilations of all speeches by a person, family, or corporate body."@en, "Titre collectif conventionnel utilisé pour les compilations contenant tous les discours d’une personne, famille ou collectivité."@fr, "一个个人、家族或团体全部演讲汇编的惯用总题名。"@zh ;
+    rdakit:toolkitLabel "Discours"@fr, "Speeches"@en, "演讲集"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/590> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Conventional collective title for compilations of all speeches by a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Reden einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant tous les discours d’une personne, famille ou collectivité."@fr, "Títulos colectivo convencional de una compilación de todos los discursos de una persona, familia o entidad corporativa."@es ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Discours"@fr, "Discursos"@es, "Reden"@de, "Speeches"@en .
+    a skos:Concept ;
+    skos:definition "Conventional collective title for compilations of all speeches by a person, family, or corporate body."@en, "Formaltitel für Zusammenstellungen aller Reden einer Person, einer Familie oder einer Körperschaft."@de, "Titre collectif conventionnel utilisé pour les compilations contenant tous les discours d’une personne, famille ou collectivité."@fr, "Títulos colectivo convencional de una compilación de todos los discursos de una persona, familia o entidad corporativa."@es, "一个个人、家族或团体全部演讲汇编的惯用总题名。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Discours"@fr, "Discursos"@es, "Reden"@de, "Speeches"@en, "演讲集"@zh .
 
 <http://rdaregistry.info/termList/CollTitle/1010>
+    rdakit:toolkitDefinition "The words of an opera or other musical stage work, or an oratorio."@en, "歌剧或其他舞台音乐作品或清唱剧的歌词。"@zh ;
+    rdakit:toolkitLabel "Librettos"@en, "台本"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/6765> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "The words of an opera or other musical stage work, or an oratorio."@en ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Libretos"@es, "Librettos"@de, "Librettos"@en ;
-    :related <http://rdaregistry.info/termList/CollTitle/1011> .
+    a skos:Concept ;
+    skos:definition "The words of an opera or other musical stage work, or an oratorio."@en, "歌剧或其他舞台音乐作品或清唱剧的歌词。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Libretos"@es, "Librettos"@de, "Librettos"@en, "台本"@zh ;
+    skos:related <http://rdaregistry.info/termList/CollTitle/1011> .
 
 <http://rdaregistry.info/termList/CollTitle/1011>
+    rdakit:toolkitDefinition "The words of a popular song, including a song or songs from a musical."@en, "包括音乐剧歌曲在内的流行歌曲的歌词。"@zh ;
+    rdakit:toolkitLabel "Lyrics"@en, "歌词"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/6766> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "The words of a popular song, including a song or songs from a musical."@en ;
-    :inScheme <http://rdaregistry.info/termList/CollTitle> ;
-    :prefLabel "Lyrics"@de, "Lyrics"@en, "Lírica"@es ;
-    :related <http://rdaregistry.info/termList/CollTitle/1010> .
+    a skos:Concept ;
+    skos:definition "The words of a popular song, including a song or songs from a musical."@en, "包括音乐剧歌曲在内的流行歌曲的歌词。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/CollTitle/> ;
+    skos:prefLabel "Lyrics"@de, "Lyrics"@en, "Lírica"@es, "歌词"@zh ;
+    skos:related <http://rdaregistry.info/termList/CollTitle/1010> .
 

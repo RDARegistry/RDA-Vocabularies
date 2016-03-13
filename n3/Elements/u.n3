@@ -1,13 +1,10 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix status: <http://metadataregistry.org/uri/RegStatus/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -80,8 +77,7 @@
 
 <http://rdaregistry.info/Elements/u/P60054> a rdf:Property ;
     rdfs:label "has other distinguishing characteristic of the resource"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20003>,
-        <http://rdaregistry.info/Elements/w/P10003> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20003> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/otherDistinguishingCharacteristicOfTheResource.en> ;
     reg:name "otherDistinguishingCharacteristicOfTheResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -109,7 +105,6 @@
 
 <http://rdaregistry.info/Elements/u/P60058> a rdf:Property ;
     rdfs:label "has form of resource"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10004> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/formOfResource.en> ;
     reg:name "formOfResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -216,7 +211,6 @@
 
 <http://rdaregistry.info/Elements/u/P60080> a rdf:Property ;
     rdfs:label "has numbering of part"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10012> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/numberingOfPart.en> ;
     reg:name "numberingOfPart"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -406,7 +400,6 @@
 
 <http://rdaregistry.info/Elements/u/P60175> a rdf:Property ;
     rdfs:label "has academic degree"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10077> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/academicDegree.en> ;
     reg:name "academicDegree"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -426,8 +419,7 @@
     rdfs:label "has related resource"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20205>,
         <http://rdaregistry.info/Elements/m/P30048>,
-        <http://rdaregistry.info/Elements/m/P30140>,
-        <http://rdaregistry.info/Elements/w/P10198> ;
+        <http://rdaregistry.info/Elements/m/P30140> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedResource.en> ;
     reg:name "relatedResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -436,7 +428,6 @@
 
 <http://rdaregistry.info/Elements/u/P60315> a rdf:Property ;
     rdfs:label "has numeric designation of a musical resource"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10079> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/numericDesignationOfAMusicalResource.en> ;
     reg:name "numericDesignationOfAMusicalResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -571,7 +562,6 @@
 
 <http://rdaregistry.info/Elements/u/P60348> a rdf:Property ;
     rdfs:label "has system of organization"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10084> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/systemOfOrganization.en> ;
     reg:name "systemOfOrganization"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -664,17 +654,6 @@
 <http://rdaregistry.info/Elements/u/P60442> reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> .
 
-<http://rdaregistry.info/Elements/u/P60454> a rdf:Property ;
-    rdfs:label "has related agent"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50218>,
-        <http://rdaregistry.info/Elements/a/P50219>,
-        <http://rdaregistry.info/Elements/a/P50220> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedAgent.en> ;
-    reg:name "relatedAgent"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    skos:definition "Relates an agent to an agent that is associated with the agent being identified."@en .
-
 <http://rdaregistry.info/Elements/u/P60468> a rdf:Property ;
     rdfs:label "has profession or occupation"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50104> ;
@@ -689,7 +668,6 @@
 
 <http://rdaregistry.info/Elements/u/P60472> a rdf:Property ;
     rdfs:label "has epoch"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10199> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/epoch.en> ;
     reg:name "epoch"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -707,7 +685,6 @@
 
 <http://rdaregistry.info/Elements/u/P60483> a rdf:Property ;
     rdfs:label "has granting institution or faculty"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10208> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/grantingInstitutionOrFaculty.en> ;
     reg:name "grantingInstitutionOrFaculty"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -762,7 +739,6 @@
 
 <http://rdaregistry.info/Elements/u/P60489> a rdf:Property ;
     rdfs:label "has dissertation or thesis information"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10209> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/dissertationOrThesisInformation.en> ;
     reg:name "dissertationOrThesisInformation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -780,7 +756,6 @@
 
 <http://rdaregistry.info/Elements/u/P60491> a rdf:Property ;
     rdfs:label "has history of the resource"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10210> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/historyOfTheResource.en> ;
     reg:name "historyOfTheResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -845,7 +820,6 @@
 
 <http://rdaregistry.info/Elements/u/P60506> a rdf:Property ;
     rdfs:label "has equinox"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10214> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/equinox.en> ;
     reg:name "equinox"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -900,7 +874,6 @@
 
 <http://rdaregistry.info/Elements/u/P60514> a rdf:Property ;
     rdfs:label "has year degree granted"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10215> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/yearDegreeGranted.en> ;
     reg:name "yearDegreeGranted"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -927,7 +900,6 @@
 
 <http://rdaregistry.info/Elements/u/P60518> a rdf:Property ;
     rdfs:label "has coverage of the content"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10216> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/coverageOfTheContent.en> ;
     reg:name "coverageOfTheContent"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -936,7 +908,6 @@
 
 <http://rdaregistry.info/Elements/u/P60520> a rdf:Property ;
     rdfs:label "has intended audience"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10217> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/intendedAudience.en> ;
     reg:name "intendedAudience"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -954,7 +925,6 @@
 
 <http://rdaregistry.info/Elements/u/P60523> a rdf:Property ;
     rdfs:label "has place of origin of the resource"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10218> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/placeOfOriginOfTheResource.en> ;
     reg:name "placeOfOriginOfTheResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -963,8 +933,7 @@
 
 <http://rdaregistry.info/Elements/u/P60527> a rdf:Property ;
     rdfs:label "has date of resource"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20214>,
-        <http://rdaregistry.info/Elements/w/P10219> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20214> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/dateOfResource.en> ;
     reg:name "dateOfResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1018,7 +987,6 @@
 
 <http://rdaregistry.info/Elements/u/P60536> a rdf:Property ;
     rdfs:label "has medium of performance"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10220> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/mediumOfPerformance.en> ;
     reg:name "mediumOfPerformance"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1186,7 +1154,6 @@
 
 <http://rdaregistry.info/Elements/u/P60580> a rdf:Property ;
     rdfs:label "has key"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10221> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/key.en> ;
     reg:name "key"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1222,7 +1189,6 @@
 
 <http://rdaregistry.info/Elements/u/P60584> a rdf:Property ;
     rdfs:label "has nature of the content"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10222> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/natureOfTheContent.en> ;
     reg:name "natureOfTheContent"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1281,16 +1247,6 @@
         <http://rdaregistry.info/Elements/u/P60215> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> .
-
-<http://rdaregistry.info/Elements/u/P60737> a rdf:Property ;
-    rdfs:label "has officiated agent"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50234> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/officiatedAgent.en> ;
-    reg:name "officiatedAgent"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/u/P60633> ;
-    skos:definition "Relates an agent in which the agent holds an office to the agent."@en .
 
 <http://rdaregistry.info/Elements/u/P60738> a rdf:Property ;
     rdfs:label "has broader affiliated agent"@en ;
@@ -1846,7 +1802,6 @@
 
 <http://rdaregistry.info/Elements/u/P60345> a rdf:Property ;
     rdfs:label "has longitude and latitude"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10081> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/longitudeAndLatitude.en> ;
     reg:name "longitudeAndLatitude"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1856,7 +1811,6 @@
 
 <http://rdaregistry.info/Elements/u/P60346> a rdf:Property ;
     rdfs:label "has right ascension and declination"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10082> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/rightAscensionAndDeclination.en> ;
     reg:name "rightAscensionAndDeclination"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1866,7 +1820,6 @@
 
 <http://rdaregistry.info/Elements/u/P60347> a rdf:Property ;
     rdfs:label "has strings of coordinate pairs"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10083> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/stringsOfCoordinatePairs.en> ;
     reg:name "stringsOfCoordinatePairs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1886,8 +1839,7 @@
 
 <http://rdaregistry.info/Elements/u/P60355> a rdf:Property ;
     rdfs:label "has variant title"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30128>,
-        <http://rdaregistry.info/Elements/w/P10086> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30128> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/variantTitle.en> ;
     reg:name "variantTitle"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1936,8 +1888,7 @@
 
 <http://rdaregistry.info/Elements/u/P60367> a rdf:Property ;
     rdfs:label "has title of the resource"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60588>,
-        <http://rdaregistry.info/Elements/w/P10088> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60588> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/titleOfTheResource.en> ;
     reg:name "titleOfTheResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2315,26 +2266,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60351> ;
     skos:definition "Relates a resource to the speed at which an audio carrier must be operated to produce the sound intended."@en .
 
-<http://rdaregistry.info/Elements/u/P60587> a rdf:Property ;
-    rdfs:label "has encoded bitrate"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30202> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/encodedBitrate.en> ;
-    reg:name "encodedBitrate"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60350> ;
-    skos:definition "Relates a resource to the speed at which streaming audio, video, etc., is designed to play."@en .
-
-<http://rdaregistry.info/Elements/u/P60588> a rdf:Property ;
-    rdfs:label "has preferred title for the resource"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10223> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/preferredTitleForTheResource.en> ;
-    reg:name "preferredTitleForTheResource"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60367> ;
-    skos:definition "Relates a resource to the title or form of title chosen to identify the resource."@en .
-
 <http://rdaregistry.info/Elements/u/P60589> a rdf:Property ;
     rdfs:label "has parallel title proper"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30203> ;
@@ -2605,8 +2536,7 @@
 
 <http://rdaregistry.info/Elements/u/P60719> a rdf:Property ;
     rdfs:label "is musical theatre adaptation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20239>,
-        <http://rdaregistry.info/Elements/w/P10233> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20239> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/musicalTheatreAdaptationOf.en> ;
     reg:name "musicalTheatreAdaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2617,8 +2547,7 @@
 
 <http://rdaregistry.info/Elements/u/P60720> a rdf:Property ;
     rdfs:label "is opera adaptation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20240>,
-        <http://rdaregistry.info/Elements/w/P10234> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20240> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/operaAdaptationOf.en> ;
     reg:name "operaAdaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2629,8 +2558,7 @@
 
 <http://rdaregistry.info/Elements/u/P60721> a rdf:Property ;
     rdfs:label "is adapted as musical theatre"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20241>,
-        <http://rdaregistry.info/Elements/w/P10235> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20241> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsMusicalTheatre.en> ;
     reg:name "adaptedAsMusicalTheatre"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2641,8 +2569,7 @@
 
 <http://rdaregistry.info/Elements/u/P60722> a rdf:Property ;
     rdfs:label "is adapted as opera"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20242>,
-        <http://rdaregistry.info/Elements/w/P10236> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20242> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsOpera.en> ;
     reg:name "adaptedAsOpera"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2653,8 +2580,7 @@
 
 <http://rdaregistry.info/Elements/u/P60725> a rdf:Property ;
     rdfs:label "is video music"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20245>,
-        <http://rdaregistry.info/Elements/w/P10239> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20245> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/videoMusic.en> ;
     reg:name "videoMusic"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2665,8 +2591,7 @@
 
 <http://rdaregistry.info/Elements/u/P60726> a rdf:Property ;
     rdfs:label "is music for video"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20246>,
-        <http://rdaregistry.info/Elements/w/P10240> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20246> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/musicForVideo.en> ;
     reg:name "musicForVideo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2677,8 +2602,7 @@
 
 <http://rdaregistry.info/Elements/u/P60727> a rdf:Property ;
     rdfs:label "is television program music"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20247>,
-        <http://rdaregistry.info/Elements/w/P10241> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20247> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/televisionProgramMusic.en> ;
     reg:name "televisionProgramMusic"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2689,8 +2613,7 @@
 
 <http://rdaregistry.info/Elements/u/P60728> a rdf:Property ;
     rdfs:label "is music for television program"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20248>,
-        <http://rdaregistry.info/Elements/w/P10242> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20248> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/musicForTelevisionProgram.en> ;
     reg:name "musicForTelevisionProgram"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2701,8 +2624,7 @@
 
 <http://rdaregistry.info/Elements/u/P60729> a rdf:Property ;
     rdfs:label "is radio program music"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20249>,
-        <http://rdaregistry.info/Elements/w/P10243> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20249> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/radioProgramMusic.en> ;
     reg:name "radioProgramMusic"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2713,8 +2635,7 @@
 
 <http://rdaregistry.info/Elements/u/P60730> a rdf:Property ;
     rdfs:label "is music for radio program"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20250>,
-        <http://rdaregistry.info/Elements/w/P10244> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20250> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/musicForRadioProgram.en> ;
     reg:name "musicForRadioProgram"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2725,8 +2646,7 @@
 
 <http://rdaregistry.info/Elements/u/P60731> a rdf:Property ;
     rdfs:label "is music for motion picture"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20251>,
-        <http://rdaregistry.info/Elements/w/P10245> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20251> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/musicForMotionPicture.en> ;
     reg:name "musicForMotionPicture"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2737,8 +2657,7 @@
 
 <http://rdaregistry.info/Elements/u/P60732> a rdf:Property ;
     rdfs:label "is motion picture music"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20252>,
-        <http://rdaregistry.info/Elements/w/P10246> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20252> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/motionPictureMusic.en> ;
     reg:name "motionPictureMusic"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3393,7 +3312,6 @@
 
 <http://rdaregistry.info/Elements/u/P60045> a rdf:Property ;
     rdfs:label "has respondent"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10001> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/respondent.en> ;
     reg:name "respondent"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3408,8 +3326,7 @@
         <http://rdaregistry.info/Elements/i/P40001>,
         <http://rdaregistry.info/Elements/m/P30004>,
         <http://rdaregistry.info/Elements/u/P60139>,
-        <http://rdaregistry.info/Elements/u/P60140>,
-        <http://rdaregistry.info/Elements/w/P10002> ;
+        <http://rdaregistry.info/Elements/u/P60140> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/identifierForTheResource.en> ;
     reg:name "identifierForTheResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3418,7 +3335,6 @@
 
 <http://rdaregistry.info/Elements/u/P60060> a rdf:Property ;
     rdfs:label "has degree granting institution"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10006> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/degreeGrantingInstitution.en> ;
     reg:name "degreeGrantingInstitution"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3429,7 +3345,6 @@
 
 <http://rdaregistry.info/Elements/u/P60061> a rdf:Property ;
     rdfs:label "has host institution"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10007> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/hostInstitution.en> ;
     reg:name "host institution"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3440,7 +3355,6 @@
 
 <http://rdaregistry.info/Elements/u/P60062> a rdf:Property ;
     rdfs:label "has production company"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10008> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/productionCompany.en> ;
     reg:name "productionCompany"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3451,7 +3365,6 @@
 
 <http://rdaregistry.info/Elements/u/P60065> a rdf:Property ;
     rdfs:label "has court governed"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10011> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/courtGoverned.en> ;
     reg:name "courtGoverned"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3494,7 +3407,7 @@
     skos:definition "Relates a resource to a current owner of a resource who deposited the resource into the custody of another person, family, or corporate body, while still retaining ownership."@en .
 
 <http://rdaregistry.info/Elements/u/P60083> a rdf:Property ;
-    rdfs:label "is electronic reproduction"@en ;
+    rdfs:label "has electronic reproduction"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40057>,
         <http://rdaregistry.info/Elements/m/P30016> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/electronicReproduction.en> ;
@@ -3507,7 +3420,6 @@
 
 <http://rdaregistry.info/Elements/u/P60084> a rdf:Property ;
     rdfs:label "has film director"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10013> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/filmDirector.en> ;
     reg:name "filmDirector"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3518,7 +3430,6 @@
 
 <http://rdaregistry.info/Elements/u/P60085> a rdf:Property ;
     rdfs:label "has radio director"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10014> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/radioDirector.en> ;
     reg:name "radioDirector"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3529,7 +3440,6 @@
 
 <http://rdaregistry.info/Elements/u/P60086> a rdf:Property ;
     rdfs:label "has television director"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10015> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/televisionDirector.en> ;
     reg:name "televisionDirector"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3540,8 +3450,7 @@
 
 <http://rdaregistry.info/Elements/u/P60088> a rdf:Property ;
     rdfs:label "is dramatized as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20073>,
-        <http://rdaregistry.info/Elements/w/P10016> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20073> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/dramatizedAs.en> ;
     reg:name "dramatizedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3574,7 +3483,6 @@
 
 <http://rdaregistry.info/Elements/u/P60096> a rdf:Property ;
     rdfs:label "has enacting jurisdiction"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10017> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/enactingJurisdiction.en> ;
     reg:name "enactingJurisdiction"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3585,7 +3493,6 @@
 
 <http://rdaregistry.info/Elements/u/P60097> a rdf:Property ;
     rdfs:label "has jurisdiction governed"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10018> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/jurisdictionGoverned.en> ;
     reg:name "jurisdictionGoverned"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3607,7 +3514,6 @@
 
 <http://rdaregistry.info/Elements/u/P60102> a rdf:Property ;
     rdfs:label "is sequel"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10020> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/sequel.en> ;
     reg:name "sequel"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3618,8 +3524,7 @@
 
 <http://rdaregistry.info/Elements/u/P60103> a rdf:Property ;
     rdfs:label "is replaced in part by"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20075>,
-        <http://rdaregistry.info/Elements/w/P10021> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20075> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/replacedInPartBy.en> ;
     reg:name "replacedInPartBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3630,8 +3535,7 @@
 
 <http://rdaregistry.info/Elements/u/P60104> a rdf:Property ;
     rdfs:label "is replaced by"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20076>,
-        <http://rdaregistry.info/Elements/w/P10022> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20076> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/replacedBy.en> ;
     reg:name "replacedBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3642,8 +3546,7 @@
 
 <http://rdaregistry.info/Elements/u/P60106> a rdf:Property ;
     rdfs:label "is adapted in verse as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20077>,
-        <http://rdaregistry.info/Elements/w/P10023> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20077> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedInVerseAs.en> ;
     reg:name "adaptedInVerseAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3654,8 +3557,7 @@
 
 <http://rdaregistry.info/Elements/u/P60110> a rdf:Property ;
     rdfs:label "is adapted as motion picture"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20009>,
-        <http://rdaregistry.info/Elements/w/P10025> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20009> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsAMotionPicture.en> ;
     reg:name "adaptedAsAMotionPicture"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3688,8 +3590,7 @@
 
 <http://rdaregistry.info/Elements/u/P60113> a rdf:Property ;
     rdfs:label "is cadenza"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20080>,
-        <http://rdaregistry.info/Elements/w/P10026> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20080> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/cadenza.en> ;
     reg:name "cadenza"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3700,8 +3601,7 @@
 
 <http://rdaregistry.info/Elements/u/P60114> a rdf:Property ;
     rdfs:label "is variations based on"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20081>,
-        <http://rdaregistry.info/Elements/w/P10027> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20081> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/variationsBasedOn.en> ;
     reg:name "variationsBasedOn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3712,8 +3612,7 @@
 
 <http://rdaregistry.info/Elements/u/P60115> a rdf:Property ;
     rdfs:label "is modified by variation as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20082>,
-        <http://rdaregistry.info/Elements/w/P10028> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20082> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/modifiedByVariationAs.en> ;
     reg:name "modifiedByVariationAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3724,8 +3623,7 @@
 
 <http://rdaregistry.info/Elements/u/P60116> a rdf:Property ;
     rdfs:label "is cadenza composed for"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20083>,
-        <http://rdaregistry.info/Elements/w/P10029> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20083> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/cadenzaComposedFor.en> ;
     reg:name "cadenzaComposedFor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3736,8 +3634,7 @@
 
 <http://rdaregistry.info/Elements/u/P60117> a rdf:Property ;
     rdfs:label "is libretto for"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20084>,
-        <http://rdaregistry.info/Elements/w/P10030> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20084> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/librettoFor.en> ;
     reg:name "librettoFor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3748,8 +3645,7 @@
 
 <http://rdaregistry.info/Elements/u/P60118> a rdf:Property ;
     rdfs:label "is incidental music"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20085>,
-        <http://rdaregistry.info/Elements/w/P10031> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20085> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/incidentalMusic.en> ;
     reg:name "incidentalMusic"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3760,8 +3656,7 @@
 
 <http://rdaregistry.info/Elements/u/P60120> a rdf:Property ;
     rdfs:label "is remade as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20086>,
-        <http://rdaregistry.info/Elements/w/P10032> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20086> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/remadeAs.en> ;
     reg:name "remadeAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3772,8 +3667,7 @@
 
 <http://rdaregistry.info/Elements/u/P60121> a rdf:Property ;
     rdfs:label "is set to music as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20087>,
-        <http://rdaregistry.info/Elements/w/P10033> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20087> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/setToMusicAs.en> ;
     reg:name "setToMusicAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3784,8 +3678,7 @@
 
 <http://rdaregistry.info/Elements/u/P60138> a rdf:Property ;
     rdfs:label "is adapted as novel"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20088>,
-        <http://rdaregistry.info/Elements/w/P10034> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20088> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsNovel.en> ;
     reg:name "novelization"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3950,7 +3843,6 @@
 
 <http://rdaregistry.info/Elements/u/P60157> a rdf:Property ;
     rdfs:label "has medium"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10036> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/medium.en> ;
     reg:name "medium"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3973,7 +3865,6 @@
 
 <http://rdaregistry.info/Elements/u/P60169> a rdf:Property ;
     rdfs:label "has film producer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10073> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/filmProducer.en> ;
     reg:name "filmProducer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3984,7 +3875,6 @@
 
 <http://rdaregistry.info/Elements/u/P60170> a rdf:Property ;
     rdfs:label "has radio producer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10074> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/radioProducer.en> ;
     reg:name "radioProducer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -3995,7 +3885,6 @@
 
 <http://rdaregistry.info/Elements/u/P60171> a rdf:Property ;
     rdfs:label "has television producer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10075> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/televisionProducer.en> ;
     reg:name "televisionProducer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4006,8 +3895,7 @@
 
 <http://rdaregistry.info/Elements/u/P60174> a rdf:Property ;
     rdfs:label "is adapted as radio program"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20060>,
-        <http://rdaregistry.info/Elements/w/P10076> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20060> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsARadioProgram.en> ;
     reg:name "adaptedAsARadioProgram"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4018,8 +3906,7 @@
 
 <http://rdaregistry.info/Elements/u/P60177> a rdf:Property ;
     rdfs:label "is abstracted in"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20090>,
-        <http://rdaregistry.info/Elements/w/P10089> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20090> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/abstractedIn.en> ;
     reg:name "abstractedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4030,8 +3917,7 @@
 
 <http://rdaregistry.info/Elements/u/P60178> a rdf:Property ;
     rdfs:label "is indexed in"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20091>,
-        <http://rdaregistry.info/Elements/w/P10090> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20091> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/indexedIn.en> ;
     reg:name "indexedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4041,7 +3927,7 @@
     skos:definition "Relates a resource to a resource (an abstracting and indexing service) that indexes the contents of the source resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60179> a rdf:Property ;
-    rdfs:label "is preservation facsimile"@en ;
+    rdfs:label "has preservation facsimile"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40059>,
         <http://rdaregistry.info/Elements/m/P30021> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/preservationFacsimile.en> ;
@@ -4054,8 +3940,7 @@
 
 <http://rdaregistry.info/Elements/u/P60180> a rdf:Property ;
     rdfs:label "is adapted as choreography"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20092>,
-        <http://rdaregistry.info/Elements/w/P10091> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20092> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsChoreography.en> ;
     reg:name "adaptedAsChoreography"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4066,8 +3951,7 @@
 
 <http://rdaregistry.info/Elements/u/P60181> a rdf:Property ;
     rdfs:label "is errata"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20093>,
-        <http://rdaregistry.info/Elements/w/P10092> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20093> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/errata.en> ;
     reg:name "errata"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4078,8 +3962,7 @@
 
 <http://rdaregistry.info/Elements/u/P60182> a rdf:Property ;
     rdfs:label "is illustrations"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20094>,
-        <http://rdaregistry.info/Elements/w/P10093> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20094> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/illustrations.en> ;
     reg:name "illustrations"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4101,8 +3984,7 @@
 
 <http://rdaregistry.info/Elements/u/P60184> a rdf:Property ;
     rdfs:label "is adapted as motion picture screenplay"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20095>,
-        <http://rdaregistry.info/Elements/w/P10094> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20095> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsAMotionPictureScreenplay.en> ;
     reg:name "adaptedAsAMotionPictureScreenplay"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4113,8 +3995,7 @@
 
 <http://rdaregistry.info/Elements/u/P60186> a rdf:Property ;
     rdfs:label "is adapted as television screenplay"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20097>,
-        <http://rdaregistry.info/Elements/w/P10096> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20097> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsATelevisionScreenplay.en> ;
     reg:name "adaptedAsATelevisionScreenplay"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4125,8 +4006,7 @@
 
 <http://rdaregistry.info/Elements/u/P60187> a rdf:Property ;
     rdfs:label "is adapted as video screenplay"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20098>,
-        <http://rdaregistry.info/Elements/w/P10097> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20098> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsAVideoScreenplay.en> ;
     reg:name "adaptedAsAVideoScreenplay"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4137,8 +4017,7 @@
 
 <http://rdaregistry.info/Elements/u/P60188> a rdf:Property ;
     rdfs:label "is adapted as radio script"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20099>,
-        <http://rdaregistry.info/Elements/w/P10098> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20099> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsARadioScript.en> ;
     reg:name "adaptedAsARadioScript"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4149,8 +4028,7 @@
 
 <http://rdaregistry.info/Elements/u/P60189> a rdf:Property ;
     rdfs:label "is freely translated as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20119>,
-        <http://rdaregistry.info/Elements/w/P10099> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20119> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/freelyTranslatedAs.en> ;
     reg:name "freelyTranslatedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4161,7 +4039,6 @@
 
 <http://rdaregistry.info/Elements/u/P60192> a rdf:Property ;
     rdfs:label "is subseries of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10101> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/subseriesOf.en> ;
     reg:name "subseriesOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4172,7 +4049,6 @@
 
 <http://rdaregistry.info/Elements/u/P60193> a rdf:Property ;
     rdfs:label "is in series"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10102> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/inSeries.en> ;
     reg:name "inSeries"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4216,8 +4092,7 @@
 
 <http://rdaregistry.info/Elements/u/P60199> a rdf:Property ;
     rdfs:label "is continued in part by"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20101>,
-        <http://rdaregistry.info/Elements/w/P10104> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20101> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/continuedInPartBy.en> ;
     reg:name "continuedInPartBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4227,7 +4102,7 @@
     skos:definition "Relates a resource to a resource part of whose content separated from an earlier resource to form a new resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60200> a rdf:Property ;
-    rdfs:label "is digital transfer"@en ;
+    rdfs:label "has digital transfer"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40056>,
         <http://rdaregistry.info/Elements/m/P30029> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/digitalTransfer.en> ;
@@ -4240,8 +4115,7 @@
 
 <http://rdaregistry.info/Elements/u/P60202> a rdf:Property ;
     rdfs:label "is incidental music for"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20103>,
-        <http://rdaregistry.info/Elements/w/P10106> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20103> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/incidentalMusicFor.en> ;
     reg:name "incidentalMusicFor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4252,8 +4126,7 @@
 
 <http://rdaregistry.info/Elements/u/P60203> a rdf:Property ;
     rdfs:label "is abstracted as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20104>,
-        <http://rdaregistry.info/Elements/w/P10107> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20104> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/abstractedAs.en> ;
     reg:name "abstractedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4264,8 +4137,7 @@
 
 <http://rdaregistry.info/Elements/u/P60205> a rdf:Property ;
     rdfs:label "is summarized as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20106>,
-        <http://rdaregistry.info/Elements/w/P10109> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20106> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/summarizedAs.en> ;
     reg:name "summarizedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4276,8 +4148,7 @@
 
 <http://rdaregistry.info/Elements/u/P60206> a rdf:Property ;
     rdfs:label "is catalogue"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20107>,
-        <http://rdaregistry.info/Elements/w/P10110> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20107> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/catalogue.en> ;
     reg:name "catalogue"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4299,8 +4170,7 @@
 
 <http://rdaregistry.info/Elements/u/P60208> a rdf:Property ;
     rdfs:label "is concordance"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20108>,
-        <http://rdaregistry.info/Elements/w/P10111> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20108> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/concordance.en> ;
     reg:name "concordance"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4311,8 +4181,7 @@
 
 <http://rdaregistry.info/Elements/u/P60209> a rdf:Property ;
     rdfs:label "is addenda"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20109>,
-        <http://rdaregistry.info/Elements/w/P10112> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20109> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/addenda.en> ;
     reg:name "addenda"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4323,8 +4192,7 @@
 
 <http://rdaregistry.info/Elements/u/P60210> a rdf:Property ;
     rdfs:label "is adapted as libretto"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20110>,
-        <http://rdaregistry.info/Elements/w/P10113> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20110> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsLibretto.en> ;
     reg:name "adaptedAsLibretto"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4337,8 +4205,7 @@
     rdfs:label "is reviewed in"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20274>,
         <http://rdaregistry.info/Elements/i/P40067>,
-        <http://rdaregistry.info/Elements/m/P30259>,
-        <http://rdaregistry.info/Elements/w/P10114> ;
+        <http://rdaregistry.info/Elements/m/P30259> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/reviewedIn.en> ;
     reg:name "reviewedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4351,8 +4218,7 @@
     rdfs:label "is critiqued in"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20272>,
         <http://rdaregistry.info/Elements/i/P40065>,
-        <http://rdaregistry.info/Elements/m/P30257>,
-        <http://rdaregistry.info/Elements/w/P10115> ;
+        <http://rdaregistry.info/Elements/m/P30257> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/critiquedIn.en> ;
     reg:name "critiquedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4365,8 +4231,7 @@
     rdfs:label "is commentary in"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20271>,
         <http://rdaregistry.info/Elements/i/P40064>,
-        <http://rdaregistry.info/Elements/m/P30256>,
-        <http://rdaregistry.info/Elements/w/P10116> ;
+        <http://rdaregistry.info/Elements/m/P30256> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/commentaryIn.en> ;
     reg:name "commentaryIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4377,8 +4242,7 @@
 
 <http://rdaregistry.info/Elements/u/P60216> a rdf:Property ;
     rdfs:label "is expanded as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20115>,
-        <http://rdaregistry.info/Elements/w/P10119> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20115> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/expandedAs.en> ;
     reg:name "expandedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4391,8 +4255,7 @@
     rdfs:label "is evaluated in"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20273>,
         <http://rdaregistry.info/Elements/i/P40066>,
-        <http://rdaregistry.info/Elements/m/P30258>,
-        <http://rdaregistry.info/Elements/w/P10120> ;
+        <http://rdaregistry.info/Elements/m/P30258> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/evaluatedIn.en> ;
     reg:name "evaluatedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4405,8 +4268,7 @@
     rdfs:label "is analysed in"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20270>,
         <http://rdaregistry.info/Elements/i/P40063>,
-        <http://rdaregistry.info/Elements/m/P30255>,
-        <http://rdaregistry.info/Elements/w/P10121> ;
+        <http://rdaregistry.info/Elements/m/P30255> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/analysedIn.en> ;
     reg:name "analysedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4417,7 +4279,6 @@
 
 <http://rdaregistry.info/Elements/u/P60220> a rdf:Property ;
     rdfs:label "is prequel"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10122> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/prequel.en> ;
     reg:name "prequel"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4428,8 +4289,7 @@
 
 <http://rdaregistry.info/Elements/u/P60221> a rdf:Property ;
     rdfs:label "is appendix"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20118>,
-        <http://rdaregistry.info/Elements/w/P10123> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20118> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/appendix.en> ;
     reg:name "appendix"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4440,8 +4300,7 @@
 
 <http://rdaregistry.info/Elements/u/P60222> a rdf:Property ;
     rdfs:label "is guide"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20120>,
-        <http://rdaregistry.info/Elements/w/P10124> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20120> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/guide.en> ;
     reg:name "guide"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4452,8 +4311,7 @@
 
 <http://rdaregistry.info/Elements/u/P60223> a rdf:Property ;
     rdfs:label "is abridgement of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20121>,
-        <http://rdaregistry.info/Elements/w/P10125> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20121> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/abridgementOf.en> ;
     reg:name "abridgementOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4464,8 +4322,7 @@
 
 <http://rdaregistry.info/Elements/u/P60224> a rdf:Property ;
     rdfs:label "is abstract of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20122>,
-        <http://rdaregistry.info/Elements/w/P10126> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20122> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/abstractOf.en> ;
     reg:name "abstractOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4476,8 +4333,7 @@
 
 <http://rdaregistry.info/Elements/u/P60225> a rdf:Property ;
     rdfs:label "is dramatization of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20123>,
-        <http://rdaregistry.info/Elements/w/P10127> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20123> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/dramatizationOf.en> ;
     reg:name "dramatizationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4488,8 +4344,7 @@
 
 <http://rdaregistry.info/Elements/u/P60226> a rdf:Property ;
     rdfs:label "is verse adaptation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20124>,
-        <http://rdaregistry.info/Elements/w/P10128> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20124> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/verseAdaptationOf.en> ;
     reg:name "verseAdaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4500,8 +4355,7 @@
 
 <http://rdaregistry.info/Elements/u/P60227> a rdf:Property ;
     rdfs:label "is motion picture adaptation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20125>,
-        <http://rdaregistry.info/Elements/w/P10129> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20125> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/motionPictureAdaptationOf.en> ;
     reg:name "motionPictureAdaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4512,8 +4366,7 @@
 
 <http://rdaregistry.info/Elements/u/P60228> a rdf:Property ;
     rdfs:label "is novelization of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20126>,
-        <http://rdaregistry.info/Elements/w/P10130> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20126> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/novelizationOf.en> ;
     reg:name "novelizationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4524,8 +4377,7 @@
 
 <http://rdaregistry.info/Elements/u/P60229> a rdf:Property ;
     rdfs:label "is radio adaptation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20127>,
-        <http://rdaregistry.info/Elements/w/P10131> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20127> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/radioAdaptationOf.en> ;
     reg:name "radioAdaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4536,8 +4388,7 @@
 
 <http://rdaregistry.info/Elements/u/P60230> a rdf:Property ;
     rdfs:label "is television adaptation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20128>,
-        <http://rdaregistry.info/Elements/w/P10132> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20128> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/televisionAdaptationOf.en> ;
     reg:name "televisionAdaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4548,8 +4399,7 @@
 
 <http://rdaregistry.info/Elements/u/P60232> a rdf:Property ;
     rdfs:label "is motion picture screenplay based on"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20130>,
-        <http://rdaregistry.info/Elements/w/P10134> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20130> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/motionPictureScreenplayBasedOn.en> ;
     reg:name "motionPictureScreenplayBasedOn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4560,8 +4410,7 @@
 
 <http://rdaregistry.info/Elements/u/P60233> a rdf:Property ;
     rdfs:label "is television screenplay based on"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20131>,
-        <http://rdaregistry.info/Elements/w/P10135> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20131> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/televisionScreenplayBasedOn.en> ;
     reg:name "televisionScreenplayBasedOn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4572,8 +4421,7 @@
 
 <http://rdaregistry.info/Elements/u/P60234> a rdf:Property ;
     rdfs:label "is video screenplay based on"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20132>,
-        <http://rdaregistry.info/Elements/w/P10136> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20132> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/videoScreenplayBasedOn.en> ;
     reg:name "videoScreenplayBasedOn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4584,8 +4432,7 @@
 
 <http://rdaregistry.info/Elements/u/P60235> a rdf:Property ;
     rdfs:label "is radio script based on"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20133>,
-        <http://rdaregistry.info/Elements/w/P10137> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20133> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/radioScriptBasedOn.en> ;
     reg:name "radioScriptBasedOn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4596,8 +4443,7 @@
 
 <http://rdaregistry.info/Elements/u/P60236> a rdf:Property ;
     rdfs:label "is video adaptation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20134>,
-        <http://rdaregistry.info/Elements/w/P10138> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20134> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/videoAdaptationOf.en> ;
     reg:name "videoAdaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4619,8 +4465,7 @@
 
 <http://rdaregistry.info/Elements/u/P60238> a rdf:Property ;
     rdfs:label "is digest of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20135>,
-        <http://rdaregistry.info/Elements/w/P10139> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20135> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/digestOf.en> ;
     reg:name "digestOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4631,8 +4476,7 @@
 
 <http://rdaregistry.info/Elements/u/P60239> a rdf:Property ;
     rdfs:label "is analysis of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10140>,
-        <http://rdaregistry.info/Elements/w/P10266>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10266>,
         <http://rdaregistry.info/Elements/w/P10272>,
         <http://rdaregistry.info/Elements/w/P10278> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/analysisOf.en> ;
@@ -4645,7 +4489,6 @@
 
 <http://rdaregistry.info/Elements/u/P60240> a rdf:Property ;
     rdfs:label "is series container of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10141> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/seriesContainerOf.en> ;
     reg:name "seriesContainerOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4667,8 +4510,7 @@
 
 <http://rdaregistry.info/Elements/u/P60243> a rdf:Property ;
     rdfs:label "is free translation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20140>,
-        <http://rdaregistry.info/Elements/w/P10143> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20140> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/freeTranslationOf.en> ;
     reg:name "freeTranslationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4690,8 +4532,7 @@
 
 <http://rdaregistry.info/Elements/u/P60246> a rdf:Property ;
     rdfs:label "is parodied as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20142>,
-        <http://rdaregistry.info/Elements/w/P10144> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20142> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/parodiedAs.en> ;
     reg:name "parodiedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4702,8 +4543,7 @@
 
 <http://rdaregistry.info/Elements/u/P60247> a rdf:Property ;
     rdfs:label "is absorbed by"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20143>,
-        <http://rdaregistry.info/Elements/w/P10145> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20143> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/absorbedBy.en> ;
     reg:name "absorbedBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4714,8 +4554,7 @@
 
 <http://rdaregistry.info/Elements/u/P60248> a rdf:Property ;
     rdfs:label "is absorbed in part by"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20144>,
-        <http://rdaregistry.info/Elements/w/P10146> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20144> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/absorbedInPartBy.en> ;
     reg:name "absorbedInPartBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4726,8 +4565,7 @@
 
 <http://rdaregistry.info/Elements/u/P60251> a rdf:Property ;
     rdfs:label "is errata to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20146>,
-        <http://rdaregistry.info/Elements/w/P10149> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20146> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/errataTo.en> ;
     reg:name "errataTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4738,8 +4576,7 @@
 
 <http://rdaregistry.info/Elements/u/P60252> a rdf:Property ;
     rdfs:label "is guide to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20147>,
-        <http://rdaregistry.info/Elements/w/P10150> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20147> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/guideTo.en> ;
     reg:name "guideTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4750,8 +4587,7 @@
 
 <http://rdaregistry.info/Elements/u/P60253> a rdf:Property ;
     rdfs:label "is appendix to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20089>,
-        <http://rdaregistry.info/Elements/w/P10151> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20089> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/appendixTo.en> ;
     reg:name "appendixTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4762,8 +4598,7 @@
 
 <http://rdaregistry.info/Elements/u/P60254> a rdf:Property ;
     rdfs:label "is illustrations for"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20148>,
-        <http://rdaregistry.info/Elements/w/P10152> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20148> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/illustrationsFor.en> ;
     reg:name "illustrationsFor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4774,8 +4609,7 @@
 
 <http://rdaregistry.info/Elements/u/P60255> a rdf:Property ;
     rdfs:label "is evaluation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10153>,
-        <http://rdaregistry.info/Elements/w/P10267>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10267>,
         <http://rdaregistry.info/Elements/w/P10273>,
         <http://rdaregistry.info/Elements/w/P10279> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/evaluationOf.en> ;
@@ -4812,8 +4646,7 @@
 
 <http://rdaregistry.info/Elements/u/P60259> a rdf:Property ;
     rdfs:label "is supplement to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20151>,
-        <http://rdaregistry.info/Elements/w/P10154> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20151> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/supplementTo.en> ;
     reg:name "supplementTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4824,8 +4657,7 @@
 
 <http://rdaregistry.info/Elements/u/P60262> a rdf:Property ;
     rdfs:label "is finding aid"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20155>,
-        <http://rdaregistry.info/Elements/w/P10157> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20155> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/findingAid.en> ;
     reg:name "findingAid"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4836,8 +4668,7 @@
 
 <http://rdaregistry.info/Elements/u/P60263> a rdf:Property ;
     rdfs:label "is index"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20156>,
-        <http://rdaregistry.info/Elements/w/P10158> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20156> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/index.en> ;
     reg:name "index"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4848,8 +4679,7 @@
 
 <http://rdaregistry.info/Elements/u/P60265> a rdf:Property ;
     rdfs:label "is motion picture screenplay"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20158>,
-        <http://rdaregistry.info/Elements/w/P10160> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20158> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/motionPictureScreenplay.en> ;
     reg:name "motionPictureScreenplay"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4860,8 +4690,7 @@
 
 <http://rdaregistry.info/Elements/u/P60266> a rdf:Property ;
     rdfs:label "is musical setting of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20159>,
-        <http://rdaregistry.info/Elements/w/P10161> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20159> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/musicalSettingOf.en> ;
     reg:name "musicalSettingOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4872,8 +4701,7 @@
 
 <http://rdaregistry.info/Elements/u/P60267> a rdf:Property ;
     rdfs:label "is radio script"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20160>,
-        <http://rdaregistry.info/Elements/w/P10162> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20160> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/radioScript.en> ;
     reg:name "radioScript"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4884,8 +4712,7 @@
 
 <http://rdaregistry.info/Elements/u/P60268> a rdf:Property ;
     rdfs:label "is television screenplay"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20161>,
-        <http://rdaregistry.info/Elements/w/P10163> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20161> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/televisionScreenplay.en> ;
     reg:name "televisionScreenplay"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4896,8 +4723,7 @@
 
 <http://rdaregistry.info/Elements/u/P60269> a rdf:Property ;
     rdfs:label "is video screenplay"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20162>,
-        <http://rdaregistry.info/Elements/w/P10164> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20162> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/videoScreenplay.en> ;
     reg:name "videoScreenplay"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4908,8 +4734,7 @@
 
 <http://rdaregistry.info/Elements/u/P60270> a rdf:Property ;
     rdfs:label "is libretto"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20163>,
-        <http://rdaregistry.info/Elements/w/P10165> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20163> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/libretto.en> ;
     reg:name "libretto"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4932,8 +4757,7 @@
 
 <http://rdaregistry.info/Elements/u/P60273> a rdf:Property ;
     rdfs:label "is paraphrased as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20164>,
-        <http://rdaregistry.info/Elements/w/P10166> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20164> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/paraphrasedAs.en> ;
     reg:name "paraphrasedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4955,8 +4779,7 @@
 
 <http://rdaregistry.info/Elements/u/P60275> a rdf:Property ;
     rdfs:label "is abridged as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20166>,
-        <http://rdaregistry.info/Elements/w/P10167> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20166> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/abridgedAs.en> ;
     reg:name "abridgedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4967,8 +4790,7 @@
 
 <http://rdaregistry.info/Elements/u/P60276> a rdf:Property ;
     rdfs:label "is continuation in part of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20167>,
-        <http://rdaregistry.info/Elements/w/P10168> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20167> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/continuationInPartOf.en> ;
     reg:name "continuationInPartOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4979,8 +4801,7 @@
 
 <http://rdaregistry.info/Elements/u/P60277> a rdf:Property ;
     rdfs:label "is separated from"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20168>,
-        <http://rdaregistry.info/Elements/w/P10169> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20168> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/separatedFrom.en> ;
     reg:name "separatedFrom"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4991,8 +4812,7 @@
 
 <http://rdaregistry.info/Elements/u/P60279> a rdf:Property ;
     rdfs:label "is digested as"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20170>,
-        <http://rdaregistry.info/Elements/w/P10171> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20170> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/digestedAs.en> ;
     reg:name "digestedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5003,8 +4823,7 @@
 
 <http://rdaregistry.info/Elements/u/P60281> a rdf:Property ;
     rdfs:label "is supplement"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20172>,
-        <http://rdaregistry.info/Elements/w/P10172> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20172> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/supplement.en> ;
     reg:name "supplement"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5015,8 +4834,7 @@
 
 <http://rdaregistry.info/Elements/u/P60282> a rdf:Property ;
     rdfs:label "is screenplay for motion picture"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20173>,
-        <http://rdaregistry.info/Elements/w/P10173> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20173> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/screenplayForTheMotionPicture.en> ;
     reg:name "screenplayForTheMotionPicture"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5027,8 +4845,7 @@
 
 <http://rdaregistry.info/Elements/u/P60283> a rdf:Property ;
     rdfs:label "is screenplay for television program"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20174>,
-        <http://rdaregistry.info/Elements/w/P10174> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20174> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/screenplayForTheTelevisionProgram.en> ;
     reg:name "screenplayForTheTelevisionProgram"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5039,8 +4856,7 @@
 
 <http://rdaregistry.info/Elements/u/P60284> a rdf:Property ;
     rdfs:label "is screenplay for video"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20175>,
-        <http://rdaregistry.info/Elements/w/P10175> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20175> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/screenplayForTheVideo.en> ;
     reg:name "screenplayForTheVideo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5051,8 +4867,7 @@
 
 <http://rdaregistry.info/Elements/u/P60285> a rdf:Property ;
     rdfs:label "is script for radio program"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20176>,
-        <http://rdaregistry.info/Elements/w/P10176> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20176> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/scriptForTheRadioProgram.en> ;
     reg:name "scriptForTheRadioProgram"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5063,8 +4878,7 @@
 
 <http://rdaregistry.info/Elements/u/P60286> a rdf:Property ;
     rdfs:label "is addenda to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20177>,
-        <http://rdaregistry.info/Elements/w/P10177> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20177> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/addendaTo.en> ;
     reg:name "addendaTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5087,8 +4901,7 @@
 
 <http://rdaregistry.info/Elements/u/P60288> a rdf:Property ;
     rdfs:label "is review of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10178>,
-        <http://rdaregistry.info/Elements/w/P10268>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10268>,
         <http://rdaregistry.info/Elements/w/P10274>,
         <http://rdaregistry.info/Elements/w/P10280> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/reviewOf.en> ;
@@ -5101,8 +4914,7 @@
 
 <http://rdaregistry.info/Elements/u/P60289> a rdf:Property ;
     rdfs:label "is summary of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20179>,
-        <http://rdaregistry.info/Elements/w/P10179> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20179> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/summaryOf.en> ;
     reg:name "summaryOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5113,8 +4925,7 @@
 
 <http://rdaregistry.info/Elements/u/P60290> a rdf:Property ;
     rdfs:label "is catalogue of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20180>,
-        <http://rdaregistry.info/Elements/w/P10180> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20180> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/catalogueOf.en> ;
     reg:name "catalogueOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5125,8 +4936,7 @@
 
 <http://rdaregistry.info/Elements/u/P60291> a rdf:Property ;
     rdfs:label "is concordance to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20181>,
-        <http://rdaregistry.info/Elements/w/P10181> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20181> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/concordanceTo.en> ;
     reg:name "concordanceTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5137,8 +4947,7 @@
 
 <http://rdaregistry.info/Elements/u/P60292> a rdf:Property ;
     rdfs:label "is critique of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10182>,
-        <http://rdaregistry.info/Elements/w/P10269>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10269>,
         <http://rdaregistry.info/Elements/w/P10275>,
         <http://rdaregistry.info/Elements/w/P10281> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/critiqueOf.en> ;
@@ -5151,8 +4960,7 @@
 
 <http://rdaregistry.info/Elements/u/P60293> a rdf:Property ;
     rdfs:label "is choreographic adaptation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20183>,
-        <http://rdaregistry.info/Elements/w/P10183> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20183> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/choreographicAdaptationOf.en> ;
     reg:name "choreographicAdaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5163,8 +4971,7 @@
 
 <http://rdaregistry.info/Elements/u/P60294> a rdf:Property ;
     rdfs:label "is expanded version of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20184>,
-        <http://rdaregistry.info/Elements/w/P10184> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20184> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/expandedVersionOf.en> ;
     reg:name "expandedVersionOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5175,8 +4982,7 @@
 
 <http://rdaregistry.info/Elements/u/P60295> a rdf:Property ;
     rdfs:label "is remake of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20185>,
-        <http://rdaregistry.info/Elements/w/P10185> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20185> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/remakeOf.en> ;
     reg:name "remakeOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5187,8 +4993,7 @@
 
 <http://rdaregistry.info/Elements/u/P60296> a rdf:Property ;
     rdfs:label "is paraphrase of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20186>,
-        <http://rdaregistry.info/Elements/w/P10186> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20186> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/paraphraseOf.en> ;
     reg:name "paraphraseOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5199,8 +5004,7 @@
 
 <http://rdaregistry.info/Elements/u/P60298> a rdf:Property ;
     rdfs:label "is commentary on"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10187>,
-        <http://rdaregistry.info/Elements/w/P10270>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10270>,
         <http://rdaregistry.info/Elements/w/P10276>,
         <http://rdaregistry.info/Elements/w/P10282> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/commentaryOn.en> ;
@@ -5236,8 +5040,7 @@
 
 <http://rdaregistry.info/Elements/u/P60302> a rdf:Property ;
     rdfs:label "is index to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20188>,
-        <http://rdaregistry.info/Elements/w/P10188> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20188> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/indexTo.en> ;
     reg:name "indexTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5259,8 +5062,7 @@
 
 <http://rdaregistry.info/Elements/u/P60304> a rdf:Property ;
     rdfs:label "is libretto based on"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20190>,
-        <http://rdaregistry.info/Elements/w/P10189> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20190> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/librettoBasedOn.en> ;
     reg:name "librettoBasedOn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5271,8 +5073,7 @@
 
 <http://rdaregistry.info/Elements/u/P60306> a rdf:Property ;
     rdfs:label "is continued by"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20191>,
-        <http://rdaregistry.info/Elements/w/P10191> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20191> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/continuedBy.en> ;
     reg:name "continuedBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5283,8 +5084,7 @@
 
 <http://rdaregistry.info/Elements/u/P60308> a rdf:Property ;
     rdfs:label "is abstracts for"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20193>,
-        <http://rdaregistry.info/Elements/w/P10193> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20193> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/abstractsFor.en> ;
     reg:name "abstractsFor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5295,8 +5095,7 @@
 
 <http://rdaregistry.info/Elements/u/P60309> a rdf:Property ;
     rdfs:label "is indexing for"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20194>,
-        <http://rdaregistry.info/Elements/w/P10194> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20194> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/indexingFor.en> ;
     reg:name "indexingFor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5307,7 +5106,6 @@
 
 <http://rdaregistry.info/Elements/u/P60310> a rdf:Property ;
     rdfs:label "is prequel to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10195> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/prequelTo.en> ;
     reg:name "prequelTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5318,8 +5116,7 @@
 
 <http://rdaregistry.info/Elements/u/P60312> a rdf:Property ;
     rdfs:label "is parody of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20196>,
-        <http://rdaregistry.info/Elements/w/P10197> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20196> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/parodyOf.en> ;
     reg:name "parodyOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5330,7 +5127,6 @@
 
 <http://rdaregistry.info/Elements/u/P60316> a rdf:Property ;
     rdfs:label "is subseries"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10080> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/subseries.en> ;
     reg:name "subseries"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5398,8 +5194,7 @@
 
 <http://rdaregistry.info/Elements/u/P60354> a rdf:Property ;
     rdfs:label "is adapted as television program"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20066>,
-        <http://rdaregistry.info/Elements/w/P10085> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20066> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsATelevisionProgram.en> ;
     reg:name "adaptedAsATelevisionProgram"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5410,8 +5205,7 @@
 
 <http://rdaregistry.info/Elements/u/P60361> a rdf:Property ;
     rdfs:label "is adapted as video"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20067>,
-        <http://rdaregistry.info/Elements/w/P10087> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20067> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsAVideo.en> ;
     reg:name "adaptedAsAVideo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5446,9 +5240,6 @@
 
 <http://rdaregistry.info/Elements/u/P60373> a rdf:Property ;
     rdfs:label "has appellee"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10005>,
-        <http://rdaregistry.info/Elements/w/P10035>,
-        <http://rdaregistry.info/Elements/w/P10037> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/appellee.en> ;
     reg:name "appellee"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5459,7 +5250,6 @@
 
 <http://rdaregistry.info/Elements/u/P60375> a rdf:Property ;
     rdfs:label "has dedicator"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10048> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/dedicator.en> ;
     reg:name "dedicator"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5620,7 +5410,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60398> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60621> ;
-    skos:definition "Relates a resource to an agent contributing to a resource by revising or clarifying the content, e.g., adding an introduction, notes, or other critical matter."@en .
+    skos:definition "Relates a resource to an agent contributing to a resource by revising or clarifying the content, or by selecting and putting together resources, or parts of resources, by one or more creators."@en .
 
 <http://rdaregistry.info/Elements/u/P60394> a rdf:Property ;
     rdfs:label "has abridger"@en ;
@@ -5668,8 +5458,7 @@
 
 <http://rdaregistry.info/Elements/u/P60406> a rdf:Property ;
     rdfs:label "has honouree"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40022>,
-        <http://rdaregistry.info/Elements/w/P10049> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40022> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/honouree.en> ;
     reg:name "honouree"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5824,7 +5613,6 @@
 
 <http://rdaregistry.info/Elements/u/P60420> a rdf:Property ;
     rdfs:label "has degree supervisor"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10041> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/degreeSupervisor.en> ;
     reg:name "degreeSupervisor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5857,7 +5645,6 @@
 
 <http://rdaregistry.info/Elements/u/P60423> a rdf:Property ;
     rdfs:label "has programmer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10050> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/programmer.en> ;
     reg:name "programmer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5868,7 +5655,6 @@
 
 <http://rdaregistry.info/Elements/u/P60424> a rdf:Property ;
     rdfs:label "has designer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10051> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/designer.en> ;
     reg:name "designer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5879,8 +5665,7 @@
 
 <http://rdaregistry.info/Elements/u/P60425> a rdf:Property ;
     rdfs:label "has cartographer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20042>,
-        <http://rdaregistry.info/Elements/w/P10052> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20042> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/cartographer.en> ;
     reg:name "cartographer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5891,8 +5676,7 @@
 
 <http://rdaregistry.info/Elements/u/P60426> a rdf:Property ;
     rdfs:label "has composer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20026>,
-        <http://rdaregistry.info/Elements/w/P10053> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20026> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/composer.en> ;
     reg:name "composer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5903,7 +5687,6 @@
 
 <http://rdaregistry.info/Elements/u/P60427> a rdf:Property ;
     rdfs:label "has inventor"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10054> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/inventor.en> ;
     reg:name "inventor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5914,7 +5697,6 @@
 
 <http://rdaregistry.info/Elements/u/P60428> a rdf:Property ;
     rdfs:label "has compiler"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10055> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/compiler.en> ;
     reg:name "compiler"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5925,7 +5707,7 @@
 
 <http://rdaregistry.info/Elements/u/P60429> a rdf:Property ;
     rdfs:label "has photographer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10056> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20288> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/photographer.en> ;
     reg:name "photographer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5936,8 +5718,7 @@
 
 <http://rdaregistry.info/Elements/u/P60430> a rdf:Property ;
     rdfs:label "has interviewer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20032>,
-        <http://rdaregistry.info/Elements/w/P10057> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20032> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/interviewer.en> ;
     reg:name "interviewer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5948,8 +5729,7 @@
 
 <http://rdaregistry.info/Elements/u/P60432> a rdf:Property ;
     rdfs:label "has interviewee"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20047>,
-        <http://rdaregistry.info/Elements/w/P10059> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20047> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/interviewee.en> ;
     reg:name "interviewee"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5960,8 +5740,7 @@
 
 <http://rdaregistry.info/Elements/u/P60433> a rdf:Property ;
     rdfs:label "has choreographer"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20043>,
-        <http://rdaregistry.info/Elements/w/P10060> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20043> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/choreographer.en> ;
     reg:name "choreographer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5972,7 +5751,6 @@
 
 <http://rdaregistry.info/Elements/u/P60436> a rdf:Property ;
     rdfs:label "has filmmaker"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10063> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/filmmaker.en> ;
     reg:name "filmmaker"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6027,7 +5805,8 @@
 
 <http://rdaregistry.info/Elements/u/P60450> a rdf:Property ;
     rdfs:label "has restorationist"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40024> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20289>,
+        <http://rdaregistry.info/Elements/i/P40024> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/restorationist.en> ;
     reg:name "restorationist"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6038,7 +5817,6 @@
 
 <http://rdaregistry.info/Elements/u/P60451> a rdf:Property ;
     rdfs:label "has sponsoring body"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10067> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/sponsoringBody.en> ;
     reg:name "sponsoringBody"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6051,8 +5829,7 @@
     rdfs:label "has director of photography"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60009>,
         <http://rdaregistry.info/Elements/u/P60010>,
-        <http://rdaregistry.info/Elements/u/P60011>,
-        <http://rdaregistry.info/Elements/w/P10068> ;
+        <http://rdaregistry.info/Elements/u/P60011> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/directorOfPhotography.en> ;
     reg:name "directorOfPhotography"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6063,8 +5840,7 @@
 
 <http://rdaregistry.info/Elements/u/P60455> a rdf:Property ;
     rdfs:label "has dedicatee"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40025>,
-        <http://rdaregistry.info/Elements/w/P10069> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40025> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/dedicatee.en> ;
     reg:name "dedicatee"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6075,7 +5851,6 @@
 
 <http://rdaregistry.info/Elements/u/P60456> a rdf:Property ;
     rdfs:label "has addressee"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10070> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/addressee.en> ;
     reg:name "addressee"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6086,9 +5861,6 @@
 
 <http://rdaregistry.info/Elements/u/P60457> a rdf:Property ;
     rdfs:label "has appellant"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10009>,
-        <http://rdaregistry.info/Elements/w/P10038>,
-        <http://rdaregistry.info/Elements/w/P10042> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/appellant.en> ;
     reg:name "appellant"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6110,9 +5882,6 @@
 
 <http://rdaregistry.info/Elements/u/P60459> a rdf:Property ;
     rdfs:label "has plaintiff"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10010>,
-        <http://rdaregistry.info/Elements/w/P10039>,
-        <http://rdaregistry.info/Elements/w/P10043> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/plaintiff.en> ;
     reg:name "plaintiff"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6134,7 +5903,6 @@
 
 <http://rdaregistry.info/Elements/u/P60461> a rdf:Property ;
     rdfs:label "has judge"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10044> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/judge.en> ;
     reg:name "judge"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6145,8 +5913,7 @@
 
 <http://rdaregistry.info/Elements/u/P60462> a rdf:Property ;
     rdfs:label "has defendant"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10040>,
-        <http://rdaregistry.info/Elements/w/P10285>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10285>,
         <http://rdaregistry.info/Elements/w/P10286> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/defendant.en> ;
     reg:name "defendant"@en ;
@@ -6158,7 +5925,6 @@
 
 <http://rdaregistry.info/Elements/u/P60463> a rdf:Property ;
     rdfs:label "has praeses"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10045> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/praeses.en> ;
     reg:name "praeses"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6180,7 +5946,6 @@
 
 <http://rdaregistry.info/Elements/u/P60465> a rdf:Property ;
     rdfs:label "has consultant"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10071> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/consultant.en> ;
     reg:name "consultant"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6202,7 +5967,6 @@
 
 <http://rdaregistry.info/Elements/u/P60467> a rdf:Property ;
     rdfs:label "has issuing body"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10046> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/issuingBody.en> ;
     reg:name "issuingBody"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6225,7 +5989,6 @@
 
 <http://rdaregistry.info/Elements/u/P60473> a rdf:Property ;
     rdfs:label "has landscape architect"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10200> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/landscapeArchitect.en> ;
     reg:name "landscapeArchitect"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6236,8 +5999,7 @@
 
 <http://rdaregistry.info/Elements/u/P60474> a rdf:Property ;
     rdfs:label "is finding aid for"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20197>,
-        <http://rdaregistry.info/Elements/w/P10201> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20197> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/findingAidFor.en> ;
     reg:name "findingAidFor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6248,7 +6010,6 @@
 
 <http://rdaregistry.info/Elements/u/P60475> a rdf:Property ;
     rdfs:label "has sculptor"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10202> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/sculptor.en> ;
     reg:name "sculptor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6259,7 +6020,6 @@
 
 <http://rdaregistry.info/Elements/u/P60476> a rdf:Property ;
     rdfs:label "has screenwriter"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10203> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/screenwriter.en> ;
     reg:name "screenwriter"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6270,7 +6030,6 @@
 
 <http://rdaregistry.info/Elements/u/P60477> a rdf:Property ;
     rdfs:label "has lyricist"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10204> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/lyricist.en> ;
     reg:name "lyricist"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6281,7 +6040,6 @@
 
 <http://rdaregistry.info/Elements/u/P60478> a rdf:Property ;
     rdfs:label "has librettist"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10205> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/librettist.en> ;
     reg:name "librettist"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6292,8 +6050,7 @@
 
 <http://rdaregistry.info/Elements/u/P60479> a rdf:Property ;
     rdfs:label "is replacement in part of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20198>,
-        <http://rdaregistry.info/Elements/w/P10206> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20198> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/replacementInPartOf.en> ;
     reg:name "replacementInPartOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6304,8 +6061,7 @@
 
 <http://rdaregistry.info/Elements/u/P60480> a rdf:Property ;
     rdfs:label "is replacement of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20199>,
-        <http://rdaregistry.info/Elements/w/P10207> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20199> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/replacementOf.en> ;
     reg:name "replacementOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6316,8 +6072,7 @@
 
 <http://rdaregistry.info/Elements/u/P60503> a rdf:Property ;
     rdfs:label "is split into"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20200>,
-        <http://rdaregistry.info/Elements/w/P10211> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20200> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/splitInto.en> ;
     reg:name "splitInto"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6328,8 +6083,7 @@
 
 <http://rdaregistry.info/Elements/u/P60504> a rdf:Property ;
     rdfs:label "is merged to form"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20212>,
-        <http://rdaregistry.info/Elements/w/P10212> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20212> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/mergedToForm.en> ;
     reg:name "mergedToForm"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6340,8 +6094,7 @@
 
 <http://rdaregistry.info/Elements/u/P60505> a rdf:Property ;
     rdfs:label "is merger of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20201>,
-        <http://rdaregistry.info/Elements/w/P10213> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20201> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/mergerOf.en> ;
     reg:name "mergerOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6374,8 +6127,7 @@
 
 <http://rdaregistry.info/Elements/u/P60574> a rdf:Property ;
     rdfs:label "is absorption of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20137>,
-        <http://rdaregistry.info/Elements/w/P10224> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20137> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/absorptionOf.en> ;
     reg:name "absorptionOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6386,8 +6138,7 @@
 
 <http://rdaregistry.info/Elements/u/P60575> a rdf:Property ;
     rdfs:label "is absorption in part of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20138>,
-        <http://rdaregistry.info/Elements/w/P10225> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20138> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/absorptionInPartOf.en> ;
     reg:name "absorptionInPartOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6398,8 +6149,7 @@
 
 <http://rdaregistry.info/Elements/u/P60576> a rdf:Property ;
     rdfs:label "is continuation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20149>,
-        <http://rdaregistry.info/Elements/w/P10226> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20149> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/continuationOf.en> ;
     reg:name "continuationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6410,7 +6160,6 @@
 
 <http://rdaregistry.info/Elements/u/P60577> a rdf:Property ;
     rdfs:label "is sequel to"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10227> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/sequelTo.en> ;
     reg:name "sequelTo"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6418,6 +6167,27 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60261> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60102> ;
     skos:definition "Relates a resource to the resource whose narrative is continued by the later resource."@en .
+
+<http://rdaregistry.info/Elements/u/P60587> a rdf:Property ;
+    rdfs:label "has encoded bitrate"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30202> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/encodedBitrate.en> ;
+    reg:name "encodedBitrate"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60350> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60858> ;
+    skos:definition "Relates a resource to the speed at which streaming audio, video, etc., is designed to play."@en .
+
+<http://rdaregistry.info/Elements/u/P60588> a rdf:Property ;
+    rdfs:label "has preferred title for the resource"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/preferredTitleForTheResource.en> ;
+    reg:name "preferredTitleForTheResource"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60367> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60857> ;
+    skos:definition "Relates a resource to the title or form of title chosen to identify the resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60600> a rdf:Property ;
     rdfs:label "is writer of added lyrics of"@en ;
@@ -6911,7 +6681,8 @@
 
 <http://rdaregistry.info/Elements/u/P60658> a rdf:Property ;
     rdfs:label "is photographer of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50190> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50190>,
+        <http://rdaregistry.info/Elements/a/P50272> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/photographerOf.en> ;
     reg:name "photographerOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -7013,7 +6784,8 @@
 
 <http://rdaregistry.info/Elements/u/P60674> a rdf:Property ;
     rdfs:label "is restorationist of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50206> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50206>,
+        <http://rdaregistry.info/Elements/a/P50273> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/restorationistOf.en> ;
     reg:name "restorationistOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -7497,7 +7269,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60805> ;
-    skos:definition "Relates a resource  to a resource that is about the resource."@en .
+    skos:definition "Relates a resource to a resource that is about the resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60809> a rdf:Property ;
     rdfs:label "has writer of foreword"@en ;
@@ -7824,7 +7596,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60848> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60847> ;
-    skos:definition "Relates a resource to a resource commemorated by the other resource."@en .
+    skos:definition "Relates a resource to a resource created to commemorate the earlier resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60847> a rdf:Property ;
     rdfs:label "is commemoration of"@en ;
@@ -7834,7 +7606,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60848> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60846> ;
-    skos:definition "Relates a resource to a resource created to commemorate the other resource."@en .
+    skos:definition "Relates a resource to a resource commemorated in the later resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60849> a rdf:Property ;
     rdfs:label "has organizer"@en ;
@@ -7845,7 +7617,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60374> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60850> ;
-    skos:definition "Relates a resource to an agent organizing the exhibit, event, conference, etc., which gave rise to a resource."@en .
+    skos:definition "Relates a resource to an agent organizing the exhibit, event, conference, course, program, etc., which gave rise to a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60850> a rdf:Property ;
     rdfs:label "is organizer of"@en ;
@@ -7856,7 +7628,183 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60602> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60849> ;
-    skos:definition "Relates an agent organizing the exhibit, event, conference, etc., which gave rise to a resource to the resource."@en .
+    skos:definition "Relates an agent organizing the exhibit, event, conference, course, program, etc., which gave rise to a resource to the resource."@en .
+
+<http://rdaregistry.info/Elements/u/P60851> a rdf:Property ;
+    rdfs:label "has censor"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20287> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/censor.en> ;
+    reg:name "censor"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60398> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60852> ;
+    skos:definition "Relates a resource to an agent contributing to a resource by revising the content for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content of the original resource substantially unchanged."@en .
+
+<http://rdaregistry.info/Elements/u/P60852> a rdf:Property ;
+    rdfs:label "is censor of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50271> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/censorOf.en> ;
+    reg:name "censorOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60626> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60851> ;
+    skos:definition "Relates an agent contributing to a resource by revising the content for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content of the original resource substantially unchanged to the resource."@en .
+
+<http://rdaregistry.info/Elements/u/P60854> a rdf:Property ;
+    rdfs:label "has friend"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50280> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/friend.en> ;
+    reg:name "friend"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60854> ;
+    skos:definition "Relates an agent to an agent who shares a bond of mutual affection or regard with the other agent."@en .
+
+<http://rdaregistry.info/Elements/u/P60855> a rdf:Property ;
+    rdfs:label "has enrolled student"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50283> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/enrolledStudent.en> ;
+    reg:name "enrolledStudent"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60856> ;
+    skos:definition "Relates an agent to an agent who receives instruction at the educational institution."@en .
+
+<http://rdaregistry.info/Elements/u/P60856> a rdf:Property ;
+    rdfs:label "is student at"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50288> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/studentAt.en> ;
+    reg:name "studentAt"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60855> ;
+    skos:definition "Relates an agent to an educational institution that provides instruction to the agent."@en .
+
+<http://rdaregistry.info/Elements/u/P60857> a rdf:Property ;
+    rdfs:label "has assistant"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50275> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/assistant.en> ;
+    reg:name "assistant"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60853> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60588> ;
+    skos:definition "Relates an agent to a colleague who helps the other agent."@en .
+
+<http://rdaregistry.info/Elements/u/P60858> a rdf:Property ;
+    rdfs:label "is assistant to"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50276> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/assistantTo.en> ;
+    reg:name "assistantTo"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60853> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60587> ;
+    skos:definition "Relates an agent to a colleague who is helped by the other agent."@en .
+
+<http://rdaregistry.info/Elements/u/P60859> a rdf:Property ;
+    rdfs:label "has co-worker"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50277> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/coworker.en> ;
+    reg:name "coworker"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60853> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60859> ;
+    skos:definition "Relates an agent to a colleague who works with or shares a task with the other agent."@en .
+
+<http://rdaregistry.info/Elements/u/P60860> a rdf:Property ;
+    rdfs:label "has partner"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50278> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/partner.en> ;
+    reg:name "partner"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60853> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60860> ;
+    skos:definition "Relates an agent to a colleague working with the other agent in an activity of common interest, most often a business partnership."@en .
+
+<http://rdaregistry.info/Elements/u/P60861> a rdf:Property ;
+    rdfs:label "has fellow student"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50279> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/fellowStudent.en> ;
+    reg:name "fellowStudent"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60861> ;
+    skos:definition "Relates an agent to an associate of the other student who is also formally engaged in learning."@en .
+
+<http://rdaregistry.info/Elements/u/P60862> a rdf:Property ;
+    rdfs:label "has student"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50281> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/student.en> ;
+    reg:name "student"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60863> ;
+    skos:definition "Relates an agent to an agent who receives instruction from the other agent."@en .
+
+<http://rdaregistry.info/Elements/u/P60863> a rdf:Property ;
+    rdfs:label "has teacher"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50282> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/teacher.en> ;
+    reg:name "teacher"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60862> ;
+    skos:definition "Relates an agent to an agent who instructs the other agent."@en .
+
+<http://rdaregistry.info/Elements/u/P60864> a rdf:Property ;
+    rdfs:label "has chief executive"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50284> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/chiefExecutive.en> ;
+    reg:name "chiefExecutive"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60633> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60865> ;
+    skos:definition "Relates an agent to an officer who is the top ranking official of the agent."@en .
+
+<http://rdaregistry.info/Elements/u/P60865> a rdf:Property ;
+    rdfs:label "is chief executive of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50286> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/chiefExecutiveOf.en> ;
+    reg:name "chiefExecutiveOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60737> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60864> ;
+    skos:definition "Relates an agent to an agent in which the officer is the top ranking official."@en .
+
+<http://rdaregistry.info/Elements/u/P60866> a rdf:Property ;
+    rdfs:label "has trustee"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50285> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/trustee.en> ;
+    reg:name "trustee"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60633> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60867> ;
+    skos:definition "Relates an agent to an officer granted the powers of administration in the agent in order to act for its benefit."@en .
+
+<http://rdaregistry.info/Elements/u/P60867> a rdf:Property ;
+    rdfs:label "is trustee of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50287> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/trusteeOf.en> ;
+    reg:name "trusteeOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60737> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60866> ;
+    skos:definition "Relates an agent to an agent that grants the powers of administration to the officer in order to act for its benefit."@en .
 
 <http://rdaregistry.info/Elements/u/P60017> a rdf:Property ;
     rdfs:label "is actor of"@en ;
@@ -7874,8 +7822,7 @@
     rdfs:label "has coordinates of cartographic content"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60345>,
         <http://rdaregistry.info/Elements/u/P60346>,
-        <http://rdaregistry.info/Elements/u/P60347>,
-        <http://rdaregistry.info/Elements/w/P10024> ;
+        <http://rdaregistry.info/Elements/u/P60347> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/coordinatesOfCartographicContent.en> ;
     reg:name "coordinatesOfCartographicContent"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -7897,8 +7844,7 @@
 <http://rdaregistry.info/Elements/u/P60214> a rdf:Property ;
     rdfs:label "is imitated as"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20114>,
-        <http://rdaregistry.info/Elements/u/P60246>,
-        <http://rdaregistry.info/Elements/w/P10117> ;
+        <http://rdaregistry.info/Elements/u/P60246> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/imitatedAs.en> ;
     reg:name "imitatedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -7908,7 +7854,7 @@
     skos:definition "Relates a resource to a resource that copies the style or content of the source resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60217> a rdf:Property ;
-    rdfs:label "is facsimile"@en ;
+    rdfs:label "has facsimile"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40058>,
         <http://rdaregistry.info/Elements/m/P30031>,
         <http://rdaregistry.info/Elements/u/P60179> ;
@@ -7960,8 +7906,7 @@
 <http://rdaregistry.info/Elements/u/P60311> a rdf:Property ;
     rdfs:label "is imitation of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20195>,
-        <http://rdaregistry.info/Elements/u/P60312>,
-        <http://rdaregistry.info/Elements/w/P10196> ;
+        <http://rdaregistry.info/Elements/u/P60312> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/imitationOf.en> ;
     reg:name "imitationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8020,8 +7965,7 @@
 
 <http://rdaregistry.info/Elements/u/P60435> a rdf:Property ;
     rdfs:label "has architect"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60473>,
-        <http://rdaregistry.info/Elements/w/P10062> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60473> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/architect.en> ;
     reg:name "architect"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8078,17 +8022,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60404> ;
     skos:definition "Relates an agent having legal possession of a resource to the resource."@en .
 
-<http://rdaregistry.info/Elements/u/P60633> a rdf:Property ;
-    rdfs:label "has incumbent"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50027>,
-        <http://rdaregistry.info/Elements/u/P60633> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/incumbent.en> ;
-    reg:name "incumbent"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60633> ;
-    skos:definition "Relates an agent holding an office in the agent to the agent."@en .
-
 <http://rdaregistry.info/Elements/u/P60664> a rdf:Property ;
     rdfs:label "is architect of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50196>,
@@ -8105,8 +8038,7 @@
     rdfs:label "has derivative resource relationship with"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20233>,
         <http://rdaregistry.info/Elements/u/P60250>,
-        <http://rdaregistry.info/Elements/u/P60305>,
-        <http://rdaregistry.info/Elements/w/P10229> ;
+        <http://rdaregistry.info/Elements/u/P60305> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/derivativeResourceRelationshipWith.en> ;
     reg:name "derivativeResourceRelationshipWith"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8118,8 +8050,7 @@
     rdfs:label "has sequential resource relationship with"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20235>,
         <http://rdaregistry.info/Elements/u/P60261>,
-        <http://rdaregistry.info/Elements/u/P60278>,
-        <http://rdaregistry.info/Elements/w/P10231> ;
+        <http://rdaregistry.info/Elements/u/P60278> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/sequentialResourceRelationshipWith.en> ;
     reg:name "sequentialResourceRelationshipWith"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8294,6 +8225,19 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60401> ;
     skos:definition "Relates an agent formerly having legal possession of a resource to the resource."@en .
 
+<http://rdaregistry.info/Elements/u/P60633> a rdf:Property ;
+    rdfs:label "has officer"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50027>,
+        <http://rdaregistry.info/Elements/u/P60864>,
+        <http://rdaregistry.info/Elements/u/P60866> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/officer.en> ;
+    reg:name "officer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60737> ;
+    skos:definition "Relates an agent holding an office in or commanding the agent to the agent."@en .
+
 <http://rdaregistry.info/Elements/u/P60673> a rdf:Property ;
     rdfs:label "is director of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50205> ;
@@ -8305,13 +8249,25 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60449> ;
     skos:definition "Relates an agent responsible for the general management and supervision of a filmed performance, a radio or television program, etc. to the resource."@en .
 
+<http://rdaregistry.info/Elements/u/P60737> a rdf:Property ;
+    rdfs:label "has officer of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50234>,
+        <http://rdaregistry.info/Elements/u/P60865>,
+        <http://rdaregistry.info/Elements/u/P60867> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/officerOf.en> ;
+    reg:name "officerOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60633> ;
+    skos:definition "Relates an agent to an agent holding an office in or commanding the agent."@en .
+
 <http://rdaregistry.info/Elements/u/P60185> a rdf:Property ;
     rdfs:label "is adapted as a screenplay"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20096>,
         <http://rdaregistry.info/Elements/u/P60184>,
         <http://rdaregistry.info/Elements/u/P60186>,
-        <http://rdaregistry.info/Elements/u/P60187>,
-        <http://rdaregistry.info/Elements/w/P10095> ;
+        <http://rdaregistry.info/Elements/u/P60187> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAsAScreenplay.en> ;
     reg:name "adaptedAsAScreenplay"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8325,8 +8281,7 @@
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20102>,
         <http://rdaregistry.info/Elements/u/P60282>,
         <http://rdaregistry.info/Elements/u/P60283>,
-        <http://rdaregistry.info/Elements/u/P60284>,
-        <http://rdaregistry.info/Elements/w/P10105> ;
+        <http://rdaregistry.info/Elements/u/P60284> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/screenplayFor.en> ;
     reg:name "screenplayFor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8340,8 +8295,7 @@
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20129>,
         <http://rdaregistry.info/Elements/u/P60232>,
         <http://rdaregistry.info/Elements/u/P60233>,
-        <http://rdaregistry.info/Elements/u/P60234>,
-        <http://rdaregistry.info/Elements/w/P10133> ;
+        <http://rdaregistry.info/Elements/u/P60234> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/screenplayBasedOn.en> ;
     reg:name "screenplayBasedOn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8355,8 +8309,7 @@
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20157>,
         <http://rdaregistry.info/Elements/u/P60265>,
         <http://rdaregistry.info/Elements/u/P60268>,
-        <http://rdaregistry.info/Elements/u/P60269>,
-        <http://rdaregistry.info/Elements/w/P10159> ;
+        <http://rdaregistry.info/Elements/u/P60269> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/screenplay.en> ;
     reg:name "screenplay"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8369,8 +8322,7 @@
     rdfs:label "has artist"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60475>,
         <http://rdaregistry.info/Elements/u/P60752>,
-        <http://rdaregistry.info/Elements/u/P60753>,
-        <http://rdaregistry.info/Elements/w/P10058> ;
+        <http://rdaregistry.info/Elements/u/P60753> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/artist.en> ;
     reg:name "artist"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8383,8 +8335,7 @@
     rdfs:label "has producer"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60169>,
         <http://rdaregistry.info/Elements/u/P60170>,
-        <http://rdaregistry.info/Elements/u/P60171>,
-        <http://rdaregistry.info/Elements/w/P10064> ;
+        <http://rdaregistry.info/Elements/u/P60171> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/producer.en> ;
     reg:name "producer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8397,8 +8348,7 @@
     rdfs:label "has director"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60084>,
         <http://rdaregistry.info/Elements/u/P60085>,
-        <http://rdaregistry.info/Elements/u/P60086>,
-        <http://rdaregistry.info/Elements/w/P10066> ;
+        <http://rdaregistry.info/Elements/u/P60086> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/director.en> ;
     reg:name "director"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8457,8 +8407,7 @@
         <http://rdaregistry.info/Elements/u/P60196>,
         <http://rdaregistry.info/Elements/u/P60198>,
         <http://rdaregistry.info/Elements/u/P60204>,
-        <http://rdaregistry.info/Elements/u/P60307>,
-        <http://rdaregistry.info/Elements/w/P10228> ;
+        <http://rdaregistry.info/Elements/u/P60307> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/accompanyingResourceRelationshipWith.en> ;
     reg:name "accompanyingResourceRelationshipWith"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8480,7 +8429,7 @@
     skos:definition "Relates a resource to details of the relationship between an original carrier and the carrier of a reproduction made from the original (e.g., a first generation camera master, a second generation printing master)."@en .
 
 <http://rdaregistry.info/Elements/u/P60191> a rdf:Property ;
-    rdfs:label "is equivalent"@en ;
+    rdfs:label "has equivalent"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40031>,
         <http://rdaregistry.info/Elements/m/P30024>,
         <http://rdaregistry.info/Elements/u/P60195>,
@@ -8549,8 +8498,7 @@
     reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60476>,
         <http://rdaregistry.info/Elements/u/P60477>,
         <http://rdaregistry.info/Elements/u/P60478>,
-        <http://rdaregistry.info/Elements/u/P60751>,
-        <http://rdaregistry.info/Elements/w/P10061> ;
+        <http://rdaregistry.info/Elements/u/P60751> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/author.en> ;
     reg:name "author"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8600,6 +8548,21 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60723> ;
     skos:definition "Relates a resource to a resource such as a motion picture, play, television program, etc. that uses the musical resource."@en .
 
+<http://rdaregistry.info/Elements/u/P60853> a rdf:Property ;
+    rdfs:label "has colleague"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50274>,
+        <http://rdaregistry.info/Elements/u/P60857>,
+        <http://rdaregistry.info/Elements/u/P60858>,
+        <http://rdaregistry.info/Elements/u/P60859>,
+        <http://rdaregistry.info/Elements/u/P60860> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/colleague.en> ;
+    reg:name "colleague"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60454> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60853> ;
+    skos:definition "Relates an agent to a fellow member of a profession, staff, or academic faculty."@en .
+
 <http://rdaregistry.info/Elements/u/P60101> a rdf:Property ;
     rdfs:label "is contained in"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20074>,
@@ -8609,8 +8572,7 @@
         <http://rdaregistry.info/Elements/u/P60192>,
         <http://rdaregistry.info/Elements/u/P60193>,
         <http://rdaregistry.info/Elements/u/P60194>,
-        <http://rdaregistry.info/Elements/u/P60317>,
-        <http://rdaregistry.info/Elements/w/P10019> ;
+        <http://rdaregistry.info/Elements/u/P60317> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/containedIn.en> ;
     reg:name "containedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8626,7 +8588,6 @@
         <http://rdaregistry.info/Elements/u/P60288>,
         <http://rdaregistry.info/Elements/u/P60292>,
         <http://rdaregistry.info/Elements/u/P60298>,
-        <http://rdaregistry.info/Elements/w/P10100>,
         <http://rdaregistry.info/Elements/w/P10265>,
         <http://rdaregistry.info/Elements/w/P10271>,
         <http://rdaregistry.info/Elements/w/P10277> ;
@@ -8647,8 +8608,7 @@
         <http://rdaregistry.info/Elements/u/P60212>,
         <http://rdaregistry.info/Elements/u/P60213>,
         <http://rdaregistry.info/Elements/u/P60218>,
-        <http://rdaregistry.info/Elements/u/P60219>,
-        <http://rdaregistry.info/Elements/w/P10118> ;
+        <http://rdaregistry.info/Elements/u/P60219> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/describedIn.en> ;
     reg:name "describedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8666,8 +8626,7 @@
         <http://rdaregistry.info/Elements/u/P60207>,
         <http://rdaregistry.info/Elements/u/P60240>,
         <http://rdaregistry.info/Elements/u/P60300>,
-        <http://rdaregistry.info/Elements/u/P60316>,
-        <http://rdaregistry.info/Elements/w/P10147> ;
+        <http://rdaregistry.info/Elements/u/P60316> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/containerOf.en> ;
     reg:name "containerOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8792,6 +8751,26 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     skos:definition "Relates a resource to a word, character, or group of words and/or characters that names a resource or a resource contained in it."@en .
 
+<http://rdaregistry.info/Elements/u/P60454> a rdf:Property ;
+    rdfs:label "has related agent"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50218>,
+        <http://rdaregistry.info/Elements/a/P50219>,
+        <http://rdaregistry.info/Elements/a/P50220>,
+        <http://rdaregistry.info/Elements/u/P60633>,
+        <http://rdaregistry.info/Elements/u/P60737>,
+        <http://rdaregistry.info/Elements/u/P60853>,
+        <http://rdaregistry.info/Elements/u/P60854>,
+        <http://rdaregistry.info/Elements/u/P60855>,
+        <http://rdaregistry.info/Elements/u/P60856>,
+        <http://rdaregistry.info/Elements/u/P60861>,
+        <http://rdaregistry.info/Elements/u/P60862>,
+        <http://rdaregistry.info/Elements/u/P60863> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedAgent.en> ;
+    reg:name "relatedAgent"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    skos:definition "Relates an agent to an agent that is associated with the agent being identified."@en .
+
 <http://rdaregistry.info/Elements/u/P60198> a rdf:Property ;
     rdfs:label "is complemented by"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20100>,
@@ -8802,8 +8781,7 @@
         <http://rdaregistry.info/Elements/u/P60270>,
         <http://rdaregistry.info/Elements/u/P60285>,
         <http://rdaregistry.info/Elements/u/P60740>,
-        <http://rdaregistry.info/Elements/u/P60741>,
-        <http://rdaregistry.info/Elements/w/P10103> ;
+        <http://rdaregistry.info/Elements/u/P60741> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/complementedBy.en> ;
     reg:name "complementedBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8824,8 +8802,7 @@
         <http://rdaregistry.info/Elements/u/P60574>,
         <http://rdaregistry.info/Elements/u/P60575>,
         <http://rdaregistry.info/Elements/u/P60576>,
-        <http://rdaregistry.info/Elements/u/P60577>,
-        <http://rdaregistry.info/Elements/w/P10156> ;
+        <http://rdaregistry.info/Elements/u/P60577> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/precededBy.en> ;
     reg:name "precededBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8846,8 +8823,7 @@
         <http://rdaregistry.info/Elements/u/P60306>,
         <http://rdaregistry.info/Elements/u/P60310>,
         <http://rdaregistry.info/Elements/u/P60503>,
-        <http://rdaregistry.info/Elements/u/P60504>,
-        <http://rdaregistry.info/Elements/w/P10170> ;
+        <http://rdaregistry.info/Elements/u/P60504> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/succeededBy.en> ;
     reg:name "succeededBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8911,8 +8887,7 @@
         <http://rdaregistry.info/Elements/u/P60222>,
         <http://rdaregistry.info/Elements/u/P60262>,
         <http://rdaregistry.info/Elements/u/P60263>,
-        <http://rdaregistry.info/Elements/u/P60281>,
-        <http://rdaregistry.info/Elements/w/P10108> ;
+        <http://rdaregistry.info/Elements/u/P60281> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/augmentedBy.en> ;
     reg:name "augmentedBy"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8934,8 +8909,7 @@
         <http://rdaregistry.info/Elements/u/P60290>,
         <http://rdaregistry.info/Elements/u/P60291>,
         <http://rdaregistry.info/Elements/u/P60302>,
-        <http://rdaregistry.info/Elements/u/P60474>,
-        <http://rdaregistry.info/Elements/w/P10192> ;
+        <http://rdaregistry.info/Elements/u/P60474> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/augmentationOf.en> ;
     reg:name "augmentationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8957,8 +8931,7 @@
         <http://rdaregistry.info/Elements/u/P60235>,
         <http://rdaregistry.info/Elements/u/P60236>,
         <http://rdaregistry.info/Elements/u/P60743>,
-        <http://rdaregistry.info/Elements/u/P60745>,
-        <http://rdaregistry.info/Elements/w/P10142> ;
+        <http://rdaregistry.info/Elements/u/P60745> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptationOf.en> ;
     reg:name "adaptationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8980,8 +8953,7 @@
         <http://rdaregistry.info/Elements/u/P60354>,
         <http://rdaregistry.info/Elements/u/P60361>,
         <http://rdaregistry.info/Elements/u/P60742>,
-        <http://rdaregistry.info/Elements/u/P60744>,
-        <http://rdaregistry.info/Elements/w/P10155> ;
+        <http://rdaregistry.info/Elements/u/P60744> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/adaptedAs.en> ;
     reg:name "adaptedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -9091,8 +9063,7 @@
         <http://rdaregistry.info/Elements/u/P60436>,
         <http://rdaregistry.info/Elements/u/P60463>,
         <http://rdaregistry.info/Elements/u/P60465>,
-        <http://rdaregistry.info/Elements/u/P60826>,
-        <http://rdaregistry.info/Elements/w/P10065> ;
+        <http://rdaregistry.info/Elements/u/P60826> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/creator.en> ;
     reg:name "creator"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -9153,8 +9124,7 @@
         <http://rdaregistry.info/Elements/u/P60279>,
         <http://rdaregistry.info/Elements/u/P60280>,
         <http://rdaregistry.info/Elements/u/P60831>,
-        <http://rdaregistry.info/Elements/u/P60833>,
-        <http://rdaregistry.info/Elements/w/P10148> ;
+        <http://rdaregistry.info/Elements/u/P60833> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/derivative.en> ;
     reg:name "derivative"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -9186,8 +9156,7 @@
         <http://rdaregistry.info/Elements/u/P60309>,
         <http://rdaregistry.info/Elements/u/P60311>,
         <http://rdaregistry.info/Elements/u/P60830>,
-        <http://rdaregistry.info/Elements/u/P60832>,
-        <http://rdaregistry.info/Elements/w/P10190> ;
+        <http://rdaregistry.info/Elements/u/P60832> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/basedOn.en> ;
     reg:name "basedOn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -9229,8 +9198,7 @@
         <http://rdaregistry.info/Elements/u/P60815>,
         <http://rdaregistry.info/Elements/u/P60834>,
         <http://rdaregistry.info/Elements/u/P60836>,
-        <http://rdaregistry.info/Elements/u/P60849>,
-        <http://rdaregistry.info/Elements/w/P10047> ;
+        <http://rdaregistry.info/Elements/u/P60849> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/otherAgentAssociatedWithAResource.en> ;
     reg:name "otherAgentAssociatedWithAResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -9238,48 +9206,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60602> ;
     skos:definition "Relates a resource to an agent other than a creator, custodian, owner, producer, publisher, distributor or manufacturer associated with a resource."@en ;
     skos:scopeNote "Includes book designers, platemakers, etc. Includes persons, etc., to whom correspondence is addressed, persons, etc., honoured by a festschrift, directors, cinematographers, sponsoring bodies, production companies, institutions, etc., hosting an exhibition or event, etc. Includes curators, binders, restorationists, etc."@en .
-
-<http://rdaregistry.info/Elements/u/P60398> a rdf:Property ;
-    rdfs:label "has contributor"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20053>,
-        <http://rdaregistry.info/Elements/u/P60377>,
-        <http://rdaregistry.info/Elements/u/P60378>,
-        <http://rdaregistry.info/Elements/u/P60379>,
-        <http://rdaregistry.info/Elements/u/P60381>,
-        <http://rdaregistry.info/Elements/u/P60382>,
-        <http://rdaregistry.info/Elements/u/P60383>,
-        <http://rdaregistry.info/Elements/u/P60384>,
-        <http://rdaregistry.info/Elements/u/P60385>,
-        <http://rdaregistry.info/Elements/u/P60386>,
-        <http://rdaregistry.info/Elements/u/P60387>,
-        <http://rdaregistry.info/Elements/u/P60388>,
-        <http://rdaregistry.info/Elements/u/P60392>,
-        <http://rdaregistry.info/Elements/u/P60393>,
-        <http://rdaregistry.info/Elements/u/P60394>,
-        <http://rdaregistry.info/Elements/u/P60395>,
-        <http://rdaregistry.info/Elements/u/P60396>,
-        <http://rdaregistry.info/Elements/u/P60397>,
-        <http://rdaregistry.info/Elements/u/P60399>,
-        <http://rdaregistry.info/Elements/u/P60419>,
-        <http://rdaregistry.info/Elements/u/P60422>,
-        <http://rdaregistry.info/Elements/u/P60437>,
-        <http://rdaregistry.info/Elements/u/P60446>,
-        <http://rdaregistry.info/Elements/u/P60748>,
-        <http://rdaregistry.info/Elements/u/P60749>,
-        <http://rdaregistry.info/Elements/u/P60809>,
-        <http://rdaregistry.info/Elements/u/P60811>,
-        <http://rdaregistry.info/Elements/u/P60813>,
-        <http://rdaregistry.info/Elements/u/P60824>,
-        <http://rdaregistry.info/Elements/u/P60828>,
-        <http://rdaregistry.info/Elements/u/P60838>,
-        <http://rdaregistry.info/Elements/u/P60840> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributor.en> ;
-    reg:name "contributor"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/u/P60626> ;
-    skos:definition "Relates a resource to an agent contributing to a resource."@en ;
-    skos:scopeNote "Contributors include editors, translators, arrangers of music, performers, etc."@en .
 
 <http://rdaregistry.info/Elements/u/P60602> a rdf:Property ;
     rdfs:label "is other agent associated with a resource of"@en ;
@@ -9324,6 +9250,49 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60374> ;
     skos:definition "Relates an agent other than a creator, custodian, owner, producer, publisher, distributor or manufacturer associated with a resource to the resource."@en .
 
+<http://rdaregistry.info/Elements/u/P60398> a rdf:Property ;
+    rdfs:label "has contributor"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20053>,
+        <http://rdaregistry.info/Elements/u/P60377>,
+        <http://rdaregistry.info/Elements/u/P60378>,
+        <http://rdaregistry.info/Elements/u/P60379>,
+        <http://rdaregistry.info/Elements/u/P60381>,
+        <http://rdaregistry.info/Elements/u/P60382>,
+        <http://rdaregistry.info/Elements/u/P60383>,
+        <http://rdaregistry.info/Elements/u/P60384>,
+        <http://rdaregistry.info/Elements/u/P60385>,
+        <http://rdaregistry.info/Elements/u/P60386>,
+        <http://rdaregistry.info/Elements/u/P60387>,
+        <http://rdaregistry.info/Elements/u/P60388>,
+        <http://rdaregistry.info/Elements/u/P60392>,
+        <http://rdaregistry.info/Elements/u/P60393>,
+        <http://rdaregistry.info/Elements/u/P60394>,
+        <http://rdaregistry.info/Elements/u/P60395>,
+        <http://rdaregistry.info/Elements/u/P60396>,
+        <http://rdaregistry.info/Elements/u/P60397>,
+        <http://rdaregistry.info/Elements/u/P60399>,
+        <http://rdaregistry.info/Elements/u/P60419>,
+        <http://rdaregistry.info/Elements/u/P60422>,
+        <http://rdaregistry.info/Elements/u/P60437>,
+        <http://rdaregistry.info/Elements/u/P60446>,
+        <http://rdaregistry.info/Elements/u/P60748>,
+        <http://rdaregistry.info/Elements/u/P60749>,
+        <http://rdaregistry.info/Elements/u/P60809>,
+        <http://rdaregistry.info/Elements/u/P60811>,
+        <http://rdaregistry.info/Elements/u/P60813>,
+        <http://rdaregistry.info/Elements/u/P60824>,
+        <http://rdaregistry.info/Elements/u/P60828>,
+        <http://rdaregistry.info/Elements/u/P60838>,
+        <http://rdaregistry.info/Elements/u/P60840>,
+        <http://rdaregistry.info/Elements/u/P60851> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributor.en> ;
+    reg:name "contributor"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P60626> ;
+    skos:definition "Relates a resource to an agent contributing to a resource."@en ;
+    skos:scopeNote "Contributors include editors, translators, arrangers of music, performers, etc."@en .
+
 <http://rdaregistry.info/Elements/u/P60626> a rdf:Property ;
     rdfs:label "is contributor of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50161>,
@@ -9357,7 +9326,8 @@
         <http://rdaregistry.info/Elements/u/P60825>,
         <http://rdaregistry.info/Elements/u/P60829>,
         <http://rdaregistry.info/Elements/u/P60839>,
-        <http://rdaregistry.info/Elements/u/P60841> ;
+        <http://rdaregistry.info/Elements/u/P60841>,
+        <http://rdaregistry.info/Elements/u/P60852> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributorOf.en> ;
     reg:name "contributorOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;

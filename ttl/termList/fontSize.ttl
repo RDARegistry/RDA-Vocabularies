@@ -1,41 +1,46 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
-    a :Concept ;
-    :prefLabel "Published"@en .
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
 
-<http://rdaregistry.info/termList/fontSize>
+<http://rdaregistry.info/termList/fontSize/>
     dc:title "RDA Font Size" ;
-    a :ConceptScheme .
+    a skos:ConceptScheme .
 
 <http://rdaregistry.info/termList/fontSize/1001>
+    rdakit:toolkitDefinition "A font size that is very large, designed to aid readers who experience difficulty reading large print."@en, "Très grande taille de police de caractères visant à aider les lecteurs qui ont de la difficulté à lire les caractères de taille ordinaire ou les gros caractères."@fr, "旨在帮助阅读常规或大字印本有困难的读者所采用的非常大的字号。"@zh ;
+    rdakit:toolkitLabel "caractères géants"@fr, "giant print"@en, "巨大字印刷"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/859> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :altLabel "Extra-Großdruck"@de, "Super-Großdruck"@de, "extra gros caractères"@fr, "extra large print"@en, "impresión extra grande"@es, "impresión super grande"@es, "super large print"@en ;
-    :definition "A font size that is very large, designed to aid readers who experience difficulty reading large print."@en, "Eine Schriftgröße, die sehr groß ist und dazu konzipiert ist, Leser zu unterstützen, die Schwierigkeiten beim Lesen von regulärem oder Großdruck haben."@de, "Tipo de letra de gran tamaño definida para ayudar a los lectores que tienen dificultad para leer con tipos de letra normal o mayor."@es, "Très grande taille de police de caractères visant à aider les lecteurs qui ont de la difficulté à lire les caractères de taille ordinaire ou les gros caractères."@fr ;
-    :inScheme <http://rdaregistry.info/termList/fontSize> ;
-    :prefLabel "Riesendruck"@de, "caractères géants"@fr, "giant print"@en, "impresión gigante"@es ;
-    :scopeNote "Used for:  Extra large print, Super large print."@en .
+    a skos:Concept ;
+    skos:altLabel "Extra-Großdruck"@de, "Super-Großdruck"@de, "extra gros caractères"@fr, "extra large print"@en, "impresión extra grande"@es, "impresión super grande"@es, "super large print"@en, "超大字印刷"@zh ;
+    skos:definition "A font size that is very large, designed to aid readers who experience difficulty reading large print."@en, "Eine Schriftgröße, die sehr groß ist und dazu konzipiert ist, Leser zu unterstützen, die Schwierigkeiten beim Lesen von regulärem oder Großdruck haben."@de, "Tipo de letra de gran tamaño definida para ayudar a los lectores que tienen dificultad para leer con tipos de letra normal o mayor."@es, "Très grande taille de police de caractères visant à aider les lecteurs qui ont de la difficulté à lire les caractères de taille ordinaire ou les gros caractères."@fr, "旨在帮助阅读常规或大字印本有困难的读者所采用的非常大的字号。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/fontSize/> ;
+    skos:prefLabel "Riesendruck"@de, "caractères géants"@fr, "giant print"@en, "impresión gigante"@es, "巨大字印刷"@zh ;
+    skos:scopeNote "Used for:  Extra large print, Super large print."@en .
 
 <http://rdaregistry.info/termList/fontSize/1002>
+    rdakit:toolkitDefinition "A font size designed to aid readers who experience difficulty reading regular print."@en, "Extra gros caractères."@fr, "旨在帮助阅读常规印本有困难的读者所采用的字号。"@zh ;
+    rdakit:toolkitLabel "gros caractères"@fr, "large print"@en, "大字印刷"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/860> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A font size designed to aid readers who experience difficulty reading regular print."@en, "Eine Schriftgröße, die dazu konzipiert ist, Lesern zu helfen, die Schwierigkeiten beim Lesen regulären Drucks haben."@de, "Extra gros caractères."@fr ;
-    :inScheme <http://rdaregistry.info/termList/fontSize> ;
-    :prefLabel "Großdruck"@de, "gros caractères"@fr, "large print"@en, "letra grande"@es .
+    a skos:Concept ;
+    skos:definition "A font size designed to aid readers who experience difficulty reading regular print."@en, "Eine Schriftgröße, die dazu konzipiert ist, Lesern zu helfen, die Schwierigkeiten beim Lesen regulären Drucks haben."@de, "Extra gros caractères."@fr, "旨在帮助阅读常规印本有困难的读者所采用的字号。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/fontSize/> ;
+    skos:prefLabel "Großdruck"@de, "gros caractères"@fr, "large print"@en, "letra grande"@es, "大字印刷"@zh .
 
 <http://rdaregistry.info/termList/fontSize/1003>
+    rdakit:toolkitDefinition "A font size of braille text where the individual cells are expanded to give wider spacing between standard size dots or between dots larger than standard size."@en, "增大布莱叶盲文文本每个字标准尺寸点之间距离的排版方式。"@zh ;
+    rdakit:toolkitLabel "jumbo braille"@en, "布莱叶盲文大字本"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/6762> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A font size of braille text where the individual cells are expanded to give wider spacing between standard size dots or between dots larger than standard size."@en ;
-    :inScheme <http://rdaregistry.info/termList/fontSize> ;
-    :prefLabel "Jumbo-Braille-Schrift"@de, "braille jumbo"@es, "jumbo braille"@en .
+    a skos:Concept ;
+    skos:definition "A font size of braille text where the individual cells are expanded to give wider spacing between standard size dots or between dots larger than standard size."@en, "增大布莱叶盲文文本每个字标准尺寸点之间距离的排版方式。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/fontSize/> ;
+    skos:prefLabel "Jumbo-Braille-Schrift"@de, "braille jumbo"@es, "jumbo braille"@en, "布莱叶盲文大字本"@zh .
 
