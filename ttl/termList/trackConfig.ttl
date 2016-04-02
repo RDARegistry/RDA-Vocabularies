@@ -1,35 +1,34 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
-    a :Concept ;
-    :prefLabel "Published"@en .
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
 
-<http://rdaregistry.info/termList/trackConfig>
+<http://rdaregistry.info/termList/trackConfig/>
     dc:title "RDA Track Configuration" ;
-    a :ConceptScheme .
+    a skos:ConceptScheme .
 
 <http://rdaregistry.info/termList/trackConfig/1001>
+    rdakit:toolkitDefinition "A track configuration in which the audio track is located in the centre of a separate film roll."@en, "Configuración de la banda sonora en la cual la pista de audio está localizada en el centro de un rollo de película separado."@es, "声道位于独立胶卷中心的音轨配置。"@zh ;
+    rdakit:toolkitLabel "banda sonora central"@es, "centre track"@en, "piste centrale"@fr, "中央音轨"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/872> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:ToolkitDefinition "A track configuration in which the audio track is located in the centre of a separate film roll."@en ;
-    rdakit:ToolkitLabel "banda sonora central"@es, "centre track"@en, "piste centrale"@fr ;
-    a :Concept ;
-    :definition "A track configuration in which the audio track is located in the centre of a separate film roll."@en, "Eine Spurkonfiguration, bei der die Tonspur in der Mitte einer separaten Filmrolle."@de ;
-    :inScheme <http://rdaregistry.info/termList/trackConfig> ;
-    :prefLabel "Mittelspur"@de, "banda sonora central"@es, "centre track"@en, "piste centrale"@fr .
+    a skos:Concept ;
+    skos:definition "A track configuration in which the audio track is located in the centre of a separate film roll."@en, "Configuración de la banda sonora en la cual la pista de audio está localizada en el centro de un rollo de película separado."@es, "Eine Spurkonfiguration, bei der die Tonspur in der Mitte einer separaten Filmrolle."@de, "声道位于独立胶卷中心的音轨配置。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/trackConfig/> ;
+    skos:prefLabel "Mittelspur"@de, "banda sonora central"@es, "centre track"@en, "piste centrale"@fr, "中央音轨"@zh .
 
 <http://rdaregistry.info/termList/trackConfig/1002>
+    rdakit:toolkitDefinition "A track configuration in which the audio track is located near the edge of a film roll."@en, "Configuración de la banda sonora en la cual la pista de audio está localizada cerca del borde de un rollo de película."@es, "声道位于胶卷边缘的音轨配置。"@zh ;
+    rdakit:toolkitLabel "banda sonora lateral"@es, "edge track"@en, "piste latérale"@fr, "边缘音轨"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/873> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:ToolkitDefinition "A track configuration in which the audio track is located near the edge of a film roll."@en ;
-    rdakit:ToolkitLabel "banda sonora lateral"@es, "edge track"@en, "piste latérale"@fr ;
-    a :Concept ;
-    :definition "A track configuration in which the audio track is located near the edge of a film roll."@en, "Eine Spurkonfiguration, bei der die Tonspur in der Nähe des Randes einer Filmrolle liegt."@de ;
-    :inScheme <http://rdaregistry.info/termList/trackConfig> ;
-    :prefLabel "Seitenspur"@de, "banda sonora lateral"@es, "edge track"@en, "piste latérale"@fr .
+    a skos:Concept ;
+    skos:definition "A track configuration in which the audio track is located near the edge of a film roll."@en, "Configuración de la banda sonora en la cual la pista de audio está localizada cerca del borde de un rollo de película."@es, "Eine Spurkonfiguration, bei der die Tonspur in der Nähe des Randes einer Filmrolle liegt."@de, "声道位于胶卷边缘的音轨配置。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/trackConfig/> ;
+    skos:prefLabel "Seitenspur"@de, "banda sonora lateral"@es, "edge track"@en, "piste latérale"@fr, "边缘音轨"@zh .
 

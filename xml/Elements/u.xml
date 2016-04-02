@@ -582,7 +582,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">addenda</reg:name>
   <rdfs:label xml:lang="en">is addenda</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource that consists of brief additional material, less extensive than a supplement, but essential to the completeness of the text of the predominant resource; it is usually added at the end of the content, but is sometimes issued separately.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is conceived as brief material, less extensive than a supplement but essential to the completeness of the predominant resource, usually added at the end of the predominant resource but sometimes issued separately.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60204" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60286" />
@@ -596,7 +596,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">addendaTo</reg:name>
   <rdfs:label xml:lang="en">is addenda to</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource to which is added brief additional material, less extensive than a supplement, but essential to the completeness of the content of the resource; it is usually added at the end of the resource, but is sometimes issued separately.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a predominant resource augmented with brief material, less extensive than a supplement but essential to the completeness of the predominant resource, usually added at the end of the predominant resource but sometimes issued separately.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60307" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60209" />
@@ -4366,6 +4366,33 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/editor.en" />
 </rdf:Description>
 
+<!-- Property: has editorial director -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60869">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60374" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">editorialDirector</reg:name>
+  <rdfs:label xml:lang="en">has editorial director</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/editorialDirector.en" />
+  <skos:definition xml:lang="en">Relates a resource to an agent having legal and/or intellectual responsibility (other than creation) for the content of a serial, integrating resource, or multipart monographic resource.</skos:definition>
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60870" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10298" />
+</rdf:Description>
+
+<!-- Property: is editorial director of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60870">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60602" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">editorialDirectorOf</reg:name>
+  <rdfs:label xml:lang="en">is editorial director of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/editorialDirectorOf.en" />
+  <skos:definition xml:lang="en">Relates an agent responsible for the legal and/or intellectual responsibility (other than creation) for the content of a serial, integrating resource, or multipart monographic resource to the resource.</skos:definition>
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60869" />
+</rdf:Description>
+
 <!-- Property: is editor of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60621">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -5189,6 +5216,33 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50020" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50029" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/founder.en" />
+</rdf:Description>
+
+<!-- Property: has founder of resource -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60871">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60374" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">founderOfResource</reg:name>
+  <rdfs:label xml:lang="en">has founder of resource</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/founderOfResource.en" />
+  <skos:definition xml:lang="en">Relates a resource to an agent responsible for establishing a serial, integrating resource, or multipart monographic resource.</skos:definition>
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60872" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10299" />
+</rdf:Description>
+
+<!-- Property: is founder of resource of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60872">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60602" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">founderOfResourceOf</reg:name>
+  <rdfs:label xml:lang="en">is founder of resource of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/founderOfResourceOf.en" />
+  <skos:definition xml:lang="en">Relates an agent responsible for establishing a serial, integrating resource, or multipart monograph to the resource.</skos:definition>
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60871" />
 </rdf:Description>
 
 <!-- Property: is freely translated as -->
@@ -6862,7 +6916,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">modifiedByVariationAs</reg:name>
   <rdfs:label xml:lang="en">is modified by variation as</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a musical resource in which melodic, thematic, or harmonic material is taken from the source resource to form a discrete theme, which is repeated one or more times with subsequent modifications.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a musical resource in which melodic, thematic, or harmonic material taken from the source resource forms a discrete theme, which is repeated one or more times with subsequent modifications.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60250" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60114" />
@@ -7255,6 +7309,18 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60470" />
 </rdf:Description>
 
+<!-- Property: has note on identifier for the resource -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60868">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60470" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">noteOnIdentifierForTheResource</reg:name>
+  <rdfs:label xml:lang="en">has note on identifier for the resource</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/noteOnIdentifierForTheResource.en" />
+  <skos:definition xml:lang="en">Relates a resource to a note providing information on identifiers for the resource not recorded as part of the identifier for the resource element.</skos:definition>
+</rdf:Description>
+
 <!-- Property: has note on issue, part, or iteration used as the basis for identification of the resource -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60122">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -7355,6 +7421,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60135" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60136" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60137" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60868" />
 </rdf:Description>
 
 <!-- Property: has note on resource-specific carrier characteristic -->
@@ -7743,6 +7810,8 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60834" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60836" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60849" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60869" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60871" />
 </rdf:Description>
 
 <!-- Property: DEPRECATED -->
@@ -7795,6 +7864,8 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60835" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60837" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60850" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60870" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60872" />
 </rdf:Description>
 
 <!-- Property: has other designation associated with the agent -->

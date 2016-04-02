@@ -4,26 +4,22 @@
     "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/RegAp/",
+    "reg": "http://metadataregistry.org/uri/profile/regap/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    },
-    {
       "@id": "http://rdaregistry.info/termList/gender/1003",
       "@type": "skos:Concept",
-      "rdakit:ToolkitDefinition": [
+      "rdakit:toolkitDefinition": [
         {
           "@language": "en",
           "@value": "The gender designation when specific gender is unknown."
+        },
+        {
+          "@language": "zh",
+          "@value": "性别未知的性别标识"
         },
         {
           "@language": "es",
@@ -34,18 +30,22 @@
           "@value": "Indication du sexe lorsque le sexe exact est inconnu."
         }
       ],
-      "rdakit:ToolkitLabel": [
+      "rdakit:toolkitLabel": [
         {
-          "@language": "es",
-          "@value": "desconocido"
+          "@language": "en",
+          "@value": "not known"
+        },
+        {
+          "@language": "zh",
+          "@value": "未知"
         },
         {
           "@language": "fr",
           "@value": "inconnu"
         },
         {
-          "@language": "en",
-          "@value": "not known"
+          "@language": "es",
+          "@value": "desconocido"
         }
       ],
       "reg:identifier": {
@@ -56,10 +56,6 @@
       },
       "skos:definition": [
         {
-          "@language": "fr",
-          "@value": "Indication du sexe lorsque le sexe exact est inconnu."
-        },
-        {
           "@language": "de",
           "@value": "Die Geschlechtskennzeichnung, wenn das spezifische Geschlecht unbekannt ist."
         },
@@ -68,8 +64,16 @@
           "@value": "The gender designation when specific gender is unknown."
         },
         {
+          "@language": "zh",
+          "@value": "性别未知的性别标识"
+        },
+        {
           "@language": "es",
           "@value": "Designación de género cuando el género específico es desconocido."
+        },
+        {
+          "@language": "fr",
+          "@value": "Indication du sexe lorsque le sexe exact est inconnu."
         }
       ],
       "skos:inScheme": {
@@ -79,6 +83,10 @@
         {
           "@language": "fr",
           "@value": "inconnu"
+        },
+        {
+          "@language": "zh",
+          "@value": "未知"
         },
         {
           "@language": "es",
@@ -97,11 +105,7 @@
     {
       "@id": "http://rdaregistry.info/termList/gender/1002",
       "@type": "skos:Concept",
-      "rdakit:ToolkitDefinition": [
-        {
-          "@language": "en",
-          "@value": "The gender designation for man or boy."
-        },
+      "rdakit:toolkitDefinition": [
         {
           "@language": "es",
           "@value": "Designación de género para un hombre o un joven."
@@ -109,20 +113,32 @@
         {
           "@language": "fr",
           "@value": "Indication du sexe pour un homme ou un garçon."
+        },
+        {
+          "@language": "en",
+          "@value": "The gender designation for man or boy."
+        },
+        {
+          "@language": "zh",
+          "@value": "男人或男孩的性别标识"
         }
       ],
-      "rdakit:ToolkitLabel": [
+      "rdakit:toolkitLabel": [
         {
-          "@language": "fr",
-          "@value": "masculin"
+          "@language": "es",
+          "@value": "masculino"
         },
         {
           "@language": "en",
           "@value": "male"
         },
         {
-          "@language": "es",
-          "@value": "masculino"
+          "@language": "zh",
+          "@value": "男性"
+        },
+        {
+          "@language": "fr",
+          "@value": "masculin"
         }
       ],
       "reg:identifier": {
@@ -133,20 +149,24 @@
       },
       "skos:definition": [
         {
-          "@language": "es",
-          "@value": "Designación de género para un hombre o un joven."
+          "@language": "zh",
+          "@value": "男人或男孩的性别标识"
         },
         {
-          "@language": "en",
-          "@value": "The gender designation for man or boy."
+          "@language": "fr",
+          "@value": "Indication du sexe pour un homme ou un garçon."
+        },
+        {
+          "@language": "es",
+          "@value": "Designación de género para un hombre o un joven."
         },
         {
           "@language": "de",
           "@value": "Die Geschlechtskennzeichnung für einen Mann oder einen Jungen."
         },
         {
-          "@language": "fr",
-          "@value": "Indication du sexe pour un homme ou un garçon."
+          "@language": "en",
+          "@value": "The gender designation for man or boy."
         }
       ],
       "skos:inScheme": {
@@ -154,16 +174,20 @@
       },
       "skos:prefLabel": [
         {
-          "@language": "fr",
-          "@value": "masculin"
+          "@language": "en",
+          "@value": "male"
         },
         {
           "@language": "de",
           "@value": "männlich"
         },
         {
-          "@language": "en",
-          "@value": "male"
+          "@language": "zh",
+          "@value": "男性"
+        },
+        {
+          "@language": "fr",
+          "@value": "masculin"
         },
         {
           "@language": "es",
@@ -174,28 +198,36 @@
     {
       "@id": "http://rdaregistry.info/termList/gender/1001",
       "@type": "skos:Concept",
-      "rdakit:ToolkitDefinition": [
-        {
-          "@language": "en",
-          "@value": "The gender designation for woman or girl."
-        },
+      "rdakit:toolkitDefinition": [
         {
           "@language": "fr",
           "@value": "Indication du sexe pour une femme ou une fille."
         },
         {
+          "@language": "zh",
+          "@value": "女人或女孩的性别标识"
+        },
+        {
           "@language": "es",
-          "@value": "La designación de género para una mujer o una joven."
+          "@value": "Designación de género para una mujer o una joven."
+        },
+        {
+          "@language": "en",
+          "@value": "The gender designation for woman or girl."
         }
       ],
-      "rdakit:ToolkitLabel": [
+      "rdakit:toolkitLabel": [
+        {
+          "@language": "fr",
+          "@value": "féminin"
+        },
         {
           "@language": "en",
           "@value": "female"
         },
         {
-          "@language": "fr",
-          "@value": "féminin"
+          "@language": "zh",
+          "@value": "女性"
         },
         {
           "@language": "es",
@@ -210,20 +242,24 @@
       },
       "skos:definition": [
         {
-          "@language": "es",
-          "@value": "La designación de género para una mujer o una joven."
-        },
-        {
-          "@language": "de",
-          "@value": "Die Geschlechtskennzeichnung für eine Frau oder ein Mädchen."
+          "@language": "fr",
+          "@value": "Indication du sexe pour une femme ou une fille."
         },
         {
           "@language": "en",
           "@value": "The gender designation for woman or girl."
         },
         {
-          "@language": "fr",
-          "@value": "Indication du sexe pour une femme ou une fille."
+          "@language": "de",
+          "@value": "Die Geschlechtskennzeichnung für eine Frau oder ein Mädchen."
+        },
+        {
+          "@language": "zh",
+          "@value": "女人或女孩的性别标识"
+        },
+        {
+          "@language": "es",
+          "@value": "Designación de género para una mujer o una joven."
         }
       ],
       "skos:inScheme": {
@@ -231,20 +267,24 @@
       },
       "skos:prefLabel": [
         {
-          "@language": "fr",
-          "@value": "féminin"
+          "@language": "zh",
+          "@value": "女性"
         },
         {
-          "@language": "en",
-          "@value": "female"
+          "@language": "es",
+          "@value": "femenino"
         },
         {
           "@language": "de",
           "@value": "weiblich"
         },
         {
-          "@language": "es",
-          "@value": "femenino"
+          "@language": "fr",
+          "@value": "féminin"
+        },
+        {
+          "@language": "en",
+          "@value": "female"
         }
       ]
     },
@@ -252,6 +292,14 @@
       "@id": "http://rdaregistry.info/termList/gender",
       "@type": "skos:ConceptScheme",
       "dc:title": "RDA Gender"
+    },
+    {
+      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+      "@type": "skos:Concept",
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Published"
+      }
     }
   ]
 }

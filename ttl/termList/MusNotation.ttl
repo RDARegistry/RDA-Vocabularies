@@ -1,98 +1,116 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
-    a :Concept ;
-    :prefLabel "Published"@en .
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
 
 <http://metadataregistry.org/uri/RegStatus/1008>
-    a :Concept ;
-    :prefLabel "Deprecated"@en .
+    a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
 
-<http://rdaregistry.info/termList/MusNotation>
+<http://rdaregistry.info/termList/MusNotation/>
     dc:title "RDA Form of Musical Notation" ;
-    a :ConceptScheme .
+    a skos:ConceptScheme .
 
 <http://rdaregistry.info/termList/MusNotation/1001>
+    rdakit:toolkitDefinition "A form of musical notation that uses various suggestive lines, symbols, colour, etc., to prompt or guide the performers. It is used for music that is indeterminate in pitch, duration, temperament, etc., and also to depict electronic music in which no performer is involved."@en, "Forma de notación musical que utiliza diversas líneas sugerentes, símbolos, color, etc., que impulsan u orientan a los intérpretes. Se usa para música que es indeterminada en tono, duración y temperamento, etc. y también para representar música electrónica en la que no está involucrado un intérprete."@es, "Forme de notation musicale qui utilise différentes lignes suggestives, des symboles, de la couleur, etc. pour aider ou guider les interprètes. Elle est utilisée pour de la musique dont les hauteurs, la durée, le tempérament, etc. ne sont pas déterminés ainsi que pour décrire de la musique électronique où aucun interprète n’est impliqué."@fr, "乐谱的一种形式，采用各种暗示的线条、符号和颜色等对演奏者提供提示或指导。在音乐的音高、持续时间、音质等不确定时使用，也用来描述无人演奏的电子音乐。"@zh ;
+    rdakit:toolkitLabel "graphic notation"@en, "notación con figuras"@es, "notation graphique"@fr, "图示标记法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/699> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A form of musical notation that uses various suggestive lines, symbols, colour, etc., to prompt or guide the performers. It is used for music that is indeterminate in pitch, duration, temperament, etc., and also to depict electronic music in which no performer is involved."@en, "Eine Form von Musiknotation, die verschiedene suggestive Linien, Symbole, Farben usw. verwendet, um die Ausführenden anzuregen oder zu führen. Sie wird für Musik, die unbestimmt in Tonhöhe, Dauer, Stimmung usw. ist, und auch zur Darstellung elektronischer Musik, bei der kein Ausführender beteiligt ist, verwendet."@de, "Forma de notación musical que utiliza diversas líneas sugerentes, símbolos, color, etc., que impulsan u orientan a los intérpretes. Se usa para música que es indeterminada en tono, duración y temperamento, etc. y también para representar música electrónica en la que no está involucrado un intérprete."@es, "Forme de notation musicale qui utilise différentes lignes suggestives, des symboles, de la couleur, etc. pour aider ou guider les interprètes. Elle est utilisée pour de la musique dont les hauteurs, la durée, le tempérament, etc. ne sont pas déterminés ainsi que pour décrire de la musique électronique où aucun interprète n’est impliqué."@fr ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Grafische Notation"@de, "graphic notation"@en, "notación con figuras"@es, "notation graphique"@fr .
+    a skos:Concept ;
+    skos:definition "A form of musical notation that uses various suggestive lines, symbols, colour, etc., to prompt or guide the performers. It is used for music that is indeterminate in pitch, duration, temperament, etc., and also to depict electronic music in which no performer is involved."@en, "Eine Form von Musiknotation, die verschiedene suggestive Linien, Symbole, Farben usw. verwendet, um die Ausführenden anzuregen oder zu führen. Sie wird für Musik, die unbestimmt in Tonhöhe, Dauer, Stimmung usw. ist, und auch zur Darstellung elektronischer Musik, bei der kein Ausführender beteiligt ist, verwendet."@de, "Forma de notación musical que utiliza diversas líneas sugerentes, símbolos, color, etc., que impulsan u orientan a los intérpretes. Se usa para música que es indeterminada en tono, duración y temperamento, etc. y también para representar música electrónica en la que no está involucrado un intérprete."@es, "Forme de notation musicale qui utilise différentes lignes suggestives, des symboles, de la couleur, etc. pour aider ou guider les interprètes. Elle est utilisée pour de la musique dont les hauteurs, la durée, le tempérament, etc. ne sont pas déterminés ainsi que pour décrire de la musique électronique où aucun interprète n’est impliqué."@fr, "乐谱的一种形式，采用各种暗示的线条、符号和颜色等对演奏者提供提示或指导。在音乐的音高、持续时间、音质等不确定时使用，也用来描述无人演奏的电子音乐。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Grafische Notation"@de, "graphic notation"@en, "notación con figuras"@es, "notation graphique"@fr, "图示标记法"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1002>
+    rdakit:toolkitDefinition "Musical notation that uses the letters of the alphabet to designate pitches."@en, "Notación musical que utiliza las letras del alfabeto para designar los tonos."@es, "Notation musicale qui utilise les lettres de l’alphabet pour désigner les hauteurs de sons."@fr, "用字母表中的字母标注音调的音乐标记法。"@zh ;
+    rdakit:toolkitLabel "letter notation"@en, "notación con letras"@es, "notation alphabétique"@fr, "字母记谱法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/700> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Musical notation that uses the letters of the alphabet to designate pitches."@en, "Notación musical que utiliza las letras del alfabeto para designar los tonos."@es, "Notation musicale qui utilise les lettres de l’alphabet pour désigner les hauteurs de sons."@fr ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Tonnamen"@de, "letter notation"@en, "notación con letras"@es, "notation alphabétique"@fr .
+    a skos:Concept ;
+    skos:definition "Musical notation that uses the letters of the alphabet to designate pitches."@en, "Notación musical que utiliza las letras del alfabeto para designar los tonos."@es, "Notation musicale qui utilise les lettres de l’alphabet pour désigner les hauteurs de sons."@fr, "用字母表中的字母标注音调的音乐标记法。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Tonnamen"@de, "letter notation"@en, "notación con letras"@es, "notation alphabétique"@fr, "字母记谱法"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1003>
+    rdakit:toolkitDefinition "A system of notating duration, beginning around 1260 and continuing through about 1600, employing four principal note-values and associated rests: long, breve, semibreve, and minim."@en, "Sistema de notación de la duración, que inició alrededor de 1260 y continuó hasta cerca de 1600, que emplea cuatro notas-valores principales y pausas asociadas: larga, breve, semibreve y mínima."@es, "Système de notation de la durée, ayant débuté aux environs de 1260 et s’étant prolongé jusque vers 1600, qui utilisait quatre valeurs de notes principales et les silences associés : longue, brève, semi-brève et minime."@fr, "始自公元1260年左右直至1600年为止的一种对持续时间的标记体系。采用四种基本的记录值和与之关联的休止符：长音、短音、全音符和半音符。"@zh ;
+    rdakit:toolkitLabel "mensural notation"@en, "notación mensural"@es, "notation proportionnelle"@fr, "有量记谱法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/701> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A system of notating duration, beginning around 1260 and continuing through about 1600, employing four principal note-values and associated rests: long, breve, semibreve, and minim."@en, "Ein System zur Notation der Tondauer, das um 1260 aufgekommen ist und bis ca. 1600 gedauert hat und die vier Hauptnoten-Werte und die damit verbundenen Pausen verwendet: longa, brevis, semi-brevis und minima."@de, "Sistema de notación de la duración, que inició alrededor de 1260 y continuó hasta cerca de 1600, que emplea cuatro notas-valores principales y pausas asociadas: larga, breve, semibreve y mínima."@es, "Système de notation de la durée, ayant débuté aux environs de 1260 et s’étant prolongé jusque vers 1600, qui utilisait quatre valeurs de notes principales et les silences associés : longue, brève, semi-brève et minime."@fr ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Mensuralnotation"@de, "mensural notation"@en, "notación mensural"@es, "notation proportionnelle"@fr .
+    a skos:Concept ;
+    skos:definition "A system of notating duration, beginning around 1260 and continuing through about 1600, employing four principal note-values and associated rests: long, breve, semibreve, and minim."@en, "Ein System zur Notation der Tondauer, das um 1260 aufgekommen ist und bis ca. 1600 gedauert hat und die vier Hauptnoten-Werte und die damit verbundenen Pausen verwendet: longa, brevis, semi-brevis und minima."@de, "Sistema de notación de la duración, que inició alrededor de 1260 y continuó hasta cerca de 1600, que emplea cuatro notas-valores principales y pausas asociadas: larga, breve, semibreve y mínima."@es, "Système de notation de la durée, ayant débuté aux environs de 1260 et s’étant prolongé jusque vers 1600, qui utilisait quatre valeurs de notes principales et les silences associés : longue, brève, semi-brève et minime."@fr, "始自公元1260年左右直至1600年为止的一种对持续时间的标记体系。采用四种基本的记录值和与之关联的休止符：长音、短音、全音符和半音符。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Mensuralnotation"@de, "mensural notation"@en, "notación mensural"@es, "notation proportionnelle"@fr, "有量记谱法"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1004>
+    rdakit:toolkitDefinition "A system of musical notation conveying pitch by use of numbers, assigned to the notes of a scale, the keys of a keyboard, the finger positions or frets of a string instrument, or to the holes or valves of a wind instrument."@en, "Sistema de notación musical que presenta el tono mediante el uso de números asignados a las notas de una escala, las teclas de un teclado, las posiciones de los dedos o los trastes de un instrumento de cuerdas, o los agujeros o válvulas de un instrumento de aliento."@es, "Système de notation musicale indiquant les hauteurs de sons au moyen de nombres, affectés aux notes d’une gamme, aux touches d’un clavier, aux positions des doigts ou aux frettes d’un instrument à cordes, ou bien encore aux trous ou aux pistons d’un instrument à vent."@fr, "用数字表示音调的乐谱体系，分配给音阶的注释、键盘的调、弦乐器的手指位置或定音的品，或管乐乐器的孔或键阀。"@zh ;
+    rdakit:toolkitLabel "notación numérica"@es, "notation chiffrée"@fr, "number notation"@en, "数字记谱法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/702> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A system of musical notation conveying pitch by use of numbers, assigned to the notes of a scale, the keys of a keyboard, the finger positions or frets of a string instrument, or to the holes or valves of a wind instrument."@en, "Ein System der Musiknotation, das die Tonhöhe durch die Verwendung von Zahlen ausdrückt, die den Noten einer Skala, den Tasten eines Keybords, den Fingerpositionen oder den Bünden eines Saiteninstruments oder den Löchern bzw. Ventilen eines Blasinstruments zugeordnet sind."@de, "Sistema de notación musical que presenta el tono mediante el uso de números asignados a las notas de una escala, las teclas de un teclado, las posiciones de los dedos o los trastes de un instrumento de cuerdas, o los agujeros o válvulas de un instrumento de aliento."@es, "Système de notation musicale indiquant les hauteurs de sons au moyen de nombres, affectés aux notes d’une gamme, aux touches d’un clavier, aux positions des doigts ou aux frettes d’un instrument à cordes, ou bien encore aux trous ou aux pistons d’un instrument à vent."@fr ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Ziffernnotation"@de, "notación numérica"@es, "notation chiffrée"@fr, "number notation"@en .
+    a skos:Concept ;
+    skos:definition "A system of musical notation conveying pitch by use of numbers, assigned to the notes of a scale, the keys of a keyboard, the finger positions or frets of a string instrument, or to the holes or valves of a wind instrument."@en, "Ein System der Musiknotation, das die Tonhöhe durch die Verwendung von Zahlen ausdrückt, die den Noten einer Skala, den Tasten eines Keybords, den Fingerpositionen oder den Bünden eines Saiteninstruments oder den Löchern bzw. Ventilen eines Blasinstruments zugeordnet sind."@de, "Sistema de notación musical que presenta el tono mediante el uso de números asignados a las notas de una escala, las teclas de un teclado, las posiciones de los dedos o los trastes de un instrumento de cuerdas, o los agujeros o válvulas de un instrumento de aliento."@es, "Système de notation musicale indiquant les hauteurs de sons au moyen de nombres, affectés aux notes d’une gamme, aux touches d’un clavier, aux positions des doigts ou aux frettes d’un instrument à cordes, ou bien encore aux trous ou aux pistons d’un instrument à vent."@fr, "用数字表示音调的乐谱体系，分配给音阶的注释、键盘的调、弦乐器的手指位置或定音的品，或管乐乐器的孔或键阀。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Ziffernnotation"@de, "notación numérica"@es, "notation chiffrée"@fr, "number notation"@en, "数字记谱法"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1005>
+    rdakit:toolkitLabel "plainsong notation"@en, "素歌记谱法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/703> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
-    a :Concept ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "plainsong notation"@en .
+    a skos:Concept ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "plainsong notation"@en, "素歌记谱法"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1006>
+    rdakit:toolkitDefinition "Designación de tonos por medio de sílabas convencionales, en lugar de con nombres con letras."@es, "La désignation des hauteurs de sons par des syllabes de convention plutôt que par des lettres."@fr, "The designation of pitches by means of conventional syllables rather than letter names."@en, "通过传统的音节而不是音名的方式标识音高。"@zh ;
+    rdakit:toolkitLabel "solfeo"@es, "solmisation"@fr, "solmization"@en, "唱名法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/704> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Designación de tonos por medio de sílabas convencionales, en vez de con nombres con letras."@es, "Die Kennzeichnung von Tonhöhen durch konventionelle Silben anstelle von Buchstabenbezeichnungen "@de, "La désignation des hauteurs de sons par des syllabes de convention plutôt que par des lettres."@fr, "The designation of pitches by means of conventional syllables rather than letter names."@en ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Solmisation"@de, "solfeo"@es, "solmisation"@fr, "solmization"@en .
+    a skos:Concept ;
+    skos:definition "Designación de tonos por medio de sílabas convencionales, en lugar de con nombres con letras."@es, "Die Kennzeichnung von Tonhöhen durch konventionelle Silben anstelle von Buchstabenbezeichnungen "@de, "La désignation des hauteurs de sons par des syllabes de convention plutôt que par des lettres."@fr, "The designation of pitches by means of conventional syllables rather than letter names."@en, "通过传统的音节而不是音名的方式标识音高。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Solmisation"@de, "solfeo"@es, "solmisation"@fr, "solmization"@en, "唱名法"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1007>
+    rdakit:toolkitDefinition "A system of musical notation in wide use for Western art music, conveying pitch and duration using a staff of multiple parallel lines (in 15th- to 21st-century music, usually five lines) often in combination with other staves."@en, "Sistema de notación musical ampliamente utilizado en las artes musicales occidentales, que conlleva el tono y la duración utilizando un soporte de múltiples líneas paralelas (en la música de los siglos XV al XXI, normalmente cinco líneas) a menudo en combinación con otros pentagramas."@es, "Système de notation musicale largement utilisé pour la musique occidentale, indiquant hauteurs et durées au moyen d’une portée de plusieurs lignes parallèles (dans la musique du 15e au 21e siècle, ordinairement cinq lignes) souvent combinée avec d’autres portées."@fr, "西方艺术音乐普遍采用的乐谱标识体系，将音高和音长在多条平行谱线上表达（在15�C21世纪的乐谱中，通常是五条线），常与其他五线谱相结合。"@zh ;
+    rdakit:toolkitLabel "notación pautada"@es, "notation sur portée"@fr, "staff notation"@en, "谱表记谱法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/705> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A system of musical notation in wide use for Western art music, conveying pitch and duration using a staff of multiple parallel lines (in 15th- to 21st-century music, usually five lines) often in combination with other staves."@en, "Ein System der Musiknotation im Einsatz für westliche Musik, das die Tonlage und Dauer durch mehrere parallele Notenlinien ausdrückt (in der Musik des 15. bis 21. Jahrhunderts normalerweise fünf Linien), häufig in Kombination mit anderen Notenlinien."@de, "Sistema de notación musical ampliamente utilizado en las artes musicales occidentales, que conlleva el tono y la duración utilizando un soporte de múltiples líneas paralelas (en la música de los siglos XV al XXI, normalmente cinco líneas) a menudo en combinación con otros pentagramas."@es, "Système de notation musicale largement utilisé pour la musique occidentale, indiquant hauteurs et durées au moyen d’une portée de plusieurs lignes parallèles (dans la musique du 15e au 21e siècle, ordinairement cinq lignes) souvent combinée avec d’autres portées."@fr ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Liniennotation"@de, "notación pautada"@es, "notation sur portée"@fr, "staff notation"@en .
+    a skos:Concept ;
+    skos:definition "A system of musical notation in wide use for Western art music, conveying pitch and duration using a staff of multiple parallel lines (in 15th- to 21st-century music, usually five lines) often in combination with other staves."@en, "Ein System der Musiknotation im Einsatz für westliche Musik, das die Tonlage und Dauer durch mehrere parallele Notenlinien ausdrückt (in der Musik des 15. bis 21. Jahrhunderts normalerweise fünf Linien), häufig in Kombination mit anderen Notenlinien."@de, "Sistema de notación musical ampliamente utilizado en las artes musicales occidentales, que conlleva el tono y la duración utilizando un soporte de múltiples líneas paralelas (en la música de los siglos XV al XXI, normalmente cinco líneas) a menudo en combinación con otros pentagramas."@es, "Système de notation musicale largement utilisé pour la musique occidentale, indiquant hauteurs et durées au moyen d’une portée de plusieurs lignes parallèles (dans la musique du 15e au 21e siècle, ordinairement cinq lignes) souvent combinée avec d’autres portées."@fr, "西方艺术音乐普遍采用的乐谱标识体系，将音高和音长在多条平行谱线上表达（在15�C21世纪的乐谱中，通常是五条线），常与其他五线谱相结合。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Liniennotation"@de, "notación pautada"@es, "notation sur portée"@fr, "staff notation"@en, "谱表记谱法"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1008>
+    rdakit:toolkitDefinition "1300年或其后所采用的非传统五线谱的任何字母、数字或其他符号的记谱体系。"@zh, "Any notational system from 1300 or later that uses letters, numerals, or other signs as an alternative to conventional staff notation."@en, "Sistema notacional de 1300 o posterior, que utiliza letras, números u otros signos como alternativa a la notación pautada convencional."@es, "Tout système de notation utilisé à partir de 1300, utilisant des lettres, des chiffres ou d’autres signes comme alternative à la notation conventionnelle sur portée."@fr ;
+    rdakit:toolkitLabel "tablatura"@es, "tablature"@en, "tablature"@fr, "符号谱"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/706> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Any notational system from 1300 or later that uses letters, numerals, or other signs as an alternative to conventional staff notation."@en, "Jedes Notationsystem ab dem Jahr 1300, das Buchstaben, Ziffern und andere Zeichen als Alternative zur konventionellen Liniennotation verwendet."@de, "Sistema notacional de 1300 o posterior, que utiliza letras, números u otros signos como alternativa a la notación pautada convencional."@es, "Tout système de notation utilisé à partir de 1300, utilisant des lettres, des chiffres ou d’autres signes comme alternative à la notation conventionnelle sur portée."@fr ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Tabulatur"@de, "tablatura"@es, "tablature"@en, "tablature"@fr .
+    a skos:Concept ;
+    skos:definition "1300年或其后所采用的非传统五线谱的任何字母、数字或其他符号的记谱体系。"@zh, "Any notational system from 1300 or later that uses letters, numerals, or other signs as an alternative to conventional staff notation."@en, "Jedes Notationsystem ab dem Jahr 1300, das Buchstaben, Ziffern und andere Zeichen als Alternative zur konventionellen Liniennotation verwendet."@de, "Sistema notacional de 1300 o posterior, que utiliza letras, números u otros signos como alternativa a la notación pautada convencional."@es, "Tout système de notation utilisé à partir de 1300, utilisant des lettres, des chiffres ou d’autres signes comme alternative à la notation conventionnelle sur portée."@fr ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Tabulatur"@de, "tablatura"@es, "tablature"@en, "tablature"@fr, "符号谱"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1009>
+    rdakit:toolkitDefinition "A system of musical notation that replaces staff notation with sol-fa syllables or their initials.."@en, "Sistema de notación musical que reemplaza la notación pautada con sílabas sol-fa o sus iniciales."@es, "Système de notation musicale qui remplace la notation sur portée par les syllabes sol-fa ou leurs initiales."@fr, "乐谱标记的体系，通过唱名音节或其缩写代替五线谱。"@zh ;
+    rdakit:toolkitLabel "tonic sol-fa"@en, "tonic sol-fa"@fr, "tónica sol-fa"@es, "首调唱名法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/707> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A system of musical notation that replaces staff notation with sol-fa syllables or their initials.."@en, "Ein System zur Musiknotation, das die Liniennotation durch Sol-Fa-Silben oder ihre Initialen ersetzt."@de, "Sistema de notación musical que reemplaza la notación pautada con sílabas sol-fa o sus iniciales."@es, "Système de notation musicale qui remplace la notation sur portée par les syllabes sol-fa ou leurs initiales."@fr ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Tonic Sol-Fa"@de, "tonic sol-fa"@en, "tonic sol-fa"@fr, "tónica sol-fa"@es .
+    a skos:Concept ;
+    skos:definition "A system of musical notation that replaces staff notation with sol-fa syllables or their initials.."@en, "Ein System zur Musiknotation, das die Liniennotation durch Sol-Fa-Silben oder ihre Initialen ersetzt."@de, "Sistema de notación musical que reemplaza la notación pautada con sílabas sol-fa o sus iniciales."@es, "Système de notation musicale qui remplace la notation sur portée par les syllabes sol-fa ou leurs initiales."@fr, "乐谱标记的体系，通过唱名音节或其缩写代替五线谱。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Tonic Sol-Fa"@de, "tonic sol-fa"@en, "tonic sol-fa"@fr, "tónica sol-fa"@es, "首调唱名法"@zh .
 
 <http://rdaregistry.info/termList/MusNotation/1010>
+    rdakit:toolkitDefinition "A system of musical notation using neumes, i.e., graphic signs that represent essentially the movement in pitch of a melody."@en, "Sistema de notación musical que utiliza neumas, i.e., signos gráficos que representan esencialmente el movimiento en el tono de una melodía."@es, "Système de notation musicale utilisant des neumes, c’est-à-dire des signes graphiques qui représentent essentiellement le mouvement d’une ligne mélodique."@fr, "采用纽姆符的音乐记谱体系，即本质上是用图像标识表现乐章的音高和旋律。"@zh ;
+    rdakit:toolkitLabel "neumatic notation"@en, "notación con neumas"@es, "notation neumatique"@fr, "妞姆记谱法"@zh ;
     reg:identifier <http://metadataregistry.org/concepts/1036> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A system of musical notation using neumes, i.e., graphic signs that represent essentially the movement in pitch of a melody."@en, "Ein System der Musiknotation, das Neumen verwendet, d. h. grafische Zeichen, die die Tonhöhenbewegung einer Melodie darstellen."@de, "Sistema de notación musical que utiliza neumas, i.e., signos gráficos que representan esencialmente el movimiento en el tono de una melodía."@es, "Système de notation musicale utilisant des neumes, c’est-à-dire des signes graphiques qui représentent essentiellement le mouvement d’une ligne mélodique."@fr ;
-    :inScheme <http://rdaregistry.info/termList/MusNotation> ;
-    :prefLabel "Neumennotation"@de, "neumatic notation"@en, "notación con neumas"@es, "notation neumatique"@fr .
+    a skos:Concept ;
+    skos:definition "A system of musical notation using neumes, i.e., graphic signs that represent essentially the movement in pitch of a melody."@en, "Ein System der Musiknotation, das Neumen verwendet, d. h. grafische Zeichen, die die Tonhöhenbewegung einer Melodie darstellen."@de, "Sistema de notación musical que utiliza neumas, i.e., signos gráficos que representan esencialmente el movimiento en el tono de una melodía."@es, "Système de notation musicale utilisant des neumes, c’est-à-dire des signes graphiques qui représentent essentiellement le mouvement d’une ligne mélodique."@fr, "采用纽姆符的音乐记谱体系，即本质上是用图像标识表现乐章的音高和旋律。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/MusNotation/> ;
+    skos:prefLabel "Neumennotation"@de, "neumatic notation"@en, "notación con neumas"@es, "notation neumatique"@fr, "妞姆记谱法"@zh .
 
