@@ -12,7 +12,6 @@ var docLang = "en";
   });
 
 }).call(this);
-console.log(window.docLang);
 
 /* Formatting function for row details - modify as you need */
 function format (d) {
@@ -234,7 +233,7 @@ $(document).ready(
           }
         ],
         "order": [
-          [1, 'asc']
+          [2, 'asc']
         ],
         "lengthMenu": [
           [25, 50, 100, -1],
