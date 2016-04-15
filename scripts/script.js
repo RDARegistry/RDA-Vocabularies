@@ -2,8 +2,15 @@ $(document).ready(function () {
     $.protip();
 });
 
-//todo: make this dynamic
-var docLang = "en";
+function gup(name, url, theDefault) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(url);
+    return results == null ? theDefault : results[1];
+}
+var docLang = gup('language', Location.href,'en');
 
 (function () {
   $(function () {
