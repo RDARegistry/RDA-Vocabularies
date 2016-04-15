@@ -61,12 +61,7 @@ function formatRef (data, classname) {
     if (typeof data.lexicalAlias != "undefined") {
       var url = data["@id"];
       return  '<div class="' + classname + '">' +
-                '<div class="vcanon">' +
-                  '<a href="' + url + '" title="Canonical URI: ' + url + '">' + makeCurie(data["@id"]) + '</a>' +
-                '</div>' +
-                '<div class="vurllabel">' +
-                  '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">"' + makeLiteral(data.label) + '"</a>' +
-                '</div>' +
+                formatCanon(data) + formatLabel(data) +
               '</div>';
     }
     else {
@@ -74,6 +69,25 @@ function formatRef (data, classname) {
     }
   }
 }
+
+function formatCanon(data) {
+    if (typeof data["@id"] != "undefined") {
+            var url = data["@id"];
+            return '<div class="vcanon">' +
+                '<a href="' + url + '" title="Canonical URI: ' + url + '">' + makeCurie(url) + '</a>' +
+                '</div>';
+    }
+}
+
+function formatLabel(data) {
+    if (typeof data.lexicalAlias != "undefined") {
+            var url = data["@id"];
+            return '<div class="vurllabel">' +
+                  '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">"' + makeLiteral(data.label) + '"</a>' +
+                '</div>';
+    }
+}
+
 
 function formatRefArray (data, classname) {
   var value = "";
@@ -192,7 +206,11 @@ $(document).ready(
           },
           {
             "render": function (data, type, row) {
-              return formatRef(row, "vcuries");
+              return formatCanon(row);
+            }
+          },          {
+            "render": function (data, type, row) {
+              return formatLabel(row);
             }
           },
           {
