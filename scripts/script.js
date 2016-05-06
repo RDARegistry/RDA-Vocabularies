@@ -12,6 +12,7 @@ function gup(name, url, theDefault) {
 }
 var docLang = gup('language', Location.href,'en');
 
+//noinspection ThisExpressionReferencesGlobalObjectJS
 (function () {
   $(function () {
     $('pre').addClass('prettyprint');
@@ -24,7 +25,6 @@ var docLang = gup('language', Location.href,'en');
 function format (d) {
   // `d` is the original data object for the row
   if (typeof d != "undefined"){
-  var i;
   return '<table class="pindex_detail">' +
       '<tr>' +
       '<td>Lexical Alias:</td>' +
@@ -65,7 +65,6 @@ function format (d) {
 function formatRef (data, classname) {
   if (typeof data != "undefined") {
     if (typeof data.lexicalAlias != "undefined") {
-      var url = data["@id"];
       return  '<div class="' + classname + '">' +
                 formatCanon(data) + formatLabel(data) +
               '</div>';
@@ -89,7 +88,7 @@ function formatLabel(data) {
     if (typeof data.lexicalAlias != "undefined") {
             var url = data["@id"];
             return '<div class="vurllabel">' +
-                  '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">"' + makeLiteral(data.label) + '"</a>' +
+                  '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">' + makeLiteral(data.label) + '</a>' +
                 '</div>';
     }
 }
@@ -138,13 +137,13 @@ function makeLink (uri) {
 function makeLiteral (data) {
   if (typeof data != "undefined") {
       if (typeof data[docLang] != "undefined") {
-          return data[docLang];
+          return '"' + data[docLang] + '"';
       }
       if (typeof data['en'] != "undefined") {
-          return data['en']+" [no '"+docLang+"']";
+          return '"' + data['en'] + '"' + " [no '"+docLang+"']";
       }
   }
-  return data;
+  return '"' + data + '"';
 }
 
 
@@ -199,7 +198,7 @@ $(document).ready(
             "render": function (data, type, row) {
               if (typeof row["@id"] != "undefined") {
                 var url = makeUrl(row["@id"]);
-                var id = row["@id"].replace(/^.*\/(.*)$/ig, "$1")
+                var id = row["@id"].replace(/^.*\/(.*)$/ig, "$1");
                 return '<a id="' + id + '" href="' + url + '" title="permalink: ' + url + '">#</a>';
               }
             }
@@ -334,7 +333,7 @@ $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
     $(oSettings.nTableWrapper).find('div.dataTables_filter').append(clearSearch);
     $(oSettings.nTableWrapper).find('div.dataTables_filter label').css('margin-right', '-16px');//16px the image width
     $(oSettings.nTableWrapper).find('div.dataTables_filter input').css('padding-right', '16px');
-}
+};
 
 //auto-execute, no code needs to be added
 $.fn.dataTable.models.oSettings['aoInitComplete'].push( {
