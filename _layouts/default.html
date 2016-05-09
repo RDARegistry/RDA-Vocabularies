@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+    {% if page.datatable == true %}
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('table.datatable').DataTable({paging: false, stateSave: true})
+        });
+    </script>
+    {% endif %}
+
+</head>
+<body>
+{% include topnav.html %}
+<!-- Page Content -->
+<div class="container">
+    <section id="content" class="content">
+        <article id="page" class="page">
+            <div class="page-content">
+                <div class="rg-pagecontent">
+                    {{content}}
+                </div>
+            </div>
+        </article>
+    </section>
+    {% include footer.html %}
+</div>
+{% include scripts.html %}
+
+</body>
+{% if site.google_analytics %}
+{% include google_analytics.html %}
+{% endif %}
+</html>
