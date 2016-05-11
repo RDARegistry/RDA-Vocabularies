@@ -15,3 +15,16 @@ url: "http://www.rdaregistry.info" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+collections:
+  terms:
+    output: true
+    permalink: /termList/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: terms
+    values:
+      layout: values
+      datatable: true

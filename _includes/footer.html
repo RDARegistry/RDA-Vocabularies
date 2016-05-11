@@ -28,9 +28,8 @@
         </div>
         <div class="date-updated">
             <p>{% if page.last_updated %}
-                Page last updated: {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b
-                %-d, %Y" }} </p>
-            <p>{{page}}</p><p>{{page.name | remove: '.html'}}</p>
+                Page last updated: {{page.last_updated | date: "%b %-d, %Y" }}<br/>
+                {% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y" }} </p>
         </div>
     </div>
 </footer>
