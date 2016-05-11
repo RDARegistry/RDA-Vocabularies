@@ -1,3 +1,18 @@
+$(document).ready(function () {
+    $.protip();
+});
+
+function gup(name, url, theDefault) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
+    var regex = new RegExp(regexS);
+    var results = regex.exec(url);
+    return results == null ? theDefault : results[1];
+}
+var docLang = gup('language', Location.href,'en');
+
+//noinspection ThisExpressionReferencesGlobalObjectJS
 (function () {
   $(function () {
     $('pre').addClass('prettyprint');
@@ -10,7 +25,6 @@
 function format (d) {
   // `d` is the original data object for the row
   if (typeof d != "undefined"){
-  var i;
   return '<table class="pindex_detail">' +
       '<tr>' +
       '<td>Lexical Alias:</td>' +
@@ -34,7 +48,7 @@ function format (d) {
       '</tr>' +
   '<tr>' +
     '<td>Scope Notes:</td>' +
-    '<td>' + formatRefArray(d.note, "vnote") + '</td>' +
+    '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' +
   '</tr>' +
       '<tr>' +
       '<td>URL:</td>' +
@@ -51,14 +65,8 @@ function format (d) {
 function formatRef (data, classname) {
   if (typeof data != "undefined") {
     if (typeof data.lexicalAlias != "undefined") {
-      var url = data["@id"];
       return  '<div class="' + classname + '">' +
-                '<div class="vcanon">' +
-                  '<a href="' + url + '" title="Canonical URI: ' + url + '">' + makeCurie(data["@id"]) + '</a>' +
-                '</div>' +
-                '<div class="vurllabel">' +
-                  '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">"' + data.label + '"</a>' +
-                '</div>' +
+                formatCanon(data) + formatLabel(data) +
               '</div>';
     }
     else {
@@ -66,6 +74,25 @@ function formatRef (data, classname) {
     }
   }
 }
+
+function formatCanon(data) {
+    if (typeof data["@id"] != "undefined") {
+            var url = data["@id"];
+            return '<div class="vcanon">' +
+                '<a href="' + url + '" title="Canonical URI: ' + url + '">' + makeCurie(url) + '</a>' +
+                '</div>';
+    }
+}
+
+function formatLabel(data) {
+    if (typeof data.lexicalAlias != "undefined") {
+            var url = data["@id"];
+            return '<div class="vurllabel">' +
+                  '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(data.lexicalAlias) + '">' + makeLiteral(data.label) + '</a>' +
+                '</div>';
+    }
+}
+
 
 function formatRefArray (data, classname) {
   var value = "";
@@ -106,6 +133,19 @@ function makeLink (uri) {
     return '<a href="' + uri + '">' + uri + '</a>';
   }
 }
+
+function makeLiteral (data) {
+  if (typeof data != "undefined") {
+      if (typeof data[docLang] != "undefined") {
+          return '"' + data[docLang] + '"';
+      }
+      if (typeof data['en'] != "undefined") {
+          return '"' + data['en'] + '"' + " [no '"+docLang+"']";
+      }
+  }
+  return '"' + data + '"';
+}
+
 
 function setFilter() {
 
@@ -158,7 +198,7 @@ $(document).ready(
             "render": function (data, type, row) {
               if (typeof row["@id"] != "undefined") {
                 var url = makeUrl(row["@id"]);
-                var id = row["@id"].replace(/^.*\/(.*)$/ig, "$1")
+                var id = row["@id"].replace(/^.*\/(.*)$/ig, "$1");
                 return '<a id="' + id + '" href="' + url + '" title="permalink: ' + url + '">#</a>';
               }
             }
@@ -171,12 +211,16 @@ $(document).ready(
           },
           {
             "render": function (data, type, row) {
-              return formatRef(row, "vcuries");
+              return formatCanon(row);
+            }
+          },          {
+            "render": function (data, type, row) {
+              return formatLabel(row);
             }
           },
           {
             "render": function (data, type, row) {
-              return formatRefArray(row["description"], "description");
+              return formatRefArray(makeLiteral(row.description), "description");
             }
           },
           {
@@ -195,7 +239,7 @@ $(document).ready(
           }
         ],
         "order": [
-          [1, 'asc']
+          [2, 'asc']
         ],
         "lengthMenu": [
           [25, 50, 100, -1],
@@ -265,11 +309,13 @@ $(document).ready(
 );
 
 $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
-    var table = this;
-    var clearSearch = $('<img title="Delete" alt="" src="data:image/png;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD2SURBVHjaxFM7DoMwDH2pOESHHgDPcB223gKpAxK34EAMMIe1FCQOgFQxuflARVBSVepQS5Ht2PHn2RHMjF/ohB8p2gSZpprtyxEHX8dGTeMG0A5UlsD5rCSGvF55F4SpqpSm1GmCzPO3LXJy1LXllwvodoMsCpNVy2hbYBjCLRiaZ8u7Dng+QXlu9b4H7ncvBmKbwoYBWR4kaXv3YmAMyoEpjv2PdWUHcP1j1ECqFpyj777YA6Yss9KyuEeDaW0cCsCUJMDjYUE8kr5TNuOzC+JiMI5uz2rmJvNWvidwcJXXx8IAuwb6uMqrY2iVgzbx99/4EmAAarFu0IJle5oAAAAASUVORK5CYII=" style="vertical-align:text-bottom;cursor:pointer;" />');
+    var table = $("#pindex").DataTable();
+    var clearSearch = $('<img class = "delete" title="Cancel Search" alt="" src="data:image/png;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD2SURBVHjaxFM7DoMwDH2pOESHHgDPcB223gKpAxK34EAMMIe1FCQOgFQxuflARVBSVepQS5Ht2PHn2RHMjF/ohB8p2gSZpprtyxEHX8dGTeMG0A5UlsD5rCSGvF55F4SpqpSm1GmCzPO3LXJy1LXllwvodoMsCpNVy2hbYBjCLRiaZ8u7Dng+QXlu9b4H7ncvBmKbwoYBWR4kaXv3YmAMyoEpjv2PdWUHcP1j1ECqFpyj777YA6Yss9KyuEeDaW0cCsCUJMDjYUE8kr5TNuOzC+JiMI5uz2rmJvNWvidwcJXXx8IAuwb6uMqrY2iVgzbx99/4EmAAarFu0IJle5oAAAAASUVORK5CYII="  style="cursor:pointer;padding-left:.5em;" />');
     $(clearSearch).click(function () {
         setSearch('');
+        table.search('');
         if (initFilter) {
+            initFilter=null;
             var tr = $("#" + initFilter).closest('tr');
             var row = table.row(tr);
             if (typeof row.child(format(row.data())) != "undefined") {
@@ -287,7 +333,7 @@ $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
     $(oSettings.nTableWrapper).find('div.dataTables_filter').append(clearSearch);
     $(oSettings.nTableWrapper).find('div.dataTables_filter label').css('margin-right', '-16px');//16px the image width
     $(oSettings.nTableWrapper).find('div.dataTables_filter input').css('padding-right', '16px');
-}
+};
 
 //auto-execute, no code needs to be added
 $.fn.dataTable.models.oSettings['aoInitComplete'].push( {
