@@ -1,7 +1,3 @@
-$(document).ready(function () {
-    $.protip();
-});
-
 function gup(name, url, theDefault) {
     if (!url) url = location.href;
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -298,13 +294,6 @@ $(document).ready(
             $("div#pindex_filter input").val(initFilter);
         }
 
-        $.protip({
-            defaults: {
-                position: 'top-left',
-                gravity: true,
-                delayIn: 500
-            }
-        })
     }
 );
 
@@ -339,4 +328,14 @@ $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
 $.fn.dataTable.models.oSettings['aoInitComplete'].push({
     "fn": $.fn.dataTableExt.oApi.clearSearch,
     "sName": 'whatever'
+});
+
+$(document).ready(function () {
+    $.protip({
+        defaults: {
+            position: 'top-left',
+            gravity: true,
+            delayIn: 500
+        }
+    })
 });
