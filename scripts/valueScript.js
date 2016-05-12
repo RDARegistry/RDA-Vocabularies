@@ -1,7 +1,3 @@
-$(document).ready(function () {
-    $.protip();
-});
-
 function gup(name, url, theDefault) {
     if (!url) url = location.href;
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -21,6 +17,37 @@ var docLang = gup('language', Location.href, 'en');
 
 }).call(this);
 
+/* Formatting function for row details - modify as you need */
+function format(d) {
+    // `d` is the original data object for the row
+
+    //TODO: build output and formatting instructions from the context
+    var blacklist = ['toolkitDefinition', 'toolkitLabel', 'prefLabel', 'definition', 'inScheme', '@type'];
+    var rows = '<table class="pindex_detail">';
+    if (typeof d != "undefined") {
+        for (property in d) {
+            if (typeof property != "undefined" && d.hasOwnProperty(property) && blacklist.indexOf(property) == -1) {
+                switch(property) {
+                    case '@id':
+                    case 'identifier':
+                    case 'inScheme':
+                        rows += '<tr>' + '<td>'+ property +':</td>' +'<td class="definition">' + makeLink(d[property]) + '</td>' +'</tr>'
+                        break;
+                    case 'altLabel':
+                    case 'prefLabel':
+                        rows += '<tr>' + '<td>' + property + ':</td>' + '<td class="definition">' + makeLiteral(d[property]) + ' ' + getLanguageCallout(d[property]) + '</td>' + '</tr>'
+                        break;
+                    case 'definition':
+                        rows += '<tr>' + '<td>' + property + ':</td>' + '<td class="definition">' + makeLiteral(d[property]) + ' ' + getLanguageCallout(d[property]) + '</td>' + '</tr>'
+                        break;
+                    default:
+                        rows += '<tr>' + '<td>' + property + ':</td>' + '<td class="definition">"' + d[property] + '"</td>' + '</tr>'
+                }
+            }
+        }
+        return rows + '</table>';
+    }
+}
 
 function formatRef(data, classname) {
     if (typeof data != "undefined") {
@@ -45,11 +72,11 @@ function formatCanon(data) {
 }
 
 function formatLabel(data) {
-        var url = data["@id"];
-        return '<div class="vurllabel">' +
-            '<a href="' + url + '">' + makeLiteral(data.prefLabel) + '</a>' +
-            '</div>';
-    
+    var url = data["@id"];
+    return '<div class="vurllabel">' +
+        '<a href="' + url + '">' + makeLiteral(data.prefLabel) + '</a> ' + getLanguageCallout(data.prefLabel) +
+        '</div>';
+
 }
 
 
@@ -99,13 +126,22 @@ function makeLiteral(data) {
             return '"' + data[docLang] + '"';
         }
         if (typeof data['en'] != "undefined") {
-            return '"' + data['en'] + '"' + " [no '" + docLang + "']";
+            return '"' + data['en'] + '"';
         }
     }
     return '"' + data + '"';
 }
 
+function getLanguageCallout(data){
+if (typeof data[docLang] != "undefined") {
+            return  "@" + docLang;
+        }
+        if (typeof data['en'] != "undefined") {
+            return "@en";
+        }
 
+    return "@en *";
+}
 function setFilter() {
 
     var initFilter = null;
@@ -125,7 +161,7 @@ function setSearch(filter) {
 
 }
 
-function filterConcepts(obj){
+function filterConcepts(obj) {
     return obj["@type"] == "Concept";
 }
 
@@ -165,6 +201,12 @@ $(document).ready(
                     }
                 },
                 {
+                    "class": 'details-control',
+                    "orderable": false,
+                    "data": null,
+                    "defaultContent": ''
+                },
+                {
                     "render": function (data, type, row) {
                         return formatCanon(row);
                     }
@@ -174,13 +216,15 @@ $(document).ready(
                     }
                 },
                 {
+                    "class": "definition",
                     "render": function (data, type, row) {
-                        return formatRefArray(makeLiteral(row.definition), "definition");
+                        var definition = makeLiteral(row.definition) + ' ' + getLanguageCallout(row.definition);
+                        return formatRefArray( definition, "definition");
                     }
                 }
             ],
             "order": [
-                [1, 'asc']
+                [2, 'asc']
             ],
             "lengthMenu": [
                 [25, 50, 100, -1],
@@ -188,18 +232,37 @@ $(document).ready(
             ],
             "deferRender": true
         });
-        var filteredData = table
-            .column(0)
-            .data()
-            .filter(function (value, index) {
-                return value.startsWith(vocabNamespace);
-            });
+
 // Add event listener for truncate on draw
         dtable.on('draw.dt', function () {
             if (initFilter) {
                 var tr = $("#" + initFilter).closest('tr');
                 var row = table.row(tr);
+                if (typeof row.child(format(row.data())) != "undefined") {
+                    row.child(format(row.data())).show();
+                    tr.addClass('shown');
+                }
                 $("div#pindex_filter input").val(initFilter);
+            }
+        });
+
+// Add event listener for opening and closing details
+        dtable.children("tbody").on('click', 'td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var t8 = tr.children("td.too-long");
+            var row = table.row(tr);
+
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+                t8.trunk8({lines: 2});
+            }
+            else {
+                // Open this row
+                row.child(format(row.data())).show();
+                tr.addClass('shown');
+                t8.trunk8('revert');
             }
         });
 
@@ -219,13 +282,6 @@ $(document).ready(
             $("div#pindex_filter input").val(initFilter);
         }
 
-        $.protip({
-            defaults: {
-                position: 'top-left',
-                gravity: true,
-                delayIn: 500
-            }
-        })
     }
 );
 
@@ -260,4 +316,14 @@ $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
 $.fn.dataTable.models.oSettings['aoInitComplete'].push({
     "fn": $.fn.dataTableExt.oApi.clearSearch,
     "sName": 'whatever'
+});
+
+$(document).ready(function () {
+    $.protip({
+        defaults: {
+            position: 'top-left',
+            gravity: true,
+            delayIn: 500
+        }
+    })
 });

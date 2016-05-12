@@ -10,8 +10,8 @@
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <!-- Links-->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rdf+xml" title="RDF/XML" href="{{page.rdf}}.xml"/>
-  <link rel="alternate" type="application/rss+xml" title="Atom" href="http://metadataregistry.org/history/feed/vocabulary_id/{{page.feedId}}.atom">
+  <link rel="alternate" type="application/rdf+xml" title="RDF/XML" href="{{pageRDF}}.xml"/>
+  <link rel="alternate" type="application/rss+xml" title="Atom" href="http://metadataregistry.org/history/feed/vocabulary_id/{{regID}}.atom">
   <!-- Icons-->
   <link rel="shortcut icon" href="http://www.rdatoolkit.org/sites/default/files/garland_favicon.ico"
         type="image/x-icon">
@@ -22,8 +22,11 @@
   <!--[if lt IE 9]>
   <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <!-- Styles -->
-  <link rel="stylesheet" href="/bower_components/protip/protip.min.css">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
+  {% if page.datatable == true %}
+  <link rel="stylesheet" href="/bower_components/protip/protip.min.css">
+  <link rel="stylesheet" href="/bower_components/datatables/media/css/dataTables.bootstrap.min.css">
+  {% endif %}
   <link rel="stylesheet" href="/styles/style.css"/>
   <link rel="stylesheet" href="/styles/rdagit.css"/>
 
