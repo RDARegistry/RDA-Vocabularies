@@ -105,51 +105,72 @@
 <div class="rg-pagecontent">
 <h1>Examples using the RDA vocabularies</h1>
 
-     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Volume (text) 1 from Complete examples – bibliographic records (unconstrained)<!-- InstanceEndEditable --></h2>
+     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Volume (text) 2 from Complete examples – bibliographic records<!-- InstanceEndEditable --></h2>
      <div class="row">
      <div class="col-md-6">
       <pre><code><!-- InstanceBeginEditable name="ExampleCode" -->
 @prefix ex: &lt;http://example.com/&gt; .
+@prefix rdaa: &lt;http://rdaregistry.info/Elements/a/&gt; .
 @prefix rdaco: &lt;http://rdaregistry.info/termList/RDAContentType/&gt; .
 @prefix rdact: &lt;http://rdaregistry.info/termList/RDACarrierType/&gt; .
+@prefix rdae: &lt;http://rdaregistry.info/Elements/e/&gt; .
+@prefix rdam: &lt;http://rdaregistry.info/Elements/m/&gt; .
 @prefix rdami: &lt;http://rdaregistry.info/termList/ModeIssue/&gt; .
 @prefix rdamt: &lt;http://rdaregistry.info/termList/RDAMediaType/&gt; .
 @prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
+@prefix rdaw: &lt;http://rdaregistry.info/Elements/w/&gt; .
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
 #
-# Example: Volume (text) 1 from Complete examples – bibliographic records (unconstrained)
+# Example: Volume (text) 2 from Complete examples – bibliographic records
 # 11 May 2016
 #
 ex:A1
-  rdau:P60053 "Taylor, Arlene G., 1941-" ;
-  rdau:P60119 "Arlene G. Taylor" ;
-  rdau:P60549 "Taylor, Arlene G." ;
-  rdau:P60599 "1941" .
-ex:R1
-  rdau:P60048 rdact:1049 ;
-  rdau:P60049 rdaco:1020 ;
-  rdau:P60050 rdamt:1007 ;
-  rdau:P60051 rdami:1001 ;
-  rdau:P60052 "ISBN 1-56308-969-6 (paperback)" ;
-  rdau:P60052 "ISBN 1-56308-976-9 (hardcover)" ;
-  rdau:P60052 "Taylor, Arlene G., 1941- . The organization of information" ;
-  rdau:P60073 "2004" ;
-  rdau:P60099 "English"@en ;
-  rdau:P60163 "London" ;
-  rdau:P60163 "Westport, Connecticut" ;
-  rdau:P60193 ex:R2 ;
-  rdau:P60327 "Arlene G. Taylor" ;
-  rdau:P60365 "Second edition"@en ;
-  rdau:P60434 ex:A1 ;
-  rdau:P60485 "Includes bibliography and index"@en ;
-  rdau:P60515 "The organization of information" ;
-  rdau:P60516 "Library and information science text series" ;
-  rdau:P60539 "26 cm" ;
-  rdau:P60547 "Libraries Unlimited, a member of the Greenwood Publishing Group" ;
-  rdau:P60550 "xxvii, 417 pages"@en ;
-  rdau:P60805 "Information organization"@en .
-ex:R2
-  rdau:P60515 "Library and information science text series" .
+  rdaa:P50041 "European Conference on Encoded Archival Description and Context (EAD and EAC) (2004 : Paris, France)" .
+ex:A2
+  rdaa:P50103 "Bill Stockting" ;
+ rdaa:P50117 "Stockting, Bill" .
+ex:A3
+  rdaa:P50103 "Fabienne Queyroux" ;
+  rdaa:P50117 "Queyroux, Fabienne" .
+ex:E1
+  rdae:P20001 rdaco:1020 ;
+  rdae:P20006 "English"@en ;
+  rdae:P20048 ex:A2 ;
+  rdae:P20048 ex:A3 ;
+  rdae:P20206 "Includes bibliographical references and index"@en ;
+  rdae:P20207 "illustrations"@en ;
+ rdae:P20231 ex:W1 .
+ex:M1
+  rdam:P30001 rdact:1049 ;
+  rdam:P30002 rdamt:1007 ;
+  rdam:P30003 rdami:1001 ;
+  rdam:P30004 "ISBN 978-0-7890-3026-9 (hardcover)" ;
+  rdam:P30004 "ISBN 0-7890-3026-8 (hardcover)" ;
+  rdam:P30004 "ISBN 978-0-7890-3027-6 (paperback)" ;
+  rdam:P30004 "ISBN 0-7890-3027-6 (paperback)" ;
+  rdam:P30007 "\u00A92005" ;
+  rdam:P30011 "[2005]" ;
+  rdam:P30088 "New York" ;
+  rdam:P30088 "London" ;
+  rdam:P30088 "Victoria (AU)" ;
+  rdam:P30105 "Bill Stockting, Fabienne Queyroux, editors"@en ;
+  rdam:P30135 ex:W1 ;
+  rdam:P30139 ex:E1 ;
+  rdam:P30141 "http://www.HaworthPress.com" ;
+  rdam:P30142 "proceedings of the European Conference on Encoded Archival Description and Context (EAD and EAC), Paris, France, 7-8 October 2004" ;
+  rdam:P30156 "Encoding across frontiers" ;
+  rdam:P30169 "23 cm" ;
+  rdam:P30176 "The Haworth Information Press, an imprint of The Haworth Press, Inc." ;
+  rdam:P30181 "286 pages"@en ;
+  rdau:P60313 "&quot;Co-published simultaneously as Journal of archival organization, volume 3, numbers 2/3 2005&quot;"@en .
+ex:W1
+  rdaw:P10002 "European Conference on Encoded Archival Description and Context (EAD and EAC) (2004 : Paris, France). Encoding across frontiers" ;
+  rdaw:P10065 ex:A1 ;
+  rdaw:P10147 ex:W2 ;
+  rdaw:P10256 "Encoded Archival Description (Document type definition)"@en ;
+  rdaw:P10256 "Encoded Archival Context (Document type definition)"@en .
+ex:W2
+  rdaw:P10002 "Goulet, Anne. Giving structure to legacy finding aids before conversion to EAD" .
 rdaco:1020 skos:prefLabel "text"@en .
 rdact:1049 skos:prefLabel "volume"@en .
 rdami:1001 skos:prefLabel "single unit"@en .
@@ -160,13 +181,13 @@ rdamt:1007 skos:prefLabel "unmediated"@en .
       <h3>Downloads</h3>
       <!-- InstanceBeginEditable name="ExampleDownload" -->
       <ul>
-       <li>Turtle (text/turtle)</li>
+       <li><a href="http://rdaregistry.info/ttl/Examples/exRSCFullTextVolume2.ttl" target="_blank">Turtle (text/turtle)</a></li>
       </ul>
       <!-- InstanceEndEditable -->
      </div>
      <!-- InstanceBeginEditable name="ExampleDescription" -->
-      <p>This example corresponds to <em>Volume (text) 1</em> from <a href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
-      <p>The example uses unconstrained RDA properties.</p>
+      <p>This example corresponds to <em>Volume (text) 2</em> from <a href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
+      <p>The example uses constrained RDA properties.</p>
       <!-- InstanceEndEditable --> 
 </div>
 </div>
@@ -192,7 +213,7 @@ rdamt:1007 skos:prefLabel "unmediated"@en .
 </div>
 </div>
 <div class="date-updated">
-<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->11 May 2016<!-- InstanceEndEditable -->.</p>
+<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->12 May 2016<!-- InstanceEndEditable -->.</p>
 </div>
 </div>
 </footer>
@@ -202,7 +223,7 @@ rdamt:1007 skos:prefLabel "unmediated"@en .
 <script defer src="/bower_components/jquery/dist/jquery.js"></script>
 <script defer src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script defer src="/bower_components/modernizer/modernizr.js"></script>
-<script defer src="/scripts/script.js"></script> 
+<script defer src="/scripts/script.js"></script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

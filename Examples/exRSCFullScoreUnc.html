@@ -105,115 +105,63 @@
 <div class="rg-pagecontent">
 <h1>Examples using the RDA vocabularies</h1>
 
-     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Audio disc (spoken word) from Complete examples – bibliographic records<!-- InstanceEndEditable --></h2>
+     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Score from Complete examples – bibliographic records (unconstrained)<!-- InstanceEndEditable --></h2>
      <div class="row">
      <div class="col-md-6">
       <pre><code><!-- InstanceBeginEditable name="ExampleCode" -->
 @prefix ex: &lt;http://example.com/&gt; .
-@prefix rdaa: &lt;http://rdaregistry.info/Elements/a/&gt; .
 @prefix rdaco: &lt;http://rdaregistry.info/termList/RDAContentType/&gt; .
 @prefix rdact: &lt;http://rdaregistry.info/termList/RDACarrierType/&gt; .
-@prefix rdae: &lt;http://rdaregistry.info/Elements/e/&gt; .
-@prefix rdaef: &lt;http://rdaregistry.info/termList/encFormat/&gt; .
-@prefix rdaft: &lt;http://rdaregistry.info/termList/fileType/&gt; .
-@prefix rdam: &lt;http://rdaregistry.info/Elements/m/&gt; .
+@prefix rdafmn: &lt;http://rdaregistry.info/termList/MusNotation/&gt; .
 @prefix rdami: &lt;http://rdaregistry.info/termList/ModeIssue/&gt; .
 @prefix rdamt: &lt;http://rdaregistry.info/termList/RDAMediaType/&gt; .
-@prefix rdarm: &lt;http://rdaregistry.info/termList/recMedium/&gt; .
-@prefix rdatr: &lt;http://rdaregistry.info/termList/typeRec/&gt; .
 @prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
-@prefix rdaw: &lt;http://rdaregistry.info/Elements/w/&gt; .
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
 #
-# Example: Audio disc (spoken word) from Complete examples – bibliographic records
+# Example: Score from Complete examples – bibliographic records (unconstrained)
 # 11 May 2016
 #
 ex:A1
-  rdaa:P50094 "Munro, Alice, 1931-" ;
-  rdaa:P50103 "Alice Munro" ;
-  rdaa:P50117 "Munro, Alice" ;
-  rdaa:P50121 "1931" .
-ex:A2
-  rdaa:P50103 "Ruth Fraser" ;
-  rdaa:P50117 "Fraser, Ruth" .
-ex:A3
-  rdaa:P50103 "Judy Mahbey" ;
-  rdaa:P50117 "Mahbey, Judy" .
-ex:A4
-  rdaa:P50103 "Lawrie Seligman" ;
-  rdaa:P50117 "Seligman, Lawrie" .
-ex:A5
-  rdaa:P50103 "Eric Wagers" ;
-  rdaa:P50117 "Wagers, Eric" .
-ex:E1
-  rdae:P20001 rdaco:1013 ;
-  rdae:P20006 "English"@en ;
-  rdae:P20022 ex:A3 ;
-  rdae:P20049 ex:A2 ;
-  rdae:P20050 ex:A5 ;
-  rdae:P20053 ex:A4 ;
-  rdae:P20069 "&quot;Born on the backwards 'Flats Road', Del Jordan is a nice girl' with big dreams in a small town that expects little from women beyond marriage and babies. In linked short stories, Del suffers embarrassment at the hands of her encyclopedia-selling mother, endures her body's insistent desires, and falls passionately in love with a young lumberyard worker, only to lose her chance of a university scholarship&quot; - Container"@en ;
-  rdae:P20219 "61:46" ;
-  rdae:P20219 "62:09" ;
-  rdae:P20219 "61:18" ;
-  rdae:P20231 ex:W1 ;
-  rdau:P60313 "Abridgement of the first print edition published by McGraw-Hill Ryerson, 1971"@en .
-ex:M1
-  rdam:P30001 rdact:1004 ;
-  rdam:P30001 rdact:1013 ;
-  rdam:P30002 rdamt:1001 ;
-  rdam:P30002 rdamt:1003 ;
-  rdam:P30003 rdami:1002 ;
-  rdam:P30004 "ISBD 0-86492-398-8" ;
-  rdam:P30007 "\u00A92005" ;
-  rdam:P30011 "[date of publication not identified]"@en ;
-  rdam:P30018 rdaft:1001 ;
-  rdam:P30088 "Fredericton, NB, Canada" ;
-  rdam:P30096 rdaef:1007 ;
-  rdam:P30105 "Alice Munro" ;
-  rdam:P30105 "narrated by Judy Mahbey"@en ;
-  rdam:P30105 "produced by Lawrie Seligman"@en ;
-  rdam:P30105 "recording engineer: Eric Wagers"@en ;
-  rdam:P30121 "by Ruth Fraser"@en ;
-  rdam:P30133 "Abridged" ;
-  rdam:P30135 ex:W1 ;
-  rdam:P30139 ex:E1 ;
-  rdam:P30141 "http://www.gooselane.com" ;
-  rdam:P30156 "Lives of girls and women" ;
-  rdam:P30160 "$29.95 (Canada)" ;
-  rdam:P30160 "$24.95 (United States)" ;
-  rdam:P30169 "12 cm" ;
-  rdam:P30172 rdatr:1002  ;
-  rdam:P30176 "BTC Audiobooks" ;
-  rdam:P30182 "3 audio discs"@en ;
-  rdam:P30206 rdarm:1003 ;
-  rdau:P60313 "Originally broadcast on CBC Radio 1981"@en .
-ex:W1
-  rdaw:P10002 "Munro, Alice, 1931- . Lives of girls and women" ;
-  rdaw:P10061 ex:A1 .
-rdaco:1013 skos:prefLabel "spoken word"@en .
-rdact:1004 skos:prefLabel "audio disc"@en .
-rdact:1013 skos:prefLabel "computer disc"@en .
-rdaef:1007 skos:prefLabel "CD audio"@en .
-rdaft:1001 skos:prefLabel "audio file"@en .
-rdami:1002 skos:prefLabel "multipart monograph"@en .
-rdamt:1001 skos:prefLabel "audio"@en .
-rdamt:1003 skos:prefLabel "computer"@en .
-rdarm:1003 skos:prefLabel "optical"@en .
-rdatr:1002 skos:prefLabel "digital"@en .
+  rdau:P60053 "Brouwer, Margaret, 1940-" ;
+  rdau:P60119 "Margaret Brouwer" ;
+  rdau:P60549 "Brouwer, Margaret" ;
+  rdau:P60599 "1940" .
+ex:R1
+  rdau:P60048 rdact:1049 ;
+  rdau:P60049 rdaco:1010 ;
+  rdau:P60050 rdamt:1007 ;
+  rdau:P60051 rdami:1001 ;
+  rdau:P60052 "Brouwer, Margaret, 1940- . Concertos, violin, orchestra" ;
+  rdau:P60073 "2004" ;
+  rdau:P60163 "[United States?]" ;
+  rdau:P60321 rdafmn:1007 ;
+  rdau:P60327 "Margaret Brouwer" ;
+  rdau:P60426 ex:A1 ;
+  rdau:P60515 "Concerto for violin and chamber music" ;
+  rdau:P60539 "42 cm" ;
+  rdau:P60547"Brouwer New Music Publishing" ;
+  rdau:P60550 "1 score (76 pages)"@en ;
+  rdau:P60557 "25 min." ;
+  rdau:P60536 "violin, orchestra"@en ;
+  rdau:P60588 "Concertos"@en .
+rdaco:1010 skos:prefLabel "notated music"@en .
+rdact:1049 skos:prefLabel "volume"@en .
+rdafmn:1007 skos:prefLabel "staff notation"@en .
+rdami:1001 skos:prefLabel "single unit"@en .
+rdamt:1007 skos:prefLabel "unmediated"@en .
 <!-- InstanceEndEditable --></code></pre>
      </div>
      <div class="col-md-6">
       <h3>Downloads</h3>
       <!-- InstanceBeginEditable name="ExampleDownload" -->
       <ul>
-       <li><a href="http://rdaregistry.info/Examples/exJSCFullDiskSpokenWord.ttl" target="_blank">Turtle (text/turtle)</a> </li>
+       <li><a href="http://rdaregistry.info/ttl/Examples/exRSCFullScoreUnc.ttl" target="_blank">Turtle (text/turtle)</a></li>
       </ul>
       <!-- InstanceEndEditable -->
      </div>
      <!-- InstanceBeginEditable name="ExampleDescription" -->
-      <p>This example corresponds to <em>Audio disc (spoken word)</em> from <a href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
-      <p>The example uses constrained RDA properties.</p>
+      <p>This example corresponds to <em>Score</em> from <a href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
+      <p>The example uses unconstrained RDA properties.</p>
       <!-- InstanceEndEditable --> 
 </div>
 </div>
@@ -239,7 +187,7 @@ rdatr:1002 skos:prefLabel "digital"@en .
 </div>
 </div>
 <div class="date-updated">
-<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->11 May 2016<!-- InstanceEndEditable -->.</p>
+<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->12 May 2016<!-- InstanceEndEditable -->.</p>
 </div>
 </div>
 </footer>
@@ -249,7 +197,7 @@ rdatr:1002 skos:prefLabel "digital"@en .
 <script defer src="/bower_components/jquery/dist/jquery.js"></script>
 <script defer src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script defer src="/bower_components/modernizer/modernizr.js"></script>
-<script defer src="/scripts/script.js"></script>
+<script defer src="/scripts/script.js"></script> 
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

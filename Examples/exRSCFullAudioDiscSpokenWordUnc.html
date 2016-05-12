@@ -105,104 +105,102 @@
 <div class="rg-pagecontent">
 <h1>Examples using the RDA vocabularies</h1>
 
-     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Audio disc (performed music) from Complete examples – bibliographic records (unconstrained)<!-- InstanceEndEditable --></h2>
+     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Audio disc (spoken word) from Complete examples – bibliographic records (unconstrained)<!-- InstanceEndEditable --></h2>
      <div class="row">
      <div class="col-md-6">
       <pre><code><!-- InstanceBeginEditable name="ExampleCode" -->
 @prefix ex: &lt;http://example.com/&gt; .
-@prefix rdabm: &lt;http://rdaregistry.info/termList/RDAbaseMaterial/&gt; .
-@prefix rdaco: &lt;http://rdaregistry.info/termList/RDAContentType/&gt; .
-@prefix rdact: &lt;http://rdaregistry.info/termList/RDACarrierType/&gt; .
+@prefix rdaco: &lt;http://rdaregistry/termList/RDAContentType/&gt; .
+@prefix rdact: &lt;http://rdaregistry/termList/RDACarrierType/&gt; .
+@prefix rdaef: &lt;http://rdaregistry/termList/encFormat/&gt; .
+@prefix rdaft: &lt;http://rdaregistry/termList/fileType/&gt; .
 @prefix rdami: &lt;http://rdaregistry.info/termList/ModeIssue/&gt; .
 @prefix rdamt: &lt;http://rdaregistry.info/termList/RDAMediaType/&gt; .
+@prefix rdarm: &lt;http://rdaregistry.info/termList/recMedium/&gt; .
+@prefix rdatr: &lt;http://rdaregistry.info/termList/typeRec/&gt; .
 @prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
 #
-# Example: Audio disc (performed music) from Complete examples – bibliographic records
+# Example: Audio disc (spoken word) from Complete examples – bibliographic records (unconstrained)
 # 11 May 2016
 #
 ex:A1
-  rdau:P60119 "Tori Amos" ;
-  rdau:P60549 "Amos, Tori" .
+  rdau:P60053 "Munro, Alice, 1931-" ;
+  rdau:P60119 "Alice Munro" ;
+  rdau:P60549 "Munro, Alice" ;
+  rdau:P60599 "1931" .
+ex:A2
+  rdau:P60119 "Ruth Fraser" ;
+  rdau:P60549 "Fraser, Ruth" .
+ex:A3
+  rdau:P60119 "Judy Mahbey" ;
+  rdau:P60549 "Mahbey, Judy" .
+ex:A4
+  rdau:P60119 "Lawrie Seligman" ;
+  rdau:P60549 "Seligman, Lawrie" .
+ex:A5
+  rdau:P60119 "Eric Wagers" ;
+  rdau:P60549 "Wagers, Eric" .
 ex:R1
-  rdau:P60048 rdact:1004 ;
+  rdau:P60048 rdact:1004 ;
   rdau:P60048 rdact:1013 ;
-  rdau:P60049 rdaco:1011 ;
+  rdau:P60049 rdaco:1013 ;
   rdau:P60050 rdamt:1001 ;
   rdau:P60050 rdamt:1003 ;
-  rdau:P60051 rdami:1001 ;
-  rdau:P60052 "Amos, Tori. Little earthquakes (Album)" ;
-  rdau:P60052 "82358-2" ;
-  rdau:P60069 "\u21171991" ;
-  rdau:P60073"[1991?]" ;
+  rdau:P60051 rdami:1002 ;
+  rdau:P60052 "ISBD 0-86492-398-8" ;
+  rdau:P60052 "Munro, Alice, 1931- . Lives of girls and women" ;
+  rdau:P60069 "\u00A92005" ;
   rdau:P60099 "English"@en ;
-  rdau:P60156 ex:A1 ;
-  rdau:P60163 "New York, New York" ;
-  rdau:P60249 ex:R2 ;
-  rdau:P60249 ex:R3 ;
-  rdau:P60249 ex:R4 ;
-  rdau:P60249 ex:R5 ;
-  rdau:P60249 ex:R6 ;
-  rdau:P60249 ex:R7 ;
-  rdau:P60249 ex:R8 ;
-  rdau:P60249 ex:R9 ;
-  rdau:P60249 ex:R10 ;
-  rdau:P60249 ex:R11 ;
-  rdau:P60249 ex:R12 ;
-  rdau:P60249 ex:R13 ;
-  rdau:P60327 "Tori Amos" ;
-  rdau:P60426 ex:A1 ;
+  rdau:P60073 "[date of publication not identified]"@en ;
+  rdau:P60093 "audio file"@en ;
+  rdau:P60153 "Mahbey, Judy" ;
+  rdau:P60163 "Fredericton, NB, Canada" ;
+  rdau:P60313 "Originally broadcast on CBC Radio 1981"@en ;
+  rdau:P60313 "Abridgement of the first print edition published by McGraw-Hill Ryerson, 1971"@en ;
+  rdau:P60314 rdaef:1007 ;
+  rdau:P60327 "Alice Munro" ;
+  rdau:P60327 "narrated by Judy Mahbey"@en ;
+  rdau:P60327 "produced by Lawrie Seligman"@en ;
+  rdau:P60327 "recording engineer: Eric Wagers"@en ;
+  rdau:P60343 "by Ruth Fraser"@en ;
+  rdau:P60365 "Abridged" ;
+  rdau:P60372 "&quot;Born on the backwards 'Flats Road', Del Jordan is a 'nice girl' with big dreams in a small town that expects little from women beyond marriage and babies. In linked short stories, Del suffers embarrassment at the hands of her encyclopedia-selling mother, endures her body's insistent desires, and falls passionately in love with a young lumberyard worker, only to lose her chance of a university scholarship&quot; - Container."@en ;
+  rdau:P60394 ex:A2 ;
+  rdau:P60395 ex:A5 ;
+  rdau:P60398 ex:A4 ;
+  rdau:P60434 ex:A1 ;
   rdau:P60490 "http://www.gooselane.com" ;
-  rdau:P60515 "Little earthquakes" ;
+  rdau:P60515 "Lives of girls and women" ;
+  rdau:P60521 "$29.95 (Canada)" ;
+  rdau:P60521 "$24.95 (United States)" ;
   rdau:P60539 "12 cm" ;
-  rdau:P60547 "Atlantic" ;
-  rdau:P60550 "1 audio disc"@en ;
-  rdau:P60557 "4:58, 4:06, 4:10, 4:26, 5:40, 3:12, 4:58, 3:12, 6:59, 4:38, 3:44, 6:51" ;
-  rdau:P60584 "Songs and instrumental music" ;
-  rdau:P60596 rdabm:1014.
-ex:R2
-  rdau:P60052 "Amos, Tori. Crucify" .
-ex:R3
-  rdau:P60052 "Amos, Tori. Girl" .
-ex:R4
-  rdau:P60052 "Amos, Tori. Silent all these years" .
-ex:R5
-  rdau:P60052 "Amos, Tori. Precious things" .
-ex:R6
-  rdau:P60052 "Amos, Tori. Winter" .
-ex:R7
-  rdau:P60052 "Amos, Tori. Happy phantom" .
-ex:R8
-  rdau:P60052 "Amos, Tori. China" .
-ex:R9
-  rdau:P60052 "Amos, Tori. Leather" .
-ex:R10
-  rdau:P60052 "Amos, Tori. Mother" .
-ex:R11
-  rdau:P60052 "Amos, Tori. Tear in your hand" .
-ex:R12
-  rdau:P60052 "Amos, Tori. Me and a gun" .
-ex:R13
-  rdau:P60052 "Amos, Tori. Little earthquakes (Song)" .
-rdabm:1014 skos:prefLabel "plastic"@en .
-rdaco:1011 skos:prefLabel "performed music"@en .
+  rdau:P60543 rdatr:1002 ;
+  rdau:P60547 "BTC Audiobooks" ;
+  rdau:P60550 "3 audio discs"@en ;
+  rdau:P60557 "61:46, 62:09, 61:18" ;
+  rdau:P60594 rdarm:1003 .
+rdaco:1013 skos:prefLabel "spoken word"@en .
 rdact:1004 skos:prefLabel "audio disc"@en .
 rdact:1013 skos:prefLabel "computer disc"@en .
-rdami:1001 skos:prefLabel "single unit"@en .
+rdaef:1007 skos:prefLabel "CD audio"@en .
+rdami:1002 skos:prefLabel "multipart monograph"@en .
 rdamt:1001 skos:prefLabel "audio"@en .
 rdamt:1003 skos:prefLabel "computer"@en .
+rdarm:1003 skos:prefLabel "optical"@en .
+rdatr:1002 skos:prefLabel "digital"@en .
 <!-- InstanceEndEditable --></code></pre>
      </div>
      <div class="col-md-6">
       <h3>Downloads</h3>
       <!-- InstanceBeginEditable name="ExampleDownload" -->
       <ul>
-       <li>Turtle (text/turtle)</li>
+       <li><a href="http://rdaregistry.info/ttl/Examples/exRSCFullAudioDiskSpokenWordUnc.ttl" target="_blank">Turtle (text/turtle)</a></li>
       </ul>
       <!-- InstanceEndEditable -->
      </div>
      <!-- InstanceBeginEditable name="ExampleDescription" -->
-      <p>This example corresponds to <em>Audio disc (performed music)</em> from <a href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
+      <p>This example corresponds to <em>Audio disc (spoken word)</em> from <a href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
       <p>The example uses unconstrained RDA properties.</p>
       <!-- InstanceEndEditable --> 
 </div>
@@ -229,7 +227,7 @@ rdamt:1003 skos:prefLabel "computer"@en .
 </div>
 </div>
 <div class="date-updated">
-<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->11 May 2016<!-- InstanceEndEditable -->.</p>
+<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->12 May 2016<!-- InstanceEndEditable -->.</p>
 </div>
 </div>
 </footer>

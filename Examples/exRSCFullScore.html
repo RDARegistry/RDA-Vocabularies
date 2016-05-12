@@ -105,114 +105,72 @@
 <div class="rg-pagecontent">
 <h1>Examples using the RDA vocabularies</h1>
 
-     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Audio disc (performed music) from Complete examples – bibliographic records<!-- InstanceEndEditable --></h2>
+     <h2><!-- InstanceBeginEditable name="ExampleTitle" -->Score from Complete examples – bibliographic records<!-- InstanceEndEditable --></h2>
      <div class="row">
      <div class="col-md-6">
       <pre><code><!-- InstanceBeginEditable name="ExampleCode" -->
 @prefix ex: &lt;http://example.com/&gt; .
 @prefix rdaa: &lt;http://rdaregistry.info/Elements/a/&gt; .
-@prefix rdabm: &lt;http://rdaregistry.info/termList/RDAbaseMaterial/&gt; .
+@prefix rdac: &lt;http://rdaregistry.info/Elements/c/&gt; .
 @prefix rdaco: &lt;http://rdaregistry.info/termList/RDAContentType/&gt; .
 @prefix rdact: &lt;http://rdaregistry.info/termList/RDACarrierType/&gt; .
 @prefix rdae: &lt;http://rdaregistry.info/Elements/e/&gt; .
-@prefix rdaef: &lt;http://rdaregistry.info/termList/encFormat/&gt; .
-@prefix rdaft: &lt;http://rdaregistry.info/termList/fileType/&gt; .
+@prefix rdafmn: &lt;http://rdaregistry.info/termList/MusNotation/&gt; .
 @prefix rdam: &lt;http://rdaregistry.info/Elements/m/&gt; .
 @prefix rdami: &lt;http://rdaregistry.info/termList/ModeIssue/&gt; .
 @prefix rdamt: &lt;http://rdaregistry.info/termList/RDAMediaType/&gt; .
-@prefix rdarm: &lt;http://rdaregistry.info/termList/recMedium/&gt; .
-@prefix rdatr: &lt;http://rdaregistry.info/termList/typeRec/&gt; .
-@prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
 @prefix rdaw: &lt;http://rdaregistry.info/Elements/w/&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
 #
-# Example: Audio disc (performed music) from Complete examples – bibliographic records
+# Example: Score from Complete examples – bibliographic records
 # 11 May 2016
 #
 ex:A1
-  rdaa:P50103 "Tori Amos" ;
-  rdaa:P50117 "Amos, Tori" .
+  rdaa:P50094 "Brouwer, Margaret, 1940-" ;
+  rdaa:P50103 "Margaret Brouwer" ;
+  rdaa:P50117 "Brouwer, Margaret" ;
+  rdaa:P50121 "1940" .
 ex:E1
-  rdae:P20001 rdaco:1011 ;
-  rdae:P20006 "English"@en ;
-  rdae:P20025 ex:A1 ;
-  rdae:P20219 "4:58, 4:06, 4:10, 4:26, 5:40, 3:12, 4:58, 3:12, 6:59, 4:38, 3:44, 6:51" ;
+  rdae:P20001 rdaco:1010 ;
+  rdae:P20064 rdafmn:1007 ;
+  rdae:P20219 "25 min." ;
   rdae:P20231 ex:W1 .
- ex:M1
-  rdam:P30001 rdact:1004 ;
-  rdam:P30001 rdact:1013 ;
-  rdam:P30002 rdamt:1001 ;
-  rdam:P30002 rdamt:1003 ;
+ex:M1
+  rdam:P30001 rdact:1049 ;
+  rdam:P30002 rdamt:1007 ;
   rdam:P30003 rdami:1001 ;
-  rdam:P30004 "82358-2" ;
-  rdam:P30007 "\u21171991" ;
-  rdam:P30011 "[1991?]" ;
-  rdam:P30088 "New York, New York" ;
-  rdam:P30105 "Tori Amos" ;
+  rdam:P30011 "2004" ;
+  rdam:P30088 "[United States?]" ;
+  rdam:P30105 "Margaret Brouwer" ;
   rdam:P30135 ex:W1 ;
   rdam:P30139 ex:E1 ;
-  rdam:P30141 "http://www.gooselane.com" ;
-  rdam:P30156 "Little earthquakes" ;
-  rdam:P30169 "12 cm" ;
-  rdam:P30176 "Atlantic" ;
-  rdam:P30182 "1 audio disc"@en ;
-  rdam:P30208 rdabm:1014.
+  rdam:P30156 "Concerto for violin and chamber music" ;
+  rdam:P30169 "42 cm" ;
+  rdam:P30176 "Brouwer New Music Publishing" ;
+  rdam:P30181 "1 score (76 pages)"@en .
 ex:W1
-  rdaw:P10002 "Amos, Tori. Little earthquakes (Album)" .
+  rdaw:P10002 "Brouwer, Margaret, 1940- . Concertos, violin, orchestra" ;
   rdaw:P10053 ex:A1 ;
-  rdaw:P10147 ex:W2 ;
-  rdaw:P10147 ex:W3 ;
-  rdaw:P10147 ex:W4 ;
-  rdaw:P10147 ex:W5 ;
-  rdaw:P10147 ex:W6 ;
-  rdaw:P10147 ex:W7 ;
-  rdaw:P10147 ex:W8 ;
-  rdaw:P10147 ex:W9 ;
-  rdaw:P10222 "Songs and instrumental music" .
-ex:W2
-  rdaw:P10002 "Amos, Tori. Crucify" .
-ex:W3
-  rdaw:P10002 "Amos, Tori. Girl" .
-ex:W4
-  rdaw:P10002 "Amos, Tori. Silent all these years" .
-ex:W5
-  rdaw:P10002 "Amos, Tori. Precious things" .
-ex:W6
-  rdaw:P10002 "Amos, Tori. Winter" .
-ex:W7
-  rdaw:P10002 "Amos, Tori. Happy phantom" .
-ex:W8
-  rdaw:P10002 "Amos, Tori. China" .
-ex:W9
-  rdaw:P10002 "Amos, Tori. Leather" .
-ex:W10
-  rdaw:P10002 "Amos, Tori. Mother" .
-ex:W11
-  rdaw:P10002 "Amos, Tori. Tear in your hand" .
-ex:W12
-  rdaw:P10002 "Amos, Tori. Me and a gun" .
-ex:W13
-  rdaw:P10002 "Amos, Tori. Little earthquakes (Song)" .
-rdabm:1014 skos:prefLabel "plastic"@en .
-rdaco:1011 skos:prefLabel "performed music"@en .
-rdact:1004 skos:prefLabel "audio disc"@en .
-rdact:1013 skos:prefLabel "computer disc"@en .
+  rdaw:P10086 "Concerto for violin and chamber music" ;
+  rdaw:P10220 "violin, orchestra"@en ;
+  rdaw:P10223 "Concertos"@en .
+rdaco:1010 skos:prefLabel "notated music"@en .
+rdact:1049 skos:prefLabel "volume"@en .
+rdafmn:1007 skos:prefLabel "staff notation"@en .
 rdami:1001 skos:prefLabel "single unit"@en .
-rdamt:1001 skos:prefLabel "audio"@en .
-rdamt:1003 skos:prefLabel "computer"@en .
+rdamt:1007 skos:prefLabel "unmediated"@en .
 <!-- InstanceEndEditable --></code></pre>
      </div>
      <div class="col-md-6">
       <h3>Downloads</h3>
       <!-- InstanceBeginEditable name="ExampleDownload" -->
       <ul>
-       <li>Turtle (text/turtle) </li>
+       <li><a href="http://rdaregistry.info/ttl/Examples/exRSCFullScore.ttl" target="_blank">Turtle (text/turtle)</a></li>
       </ul>
       <!-- InstanceEndEditable -->
      </div>
      <!-- InstanceBeginEditable name="ExampleDescription" -->
-      <p>This example corresponds to <em>Audio disc (performed music)</em> from <a href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
+      <p>This example corresponds to <em>Score</em> from <a href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf" target="_blank">Complete examples - bibliographic records</a>.</p>
       <p>The example uses constrained RDA properties.</p>
       <!-- InstanceEndEditable --> 
 </div>
@@ -239,7 +197,7 @@ rdamt:1003 skos:prefLabel "computer"@en .
 </div>
 </div>
 <div class="date-updated">
-<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->11 May 2016<!-- InstanceEndEditable -->.</p>
+<p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->12 May 2016<!-- InstanceEndEditable -->.</p>
 </div>
 </div>
 </footer>
