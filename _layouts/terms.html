@@ -1,14 +1,24 @@
 ---
 layout: default
 ---
-{% assign lexical = page.id | remove: '/termList/' %}
-{% assign namespace = site.url + page.id + "/" %}
+{% assign lexical = page.id | split: "/" | last %}
+
+{% for org_hash in site.data.terms %}
+  {% if org_hash[0] == lexical %}
+    {% assign org = org_hash[1] %}
+    {% assign concept = org["@graph"][0] %}
+  {% endif %}
+{% endfor %}
+{% assign pageTitle = concept.title.en %}
+{% assign pageDescription = concept.description.en %}
+{% assign regID = concept.api | split: "/" | last %}
+{% assign pageRDF = concept['@id'] %}
+{% capture namespace %}{{pageRDF}}/{% endcapture %}
 {% if page.datatable == true %}
 <script type="text/javascript">
-    var dataSource = "http://rdaregistry.info/termList/{{lexical}}.jsonld";
-    var dataSource = "/{{lexical}}.jsonld";
-    var prefix = '{{site.data.AspectRatio["@graph"][0].prefix}}';
-    var vocabNamespace = "http://rdaregistry.info/termList/{{lexical}}/"
+    var dataSource = "/data/terms/{{lexical}}.json";
+    var prefix = '{{concept.prefix}}';
+    var vocabNamespace = "{{namespace}}"
 </script>
 {% endif %}
 <div class="post-content">
@@ -16,34 +26,38 @@ layout: default
     <div class="row">
         <div class="col-md-6">
             <div class="rgelement-title">
-                <h2>{{page.title}}</h2>
+                <h2>{{pageTitle}}</h2>
             </div>
             <div class="rgelement-description">
-                <p>{{page.description}}</p>
+                <p>{{pageDescription}}</p>
             </div>
             <div class="rgelement-reference">
                 <table>
                     <tr>
                         <td>Number of concepts:</td>
-                        <td>{{page.count}}</td>
+                        <td>{{concept.count}}</td>
+                    </tr>
+                    <tr>
+                        <td>URI:</td>
+                        <td>{{concept['@id']}}</td>
                     </tr>
                     <tr>
                         <td>Namespace:</td>
-                        <td>http://rdaregistry.info/termList/{{lexical}}/</td>
+                        <td>{{namespace}}</td>
                     </tr>
                     <tr>
                         <td>Suggested prefix*:</td>
-                        <td>{{site.data.AspectRatio["@graph"][0].prefix}}</td>
+                        <td>{{concept.prefix}}</td>
                     </tr>
                     <tr>
                         <td>Example curie:</td>
-                        <td>{{site.data.AspectRatio["@graph"][0].prefix}}:1001</td>
+                        <td>{{concept.prefix}}:1001</td>
                     </tr>
                     <tr>
                         <td>Changelog feed:</td>
                         <td>
-                            <a href="http://metadataregistry.org/history/feed/vocabulary_id/{{page.feedId}}.atom">Atom</a>
-                            | <a href="http://metadataregistry.org/history/feed/vocabulary_id/{{page.feedId}}.rdf">RDF</a>
+                            <a href="http://metadataregistry.org/history/feed/vocabulary_id/{{regID}}.atom">Atom</a>
+                            | <a href="http://metadataregistry.org/history/feed/vocabulary_id/{{regID}}.rdf">RDF</a>
                         </td>
                     </tr>
                 </table>
@@ -54,7 +68,7 @@ layout: default
             <div class="rgelement-download">
                 <h3>Downloads</h3>
                 <ul>
-                    <li><a href="http://metadataregistry.org/vocabulary/show/id/{{page.feedId}}.html">HTML (Open
+                    <li><a href="http://metadataregistry.org/vocabulary/show/id/{{regID}}.html">HTML (Open
                         Metadata Registry)</a></li>
                     <li><a href="http://rdaregistry.info/termList/{{lexical}}.ttl">Turtle
                         (text/turtle)</a></li>
@@ -75,11 +89,11 @@ layout: default
                         (application/rdf+json)</a></li>
                 </ul>
             </div>
-            {% if page.languages %}
+            {% if concept.languages %}
             <div class="rgelement-languages">
                 <h3>Languages</h3>
                 <ul id="langList">
-                    {% for lang in site.data.AspectRatio["@graph"][0].languages %}
+                    {% for lang in concept.languages %}
                     {% if lang.version == "WIP" %}
                     <li><a title="Work In Progress" aria-disabled="true" disabled="disabled" class="not-active">{{lang.lang}}</a></li>
                     {% else %}
@@ -108,6 +122,7 @@ Current Version: {{lang.version}}">{{lang.lang}}</a>
                             data-pt-title="<p>This column contains the permalink for the documentation for the element in this row.</p><p>Note: It is <emphasis>not</emphasis> the URI for the element.</p>"
                             style="padding-right: 10px;padding-left: 10px !important;"> #
                         </th>
+                        <th style="padding-right: 0;padding-left: 0 !important;"></th>
                         <th class="protip" data-pt-scheme="aqua" data-pt-delay-in=500
                             data-pt-position="left" data-pt-gravity=true
                             data-pt-title="<p>This column contains the CURIE for the element. </p><p>The link associated with the curie is the canonical URI. </p>">
