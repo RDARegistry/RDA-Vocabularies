@@ -23,29 +23,38 @@ function format(d) {
 
     //TODO: build output and formatting instructions from the context
     var blacklist = ['toolkitDefinition', 'toolkitLabel', 'prefLabel', 'definition', 'inScheme', '@type'];
-    var rows = '<table class="pindex_detail">';
     if (typeof d != "undefined") {
-        for (property in d) {
-            if (typeof property != "undefined" && d.hasOwnProperty(property) && blacklist.indexOf(property) == -1) {
+        var ownKeys = Reflect.ownKeys(d);
+        var property = '';
+        ownKeys.sort();
+
+        var rows = '<table class="pindex_detail">';
+        for (i = 0, len = ownKeys.length; i < len; i++) {
+            property = ownKeys[i];
+            if (typeof property != "undefined" && blacklist.indexOf(property) == -1) {
+                rows += '<tr>' + '<td id="detail_key_' + property + '">' + property + ':</td>' + '<td class="definition" id="detail_def_' + property + '">';
                 switch(property) {
                     case '@id':
-                    case 'identifier':
+                    case 'api':
                     case 'inScheme':
-                        rows += '<tr>' + '<td>'+ property +':</td>' +'<td class="definition">' + makeLink(d[property]) + '</td>' +'</tr>'
+                        rows +=  makeLink(d[property]);
                         break;
                     case 'altLabel':
                     case 'prefLabel':
-                        rows += '<tr>' + '<td>' + property + ':</td>' + '<td class="definition">' + makeLiteral(d[property]) + ' ' + getLanguageCallout(d[property]) + '</td>' + '</tr>'
+                    case 'toolkitLabel':
+                        rows += makeLiteral(d[property]) + ' ' + getLanguageCallout(d[property]);
                         break;
                     case 'definition':
-                        rows += '<tr>' + '<td>' + property + ':</td>' + '<td class="definition">' + makeLiteral(d[property]) + ' ' + getLanguageCallout(d[property]) + '</td>' + '</tr>'
+                    case 'toolkitDefinition':
+                        rows += makeLiteral(d[property]) + ' ' + getLanguageCallout(d[property]);
                         break;
                     default:
-                        rows += '<tr>' + '<td>' + property + ':</td>' + '<td class="definition">"' + d[property] + '"</td>' + '</tr>'
+                        rows += '"' + d[property] + '"';
                 }
             }
+            rows += "</td></tr>\n";
         }
-        return rows + '</table>';
+        return rows + "</table>";
     }
 }
 
