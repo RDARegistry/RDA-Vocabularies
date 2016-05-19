@@ -54,6 +54,18 @@
                         <li><a href="/rimmf/">RIMMF</a></li>
                     </ul>
                 </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Releases <b
+                        class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/RDARegistry/RDA-Vocabularies/releases">Releases</a></li>
+                        <li class="divider"></li>
+                        {% for release in site.github.releases %}
+                        <li><a href="{{release.html_url}}">{{ release.tag_name }} - {{release.published_at |
+                            date_to_long_string}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown"><a href="/rgAbout/" class="dropdown-toggle" data-toggle="dropdown">About <b

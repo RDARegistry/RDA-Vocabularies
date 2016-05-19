@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% include head.html %}
+{% include head.html %}
+
+{% if (page, collection == 'terms') %}
+  {% assign lexical = page.id | split: "/" | last %}
+  {% for org_hash in site.data.terms %}
+    {% if org_hash[0] == lexical %}
+      {% assign org = org_hash[1] %}
+      {% assign concept = org["@graph"][0] %}
+    {% endif %}
+  {% endfor %}
+  {% assign pageTitle = concept.title.en %}
+  {% assign pageDescription = concept.description.en %}
+  {% assign regID = concept.api | split: "/" | last %}
+  {% assign pageRDF = concept['@id'] %}
+  {% capture namespace %}{{pageRDF}}/{% endcapture %}
+    <title>{% if pageTitle %}{{ site.title }} | Values | {{ pageTitle }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if pageDescription %}{{ pageDescription | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <!-- Links-->
+    <link rel="canonical" href="{{pageRDF}}">
+    <link rel="alternate" type="application/rdf+xml" title="RDF/XML" href="{{pageRDF}}.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom"
+          href="http://metadataregistry.org/history/feed/vocabulary_id/{{regID}}.atom">
+{% endif %}
 </head>
 <body>
 {% include topnav.html %}
