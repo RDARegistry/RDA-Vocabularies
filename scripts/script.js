@@ -7,6 +7,7 @@ function gup(name, url, theDefault) {
     return results == null ? theDefault : results[1];
 }
 var docLang = gup('language', Location.href, 'en');
+$("#lang_"+docLang).css("border", "3px solid red");
 
 //noinspection ThisExpressionReferencesGlobalObjectJS
 (function () {
