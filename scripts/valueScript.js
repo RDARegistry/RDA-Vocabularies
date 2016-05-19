@@ -25,9 +25,8 @@ function format(d) {
     //TODO: build output and formatting instructions from the context
     var blacklist = ['toolkitDefinition', 'toolkitLabel', 'prefLabel', 'definition', 'inScheme', '@type'];
     if (typeof d != "undefined") {
-        var ownKeys = Reflect.ownKeys(d);
+        var ownKeys = Object.getOwnPropertyNames(d).sort();
         var property = '';
-        ownKeys.sort();
 
         var rows = '<table class="pindex_detail">';
         for (i = 0, len = ownKeys.length; i < len; i++) {
