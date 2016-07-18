@@ -1,47 +1,54 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
-    a :Concept ;
-    :prefLabel "Published"@en .
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
 
 <http://rdaregistry.info/termList/scale>
-    dc:title "RDA Scale" ;
-    a :ConceptScheme .
+    dc:title "RDA Scale Designation" ;
+    a skos:ConceptScheme .
 
 <http://rdaregistry.info/termList/scale/1001>
-    reg:identifier <http://api.metadataregistry.org/concepts/1141> ;
+    rdakit:toolkitDefinition "A scale designation for a resource consisting of more than one image, map, etc., with different scales."@en ;
+    rdakit:toolkitLabel "scales differ"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/1141> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Scale designation for a resource consisting of more than one image, map, etc., with different scales."@en ;
-    :inScheme <http://rdaregistry.info/termList/scale> ;
-    :prefLabel "Scale differs"@en .
+    a skos:Concept ;
+    skos:definition "A scale designation for a resource consisting of more than one image, map, etc., with different scales."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/scale> ;
+    skos:prefLabel "scales differ"@en .
 
 <http://rdaregistry.info/termList/scale/1002>
-    reg:identifier <http://api.metadataregistry.org/concepts/1142> ;
+    rdakit:toolkitDefinition "A scale designation for a resource when no scale can be determined."@en ;
+    rdakit:toolkitLabel "scale not given"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/1142> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Scale designation for a resource when no scale can be determined."@en ;
-    :inScheme <http://rdaregistry.info/termList/scale> ;
-    :prefLabel "Scale not given"@en .
+    a skos:Concept ;
+    skos:definition "A scale designation for a resource when no scale can be determined."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/scale> ;
+    skos:prefLabel "scale not given"@en .
 
 <http://rdaregistry.info/termList/scale/1003>
-    reg:identifier <http://api.metadataregistry.org/concepts/1143> ;
+    rdakit:toolkitDefinition "A scale designation for a resource whose scale is variable across the resource, when the range of values cannot be determined."@en ;
+    rdakit:toolkitLabel "scale varies"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/1143> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Scale designation for a resource whose scale is variable across the resource, when the range of values cannot be determined."@en ;
-    :inScheme <http://rdaregistry.info/termList/scale> ;
-    :prefLabel "Scale varies"@en .
+    a skos:Concept ;
+    skos:definition "A scale designation for a resource whose scale is variable across the resource, when the range of values cannot be determined."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/scale> ;
+    skos:prefLabel "scale varies"@en .
 
 <http://rdaregistry.info/termList/scale/1004>
-    reg:identifier <http://api.metadataregistry.org/concepts/3392> ;
+    rdakit:toolkitDefinition "A scale designation for a still image or three-dimensional form that is not to scale."@en ;
+    rdakit:toolkitLabel "not drawn to scale"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/3392> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Scale designation for a still image or three-dimensional form that is not to scale."@en ;
-    :inScheme <http://rdaregistry.info/termList/scale> ;
-    :prefLabel "Not drawn to scale"@en .
+    a skos:Concept ;
+    skos:definition "A scale designation for a still image or three-dimensional form that is not to scale."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/scale> ;
+    skos:prefLabel "not drawn to scale"@en .
 

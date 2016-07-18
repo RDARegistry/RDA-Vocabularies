@@ -1,124 +1,228 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
-    a :Concept ;
-    :prefLabel "Published"@en .
-
-<http://metadataregistry.org/uri/RegStatus/1002>
-    a :Concept ;
-    :prefLabel "New-Proposed"@en .
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
 
 <http://rdaregistry.info/termList/RDAproductionMethod>
     dc:title "RDA Production Method" ;
-    a :ConceptScheme .
+    a skos:ConceptScheme .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1001>
-    reg:identifier <http://api.metadataregistry.org/concepts/424> ;
+    rdakit:toolkitDefinition "A production method consisting of a contact printing process based on diazonium salt and azo dye chemical reactions that renders all opaque tones or colours as blue on a neutral background."@en ;
+    rdakit:toolkitLabel "blueline process"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/424> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method consisting of prints made on light-sensitized surfaces that produce blue images on neutral backgrounds."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "blueline"@en ;
-    :related <http://rdaregistry.info/termList/RDAproductionMethod/1002> .
+    a skos:Concept ;
+    skos:definition "A production method consisting of a contact printing process based on diazonium salt and azo dye chemical reactions that renders all opaque tones or colours as blue on a neutral background."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "blueline process"@en ;
+    skos:related <http://rdaregistry.info/termList/RDAproductionMethod/1002>, <http://rdaregistry.info/termList/RDAproductionMethod/1011> .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1002>
-    reg:identifier <http://api.metadataregistry.org/concepts/425> ;
+    rdakit:toolkitDefinition "A production method consisting of a contact printing process using iron salt chemical reactions that renders all opaque tones or colours as white on a blue background."@en ;
+    rdakit:toolkitLabel "blueprint process"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/425> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method consisting of a photographic process using iron salts and producing an image in Prussian blue. Blueprints are reproductive prints of architectural plans, maps, mechanical drawings, and other technical drawings, characterized by having white images on blue backgrounds."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "blueprint"@en ;
-    :related <http://rdaregistry.info/termList/RDAproductionMethod/1001> .
+    a skos:Concept ;
+    skos:definition "A production method consisting of a contact printing process using iron salt chemical reactions that renders all opaque tones or colours as white on a blue background."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "blueprint process"@en ;
+    skos:related <http://rdaregistry.info/termList/RDAproductionMethod/1001>, <http://rdaregistry.info/termList/RDAproductionMethod/1011> .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1003>
-    reg:identifier <http://api.metadataregistry.org/concepts/426> ;
+    rdakit:toolkitDefinition "A production method consisting of a contact printing process using a dichromate chemical reaction that hardens gelatin on exposure to ultraviolet light to produce a positive master that is subsequently used in a lithographic process."@en ;
+    rdakit:toolkitLabel "collotype"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/426> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method consisting of a type of photolithography in which the printing plate is prepared using a bichromate process. Unhardened gelatin areas hold water and thus resist greasy ink; hardened areas accept ink and hold it in the characteristic wormlike pattern of cracks."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "collotype"@en .
+    a skos:Concept ;
+    skos:definition "A production method consisting of a contact printing process using a dichromate chemical reaction that hardens gelatin on exposure to ultraviolet light to produce a positive master that is subsequently used in a lithographic process."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "collotype"@en .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1004>
-    reg:identifier <http://api.metadataregistry.org/concepts/427> ;
+    rdakit:toolkitDefinition "A production method consisting of a photographic process using a silver-coated copper plate that is exposed in a camera and subsequently developed, usually using mercury vapour, and fixed with salt to create a positive image."@en ;
+    rdakit:toolkitLabel "daguerreotype process"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/427> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method consisting of exposure in a camera of a silver-coated copper plate that is subsequently developed, usually using mercury vapour, and fixed with salt to create a positive image."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "daguerreotype"@en .
+    a skos:Concept ;
+    skos:definition "A production method consisting of a photographic process using a silver-coated copper plate that is exposed in a camera and subsequently developed, usually using mercury vapour, and fixed with salt to create a positive image."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "daguerreotype process"@en .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1005>
-    reg:identifier <http://api.metadataregistry.org/concepts/428> ;
+    rdakit:toolkitDefinition "A production method consisting of the incision of marks on the surface of a hard material using a sharp tool."@en ;
+    rdakit:toolkitLabel "engraving"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/428> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method consisting of creating marks on the surface of a hard material, such as metal or glass, by incising with a sharp tool. In printing, the intaglio process in which the design is incised into a printing plate, usually a flat copper plate, with the aid of a graver or burin that is held in the palm of the hand and pushed against the copper to cut lines comprising V-shaped grooves. The plate is then inked up, wiped so that ink is retained in the grooves and then forced out under the pressure of the printing process to create lines on the paper. The technique was first developed in the early 15th century in Germany. Historically, \"engraving\" has sometimes been used incorrectly to refer to all printmaking processes, particularly any process employing printing plates."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "engraving"@en ;
-    :related <http://rdaregistry.info/termList/RDAproductionMethod/1006> .
+    a skos:Concept ;
+    skos:broader <http://rdaregistry.info/termList/RDAproductionMethod/1016> ;
+    skos:definition "A production method consisting of the incision of marks on the surface of a hard material using a sharp tool."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "engraving"@en ;
+    skos:related <http://rdaregistry.info/termList/RDAproductionMethod/1006> ;
+    skos:scopeNote "Engraving includes the preparation of a printing plate for an intaglio process."@en .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1006>
-    reg:identifier <http://api.metadataregistry.org/concepts/429> ;
+    rdakit:toolkitDefinition "A production method consisting of an intaglio process in which the design is worked into an acid-resistant substance coating the metal printing plate; the plate is then exposed to acid, which etches the plate where the metal is exposed, to create lines and dark areas."@en ;
+    rdakit:toolkitLabel "etching"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/429> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "Production method consisting of an intaglio process in which the design is worked into an acid-resistant substance coating the metal printing plate; the plate is then exposed to acid, which etches the plate where the metal is exposed, to create lines and dark areas."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "etching"@en ;
-    :related <http://rdaregistry.info/termList/RDAproductionMethod/1005> .
+    a skos:Concept ;
+    skos:broader <http://rdaregistry.info/termList/RDAproductionMethod/1016> ;
+    skos:definition "A production method consisting of an intaglio process in which the design is worked into an acid-resistant substance coating the metal printing plate; the plate is then exposed to acid, which etches the plate where the metal is exposed, to create lines and dark areas."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "etching"@en ;
+    skos:related <http://rdaregistry.info/termList/RDAproductionMethod/1005> .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1007>
-    reg:identifier <http://api.metadataregistry.org/concepts/430> ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
-    a :Concept ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "lithograph"@en .
+    rdakit:toolkitDefinition "A production method consisting of a planographic printing process in which a stone or plate is prepared using a water-repelling substance making parts of the plate receptive to ink."@en ;
+    rdakit:toolkitLabel "lithography"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/430> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A production method consisting of a planographic printing process in which a stone or plate is prepared using a water-repelling substance making parts of the plate receptive to ink."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "lithography"@en .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1008>
-    reg:identifier <http://api.metadataregistry.org/concepts/431> ;
+    rdakit:toolkitDefinition "A production method consisting of a macroform photoreproduction process using radiant energy in contact with or projected on opaque material."@en ;
+    rdakit:toolkitLabel "photocopying"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/431> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method consisting of a macroform photoreproduction produced directly on opaque material by radiant energy through contact or projection."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "photocopy"@en .
+    a skos:Concept ;
+    skos:definition "A production method consisting of a macroform photoreproduction process using radiant energy in contact with or projected on opaque material."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "photocopying"@en .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1009>
-    reg:identifier <http://api.metadataregistry.org/concepts/432> ;
+    rdakit:toolkitDefinition "A production method consisting of a photomechanical process for the preparation of chemically etched printing plates."@en ;
+    rdakit:toolkitLabel "photoengraving"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/432> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method using a photomechanical process to prepare chemically etched printing plates."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "photoengraving"@en .
+    a skos:Concept ;
+    skos:definition "A production method consisting of a photomechanical process for the preparation of chemically etched printing plates."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "photoengraving"@en .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1010>
-    reg:identifier <http://api.metadataregistry.org/concepts/433> ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
-    a :Concept ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "print"@en .
+    rdakit:toolkitDefinition "A production method consisting of a process that transfers a pictorial or textual image from a master carrier to the surface of another resource, often using a plate, block, stone, or screen coated with a transferable material. Includes the production of photographic prints and paper copies of stored computer data."@en ;
+    rdakit:toolkitLabel "printing"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/433> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A production method consisting of a process that transfers a pictorial or textual image from a master carrier to the surface of another resource, often using a plate, block, stone, or screen coated with a transferable material. Includes the production of photographic prints and paper copies of stored computer data."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "printing"@en ;
+    skos:related <http://rdaregistry.info/termList/RDAproductionMethod/1012> .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1011>
-    reg:identifier <http://api.metadataregistry.org/concepts/434> ;
+    rdakit:toolkitDefinition "A production method consisting of a contact printing process based on a light sensitive process that renders all opaque tones or colours as black or a colour on a white background."@en ;
+    rdakit:toolkitLabel "white print process"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/434> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method consisting of copies made by light-sensitive processes, often the diazo process, usually of line drawings, in which black or coloured lines appear on a white background."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "white print"@en .
+    a skos:Concept ;
+    skos:definition "A production method consisting of a contact printing process based on a light sensitive process that renders all opaque tones or colours as black or a colour on a white background."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "white print process"@en ;
+    skos:related <http://rdaregistry.info/termList/RDAproductionMethod/1001>, <http://rdaregistry.info/termList/RDAproductionMethod/1002> .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1012>
-    reg:identifier <http://api.metadataregistry.org/concepts/435> ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1002> ;
-    a :Concept ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "woodcut"@en .
+    rdakit:toolkitDefinition "A production method consisting of a relief process in which a design is cut into and printed from the surface of a wood block."@en ;
+    rdakit:toolkitLabel "woodcut making"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/435> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A production method consisting of a relief process in which a design is cut into and printed from the surface of a wood block."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "woodcut making"@en ;
+    skos:related <http://rdaregistry.info/termList/RDAproductionMethod/1010> .
 
 <http://rdaregistry.info/termList/RDAproductionMethod/1014>
-    reg:identifier <http://api.metadataregistry.org/concepts/1137> ;
+    rdakit:toolkitDefinition "A production method consisting of an intaglio process in which the metal printing plate is prepared using a dichromate process to leave a gelatin resist coating of varying thickness that is etched to form cells of varying depth able to hold different amounts of ink."@en ;
+    rdakit:toolkitLabel "photogravure process"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/1137> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    a :Concept ;
-    :definition "A production method consisting of an intaglio method in which the metal printing plate is prepared using a bichromate process, leaving a gelatin resist of varying thickness. The plate is etched to form cells of varying depth able to hold different amounts of ink."@en ;
-    :inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
-    :prefLabel "photogravure"@en .
+    a skos:Concept ;
+    skos:definition "A production method consisting of an intaglio process in which the metal printing plate is prepared using a dichromate process to leave a gelatin resist coating of varying thickness that is etched to form cells of varying depth able to hold different amounts of ink."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "photogravure process"@en .
+
+<http://rdaregistry.info/termList/RDAproductionMethod/1015>
+    rdakit:toolkitDefinition "A production method consisting of the application of heat to mark the surface of a material."@en ;
+    rdakit:toolkitLabel "burning"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/7892> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A production method consisting of the application of heat to mark the surface of a material."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "burning"@en .
+
+<http://rdaregistry.info/termList/RDAproductionMethod/1016>
+    rdakit:toolkitDefinition "A production method consisting of a process that fixes signs and symbols onto a base material by cutting into the surface."@en ;
+    rdakit:toolkitLabel "inscribing"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/7893> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A production method consisting of a process that fixes signs and symbols onto a base material by cutting into the surface."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:narrower <http://rdaregistry.info/termList/RDAproductionMethod/1005>, <http://rdaregistry.info/termList/RDAproductionMethod/1006> ;
+    skos:prefLabel "inscribing"@en ;
+    skos:related <http://rdaregistry.info/termList/RDAproductionMethod/1005> .
+
+<http://rdaregistry.info/termList/RDAproductionMethod/1017>
+    rdakit:toolkitDefinition "A production method consisting of the application of pressure to make an impression on the surface of a material."@en ;
+    rdakit:toolkitLabel "stamping"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/7894> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A production method consisting of the application of pressure to make an impression on the surface of a material."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "stamping"@en .
+
+<http://rdaregistry.info/termList/RDAproductionMethod/1018>
+    rdakit:toolkitDefinition "A production method consisting of the use of either a metal or plastic sheet as a master with specialized equipment to produce copies of a tactile resource."@en ;
+    rdakit:toolkitLabel "embossing"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/8451> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A production method consisting of the use of either a metal or plastic sheet as a master with specialized equipment to produce copies of a tactile resource."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "embossing"@en .
+
+<http://rdaregistry.info/termList/RDAproductionMethod/1019>
+    rdakit:toolkitDefinition "A production method for tactile resources in which solid plastic dots are heat sealed onto the surface of thin but strong paper."@en ;
+    rdakit:toolkitLabel "solid dot"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/8452> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:definition "A production method for tactile resources in which solid plastic dots are heat sealed onto the surface of thin but strong paper."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "solid dot"@en .
+
+<http://rdaregistry.info/termList/RDAproductionMethod/1020>
+    rdakit:toolkitDefinition "A production method for tactile resources in which an image is printed on a special type of paper with embedded microcapsules of alcohol which burst when exposed to heat to make the surface of the paper swell up."@en ;
+    rdakit:toolkitLabel "swell paper"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/8453> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:altLabel "Minolta paper"@en ;
+    skos:definition "A production method for tactile resources in which an image is printed on a special type of paper with embedded microcapsules of alcohol which burst when exposed to heat to make the surface of the paper swell up."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "swell paper"@en .
+
+<http://rdaregistry.info/termList/RDAproductionMethod/1021>
+    rdakit:toolkitDefinition "A production method for tactile resources in which a collage master is covered with a sheet of plastic, which is heated and vacuumed to generate a copy of a model or diagram."@en ;
+    rdakit:toolkitLabel "thermoform"@en ;
+    reg:identifier <http://metadataregistry.org/concepts/8454> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a skos:Concept ;
+    skos:altLabel "vacuum form"@en ;
+    skos:definition "A production method for tactile resources in which a collage master is covered with a sheet of plastic, which is heated and vacuumed to generate a copy of a model or diagram."@en ;
+    skos:inScheme <http://rdaregistry.info/termList/RDAproductionMethod> ;
+    skos:prefLabel "thermoform"@en .
 

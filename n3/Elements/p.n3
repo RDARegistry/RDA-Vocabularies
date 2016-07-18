@@ -1,0 +1,54 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://rdaregistry.info/Elements/p/P70002> a rdf:Property ;
+    rdfs:label "has preferred name for a place"@en ;
+    rdakit:toolkitDefinition "A name or form of name chosen to identify a place."@en ;
+    rdakit:toolkitLabel "preferred name for a place"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60548> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/preferredNameForAPlace.en> ;
+    reg:name "preferredNameForAPlace"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70001> ;
+    skos:definition "Relates a place to a name or form of name chosen to identify a place."@en .
+
+<http://rdaregistry.info/Elements/p/P70003> a rdf:Property ;
+    rdfs:label "has variant name for a place"@en ;
+    rdakit:toolkitDefinition "A name or form of name by which a place is known that differs from the name or form of name chosen as the preferred name."@en ;
+    rdakit:toolkitLabel "variant name for a place"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60880> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/variantNameForAPlace.en> ;
+    reg:name "variantNameForAPlace"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70001> ;
+    skos:definition "Relates a place to a name or form of name by which a place is known that differs from the name or form of name chosen as the preferred name."@en .
+
+<http://rdaregistry.info/Elements/p/P70001> a rdf:Property ;
+    rdfs:label "has name of a place"@en ;
+    rdakit:toolkitDefinition "A word, character, or group of words and/or characters by which a place is known."@en ;
+    rdakit:toolkitLabel "name of a place"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60366> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/nameOfAPlace.en> ;
+    reg:name "nameOfAPlace"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    skos:definition "Relates a place to a word, character, or group of words and/or characters by which a place is known."@en .
+
+<http://metadataregistry.org/uri/RegStatus/1001> a skos:Concept ;
+    skos:prefLabel "Published"@en .
+
+<http://rdaregistry.info/Elements/p/> dc:title "RDA Place properties"@en ;
+    skos:note "Properties derived from RDA elements and relationship designators with the domain of RDA Place."@en .
+

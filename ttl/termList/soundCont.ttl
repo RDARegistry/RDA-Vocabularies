@@ -1,35 +1,34 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix reg: <http://metadataregistry.org/uri/profile/RegAp/> .
 @prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://metadataregistry.org/uri/RegStatus/1001>
-    a :Concept ;
-    :prefLabel "Published"@en .
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
 
 <http://rdaregistry.info/termList/soundCont>
     dc:title "RDA Sound Content" ;
-    a :ConceptScheme .
+    a skos:ConceptScheme .
 
 <http://rdaregistry.info/termList/soundCont/1001>
-    reg:identifier <http://api.metadataregistry.org/concepts/1037> ;
+    rdakit:toolkitDefinition "A sound content indicator for a resource that contains sound."@en, "Contenido sonoro de un recurso que contiene sonido, diferente de uno que consiste básicamente en sonido grabado."@es, "Contenu sonore d’une ressource qui contient du son, à l’exception des ressources constituées principalement de son enregistré."@fr, "包含声音的资源（主要由录制的声音组成的资源除外）的声音内容。"@zh ;
+    rdakit:toolkitLabel "sonido"@es, "sonore"@fr, "sound"@en, "有声"@zh ;
+    reg:identifier <http://metadataregistry.org/concepts/1037> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:ToolkitDefinition "Contenido sonoro de un recurso que contiene sonido, diferente de uno que consiste básicamente en sonido grabado."@es, "Contenu sonore d’une ressource qui contient du son, à l’exception des ressources constituées principalement de son enregistré."@fr, "Sound content for a resource that contains sound, other than one that consists primarily of recorded sound."@en ;
-    rdakit:ToolkitLabel "sonido"@es, "sonore"@fr, "sound"@en ;
-    a :Concept ;
-    :definition "Contenido sonoro de un recurso que contiene sonido, diferente de uno que consiste básicamente en sonido grabado."@es, "Contenu sonore d’une ressource qui contient du son, à l’exception des ressources constituées principalement de son enregistré."@fr, "Sound content for a resource that contains sound, other than one that consists primarily of recorded sound."@en, "Toninhalt einer Ressource, die Ton enthält, aber nicht überwiegend aus aufgezeichnetem Ton besteht."@de ;
-    :inScheme <http://rdaregistry.info/termList/soundCont> ;
-    :prefLabel "Ton"@de, "sonido"@es, "sonore"@fr, "sound"@en .
+    a skos:Concept ;
+    skos:definition "A sound content indicator for a resource that contains sound."@en, "Contenido sonoro de un recurso que contiene sonido, diferente de uno que consiste básicamente en sonido grabado."@es, "Contenu sonore d’une ressource qui contient du son, à l’exception des ressources constituées principalement de son enregistré."@fr, "Toninhalt einer Ressource, die Ton enthält, aber nicht überwiegend aus aufgezeichnetem Ton besteht."@de, "包含声音的资源（主要由录制的声音组成的资源除外）的声音内容。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/soundCont> ;
+    skos:prefLabel "Ton"@de, "sonido"@es, "sonore"@fr, "sound"@en, "有声"@zh .
 
 <http://rdaregistry.info/termList/soundCont/1002>
-    reg:identifier <http://api.metadataregistry.org/concepts/1038> ;
+    rdakit:toolkitDefinition "A sound content indicator for a resource that does not contain sound."@en, "Contenido sonoro de una película cinematográfica o grabación de video que no contiene una banda sonora."@es, "Contenu sonore d’un film ou d’un enregistrement vidéo qui ne comporte pas de piste sonore."@fr, "不包含声轨的电影或录像的声音内容。"@zh ;
+    rdakit:toolkitLabel "muda"@es, "muet"@fr, "silent"@en, "无声"@zh ;
+    reg:identifier <http://metadataregistry.org/concepts/1038> ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdakit:ToolkitDefinition "Contenido sonoro de una película cinematográfica o grabación de video que no contiene una banda sonora."@es, "Contenu sonore d’un film ou d’un enregistrement vidéo qui ne comporte pas de piste sonore."@fr, "Sound content for a motion picture or video recording that does not contain a sound track."@en ;
-    rdakit:ToolkitLabel "muda"@es, "muet"@fr, "silent"@en ;
-    a :Concept ;
-    :definition "Contenido sonoro de una película cinematográfica o grabación de video que no contiene una banda sonora."@es, "Contenu sonore d’un film ou d’un enregistrement vidéo qui ne comporte pas de piste sonore."@fr, "Sound content for a motion picture or video recording that does not contain a sound track."@en, "Toninhalt eines Films oder einer Videoaufnahme, der/die keine Tonspur enthält."@de ;
-    :inScheme <http://rdaregistry.info/termList/soundCont> ;
-    :prefLabel "muda"@es, "muet"@fr, "silent"@en, "stumm"@de .
+    a skos:Concept ;
+    skos:definition "A sound content indicator for a resource that does not contain sound."@en, "Contenido sonoro de una película cinematográfica o grabación de video que no contiene una banda sonora."@es, "Contenu sonore d’un film ou d’un enregistrement vidéo qui ne comporte pas de piste sonore."@fr, "Toninhalt eines Films oder einer Videoaufnahme, der/die keine Tonspur enthält."@de, "不包含声轨的电影或录像的声音内容。"@zh ;
+    skos:inScheme <http://rdaregistry.info/termList/soundCont> ;
+    skos:prefLabel "muda"@es, "muet"@fr, "silent"@en, "stumm"@de, "无声"@zh .
 
