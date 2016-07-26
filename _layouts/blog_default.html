@@ -1,0 +1,33 @@
+---
+layout: compress
+sidebar: true
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+<body>
+{% include topnav.html %}
+<!-- Page Content -->
+<div class="container">
+  <section id="content" class="content">
+    <article id="page" class="page" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="page-content">
+        <div class="rg-pagecontent">
+          {{content}}
+        </div>
+      </div>
+    </article>
+  </section>
+  {% include footer.html %}
+</div>
+
+    {% include blog_scripts.html %}
+
+  </body>
+</html>
