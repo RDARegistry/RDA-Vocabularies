@@ -27,9 +27,11 @@
             </div>
         </div>
         <div class="date-updated">
-            <p>{% if page.last_updated %}
-                Page last updated: {{concept.dateOfPublication | date: "%b %-d, %Y" }}<br/>
-                {% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y" }} </p>
+            <p>{% if concept.dateOfPublication %}
+                Concept last published:
+                <time datetime="{{ concept.dateOfPublication | date: ' %Y-%m-%d' }}">{{ concept.dateOfPublication | date: "%B %d, %Y" }}</time><br/>
+                {% endif %}
+                Site last generated: {{ site.time | date: "%b %-d, %Y" }} </p>
         </div>
     </div>
 </footer>
