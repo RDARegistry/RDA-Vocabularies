@@ -61,7 +61,7 @@
                         <li class="divider"></li>
                         {% for release in site.github.releases %}
                         <li><a href="{{release.html_url}}">{{ release.tag_name }} -
-                            <time datetime="{{ release.created_at | date: ' %Y-%m-%d' }}">{{ release.created_at | date: "%B %d, %Y" }}</time></a>
+                            <time datetime="{{ release.published_at | date: ' %Y-%m-%d' }}">{{ release.published_at | date: "%B %d, %Y" }}</time></a>
                         </li>
                         {% endfor %}
                     </ul>
