@@ -60,8 +60,8 @@
                         <li><a href="https://github.com/RDARegistry/RDA-Vocabularies/releases">Releases</a></li>
                         <li class="divider"></li>
                         {% for release in site.github.releases %}
-                        <li><a href="{{release.html_url}}">{{ release.tag_name }} - {{release.published_at |
-                            date_to_long_string}}</a>
+                        <li><a href="{{release.html_url}}">{{ release.tag_name }} -
+                            <time datetime="{{ release.created_at | date: ' %Y-%m-%d' }}">{{ release.created_at | date: "%B %d, %Y" }}</time></a>
                         </li>
                         {% endfor %}
                     </ul>
