@@ -1,5 +1,6 @@
 ---
 title: RDA and Linked Data
+author: Jon Phipps
 categories: linked_data RDA
 ---
 
