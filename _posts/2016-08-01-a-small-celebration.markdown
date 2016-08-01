@@ -1,5 +1,6 @@
 ---
 title: A small celebration
+author: Gordon Dunsire
 date: 2016-08-01 11:00:00
 categories: RDA_Reference London_Meeting RDA_Development_Team
 ---
