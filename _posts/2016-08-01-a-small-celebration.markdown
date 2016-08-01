@@ -35,3 +35,5 @@ Our next goal is to complete the third of the activities:
 The RSC and Development Team are working on it: there is a [placeholder in the Registry](http://www.rdaregistry.info/Profiles/). Diane and **Jon Phipps** presented [Application profiles: Exposing and enforcing metadata quality](http://dcpapers.dublincore.org/pubs/article/view/866) at the Singapore conference; we are hoping to do just that, and before the 10th anniversary!
 
 Why so long? It took that time to make the shift from the classical record reflecting the 19th century world of literature and literary scholarship to the open linked data reflecting the universe of human discourse in the 21st century. And a bunch of other stuff :-)
+
+Gordon Dunsire
