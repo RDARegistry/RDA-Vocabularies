@@ -2,7 +2,7 @@
 title: Value Vocabularies documentation updated
 author: Jon Phipps
 date: 2016-08-08 11:00:00
-categories: RDA Registry, Value Vocabularies
+categories: RDA_Registry Value_Vocabularies
 ---
 
 We've been experimenting with a new json-ld format for the RDA Value Vocabularies that provides substantially more metadata describing the vocabulary itself as well as expanding the data available in the display of each vocabulary. Today we rolled that out on all of the Value Vocabulary documentation pages.
