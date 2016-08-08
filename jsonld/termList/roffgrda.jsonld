@@ -1,67 +1,62 @@
 {
-  "@context": {
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/regap/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/roffgrda/T1002",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/6979"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": {
-        "@language": "en",
-        "@value": "Content consisting of digitally encoded data or instructions intended to be processed by a computer."
-      },
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/roffgrda"
-      },
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "computer"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/roffgrda",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "ROF Form/Genre RDA"
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/roffgrda/T1001",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/6978"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": {
-        "@language": "en",
-        "@value": "Content consisting of digitally encoded data or instructions intended to be processed by a computer."
-      },
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/roffgrda"
-      },
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "cartographic"
-      }
-    }
-  ]
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
+        {
+            "@id": "http://rdaregistry.info/termList/roffgrda",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "ROF Form/Genre for RDA"
+            },
+            "description": {
+                "en": "RDA local vocabulary for RDA/ONIX Framework Form/Genre."
+            },
+            "token": "roffgrda",
+            "prefix": "roffgrda",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/372",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/372.html",
+            "documentation": "",
+            "tags": {
+                "en": []
+            },
+            "count": 2,
+            "languages": [
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                }
+            ],
+            "dateOfPublication": ""
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/roffgrda/T1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/6978",
+            "inScheme": "http://rdaregistry.info/termList/roffgrda",
+            "status": "Published",
+            "prefLabel": {
+                "en": "cartographic"
+            },
+            "definition": {
+                "en": "Content consisting of digitally encoded data or instructions intended to be processed by a computer."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/roffgrda/T1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/6979",
+            "inScheme": "http://rdaregistry.info/termList/roffgrda",
+            "status": "Published",
+            "prefLabel": {
+                "en": "computer"
+            },
+            "definition": {
+                "en": "Content consisting of digitally encoded data or instructions intended to be processed by a computer."
+            }
+        }
+    ]
 }

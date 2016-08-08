@@ -1,88 +1,75 @@
 {
-  "@context": {
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/regap/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "http://rdaregistry.info/termList/rofem/T1003",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/6924"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": {
-        "@language": "en",
-        "@value": "The content is not expected to be extended after initial release."
-      },
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/rofem"
-      },
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "not applicable"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/rofem/T1002",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/6923"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": {
-        "@language": "en",
-        "@value": "Extension through the successive release of discrete segments, parts, issues, volumes, supplements, etc."
-      },
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/rofem"
-      },
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "succession"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/rofem/T1001",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/6922"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": {
-        "@language": "en",
-        "@value": "Extension through the integration of added content."
-      },
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/rofem"
-      },
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "integration"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/rofem",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "ROF Extension Mode"
-    },
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    }
-  ]
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
+        {
+            "@id": "http://rdaregistry.info/termList/rofem",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "ROF Extension Mode"
+            },
+            "description": {
+                "en": ""
+            },
+            "token": "rofem",
+            "prefix": "rofem",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/358",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/358.html",
+            "documentation": "",
+            "tags": {
+                "en": []
+            },
+            "count": 3,
+            "languages": [
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                }
+            ],
+            "dateOfPublication": ""
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/rofem/T1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/6922",
+            "inScheme": "http://rdaregistry.info/termList/rofem",
+            "status": "Published",
+            "prefLabel": {
+                "en": "integration"
+            },
+            "definition": {
+                "en": "Extension through the integration of added content."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/rofem/T1003",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/6924",
+            "inScheme": "http://rdaregistry.info/termList/rofem",
+            "status": "Published",
+            "prefLabel": {
+                "en": "not applicable"
+            },
+            "definition": {
+                "en": "The content is not expected to be extended after initial release."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/rofem/T1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/6923",
+            "inScheme": "http://rdaregistry.info/termList/rofem",
+            "status": "Published",
+            "prefLabel": {
+                "en": "succession"
+            },
+            "definition": {
+                "en": "Extension through the successive release of discrete segments, parts, issues, volumes, supplements, etc."
+            }
+        }
+    ]
 }

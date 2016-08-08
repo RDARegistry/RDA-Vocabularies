@@ -1,212 +1,140 @@
 {
-  "@context": {
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/regap/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/soundCont/1002",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
         {
-          "@language": "es",
-          "@value": "Contenido sonoro de una película cinematográfica o grabación de video que no contiene una banda sonora."
+            "@id": "http://rdaregistry.info/termList/soundCont",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "RDA Sound Content"
+            },
+            "description": {
+                "en": "A presence of sound in a resource other than one that consists primarily of recorded sound."
+            },
+            "token": "soundCont",
+            "prefix": "rdasco",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/93",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/93.html",
+            "documentation": "http://www.rdaregistry.info/termList/soundCont/",
+            "tags": {
+                "en": [
+                    "Libraries",
+                    "Information Services"
+                ]
+            },
+            "count": 2,
+            "languages": [
+                {
+                    "code": "ar",
+                    "lang": "Arabic",
+                    "version": "WIP"
+                },
+                {
+                    "code": "zh",
+                    "lang": "Chinese",
+                    "version": ""
+                },
+                {
+                    "code": "nl",
+                    "lang": "Dutch",
+                    "version": "WIP"
+                },
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                },
+                {
+                    "code": "fr",
+                    "lang": "French",
+                    "version": ""
+                },
+                {
+                    "code": "de",
+                    "lang": "German",
+                    "version": ""
+                },
+                {
+                    "code": "es",
+                    "lang": "Spanish",
+                    "version": ""
+                },
+                {
+                    "code": "sv",
+                    "lang": "Swedish",
+                    "version": "WIP"
+                }
+            ],
+            "dateOfPublication": ""
         },
         {
-          "@language": "en",
-          "@value": "A sound content indicator for a resource that does not contain sound."
+            "@id": "http://rdaregistry.info/termList/soundCont/1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1038",
+            "inScheme": "http://rdaregistry.info/termList/soundCont",
+            "status": "Published",
+            "prefLabel": {
+                "en": "silent",
+                "de": "stumm",
+                "fr": "muet",
+                "es": "muda",
+                "zh": "无声"
+            },
+            "definition": {
+                "en": "A sound content indicator for a resource that does not contain sound.",
+                "de": "Toninhalt eines Films oder einer Videoaufnahme, der/die keine Tonspur enthält.",
+                "fr": "Contenu sonore d’un film ou d’un enregistrement vidéo qui ne comporte pas de piste sonore.",
+                "es": "Contenido sonoro de una película cinematográfica o grabación de video que no contiene una banda sonora.",
+                "zh": "不包含声轨的电影或录像的声音内容。"
+            },
+            "ToolkitLabel": {
+                "en": "silent",
+                "fr": "muet",
+                "es": "muda",
+                "zh": "无声"
+            },
+            "ToolkitDefinition": {
+                "en": "A sound content indicator for a resource that does not contain sound.",
+                "fr": "Contenu sonore d’un film ou d’un enregistrement vidéo qui ne comporte pas de piste sonore.",
+                "es": "Contenido sonoro de una película cinematográfica o grabación de video que no contiene una banda sonora.",
+                "zh": "不包含声轨的电影或录像的声音内容。"
+            }
         },
         {
-          "@language": "zh",
-          "@value": "不包含声轨的电影或录像的声音内容。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Contenu sonore d’un film ou d’un enregistrement vidéo qui ne comporte pas de piste sonore."
+            "@id": "http://rdaregistry.info/termList/soundCont/1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1037",
+            "inScheme": "http://rdaregistry.info/termList/soundCont",
+            "status": "Published",
+            "prefLabel": {
+                "en": "sound",
+                "de": "Ton",
+                "fr": "sonore",
+                "es": "sonido",
+                "zh": "有声"
+            },
+            "definition": {
+                "en": "A sound content indicator for a resource that contains sound.",
+                "de": "Toninhalt einer Ressource, die Ton enthält, aber nicht überwiegend aus aufgezeichnetem Ton besteht.",
+                "fr": "Contenu sonore d’une ressource qui contient du son, à l’exception des ressources constituées principalement de son enregistré.",
+                "es": "Contenido sonoro de un recurso que contiene sonido, diferente de uno que consiste básicamente en sonido grabado.",
+                "zh": "包含声音的资源（主要由录制的声音组成的资源除外）的声音内容。"
+            },
+            "ToolkitLabel": {
+                "en": "sound",
+                "fr": "sonore",
+                "es": "sonido",
+                "zh": "有声"
+            },
+            "ToolkitDefinition": {
+                "en": "A sound content indicator for a resource that contains sound.",
+                "fr": "Contenu sonore d’une ressource qui contient du son, à l’exception des ressources constituées principalement de son enregistré.",
+                "es": "Contenido sonoro de un recurso que contiene sonido, diferente de uno que consiste básicamente en sonido grabado.",
+                "zh": "包含声音的资源（主要由录制的声音组成的资源除外）的声音内容。"
+            }
         }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "en",
-          "@value": "silent"
-        },
-        {
-          "@language": "fr",
-          "@value": "muet"
-        },
-        {
-          "@language": "zh",
-          "@value": "无声"
-        },
-        {
-          "@language": "es",
-          "@value": "muda"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/1038"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "en",
-          "@value": "A sound content indicator for a resource that does not contain sound."
-        },
-        {
-          "@language": "de",
-          "@value": "Toninhalt eines Films oder einer Videoaufnahme, der/die keine Tonspur enthält."
-        },
-        {
-          "@language": "zh",
-          "@value": "不包含声轨的电影或录像的声音内容。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Contenu sonore d’un film ou d’un enregistrement vidéo qui ne comporte pas de piste sonore."
-        },
-        {
-          "@language": "es",
-          "@value": "Contenido sonoro de una película cinematográfica o grabación de video que no contiene una banda sonora."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/soundCont"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "zh",
-          "@value": "无声"
-        },
-        {
-          "@language": "fr",
-          "@value": "muet"
-        },
-        {
-          "@language": "es",
-          "@value": "muda"
-        },
-        {
-          "@language": "en",
-          "@value": "silent"
-        },
-        {
-          "@language": "de",
-          "@value": "stumm"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/soundCont",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "RDA Sound Content"
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/soundCont/1001",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "es",
-          "@value": "Contenido sonoro de un recurso que contiene sonido, diferente de uno que consiste básicamente en sonido grabado."
-        },
-        {
-          "@language": "en",
-          "@value": "A sound content indicator for a resource that contains sound."
-        },
-        {
-          "@language": "zh",
-          "@value": "包含声音的资源（主要由录制的声音组成的资源除外）的声音内容。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Contenu sonore d’une ressource qui contient du son, à l’exception des ressources constituées principalement de son enregistré."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "fr",
-          "@value": "sonore"
-        },
-        {
-          "@language": "zh",
-          "@value": "有声"
-        },
-        {
-          "@language": "en",
-          "@value": "sound"
-        },
-        {
-          "@language": "es",
-          "@value": "sonido"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/1037"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "fr",
-          "@value": "Contenu sonore d’une ressource qui contient du son, à l’exception des ressources constituées principalement de son enregistré."
-        },
-        {
-          "@language": "de",
-          "@value": "Toninhalt einer Ressource, die Ton enthält, aber nicht überwiegend aus aufgezeichnetem Ton besteht."
-        },
-        {
-          "@language": "en",
-          "@value": "A sound content indicator for a resource that contains sound."
-        },
-        {
-          "@language": "zh",
-          "@value": "包含声音的资源（主要由录制的声音组成的资源除外）的声音内容。"
-        },
-        {
-          "@language": "es",
-          "@value": "Contenido sonoro de un recurso que contiene sonido, diferente de uno que consiste básicamente en sonido grabado."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/soundCont"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "zh",
-          "@value": "有声"
-        },
-        {
-          "@language": "es",
-          "@value": "sonido"
-        },
-        {
-          "@language": "de",
-          "@value": "Ton"
-        },
-        {
-          "@language": "fr",
-          "@value": "sonore"
-        },
-        {
-          "@language": "en",
-          "@value": "sound"
-        }
-      ]
-    }
-  ]
+    ]
 }

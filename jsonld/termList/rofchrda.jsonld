@@ -1,46 +1,49 @@
 {
-  "@context": {
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/regap/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "http://rdaregistry.info/termList/rofchrda/T1001",
-      "@type": "skos:Concept",
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/6977"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": {
-        "@language": "en",
-        "@value": "Content expressed in movement of the human body."
-      },
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/rofchrda"
-      },
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "movement"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/rofchrda",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "ROF Character RDA"
-    },
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    }
-  ]
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
+        {
+            "@id": "http://rdaregistry.info/termList/rofchrda",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "ROF Character for RDA"
+            },
+            "description": {
+                "en": "RDA local refinements to RDA/ONIX Framework Character."
+            },
+            "token": "rofchrda",
+            "prefix": "rofchrda",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/371",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/371.html",
+            "documentation": "",
+            "tags": {
+                "en": []
+            },
+            "count": 1,
+            "languages": [
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                }
+            ],
+            "dateOfPublication": ""
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/rofchrda/T1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/6977",
+            "inScheme": "http://rdaregistry.info/termList/rofchrda",
+            "status": "Published",
+            "prefLabel": {
+                "en": "movement"
+            },
+            "definition": {
+                "en": "Content expressed in movement of the human body."
+            }
+        }
+    ]
 }

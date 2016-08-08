@@ -328,7 +328,7 @@
     rdfs:label "has other person, family, or corporate body associated with a manifestation"@en,
         "a pour autre personne, famille ou collectivité associée à une manifestation"@fr ;
     rdakit:instructionNumber "21/06/2016" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body other than a producer, publisher, distributor or manufacturer associated with a manifestation."@en,
+    rdakit:toolkitDefinition "A person, family, or corporate body other than a producer, publisher, distributor, or manufacturer associated with a manifestation."@en,
         "Una persona, familia o entidad corporativa diferente a un productor, editor, distribuidor o fabricante que está asociada con una manifestación."@es,
         "Personne, famille ou collectivité, autre qu’un producteur, un éditeur, un diffuseur ou distributeur ou bien un fabricant, associée à une manifestation."@fr ;
     rdakit:toolkitLabel "other person, family, or corporate body associated with a manifestation"@en,
@@ -342,7 +342,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/P50181> ;
-    skos:definition "Relates a manifestation to a person, family, or corporate body other than a producer, publisher, distributor or manufacturer associated with a manifestation."@en,
+    skos:definition "Relates a manifestation to a person, family, or corporate body other than a producer, publisher, distributor, or manufacturer associated with a manifestation."@en,
         "Met une manifestation en relation avec une personne, famille ou collectivité, autre qu’un producteur, un éditeur, un diffuseur ou distributeur ou bien un fabricant, associée à une manifestation."@fr ;
     skos:scopeNote "Comprend les graphistes, les graveurs de planches, etc."@fr .
 
@@ -1711,6 +1711,40 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     skos:definition "Relates a manifestation to details of a format used in the production of a projected image."@en .
 
+<http://rdaregistry.info/Elements/m/P30238> a rdf:Property ;
+    rdfs:label "has details of production method"@en ;
+    rdakit:instructionNumber "3.9.1.4" ;
+    rdakit:toolkitDefinition "Details of a process used to produce a resource."@en,
+        "Detalles del proceso utilizado para producir un recurso."@es ;
+    rdakit:toolkitLabel "details of production method"@en,
+        "detalles del método de producción"@es ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60789> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfProductionMethod.en> ;
+    reg:name "detailsOfProductionMethod"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    skos:definition "Relates a manifestation to details of a process used to produce a resource."@en .
+
+<http://rdaregistry.info/Elements/m/P30239> a rdf:Property ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60790> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfProductionMethodForManuscript.en> ;
+    reg:name "detailsOfProductionMethodForManuscript"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> .
+
+<http://rdaregistry.info/Elements/m/P30240> a rdf:Property ;
+    rdakit:instructionNumber "3.9.3.4" ;
+    rdakit:toolkitDefinition "Detalles del proceso utilizado para producir un recurso táctil (por ej., repujado, termoformado)."@es ;
+    rdakit:toolkitLabel "detalles del método de producción de un recurso táctil"@es ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60791> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfProductionMethodForTactileResource.en> ;
+    reg:name "detailsOfProductionMethodForTactileResource"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> .
+
 <http://rdaregistry.info/Elements/m/P30244> a rdf:Property ;
     rdfs:label "has details of reduction ratio designation"@en ;
     rdakit:instructionNumber "3.15.1.4" ;
@@ -3023,102 +3057,82 @@
 <http://rdaregistry.info/Elements/m/P30177> a rdf:Property ;
     rdfs:label "has extent of cartographic resource (Deprecated)"@en,
         "a pour importance matérielle de la ressource cartographique"@fr ;
-    rdakit:instructionNumber "3/4/2002" ;
-    rdakit:toolkitDefinition "The number and type of units and/or subunits making up a cartographic resource."@en,
-        "El número y tipo de unidades y/o subunidades que constituyen un recurso cartográfico."@es,
+    rdakit:toolkitDefinition "El número y tipo de unidades y/o subunidades que constituyen un recurso cartográfico."@es,
         "Le nombre et le type d’unités et/ou de sous-unités formant une ressource cartographique."@fr ;
-    rdakit:toolkitLabel "extent of cartographic resource"@en,
-        "extensión de recurso cartográfico"@es,
+    rdakit:toolkitLabel "extensión de recurso cartográfico"@es,
         "importance matérielle de la ressource cartographique"@fr ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60550> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/extentOfCartographicResource.en> ;
     reg:name "extentOfCartographicResource"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182> ;
-    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a cartographic resource."@en,
-        "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource cartographique."@fr .
+    skos:definition "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource cartographique."@fr .
 
 <http://rdaregistry.info/Elements/m/P30178> a rdf:Property ;
     rdfs:label "has extent of notated music (Deprecated)"@en,
         "a pour importance matérielle de la musique notée"@fr ;
-    rdakit:instructionNumber "3/4/2003" ;
-    rdakit:toolkitDefinition "The number and type of units and/or subunits making up a resource consisting of notated music, with or without accompanying text and/or illustrations."@en,
-        "El número y tipo de unidades y/o subunidades que constituyen un recurso que consiste en música notada (con o sin acompañamiento de texto y/o ilustraciones)."@es,
+    rdakit:toolkitDefinition "El número y tipo de unidades y/o subunidades que constituyen un recurso que consiste en música notada (con o sin acompañamiento de texto y/o ilustraciones)."@es,
         "Le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée de musique notée, avec ou sans texte d’accompagnement et/ou illustrations."@fr ;
-    rdakit:toolkitLabel "extent of notated music"@en,
-        "extensión de la música notada"@es,
+    rdakit:toolkitLabel "extensión de la música notada"@es,
         "importance matérielle de la musique notée"@fr ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60550> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/extentOfNotatedMusic.en> ;
     reg:name "extentOfNotatedMusic"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182> ;
-    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource consisting of notated music, with or without accompanying text and/or illustrations."@en,
-        "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée de musique notée, avec ou sans texte d’accompagnement et/ou illustrations."@fr .
+    skos:definition "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée de musique notée, avec ou sans texte d’accompagnement et/ou illustrations."@fr .
 
 <http://rdaregistry.info/Elements/m/P30179> a rdf:Property ;
     rdfs:label "has extent of still image (Deprecated)"@en,
         "a pour importance matérielle de l’image fixe"@fr ;
-    rdakit:instructionNumber "3/4/2004" ;
-    rdakit:toolkitDefinition "The number and type of units and/or subunits making up a resource consisting of one or more still images."@en,
-        "El número y tipo de unidades y/o subunidades que constituyen un recurso que consiste en una o más imágenes fijas."@es,
+    rdakit:toolkitDefinition "El número y tipo de unidades y/o subunidades que constituyen un recurso que consiste en una o más imágenes fijas."@es,
         "Le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée d’une ou de plusieurs images fixes."@fr ;
-    rdakit:toolkitLabel "extent of still image"@en,
-        "extensión de la imagen fija"@es,
+    rdakit:toolkitLabel "extensión de la imagen fija"@es,
         "importance matérielle de l’image fixe"@fr ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60550> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/extentOfStillImage.en> ;
     reg:name "extentOfStillImage"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182> ;
-    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource consisting of one or more still images."@en,
-        "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée d’une ou de plusieurs images fixes."@fr .
+    skos:definition "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée d’une ou de plusieurs images fixes."@fr .
 
 <http://rdaregistry.info/Elements/m/P30180> a rdf:Property ;
     rdfs:label "has extent of three-dimensional form (Deprecated)"@en,
         "a pour importance matérielle de la forme tridimensionnelle"@fr ;
-    rdakit:instructionNumber "3/4/2006" ;
-    rdakit:toolkitDefinition "The number and type of units and/or subunits making up a resource consisting of one or more three-dimensional forms."@en,
-        "El número y tipo de unidades y/o subunidades que constituyen un recurso que consiste en una o más formas tridimensionales."@es,
+    rdakit:toolkitDefinition "El número y tipo de unidades y/o subunidades que constituyen un recurso que consiste en una o más formas tridimensionales."@es,
         "Le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée d’une ou de plusieurs formes tridimensionnelles."@fr ;
-    rdakit:toolkitLabel "extent of three-dimensional form"@en,
-        "extensión de la forma tridimensional"@es,
+    rdakit:toolkitLabel "extensión de la forma tridimensional"@es,
         "importance matérielle de la forme tridimensionnelle"@fr ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60550> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/extentOfThreeDimensionalForm.en> ;
     reg:name "extentOfThreeDimensionalForm"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182> ;
-    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource consisting of one or more three-dimensional forms."@en,
-        "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée d’une ou de plusieurs formes tridimensionnelles."@fr .
+    skos:definition "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée d’une ou de plusieurs formes tridimensionnelles."@fr .
 
 <http://rdaregistry.info/Elements/m/P30181> a rdf:Property ;
     rdfs:label "has extent of text (Deprecated)"@en,
         "a pour importance matérielle du texte"@fr ;
-    rdakit:instructionNumber "3/4/2005" ;
-    rdakit:toolkitDefinition "The number and type of units and/or subunits making up a resource consisting of text, with or without accompanying illustrations."@en,
-        "El número y tipo de unidades y/o subunidades que constituyen un recurso que consiste en texto (con o sin ilustraciones)."@es,
+    rdakit:toolkitDefinition "El número y tipo de unidades y/o subunidades que constituyen un recurso que consiste en texto (con o sin ilustraciones)."@es,
         "Le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée de texte, avec ou sans illustrations."@fr ;
-    rdakit:toolkitLabel "extent of text"@en,
-        "extensión del texto"@es,
+    rdakit:toolkitLabel "extensión del texto"@es,
         "importance matérielle du texte"@fr ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60550> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/extentOfText.en> ;
     reg:name "extentOfText"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30182> ;
-    skos:definition "Relates a manifestation to the number and type of units and/or subunits making up a resource consisting of text, with or without accompanying illustrations."@en,
-        "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée de texte, avec ou sans illustrations."@fr .
+    skos:definition "Met une manifestation en relation avec le nombre et le type d’unités et/ou de sous-unités formant une ressource constituée de texte, avec ou sans illustrations."@fr .
 
 <http://rdaregistry.info/Elements/m/P30183> a rdf:Property ;
     rdfs:label "has file size"@en,
@@ -3562,38 +3576,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30245> ;
     skos:definition "Relates a manifestation to details of a groove width of an analog disc or a groove pitch of an analog cylinder."@en .
-
-<http://rdaregistry.info/Elements/m/P30239> a rdf:Property ;
-    rdfs:label "has details of production method for manuscript"@en ;
-    rdakit:instructionNumber "3.9.2.4" ;
-    rdakit:toolkitDefinition "Details of a process used to produce an original manuscript or a copy."@en,
-        "Detalles del proceso utilizado para producir un manuscrito original o una copia."@es ;
-    rdakit:toolkitLabel "details of production method for manuscript"@en,
-        "detalles del método de producción para un manuscrito"@es ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60790> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfProductionMethodForManuscript.en> ;
-    reg:name "detailsOfProductionMethodForManuscript"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30238> ;
-    skos:definition "Relates a manifestation to details of a process used to produce an original manuscript or a copy."@en .
-
-<http://rdaregistry.info/Elements/m/P30240> a rdf:Property ;
-    rdfs:label "has details of production method for tactile resource"@en ;
-    rdakit:instructionNumber "3.9.3.4" ;
-    rdakit:toolkitDefinition "Details of a process used to produce a tactile resource."@en,
-        "Detalles del proceso utilizado para producir un recurso táctil (por ej., repujado, termoformado)."@es ;
-    rdakit:toolkitLabel "details of production method for tactile resource"@en,
-        "detalles del método de producción de un recurso táctil"@es ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60791> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfProductionMethodForTactileResource.en> ;
-    reg:name "detailsOfProductionMethodForTactileResource"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30238> ;
-    skos:definition "Relates a manifestation to details of a process used to produce a tactile resource."@en .
 
 <http://rdaregistry.info/Elements/m/P30241> a rdf:Property ;
     rdfs:label "has details of projection characteristic of motion picture film"@en ;
@@ -4366,23 +4348,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     skos:definition "Relates a manifestation to a process used to produce a resource."@en,
         "Met une manifestation en relation avec le procédé utilisé pour produire une ressource."@fr .
-
-<http://rdaregistry.info/Elements/m/P30238> a rdf:Property ;
-    rdfs:label "has details of production method"@en ;
-    rdakit:instructionNumber "3.9.1.4" ;
-    rdakit:toolkitDefinition "Details of a process used to produce a resource."@en,
-        "Detalles del proceso utilizado para producir un recurso."@es ;
-    rdakit:toolkitLabel "details of production method"@en,
-        "detalles del método de producción"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30239>,
-        <http://rdaregistry.info/Elements/m/P30240> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60789> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfProductionMethod.en> ;
-    reg:name "detailsOfProductionMethod"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    skos:definition "Relates a manifestation to details of a process used to produce a resource."@en .
 
 <http://rdaregistry.info/Elements/m/P30250> a rdf:Property ;
     rdfs:label "has details of video characteristic"@en ;

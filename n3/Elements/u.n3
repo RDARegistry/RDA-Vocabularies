@@ -1126,7 +1126,7 @@
     reg:name "soundContent"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    skos:definition "Relates a resource to a presence of sound in a resource other than one that consists primarily of recorded sound."@en .
+    skos:definition "Relates a resource to a presence or absence of sound in a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60566> a rdf:Property ;
     rdfs:label "has aspect ratio"@en ;
@@ -1387,6 +1387,26 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     skos:definition "Relates a resource to details of a format used in the production of a projected image."@en .
+
+<http://rdaregistry.info/Elements/u/P60789> a rdf:Property ;
+    rdfs:label "has details of production method"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/detailsOfProductionMethod.en> ;
+    reg:name "detailsOfProductionMethod"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    skos:definition "Relates a resource to details of a process used to produce a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P60790> a rdf:Property ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/detailsOfProductionMethodForManuscript.en> ;
+    reg:name "detailsOfProductionMethodForManuscript"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> .
+
+<http://rdaregistry.info/Elements/u/P60791> a rdf:Property ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/detailsOfProductionMethodForTactileResource.en> ;
+    reg:name "detailsOfProductionMethodForTactileResource"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> .
 
 <http://rdaregistry.info/Elements/u/P60795> a rdf:Property ;
     rdfs:label "has details of reduction ratio designation"@en ;
@@ -2871,24 +2891,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60796> ;
     skos:definition "Relates a resource to details of a groove width of an analog disc or a groove pitch of an analog cylinder."@en .
-
-<http://rdaregistry.info/Elements/u/P60790> a rdf:Property ;
-    rdfs:label "has details of production method for manuscript"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/detailsOfProductionMethodForManuscript.en> ;
-    reg:name "detailsOfProductionMethodForManuscript"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60789> ;
-    skos:definition "Relates a resource to details of a process used to produce an original manuscript or a copy."@en .
-
-<http://rdaregistry.info/Elements/u/P60791> a rdf:Property ;
-    rdfs:label "has details of production method for tactile resource"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/detailsOfProductionMethodForTactileResource.en> ;
-    reg:name "detailsOfProductionMethodForTactileResource"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60789> ;
-    skos:definition "Relates a resource to details of a process used to produce a tactile resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60792> a rdf:Property ;
     rdfs:label "has details of projection characteristic of motion picture film"@en ;
@@ -7330,16 +7332,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60753> ;
     skos:definition "Relates an artist responsible for creating art resources that exploit the book form or alter its physical structure as part of the content of the resource to the resource."@en .
 
-<http://rdaregistry.info/Elements/u/P60789> a rdf:Property ;
-    rdfs:label "has details of production method"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60790>,
-        <http://rdaregistry.info/Elements/u/P60791> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/detailsOfProductionMethod.en> ;
-    reg:name "detailsOfProductionMethod"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    skos:definition "Relates a resource to details of a process used to produce a resource."@en .
-
 <http://rdaregistry.info/Elements/u/P60801> a rdf:Property ;
     rdfs:label "has details of video characteristic"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60770>,
@@ -9594,7 +9586,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60602> ;
-    skos:definition "Relates a resource to an agent other than a creator, custodian, owner, producer, publisher, distributor or manufacturer associated with a resource."@en .
+    skos:definition "Relates a resource to an agent other than a creator, custodian, owner, producer, publisher, distributor, or manufacturer associated with a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60602> a rdf:Property ;
     rdfs:label "is other agent associated with a resource of"@en ;

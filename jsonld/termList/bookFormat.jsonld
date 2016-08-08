@@ -1,1153 +1,465 @@
 {
-  "@context": {
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/regap/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "RDA Book Format"
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1008",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
         {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/48组成。"
+            "@id": "http://rdaregistry.info/termList/bookFormat",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "RDA Book Format"
+            },
+            "description": {
+                "en": "A result of folding a printed sheet to form a gathering of leaves (e.g., a sheet folded once to form a folio, twice to form a quarto, three times to form an octavo, etc.). "
+            },
+            "token": "bookFormat",
+            "prefix": "rdabf",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/76",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/76.html",
+            "documentation": "http://www.rdaregistry.info/termList/bookFormat/",
+            "tags": {
+                "en": [
+                    "Libraries",
+                    "Information Services"
+                ]
+            },
+            "count": 9,
+            "languages": [
+                {
+                    "code": "ar",
+                    "lang": "Arabic",
+                    "version": "WIP"
+                },
+                {
+                    "code": "zh",
+                    "lang": "Chinese",
+                    "version": ""
+                },
+                {
+                    "code": "nl",
+                    "lang": "Dutch",
+                    "version": "WIP"
+                },
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                },
+                {
+                    "code": "fr",
+                    "lang": "French",
+                    "version": ""
+                },
+                {
+                    "code": "de",
+                    "lang": "German",
+                    "version": ""
+                },
+                {
+                    "code": "es",
+                    "lang": "Spanish",
+                    "version": ""
+                },
+                {
+                    "code": "sv",
+                    "lang": "Swedish",
+                    "version": "WIP"
+                }
+            ],
+            "dateOfPublication": ""
         },
         {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/48 de la feuille complète."
+            "@id": "http://rdaregistry.info/termList/bookFormat/1004",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/853",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "12mo",
+                "fr": "12&#186;",
+                "de": "12o",
+                "es": "12vo",
+                "zh": "12开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/12 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/12 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/12 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/12 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/12组成。"
+            },
+            "altLabel": {
+                "en": [
+                    "duodecimo",
+                    "twelvemo"
+                ],
+                "fr": "in-douze",
+                "de": "Duodezimo",
+                "es": "doceavo",
+                "zh": "十二开"
+            },
+            "ToolkitLabel": {
+                "en": "12mo",
+                "fr": "12&#186;",
+                "de": "12o",
+                "es": "12vo",
+                "zh": "12开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/12 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/12 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/12 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/12 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/12组成。"
+            }
         },
         {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/48 des ganzen Bogens ist/sind."
+            "@id": "http://rdaregistry.info/termList/bookFormat/1005",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/854",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "16mo",
+                "fr": "16&#186;",
+                "de": "16o",
+                "es": "16vo",
+                "zh": "16开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/16 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/16 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/16 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/16 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/16组成。"
+            },
+            "altLabel": {
+                "en": [
+                    "decimo-sexto",
+                    "sexto-decimo",
+                    "sixteenmo"
+                ],
+                "fr": "in-seize",
+                "de": "Sedezimo",
+                "es": "dieciseisavo",
+                "zh": "十六开"
+            },
+            "ToolkitLabel": {
+                "en": "16mo",
+                "fr": "16&#186;",
+                "de": "16o",
+                "es": "16vo",
+                "zh": "16开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/16 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/16 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/16 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/16 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/16组成。"
+            }
         },
         {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/48 of the whole sheet."
+            "@id": "http://rdaregistry.info/termList/bookFormat/1006",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/855",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "24mo",
+                "fr": "24&#186;",
+                "de": "24o",
+                "es": "24vo",
+                "zh": "24开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/24 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/24 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/24 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/24 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/24组成。"
+            },
+            "altLabel": {
+                "en": [
+                    "vigesimo-quarto",
+                    "twenty-fourmo",
+                    "vicesimo-­quarto"
+                ],
+                "fr": "in-vingt-quatre",
+                "de": "Vigesimoquarto",
+                "es": "veinticuatroavo",
+                "zh": "二十四开"
+            },
+            "ToolkitLabel": {
+                "en": "24mo",
+                "fr": "24&#186;",
+                "de": "24o",
+                "es": "24vo",
+                "zh": "24开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/24 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/24 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/24 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/24 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/24组成。"
+            }
         },
         {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/48 del folio completo."
+            "@id": "http://rdaregistry.info/termList/bookFormat/1007",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/856",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "32mo",
+                "fr": "32&#186;",
+                "de": "32o",
+                "es": "32vo",
+                "zh": "32开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/32 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/32 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/32 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/32 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/32组成。"
+            },
+            "altLabel": {
+                "en": [
+                    "trigesimo-secundo",
+                    "thirty-twomo",
+                    "tricesimo‐secundo"
+                ],
+                "fr": "in-trente-deux",
+                "de": "Trigesimo-segundo",
+                "es": "treintaidosavo",
+                "zh": "三十二开"
+            },
+            "ToolkitLabel": {
+                "en": "32mo",
+                "fr": "32&#186;",
+                "de": "32o",
+                "es": "32vo",
+                "zh": "32开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/32 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/32 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/32 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/32 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/32组成。"
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/bookFormat/1008",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/857",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "48mo",
+                "fr": "48&#186;",
+                "de": "48o",
+                "es": "48vo",
+                "zh": "48开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/48 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/48 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/48 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/48 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/48组成。"
+            },
+            "altLabel": {
+                "en": "forty-eightmo",
+                "fr": "in-quarante-huit",
+                "de": "Quadragesimo-octavo",
+                "es": "cuarentiochoavo",
+                "zh": "四十八开"
+            },
+            "ToolkitLabel": {
+                "en": "48mo",
+                "fr": "48&#186;",
+                "de": "48o",
+                "es": "48vo",
+                "zh": "48开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/48 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/48 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/48 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/48 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/48组成。"
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/bookFormat/1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/851",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "4to",
+                "fr": "4&#186;",
+                "de": "4o",
+                "es": "4to",
+                "zh": "4开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/4 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/4 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/4 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/4 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/4组成。"
+            },
+            "altLabel": {
+                "en": "quarto",
+                "fr": "in-quarto",
+                "de": "Quarto",
+                "es": "cuarto",
+                "zh": "四开"
+            },
+            "ToolkitLabel": {
+                "en": "4to",
+                "fr": "4&#186;",
+                "de": "4o",
+                "es": "4to",
+                "zh": "4开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/4 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/4 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/4 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/4 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/4组成。"
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/bookFormat/1009",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/858",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "64mo",
+                "fr": "64&#186;",
+                "de": "64o",
+                "es": "64vo",
+                "zh": "64开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/64 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/64 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/64 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/64 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/64组成。"
+            },
+            "altLabel": {
+                "en": "sixty-fourmo",
+                "fr": "in-soixante-quatre",
+                "de": "Sexagesimo-quarto",
+                "es": "sesentaicuatroavo",
+                "zh": "六十四开"
+            },
+            "ToolkitLabel": {
+                "en": "64mo",
+                "fr": "64&#186;",
+                "de": "64o",
+                "es": "64vo",
+                "zh": "64开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/64 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/64 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/64 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/64 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/64组成。"
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/bookFormat/1003",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/852",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "8vo",
+                "fr": "8&#186;",
+                "de": "8o",
+                "es": "8vo",
+                "zh": "8开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/8 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/8 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/8 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/8 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/8组成。"
+            },
+            "altLabel": {
+                "en": "octavo",
+                "fr": "in-octavo",
+                "de": "Octavo",
+                "es": "octavo",
+                "zh": "八开"
+            },
+            "ToolkitLabel": {
+                "en": "8vo",
+                "fr": "8&#186;",
+                "de": "8o",
+                "es": "8vo",
+                "zh": "8开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/8 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/8 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/8 des ganzen Bogens ist/sind.",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/8 del folio completo.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/8组成。"
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/bookFormat/1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/850",
+            "inScheme": "http://rdaregistry.info/termList/bookFormat",
+            "status": "Published",
+            "prefLabel": {
+                "en": "folio",
+                "fr": "2&#186;",
+                "es": "folio",
+                "de": "Folio",
+                "zh": "对开"
+            },
+            "definition": {
+                "en": "A book format consisting of one or more leaves that are 1/2 of the whole sheet.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/2 des ganzen Bogens ist/sind.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/2 de la feuille complète.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/2组成。",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/2 del folio completo."
+            },
+            "altLabel": {
+                "fr": "in-folio",
+                "en": "2o",
+                "zh": "对开"
+            },
+            "ToolkitLabel": {
+                "en": "folio",
+                "fr": "2&#186;",
+                "de": "Folio",
+                "es": "folio",
+                "zh": "对开"
+            },
+            "ToolkitDefinition": {
+                "en": "A book format consisting of one or more leaves that are 1/2 of the whole sheet.",
+                "fr": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/2 de la feuille complète.",
+                "de": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/2 des ganzen Bogens ist/sind.",
+                "zh": "图书的一种开本，由一叶或多叶全张纸的1/2组成。",
+                "es": "Un formato de libro que consiste en una o más hojas que son 1/2 del folio completo."
+            }
         }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "fr",
-          "@value": "48º"
-        },
-        {
-          "@language": "en",
-          "@value": "48mo"
-        },
-        {
-          "@language": "zh",
-          "@value": "48开"
-        },
-        {
-          "@language": "es",
-          "@value": "48vo"
-        },
-        {
-          "@language": "de",
-          "@value": "48o"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/857"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "forty-eightmo"
-        },
-        {
-          "@language": "de",
-          "@value": "Quadragesimo-octavo"
-        },
-        {
-          "@language": "es",
-          "@value": "cuarentiochoavo"
-        },
-        {
-          "@language": "zh",
-          "@value": "四十八开"
-        },
-        {
-          "@language": "fr",
-          "@value": "in-quarante-huit"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/48 of the whole sheet."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/48 de la feuille complète."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/48 del folio completo."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/48 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/48组成。"
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "de",
-          "@value": "48o"
-        },
-        {
-          "@language": "en",
-          "@value": "48mo"
-        },
-        {
-          "@language": "es",
-          "@value": "48vo"
-        },
-        {
-          "@language": "zh",
-          "@value": "48开"
-        },
-        {
-          "@language": "fr",
-          "@value": "48º"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1009",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/64 del folio completo."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/64 of the whole sheet."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/64 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/64 de la feuille complète."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/64组成。"
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "fr",
-          "@value": "64º"
-        },
-        {
-          "@language": "zh",
-          "@value": "64开"
-        },
-        {
-          "@language": "de",
-          "@value": "64o"
-        },
-        {
-          "@language": "es",
-          "@value": "64vo"
-        },
-        {
-          "@language": "en",
-          "@value": "64mo"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/858"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "sixty-fourmo"
-        },
-        {
-          "@language": "zh",
-          "@value": "六十四开"
-        },
-        {
-          "@language": "fr",
-          "@value": "in-soixante-quatre"
-        },
-        {
-          "@language": "es",
-          "@value": "sesentaicuatroavo"
-        },
-        {
-          "@language": "de",
-          "@value": "Sexagesimo-quarto"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/64 of the whole sheet."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/64组成。"
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/64 del folio completo."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/64 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/64 de la feuille complète."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "64mo"
-        },
-        {
-          "@language": "es",
-          "@value": "64vo"
-        },
-        {
-          "@language": "fr",
-          "@value": "64º"
-        },
-        {
-          "@language": "de",
-          "@value": "64o"
-        },
-        {
-          "@language": "zh",
-          "@value": "64开"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1004",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/12组成。"
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/12 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/12 del folio completo."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/12 de la feuille complète."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/12 of the whole sheet."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "es",
-          "@value": "12vo"
-        },
-        {
-          "@language": "fr",
-          "@value": "12º"
-        },
-        {
-          "@language": "en",
-          "@value": "12mo"
-        },
-        {
-          "@language": "de",
-          "@value": "12o"
-        },
-        {
-          "@language": "zh",
-          "@value": "12开"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/853"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "fr",
-          "@value": "in-douze"
-        },
-        {
-          "@language": "en",
-          "@value": "duodecimo"
-        },
-        {
-          "@language": "en",
-          "@value": "twelvemo"
-        },
-        {
-          "@language": "zh",
-          "@value": "十二开"
-        },
-        {
-          "@language": "es",
-          "@value": "doceavo"
-        },
-        {
-          "@language": "de",
-          "@value": "Duodezimo"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/12 del folio completo."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/12 of the whole sheet."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/12 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/12组成。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/12 de la feuille complète."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "12mo"
-        },
-        {
-          "@language": "zh",
-          "@value": "12开"
-        },
-        {
-          "@language": "de",
-          "@value": "12o"
-        },
-        {
-          "@language": "es",
-          "@value": "12vo"
-        },
-        {
-          "@language": "fr",
-          "@value": "12º"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1005",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/16 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/16 of the whole sheet."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/16组成。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/16 de la feuille complète."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/16 del folio completo."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "de",
-          "@value": "16o"
-        },
-        {
-          "@language": "en",
-          "@value": "16mo"
-        },
-        {
-          "@language": "es",
-          "@value": "16vo"
-        },
-        {
-          "@language": "zh",
-          "@value": "16开"
-        },
-        {
-          "@language": "fr",
-          "@value": "16º"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/854"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "sexto-decimo"
-        },
-        {
-          "@language": "es",
-          "@value": "dieciseisavo"
-        },
-        {
-          "@language": "en",
-          "@value": "decimo-sexto"
-        },
-        {
-          "@language": "zh",
-          "@value": "十六开"
-        },
-        {
-          "@language": "de",
-          "@value": "Sedezimo"
-        },
-        {
-          "@language": "en",
-          "@value": "sixteenmo"
-        },
-        {
-          "@language": "fr",
-          "@value": "in-seize"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/16 del folio completo."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/16组成。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/16 de la feuille complète."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/16 of the whole sheet."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/16 des ganzen Bogens ist/sind."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "16mo"
-        },
-        {
-          "@language": "fr",
-          "@value": "16º"
-        },
-        {
-          "@language": "zh",
-          "@value": "16开"
-        },
-        {
-          "@language": "es",
-          "@value": "16vo"
-        },
-        {
-          "@language": "de",
-          "@value": "16o"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1006",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/24 del folio completo."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/24 de la feuille complète."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/24 of the whole sheet."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/24 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/24组成。"
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "en",
-          "@value": "24mo"
-        },
-        {
-          "@language": "de",
-          "@value": "24o"
-        },
-        {
-          "@language": "zh",
-          "@value": "24开"
-        },
-        {
-          "@language": "fr",
-          "@value": "24º"
-        },
-        {
-          "@language": "es",
-          "@value": "24vo"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/855"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "vicesimo-­quarto"
-        },
-        {
-          "@language": "en",
-          "@value": "vigesimo-quarto"
-        },
-        {
-          "@language": "zh",
-          "@value": "二十四开"
-        },
-        {
-          "@language": "de",
-          "@value": "Vigesimoquarto"
-        },
-        {
-          "@language": "fr",
-          "@value": "in-vingt-quatre"
-        },
-        {
-          "@language": "es",
-          "@value": "veinticuatroavo"
-        },
-        {
-          "@language": "en",
-          "@value": "twenty-fourmo"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/24组成。"
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/24 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/24 of the whole sheet."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/24 del folio completo."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/24 de la feuille complète."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "24mo"
-        },
-        {
-          "@language": "fr",
-          "@value": "24º"
-        },
-        {
-          "@language": "zh",
-          "@value": "24开"
-        },
-        {
-          "@language": "es",
-          "@value": "24vo"
-        },
-        {
-          "@language": "de",
-          "@value": "24o"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1007",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/32组成。"
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/32 del folio completo."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/32 de la feuille complète."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/32 of the whole sheet."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/32 des ganzen Bogens ist/sind."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "es",
-          "@value": "32vo"
-        },
-        {
-          "@language": "zh",
-          "@value": "32开"
-        },
-        {
-          "@language": "en",
-          "@value": "32mo"
-        },
-        {
-          "@language": "fr",
-          "@value": "32º"
-        },
-        {
-          "@language": "de",
-          "@value": "32o"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/856"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "thirty-twomo"
-        },
-        {
-          "@language": "fr",
-          "@value": "in-trente-deux"
-        },
-        {
-          "@language": "es",
-          "@value": "treintaidosavo"
-        },
-        {
-          "@language": "en",
-          "@value": "trigesimo-secundo"
-        },
-        {
-          "@language": "en",
-          "@value": "tricesimo‐secundo"
-        },
-        {
-          "@language": "zh",
-          "@value": "三十二开"
-        },
-        {
-          "@language": "de",
-          "@value": "Trigesimo-segundo"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/32 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/32 del folio completo."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/32 of the whole sheet."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/32组成。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/32 de la feuille complète."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "zh",
-          "@value": "32开"
-        },
-        {
-          "@language": "fr",
-          "@value": "32º"
-        },
-        {
-          "@language": "en",
-          "@value": "32mo"
-        },
-        {
-          "@language": "de",
-          "@value": "32o"
-        },
-        {
-          "@language": "es",
-          "@value": "32vo"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1001",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/2 del folio completo."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/2 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/2 of the whole sheet."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/2组成。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/2 de la feuille complète."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "de",
-          "@value": "Folio"
-        },
-        {
-          "@language": "fr",
-          "@value": "2º"
-        },
-        {
-          "@language": "es",
-          "@value": "folio"
-        },
-        {
-          "@language": "zh",
-          "@value": "对开"
-        },
-        {
-          "@language": "en",
-          "@value": "folio"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/850"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "2o"
-        },
-        {
-          "@language": "zh",
-          "@value": "对开"
-        },
-        {
-          "@language": "fr",
-          "@value": "in-folio"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/2 of the whole sheet."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/2 de la feuille complète."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/2组成。"
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/2 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/2 del folio completo."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "de",
-          "@value": "Folio"
-        },
-        {
-          "@language": "zh",
-          "@value": "对开"
-        },
-        {
-          "@language": "es",
-          "@value": "folio"
-        },
-        {
-          "@language": "en",
-          "@value": "folio"
-        },
-        {
-          "@language": "fr",
-          "@value": "2º"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1002",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/4 of the whole sheet."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/4 de la feuille complète."
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/4 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/4组成。"
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/4 del folio completo."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "es",
-          "@value": "4to"
-        },
-        {
-          "@language": "de",
-          "@value": "4o"
-        },
-        {
-          "@language": "fr",
-          "@value": "4º"
-        },
-        {
-          "@language": "zh",
-          "@value": "4开"
-        },
-        {
-          "@language": "en",
-          "@value": "4to"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/851"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "en",
-          "@value": "quarto"
-        },
-        {
-          "@language": "de",
-          "@value": "Quarto"
-        },
-        {
-          "@language": "fr",
-          "@value": "in-quarto"
-        },
-        {
-          "@language": "zh",
-          "@value": "四开"
-        },
-        {
-          "@language": "es",
-          "@value": "cuarto"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/4 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/4组成。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/4 de la feuille complète."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/4 del folio completo."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/4 of the whole sheet."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "4to"
-        },
-        {
-          "@language": "fr",
-          "@value": "4º"
-        },
-        {
-          "@language": "zh",
-          "@value": "4开"
-        },
-        {
-          "@language": "es",
-          "@value": "4to"
-        },
-        {
-          "@language": "de",
-          "@value": "4o"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/bookFormat/1003",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/8组成。"
-        },
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/8 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/8 de la feuille complète."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/8 del folio completo."
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/8 of the whole sheet."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "es",
-          "@value": "8vo"
-        },
-        {
-          "@language": "fr",
-          "@value": "8º"
-        },
-        {
-          "@language": "zh",
-          "@value": "8开"
-        },
-        {
-          "@language": "en",
-          "@value": "8vo"
-        },
-        {
-          "@language": "de",
-          "@value": "8o"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/852"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:altLabel": [
-        {
-          "@language": "de",
-          "@value": "Octavo"
-        },
-        {
-          "@language": "en",
-          "@value": "octavo"
-        },
-        {
-          "@language": "es",
-          "@value": "octavo"
-        },
-        {
-          "@language": "fr",
-          "@value": "in-octavo"
-        },
-        {
-          "@language": "zh",
-          "@value": "八开"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@language": "de",
-          "@value": "Ein Buchformat, das aus einem oder mehreren Blättern besteht, das/die 1/8 des ganzen Bogens ist/sind."
-        },
-        {
-          "@language": "zh",
-          "@value": "图书的一种开本，由一叶或多叶全张纸的1/8组成。"
-        },
-        {
-          "@language": "en",
-          "@value": "A book format consisting of one or more leaves that are 1/8 of the whole sheet."
-        },
-        {
-          "@language": "fr",
-          "@value": "Format de livre constitué d’un ou plusieurs feuillets formant chacun 1/8 de la feuille complète."
-        },
-        {
-          "@language": "es",
-          "@value": "Un formato de libro que consiste en una o más hojas que son 1/8 del folio completo."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/bookFormat"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "de",
-          "@value": "8o"
-        },
-        {
-          "@language": "en",
-          "@value": "8vo"
-        },
-        {
-          "@language": "fr",
-          "@value": "8º"
-        },
-        {
-          "@language": "zh",
-          "@value": "8开"
-        },
-        {
-          "@language": "es",
-          "@value": "8vo"
-        }
-      ]
-    }
-  ]
+    ]
 }

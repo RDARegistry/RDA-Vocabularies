@@ -1,535 +1,252 @@
 {
-  "@context": {
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/regap/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1001",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
         {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource von weniger als 16×."
+            "@id": "http://rdaregistry.info/termList/RDAReductionRatio",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "RDA Reduction Ratio Designation"
+            },
+            "description": {
+                "en": "A general designation of the size of a micro-image in relation to the original from which it was produced."
+            },
+            "token": "RDAReductionRatio",
+            "prefix": "rdarr",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/39",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/39.html",
+            "documentation": "http://www.rdaregistry.info/termList/RDAReductionRatio/",
+            "tags": {
+                "en": [
+                    "Libraries",
+                    "Information Services"
+                ]
+            },
+            "count": 5,
+            "languages": [
+                {
+                    "code": "ar",
+                    "lang": "Arabic",
+                    "version": "WIP"
+                },
+                {
+                    "code": "zh",
+                    "lang": "Chinese",
+                    "version": ""
+                },
+                {
+                    "code": "nl",
+                    "lang": "Dutch",
+                    "version": "WIP"
+                },
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                },
+                {
+                    "code": "fr",
+                    "lang": "French",
+                    "version": ""
+                },
+                {
+                    "code": "de",
+                    "lang": "German",
+                    "version": ""
+                },
+                {
+                    "code": "es",
+                    "lang": "Spanish",
+                    "version": ""
+                },
+                {
+                    "code": "sv",
+                    "lang": "Swedish",
+                    "version": "WIP"
+                }
+            ],
+            "dateOfPublication": ""
         },
         {
-          "@language": "es",
-          "@value": "Escala de reducción menor que 16× para un recurso en microforma."
+            "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1003",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/488",
+            "inScheme": "http://rdaregistry.info/termList/RDAReductionRatio",
+            "status": "Published",
+            "prefLabel": {
+                "en": "high reduction",
+                "de": "starke Verkleinerung",
+                "fr": "haute réduction",
+                "es": "reducción alta",
+                "zh": "高缩率"
+            },
+            "definition": {
+                "en": "A reduction ratio designation for between 31× and 60× for a microform resource.",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 31× und 60×.",
+                "fr": "Facteur de réduction entre 31× et 60× pour une ressource sur microforme.",
+                "zh": "对于缩微资源的压缩比率在31-60倍之间。",
+                "es": "Escala de reducción entre 31&times; y 60&times; para un recurso en microforma."
+            },
+            "ToolkitLabel": {
+                "en": "high reduction",
+                "fr": "haute réduction",
+                "es": "reducción alta",
+                "zh": "高缩率",
+                "de": "starke Verkleinerung"
+            },
+            "ToolkitDefinition": {
+                "en": "A reduction ratio designation for between 31× and 60× for a microform resource.",
+                "fr": "Facteur de réduction entre 31× et 60× pour une ressource sur microforme.",
+                "zh": "对于缩微资源的压缩比率在31-60倍之间。",
+                "es": "Escala de reducción entre 31&times; y 60&times; para un recurso en microforma.",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 31× und 60×."
+            }
         },
         {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率小于16倍。"
+            "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/486",
+            "inScheme": "http://rdaregistry.info/termList/RDAReductionRatio",
+            "status": "Published",
+            "prefLabel": {
+                "en": "low reduction",
+                "de": "geringe Verkleinerung",
+                "fr": "basse réduction",
+                "es": [
+                    "reducción baja",
+                    "Escala de reducción menor que 16&times; para un recurso en microforma."
+                ],
+                "zh": "低缩率"
+            },
+            "definition": {
+                "en": "A reduction ratio designation for less than 16× for a microform resource.",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource von weniger als 16×.",
+                "fr": "Facteur de réduction inférieur à 16× pour une ressource sur microforme.",
+                "es": "Escala de reducción menor que 16× para un recurso en microforma.",
+                "zh": "对于缩微资源的压缩比率小于16倍。"
+            },
+            "ToolkitLabel": {
+                "en": "low reduction",
+                "fr": "basse réduction",
+                "es": "reducción baja",
+                "zh": "低缩率",
+                "de": "geringe Verkleinerung"
+            },
+            "ToolkitDefinition": {
+                "en": "A reduction ratio designation for less than 16× for a microform resource.",
+                "fr": "Facteur de réduction inférieur à 16× pour une ressource sur microforme.",
+                "zh": "对于缩微资源的压缩比率小于16倍。",
+                "es": "Escala de reducción menor que 16× para un recurso en microforma.",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource von weniger als 16×."
+            }
         },
         {
-          "@language": "en",
-          "@value": "A reduction ratio less than 16× for a microform resource."
+            "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/487",
+            "inScheme": "http://rdaregistry.info/termList/RDAReductionRatio",
+            "status": "Published",
+            "prefLabel": {
+                "en": "normal reduction",
+                "de": "normale Verkleinerung",
+                "fr": "réduction normale",
+                "es": "reducción normal",
+                "zh": "正常缩率"
+            },
+            "definition": {
+                "en": "A reduction ratio designation for between 16× and 30× for a microform resource.",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 16× und 30×.",
+                "fr": "Facteur de réduction entre 16× et 30× pour une ressource sur microforme.",
+                "es": "Escala de reducción entre 16&times; y 30&times; para un recurso en microforma.",
+                "zh": "对于缩微资源的压缩比率在16-30倍之间。"
+            },
+            "ToolkitLabel": {
+                "en": "normal reduction",
+                "fr": "réduction normale",
+                "es": "reducción normal",
+                "zh": "正常缩率",
+                "de": "normale Verkleinerung"
+            },
+            "ToolkitDefinition": {
+                "en": "A reduction ratio designation for between 16× and 30× for a microform resource.",
+                "fr": "Facteur de réduction entre 16× et 30× pour une ressource sur microforme.",
+                "es": "Escala de reducción entre 16&times; y 30&times; para un recurso en microforma.",
+                "zh": "对于缩微资源的压缩比率在16-30倍之间。",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 16× und 30×."
+            }
         },
         {
-          "@language": "fr",
-          "@value": "Facteur de réduction inférieur à 16× pour une ressource sur microforme."
+            "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1005",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/490",
+            "inScheme": "http://rdaregistry.info/termList/RDAReductionRatio",
+            "status": "Published",
+            "prefLabel": {
+                "en": "ultra high reduction",
+                "de": "maximal starke Verkleinerung",
+                "fr": "réduction ultra-haute",
+                "es": "reducción ultra alta",
+                "zh": "超高缩率"
+            },
+            "definition": {
+                "en": "A reduction ratio designation for over 90× for a microform resource.",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource von über 90×.",
+                "fr": "Facteur de réduction supérieur à 90× pour une ressource sur microforme.",
+                "zh": "对于缩微资源的压缩比率大于90倍。",
+                "es": "Escala de reducción mayor a 90&times; para un recurso en microforma."
+            },
+            "ToolkitLabel": {
+                "en": "ultra high reduction",
+                "fr": "réduction ultra-haute",
+                "es": "reducción ultra alta",
+                "zh": "超高缩率",
+                "de": "maximal starke Verkleinerung"
+            },
+            "ToolkitDefinition": {
+                "en": "A reduction ratio designation for over 90× for a microform resource.",
+                "fr": "Facteur de réduction supérieur à 90× pour une ressource sur microforme.",
+                "zh": "对于缩微资源的压缩比率大于90倍。",
+                "es": "Escala de reducción mayor a 90&times; para un recurso en microforma.",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource von über 90×."
+            }
+        },
+        {
+            "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1004",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/489",
+            "inScheme": "http://rdaregistry.info/termList/RDAReductionRatio",
+            "status": "Published",
+            "prefLabel": {
+                "en": "very high reduction",
+                "de": "sehr starke Verkleinerung",
+                "fr": "très haute réduction",
+                "es": "reducción muy alta",
+                "zh": "极高缩率"
+            },
+            "definition": {
+                "en": "A reduction ratio designation for between 61× and 90× for a microform resource.",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 61× und 90×.",
+                "fr": "Facteur de réduction entre 61× et 90× pour une ressource sur microforme.",
+                "es": "Escala de reducción entre 61&times; y 90&times; para un recurso en microforma.",
+                "zh": "对于缩微资源的压缩比率在61-90倍之间。"
+            },
+            "ToolkitLabel": {
+                "en": "very high reduction",
+                "fr": "très haute réduction",
+                "es": "reducción muy alta",
+                "zh": "极高缩率",
+                "de": "sehr starke Verkleinerung"
+            },
+            "ToolkitDefinition": {
+                "en": "A reduction ratio designation for between 61× and 90× for a microform resource.",
+                "fr": "Facteur de réduction entre 61× et 90× pour une ressource sur microforme.",
+                "es": "Escala de reducción entre 61&times; y 90&times; para un recurso en microforma.",
+                "zh": "对于缩微资源的压缩比率在61-90倍之间。",
+                "de": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 61× und 90×."
+            }
         }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "fr",
-          "@value": "basse réduction"
-        },
-        {
-          "@language": "en",
-          "@value": "low reduction"
-        },
-        {
-          "@language": "de",
-          "@value": "geringe Verkleinerung"
-        },
-        {
-          "@language": "zh",
-          "@value": "低缩率"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción baja"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/486"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource von weniger als 16×."
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio less than 16× for a microform resource."
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción menor que 16× para un recurso en microforma."
-        },
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction inférieur à 16× pour une ressource sur microforme."
-        },
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率小于16倍。"
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "low reduction"
-        },
-        {
-          "@language": "de",
-          "@value": "geringe Verkleinerung"
-        },
-        {
-          "@language": "fr",
-          "@value": "basse réduction"
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción menor que 16× para un recurso en microforma."
-        },
-        {
-          "@language": "zh",
-          "@value": "低缩率"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción baja"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1002",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 16× und 30×."
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción entre 16× y 30× para un recurso en microforma."
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio between 16× and 30× for a microform resource."
-        },
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率在16-30倍之间。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction entre 16× et 30× pour une ressource sur microforme."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "en",
-          "@value": "normal reduction"
-        },
-        {
-          "@language": "fr",
-          "@value": "réduction normale"
-        },
-        {
-          "@language": "de",
-          "@value": "normale Verkleinerung"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción normal"
-        },
-        {
-          "@language": "zh",
-          "@value": "正常缩率"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/487"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction entre 16× et 30× pour une ressource sur microforme."
-        },
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 16× und 30×."
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción entre 16× y 30× para un recurso en microforma."
-        },
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率在16-30倍之间。"
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio between 16× and 30× for a microform resource."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "fr",
-          "@value": "réduction normale"
-        },
-        {
-          "@language": "en",
-          "@value": "normal reduction"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción normal"
-        },
-        {
-          "@language": "zh",
-          "@value": "正常缩率"
-        },
-        {
-          "@language": "de",
-          "@value": "normale Verkleinerung"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1003",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率在31-60倍之间。"
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio between 31× and 60× for a microform resource."
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción entre 31× y 60× para un recurso en microforma."
-        },
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 31× und 60×."
-        },
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction entre 31× et 60× pour une ressource sur microforme."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "de",
-          "@value": "starke Verkleinerung"
-        },
-        {
-          "@language": "zh",
-          "@value": "高缩率"
-        },
-        {
-          "@language": "fr",
-          "@value": "haute réduction"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción alta"
-        },
-        {
-          "@language": "en",
-          "@value": "high reduction"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/488"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "es",
-          "@value": "Escala de reducción entre 31× y 60× para un recurso en microforma."
-        },
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 31× und 60×."
-        },
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction entre 31× et 60× pour une ressource sur microforme."
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio between 31× and 60× for a microform resource."
-        },
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率在31-60倍之间。"
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "es",
-          "@value": "reducción alta"
-        },
-        {
-          "@language": "fr",
-          "@value": "haute réduction"
-        },
-        {
-          "@language": "zh",
-          "@value": "高缩率"
-        },
-        {
-          "@language": "de",
-          "@value": "starke Verkleinerung"
-        },
-        {
-          "@language": "en",
-          "@value": "high reduction"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1004",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 61× und 90×."
-        },
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction entre 61× et 90× pour une ressource sur microforme."
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio between 61× and 90× for a microform resource."
-        },
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率在61-90倍之间。"
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción entre 61× y 90× para un recurso en microforma."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "es",
-          "@value": "reducción muy alta"
-        },
-        {
-          "@language": "fr",
-          "@value": "très haute réduction"
-        },
-        {
-          "@language": "en",
-          "@value": "very high reduction"
-        },
-        {
-          "@language": "zh",
-          "@value": "极高缩率"
-        },
-        {
-          "@language": "de",
-          "@value": "sehr starke Verkleinerung"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/489"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction entre 61× et 90× pour une ressource sur microforme."
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio between 61× and 90× for a microform resource."
-        },
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率在61-90倍之间。"
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción entre 61× y 90× para un recurso en microforma."
-        },
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource zwischen 61× und 90×."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "fr",
-          "@value": "très haute réduction"
-        },
-        {
-          "@language": "en",
-          "@value": "very high reduction"
-        },
-        {
-          "@language": "de",
-          "@value": "sehr starke Verkleinerung"
-        },
-        {
-          "@language": "zh",
-          "@value": "极高缩率"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción muy alta"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio/1005",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "en",
-          "@value": "A reduction ratio over 90× for a microform resource."
-        },
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource von über 90×."
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción mayor a 90× para un recurso en microforma."
-        },
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率大于90倍。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction supérieur à 90× pour une ressource sur microforme."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "es",
-          "@value": "reducción ultra alta"
-        },
-        {
-          "@language": "en",
-          "@value": "ultra high reduction"
-        },
-        {
-          "@language": "fr",
-          "@value": "réduction ultra-haute"
-        },
-        {
-          "@language": "zh",
-          "@value": "超高缩率"
-        },
-        {
-          "@language": "de",
-          "@value": "maximal starke Verkleinerung"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/490"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "zh",
-          "@value": "对于缩微资源的压缩比率大于90倍。"
-        },
-        {
-          "@language": "fr",
-          "@value": "Facteur de réduction supérieur à 90× pour une ressource sur microforme."
-        },
-        {
-          "@language": "en",
-          "@value": "A reduction ratio over 90× for a microform resource."
-        },
-        {
-          "@language": "es",
-          "@value": "Escala de reducción mayor a 90× para un recurso en microforma."
-        },
-        {
-          "@language": "de",
-          "@value": "Eine Verkleinerungsrate einer Mikroform-Ressource von über 90×."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/RDAReductionRatio"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "fr",
-          "@value": "réduction ultra-haute"
-        },
-        {
-          "@language": "en",
-          "@value": "ultra high reduction"
-        },
-        {
-          "@language": "de",
-          "@value": "maximal starke Verkleinerung"
-        },
-        {
-          "@language": "zh",
-          "@value": "超高缩率"
-        },
-        {
-          "@language": "es",
-          "@value": "reducción ultra alta"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/RDAReductionRatio",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "RDA Reduction Ratio"
-    }
-  ]
+    ]
 }

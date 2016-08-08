@@ -1,305 +1,173 @@
 {
-  "@context": {
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "reg": "http://metadataregistry.org/uri/profile/regap/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "http://rdaregistry.info/termList/statIdentification/",
-      "@type": "skos:ConceptScheme",
-      "dc:title": "RDA Status of Identification"
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/statIdentification/1001",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
+    "@context": "http://rdaregistry.info/Contexts/concepts_langmap.jsonld",
+    "@graph": [
         {
-          "@language": "zh",
-          "@value": "当数据完成时对规范检索点的识别状态。"
+            "@id": "http://rdaregistry.info/termList/statIdentification/",
+            "@type": "ConceptScheme",
+            "title": {
+                "en": "RDA Status of Identification"
+            },
+            "description": {
+                "en": "An indication of the level of authentication of the data identifying an entity."
+            },
+            "token": "statIdentification",
+            "prefix": "rdasoi",
+            "status": {
+                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
+                "label": "Published"
+            },
+            "omr_api": "http://api.metadataregistry.org/vocabularies/89",
+            "omr_home": "http://metadataregistry.org/vocabulary/show/id/89.html",
+            "documentation": "http://www.rdaregistry.info/termList/statIdentification/",
+            "tags": {
+                "en": [
+                    "Libraries",
+                    "Information Services"
+                ]
+            },
+            "count": 3,
+            "languages": [
+                {
+                    "code": "ar",
+                    "lang": "Arabic",
+                    "version": "WIP"
+                },
+                {
+                    "code": "zh",
+                    "lang": "Chinese",
+                    "version": ""
+                },
+                {
+                    "code": "nl",
+                    "lang": "Dutch",
+                    "version": "WIP"
+                },
+                {
+                    "code": "en",
+                    "lang": "English",
+                    "version": ""
+                },
+                {
+                    "code": "fr",
+                    "lang": "French",
+                    "version": ""
+                },
+                {
+                    "code": "de",
+                    "lang": "German",
+                    "version": ""
+                },
+                {
+                    "code": "es",
+                    "lang": "Spanish",
+                    "version": ""
+                },
+                {
+                    "code": "sv",
+                    "lang": "Swedish",
+                    "version": "WIP"
+                }
+            ],
+            "dateOfPublication": ""
         },
         {
-          "@language": "en",
-          "@value": "A status of identification for an authorized access point when the data is complete."
+            "@id": "http://rdaregistry.info/termList/statIdentification/1001",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1008",
+            "inScheme": "http://rdaregistry.info/termList/statIdentification/",
+            "status": "Published",
+            "prefLabel": {
+                "en": "fully established",
+                "de": "vollständig etabliert",
+                "fr": "complètement établi",
+                "es": "establecido en forma completa",
+                "zh": "完全确立"
+            },
+            "definition": {
+                "en": "A status of identification for an authorized access point when the data is complete.",
+                "de": "Status der Identifizierung für den normierten Sucheinstieg, wenn die Daten vollständig sind.",
+                "fr": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont complètes.",
+                "zh": "当数据完成时对规范检索点的识别状态。",
+                "es": "Estado de identificación de un punto de acceso cuando los datos son suficientes para establecer completamente un punto de acceso autorizado que represente la persona, familia o entidad corporativa."
+            },
+            "ToolkitLabel": {
+                "en": "fully established",
+                "fr": "complètement établi",
+                "es": "establecido en forma completa",
+                "zh": "完全确立"
+            },
+            "ToolkitDefinition": {
+                "en": "A status of identification for an authorized access point when the data is complete.",
+                "fr": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont complètes.",
+                "zh": "当数据完成时对规范检索点的识别状态。",
+                "es": "Estado de identificación de un punto de acceso cuando los datos son suficientes para establecer completamente un punto de acceso autorizado que represente la persona, familia o entidad corporativa."
+            }
         },
         {
-          "@language": "fr",
-          "@value": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont complètes."
+            "@id": "http://rdaregistry.info/termList/statIdentification/1003",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1010",
+            "inScheme": "http://rdaregistry.info/termList/statIdentification/",
+            "status": "Published",
+            "prefLabel": {
+                "en": "preliminary",
+                "de": "vorläufig",
+                "fr": "préliminaire",
+                "es": "preliminar",
+                "zh": "初步的"
+            },
+            "definition": {
+                "en": "A status of identification for an authorized access point when the data is taken from a description without the resource described in hand.",
+                "de": "Status der Identifizierung für den normierten Sucheinstieg, wenn die Daten aus einer Beschreibung entnommen sind, ohne dass die beschriebene Ressource vorliegt.",
+                "fr": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont tirées d’une description faite sans avoir la ressource décrite en main.",
+                "es": "Estado de identificación de un punto de acceso autorizado cuando los datos se toman de la descripción de una fuente cuando el recurso mismo no está disponible.",
+                "zh": "当数据并非来源于手头资源的描述时对规范检索点的识别状态。"
+            },
+            "ToolkitLabel": {
+                "en": "preliminary",
+                "fr": "préliminaire",
+                "es": "preliminar",
+                "zh": "初步的"
+            },
+            "ToolkitDefinition": {
+                "en": "A status of identification for an authorized access point when the data is taken from a description without the resource described in hand.",
+                "fr": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont tirées d’une description faite sans avoir la ressource décrite en main.",
+                "es": "Estado de identificación de un punto de acceso autorizado cuando los datos se toman de la descripción de una fuente cuando el recurso mismo no está disponible.",
+                "zh": "当数据并非来源于手头资源的描述时对规范检索点的识别状态。"
+            }
         },
         {
-          "@language": "es",
-          "@value": "Estado de identificación de un punto de acceso cuando los datos son suficientes para establecer completamente un punto de acceso autorizado que represente la persona, familia o entidad corporativa."
+            "@id": "http://rdaregistry.info/termList/statIdentification/1002",
+            "@type": "Concept",
+            "api": "http://api.metadataregistry.org/concepts/1009",
+            "inScheme": "http://rdaregistry.info/termList/statIdentification/",
+            "status": "Published",
+            "prefLabel": {
+                "en": "provisional",
+                "de": "provisorisch",
+                "fr": "provisoire",
+                "es": "provisional",
+                "zh": "临时的"
+            },
+            "definition": {
+                "en": "A status of identification for an authorized access point when the data is insufficient to establish an authorized access point representing the entity.",
+                "de": "Status der Identifizierung für einen Sucheinstieg, wenn die Daten nicht ausreichen, um einen normierten Sucheinstieg zu etablieren, der die Entität repräsentiert.",
+                "fr": "Statut de l’identification d’un point d’accès lorsque les données sont insuffisantes pour établir un point d’accès autorisé représentant une entité.",
+                "es": "Estado de identificación de un punto de acceso cuando los datos son insuficientes para establecer completamente un punto de acceso autorizado que represente la persona, familia o entidad corporativa.",
+                "zh": "当数据不足以确立代表一个实体的规范检索点时对规范检索点的识别状态。"
+            },
+            "ToolkitLabel": {
+                "en": "provisional",
+                "fr": "provisoire",
+                "es": "provisional",
+                "zh": "临时的"
+            },
+            "ToolkitDefinition": {
+                "en": "A status of identification for an authorized access point when the data is insufficient to establish an authorized access point representing the entity.",
+                "fr": "Statut de l’identification d’un point d’accès lorsque les données sont insuffisantes pour établir un point d’accès autorisé représentant une entité.",
+                "es": "Estado de identificación de un punto de acceso cuando los datos son insuficientes para establecer completamente un punto de acceso autorizado que represente la persona, familia o entidad corporativa.",
+                "zh": "当数据不足以确立代表一个实体的规范检索点时对规范检索点的识别状态。"
+            }
         }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "en",
-          "@value": "fully established"
-        },
-        {
-          "@language": "zh",
-          "@value": "完全确立"
-        },
-        {
-          "@language": "es",
-          "@value": "establecido en forma completa"
-        },
-        {
-          "@language": "fr",
-          "@value": "complètement établi"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/1008"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "en",
-          "@value": "A status of identification for an authorized access point when the data is complete."
-        },
-        {
-          "@language": "fr",
-          "@value": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont complètes."
-        },
-        {
-          "@language": "es",
-          "@value": "Estado de identificación de un punto de acceso cuando los datos son suficientes para establecer completamente un punto de acceso autorizado que represente la persona, familia o entidad corporativa."
-        },
-        {
-          "@language": "zh",
-          "@value": "当数据完成时对规范检索点的识别状态。"
-        },
-        {
-          "@language": "de",
-          "@value": "Status der Identifizierung für den normierten Sucheinstieg, wenn die Daten vollständig sind."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/statIdentification/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "fr",
-          "@value": "complètement établi"
-        },
-        {
-          "@language": "zh",
-          "@value": "完全确立"
-        },
-        {
-          "@language": "es",
-          "@value": "establecido en forma completa"
-        },
-        {
-          "@language": "de",
-          "@value": "vollständig etabliert"
-        },
-        {
-          "@language": "en",
-          "@value": "fully established"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/statIdentification/1002",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "en",
-          "@value": "A status of identification for an authorized access point when the data is insufficient to establish an authorized access point representing the entity."
-        },
-        {
-          "@language": "fr",
-          "@value": "Statut de l’identification d’un point d’accès lorsque les données sont insuffisantes pour établir un point d’accès autorisé représentant une entité."
-        },
-        {
-          "@language": "zh",
-          "@value": "当数据不足以确立代表一个实体的规范检索点时对规范检索点的识别状态。"
-        },
-        {
-          "@language": "es",
-          "@value": "Estado de identificación de un punto de acceso cuando los datos son insuficientes para establecer completamente un punto de acceso autorizado que represente la persona, familia o entidad corporativa."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "en",
-          "@value": "provisional"
-        },
-        {
-          "@language": "zh",
-          "@value": "临时的"
-        },
-        {
-          "@language": "fr",
-          "@value": "provisoire"
-        },
-        {
-          "@language": "es",
-          "@value": "provisional"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/1009"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "zh",
-          "@value": "当数据不足以确立代表一个实体的规范检索点时对规范检索点的识别状态。"
-        },
-        {
-          "@language": "en",
-          "@value": "A status of identification for an authorized access point when the data is insufficient to establish an authorized access point representing the entity."
-        },
-        {
-          "@language": "es",
-          "@value": "Estado de identificación de un punto de acceso cuando los datos son insuficientes para establecer completamente un punto de acceso autorizado que represente la persona, familia o entidad corporativa."
-        },
-        {
-          "@language": "fr",
-          "@value": "Statut de l’identification d’un point d’accès lorsque les données sont insuffisantes pour établir un point d’accès autorisé représentant une entité."
-        },
-        {
-          "@language": "de",
-          "@value": "Status der Identifizierung für einen Sucheinstieg, wenn die Daten nicht ausreichen, um einen normierten Sucheinstieg zu etablieren, der die Entität repräsentiert."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/statIdentification/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "zh",
-          "@value": "临时的"
-        },
-        {
-          "@language": "en",
-          "@value": "provisional"
-        },
-        {
-          "@language": "fr",
-          "@value": "provisoire"
-        },
-        {
-          "@language": "de",
-          "@value": "provisorisch"
-        },
-        {
-          "@language": "es",
-          "@value": "provisional"
-        }
-      ]
-    },
-    {
-      "@id": "http://rdaregistry.info/termList/statIdentification/1003",
-      "@type": "skos:Concept",
-      "rdakit:toolkitDefinition": [
-        {
-          "@language": "zh",
-          "@value": "当数据并非来源于手头资源的描述时对规范检索点的识别状态。"
-        },
-        {
-          "@language": "en",
-          "@value": "A status of identification for an authorized access point when the data is taken from a description without the resource described in hand."
-        },
-        {
-          "@language": "fr",
-          "@value": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont tirées d’une description faite sans avoir la ressource décrite en main."
-        },
-        {
-          "@language": "es",
-          "@value": "Estado de identificación de un punto de acceso autorizado cuando los datos se toman de la descripción de una fuente cuando el recurso mismo no está disponible."
-        }
-      ],
-      "rdakit:toolkitLabel": [
-        {
-          "@language": "es",
-          "@value": "preliminar"
-        },
-        {
-          "@language": "en",
-          "@value": "preliminary"
-        },
-        {
-          "@language": "fr",
-          "@value": "préliminaire"
-        },
-        {
-          "@language": "zh",
-          "@value": "初步的"
-        }
-      ],
-      "reg:identifier": {
-        "@id": "http://metadataregistry.org/concepts/1010"
-      },
-      "reg:status": {
-        "@id": "http://metadataregistry.org/uri/RegStatus/1001"
-      },
-      "skos:definition": [
-        {
-          "@language": "zh",
-          "@value": "当数据并非来源于手头资源的描述时对规范检索点的识别状态。"
-        },
-        {
-          "@language": "es",
-          "@value": "Estado de identificación de un punto de acceso autorizado cuando los datos se toman de la descripción de una fuente cuando el recurso mismo no está disponible."
-        },
-        {
-          "@language": "en",
-          "@value": "A status of identification for an authorized access point when the data is taken from a description without the resource described in hand."
-        },
-        {
-          "@language": "de",
-          "@value": "Status der Identifizierung für den normierten Sucheinstieg, wenn die Daten aus einer Beschreibung entnommen sind, ohne dass die beschriebene Ressource vorliegt."
-        },
-        {
-          "@language": "fr",
-          "@value": "Statut de l’identification d’un point d’accès autorisé lorsque les données sont tirées d’une description faite sans avoir la ressource décrite en main."
-        }
-      ],
-      "skos:inScheme": {
-        "@id": "http://rdaregistry.info/termList/statIdentification/"
-      },
-      "skos:prefLabel": [
-        {
-          "@language": "es",
-          "@value": "preliminar"
-        },
-        {
-          "@language": "en",
-          "@value": "preliminary"
-        },
-        {
-          "@language": "fr",
-          "@value": "préliminaire"
-        },
-        {
-          "@language": "zh",
-          "@value": "初步的"
-        },
-        {
-          "@language": "de",
-          "@value": "vorläufig"
-        }
-      ]
-    },
-    {
-      "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-      "@type": "skos:Concept",
-      "skos:prefLabel": {
-        "@language": "en",
-        "@value": "Published"
-      }
-    }
-  ]
+    ]
 }
