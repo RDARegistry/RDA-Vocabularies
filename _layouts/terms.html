@@ -13,7 +13,7 @@ layout: default
 {% assign pageDescription = concept.description.en %}
 {% assign regID = concept.api | split: "/" | last %}
 {% assign pageRDF = concept['@id'] %}
-{% capture namespace %}{{pageRDF}}/{% endcapture %}
+{% capture namespace %}{{pageRDF}}{% endcapture %}
 {% if page.datatable == true %}
 <script type="text/javascript">
     var dataSource = "/data/terms/{{lexical}}.json";
@@ -103,8 +103,11 @@ layout: default
                     <li><a title="Work In Progress" aria-disabled="true" disabled="disabled" class="not-active">{{lang.lang}}</a></li>
                     {% else %}
                     <li><a id="lang_{{lang.code}}" href="{{ page.url }}?language={{lang.code}}"
-                           title="English Source Version: {{lang.source}}
-Current {{lang.lang}} Version: {{lang.version}}">{{lang.lang}}</a>
+                           {% if lang.source %}title="English Source Version: {{lang.source}}
+Current {{lang.lang}} Version: {{lang.version}}" {% endif %}
+                    >{{lang.lang}}
+
+                    </a>
                     </li>
                     {% endif %}
                     {% endfor %}
