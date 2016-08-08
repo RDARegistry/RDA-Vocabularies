@@ -41,11 +41,12 @@ function format(d) {
                         break;
                     case 'altLabel':
                     case 'prefLabel':
-                    case 'toolkitLabel':
+                    case 'ToolkitLabel':
                         rows += makeLiteral(d[property]) + ' ' + getLanguageCallout(d[property]);
                         break;
+                    case 'scopeNote':
                     case 'definition':
-                    case 'toolkitDefinition':
+                    case 'ToolkitDefinition':
                         rows += makeLiteral(d[property]) + ' ' + getLanguageCallout(d[property]);
                         break;
                     default:
@@ -141,16 +142,18 @@ function makeLiteral(data) {
     return '"' + data + '"';
 }
 
-function getLanguageCallout(data){
-if (typeof data[docLang] != "undefined") {
-            return  "@" + docLang;
+function getLanguageCallout(data) {
+    if (typeof data != "undefined") {
+        if (typeof data[docLang] != "undefined") {
+            return "@" + docLang;
         }
         if (typeof data['en'] != "undefined") {
             return "@en";
         }
-
+    }
     return "@en *";
 }
+
 function setFilter() {
 
     var initFilter = null;
