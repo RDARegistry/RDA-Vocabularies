@@ -36,8 +36,11 @@ function format(d) {
                 switch(property) {
                     case '@id':
                     case 'api':
+                    case 'broader':
+                    case 'narrower':
+                    case 'related':
                     case 'inScheme':
-                        rows +=  makeLink(d[property]);
+                        rows += makeLinkArray(d[property]);
                         break;
                     case 'altLabel':
                     case 'prefLabel':
@@ -94,8 +97,8 @@ function formatRefArray(data, classname) {
     var value = "";
     if (typeof data != "undefined") {
         if (data instanceof Array) {
-            for (i = 0; i < data.length; ++i) {
-                value += formatRef(data[i], classname)
+            for (z = 0; z < data.length; ++z) {
+                value += formatRef(data[z], classname)
             }
         }
         else {
@@ -122,6 +125,23 @@ function makeUri(uri) {
     if (typeof uri.replace === "function") {
         return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1$2/$3");
     }
+}
+
+function makeLinkArray(data) {
+    var value = "";
+    if (typeof data != "undefined") {
+        if (data.constructor === Array) {
+            for (z = 0; z < data.length; ++z) {
+                value += makeLink(data[z]) + '<br />'
+            }
+        }
+        else {
+            value = makeLink(data)
+        }
+    } else {
+        value = "undefined"
+    }
+    return value;
 }
 
 function makeLink(uri) {
