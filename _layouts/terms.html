@@ -16,7 +16,7 @@ layout: default
 {% capture namespace %}{{pageRDF}}{% endcapture %}
 {% if page.datatable == true %}
 <script type="text/javascript">
-    var dataSource = "/data/terms/{{lexical}}.json";
+    var dataSource = "/data/terms/{{lexical}}.jsonld";
     var prefix = '{{concept.prefix}}';
     var vocabNamespace = "{{namespace}}"
 </script>
@@ -86,7 +86,7 @@ layout: default
                     <li><a id="dl_rdfa" href="http://rdaregistry.info/termList/{{lexical}}.rdfa">RDFa</a></li>
                     <li><a id="dl_micro" href="http://rdaregistry.info/termList/{{lexical}}.microdata">Microdata
                         (text/microdata+html)</a></li>
-                    <li><a id="dl_jsonld" href="http://rdaregistry.info/termList/{{lexical}}.json-ld">JSON-LD
+                    <li><a id="dl_jsonld" href="http://rdaregistry.info/termList/{{lexical}}.jsonld">JSON-LD
                         (application/json | application/json+ld)</a> (see the <a
                             href="https://github.com/RDARegistry/RDA-Vocabularies/blob/master/jsonld/termList/_readme.md">Readme</a>)
                     </li>
