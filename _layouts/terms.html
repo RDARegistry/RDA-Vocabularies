@@ -11,7 +11,7 @@ layout: default
 {% endfor %}
 {% assign pageTitle = concept.title.en %}
 {% assign pageDescription = concept.description.en %}
-{% assign regID = concept.api | split: "/" | last %}
+{% assign regID = concept.omr_api | split: "/" | last %}
 {% assign pageRDF = concept['@id'] %}
 {% capture namespace %}{{pageRDF}}/{% endcapture %}
 {% if page.datatable == true %}
