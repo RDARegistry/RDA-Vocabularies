@@ -3,7 +3,7 @@
 <head>
 {% include head.html %}
 
-{% if (page, collection == 'terms') %}
+{% if page.collection == 'terms' %}
   {% assign lexical = page.id | split: "/" | last %}
   {% for org_hash in site.data.terms %}
     {% if org_hash[0] == lexical %}
