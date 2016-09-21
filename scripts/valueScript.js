@@ -73,6 +73,9 @@ function formatRef(data, classname) {
             return '<div class="' + classname + '">' + data + '</div>';
         }
     }
+    else {
+        return "";
+    }
 }
 
 function formatCanon(data) {
@@ -105,7 +108,7 @@ function formatRefArray(data, classname) {
             value = formatRef(data, classname)
         }
     } else {
-        value = "undefined"
+        value = ""
     }
     return value;
 }
@@ -139,7 +142,7 @@ function makeLinkArray(data) {
             value = makeLink(data)
         }
     } else {
-        value = "undefined"
+        value = ""
     }
     return value;
 }
@@ -151,15 +154,21 @@ function makeLink(uri) {
 }
 
 function makeLiteral(data) {
-    if (typeof data != "undefined") {
+    if (typeof data != "undefined" && data != null) {
         if (typeof data[docLang] != "undefined") {
             return '"' + data[docLang] + '"';
         }
         if (typeof data['en'] != "undefined") {
             return '"' + data['en'] + '"';
         }
+        if (data instanceof Object) { //it's only available in a language that's not English'
+        return "";
     }
     return '"' + data + '"';
+     }
+    else {
+        return "";
+    }
 }
 
 function getLanguageCallout(data) {

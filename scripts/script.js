@@ -70,6 +70,9 @@ function formatRef(data, classname) {
             return '<div class="' + classname + '">' + data + '</div>';
         }
     }
+    else {
+        return "";
+    }
 }
 
 function formatCanon(data) {
@@ -103,7 +106,7 @@ function formatRefArray(data, classname) {
             value = formatRef(data, classname)
         }
     } else {
-        value = "undefined"
+        value = ""
     }
     return value;
 }
@@ -139,8 +142,14 @@ function makeLiteral(data) {
         if (typeof data['en'] != "undefined") {
             return '"' + data['en'] + '"' + " [no '" + docLang + "']";
         }
+        if (data instanceof Object) { //it's only available in a language that's not English'
+            return "";
     }
-    return '"' + data + '"';
+        return '"' + data + '"';
+     }
+    else {
+        return "";
+    }
 }
 
 
