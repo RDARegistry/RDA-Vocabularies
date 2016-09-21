@@ -132,7 +132,7 @@ function makeLink(uri) {
 }
 
 function makeLiteral(data) {
-    if (typeof data != "undefined") {
+    if (typeof data != "undefined" && data != null) {
         if (typeof data[docLang] != "undefined") {
             return '"' + data[docLang] + '"';
         }
@@ -215,6 +215,7 @@ $(document).ready(
                     }
                 },
                 {
+                    "class": "definition",
                     "render": function (data, type, row) {
                         return formatRefArray(makeLiteral(row.description), "description");
                     }
