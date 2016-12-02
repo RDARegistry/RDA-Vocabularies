@@ -114,7 +114,6 @@
      <!-- InstanceBeginEditable name="AboutContent" -->
      <div class="row">
 	 <div class="col-md-6">
-	  <p>General information about <a href="translations.html">translations</a></p>
 	  <h3>Download files for translation</h3>
 	  <ul>
 	   <li><a href="https://beta.metadataregistry.org/vocabularies/58/exports.html" target="_blank">RDA Aspect Ratio Designation</a></li>
@@ -158,13 +157,28 @@
 	  </ul>
      </div>
      <div class="col-md-6">
+	 <p>General information about <a href="translations.html">translations</a></p>
      <h3>Export a file for translation</h3>
 	 <p>The download links to the beta-test Export tab of the OMR value vocabulary.</p>
 	 <p>Anyone can export the current data by using the OMR export facility. Import is restricted to authorized OMR accounts.</p>
 	 <ul>
 	  <li>Use the <strong>Create New Export</strong> option to export the file for translation.</li>
-	  <li>Choose the <strong>Select only in use</strong> option to select the data columns to export. Do not amend the selection of individual columns.</li>
-	  <li>Use the <strong>Advanced</strong> option:
+	  <li>Select the data columns to export.
+	  <ul>
+	   <li>Choose the <strong>Selected Columns: Select none</strong> option.</li>
+	   <li>Select the following Datatype Properties (translatable) in addition to the defaults:
+	    <ul>
+         <li>alternative label</li>
+         <li>ToolkitLabel</li>
+         <li>note</li>
+         <li>definition</li>
+         <li>ToolkitDefinition</li>
+         <li>scope note</li>
+        </ul>
+	   </li>
+	  </ul>
+	  </li>
+	  <li>Open the <strong>Advanced</strong> option:
 	  <ul>
 	   <li>Exclude Deprecated: <strong>Yes</strong> (select)</li>
 	   <li>Additional Language: <strong>Select the language of translation from the list</strong>.
@@ -182,6 +196,7 @@
 	 <h3>Translate the exported file</h3>
 	 <p>Open the csv (comma-separated variable) file exported from the OMR in a spreadsheet application that supports UTF-8 encoding, for example Google Sheets or another spreadsheet with the correct encoding setting. The spreadsheet must be able to export data in csv format.</p>
 	 <p>This is required to avoid corrupting non-Roman script and symbols, diacritics, etc.</p>
+	 <p><strong>Do not amend the data for <em>reg_id</em>, <em>uri</em>, or <em>status</em>.</strong></p>
 	 <p>Enter or update the translations in the parallel columns. Use the following content guide:</p>
 	 <dl>
 	  <dt>preferred label</dt>

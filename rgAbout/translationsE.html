@@ -114,7 +114,6 @@
      <!-- InstanceBeginEditable name="AboutContent" -->
      <div class="row">
 	 <div class="col-md-6">
-	  <p>General information about <a href="translations.html">translations</a></p>
 	  <h3>Download files for translation</h3>
 	  <ul>
 	   <li><a href="https://beta.metadataregistry.org/elementsets/81/exports.html" target="_blank">RDA Agent properties</a></li>
@@ -130,17 +129,28 @@
 	 <p>The labels and definitions in the unconstrained element set are derived from the standard RDA element sets. Generally, terms for the RDA Work, Expression, Manifestation, and Item entities are replaced with &quot;resource&quot;, and terms for the RDA Person, Family, and Corporate Body entities are replaced with &quot;agent&quot;, in order to remove RDA/FRBR semantics.</p>
 	 <p>The unconstrained element set is <strong>not included in RDA Reference</strong>, but it is <em>desirable</em> that translations are made to help developers and users of non-RDA/non-FRBR applications. It is recommended that translations of this element set are updated last, to benefit from translations of the standard, constrained element sets. In many cases, a simple global substitution for &quot;work&quot;, &quot;expression&quot;, &quot;manifestation&quot;, and &quot;item&quot;, with &quot;resource&quot; and &quot;person&quot;, &quot;family&quot;, and &quot;corporate body&quot; with &quot;agent&quot; is sufficient.</p>
 	  <ul>
-       <li><a href="https://beta.metadataregistry.org/elementsets/82/exports.html" target="_blank">RDA Uncnstrained properties</a></li>	  
+       <li><a href="https://beta.metadataregistry.org/elementsets/82/exports.html" target="_blank">RDA Unconstrained properties</a></li>	  
 	  </ul>
      </div>
      <div class="col-md-6">
+	 <p>General information about <a href="translations.html">translations</a></p>
      <h3>Export a file for translation</h3>
 	 <p>The download links to the beta-test Export tab of the OMR value vocabulary.</p>
 	 <p>Anyone can export the current data by using the OMR export facility. Import is restricted to authorized OMR accounts.</p>
 	 <ul>
 	  <li>Use the <strong>Create New Export</strong> option to export the file for translation.</li>
-	  <li>Choose the <strong>Select only in use</strong> option to select the data columns to export. Do not amend the selection of individual columns.</li>
-	  <li>Use the <strong>Advanced</strong> option:
+	   <li>Choose the <strong>Selected Columns: Select none</strong> option.</li>
+	   <li>Select the following Datatype Properties (translatable) in addition to the defaults:
+	    <ul>
+         <li>description</li>
+         <li>note</li>
+         <li>ToolkitLabel</li>
+         <li>ToolkitDefinition</li>
+        </ul>
+	   </li>
+	  </ul>
+	  </li>
+	  <li>Open the <strong>Advanced</strong> option:
 	  <ul>
 	   <li>Exclude Deprecated: <strong>Yes</strong> (select)</li>
 	   <li>Additional Language: <strong>Select the language of translation from the list</strong>.
@@ -158,6 +168,7 @@
 	 <h3>Translate the exported file</h3>
 	 <p>Open the csv (comma-separated variable) file exported from the OMR in a spreadsheet application that supports UTF-8 encoding, for example Google Sheets or another spreadsheet with the correct encoding setting. The spreadsheet must be able to export data in csv format.</p>
 	 <p>This is required to avoid corrupting non-Roman script and symbols, diacritics, etc.</p>
+	 <p><strong>Do not amend the data for <em>reg_id</em>, <em>uri</em>, or <em>status</em>.</strong></p>
 	 <p>Enter or update the translations in the parallel columns. Use the following content guide:</p>
 	 <dl>
 	  <dt>description</dt>
