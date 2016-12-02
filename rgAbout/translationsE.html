@@ -114,7 +114,7 @@
      <!-- InstanceBeginEditable name="AboutContent" -->
      <div class="row">
 	 <div class="col-md-6">
-	  <p>General information about <a href="/translations.html">translations</a></p>
+	  <p>General information about <a href="translations.html">translations</a></p>
 	  <h3>Download files for translation</h3>
 	  <ul>
 	   <li><a href="https://beta.metadataregistry.org/elementsets/81/exports.html" target="_blank">RDA Agent properties</a></li>
@@ -125,6 +125,12 @@
        <li><a href="https://beta.metadataregistry.org/elementsets/95/exports.html" target="_blank">RDA Meta-element properties</a></li>
        <li><a href="https://beta.metadataregistry.org/elementsets/135/exports.html" target="_blank">RDA Place properties</a></li>
        <li><a href="https://beta.metadataregistry.org/elementsets/77/exports.html" target="_blank">RDA Work properties</a></li>
+	  </ul>
+	 <h3>Unconstrained element set</h3>
+	 <p>The labels and definitions in the unconstrained element set are derived from the standard RDA element sets. Generally, terms for the RDA Work, Expression, Manifestation, and Item entities are replaced with &quot;resource&quot;, and terms for the RDA Person, Family, and Corporate Body entities are replaced with &quot;agent&quot;, in order to remove RDA/FRBR semantics.</p>
+	 <p>The unconstrained element set is <strong>not included in RDA Reference</strong>, but it is <em>desirable</em> that translations are made to help developers and users of non-RDA/non-FRBR applications. It is recommended that translations of this element set are updated last, to benefit from translations of the standard, constrained element sets. In many cases, a simple global substitution for &quot;work&quot;, &quot;expression&quot;, &quot;manifestation&quot;, and &quot;item&quot;, with &quot;resource&quot; and &quot;person&quot;, &quot;family&quot;, and &quot;corporate body&quot; with &quot;agent&quot; is sufficient.</p>
+	  <ul>
+       <li><a href="https://beta.metadataregistry.org/elementsets/82/exports.html" target="_blank">RDA Uncnstrained properties</a></li>	  
 	  </ul>
      </div>
      <div class="col-md-6">
@@ -148,15 +154,16 @@
 	  <li>Use the <strong>Export CSV</strong> option to export the file.</li>
 	  <li>Save the export file.</li>
      </ul>
+	 <p><strong>Do not change the filename of the exported file.</strong> It contains data required for version control and synchronization.</p>
 	 <h3>Translate the exported file</h3>
-	 <p>Open the csv file exported from the OMR in a spreadsheet application that supports UTF-8 encoding, for example Google Sheets or another spreadsheet with the correct encoding setting. The spreadsheet must be able to export data in csv format.</p>
+	 <p>Open the csv (comma-separated variable) file exported from the OMR in a spreadsheet application that supports UTF-8 encoding, for example Google Sheets or another spreadsheet with the correct encoding setting. The spreadsheet must be able to export data in csv format.</p>
 	 <p>This is required to avoid corrupting non-Roman script and symbols, diacritics, etc.</p>
 	 <p>Enter or update the translations in the parallel columns. Use the following content guide:</p>
 	 <dl>
 	  <dt>description</dt>
-	  <dd>The RDA Registry definition for the element. The definition includes the type of entity to which the element applies (the domain), using the template pattern &quot;Relates a [domain entity] to quot; + <em>ToolkitDefinition</em>. The template should be adjusted to meet specific translation requirements in consultation with the RSC Translations Working Group. There is only one description for each language.</dd>
+	  <dd>The RDA Registry definition for the element. The definition includes the type of entity to which the element applies (the domain), using the template pattern &quot;Relates a [domain entity] to &quot; + <em>ToolkitDefinition</em>. The template should be adjusted to meet specific translation requirements in consultation with the RSC Translations Working Group. There is only one description for each language.</dd>
       <dt>label</dt>
-	  <dd>The preferred RDA Registry label for the element. There is only one preferred label for each language. The label is a verbal phrase using the template patterns &quot;is &#8230;&quot; and &quot;has &#8230;&quot; + <em>ToolkitLabel</em>. The template should be adjusted to meet specific translation requirements in consultation with the RSC Translations Working Group. ToolkitLabel can be used on its own for languages that do not support this syntax.</dd>
+	  <dd>The preferred RDA Registry label for the element. There is only one preferred label for each language. The label is a verbal phrase using the one of the template patterns &quot;is &#8230;&quot; and &quot;has &#8230;&quot; + <em>ToolkitLabel</em>. The template should be adjusted to meet specific translation requirements in consultation with the RSC Translations Working Group. ToolkitLabel can be used on its own for languages that do not support this syntax.</dd>
       <dt>note</dt>
 	  <dd>Other RDA Registry information qualifying the definition or scope of the element. There is only one note for each language.</dd>
       <dt>ToolkitLabel</dt>
@@ -166,7 +173,7 @@
 	 </dl>
 	 <p>Export the updated file in csv format</p>
 	 <h3>Import an updated translation</h3>
-	 <p>Return the updated csv file to the <a href="mailto:rscchair@rdatoolkit.org">RSC Chair</a>. The RSC Chair will import the file into the OMR. Files can be sent one at a time or in a batch. Large batches should be zipped.</p>
+	 <p>Return the updated csv file to the <a href="mailto:rscchair@rdatoolkit.org">RSC Chair</a>. The RSC Chair will import the file into the OMR during the beta-test. Files can be sent one at a time or in a batch. Large batches should be zipped.</p>
 	 </div>
 	 </div>
 <!-- InstanceEndEditable -->
