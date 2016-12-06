@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/rdagit.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/rdagitMapsPage.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Meta-->
 <meta charset="utf-8">
@@ -9,9 +9,10 @@
 <meta name="keywords" content="RDA, vocabularies, documentation, registry">
 <meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
 <meta name="viewport" content="width=device-width">
-<!-- InstanceBeginEditable name="Title" -->
-<title>RDA Registry | Home</title>
-<!-- InstanceEndEditable -->
+
+
+<title>RDA Registry | Maps</title>
+
 <!-- Icons-->
 <link rel="shortcut icon" href="http://www.rdatoolkit.org/sites/default/files/garland_favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
@@ -117,88 +118,144 @@
   <article id="page" class="page">
    <div class="page-content">
     <div class="rg-pagecontent">
-     <h1><!-- InstanceBeginEditable name="PageTitle" -->RDA Registry<!-- InstanceEndEditable --></h1>
-     <!-- InstanceBeginEditable name="PageContent" -->
+     <h1>RDA maps</h1>
+     
+     <h2><!-- InstanceBeginEditable name="MapTitle" -->Map from unconstrained ISBD properties to unconstrained RDA properties<!-- InstanceEndEditable --></h2>
      <div class="row">
       <div class="col-md-6">
-       <ul>
-        <li><a href="../">RDA Registry</a> (Home)</li>
-        <li><a href="Elements/">Elements</a> (RDA element sets)
-         <ul>
-          <li><a href="Elements/c/">Classes</a></li>
-          <li><a href="Elements/w/">Work properties</a></li>
-          <li><a href="Elements/e/">Expression properties</a></li>
-          <li><a href="Elements/m/">Manifestation properties</a></li>
-          <li><a href="Elements/i/">Item properties</a></li>
-          <li><a href="Elements/a/">Agent properties</a></li>
-          <li><a href="Elements/p/">Place properties</a></li>
-          <li><a href="Elements/u/">Unconstrained properties</a></li>
-          <li><a href="Elements/z/">Meta-element properties</a></li>
-          <li><a href="Elements/rof/">RDA/ONIX Framework elements</a></li>
-         </ul>
-        </li>
-        <li><a href="termList/">Values</a> (value vocabularies)
-         <ul>
-          <li><a href="termList/">RDA values</a></li>
-          <li><a href="termList/#rof">RDA/ONIX Framework values</a></li>
-         </ul>
-        </li>
-        <li><a href="rgData/">Data</a> (Linked data using RDA vocabularies)
-         <ul>
-          <li><a href="Examples/">Examples</a> (Single resource)</li>
-          <li><a href="http://rballs.info/">R-Balls</a> (Multiple resources)</li>
-          <li><a href="rgDatasets/">Datasets</a> (Multiple resources)</li>
-         </ul>
-        </li>
-        <li><a href="rgTools/">Tools</a>
-         <ul>
-          <li><a href="Maps/">Maps</a> (RDF maps between RDA vocabularies and other namespaces)</li>
-          <li><a href="Aligns/">Alignments</a> (Alignment tables for RDA vocabularies and other namespaces)</li>
-          <li><a href="Profiles/">Profiles</a> (Application profiles using RDA vocabularies)</li>
-          <li><a href="rimmf/">RIMMF</a> (RDA data editor)</li>
-         </ul>
-        </li>
-        <li><a href="rgAbout/">About</a> (More about the RDA vocabularies)
-         <ul>
-          <li><a href="rgAbout/rdadataflow.html">RDA Reference data</a> (Data maintenance and flow)</li>
-          <li><a href="rgAbout/issues.html">Issues</a> (Raise issues and make comments)</li>
-          <li><a href="rgAbout/updates/versions.html">Versions</a> (Version control)</li>
-          <li><a href="rgAbout/updates/deprecation.html">Deprecation</a> (Removal of vocabulary entries)</li>
-          <li><a href="rgAbout/rof.html">RDA/ONIX Framework</a> (Basis of carrier and content categories)</li>
-         </ul>
-        </li>
-        <li><a href="rgFAQ">FAQ</a> (Answers to frequently asked questions)</li>
-        <li><a href="rgGuide">Guide</a> (Guide to RDA vocabularies for technical communities)</li>
-        <li><a href="blog">Blog</a> (News and views from the RDA Development Team)</li>
-        <li><a href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank">Project</a> (RDA-Vocabularies project on GitHub)</li>
-        <li><a href="http://access.rdatoolkit.org" target="_blank">RDA Toolkit</a> (Full text of RDA - subscription required)</li>
-       </ul>
+       <pre>
+<!-- InstanceBeginEditable name="MapCode" -->
+@prefix isbdu: &lt;http://iflastandards.info/ns/isbd/unc/elements/&gt; .
+@prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+#
+# Map from unconstrained ISBD properties to unconstrained RDA properties
+# 23 September 2015
+#
+isbdu:P1001 rdfs:subPropertyOf rdau:P60049 .
+isbdu:P1002 rdfs:subPropertyOf rdau:P60049 .
+isbdu:P1003 rdfs:subPropertyOf rdau:P60050 .
+isbdu:P1004 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1005 rdfs:subPropertyOf rdau:P60589 .
+isbdu:P1007 rdfs:subPropertyOf rdau:P60339 .
+isbdu:P1008 rdfs:subPropertyOf rdau:P60329 .
+isbdu:P1009 rdfs:subPropertyOf rdau:P60078 .
+isbdu:P1010 rdfs:subPropertyOf rdau:P60343 .
+isbdu:P1011 rdfs:subPropertyOf rdau:P60364 .
+isbdu:P1012 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1014 rdfs:subPropertyOf rdau:P60488 .
+isbdu:P1019 rdfs:subPropertyOf rdau:P60162 .
+isbdu:P1020 rdfs:subPropertyOf rdau:P60546 .
+isbdu:P1021 rdfs:subPropertyOf rdau:P60072 .
+isbdu:P1024 rdfs:subPropertyOf rdau:P60539 .
+isbdu:P1025 rdfs:subPropertyOf rdau:P60249 .
+isbdu:P1033 rdfs:subPropertyOf rdau:P60597 .
+isbdu:P1034 rdfs:subPropertyOf rdau:P60521 .
+isbdu:P1041 rdfs:subPropertyOf rdau:P60101 .
+isbdu:P1044 rdfs:subPropertyOf rdau:P60122 .
+isbdu:P1045 rdfs:subPropertyOf rdau:P60470 .
+isbdu:P1046 rdfs:subPropertyOf rdau:P60056 .
+isbdu:P1047 rdfs:subPropertyOf rdau:P60565 .
+isbdu:P1048 rdfs:subPropertyOf rdau:P60542 .
+isbdu:P1050 rdfs:subPropertyOf rdau:P60109 .
+isbdu:P1051 rdfs:subPropertyOf rdau:P60346 .
+isbdu:P1052 rdfs:subPropertyOf rdau:P60506 .
+isbdu:P1053 rdfs:subPropertyOf rdau:P60550 .
+isbdu:P1054 rdfs:subPropertyOf rdau:P60550 .
+isbdu:P1055 rdfs:subPropertyOf rdau:P60557 .
+isbdu:P1057 rdfs:subPropertyOf rdau:P60486 .
+isbdu:P1058 rdfs:subPropertyOf rdau:P60334 .
+isbdu:P1059 rdfs:subPropertyOf rdau:P60340 .
+isbdu:P1060 rdfs:subPropertyOf rdau:P60558 .
+isbdu:P1061 rdfs:subPropertyOf rdau:P60581 .
+isbdu:P1062 rdfs:subPropertyOf rdau:P60559 .
+isbdu:P1063 rdfs:subPropertyOf rdau:P60513 .
+isbdu:P1064 rdfs:subPropertyOf rdau:P60215 .
+isbdu:P1065 rdfs:subPropertyOf rdau:P60129 .
+isbdu:P1066 rdfs:subPropertyOf rdau:P60528 .
+isbdu:P1068 rdfs:subPropertyOf rdau:P60136 .
+isbdu:P1075 rdfs:subPropertyOf rdau:P60052 .
+isbdu:P1078 rdfs:subPropertyOf rdau:P60470 .
+isbdu:P1086 rdfs:subPropertyOf rdau:P60136 .
+isbdu:P1087 rdfs:subPropertyOf rdau:P60130 .
+isbdu:P1090 rdfs:subPropertyOf rdau:P60372 .
+isbdu:P1094 rdfs:subPropertyOf rdau:P60137 .
+isbdu:P1095 rdfs:subPropertyOf rdau:P60470 .
+isbdu:P1096 rdfs:subPropertyOf rdau:P60244 .
+isbdu:P1097 rdfs:subPropertyOf rdau:P60313 .
+isbdu:P1098 rdfs:subPropertyOf rdau:P60297 .
+isbdu:P1100 rdfs:subPropertyOf rdau:P60281 .
+isbdu:P1101 rdfs:subPropertyOf rdau:P60713 .
+isbdu:P1116 rdfs:subPropertyOf rdau:P60533 .
+isbdu:P1117 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1118 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1119 rdfs:subPropertyOf rdau:P60488 .
+isbdu:P1120 rdfs:subPropertyOf rdau:P60533 .
+isbdu:P1122 rdfs:subPropertyOf rdau:P60578 .
+isbdu:P1123 rdfs:subPropertyOf rdau:P60259 .
+isbdu:P1126 rdfs:subPropertyOf rdau:P60560 .
+isbdu:P1128 rdfs:subPropertyOf rdau:P60543 .
+isbdu:P1129 rdfs:subPropertyOf rdau:P60532 .
+isbdu:P1130 rdfs:subPropertyOf rdau:P60532 .
+isbdu:P1131 rdfs:subPropertyOf rdau:P60553 .
+isbdu:P1133 rdfs:subPropertyOf rdau:P60552 .
+isbdu:P1134 rdfs:subPropertyOf rdau:P60481 .
+isbdu:P1135 rdfs:subPropertyOf rdau:P60481 .
+isbdu:P1136 rdfs:subPropertyOf rdau:P60470 .
+isbdu:P1137 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1137 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1138 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1138 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1139 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1139 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1140 rdfs:subPropertyOf rdau:P60507 .
+isbdu:P1141 rdfs:subPropertyOf rdau:P60338 .
+isbdu:P1142 rdfs:subPropertyOf rdau:P60337 .
+isbdu:P1143 rdfs:subPropertyOf rdau:P60077 .
+isbdu:P1146 rdfs:subPropertyOf rdau:P60550 .
+isbdu:P1147 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1147 rdfs:subPropertyOf rdau:P60516 .
+isbdu:P1148 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1148 rdfs:subPropertyOf rdau:P60516 .
+isbdu:P1149 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1149 rdfs:subPropertyOf rdau:P60516 .
+isbdu:P1150 rdfs:subPropertyOf rdau:P60521 .
+isbdu:P1155 rdfs:subPropertyOf rdau:P60345 .
+isbdu:P1178 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1178 rdfs:subPropertyOf rdau:P60590 .
+isbdu:P1179 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1179 rdfs:subPropertyOf rdau:P60590 .
+isbdu:P1180 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1180 rdfs:subPropertyOf rdau:P60590 .
+isbdu:P1181 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1181 rdfs:subPropertyOf rdau:P60589 .
+isbdu:P1183 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1183 rdfs:subPropertyOf rdau:P60589 .
+isbdu:P1184 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1184 rdfs:subPropertyOf rdau:P60589 .
+<!-- InstanceEndEditable --> 
+</pre>
       </div>
       <div class="col-md-6">
-       <h2>Welcome to the RDA Registry!</h2>
-       <p>The RDA Registry contains linked data and Semantic Web representations of the elements and relationship designators approved by the <a href="http://www.rda-rsc.org/" target="_blank">RDA Steering Committee</a> (RSC).</p>
-	   <p>For details of the latest release see <a href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/v2.5.2" target="_blank">Release 2.5.2</a>.</p>
-	   <h3>Downloads</h3>
-	   <ul>
-	    <li><a href="https://github.com/RDARegistry/RDA-Vocabularies/archive/v2.5.2.zip" target="_blank">v2.5.2</a> (zip)</li>
-	    <li><a href="https://github.com/RDARegistry/RDA-Vocabularies/archive/v2.5.2.tar.gz" target="_blank">v2.5.2</a> (tar.gz)</li>
-	   </ul>
-       <p>The RDA Registry is based on the <a href="http://metadataregistry.org/" target="_blank">Open Metadata Registry</a>. It is maintained by the RSC and <a href="http://managemetadata.com/" target="_blank">Metadata Management Associates</a> in association with <a href="http://www.ala.org/offices/publishing/ala_online_resources/onlineresources" target="_blank">ALA Digital Reference</a>.</p>
-       <p>Please use the contacts below for more information. Remember that questions or comments about individual RDA
-        elements or concepts can be easily made by using the OMR feedback button on the far right center of the page
-        describing the individual property (it is orange, with white lettering).</p>
-       <p>Contacts:</p>
+       <h3>Downloads</h3>
+       <!-- InstanceBeginEditable name="MapDownload" -->
        <ul>
-        <li><a href="mailto:rscchair@rdatoolkit.org">RSC: Gordon Dunsire</a></li>
-        <li><a href="mailto:metadata.maven@gmail.com">MMA: Diane Hillmann</a></li>
-        <li><a href="mailto:jon@managemetadata.com">OMR technical issues: Jon Phipps</a></li>
-        <li><a href="mailto:jhennelly@ala.org">ALA Digital Reference: James Hennelly</a></li>
+        <li><a href="http://rdaregistry.info/Maps/mapISBDU2RDAU.ttl" target="_blank">Turtle (text/turtle)</a></li>
        </ul>
-       <p>If you discover a problem with the representations of the RDA vocabularies, or have a question, or even wish to engage in a philosophical or practical discussion, please <a href="rgAbout/issues.html">raise an issue!</a></p>
-       <p><a href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank">View the project on GitHub.</a></p>
+       <!-- InstanceEndEditable -->
+       <!-- InstanceBeginEditable name="MapDescription" -->
+       <p>This map relates the <a href="http://metadataregistry.org/schema/show/id/97.html" target="_blank">ISBD elements (unconstrained)</a> element set to the <a href="http://metadataregistry.org/schema/show/id/82.html" target="_blank">RDA Unconstrained properties</a> element set.</p>
+       <!-- #BeginLibraryItem "/Library/ttlMap.lbi" -->
+       <p>The map is given in a terse triple language (ttl) serialization.</p>
+       <!-- #EndLibraryItem -->
+       <h3>Alignments</h3>
+       <ul>
+        <li><a href="../Aligns/alignISBD2RDA.html" target="_blank">Alignment of the ISBD: International Standard Bibliographic Description element set with RDA: Resource Description and Access element set</a></li>
+       </ul>
+       <!-- InstanceEndEditable -->
       </div>
      </div>
-     <!-- InstanceEndEditable -->
+     
     </div>
    </div>
   </article>
@@ -218,12 +275,12 @@
     </div>
     <div class="col-md-4">
      <div class="rg-footer-part">
-      <img src="rgImages/RDAlogo_rgbSized.gif" width="184" height="50" alt="RDA logo">
+      <img src="../rgImages/RDAlogo_rgbSized.gif" width="184" height="50" alt="RDA logo">
      </div>
     </div>
    </div>
    <div class="date-updated">
-    <p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->20 Sep 2016<!-- InstanceEndEditable -->.</p>
+    <p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->3 Oct 2015<!-- InstanceEndEditable -->.</p>
    </div>
   </div>
  </footer>
