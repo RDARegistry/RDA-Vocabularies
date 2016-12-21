@@ -123,7 +123,7 @@
      <h2><!-- InstanceBeginEditable name="AboutTitle" -->Representing the RDA ontology<!-- InstanceEndEditable --></h2>
      <!-- InstanceBeginEditable name="AboutContent" -->
      <h3>4-fold path</h3>
-     <p>The RDA Development Team is developing extensions to the RDA element sets to accommodate data from the &quot;4-fold path&quot;.</p>
+     <p>The RDA Development Team is developing extensions to the RDA element sets to accommodate data from the <a href="/rgFAQ/#faq13">&quot;4-fold path&quot;</a>.</p>
      <p>There are three methods for using a string to identify a related entity:</p>
      <ul>
       <li>An <strong>unstructured description</strong>: a plain literal, for example a free text note or a transcription.</li>
@@ -146,12 +146,19 @@
      <p>There are no definitions or scope notes for a datatype or object property. The human-readable semantics are associated with the canonical property.</p>
      <p>Machine-readable semantics are expressed with object properties. The object property element sets contain, in particular:</p>
      <ul>
-      <li>representation of reciprocal RDA elements using the OWL inverse property.</li>
-      <li>representation of the target entity of RDA relationship elements using the RDFS range property.</li>
+      <li>representation of reciprocal RDA elements using the OWL <strong>inverse</strong> property.</li>
+      <li>representation of the target entity of RDA relationship elements using the RDFS <strong>range</strong> property.</li>
      </ul> 
      <h3>Element set families</h3>
      <p>Canonical RDA properties are linked to associated unconstrained properties, that have no domains or ranges, by RDF sub-property relationships.</p>
      <p>Most RDA elements are therefore represented in the RDA Vocabularies in a &quot;family&quot; of element sets.</p>
+	 <p>The family consists of four member properties:</p>
+	 <ul>
+	  <li>An unconstrained property with no declared domain or range.</li>
+	  <li>A Toolkit canonical property with an RDA entity declared as the domain, but no range.</li>
+	  <li>An object property with the same entity declared as the domain and an RDA entity declared as the range.</li>
+	  <li>A datatype property with the same entity declared as the domain and a literal declared as the range.</li>
+	 </ul>
      <img src="ESFamily.jpg" width="500" height="315" alt="RDA element set family schema">
      <p>The RDA element set family schema.</p>
      <p>Example: &quot;has creator&quot;</p>
