@@ -122,6 +122,14 @@
      
      <h2><!-- InstanceBeginEditable name="AboutTitle" -->Representing the RDA ontology<!-- InstanceEndEditable --></h2>
      <!-- InstanceBeginEditable name="AboutContent" -->
+     <ul>
+      <li><a href="#ffp">4-fold path</a></li>
+      <li><a href="#does">Datatype and object element sets</a></li>
+      <li><a href="#esf">Element set families</a></li>
+      <li><a href="#chi">Class hierarchies</a></li>
+      <li><a href="#rem">Relationship matrix</a></li>
+     </ul>
+	 <a id="ffp"></a>
      <h3>4-fold path</h3>
      <p>The RDA Development Team is developing extensions to the RDA element sets to accommodate data from the <a href="/rgFAQ#faq13">&quot;4-fold path&quot;</a>.</p>
      <p>There are three methods for using a string to identify a related entity:</p>
@@ -131,6 +139,7 @@
       <li>An <strong>identifier</strong>: a literal that may be typed with a form of syntax encoding scheme that aggregates literal values from other elements, for example an ISBN or local identifier.</li>
      </ul>
      <p>The fourth method uses a <strong>URI</strong> to identify the related entity as a linked data thing.</p>
+	 <a id="does"></a>
      <h3>Datatype and object element sets</h3>
      <p>The RDA Vocabularies provide OWL datatype and object properties based on the RDA &quot;canonical&quot; properties. A datatype property can be used with or without a syntax encoding scheme for a value from one of the literal paths; an object property can be used for the URI.</p>
      <p>Each datatype and object property is linked to its canonical property by an RDFS sub-property relationship.</p>
@@ -149,6 +158,7 @@
       <li>representation of reciprocal RDA elements using the OWL <strong>inverse</strong> property.</li>
       <li>representation of the target entity of RDA relationship elements using the RDFS <strong>range</strong> property.</li>
      </ul> 
+	 <a id="esf"></a>
      <h3>Element set families</h3>
      <p>Canonical RDA properties are linked to associated unconstrained properties, that have no domains or ranges, by RDF sub-property relationships.</p>
      <p>Most RDA elements are therefore represented in the RDA Vocabularies in a &quot;family&quot; of element sets.</p>
@@ -226,16 +236,18 @@
 	   <td>http://rdaregistry.info/Elements/w/object/</td>
 	  </tr>
 	 </table>
+	 <a id="chi"></a>
 	 <h3>Class hierarchies</h3>
 	 <p>There are two hierarchies within the RDA Class element set.</p>
 	 <p>They align RDA with the IFLA Library Reference Model (LRM).</p>
 	 <h4>Entity hierarchy</h4>
 	 <p>&quot;RDA entity&quot; is a super-class of all other RDA classes representing entities.</p>
-     <img src="entityHierarchy.jpg" width="440" height="315" alt="RDA Entity class hierarchy">
+     <img src="entityHierarchy.jpg" width="440" height="402" alt="RDA Entity class hierarchy">
 	 <h4>Agent hierarchy</h4>
 	 <p>&quot;Agent&quot; is a super-class of &quot;Collective Agent&quot; and &quot;Person&quot;; &quot;Collective Agent&quot; is a super-class of &quot;Corporate Body&quot; and &quot;Family&quot;.</p>
-     <img src="agentHierarchy.jpg" width="440" height="402" alt="RDA Agent class hierarchy">
+     <img src="agentHierarchy.jpg" width="440" height="315" alt="RDA Agent class hierarchy">
 	 <p>The hierarchies are also represented between properties using RDFS sub-property relationships.</p>
+	 <a id="rem"></a>
 	 <h3>Relationship matrix</h3>
 	 <p>A set of high-level, coarse granularity properties for relationships is distributed between the RDA element sets by domain.</p>
 	 <p>The set covers all pair-wise associative relationships between the RDA entities.</p>
