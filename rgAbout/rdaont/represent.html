@@ -128,6 +128,7 @@
       <li><a href="#esf">Element set families</a></li>
       <li><a href="#chi">Class hierarchies</a></li>
       <li><a href="#rem">Relationship matrix</a></li>
+      <li><a href="#cur">Curie prefixes</a></li>
      </ul>
 	 <a id="ffp"></a>
      <h3>4-fold path</h3>
@@ -169,10 +170,12 @@
 	  <li>An object property with the same entity declared as the domain and an RDA entity declared as the range.</li>
 	  <li>A datatype property with the same entity declared as the domain and a literal declared as the range.</li>
 	 </ul>
-     <img src="ESFamily.jpg" width="440" height="277" alt="RDA element set family schema">
-     <p>The RDA element set family schema.</p>
+	 <div class="rg-image">
+      <img src="ESFamily.jpg" width="440" height="277" alt="RDA element set family schema">
+      <p>Schema for the family of RDA element sets.</p>
+	 </div>
      <p>Example: &quot;has creator&quot;</p>
-     <table>
+     <table class="rg-table">
       <tr>
        <th></th>
        <th>domain URI</th>
@@ -214,48 +217,76 @@
        <td>agent</td>
       </tr>
      </table>
-	 <table>
-	  <tr>
-	   <td>rdac:</td>
-	   <td>http://rdaregistry.info/Elements/c/</td>
-	  </tr>
-	  <tr>
-	   <td>rdau:</td>
-	   <td>http://rdaregistry.info/Elements/u/</td>
-	  </tr>
-	  <tr>
-	   <td>rdaw:</td>
-	   <td>http://rdaregistry.info/Elements/w/</td>
-	  </tr>
-	  <tr>
-	   <td>rdawd:</td>
-	   <td>http://rdaregistry.info/Elements/w/datatype/</td>
-	  </tr>
-	  <tr>
-	   <td>rdawo:</td>
-	   <td>http://rdaregistry.info/Elements/w/object/</td>
-	  </tr>
-	 </table>
 	 <a id="chi"></a>
 	 <h3>Class hierarchies</h3>
 	 <p>There are two hierarchies within the RDA Class element set.</p>
 	 <p>They align RDA with the IFLA Library Reference Model (LRM).</p>
 	 <h4>Entity hierarchy</h4>
 	 <p>&quot;RDA entity&quot; is a super-class of all other RDA classes representing entities.</p>
-     <img src="entityHierarchy.jpg" width="440" height="402" alt="RDA Entity class hierarchy">
+	 <div class="rg-image">
+      <img src="entityHierarchy.jpg" width="440" height="402" alt="RDA Entity class hierarchy">
+	  <p>RDF graph of the class hierarchy of RDA Entity.</p>
+	 </div>
 	 <h4>Agent hierarchy</h4>
 	 <p>&quot;Agent&quot; is a super-class of &quot;Collective Agent&quot; and &quot;Person&quot;; &quot;Collective Agent&quot; is a super-class of &quot;Corporate Body&quot; and &quot;Family&quot;.</p>
-     <img src="agentHierarchy.jpg" width="440" height="315" alt="RDA Agent class hierarchy">
+	 <div class="rg-image">
+      <img src="agentHierarchy.jpg" width="440" height="315" alt="RDA Agent class hierarchy">
+	  <p>RDF graph of the class hierarchy of RDA Agent.</p>
+	 </div>
 	 <p>The hierarchies are also represented between properties using RDFS sub-property relationships.</p>
 	 <a id="rem"></a>
 	 <h3>Relationship matrix</h3>
 	 <p>A set of high-level, coarse granularity properties for relationships is distributed between the RDA element sets by domain.</p>
 	 <p>The set covers all pair-wise associative relationships between the RDA entities.</p>
-	 <p>Current and future RDA properties are treated as extensions of the matrix of relationships by using RDF sub-property relationships.</p>
-     <img src="creatorMatrix.jpg" width="600" height="498" alt="RDA creator relationship matrix">
-	 <p>This is an example of a relationship matrix for the &quot;has creator&quot; element.</p>
+	 <p>Current and future RDA properties are treated as extensions of the matrix of relationships by using RDFS sub-property relationships.</p>
+	 <div class="rg-image">
+      <img src="creatorMatrix.jpg" width="600" height="498" alt="RDA creator relationship matrix">
+	  <p>RDF graph of a relationship matrix for the &quot;has creator&quot; element. All arcs are rdfs:subPropertyOf.</p>
+	 </div>
+	 <p>This example of a relationship matrix uses object, canonical, and unconstrained element set properties.</p>
 	 <p>Properties labelled in italics are potential extensions to the element sets.</p>
-	 <p>A similar matrix is available for the element's datatype properties.</p>
+	 <p>A similar matrix can be represented using the element's datatype properties.</p>
+	 <a id="cur"></a>
+	 <h3>Curie prefixes</h3>
+	 <p>Prefixes used in this documentation for a compact URI (curie):</p>
+	 <table class="rg-table">
+	  <tr>
+	   <th>prefix</th>
+	   <th>namespace</th>
+	   <th>element set</th>
+	  </tr>
+	  <tr>
+	   <td>rdac:</td>
+	   <td>http://rdaregistry.info/Elements/c/</td>
+	   <td>RDA Classes</td>
+	  </tr>
+	  <tr>
+	   <td>rdau:</td>
+	   <td>http://rdaregistry.info/Elements/u/</td>
+	   <td>Unconstrained properties</td>
+	  </tr>
+	  <tr>
+	   <td>rdaw:</td>
+	   <td>http://rdaregistry.info/Elements/w/</td>
+	   <td>Work properties</td>
+	  </tr>
+	  <tr>
+	   <td>rdawd:</td>
+	   <td>http://rdaregistry.info/Elements/w/datatype/</td>
+	   <td>Work datatype properties</td>
+	  </tr>
+	  <tr>
+	   <td>rdawo:</td>
+	   <td>http://rdaregistry.info/Elements/w/object/</td>
+	   <td>Work object properties</td>
+	  </tr>
+	  <tr>
+	   <td>rdax:</td>
+	   <td>http://rdaregistry.info/Elements/x/</td>
+	   <td>RDA Entity properties</td>
+	  </tr>
+	 </table>
+	 <p>A prefix for each canonical element set is suggested on the Registry webpage for the element set.</p>
      <!-- InstanceEndEditable -->
     </div>
    </div>
