@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body having legal custody of an item to an item."
+            "Relates an agent having legal custody of an item to an item."
         ],
         "fr": [
             "Met une personne, famille ou collectivité à qui est confiée la garde légale d’un item en relation avec l’item."
@@ -37,12 +37,6 @@
         "label": "is custodian of"
     },
     "instructionNumber": "18.5",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/i/object/P40020",
-        "lexicalAlias": "http://rdaregistry.info/Elements/i/object/custodian.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24506.html",
-        "label": "has custodian"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -56,21 +50,23 @@
     "name": {
         "en": "custodianOf"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10003",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "item"
-    },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50308",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedItemAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25294.html",
+            "label": "has related item (agent)"
+        }
+    ],
     "ToolkitDefinition": {
         "fr": "Personne, famille ou collectivité à qui est confiée la garde légale d’un item.",
-        "en": "An item in the legal custody of a person, family, or corporate body."
+        "en": "An item in the legal custody of an agent."
     },
     "ToolkitLabel": {
         "fr": "dépositaire de",

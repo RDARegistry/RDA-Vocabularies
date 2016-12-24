@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a person, family, or corporate body responsible for distributing a resource."
+            "Relates a manifestation to an agent responsible for distributing a manifestation."
         ],
         "fr": [
             "Met une manifestation en relation avec une personne, famille ou collectivité responsable de la diffusion ou de la distribution d’une ressource."
@@ -24,16 +24,10 @@
             "label": "has film distributor"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/m/datatype/P30080",
-            "lexicalAlias": "http://rdaregistry.info/Elements/m/datatype/distributor.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/23456.html",
-            "label": null
-        },
-        {
             "@id": "http://rdaregistry.info/Elements/m/object/P30080",
             "lexicalAlias": "http://rdaregistry.info/Elements/m/object/distributor.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/24232.html",
-            "label": null
+            "label": "has distributor"
         }
     ],
     "hasUnconstrained": {
@@ -43,12 +37,6 @@
         "label": "has distributor"
     },
     "instructionNumber": "21.4",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/object/P50199",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/object/distributorOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24694.html",
-        "label": "is distributor of"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -56,17 +44,12 @@
     },
     "label": {
         "en": "has distributor",
-        "fr": "a pour diffuseur ou distributeur"
+        "fr": "a pour diffuseur ou distributeur",
+        "sv": "har distributör"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/distributor.en",
     "name": {
         "en": "distributor"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "agent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -74,15 +57,24 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/m/P30267",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedAgentManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25247.html",
+            "label": "has related agent (manifestation)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body responsible for distributing a resource.",
+        "en": "An agent responsible for distributing a manifestation.",
         "fr": "Personne, famille ou collectivité responsable de la diffusion ou de la distribution d’une ressource.",
         "es": "Una persona, familia o entidad corporativa responsable de la distribución de un recurso."
     },
     "ToolkitLabel": {
         "en": "distributor",
         "fr": "diffuseur ou distributeur",
-        "es": "distribuidor"
+        "es": "distribuidor",
+        "sv": "distributör"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14469.html"
 }

@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a person, family, or corporate body responsible for publishing, releasing, or issuing a resource."
+            "Relates a manifestation to an agent responsible for publishing, releasing, or issuing a manifestation."
         ],
         "fr": [
             "Met une manifestation en relation avec une personne, famille ou collectivité responsable de la publication, de la mise à disposition ou de l’édition d’une ressource."
@@ -24,16 +24,10 @@
             "label": "has broadcaster"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/m/datatype/P30083",
-            "lexicalAlias": "http://rdaregistry.info/Elements/m/datatype/publisher.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/23459.html",
-            "label": null
-        },
-        {
             "@id": "http://rdaregistry.info/Elements/m/object/P30083",
             "lexicalAlias": "http://rdaregistry.info/Elements/m/object/publisher.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/24235.html",
-            "label": null
+            "label": "has publisher"
         }
     ],
     "hasUnconstrained": {
@@ -43,12 +37,6 @@
         "label": "has publisher"
     },
     "instructionNumber": "21.3",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/object/P50203",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/object/publisherOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24698.html",
-        "label": "is publisher of"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -56,17 +44,12 @@
     },
     "label": {
         "en": "has publisher",
-        "fr": "a pour éditeur"
+        "fr": "a pour éditeur",
+        "sv": "har utgivare"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/publisher.en",
     "name": {
         "en": "publisher"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "agent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -74,15 +57,24 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/m/P30267",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedAgentManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25247.html",
+            "label": "has related agent (manifestation)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body responsible for publishing, releasing, or issuing a resource.",
+        "en": "An agent responsible for publishing, releasing, or issuing a manifestation.",
         "fr": "Personne, famille ou collectivité responsable de la publication, de la mise à disposition ou de l’édition d’une ressource.",
         "es": "Una persona, familia o entidad corporativa responsable de la publicación, lanzamiento o publicación de un recurso."
     },
     "ToolkitLabel": {
         "en": "publisher",
         "fr": "éditeur",
-        "es": "editor"
+        "es": "editor",
+        "sv": "utgivare"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14472.html"
 }

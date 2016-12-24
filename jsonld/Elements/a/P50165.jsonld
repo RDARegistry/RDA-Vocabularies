@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body having legal possession of an item to an item."
+            "Relates an agent having legal possession of an item to an item."
         ],
         "fr": [
             "Met une personne, famille ou collectivité possédant légalement un item en relation avec l’item."
@@ -48,12 +48,6 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15222.html",
         "label": "is owner of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/i/object/P40021",
-        "lexicalAlias": "http://rdaregistry.info/Elements/i/object/owner.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24507.html",
-        "label": "has owner"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -67,21 +61,23 @@
     "name": {
         "en": "ownerOf"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10003",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "item"
-    },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50308",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedItemAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25294.html",
+            "label": "has related item (agent)"
+        }
+    ],
     "ToolkitDefinition": {
         "fr": "Personne, famille ou collectivité possédant légalement un item.",
-        "en": "An item in the legal possession of a person, family, or corporate body."
+        "en": "An item in the legal possession of an agent."
     },
     "ToolkitLabel": {
         "fr": "propriétaire de",

@@ -1,7 +1,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
@@ -23,8 +22,8 @@
 <http://rdaregistry.info/Elements/i/P40001>
     rdakit:instructionNumber "2.20" ;
     rdakit:toolkitDefinition "A character string associated with an item that serves to differentiate an item from other items."@en, "Chaîne de caractères associée à un item qui sert à distinguer cet item d’autres items."@fr, "Una cadena de caracteres asociada con un ítem que sirve para diferenciar ese ítem de otros ítems"@es ;
-    rdakit:toolkitLabel "identifiant de l’item"@fr, "identificador del ítem"@es, "identifier for the item"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40001>, <http://rdaregistry.info/Elements/i/object/P40001> ;
+    rdakit:toolkitLabel "identifiant de l’item"@fr, "identificador del ítem"@es, "identifier for the item"@en, "identifikator för exemplaret"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40001> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60052> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/identifierForTheItem.en> ;
     reg:name "identifierForTheItem"@en ;
@@ -32,7 +31,7 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour identifiant de l’item"@fr, "has identifier for the item"@en ;
+    rdfs:label "a pour identifiant de l’item"@fr, "har identifikator för exemplaret"@sv, "has identifier for the item"@en ;
     skos:definition "Met un item en relation avec une chaîne de caractères associée à un item qui sert à distinguer cet item d’autres items."@fr, "Relates an item to a character string associated with an item that serves to differentiate an item from other items."@en .
 
 <http://rdaregistry.info/Elements/i/P40002>
@@ -41,9 +40,9 @@
 
 <http://rdaregistry.info/Elements/i/P40003>
     rdakit:instructionNumber "3.22" ;
-    rdakit:toolkitDefinition "A note providing additional information about carrier characteristics that are specific to the item being described and are assumed not to apply to other items exemplifying the same manifestation."@en, "Note fournissant de l’information supplémentaire sur les caractéristiques du support matériel qui sont particulières à l’item décrit et qui sont censées ne pas concerner les autres items représentant la même manifestation."@fr, "Una nota que proporciona información sobre las características del soporte que son específicas al ítem descrito y se asume que no aplican a otros ítems que ejemplifican la misma manifestación."@es ;
-    rdakit:toolkitLabel "nota sobre la característica del soporte de ítem específico"@es, "note on item-specific carrier characteristic"@en, "note sur les caractéristiques du support matériel d’un item particulier"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40010>, <http://rdaregistry.info/Elements/i/P40011>, <http://rdaregistry.info/Elements/i/datatype/P40003>, <http://rdaregistry.info/Elements/i/object/P40003> ;
+    rdakit:toolkitDefinition "A note providing additional information about carrier characteristics that are specific to an item being described and are assumed not to apply to other items exemplifying the same manifestation."@en, "Note fournissant de l’information supplémentaire sur les caractéristiques du support matériel qui sont particulières à l’item décrit et qui sont censées ne pas concerner les autres items représentant la même manifestation."@fr, "Una nota que proporciona información sobre las características del soporte que son específicas al ítem descrito y se asume que no aplican a otros ítems que ejemplifican la misma manifestación."@es ;
+    rdakit:toolkitLabel "anmärkning om exemplarspecifika bäraregenskaper"@sv, "nota sobre la característica del soporte de ítem específico"@es, "note on item-specific carrier characteristic"@en, "note sur les caractéristiques du support matériel d’un item particulier"@fr ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40010>, <http://rdaregistry.info/Elements/i/P40011>, <http://rdaregistry.info/Elements/i/object/P40003> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60056> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnItemSpecificCarrierCharacteristic.en> ;
     reg:name "noteOnItemSpecificCarrierCharacteristic"@en ;
@@ -51,14 +50,14 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour note sur les caractéristiques du support matériel d’un item particulier"@fr, "has note on item-specific carrier characteristic"@en ;
-    skos:definition "Met un item en relation avec une note fournissant de l’information supplémentaire sur les caractéristiques du support matériel qui sont particulières à l’item décrit et qui sont censées ne pas concerner les autres items représentant la même manifestation."@fr, "Relates an item to a note providing additional information about carrier characteristics that are specific to the item being described and are assumed not to apply to other items exemplifying the same manifestation."@en .
+    rdfs:label "a pour note sur les caractéristiques du support matériel d’un item particulier"@fr, "har anmärkning om exemplarspecifika bäraregenskaper"@sv, "has note on item-specific carrier characteristic"@en ;
+    skos:definition "Met un item en relation avec une note fournissant de l’information supplémentaire sur les caractéristiques du support matériel qui sont particulières à l’item décrit et qui sont censées ne pas concerner les autres items représentant la même manifestation."@fr, "Relates an item to a note providing additional information about carrier characteristics that are specific to an item being described and are assumed not to apply to other items exemplifying the same manifestation."@en .
 
 <http://rdaregistry.info/Elements/i/P40004>
     rdakit:instructionNumber "18.5" ;
     rdakit:toolkitDefinition "A curator who brings together items from various sources that are then arranged, described, and cataloged as a collection."@en, "Conservateur qui rassemble des items de diverses sources qui sont subséquemment arrangés, décrits et catalogués comme une collection."@fr, "Un conservador que reúne ítems de varias fuentes que luego se arreglan, describen y catalogan como una colección."@es ;
     rdakit:toolkitLabel "coleccionista"@es, "collectionneur"@fr, "collector"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40004>, <http://rdaregistry.info/Elements/i/object/P40004> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40004> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60066> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/collector.en> ;
     reg:name "collector"@en ;
@@ -67,16 +66,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour collectionneur"@fr, "has collector"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40017> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50045>, <http://rdaregistry.info/Elements/a/object/P50045> ;
     skos:definition "Met un item en relation avec un conservateur qui rassemble des items de diverses sources qui sont subséquemment arrangés, décrits et catalogués comme une collection."@fr, "Relates an item to a curator who brings together items from various sources that are then arranged, described, and cataloged as a collection."@en .
 
 <http://rdaregistry.info/Elements/i/P40005>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A curator who lists or inventories the items in an aggregate work such as a collection of items or works."@en, "Conservateur qui dresse une liste et un inventaire des items faisant partie d’une œuvre agrégative telle qu’une collection d’items ou d’œuvres."@fr, "Un conservador que lista o hace inventarios de ítems en una obra agregada tal como una colección de ítems u obras."@es ;
+    rdakit:toolkitDefinition "A curator who lists or inventories items in an aggregate work such as a collection of items or works."@en, "Conservateur qui dresse une liste et un inventaire des items faisant partie d’une œuvre agrégative telle qu’une collection d’items ou d’œuvres."@fr, "Un conservador que lista o hace inventarios de ítems en una obra agregada tal como una colección de ítems u obras."@es ;
     rdakit:toolkitLabel "collection registrar"@en, "conservador de colección"@es, "conservateur de collections"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40005>, <http://rdaregistry.info/Elements/i/object/P40005> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40005> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60067> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/collectionRegistrar.en> ;
     reg:name "collectionRegistrar"@en ;
@@ -85,16 +82,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour conservateur de collections"@fr, "has collection registrar"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40017> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50046>, <http://rdaregistry.info/Elements/a/object/P50046> ;
-    skos:definition "Met un item en relation avec un conservateur qui dresse une liste et un inventaire des items faisant partie d’une œuvre agrégative telle qu’une collection d’items ou d’œuvres."@fr, "Relates an item to a curator who lists or inventories the items in an aggregate work such as a collection of items or works."@en .
+    skos:definition "Met un item en relation avec un conservateur qui dresse une liste et un inventaire des items faisant partie d’une œuvre agrégative telle qu’une collection d’items ou d’œuvres."@fr, "Relates an item to a curator who lists or inventories items in an aggregate work such as a collection of items or works."@en .
 
 <http://rdaregistry.info/Elements/i/P40006>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A current owner of an item who deposited the item into the custody of another person, family, or corporate body, while still retaining ownership."@en, "Propriétaire actuel d’un item qui a déposé l’item sous la garde d’une autre personne, famille ou collectivité tout en en conservant la propriété."@fr, "Un propietario actual de un ítem que lo entrega en custodia a otra persona, familia o entidad corporativa, sin perder la propiedad del ítem."@es ;
+    rdakit:toolkitDefinition "A current owner of an item who deposited the item into the custody of another agent, while still retaining ownership."@en, "Propriétaire actuel d’un item qui a déposé l’item sous la garde d’une autre personne, famille ou collectivité tout en en conservant la propriété."@fr, "Un propietario actual de un ítem que lo entrega en custodia a otra persona, familia o entidad corporativa, sin perder la propiedad del ítem."@es ;
     rdakit:toolkitLabel "depositante"@es, "depositor"@en, "déposant"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40006>, <http://rdaregistry.info/Elements/i/object/P40006> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40006> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60068> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/depositor.en> ;
     reg:name "depositor"@en ;
@@ -103,16 +98,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour déposant"@fr, "has depositor"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40018> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50047>, <http://rdaregistry.info/Elements/a/object/P50047> ;
-    skos:definition "Met un item en relation avec un propriétaire actuel d’un item qui a déposé l’item sous la garde d’une autre personne, famille ou collectivité tout en en conservant la propriété."@fr, "Relates an item to a current owner of an item who deposited the item into the custody of another person, family, or corporate body, while still retaining ownership."@en .
+    skos:definition "Met un item en relation avec un propriétaire actuel d’un item qui a déposé l’item sous la garde d’une autre personne, famille ou collectivité tout en en conservant la propriété."@fr, "Relates an item to a current owner of an item who deposited the item into the custody of another agent, while still retaining ownership."@en .
 
 <http://rdaregistry.info/Elements/i/P40007>
     rdakit:instructionNumber "18.5" ;
     rdakit:toolkitDefinition "A former owner of an item who donated that item to another owner."@en, "Ancien propriétaire d’un item qui a fait don de cet item à un autre propriétaire."@fr, "Un propietario anterior de un ítem que lo donó a otro propietario."@es ;
     rdakit:toolkitLabel "donante"@es, "donateur"@fr, "donor"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40007>, <http://rdaregistry.info/Elements/i/object/P40007> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40007> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60091> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/donor.en> ;
     reg:name "donor"@en ;
@@ -121,16 +114,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour donateur"@fr, "has donor"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40019> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50066>, <http://rdaregistry.info/Elements/a/object/P50066> ;
     skos:definition "Met un item en relation avec un ancien propriétaire d’un item qui a fait don de cet item à un autre propriétaire."@fr, "Relates an item to a former owner of an item who donated that item to another owner."@en .
 
 <http://rdaregistry.info/Elements/i/P40008>
     rdakit:instructionNumber "18.5" ;
     rdakit:toolkitDefinition "A former owner of an item who sold that item to another owner."@en, "Ancien propriétaire d’un item qui a vendu cet item à un autre propriétaire."@fr, "Un propietario anterior de un ítem que lo vendió a otro propietario."@es ;
     rdakit:toolkitLabel "seller"@en, "vendedor"@es, "vendeur"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40008>, <http://rdaregistry.info/Elements/i/object/P40008> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40008> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60092> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/seller.en> ;
     reg:name "seller"@en ;
@@ -139,16 +130,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour vendeur"@fr, "has seller"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40019> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50067>, <http://rdaregistry.info/Elements/a/object/P50067> ;
     skos:definition "Met un item en relation avec un ancien propriétaire d’un item qui a vendu cet item à un autre propriétaire."@fr, "Relates an item to a former owner of an item who sold that item to another owner."@en .
 
 <http://rdaregistry.info/Elements/i/P40009>
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A larger item of which the item is a discrete component."@en, "Item plus vaste dont l’item est une composante distincte."@fr, "Un ítem mayor del cual una parte es un componente separado."@es ;
+    rdakit:toolkitDefinition "A larger item of which an item is a discrete component."@en, "Item plus vaste dont l’item est une composante distincte."@fr, "Un ítem mayor del cual una parte es un componente separado."@es ;
     rdakit:toolkitLabel "contained in (item)"@en, "contenido en (ítem)"@es, "contenu dans (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40009>, <http://rdaregistry.info/Elements/i/object/P40009> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40009> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60101> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/containedInItem.en> ;
     reg:name "containedInItem"@en ;
@@ -157,16 +146,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est contenu dans (item)"@fr, "is contained in (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40054> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40034> ;
-    skos:definition "Met un item en relation avec un item plus vaste dont l’item est une composante distincte."@fr, "Relates an item to a larger item of which the item is a discrete component."@en .
+    skos:definition "Met un item en relation avec un item plus vaste dont l’item est une composante distincte."@fr, "Relates an item to a larger item of which an item is a discrete component."@en .
 
 <http://rdaregistry.info/Elements/i/P40010>
     rdakit:instructionNumber "3.22.3" ;
-    rdakit:toolkitDefinition "A note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element."@en, "Note fournissant de l’information sur les dimensions de l’item particulier décrit qui n’est pas enregistrée formellement dans l’élément Dimensions."@fr, "Una nota que proporciona información sobre las dimensiones del ítem específico descrito que no esta registrado como parte del elemento dimensiones."@es ;
-    rdakit:toolkitLabel "nota sobre dimensiones del ítem"@es, "note on dimensions of item"@en, "note sur les dimensions de l’item"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40010>, <http://rdaregistry.info/Elements/i/object/P40010> ;
+    rdakit:toolkitDefinition "A note providing information on the dimensions of a specific item being described that is not recorded as part of a dimensions element."@en, "Note fournissant de l’information sur les dimensions de l’item particulier décrit qui n’est pas enregistrée formellement dans l’élément Dimensions."@fr, "Una nota que proporciona información sobre las dimensiones del ítem específico descrito que no esta registrado como parte del elemento dimensiones."@es ;
+    rdakit:toolkitLabel "anmärkning om exemplarets mått"@sv, "nota sobre dimensiones del ítem"@es, "note on dimensions of item"@en, "note sur les dimensions de l’item"@fr ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40010> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60133> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnDimensionsOfItem.en> ;
     reg:name "noteOnDimensionsOfItem"@en ;
@@ -174,15 +161,15 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour note sur les dimensions de l’item"@fr, "has note on dimensions of item"@en ;
+    rdfs:label "a pour note sur les dimensions de l’item"@fr, "har anmärkning om exemplarets mått"@sv, "has note on dimensions of item"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003> ;
-    skos:definition "Met un item en relation avec une note fournissant de l’information sur les dimensions de l’item particulier décrit qui n’est pas enregistrée formellement dans l’élément Dimensions."@fr, "Relates an item to a note providing information on the dimensions of the specific item being described that is not recorded as part of the dimensions element."@en .
+    skos:definition "Met un item en relation avec une note fournissant de l’information sur les dimensions de l’item particulier décrit qui n’est pas enregistrée formellement dans l’élément Dimensions."@fr, "Relates an item to a note providing information on the dimensions of a specific item being described that is not recorded as part of a dimensions element."@en .
 
 <http://rdaregistry.info/Elements/i/P40011>
     rdakit:instructionNumber "3.22.2" ;
-    rdakit:toolkitDefinition "A note providing information on the extent of the specific item being described that is not recorded as part of the extent element."@en, "Note fournissant de l’information sur l’importance matérielle de l’item particulier décrit qui n’est pas enregistrée dans l’élément Importance matérielle."@fr, "Una nota que proporciona información sobre la extensión del ítem específico descrito que está registrado como parte del elemento extensión"@es ;
-    rdakit:toolkitLabel "nota sobre la extensión del ítem"@es, "note on extent of item"@en, "note sur l’importance matérielle de l’item"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40011>, <http://rdaregistry.info/Elements/i/object/P40011> ;
+    rdakit:toolkitDefinition "A note providing information on the extent of a specific item being described that is not recorded as part of an extent element."@en, "Note fournissant de l’information sur l’importance matérielle de l’item particulier décrit qui n’est pas enregistrée dans l’élément Importance matérielle."@fr, "Una nota que proporciona información sobre la extensión del ítem específico descrito que está registrado como parte del elemento extensión"@es ;
+    rdakit:toolkitLabel "anmärkning om exemplarets omfång"@sv, "nota sobre la extensión del ítem"@es, "note on extent of item"@en, "note sur l’importance matérielle de l’item"@fr ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40011> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60134> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnExtentOfItem.en> ;
     reg:name "noteOnExtentOfItem"@en ;
@@ -190,15 +177,15 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour note sur l’importance matérielle de l’item"@fr, "has note on extent of item"@en ;
+    rdfs:label "a pour note sur l’importance matérielle de l’item"@fr, "har anmärkning om exemplarets omfång"@sv, "has note on extent of item"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003> ;
-    skos:definition "Met un item en relation avec une note fournissant de l’information sur l’importance matérielle de l’item particulier décrit qui n’est pas enregistrée dans l’élément Importance matérielle."@fr, "Relates an item to a note providing information on the extent of the specific item being described that is not recorded as part of the extent element."@en .
+    skos:definition "Met un item en relation avec une note fournissant de l’information sur l’importance matérielle de l’item particulier décrit qui n’est pas enregistrée dans l’élément Importance matérielle."@fr, "Relates an item to a note providing information on the extent of a specific item being described that is not recorded as part of an extent element."@en .
 
 <http://rdaregistry.info/Elements/i/P40012>
     rdakit:instructionNumber "18.5" ;
     rdakit:toolkitDefinition "A person providing decoration to a specific item using precious metals or color, often with elaborate designs and motifs."@en, "Personne ornant un item spécifique en utilisant des métaux précieux ou de la couleur, souvent avec des dessins et des motifs élaborés."@fr, "Una persona que proporciona la decoración de un ítem específico utilizando metales preciosos, o color, a menudo con diseños y motivos elaborados."@es ;
     rdakit:toolkitLabel "enlumineur"@fr, "illuminator"@en, "iluminador"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40012>, <http://rdaregistry.info/Elements/i/object/P40012> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40012> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60421> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/illuminator.en> ;
     reg:name "illuminator"@en ;
@@ -207,16 +194,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour enlumineur"@fr, "has illuminator"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50092>, <http://rdaregistry.info/Elements/a/object/P50092> ;
     skos:definition "Met un item en relation avec une personne ornant un item spécifique en utilisant des métaux précieux ou de la couleur, souvent avec des dessins et des motifs élaborés."@fr, "Relates an item to a person providing decoration to a specific item using precious metals or color, often with elaborate designs and motifs."@en .
 
 <http://rdaregistry.info/Elements/i/P40013>
     rdakit:instructionNumber "18.5" ;
     rdakit:toolkitDefinition "A person who binds an item."@en, "Personne qui relie un item."@fr, "Una persona que encuaderna un ítem."@es ;
     rdakit:toolkitLabel "binder"@en, "encuadernador"@es, "relieur"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40013>, <http://rdaregistry.info/Elements/i/object/P40013> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40013> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60458> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/binder.en> ;
     reg:name "binder"@en ;
@@ -225,16 +210,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour relieur"@fr, "has binder"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50123>, <http://rdaregistry.info/Elements/a/object/P50123> ;
     skos:definition "Met un item en relation avec une personne qui relie un item."@fr, "Relates an item to a person who binds an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40014>
     rdakit:instructionNumber "18.5" ;
     rdakit:toolkitDefinition "A person who has written a statement of dedication or gift on an item."@en, "Personne qui a écrit une dédicace ou une mention de don sur un item."@fr, "Una persona que ha escrito una mención de dedicatoria o donación en un ítem."@es ;
     rdakit:toolkitLabel "autor de dedicatoria"@es, "dédicateur (item)"@fr, "inscriber"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40014>, <http://rdaregistry.info/Elements/i/object/P40014> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40014> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60460> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/inscriber.en> ;
     reg:name "inscriber"@en ;
@@ -243,16 +226,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour dédicateur (item)"@fr, "has inscriber"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50125>, <http://rdaregistry.info/Elements/a/object/P50125> ;
     skos:definition "Met un item en relation avec une personne qui a écrit une dédicace ou une mention de don sur un item."@fr, "Relates an item to a person who has written a statement of dedication or gift on an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40015>
     rdakit:instructionNumber "18.5" ;
     rdakit:toolkitDefinition "A person who makes manuscript annotations on an item."@en, "Personne qui rédige des annotations manuscrites sur un item."@fr, "Una persona que hace anotaciones manuscritas en un ítem."@es ;
     rdakit:toolkitLabel "annotateur"@fr, "annotator"@en, "anotador"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40015>, <http://rdaregistry.info/Elements/i/object/P40015> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40015> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60464> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/annotator.en> ;
     reg:name "annotator"@en ;
@@ -261,16 +242,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour annotateur"@fr, "has annotator"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50128>, <http://rdaregistry.info/Elements/a/object/P50128> ;
     skos:definition "Met un item en relation avec une personne qui rédige des annotations manuscrites sur un item."@fr, "Relates an item to a person who makes manuscript annotations on an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40016>
     rdakit:instructionNumber "18.5" ;
     rdakit:toolkitDefinition "A person whose manuscript signature appears on an item."@en, "Personne dont la signature manuscrite figure sur un item."@fr, "Una persona cuya firma manuscrita aparece en un ítem."@es ;
     rdakit:toolkitLabel "autographer"@en, "firmante de autógrafo"@es, "signataire autographe"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40016>, <http://rdaregistry.info/Elements/i/object/P40016> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40016> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60466> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/autographer.en> ;
     reg:name "autographer"@en ;
@@ -279,16 +258,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour signataire autographe"@fr, "has autographer"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50129>, <http://rdaregistry.info/Elements/a/object/P50129> ;
     skos:definition "Met un item en relation avec une personne dont la signature manuscrite figure sur un item."@fr, "Relates an item to a person whose manuscript signature appears on an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40017>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body conceiving, aggregating, and/or organizing an exhibition, collection, or other item."@en, "Personne, famille ou collectivité concevant, regroupant et/ou organisant une exposition, une collection ou un autre item."@fr, "Una persona, familia o entidad corporativa que concibe, agrega y/o organiza una exhibición, colección u otro ítem."@es ;
+    rdakit:toolkitDefinition "An agent conceiving, aggregating, or organizing an exhibition, collection, or other item."@en, "Personne, famille ou collectivité concevant, regroupant et/ou organisant une exposition, une collection ou un autre item."@fr, "Una persona, familia o entidad corporativa que concibe, agrega y/o organiza una exhibición, colección u otro ítem."@es ;
     rdakit:toolkitLabel "conservateur"@fr, "curador"@es, "curator"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40004>, <http://rdaregistry.info/Elements/i/P40005>, <http://rdaregistry.info/Elements/i/datatype/P40017>, <http://rdaregistry.info/Elements/i/object/P40017> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40004>, <http://rdaregistry.info/Elements/i/P40005>, <http://rdaregistry.info/Elements/i/object/P40017> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60376> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/curator.en> ;
     reg:name "curator"@en ;
@@ -297,16 +274,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour conservateur"@fr, "has curator"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50133>, <http://rdaregistry.info/Elements/a/object/P50133> ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité concevant, regroupant et/ou organisant une exposition, une collection ou un autre item."@fr, "Relates an item to a person, family, or corporate body conceiving, aggregating, and/or organizing an exhibition, collection, or other item."@en .
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité concevant, regroupant et/ou organisant une exposition, une collection ou un autre item."@fr, "Relates an item to an agent conceiving, aggregating, or organizing an exhibition, collection, or other item."@en .
 
 <http://rdaregistry.info/Elements/i/P40018>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body currently having legal possession of an item."@en, "Personne, famille ou collectivité possédant légalement un item."@fr, "Una persona, familia o entidad corporativa que actualmente tiene la posesión legal de un ítem."@es ;
+    rdakit:toolkitDefinition "An agent currently having legal possession of an item."@en, "Personne, famille ou collectivité possédant légalement un item."@fr, "Una persona, familia o entidad corporativa que actualmente tiene la posesión legal de un ítem."@es ;
     rdakit:toolkitLabel "current owner"@en, "propietario actual"@es, "propriétaire actuel"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40006>, <http://rdaregistry.info/Elements/i/datatype/P40018>, <http://rdaregistry.info/Elements/i/object/P40018> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40006>, <http://rdaregistry.info/Elements/i/object/P40018> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60400> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/currentOwner.en> ;
     reg:name "currentOwner"@en ;
@@ -315,16 +290,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour propriétaire actuel"@fr, "has current owner"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40021> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50162>, <http://rdaregistry.info/Elements/a/object/P50162> ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité possédant légalement un item."@fr, "Relates an item to a person, family, or corporate body currently having legal possession of an item."@en .
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité possédant légalement un item."@fr, "Relates an item to an agent currently having legal possession of an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40019>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body formerly having legal possession of an item."@en, "Personne, famille ou collectivité ayant auparavant possédé légalement un item."@fr, "Una persona, familia o entidad corporativa que tuvo anteriormente la posesión legal de un ítem."@es ;
+    rdakit:toolkitDefinition "An agent formerly having legal possession of an item."@en, "Personne, famille ou collectivité ayant auparavant possédé légalement un item."@fr, "Una persona, familia o entidad corporativa que tuvo anteriormente la posesión legal de un ítem."@es ;
     rdakit:toolkitLabel "ancien propriétaire"@fr, "former owner"@en, "propietario anterior"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40007>, <http://rdaregistry.info/Elements/i/P40008>, <http://rdaregistry.info/Elements/i/datatype/P40019>, <http://rdaregistry.info/Elements/i/object/P40019> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40007>, <http://rdaregistry.info/Elements/i/P40008>, <http://rdaregistry.info/Elements/i/object/P40019> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60401> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/formerOwner.en> ;
     reg:name "formerOwner"@en ;
@@ -333,16 +306,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour ancien propriétaire"@fr, "has former owner"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40021> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50163>, <http://rdaregistry.info/Elements/a/object/P50163> ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité ayant auparavant possédé légalement un item."@fr, "Relates an item to a person, family, or corporate body formerly having legal possession of an item."@en .
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité ayant auparavant possédé légalement un item."@fr, "Relates an item to an agent formerly having legal possession of an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40020>
     rdakit:instructionNumber "22.3" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body having legal custody of an item."@en, "Personne, famille ou collectivité à qui est confiée la garde légale d’un item."@fr, "Una persona, familia o entidad corporativa que tiene la custodia legal de un ítem."@es ;
-    rdakit:toolkitLabel "custodian"@en, "custodio"@es, "dépositaire"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40020>, <http://rdaregistry.info/Elements/i/object/P40020> ;
+    rdakit:toolkitDefinition "An agent having legal custody of an item."@en, "Personne, famille ou collectivité à qui est confiée la garde légale d’un item."@fr, "Una persona, familia o entidad corporativa que tiene la custodia legal de un ítem."@es ;
+    rdakit:toolkitLabel "custodian"@en, "custodio"@es, "dépositaire"@fr, "förvaltare"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40020> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60402> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/custodian.en> ;
     reg:name "custodian"@en ;
@@ -350,16 +321,15 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour dépositaire"@fr, "has custodian"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50164>, <http://rdaregistry.info/Elements/a/object/P50164> ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité à qui est confiée la garde légale d’un item."@fr, "Relates an item to a person, family, or corporate body having legal custody of an item."@en .
+    rdfs:label "a pour dépositaire"@fr, "har förvaltare"@sv, "has custodian"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40072> ;
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité à qui est confiée la garde légale d’un item."@fr, "Relates an item to an agent having legal custody of an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40021>
     rdakit:instructionNumber "22.2" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body having legal possession of an item."@en, "Personne, famille ou collectivité possédant légalement un item."@fr, "Una persona, familia o entidad corporativa que detenta la posesión legal de un ítem (es decir, una copia específica o una instancia de un recurso)."@es ;
-    rdakit:toolkitLabel "owner"@en, "propietario"@es, "propriétaire"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40018>, <http://rdaregistry.info/Elements/i/P40019>, <http://rdaregistry.info/Elements/i/datatype/P40021>, <http://rdaregistry.info/Elements/i/object/P40021> ;
+    rdakit:toolkitDefinition "An agent having legal possession of an item."@en, "Personne, famille ou collectivité possédant légalement un item."@fr, "Una persona, familia o entidad corporativa que detenta la posesión legal de un ítem (es decir, una copia específica o una instancia de un recurso)."@es ;
+    rdakit:toolkitLabel "owner"@en, "propietario"@es, "propriétaire"@fr, "ägare"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40018>, <http://rdaregistry.info/Elements/i/P40019>, <http://rdaregistry.info/Elements/i/object/P40021> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60404> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/owner.en> ;
     reg:name "owner"@en ;
@@ -367,16 +337,15 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour propriétaire"@fr, "has owner"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50165>, <http://rdaregistry.info/Elements/a/object/P50165> ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité possédant légalement un item."@fr, "Relates an item to a person, family, or corporate body having legal possession of an item."@en .
+    rdfs:label "a pour propriétaire"@fr, "har ägare"@sv, "has owner"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40072> ;
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité possédant légalement un item."@fr, "Relates an item to an agent having legal possession of an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40022>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body honoured by an item."@en, "Personne, famille ou collectivité honorée par un item, par exemple, une personne à qui un exemplaire est offert."@fr, "Una persona, familia o entidad corporativa en cuyo honor se realiza un ítem, por ej., una persona a la cual se le brinda una copia."@es ;
+    rdakit:toolkitDefinition "An agent honoured by an item."@en, "Personne, famille ou collectivité honorée par un item, par exemple, une personne à qui un exemplaire est offert."@fr, "Una persona, familia o entidad corporativa en cuyo honor se realiza un ítem, por ej., una persona a la cual se le brinda una copia."@es ;
     rdakit:toolkitLabel "entité honorée (item)"@fr, "homenajeado en el ítem"@es, "honouree (item)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40022>, <http://rdaregistry.info/Elements/i/object/P40022> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40022> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60406> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/honoureeOfItem.en> ;
     reg:name "honoureeOfItem"@en ;
@@ -385,17 +354,15 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour entité honorée (item)"@fr, "has honouree (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50167>, <http://rdaregistry.info/Elements/a/object/P50167> ;
     skos:altLabel "has honoree (item)"@en ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité honorée par un item, par exemple, une personne à qui un exemplaire est offert."@fr, "Relates an item to a person, family, or corporate body honoured by an item."@en .
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité honorée par un item, par exemple, une personne à qui un exemplaire est offert."@fr, "Relates an item to an agent honoured by an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40023>
     rdakit:instructionNumber "22.4" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body other than an owner or custodian associated with an item."@en, "Personne, famille ou collectivité, autre qu’un propriétaire ou un dépositaire, associée à un item."@fr, "Una persona, familia o entidad corporativa (diferente a un propietario o custodio), asociada con un ítem."@es ;
-    rdakit:toolkitLabel "autre personne, famille ou collectivité associée à un item"@fr, "other person, family, or corporate body associated with an item"@en, "otra persona, familia o entidad corporativa asociada con un ítem"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40012>, <http://rdaregistry.info/Elements/i/P40013>, <http://rdaregistry.info/Elements/i/P40014>, <http://rdaregistry.info/Elements/i/P40015>, <http://rdaregistry.info/Elements/i/P40016>, <http://rdaregistry.info/Elements/i/P40017>, <http://rdaregistry.info/Elements/i/P40022>, <http://rdaregistry.info/Elements/i/P40024>, <http://rdaregistry.info/Elements/i/P40025>, <http://rdaregistry.info/Elements/i/datatype/P40023>, <http://rdaregistry.info/Elements/i/object/P40023> ;
+    rdakit:toolkitDefinition "An agent other than an owner or custodian associated with an item."@en, "Personne, famille ou collectivité, autre qu’un propriétaire ou un dépositaire, associée à un item."@fr, "Una persona, familia o entidad corporativa (diferente a un propietario o custodio), asociada con un ítem."@es ;
+    rdakit:toolkitLabel "autre personne, famille ou collectivité associée à un item"@fr, "other person, family, or corporate body associated with an item"@en, "otra persona, familia o entidad corporativa asociada con un ítem"@es, "övrig person, familj/släkt eller institution knuten till ett exemplar"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40012>, <http://rdaregistry.info/Elements/i/P40013>, <http://rdaregistry.info/Elements/i/P40014>, <http://rdaregistry.info/Elements/i/P40015>, <http://rdaregistry.info/Elements/i/P40016>, <http://rdaregistry.info/Elements/i/P40017>, <http://rdaregistry.info/Elements/i/P40022>, <http://rdaregistry.info/Elements/i/P40024>, <http://rdaregistry.info/Elements/i/P40025>, <http://rdaregistry.info/Elements/i/object/P40023> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60374> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/otherPFCItem.en> ;
     reg:name "otherPFCItem"@en ;
@@ -403,17 +370,16 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour autre personne, famille ou collectivité associée à un item"@fr, "has other person, family, or corporate body associated with an item"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50182>, <http://rdaregistry.info/Elements/a/object/P50182> ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité, autre qu’un propriétaire ou un dépositaire, associée à un item."@fr, "Relates an item to a person, family, or corporate body other than an owner or custodian associated with an item."@en ;
+    rdfs:label "a pour autre personne, famille ou collectivité associée à un item"@fr, "har övrig person, familj/släkt eller institution knuten till ett exemplar"@sv, "has other person, family, or corporate body associated with an item"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40072> ;
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité, autre qu’un propriétaire ou un dépositaire, associée à un item."@fr, "Relates an item to an agent other than an owner or custodian associated with an item."@en ;
     skos:scopeNote "Comprend les conservateurs, les relieurs, les restaurateurs, etc."@fr, "Curators, binders, restorationists, etc., are included."@en .
 
 <http://rdaregistry.info/Elements/i/P40024>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of an item by bringing it back to a state as close as possible to its original condition."@en, "Personne, famille ou collectivité responsable de l’ensemble des procédures techniques, éditoriales et intellectuelles destinées à compenser la dégradation d’un item en le ramenant à un état aussi près que possible de sa condition originelle."@fr, "Una persona, familia o entidad corporativa responsable del conjunto de procedimientos técnicos, editoriales e intelectuales orientados a compensar la degradación de un ítem devolviéndolo a un estado lo más cercano posible a su estado original."@es ;
+    rdakit:toolkitDefinition "An agent responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of an item by bringing it back to a state as close as possible to its original condition."@en, "Personne, famille ou collectivité responsable de l’ensemble des procédures techniques, éditoriales et intellectuelles destinées à compenser la dégradation d’un item en le ramenant à un état aussi près que possible de sa condition originelle."@fr, "Una persona, familia o entidad corporativa responsable del conjunto de procedimientos técnicos, editoriales e intelectuales orientados a compensar la degradación de un ítem devolviéndolo a un estado lo más cercano posible a su estado original."@es ;
     rdakit:toolkitLabel "restaurador"@es, "restaurateur"@fr, "restorationist (item)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40024>, <http://rdaregistry.info/Elements/i/object/P40024> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40024> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60450> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/restorationistItem.en> ;
     reg:name "restorationistItem"@en ;
@@ -422,16 +388,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour restaurateur"@fr, "has restorationist (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50206>, <http://rdaregistry.info/Elements/a/object/P50206> ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité responsable de l’ensemble des procédures techniques, éditoriales et intellectuelles destinées à compenser la dégradation d’un item en le ramenant à un état aussi près que possible de sa condition originelle."@fr, "Relates an item to a person, family, or corporate body responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of an item by bringing it back to a state as close as possible to its original condition."@en .
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité responsable de l’ensemble des procédures techniques, éditoriales et intellectuelles destinées à compenser la dégradation d’un item en le ramenant à un état aussi près que possible de sa condition originelle."@fr, "Relates an item to an agent responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of an item by bringing it back to a state as close as possible to its original condition."@en .
 
 <http://rdaregistry.info/Elements/i/P40025>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A person, family, or corporate body to whom an item is dedicated."@en, "Personne, famille ou collectivité à qui un item est dédié."@fr, "Una persona, familia o entidad corporativa a la cual se dedica un ítem."@es ;
+    rdakit:toolkitDefinition "An agent to whom an item is dedicated."@en, "Personne, famille ou collectivité à qui un item est dédié."@fr, "Una persona, familia o entidad corporativa a la cual se dedica un ítem."@es ;
     rdakit:toolkitLabel "dedicatee (item)"@en, "destinatario de dedicatoria en el ítem"@es, "dédicataire (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40025>, <http://rdaregistry.info/Elements/i/object/P40025> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40025> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60455> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/dedicateeOfItem.en> ;
     reg:name "dedicateeOfItem"@en ;
@@ -440,16 +404,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour dédicataire (item)"@fr, "has dedicatee (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40023> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/a/P50210>, <http://rdaregistry.info/Elements/a/object/P50210> ;
-    skos:definition "Met un item en relation avec une personne, famille ou collectivité à qui un item est dédié."@fr, "Relates an item to a person, family, or corporate body to whom an item is dedicated."@en .
+    skos:definition "Met un item en relation avec une personne, famille ou collectivité à qui un item est dédié."@fr, "Relates an item to an agent to whom an item is dedicated."@en .
 
 <http://rdaregistry.info/Elements/i/P40026>
     rdakit:instructionNumber "2.18" ;
     rdakit:toolkitDefinition "A record of previous ownership or custodianship of an item."@en, "Enregistrement de la propriété ou de la garde antérieure d’un item."@fr, "Un registro de la propiedad anterior o custodia de un ítem."@es ;
     rdakit:toolkitLabel "custodial history of item"@en, "historia de la custodia del ítem"@es, "historique de la garde d’un item"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40026>, <http://rdaregistry.info/Elements/i/object/P40026> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40026> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60176> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/custodialHistoryOfItem.en> ;
     reg:name "custodialHistoryOfItem"@en ;
@@ -464,7 +426,7 @@
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item in an analog format that is transferred to a digital format."@en, "Item sur support analogique qui a été transféré dans un format numérique."@fr, "Un ítem en un formato digital que es el resultado de la transferencia de un ítem en un formato analógico."@es ;
     rdakit:toolkitLabel "electronic reproduction of (item)"@en, "reproducción electrónica (ítem)"@es, "reproduction électronique de (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40027>, <http://rdaregistry.info/Elements/i/object/P40027> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40027> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60469> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/electronicReproductionOfItem.en> ;
     reg:name "electronicReproductionOfItem"@en ;
@@ -473,16 +435,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est la reproduction électronique de (item)"@fr, "is electronic reproduction of (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40042> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40057> ;
     skos:definition "Met un item en relation avec un item sur support analogique qui a été transféré dans un format numérique."@fr, "Relates an item to an item in an analog format that is transferred to a digital format."@en .
 
 <http://rdaregistry.info/Elements/i/P40028>
     rdakit:instructionNumber "2.21" ;
-    rdakit:toolkitDefinition "A note providing information on attributes of the item."@en, "Note fournissant de l’information sur les attributs de l’item."@fr, "Una nota que proporciona información sobre los atributos del ítem."@es ;
-    rdakit:toolkitLabel "nota sobre el ítem"@es, "note on item"@en, "note sur l’item"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40028>, <http://rdaregistry.info/Elements/i/object/P40028> ;
+    rdakit:toolkitDefinition "A note providing information on attributes of an item."@en, "Note fournissant de l’information sur les attributs de l’item."@fr, "Una nota que proporciona información sobre los atributos del ítem."@es ;
+    rdakit:toolkitLabel "anmärkning om exemplaret"@sv, "nota sobre el ítem"@es, "note on item"@en, "note sur l’item"@fr ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40028> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60470> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/noteOnItem.en> ;
     reg:name "noteOnItem"@en ;
@@ -490,14 +450,14 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour note sur l’item"@fr, "has note on item"@en ;
-    skos:definition "Met un item en relation avec une note fournissant de l’information sur les attributs de l’item."@fr, "Relates an item to a note providing information on attributes of the item."@en .
+    rdfs:label "a pour note sur l’item"@fr, "har anmärkning om exemplaret"@sv, "has note on item"@en ;
+    skos:definition "Met un item en relation avec une note fournissant de l’information sur les attributs de l’item."@fr, "Relates an item to a note providing information on attributes of an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40029>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item brought together with another item after being issued."@en, "Item placé avec un autre item après publication."@fr, "Un ítem que se ha unido con otro ítem después de su publicación."@es ;
     rdakit:toolkitLabel "accompagné de (item)"@fr, "accompanied by (item)"@en, "acompañado por (ítem)"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40032>, <http://rdaregistry.info/Elements/i/P40035>, <http://rdaregistry.info/Elements/i/P40036>, <http://rdaregistry.info/Elements/i/datatype/P40029>, <http://rdaregistry.info/Elements/i/object/P40029> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40032>, <http://rdaregistry.info/Elements/i/P40035>, <http://rdaregistry.info/Elements/i/P40036>, <http://rdaregistry.info/Elements/i/object/P40029> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60196> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/accompaniedByItem.en> ;
     reg:name "accompaniedByItem"@en ;
@@ -506,9 +466,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est accompagné de (item)"@fr, "is accompanied by (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40051> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40029> ;
     skos:definition "Met un item en relation avec un item placé avec un autre item après publication."@fr, "Relates an item to an item brought together with another item after being issued."@en .
 
 <http://rdaregistry.info/Elements/i/P40030>
@@ -522,7 +480,7 @@
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that exemplifies a manifestation that embodies the same expression of a work."@en, "Item qui représente une manifestation matérialisant la même expression d’une œuvre."@fr, "Un ítem que ejemplifica una manifestación que materializa la misma expresión de una obra."@es ;
     rdakit:toolkitLabel "equivalent (item)"@en, "equivalente (ítem)"@es, "équivalent (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40042>, <http://rdaregistry.info/Elements/i/P40055>, <http://rdaregistry.info/Elements/i/datatype/P40031>, <http://rdaregistry.info/Elements/i/object/P40031> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40042>, <http://rdaregistry.info/Elements/i/P40055>, <http://rdaregistry.info/Elements/i/object/P40031> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60191> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/equivalentItem.en> ;
     reg:name "equivalentItem"@en ;
@@ -531,16 +489,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est l’équivalent (item)"@fr, "is equivalent (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40053> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40031> ;
     skos:definition "Met un item en relation avec un item qui représente une manifestation matérialisant la même expression d’une œuvre."@fr, "Relates an item to an item that exemplifies a manifestation that embodies the same expression of a work."@en .
 
 <http://rdaregistry.info/Elements/i/P40032>
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "An item that has been bound within the same binding as the item being described."@en, "Item qui a été relié à l’intérieur de la même reliure que l’item décrit."@fr, "Un ítem que se ha incluido con la misma encuadernación que el ítem descrito."@es ;
+    rdakit:toolkitDefinition "An item that has been bound within the same binding as an item being described."@en, "Item qui a été relié à l’intérieur de la même reliure que l’item décrit."@fr, "Un ítem que se ha incluido con la misma encuadernación que el ítem descrito."@es ;
     rdakit:toolkitLabel "bound with"@en, "encuadernado con"@es, "relié avec"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40032>, <http://rdaregistry.info/Elements/i/object/P40032> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40032> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60237> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/boundWith.en> ;
     reg:name "boundWith"@en ;
@@ -549,10 +505,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est relié avec"@fr, "is bound with"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40029> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40032> ;
-    skos:definition "Met un item en relation avec un item qui a été relié à l’intérieur de la même reliure que l’item décrit."@fr, "Relates an item to an item that has been bound within the same binding as the item being described."@en .
+    skos:definition "Met un item en relation avec un item qui a été relié à l’intérieur de la même reliure que l’item décrit."@fr, "Relates an item to an item that has been bound within the same binding as an item being described."@en .
 
 <http://rdaregistry.info/Elements/i/P40033>
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
@@ -564,7 +518,7 @@
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that is a discrete component of a larger item."@en, "Item qui est une composante distincte d’un item plus vaste."@fr, "Un ítem que es un componente separado de un ítem mayor."@es ;
     rdakit:toolkitLabel "container of (item)"@en, "conteneur de (item)"@fr, "contiene (ítem)"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40034>, <http://rdaregistry.info/Elements/i/object/P40034> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40034> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60249> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/containerOfItem.en> ;
     reg:name "containerOfItem"@en ;
@@ -573,16 +527,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est le conteneur de (item)"@fr, "is container of (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40054> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40009> ;
     skos:definition "Met un item en relation avec un item qui est une composante distincte d’un item plus vaste."@fr, "Relates an item to an item that is a discrete component of a larger item."@en .
 
 <http://rdaregistry.info/Elements/i/P40035>
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "An item that is contained on the same disc with the item being described."@en, "Item qui est contenu sur le même disque que l’item décrit."@fr, "Un ítem que se incluye en el mismo disco que el ítem descrito."@es ;
+    rdakit:toolkitDefinition "An item that is contained on the same disc with an item being described."@en, "Item qui est contenu sur le même disque que l’item décrit."@fr, "Un ítem que se incluye en el mismo disco que el ítem descrito."@es ;
     rdakit:toolkitLabel "en disco con (ítem)"@es, "on disc with (item)"@en, "sur le disque avec (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40035>, <http://rdaregistry.info/Elements/i/object/P40035> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40035> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60257> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/onDiscWithItem.en> ;
     reg:name "onDiscWithItem"@en ;
@@ -591,16 +543,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est sur le disque avec (item)"@fr, "is on disc with (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40029> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40035> ;
-    skos:definition "Met un item en relation avec un item qui est contenu sur le même disque que l’item décrit."@fr, "Relates an item to an item that is contained on the same disc with the item being described."@en .
+    skos:definition "Met un item en relation avec un item qui est contenu sur le même disque que l’item décrit."@fr, "Relates an item to an item that is contained on the same disc with an item being described."@en .
 
 <http://rdaregistry.info/Elements/i/P40036>
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "An item that is contained on the same microform with the item being described."@en, "Item qui est contenu sur la même microforme que l’item décrit."@fr, "Un ítem que se incluye en la misma microforma que el ítem descrito."@es ;
+    rdakit:toolkitDefinition "An item that is contained on the same microform with an item being described."@en, "Item qui est contenu sur la même microforme que l’item décrit."@fr, "Un ítem que se incluye en la misma microforma que el ítem descrito."@es ;
     rdakit:toolkitLabel "filmado con (ítem)"@es, "filmed with (item)"@en, "filmé avec (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40036>, <http://rdaregistry.info/Elements/i/object/P40036> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40036> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60258> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/filmedWithItem.en> ;
     reg:name "filmedWithItem"@en ;
@@ -609,10 +559,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est filmé avec (item)"@fr, "is filmed with (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40029> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40036> ;
-    skos:definition "Met un item en relation avec un item qui est contenu sur la même microforme que l’item décrit."@fr, "Relates an item to an item that is contained on the same microform with the item being described."@en .
+    skos:definition "Met un item en relation avec un item qui est contenu sur la même microforme que l’item décrit."@fr, "Relates an item to an item that is contained on the same microform with an item being described."@en .
 
 <http://rdaregistry.info/Elements/i/P40037>
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
@@ -624,7 +572,7 @@
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that exemplifies a printed manifestation that is used as the basis for a reissue of a manifestation."@en, "Item qui représente une manifestation imprimée servant de base à une réédition d’une manifestation."@fr, "Un ítem que ejemplifica una manifestación impresa que se usa como base para una reedición de una manifestación."@es ;
     rdakit:toolkitLabel "reimpresión de (ítem)"@es, "reprint of (item)"@en, "réimpression de (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40038>, <http://rdaregistry.info/Elements/i/object/P40038> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40038> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60168> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/reprintOfItem.en> ;
     reg:name "reprintOfItem"@en ;
@@ -633,16 +581,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est la réimpression de (item)"@fr, "is reprint of (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40042> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40060> ;
     skos:definition "Met un item en relation avec un item qui représente une manifestation imprimée servant de base à une réédition d’une manifestation."@fr, "Relates an item to an item that exemplifies a printed manifestation that is used as the basis for a reissue of a manifestation."@en .
 
 <http://rdaregistry.info/Elements/i/P40039>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item in a digital format that is transferred to another digital format."@en, "Item en format numérique qui a été transféré dans un format numérique différent."@fr, "Un ítem en un formato digital que es transferido a otro formato digital."@es ;
     rdakit:toolkitLabel "digital transfer of (item)"@en, "transferencia digital de (ítem)"@es, "transfert numérique de (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40039>, <http://rdaregistry.info/Elements/i/object/P40039> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40039> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60287> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/digitalTransferOfItem.en> ;
     reg:name "digitalTransferOfItem"@en ;
@@ -651,9 +597,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est le transfert numérique de (item)"@fr, "is digital transfer of (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40042> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40056> ;
     skos:definition "Met un item en relation avec un item en format numérique qui a été transféré dans un format numérique différent."@fr, "Relates an item to an item in a digital format that is transferred to another digital format."@en .
 
 <http://rdaregistry.info/Elements/i/P40040>
@@ -672,7 +616,7 @@
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that is used as the basis for a reproduction."@en, "Item servant de base à une reproduction."@fr, "Un ítem que es usado como base para una reproducción."@es ;
     rdakit:toolkitLabel "reproducción de (ítem)"@es, "reproduction de (item)"@fr, "reproduction of (item)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40027>, <http://rdaregistry.info/Elements/i/P40038>, <http://rdaregistry.info/Elements/i/P40039>, <http://rdaregistry.info/Elements/i/P40045>, <http://rdaregistry.info/Elements/i/datatype/P40042>, <http://rdaregistry.info/Elements/i/object/P40042> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40027>, <http://rdaregistry.info/Elements/i/P40038>, <http://rdaregistry.info/Elements/i/P40039>, <http://rdaregistry.info/Elements/i/P40045>, <http://rdaregistry.info/Elements/i/object/P40042> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60297> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/reproductionOfItem.en> ;
     reg:name "reproductionOfItem"@en ;
@@ -681,9 +625,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est la reproduction de (item)"@fr, "is reproduction of (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40031> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40055> ;
     skos:definition "Met un item en relation avec un item servant de base à une reproduction."@fr, "Relates an item to an item that is used as the basis for a reproduction."@en .
 
 <http://rdaregistry.info/Elements/i/P40043>
@@ -696,7 +638,7 @@
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that is used as the basis for an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper."@en, "Item servant de base à une reproduction exacte sur un support de qualité conservation, tel qu’un papier permanent sans acide ou un papier d’archivage."@fr, "Un ítem utilizado como base para una reproducción exacta sobre un medio con calidad de preservación, tal como papel libre de ácido o papel de archivo."@es ;
     rdakit:toolkitLabel "fac-similé de conservation de (item)"@fr, "facsímil de preservación de (ítem)"@es, "preservation facsimile of (item)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40044>, <http://rdaregistry.info/Elements/i/object/P40044> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40044> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60299> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/preservationFacsimileOfItem.en> ;
     reg:name "preservationFacsimileOfItem"@en ;
@@ -705,16 +647,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est fac-le similé de conservation de (item)"@fr, "is preservation facsimile of (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40045> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40059> ;
     skos:definition "Met un item en relation avec un item servant de base à une reproduction exacte sur un support de qualité conservation, tel qu’un papier permanent sans acide ou un papier d’archivage."@fr, "Relates an item to an item that is used as the basis for an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper."@en .
 
 <http://rdaregistry.info/Elements/i/P40045>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that is used as the basis for an exact reproduction."@en, "Item servant de base à une reproduction exacte."@fr, "Un ítem utilizado como base para una reproducción exacta."@es ;
     rdakit:toolkitLabel "fac-similé de (item)"@fr, "facsimile of (item)"@en, "facsímil de (ítem)"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40044>, <http://rdaregistry.info/Elements/i/datatype/P40045>, <http://rdaregistry.info/Elements/i/object/P40045> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40044>, <http://rdaregistry.info/Elements/i/object/P40045> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60301> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/facsimileOfItem.en> ;
     reg:name "facsimileOfItem"@en ;
@@ -723,32 +663,28 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est le fac-similé de (item)"@fr, "is facsimile of (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40042> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40058> ;
     skos:definition "Met un item en relation avec un item servant de base à une reproduction exacte."@fr, "Relates an item to an item that is used as the basis for an exact reproduction."@en .
 
 <http://rdaregistry.info/Elements/i/P40046>
-    rdakit:instructionNumber "28.1" ;
-    rdakit:toolkitDefinition "An item that is associated with the item being described."@en, "Un ítem, representado por identificador o una descripción, que está relacionada con el recurso que se describe (p.ej., un ítem utilizado como base para una reproducción de una microforma)."@es, "item qui est représenté par un identifiant ou une description et qui est en relation avec l’item décrit (par exemple, un item servant de base à une reproduction en microforme)."@fr ;
-    rdakit:toolkitLabel "item en relation"@fr, "related item"@en, "ítem relacionado"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40051>, <http://rdaregistry.info/Elements/i/P40052>, <http://rdaregistry.info/Elements/i/P40053>, <http://rdaregistry.info/Elements/i/P40054>, <http://rdaregistry.info/Elements/i/datatype/P40046>, <http://rdaregistry.info/Elements/i/object/P40046> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedItem.en> ;
-    reg:name "relatedItem"@en ;
+    rdakit:toolkitLabel "relaterat exemplar"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40051>, <http://rdaregistry.info/Elements/i/P40052>, <http://rdaregistry.info/Elements/i/P40053>, <http://rdaregistry.info/Elements/i/P40054>, <http://rdaregistry.info/Elements/i/object/P40046> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedItemItem.en> ;
+    reg:name "relatedItemItem"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour item en relation de l’item"@fr, "has related item"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40046> ;
-    skos:definition "Met un item en relation avec un item qui est représenté par un identifiant ou une description et qui est en relation avec l’item décrit (par exemple, un item servant de base à une reproduction en microforme)."@fr, "Relates an item to an item that is associated with the item being described."@en .
+    rdfs:label "har relaterat exemplar"@sv, "has related item (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40068> ;
+    skos:definition "Relates an item to an item associated with an item being described."@en .
 
 <http://rdaregistry.info/Elements/i/P40047>
     rdakit:instructionNumber "4.4" ;
     rdakit:toolkitDefinition "A limitation placed on access to an item."@en, "Limitaciones establecidas para el acceso a un recurso."@es, "Limitations imposées sur l’accès à une ressource."@fr ;
-    rdakit:toolkitLabel "restricciones de acceso"@es, "restriction on access to item"@en, "restrictions d’accès"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40047>, <http://rdaregistry.info/Elements/i/object/P40047> ;
+    rdakit:toolkitLabel "restricciones de acceso"@es, "restriction on access to item"@en, "restrictions d’accès"@fr, "åtkomstrestriktioner"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40047> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60496> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/restrictionOnAccessToItem.en> ;
     reg:name "restrictionOnAccessToItem"@en ;
@@ -756,14 +692,14 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour restrictions d’accès"@fr, "has restriction on access to item"@en ;
+    rdfs:label "a pour restrictions d’accès"@fr, "har åtkomstrestriktioner"@sv, "has restriction on access to item"@en ;
     skos:definition "Met un item en relation avec des limitations imposées sur l’accès à une ressource."@fr, "Relates an item to a limitation placed on access to an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40048>
     rdakit:instructionNumber "4.5" ;
     rdakit:toolkitDefinition "A limitation placed on reproduction, publication, exhibition, etc., of an item."@en, "Limitaciones establecidas sobre los usos, tales como reproducción, publicación, exhibición, etc."@es, "Limitations imposées sur des usages tels que la reproduction, la publication, l’exposition, etc."@fr ;
-    rdakit:toolkitLabel "restricciones sobre el uso"@es, "restriction on use of item"@en, "restrictions d’usage"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40048>, <http://rdaregistry.info/Elements/i/object/P40048> ;
+    rdakit:toolkitLabel "användningsrestriktioner"@sv, "restricciones sobre el uso"@es, "restriction on use of item"@en, "restrictions d’usage"@fr ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40048> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60497> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/restrictionOnUseOfItem.en> ;
     reg:name "restrictionOnUseOfItem"@en ;
@@ -771,30 +707,28 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour restrictions d’usage"@fr, "has restriction on use of item"@en ;
+    rdfs:label "a pour restrictions d’usage"@fr, "har användningsrestriktioner"@sv, "has restriction on use of item"@en ;
     skos:definition "Met un item en relation avec des limitations imposées sur des usages tels que la reproduction, la publication, l’exposition, etc."@fr, "Relates an item to a limitation placed on reproduction, publication, exhibition, etc., of an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40049>
     rdakit:instructionNumber "17.12" ;
     rdakit:toolkitDefinition "A manifestation exemplified by an item."@en, "La manifestación ejemplificada en un ítem."@es, "La manifestation représentée par un item."@fr ;
-    rdakit:toolkitLabel "manifestación ejemplificada"@es, "manifestation exemplified"@en, "manifestation représentée"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40049>, <http://rdaregistry.info/Elements/i/object/P40049> ;
+    rdakit:toolkitLabel "exemplar av manifestation"@sv, "manifestación ejemplificada"@es, "manifestation exemplified"@en, "manifestation représentée"@fr ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40049> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/manifestationExemplified.en> ;
     reg:name "manifestationExemplified"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour manifestation représentée"@fr, "has manifestation exemplified"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/m/P30103> ;
+    rdfs:label "a pour manifestation représentée"@fr, "har exemplar av manifestationen"@sv, "has manifestation exemplified"@en ;
     skos:definition "Met un item en relation avec la manifestation représentée par un item."@fr, "Relates an item to a manifestation exemplified by an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40050>
     rdakit:instructionNumber "2.19" ;
     rdakit:toolkitDefinition "A source from which an agency directly acquired an item and the circumstances under which it was received."@en, "La fuente de la cual la agencia adquirió directamente un ítem y las circunstancias bajo las cuales se recibió."@es, "La source auprès de laquelle l’agence a directement acquis un item et les modalités de réception de celui-ci."@fr ;
-    rdakit:toolkitLabel "fuente inmediata de acquisición del ítem"@es, "immediate source of acquisition of item"@en, "source immédiate d’acquisition de l’item"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40050>, <http://rdaregistry.info/Elements/i/object/P40050> ;
+    rdakit:toolkitLabel "fuente inmediata de acquisición del ítem"@es, "immediate source of acquisition of item"@en, "senaste förvärvskälla"@sv, "source immédiate d’acquisition de l’item"@fr ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40050> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60583> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/immediateSourceOfAcquisitionOfItem.en> ;
     reg:name "immediateSourceOfAcquisitionOfItem"@en ;
@@ -802,14 +736,14 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:label "a pour source immédiate d’acquisition de l’item"@fr, "has immediate source of acquisition of item"@en ;
+    rdfs:label "a pour source immédiate d’acquisition de l’item"@fr, "har senaste förvärvskälla"@sv, "has immediate source of acquisition of item"@en ;
     skos:definition "Met un item en relation avec la source auprès de laquelle l’agence a directement acquis un item et les modalités de réception de celui-ci."@fr, "Relates an item to a source from which an agency directly acquired an item and the circumstances under which it was received."@en .
 
 <http://rdaregistry.info/Elements/i/P40051>
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "An item that accompanies or is accompanied by the item."@en, "Item qui accompagne ou est accompagné par l’item."@fr, "Un ítem que acompaña o está acompañado por el ítem."@es ;
+    rdakit:toolkitDefinition "An item that accompanies or is accompanied by an item."@en, "Item qui accompagne ou est accompagné par l’item."@fr, "Un ítem que acompaña o está acompañado por el ítem."@es ;
     rdakit:toolkitLabel "accompanying item relationship"@en, "relaciones de ítem acompañante"@es, "relation d’item d’accompagnement"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40029>, <http://rdaregistry.info/Elements/i/datatype/P40051>, <http://rdaregistry.info/Elements/i/object/P40051> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40029>, <http://rdaregistry.info/Elements/i/object/P40051> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60709> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/accompanyingItemRelationship.en> ;
     reg:name "accompanyingItemRelationship"@en ;
@@ -818,10 +752,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour relation d’item d’accompagnement"@fr, "has accompanying item relationship with"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40046> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40051> ;
-    skos:definition "Met un item en relation avec un item qui accompagne ou est accompagné par l’item."@fr, "Relates an item to an item that accompanies or is accompanied by the item."@en .
+    skos:definition "Met un item en relation avec un item qui accompagne ou est accompagné par l’item."@fr, "Relates an item to an item that accompanies or is accompanied by an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40052>
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40030> ;
@@ -832,9 +764,9 @@
 
 <http://rdaregistry.info/Elements/i/P40053>
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "An item that is equivalent to the item."@en, "Item qui est équivalent à l’item."@fr, "Un ítem que es equivalente al ítem."@es ;
+    rdakit:toolkitDefinition "An item that is equivalent to an item."@en, "Item qui est équivalent à l’item."@fr, "Un ítem que es equivalente al ítem."@es ;
     rdakit:toolkitLabel "equivalent item relationship"@en, "relaciones de ítem equivalente"@es, "relation d’item équivalent"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40031>, <http://rdaregistry.info/Elements/i/datatype/P40053>, <http://rdaregistry.info/Elements/i/object/P40053> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40031>, <http://rdaregistry.info/Elements/i/object/P40053> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60712> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/equivalentItemRelationship.en> ;
     reg:name "equivalentItemRelationship"@en ;
@@ -843,16 +775,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour relation d’item équivalent"@fr, "has equivalent item relationship with"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40046> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40053> ;
-    skos:definition "Met un item en relation avec un item qui est équivalent à l’item."@fr, "Relates an item to an item that is equivalent to the item."@en .
+    skos:definition "Met un item en relation avec un item qui est équivalent à l’item."@fr, "Relates an item to an item that is equivalent to an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40054>
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "An item that is contained in or contains the item."@en, "Item qui est contenu dans l’item ou contient l’item."@fr, "Un ítem que es incluido en, o contiene el ítem."@es ;
+    rdakit:toolkitDefinition "An item that is contained in or contains an item."@en, "Item qui est contenu dans l’item ou contient l’item."@fr, "Un ítem que es incluido en, o contiene el ítem."@es ;
     rdakit:toolkitLabel "relación del ítem todo-parte"@es, "relation d’item tout-partie"@fr, "whole-part item relationship"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40009>, <http://rdaregistry.info/Elements/i/P40034>, <http://rdaregistry.info/Elements/i/datatype/P40054>, <http://rdaregistry.info/Elements/i/object/P40054> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40009>, <http://rdaregistry.info/Elements/i/P40034>, <http://rdaregistry.info/Elements/i/object/P40054> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60714> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/wholePartItemRelationship.en> ;
     reg:name "wholePartItemRelationship"@en ;
@@ -861,15 +791,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour relation d’item tout-partie"@fr, "has whole-part item relationship with"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40046> ;
-    skos:definition "Met un item en relation avec un item qui est contenu dans l’item ou contient l’item."@fr, "Relates an item to an item that is contained in or contains the item."@en .
+    skos:definition "Met un item en relation avec un item qui est contenu dans l’item ou contient l’item."@fr, "Relates an item to an item that is contained in or contains an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40055>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that reproduces another item."@en, "Item qui reproduit un autre item."@fr, "Un ítem que reproduce otro ítem."@es ;
     rdakit:toolkitLabel "reproduced as (item)"@en, "reproducida como (ítem)"@es, "reproduit comme (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40056>, <http://rdaregistry.info/Elements/i/P40057>, <http://rdaregistry.info/Elements/i/P40058>, <http://rdaregistry.info/Elements/i/P40060>, <http://rdaregistry.info/Elements/i/datatype/P40055>, <http://rdaregistry.info/Elements/i/object/P40055> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40056>, <http://rdaregistry.info/Elements/i/P40057>, <http://rdaregistry.info/Elements/i/P40058>, <http://rdaregistry.info/Elements/i/P40060>, <http://rdaregistry.info/Elements/i/object/P40055> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60272> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/reproducedAsItem.en> ;
     reg:name "reproducedAsItem"@en ;
@@ -878,16 +807,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est reproduit comme (item)"@fr, "is reproduced as (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40031> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40042> ;
     skos:definition "Met un item en relation avec un item qui reproduit un autre item."@fr, "Relates an item to an item that reproduces another item."@en .
 
 <http://rdaregistry.info/Elements/i/P40056>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item in a digital format that results from the transfer of an item in another digital format."@en, "Item en format numérique qui résulte du transfert d’un item dans un format numérique différent."@fr, "Un ítem en un formato digital que resulta de la transferencia de un ítem en otro formato digital."@es ;
     rdakit:toolkitLabel "digital transfer (item)"@en, "transferencia digital (ítem)"@es, "transfert numérique (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40056>, <http://rdaregistry.info/Elements/i/object/P40056> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40056> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60200> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/digitalTransferItem.en> ;
     reg:name "digitalTransferItem"@en ;
@@ -896,16 +823,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour transfert numérique (item)"@fr, "has digital transfer (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40055> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40039> ;
     skos:definition "Met un item en relation avec un item en format numérique qui résulte du transfert d’un item dans un format numérique différent."@fr, "Relates an item to an item in a digital format that results from the transfer of an item in another digital format."@en .
 
 <http://rdaregistry.info/Elements/i/P40057>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item in a digital format that is the result of the transfer of an item in analog format."@en, "Item en format numérique qui résulte du transfert d’un item sur support analogique."@fr, "Un ítem en un formato digital que es el resultado de la transferencia de un ítem en un formato analógico."@es ;
     rdakit:toolkitLabel "electronic reproduction (item)"@en, "reproducción electrónica (ítem)"@es, "reproduction électronique (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40057>, <http://rdaregistry.info/Elements/i/object/P40057> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40057> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60083> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/electronicReproductionItem.en> ;
     reg:name "electronicReproductionItem"@en ;
@@ -914,16 +839,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour reproduction électronique (item)"@fr, "has electronic reproduction (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40055> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40027> ;
     skos:definition "Met un item en relation avec un item en format numérique qui résulte du transfert d’un item sur support analogique."@fr, "Relates an item to an item in a digital format that is the result of the transfer of an item in analog format."@en .
 
 <http://rdaregistry.info/Elements/i/P40058>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that exactly reproduces another item."@en, "Item qui reproduit exactement un item."@fr, "Un ítem que reproduce exactamente un ítem."@es ;
     rdakit:toolkitLabel "fac-similé (item)"@fr, "facsimile (item)"@en, "facsímil (ítem)"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40059>, <http://rdaregistry.info/Elements/i/datatype/P40058>, <http://rdaregistry.info/Elements/i/object/P40058> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40059>, <http://rdaregistry.info/Elements/i/object/P40058> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60217> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/facsimileItem.en> ;
     reg:name "facsimileItem"@en ;
@@ -932,16 +855,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour fac-similé (item)"@fr, "has facsimile (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40055> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40045> ;
     skos:definition "Met un item en relation avec un item qui reproduit exactement un item."@fr, "Relates an item to an item that exactly reproduces another item."@en .
 
 <http://rdaregistry.info/Elements/i/P40059>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that consists of an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper."@en, "Item qui consiste en une reproduction exacte sur un support de qualité conservation, tel qu’un papier permanent sans acide ou un papier d’archivage."@fr, "Un ítem que consiste en una reproducción exacta sobre un medio con calidad de preservación, tal como papel libre de ácido o papel de archivo."@es ;
     rdakit:toolkitLabel "fac-similé de conservation (item)"@fr, "facsímil de preservación (ítem)"@es, "preservation facsimile (item)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40059>, <http://rdaregistry.info/Elements/i/object/P40059> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40059> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60179> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/preservationFacsimileItem.en> ;
     reg:name "preservationFacsimileItem"@en ;
@@ -950,16 +871,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "a pour fac-similé de conservation (item)"@fr, "has preservation facsimile (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40058> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40044> ;
     skos:definition "Met un item en relation avec un item qui consiste en une reproduction exacte sur un support de qualité conservation, tel qu’un papier permanent sans acide ou un papier d’archivage."@fr, "Relates an item to an item that consists of an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper."@en .
 
 <http://rdaregistry.info/Elements/i/P40060>
     rdakit:instructionNumber "24.5" ;
     rdakit:toolkitDefinition "An item that is a reissue of an item that exemplifies another printed manifestation."@en, "Item qui est une réédition d’un item représentant une autre manifestation imprimée."@fr, "Un ítem que es una reedición de un ítem que ejemplifica otra manifestación impresa."@es ;
     rdakit:toolkitLabel "reimpreso como (ítem)"@es, "reprinted as (item)"@en, "réimprimé comme (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40060>, <http://rdaregistry.info/Elements/i/object/P40060> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40060> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60271> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/reprintedAsItem.en> ;
     reg:name "reprintedAsItem"@en ;
@@ -968,15 +887,13 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est réimprimé comme (item)"@fr, "is reprinted as (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40055> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/P40038> ;
     skos:definition "Met un item en relation avec un item qui est une réédition d’un item représentant une autre manifestation imprimée."@fr, "Relates an item to an item that is a reissue of an item that exemplifies another printed manifestation."@en .
 
 <http://rdaregistry.info/Elements/i/P40061>
-    rdakit:toolkitDefinition "A work that is about the item."@en ;
+    rdakit:toolkitDefinition "A work that is about an item."@en ;
     rdakit:toolkitLabel "subject of (item)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40062>, <http://rdaregistry.info/Elements/i/datatype/P40061>, <http://rdaregistry.info/Elements/i/object/P40061> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40062>, <http://rdaregistry.info/Elements/i/object/P40061> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60806> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/subjectOfItem.en> ;
     reg:name "subjectOfItem"@en ;
@@ -985,16 +902,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "is subject of (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10283> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/w/P10260> ;
-    skos:definition "Relates an item to a work that is about the item."@en .
+    skos:definition "Relates an item to a work that is about an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40062>
     rdakit:instructionNumber "23.5" ;
     rdakit:toolkitDefinition "A work that describes a described item."@en, "Una obra que describe un ítem descrito."@es, "Œuvre qui décrit un item décrit."@fr ;
     rdakit:toolkitLabel "described in (item)"@en, "descrita en (ítem)"@es, "décrit dans (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40063>, <http://rdaregistry.info/Elements/i/P40064>, <http://rdaregistry.info/Elements/i/P40065>, <http://rdaregistry.info/Elements/i/P40066>, <http://rdaregistry.info/Elements/i/P40067>, <http://rdaregistry.info/Elements/i/datatype/P40062>, <http://rdaregistry.info/Elements/i/object/P40062> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40063>, <http://rdaregistry.info/Elements/i/P40064>, <http://rdaregistry.info/Elements/i/P40065>, <http://rdaregistry.info/Elements/i/P40066>, <http://rdaregistry.info/Elements/i/P40067>, <http://rdaregistry.info/Elements/i/object/P40062> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60215> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/describedInItem.en> ;
     reg:name "describedInItem"@en ;
@@ -1003,16 +918,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est décrit dans (item)"@fr, "is described in (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40061> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/w/P10265> ;
     skos:definition "Met un item en relation avec une œuvre qui décrit un item décrit."@fr, "Relates an item to a work that describes a described item."@en .
 
 <http://rdaregistry.info/Elements/i/P40063>
     rdakit:instructionNumber "23.5" ;
-    rdakit:toolkitDefinition "A work that examines the source item to identify its components and their relations."@en, "Una obra que examina el ítem fuente para identificar sus componentes y sus relaciones."@es, "Œuvre qui examine l’item source pour identifier ses unités composantes et leurs relations"@fr ;
+    rdakit:toolkitDefinition "A work that examines a source item to identify its components and their relations."@en, "Una obra que examina el ítem fuente para identificar sus componentes y sus relaciones."@es, "Œuvre qui examine l’item source pour identifier ses unités composantes et leurs relations"@fr ;
     rdakit:toolkitLabel "analizada en (ítem)"@es, "analysed in (item)"@en, "analysé dans (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40063>, <http://rdaregistry.info/Elements/i/object/P40063> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40063> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60219> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/analysedInItem.en> ;
     reg:name "analysedInItem"@en ;
@@ -1021,16 +934,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est analysé dans (item)"@fr, "is analysed in (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40062> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/w/P10266> ;
-    skos:definition "Met un item en relation avec une œuvre qui examine l’item source pour identifier ses unités composantes et leurs relations"@fr, "Relates an item to a work that examines the source item to identify its components and their relations."@en .
+    skos:definition "Met un item en relation avec une œuvre qui examine l’item source pour identifier ses unités composantes et leurs relations"@fr, "Relates an item to a work that examines a source item to identify its components and their relations."@en .
 
 <http://rdaregistry.info/Elements/i/P40064>
     rdakit:instructionNumber "23.5" ;
-    rdakit:toolkitDefinition "A work that contains a set of explanatory or critical notes on the described item."@en, "Una obra que contiene un conjunto de notas explicativas o críticas sobre el ítem descrito."@es, "Œuvre qui contient un ensemble de notes explicatives ou critiques sur l’item décrit."@fr ;
+    rdakit:toolkitDefinition "A work that contains a set of explanatory or critical notes on a described item."@en, "Una obra que contiene un conjunto de notas explicativas o críticas sobre el ítem descrito."@es, "Œuvre qui contient un ensemble de notes explicatives ou critiques sur l’item décrit."@fr ;
     rdakit:toolkitLabel "comentario en (ítem)"@es, "commentaire dans (item)"@fr, "commentary in (item)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40064>, <http://rdaregistry.info/Elements/i/object/P40064> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40064> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60213> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/commentaryInItem.en> ;
     reg:name "commentaryInItem"@en ;
@@ -1039,16 +950,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est le commentaire dans (item)"@fr, "is commentary in (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40062> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/w/P10270> ;
-    skos:definition "Met un item en relation avec une œuvre qui contient un ensemble de notes explicatives ou critiques sur l’item décrit."@fr, "Relates an item to a work that contains a set of explanatory or critical notes on the described item."@en .
+    skos:definition "Met un item en relation avec une œuvre qui contient un ensemble de notes explicatives ou critiques sur l’item décrit."@fr, "Relates an item to a work that contains a set of explanatory or critical notes on a described item."@en .
 
 <http://rdaregistry.info/Elements/i/P40065>
     rdakit:instructionNumber "23.5" ;
-    rdakit:toolkitDefinition "A work that contains a critical evaluation of the described item."@en, "Una obra que contiene una evaluación crítica del ítem descrito."@es, "Œuvre qui contient une évaluation critique de l’item décrit."@fr ;
+    rdakit:toolkitDefinition "A work that contains a critical evaluation of a described item."@en, "Una obra que contiene una evaluación crítica del ítem descrito."@es, "Œuvre qui contient une évaluation critique de l’item décrit."@fr ;
     rdakit:toolkitLabel "criticada en (ítem)"@es, "critiqued in (item)"@en, "critiqué dans (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40065>, <http://rdaregistry.info/Elements/i/object/P40065> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40065> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60212> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/critiquedInItem.en> ;
     reg:name "critiquedInItem"@en ;
@@ -1057,16 +966,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est critiqué dans (item)"@fr, "is critiqued in (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40062> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/w/P10269> ;
-    skos:definition "Met un item en relation avec une œuvre qui contient une évaluation critique de l’item décrit."@fr, "Relates an item to a work that contains a critical evaluation of the described item."@en .
+    skos:definition "Met un item en relation avec une œuvre qui contient une évaluation critique de l’item décrit."@fr, "Relates an item to a work that contains a critical evaluation of a described item."@en .
 
 <http://rdaregistry.info/Elements/i/P40066>
     rdakit:instructionNumber "23.5" ;
-    rdakit:toolkitDefinition "A work that examines or judges the described item."@en, "Una obra que examina o juzga el ítem descrito."@es, "Œuvre qui examine ou juge l’item décrit."@fr ;
+    rdakit:toolkitDefinition "A work that examines or judges a described item."@en, "Una obra que examina o juzga el ítem descrito."@es, "Œuvre qui examine ou juge l’item décrit."@fr ;
     rdakit:toolkitLabel "evaluada en (ítem)"@es, "evaluated in (item)"@en, "évalué dans (item)"@fr ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40066>, <http://rdaregistry.info/Elements/i/object/P40066> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40066> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60218> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/evaluatedInItem.en> ;
     reg:name "evaluatedInItem"@en ;
@@ -1075,16 +982,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est évalué dans (item)"@fr, "is evaluated in (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40062> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/w/P10267> ;
-    skos:definition "Met un item en relation avec une œuvre qui examine ou juge l’item décrit."@fr, "Relates an item to a work that examines or judges the described item."@en .
+    skos:definition "Met un item en relation avec une œuvre qui examine ou juge l’item décrit."@fr, "Relates an item to a work that examines or judges a described item."@en .
 
 <http://rdaregistry.info/Elements/i/P40067>
     rdakit:instructionNumber "23.5" ;
-    rdakit:toolkitDefinition "A work that contains a brief evaluation of the described item."@en, "Una obra que contiene una evaluación breve del ítem descrito."@es, "Œuvre qui contient une brève évaluation de l’item décrit."@fr ;
+    rdakit:toolkitDefinition "A work that contains a brief evaluation of a described item."@en, "Una obra que contiene una evaluación breve del ítem descrito."@es, "Œuvre qui contient une brève évaluation de l’item décrit."@fr ;
     rdakit:toolkitLabel "recensé dans (item)"@fr, "reseñada en (ítem)"@es, "reviewed in (item)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40067>, <http://rdaregistry.info/Elements/i/object/P40067> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/object/P40067> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60211> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/reviewedInItem.en> ;
     reg:name "reviewedInItem"@en ;
@@ -1093,8 +998,153 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:label "est recensé dans (item)"@fr, "is reviewed in (item)"@en ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40062> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/w/P10268> ;
-    skos:definition "Met un item en relation avec une œuvre qui contient une brève évaluation de l’item décrit."@fr, "Relates an item to a work that contains a brief evaluation of the described item."@en .
+    skos:definition "Met un item en relation avec une œuvre qui contient une brève évaluation de l’item décrit."@fr, "Relates an item to a work that contains a brief evaluation of a described item."@en .
+
+<http://rdaregistry.info/Elements/i/P40068>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40046>, <http://rdaregistry.info/Elements/i/P40069>, <http://rdaregistry.info/Elements/i/P40070>, <http://rdaregistry.info/Elements/i/P40071>, <http://rdaregistry.info/Elements/i/P40072>, <http://rdaregistry.info/Elements/i/P40077>, <http://rdaregistry.info/Elements/i/P40078>, <http://rdaregistry.info/Elements/i/P40079>, <http://rdaregistry.info/Elements/i/datatype/P40068>, <http://rdaregistry.info/Elements/i/object/P40068> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedEntityItem.en> ;
+    reg:name "relatedEntityItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related entity (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an item to an entity associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40069>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40069>, <http://rdaregistry.info/Elements/i/object/P40069> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedWorkItem.en> ;
+    reg:name "relatedWorkItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related work (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40068> ;
+    skos:definition "Relates an item to a work associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40070>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40070>, <http://rdaregistry.info/Elements/i/object/P40070> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedExpressionItem.en> ;
+    reg:name "relatedExpressionItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related expression (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40068> ;
+    skos:definition "Relates an item to an expression associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40071>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40071>, <http://rdaregistry.info/Elements/i/object/P40071> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedManifestationItem.en> ;
+    reg:name "relatedManifestationItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related manifestation (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40068> ;
+    skos:definition "Relates an item to a manifestation associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40072>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40073>, <http://rdaregistry.info/Elements/i/P40076>, <http://rdaregistry.info/Elements/i/datatype/P40072>, <http://rdaregistry.info/Elements/i/object/P40072> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedAgentItem.en> ;
+    reg:name "relatedAgentItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related agent (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40068> ;
+    skos:definition "Relates an item to an agent associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40073>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40073>, <http://rdaregistry.info/Elements/i/object/P40073> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedPersonItem.en> ;
+    reg:name "relatedPersonItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related person (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40072> ;
+    skos:definition "Relates an item to a person associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40074>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40074>, <http://rdaregistry.info/Elements/i/object/P40074> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedFamilyItem.en> ;
+    reg:name "relatedFamilyItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related family (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40076> ;
+    skos:definition "Relates an item to a family associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40075>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40075>, <http://rdaregistry.info/Elements/i/object/P40075> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedCorporateBodyItem.en> ;
+    reg:name "relatedCorporateBodyItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related corporate body (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40076> ;
+    skos:definition "Relates an item to a corporate body associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40076>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40074>, <http://rdaregistry.info/Elements/i/P40075>, <http://rdaregistry.info/Elements/i/datatype/P40076>, <http://rdaregistry.info/Elements/i/object/P40076> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedCollectiveAgentItem.en> ;
+    reg:name "relatedCollectiveAgentItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related collective agent (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40072> ;
+    skos:definition "Relates an item to a collective agent associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40077>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40077>, <http://rdaregistry.info/Elements/i/object/P40077> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedPlaceItem.en> ;
+    reg:name "relatedPlaceItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related place (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40068> ;
+    skos:definition "Relates an item to a place associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40078>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40078>, <http://rdaregistry.info/Elements/i/object/P40078> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedTimespanItem.en> ;
+    reg:name "relatedTimespanItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related time-span (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40068> ;
+    skos:definition "Relates an item to a time-span associated with an item being described."@en .
+
+<http://rdaregistry.info/Elements/i/P40079>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40079>, <http://rdaregistry.info/Elements/i/object/P40079> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedNomenItem.en> ;
+    reg:name "relatedNomenItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:label "has related nomen (item)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40068> ;
+    skos:definition "Relates an item to a nomen associated with an item being described."@en .
 

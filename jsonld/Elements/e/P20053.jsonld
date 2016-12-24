@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an expression to a person, family, or corporate body contributing to an expression."
+            "Relates an expression to an agent contributing to an expression."
         ]
     },
     "domain": {
@@ -261,16 +261,10 @@
             "label": "has DJ"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/e/datatype/P20053",
-            "lexicalAlias": "http://rdaregistry.info/Elements/e/datatype/contributor.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/23157.html",
-            "label": null
-        },
-        {
             "@id": "http://rdaregistry.info/Elements/e/object/P20053",
             "lexicalAlias": "http://rdaregistry.info/Elements/e/object/contributor.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/24306.html",
-            "label": null
+            "label": "has contributor"
         }
     ],
     "hasUnconstrained": {
@@ -280,19 +274,14 @@
         "label": "has contributor"
     },
     "instructionNumber": "20.2",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/object/P50161",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/object/contributorOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24656.html",
-        "label": "is contributor of"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/e/",
         "url": "http://metadataregistry.org/schema/show/id/78.html",
         "label": "RDA Expression properties"
     },
     "label": {
-        "en": "has contributor"
+        "en": "has contributor",
+        "sv": "har bidragsgivare"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/e/contributor.en",
     "name": {
@@ -303,27 +292,30 @@
             "Contributors include editors, translators, arrangers of music, performers, etc."
         ]
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "agent"
-    },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/P20301",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/relatedAgentExpression.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25200.html",
+            "label": "has related agent (expression)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body contributing to an expression.",
+        "en": "An agent contributing to an expression.",
         "fr": "Personne, famille ou collectivité contribuant à une expression.",
         "es": "Una persona, familia o entidad corporativa que contribuye a  una expresión."
     },
     "ToolkitLabel": {
         "en": "contributor",
         "fr": "contributeur",
-        "es": "colaborador"
+        "es": "colaborador",
+        "sv": "bidragsgivare"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14144.html"
 }

@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a person, family, or corporate body responsible for printing, duplicating, casting, etc., a resource in a published form."
+            "Relates a manifestation to an agent responsible for printing, duplicating, casting, etc., a manifestation in a published form."
         ],
         "fr": [
             "Met une manifestation en relation avec une personne, famille ou collectivité responsable de l’impression, de la reproduction, du moulage, etc. d’une ressource sous une forme publiée."
@@ -84,16 +84,10 @@
             "label": "has papermaker"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/m/datatype/P30082",
-            "lexicalAlias": "http://rdaregistry.info/Elements/m/datatype/manufacturer.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/23458.html",
-            "label": null
-        },
-        {
             "@id": "http://rdaregistry.info/Elements/m/object/P30082",
             "lexicalAlias": "http://rdaregistry.info/Elements/m/object/manufacturer.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/24234.html",
-            "label": null
+            "label": "has manufacturer"
         }
     ],
     "hasUnconstrained": {
@@ -103,12 +97,6 @@
         "label": "has manufacturer"
     },
     "instructionNumber": "21.5",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/object/P50202",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/object/manufacturerOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24697.html",
-        "label": "is manufacturer of"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -116,17 +104,12 @@
     },
     "label": {
         "en": "has manufacturer",
-        "fr": "a pour fabricant"
+        "fr": "a pour fabricant",
+        "sv": "har tillverkare"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/manufacturer.en",
     "name": {
         "en": "manufacturer"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "agent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -134,15 +117,24 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/m/P30267",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedAgentManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25247.html",
+            "label": "has related agent (manifestation)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body responsible for printing, duplicating, casting, etc., a resource in a published form.",
+        "en": "An agent responsible for printing, duplicating, casting, etc., a manifestation in a published form.",
         "fr": "Personne, famille ou collectivité responsable de l’impression, de la reproduction, du moulage, etc. d’une ressource sous une forme publiée.",
         "es": "Una persona, familia o entidad corporativa responsable de la impresión, duplicación, prensado, etc., de un recurso publicado."
     },
     "ToolkitLabel": {
         "en": "manufacturer",
         "fr": "fabricant",
-        "es": "fabricante"
+        "es": "fabricante",
+        "sv": "tillverkare"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14471.html"
 }

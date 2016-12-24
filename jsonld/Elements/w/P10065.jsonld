@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a work to a person, family, or corporate body responsible for the creation of a work."
+            "Relates a work to an agent responsible for the creation of a work."
         ]
     },
     "domain": {
@@ -123,16 +123,10 @@
             "label": "has remix artist"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/w/datatype/P10065",
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/creator.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/23683.html",
-            "label": null
-        },
-        {
             "@id": "http://rdaregistry.info/Elements/w/object/P10065",
             "lexicalAlias": "http://rdaregistry.info/Elements/w/object/creator.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/23980.html",
-            "label": null
+            "label": "has creator"
         }
     ],
     "hasUnconstrained": {
@@ -142,19 +136,14 @@
         "label": "has creator"
     },
     "instructionNumber": "19.2",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/object/P50204",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/object/creatorOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24699.html",
-        "label": "is creator of"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/w/",
         "url": "http://metadataregistry.org/schema/show/id/77.html",
         "label": "RDA Work properties"
     },
     "label": {
-        "en": "has creator"
+        "en": "has creator",
+        "sv": "har skapare"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/w/creator.en",
     "name": {
@@ -162,14 +151,8 @@
     },
     "note": {
         "en": [
-            "Creators include persons, families or corporate bodies who are jointly responsible for the creation of a work either performing the same role, such as in a collaboration between two writers, or performing different roles, such as in a collaboration between a composer and a lyricist."
+            "Creators include agents who are jointly responsible for the creation of a work either performing the same role, such as in a collaboration between two writers, or performing different roles, such as in a collaboration between a composer and a lyricist."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "agent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -177,15 +160,24 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10311",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedAgentWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25224.html",
+            "label": "has related agent (work)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body responsible for the creation of a work.",
+        "en": "An agent responsible for the creation of a work.",
         "fr": "Personne, famille ou collectivité responsable de la création d’une œuvre.",
         "es": "Una persona, familia o entidad corporativa responsable de la creación de una obra."
     },
     "ToolkitLabel": {
         "en": "creator",
         "fr": "créateur",
-        "es": "creador"
+        "es": "creador",
+        "sv": "skapare"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15368.html"
 }

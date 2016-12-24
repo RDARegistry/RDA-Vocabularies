@@ -1,0 +1,200 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://metadataregistry.org/uri/RegStatus/1001>
+    a skos:Concept ;
+    skos:prefLabel "Published"@en .
+
+<http://rdaregistry.info/Elements/x/>
+    dc:title "RDA Entity properties"@en ;
+    skos:note "Properties derived from RDA elements and relationship designators with the domain of RDA Entity. "@en .
+
+<http://rdaregistry.info/Elements/x/P00001>
+    rdakit:toolkitDefinition "An entity associated with an entity being described"@en ;
+    rdakit:toolkitLabel "related entity"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40068>, <http://rdaregistry.info/Elements/m/P30264>, <http://rdaregistry.info/Elements/x/P00006>, <http://rdaregistry.info/Elements/x/object/P00003> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedEntity.en> ;
+    reg:name "relatedEntity"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related entity"@en ;
+    skos:definition "Relates an entity to an entity associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00002>
+    rdakit:instructionNumber "25.1" ;
+    rdakit:toolkitDefinition "A work associated with an entity being described."@en ;
+    rdakit:toolkitLabel "obra relacionada"@es, "related work"@en, "œuvre en relation"@fr ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedWork.en> ;
+    reg:name "relatedWork"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an entity to a work associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00003>
+    rdakit:instructionNumber "26.1" ;
+    rdakit:toolkitDefinition "An expression associated with an entity being described."@en ;
+    rdakit:toolkitLabel "expresión relacionada"@es, "expression en relation"@fr, "related expression"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/x/object/P00003> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedExpression.en> ;
+    reg:name "relatedExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "expression en relation"@fr, "has related expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an entity to an expression associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00004>
+    rdakit:instructionNumber "27.1" ;
+    rdakit:toolkitDefinition "A manifestation associated with an entity being described."@en ;
+    rdakit:toolkitLabel "manifestación relacionada"@es, "manifestation en relation"@fr, "related manifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedManifestation.en> ;
+    reg:name "relatedManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related manifestation"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an entity to a manifestation associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00005>
+    rdakit:instructionNumber "28.1" ;
+    rdakit:toolkitDefinition "An item associated with an entity being described."@en ;
+    rdakit:toolkitLabel "item en relation"@fr, "related item"@en, "ítem relacionado"@es ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedItem.en> ;
+    reg:name "relatedItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related item"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an entity to an item associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00006>
+    rdakit:toolkitDefinition "An agent associated with an entity being described."@en ;
+    rdakit:toolkitLabel "related agent"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/x/P00007> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedAgent.en> ;
+    reg:name "relatedAgent"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related agent"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an entity to an agent associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00007>
+    rdakit:instructionNumber "30.1" ;
+    rdakit:toolkitDefinition "A person associated with an entity being described."@en ;
+    rdakit:toolkitLabel "persona relacionada"@es, "personne en relation"@fr, "related person"@en, "relaterad person"@sv ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedPerson.en> ;
+    reg:name "relatedPerson"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "har relaterad person"@sv, "has related person"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00006> ;
+    skos:definition "Relates an entity to a person associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00008>
+    rdakit:instructionNumber "31.1" ;
+    rdakit:toolkitDefinition "A family associated with an entity being described."@en ;
+    rdakit:toolkitLabel "familia relacionada"@es, "famille en relation"@fr, "related family"@en, "relaterad familj/släkt"@sv ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedFamily.en> ;
+    reg:name "relatedFamily"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "har relaterad familj/släkt"@sv, "has related family"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00012> ;
+    skos:definition "Relates an entity to a family associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00009>
+    rdakit:instructionNumber "32.1" ;
+    rdakit:toolkitDefinition "A corporate body associated with an entity being described."@en ;
+    rdakit:toolkitLabel "collectivité en relation"@fr, "entidad corporativa relacionada"@es, "related corporate body"@en, "relaterad institution"@sv ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedCorporateBody.en> ;
+    reg:name "relatedCorporateBody"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "har relaterad institution"@sv, "has related corporate body"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00012> ;
+    skos:definition "Relates an entity to a corporate body associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00010>
+    rdakit:toolkitDefinition "A place associated with an entity being described."@en ;
+    rdakit:toolkitLabel "related place"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedPlace.en> ;
+    reg:name "relatedPlace"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related place"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an entity to a place associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00011>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedTimeSpan.en> ;
+    reg:name "relatedTimeSpan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related time-span"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an entity to a time-span associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00012>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/x/P00008>, <http://rdaregistry.info/Elements/x/P00009> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedCollectiveAgent.en> ;
+    reg:name "relatedCollectiveAgent"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related collective agent"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00006> ;
+    skos:definition "Relates an entity to a collective agent associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00013>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/relatedNomen.en> ;
+    reg:name "relatedNomen"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "has related nomen"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    skos:definition "Relates an entity to a nomen associated with an entity being described."@en .
+
+<http://rdaregistry.info/Elements/x/P00014>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/datatype/P50366>, <http://rdaregistry.info/Elements/x/object/P00014> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/subjectOfEntity.en> ;
+    reg:name "subjectOfEntity"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/> ;
+    rdfs:label "is subject of (entity)"@en ;
+    skos:definition "Relates an entity to a work that is about an entity."@en .
+

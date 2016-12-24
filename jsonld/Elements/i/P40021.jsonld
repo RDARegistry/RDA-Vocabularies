@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an item to a person, family, or corporate body having legal possession of an item."
+            "Relates an item to an agent having legal possession of an item."
         ],
         "fr": [
             "Met un item en relation avec une personne, famille ou collectivité possédant légalement un item."
@@ -30,12 +30,6 @@
             "label": "has former owner"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/i/datatype/P40021",
-            "lexicalAlias": "http://rdaregistry.info/Elements/i/datatype/owner.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/23066.html",
-            "label": "has owner"
-        },
-        {
             "@id": "http://rdaregistry.info/Elements/i/object/P40021",
             "lexicalAlias": "http://rdaregistry.info/Elements/i/object/owner.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/24507.html",
@@ -49,12 +43,6 @@
         "label": "has owner"
     },
     "instructionNumber": "22.2",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/object/P50165",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/object/ownerOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24660.html",
-        "label": "is owner of"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/i/",
         "url": "http://metadataregistry.org/schema/show/id/80.html",
@@ -62,17 +50,12 @@
     },
     "label": {
         "en": "has owner",
-        "fr": "a pour propriétaire"
+        "fr": "a pour propriétaire",
+        "sv": "har ägare"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/i/owner.en",
     "name": {
         "en": "owner"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "agent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -80,15 +63,24 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/i/P40072",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/relatedAgentItem.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25270.html",
+            "label": "has related agent (item)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body having legal possession of an item.",
+        "en": "An agent having legal possession of an item.",
         "fr": "Personne, famille ou collectivité possédant légalement un item.",
         "es": "Una persona, familia o entidad corporativa que detenta la posesión legal de un ítem (es decir, una copia específica o una instancia de un recurso)."
     },
     "ToolkitLabel": {
         "en": "owner",
         "fr": "propriétaire",
-        "es": "propietario"
+        "es": "propietario",
+        "sv": "ägare"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14356.html"
 }

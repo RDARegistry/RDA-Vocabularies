@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an item to a person, family, or corporate body other than an owner or custodian associated with an item."
+            "Relates an item to an agent other than an owner or custodian associated with an item."
         ],
         "fr": [
             "Met un item en relation avec une personne, famille ou collectivité, autre qu’un propriétaire ou un dépositaire, associée à un item."
@@ -72,12 +72,6 @@
             "label": "has dedicatee (item)"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/i/datatype/P40023",
-            "lexicalAlias": "http://rdaregistry.info/Elements/i/datatype/otherPFCItem.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/23068.html",
-            "label": "has other person, family, or corporate body associated with an item"
-        },
-        {
             "@id": "http://rdaregistry.info/Elements/i/object/P40023",
             "lexicalAlias": "http://rdaregistry.info/Elements/i/object/otherPFCItem.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/24509.html",
@@ -91,12 +85,6 @@
         "label": "has other agent associated with a resource"
     },
     "instructionNumber": "22.4",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/object/P50182",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/object/otherPFCItemOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24677.html",
-        "label": "is other person, family, or corporate body associated with an item of"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/i/",
         "url": "http://metadataregistry.org/schema/show/id/80.html",
@@ -104,7 +92,8 @@
     },
     "label": {
         "en": "has other person, family, or corporate body associated with an item",
-        "fr": "a pour autre personne, famille ou collectivité associée à un item"
+        "fr": "a pour autre personne, famille ou collectivité associée à un item",
+        "sv": "har övrig person, familj/släkt eller institution knuten till ett exemplar"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/i/otherPFCItem.en",
     "name": {
@@ -118,27 +107,30 @@
             "Curators, binders, restorationists, etc., are included."
         ]
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "agent"
-    },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/i/P40072",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/relatedAgentItem.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25270.html",
+            "label": "has related agent (item)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body other than an owner or custodian associated with an item.",
+        "en": "An agent other than an owner or custodian associated with an item.",
         "fr": "Personne, famille ou collectivité, autre qu’un propriétaire ou un dépositaire, associée à un item.",
         "es": "Una persona, familia o entidad corporativa (diferente a un propietario o custodio), asociada con un ítem."
     },
     "ToolkitLabel": {
         "en": "other person, family, or corporate body associated with an item",
         "fr": "autre personne, famille ou collectivité associée à un item",
-        "es": "otra persona, familia o entidad corporativa asociada con un ítem"
+        "es": "otra persona, familia o entidad corporativa asociada con un ítem",
+        "sv": "övrig person, familj/släkt eller institution knuten till ett exemplar"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14358.html"
 }

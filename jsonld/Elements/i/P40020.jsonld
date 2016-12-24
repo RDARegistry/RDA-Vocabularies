@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an item to a person, family, or corporate body having legal custody of an item."
+            "Relates an item to an agent having legal custody of an item."
         ],
         "fr": [
             "Met un item en relation avec une personne, famille ou collectivité à qui est confiée la garde légale d’un item."
@@ -17,12 +17,6 @@
         "label": "item"
     },
     "hasSubproperty": [
-        {
-            "@id": "http://rdaregistry.info/Elements/i/datatype/P40020",
-            "lexicalAlias": "http://rdaregistry.info/Elements/i/datatype/custodian.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/23065.html",
-            "label": "has custodian"
-        },
         {
             "@id": "http://rdaregistry.info/Elements/i/object/P40020",
             "lexicalAlias": "http://rdaregistry.info/Elements/i/object/custodian.en",
@@ -37,12 +31,6 @@
         "label": "has custodian"
     },
     "instructionNumber": "22.3",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/object/P50164",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/object/custodianOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24659.html",
-        "label": "is custodian of"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/i/",
         "url": "http://metadataregistry.org/schema/show/id/80.html",
@@ -50,17 +38,12 @@
     },
     "label": {
         "en": "has custodian",
-        "fr": "a pour dépositaire"
+        "fr": "a pour dépositaire",
+        "sv": "har förvaltare"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/i/custodian.en",
     "name": {
         "en": "custodian"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "agent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -68,15 +51,24 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/i/P40072",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/relatedAgentItem.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25270.html",
+            "label": "has related agent (item)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body having legal custody of an item.",
+        "en": "An agent having legal custody of an item.",
         "fr": "Personne, famille ou collectivité à qui est confiée la garde légale d’un item.",
         "es": "Una persona, familia o entidad corporativa que tiene la custodia legal de un ítem."
     },
     "ToolkitLabel": {
         "en": "custodian",
         "fr": "dépositaire",
-        "es": "custodio"
+        "es": "custodio",
+        "sv": "förvaltare"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14355.html"
 }

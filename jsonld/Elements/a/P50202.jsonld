@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body responsible for printing, duplicating, casting, etc. to a manifestation."
+            "Relates an agent responsible for printing, duplicating, casting, etc. to a manifestation."
         ],
         "fr": [
             "Met une personne, famille ou collectivité responsable de l’impression, de la reproduction, du moulage, etc. d’une ressource sous une forme publiée en relation avec la manifestation."
@@ -78,12 +78,6 @@
             "label": "is printer of"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/a/P50242",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/papermakerOf.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/16082.html",
-            "label": "is papermaker of"
-        },
-        {
             "@id": "http://rdaregistry.info/Elements/a/object/P50242",
             "lexicalAlias": "http://rdaregistry.info/Elements/a/object/papermakerOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/24732.html",
@@ -108,12 +102,6 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15259.html",
         "label": "is manufacturer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/m/object/P30082",
-        "lexicalAlias": "http://rdaregistry.info/Elements/m/object/manufacturer.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24234.html",
-        "label": null
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -127,18 +115,20 @@
     "name": {
         "en": "manufacturerOf"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "manifestation"
-    },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50307",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedManifestationAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25293.html",
+            "label": "has related manifestation (agent)"
+        }
+    ],
     "ToolkitDefinition": {
         "fr": "Personne, famille ou collectivité responsable de l’impression, de la reproduction, du moulage, etc. d’une ressource sous une forme publiée.",
         "en": "A manifestation that is printed, duplicated, cast, etc."

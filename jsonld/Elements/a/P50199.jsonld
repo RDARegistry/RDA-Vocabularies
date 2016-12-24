@@ -4,7 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body responsible for distributing a resource to a manifestation."
+            "Relates an agent responsible for distributing a manifestation to a manifestation."
         ],
         "fr": [
             "Met une personne, famille ou collectivité responsable de la diffusion ou de la distribution d’une ressource en relation avec la manifestation."
@@ -42,12 +42,6 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15257.html",
         "label": "is distributor of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/m/object/P30080",
-        "lexicalAlias": "http://rdaregistry.info/Elements/m/object/distributor.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/24232.html",
-        "label": null
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -61,18 +55,20 @@
     "name": {
         "en": "distributorOf"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "manifestation"
-    },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50307",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedManifestationAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25293.html",
+            "label": "has related manifestation (agent)"
+        }
+    ],
     "ToolkitDefinition": {
         "fr": "Personne, famille ou collectivité responsable de la diffusion ou de la distribution d’une ressource.",
         "en": "A manifestation that is distributed."

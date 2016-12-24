@@ -4,10 +4,7 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an agent to a person who is associated with the person, family, or corporate body being identified."
-        ],
-        "fr": [
-            "Met un agent en relation avec une personne associée à la personne, famille ou collectivité en cours d’identification (par exemple, un collaborateur, le membre d’une famille, le fondateur d’une collectivité)."
+            "Relates an agent to a person who is associated with an agent being identified."
         ]
     },
     "domain": {
@@ -17,42 +14,6 @@
         "label": "agent"
     },
     "hasSubproperty": [
-        {
-            "@id": "http://rdaregistry.info/Elements/a/P50274",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/colleague.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/22855.html",
-            "label": "has colleague"
-        },
-        {
-            "@id": "http://rdaregistry.info/Elements/a/P50279",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/fellowStudent.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/22860.html",
-            "label": "has fellow student"
-        },
-        {
-            "@id": "http://rdaregistry.info/Elements/a/P50280",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/friend.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/22861.html",
-            "label": "has friend"
-        },
-        {
-            "@id": "http://rdaregistry.info/Elements/a/P50281",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/student.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/22862.html",
-            "label": "has student"
-        },
-        {
-            "@id": "http://rdaregistry.info/Elements/a/P50282",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/teacher.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/22863.html",
-            "label": "has teacher"
-        },
-        {
-            "@id": "http://rdaregistry.info/Elements/a/P50283",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/enrolledStudent.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/22864.html",
-            "label": "has enrolled student"
-        },
         {
             "@id": "http://rdaregistry.info/Elements/a/object/P50274",
             "lexicalAlias": "http://rdaregistry.info/Elements/a/object/colleague.en",
@@ -91,47 +52,28 @@
         },
         {
             "@id": "http://rdaregistry.info/Elements/a/object/P50220",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/relatedPerson.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/relatedPersonAgent.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/24715.html",
-            "label": "has related person"
+            "label": "has related person (agent)"
         },
         {
             "@id": "http://rdaregistry.info/Elements/a/datatype/P50220",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/relatedPerson.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/relatedPersonAgent.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/25009.html",
-            "label": "has related person"
+            "label": "has related person (agent)"
         }
     ],
-    "hasUnconstrained": {
-        "@id": "http://rdaregistry.info/Elements/u/P60454",
-        "lexicalAlias": "http://rdaregistry.info/Elements/u/relatedAgent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15044.html",
-        "label": "has related agent"
-    },
-    "instructionNumber": "30.1",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
         "label": "RDA Agent properties"
     },
     "label": {
-        "en": "has related person",
-        "fr": "a pour personne en relation"
+        "en": "has related person (agent)"
     },
-    "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedPerson.en",
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedPersonAgent.en",
     "name": {
-        "en": "relatedPerson"
-    },
-    "note": {
-        "fr": [
-            "Les personnes en relation comprennent les identités séparées établies par un individu (seul ou en collaboration avec un ou plusieurs individus)."
-        ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10004",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
-        "label": "person"
+        "en": "relatedPersonAgent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -139,15 +81,31 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
-    "ToolkitDefinition": {
-        "en": "A person who is associated with the person, family, or corporate body being identified.",
-        "fr": "Personne associée à la personne, famille ou collectivité en cours d’identification (par exemple, un collaborateur, le membre d’une famille, le fondateur d’une collectivité).",
-        "es": "Una persona que está asociada con la persona, familia o entidad corporativa que se está identificando (p.ej., un colaborador, un miembro de una familia, un fundador de una entidad corporativa)."
-    },
-    "ToolkitLabel": {
-        "en": "related person",
-        "fr": "personne en relation",
-        "es": "persona relacionada"
-    },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50309",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedAgentAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25295.html",
+            "label": "has related agent (agent)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50309",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedAgentAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25295.html",
+            "label": "has related agent (agent)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50309",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedAgentAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25295.html",
+            "label": "has related agent (agent)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/x/P00006",
+            "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25161.html",
+            "label": "has related agent"
+        }
+    ],
     "url": "http://metadataregistry.org/schemaprop/show/id/14085.html"
 }
