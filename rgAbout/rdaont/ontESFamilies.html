@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/rdagitAboutPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/rdagitAboutPage.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Meta-->
 <meta charset="utf-8">
@@ -9,8 +10,6 @@
 <meta name="keywords" content="RDA, vocabularies, documentation, registry">
 <meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
 <meta name="viewport" content="width=device-width">
-
-
 <title>RDA Registry | About</title>
 
 <!-- Icons-->
@@ -43,12 +42,15 @@
       <li><a href="/Elements/">Elements</a></li>
       <li class="divider"></li>
       <li><a href="/Elements/c/">Classes</a></li>
-      <li><a href="/Elements/w/">Work properties</a></li>
-      <li><a href="/Elements/e/">Expression properties</a></li>
-      <li><a href="/Elements/m/">Manifestation properties</a></li>
-      <li><a href="/Elements/i/">Item properties</a></li>
       <li><a href="/Elements/a/">Agent properties</a></li>
+      <li><a href="/Elements/e/">Expression properties</a></li>
+      <li><a href="/Elements/i/">Item properties</a></li>
+      <li><a href="/Elements/m/">Manifestation properties</a></li>
+      <li><a href="/Elements/n/">Nomwn properties</a></li>
       <li><a href="/Elements/p/">Place properties</a></li>
+      <li><a href="/Elements/t/">Time-span properties</a></li>
+      <li><a href="/Elements/w/">Work properties</a></li>
+      <li><a href="/Elements/x/">RDA Entity properties</a></li>
       <li><a href="/Elements/u/">Unconstrained properties</a></li>
       <li><a href="/Elements/z/">Meta-element properties</a></li>
       <li><a href="/Elements/rof/">RDA/ONIX Framework elements</a></li>
@@ -66,6 +68,7 @@
      <ul class="dropdown-menu">
       <li><a href="/rgData/">Data</a></li>
       <li class="divider"></li>
+      <li><a href="/rgData/rdaCuries.html">Curie prefixes</a></li>
       <li><a href="/Examples/">Examples</a></li>
       <li><a href="http://rballs.info/">R-Balls</a></li>
       <li><a href="/rgDatasets/">Datasets</a></li>
@@ -95,11 +98,11 @@
       <li class="divider"></li>
       <li><a href="/rgAbout/issues.html">Issues</a></li>
       <li><a href="/rgAbout/updates/">Updates</a></li>
-      <li><a href="/rgAbout/updates/versions.html">| Versions</a></li>
-      <li><a href="/rgAbout/updates/deprecation.html">| Deprecation</a></li>
+      <li><a href="/rgAbout/updates/versions.html">- Versions</a></li>
+      <li><a href="/rgAbout/updates/deprecation.html">- Deprecation</a></li>
       <li><a href="/rgAbout/rdaref/">RDA Reference</a></li>
-      <li><a href="/rgAbout/rdaref/dataflow/">| Data flow</a></li>
-      <li><a href="/rgAbout/rdaref/translations/">| Translations</a></li>
+      <li><a href="/rgAbout/rdaref/dataflow/">- Data flow</a></li>
+      <li><a href="/rgAbout/rdaref/translations/">- Translations</a></li>
       <li><a href="/rgAbout/rdaont/">RDA ontology</a></li>
       <li><a href="/rgAbout/rof.html">RDA/ONIX Framework</a></li>
      </ul>
@@ -119,79 +122,78 @@
    <div class="page-content">
     <div class="rg-pagecontent">
      <h1>About the RDA Registry and vocabularies</h1>
-     
      <h2><!-- InstanceBeginEditable name="AboutTitle" -->Representing the RDA ontology<!-- InstanceEndEditable --></h2>
      <!-- InstanceBeginEditable name="AboutContent" -->
      <div class="row">
       <div class="col-md-4">
-     <ul>
-      <li><a href="ont4fold.html">4-fold path</a></li>
-      <li><a href="ontDataObj.html">Datatype and object element sets</a></li>
-      <li><a href="ontESFamilies.html">Element set families</a></li>
-      <li><a href="ontHierarchies.html">Class hierarchies</a></li>
-      <li><a href="ontRelMatrix.html">Relationship matrix</a></li>
-     </ul>
+       <ul>
+        <li><a href="ont4fold.html">4-fold path</a></li>
+        <li><a href="ontDataObj.html">Datatype and object element sets</a></li>
+        <li><a href="ontESFamilies.html">Element set families</a></li>
+        <li><a href="ontHierarchies.html">Class hierarchies</a></li>
+        <li><a href="ontRelMatrix.html">Relationship matrix</a></li>
+       </ul>
       </div>
       <div class="col-md-8">
-     <h3>Element set families</h3>
-     <p>Canonical RDA properties are linked to associated unconstrained properties, that have no domains or ranges, by RDF sub-property relationships.</p>
-     <p>Most RDA elements are therefore represented in the RDA Vocabularies in a &quot;family&quot; of element sets.</p>
-	 <p>The family consists of four member properties:</p>
-	 <ul>
-	  <li>An unconstrained property with no declared domain or range.</li>
-	  <li>A Toolkit canonical property with an RDA entity declared as the domain, but no range.</li>
-	  <li>An object property with the same entity declared as the domain and an RDA entity declared as the range.</li>
-	  <li>A datatype property with the same entity declared as the domain and a literal declared as the range.</li>
-	 </ul>
-	 <div class="rg-image">
-      <img src="ESFamily.jpg" width="440" height="277" alt="RDA element set family schema">
-      <p>Schema for the family of RDA element sets.</p>
-	 </div>
-     <p>Example: &quot;has creator&quot;</p>
-     <table class="rg-table">
-      <tr>
-       <th></th>
-       <th>domain URI</th>
-       <th>domain entity</th>
-       <th>property URI</th>
-       <th>range URI</th>
-       <th>range entity</th>
-      </tr>
-      <tr>
-       <td>unconstrained</td>
-       <td></td>
-       <td></td>
-       <td>rdau:P60447</td>
-       <td></td>
-       <td></td>
-      </tr>
-      <tr>
-       <td>canonical</td>
-       <td>rdac:C10001</td>
-       <td>work</td>
-       <td>rdaw:P10065</td>
-       <td></td>
-       <td></td>
-      </tr>
-      <tr>
-       <td>datatype</td>
-       <td>rdac:C10001</td>
-       <td>work</td>
-       <td>rdawd:P10065</td>
-       <td></td>
-       <td></td>
-      </tr>
-      <tr>
-       <td>object</td>
-       <td>rdac:C10001</td>
-       <td>work</td>
-       <td>rdawo:P10065</td>
-       <td>rdac:C10001</td>
-       <td>agent</td>
-      </tr>
-     </table>
-	  </div>
-	 </div>
+       <h3>Element set families</h3>
+       <p>Canonical RDA properties are linked to associated unconstrained properties, that have no domains or ranges, by RDF sub-property relationships.</p>
+       <p>Most RDA elements are therefore represented in the RDA Vocabularies in a &quot;family&quot; of element sets.</p>
+       <p>The family consists of four member properties:</p>
+       <ul>
+        <li>An unconstrained property with no declared domain or range.</li>
+        <li>A Toolkit canonical property with an RDA entity declared as the domain, but no range.</li>
+        <li>An object property with the same entity declared as the domain and an RDA entity declared as the range.</li>
+        <li>A datatype property with the same entity declared as the domain and a literal declared as the range.</li>
+       </ul>
+       <div class="rg-image">
+        <img src="ESFamily.jpg" width="440" height="277" alt="RDA element set family schema">
+        <p>Schema for the family of RDA element sets.</p>
+       </div>
+       <p>Example: &quot;has creator&quot;</p>
+       <table class="rg-table">
+        <tr>
+         <th></th>
+         <th>domain URI</th>
+         <th>domain entity</th>
+         <th>property URI</th>
+         <th>range URI</th>
+         <th>range entity</th>
+        </tr>
+        <tr>
+         <td>unconstrained</td>
+         <td></td>
+         <td></td>
+         <td>rdau:P60447</td>
+         <td></td>
+         <td></td>
+        </tr>
+        <tr>
+         <td>canonical</td>
+         <td>rdac:C10001</td>
+         <td>work</td>
+         <td>rdaw:P10065</td>
+         <td></td>
+         <td></td>
+        </tr>
+        <tr>
+         <td>datatype</td>
+         <td>rdac:C10001</td>
+         <td>work</td>
+         <td>rdawd:P10065</td>
+         <td></td>
+         <td></td>
+        </tr>
+        <tr>
+         <td>object</td>
+         <td>rdac:C10001</td>
+         <td>work</td>
+         <td>rdawo:P10065</td>
+         <td>rdac:C10001</td>
+         <td>agent</td>
+        </tr>
+       </table>
+      </div>
+     </div>
      <!-- InstanceEndEditable -->
     </div>
    </div>
@@ -234,4 +236,5 @@
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
