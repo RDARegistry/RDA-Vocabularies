@@ -1,7 +1,7 @@
 ---
 title: RDA Entity entity
 author: Gordon Dunsire
-date: 2017-01-03 15:00:00
+date: 2017-02-03 15:00:00
 categories: RDA_Registry Library_Reference_Model RDA_entities
 ---
 

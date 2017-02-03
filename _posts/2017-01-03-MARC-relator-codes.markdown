@@ -1,7 +1,7 @@
 ---
 title: MARC relator codes
 author: Gordon Dunsire
-date: 2017-01-03 12:00:00
+date: 2017-02-03 12:00:00
 categories: RDA_Registry MARC_21 RDA_relationships
 ---
 
