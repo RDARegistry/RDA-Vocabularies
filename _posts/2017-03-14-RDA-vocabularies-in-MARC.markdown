@@ -11,9 +11,9 @@ Many of the value vocabularies represented in the RDA Registry have been added t
 
 The other 15 value vocabularies in RDA Vocabularies are not relevant to MARC 21, or are not accommodated as vocabulary encoding schemes in MARC 21.
 
-The MARC source codes are the same strings as the prefixes suggested in the RDA Registry and registered on [prefix:cc](prefix:cc).
+The MARC source codes are the same strings as the prefixes suggested in the RDA Registry and registered on [prefix:cc](http://prefix:cc).
 
-Note that the RDA Carrier type, Content type, and Media type value vocabularies are duplicated in [MARC 21 Term and code lists](http://www.loc.gov/standards/valuelist/index.html). These are maintained separately by the Library of Congress, as are the RDF representations in the [LC Linked Data Service](id.loc.gov).
+Note that the RDA Carrier type, Content type, and Media type value vocabularies are duplicated in [MARC 21 Term and code lists](http://www.loc.gov/standards/valuelist/index.html). These are maintained separately by the Library of Congress, as are the RDF representations in the [LC Linked Data Service](http://id.loc.gov).
 
 The RDA vocabularies are relatively stable, with a foundation in the [RDA/ONIX Framework for Resource Categorization](http://www.rdaregistry.info/termList/#rof).
 
