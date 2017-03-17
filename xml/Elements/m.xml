@@ -76,11 +76,11 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30027" />
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that accompanies or is accompanied by a manifestation.</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that accompanies or is accompanied by another manifestation.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/accompanyingManifestationRelationship.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60709" />
   <rdakit:toolkitLabel xml:lang="en">accompanying manifestation relationship</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that accompanies or is accompanied by a manifestation.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that accompanies or is accompanied by another manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour relation de manifestation d’accompagnement</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une manifestation qui accompagne la manifestation ou est accompagnée par elle.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">relation de manifestation d’accompagnement</rdakit:toolkitLabel>
@@ -301,6 +301,30 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
 </rdf:Description>
 
+<!-- Property: has bibliographic format -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30197">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">bibliographicFormat</reg:name>
+  <rdfs:label xml:lang="en">has bibliographic format</rdfs:label>
+  <skos:definition xml:lang="en">Relates a manifestation to a proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/bibliographicFormat.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60578" />
+  <rdakit:instructionNumber xml:lang="">3.12</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">bibliographic format</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="fr">a pour format du livre</rdfs:label>
+  <skos:definition xml:lang="fr">Met une manifestation en relation avec le résultat du pliage d’une feuille imprimée pour former un cahier de feuillets (par exemple, une feuille pliée une fois pour former un in-folio, pliée deux fois pour former un in-quarto, pliée trois fois pour former un in-octavo, etc.).</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fr">format du livre</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Le résultat du pliage d’une feuille imprimée pour former un cahier de feuillets (par exemple, une feuille pliée une fois pour former un in-folio, pliée deux fois pour former un in-quarto, pliée trois fois pour former un in-octavo, etc.).</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">formato libro</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">El resultado del plegado de una hoja impresa para formar un conjunto de hojas (por ej., una hoja doblada una vez para formar un folio, dos veces para formar un cuarto, tres veces para formar un octavo).</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="sv">har bokformat</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="sv">bokformat</rdakit:toolkitLabel>
+</rdf:Description>
+
 <!-- Property: has book designer -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30069">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
@@ -323,30 +347,6 @@
   <rdakit:toolkitDefinition xml:lang="es">Una persona, familia o entidad corporativa que interviene en la fabricación de una manifestación como responsable del diseño gráfico de un libro en su totalidad, incluyendo la disposición de tipografía e ilustración, selección de materiales, y proceso empleado.</rdakit:toolkitDefinition>
   <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30069" />
-</rdf:Description>
-
-<!-- Property: has book format -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30197">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">bookFormat</reg:name>
-  <rdfs:label xml:lang="en">has book format</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a result of folding a printed sheet to form a gathering of leaves (e.g., a sheet folded once to form a folio, twice to form a quarto, three times to form an octavo, etc.).</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/bookFormat.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60578" />
-  <rdakit:instructionNumber xml:lang="">3.12</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">book format</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A result of folding a printed sheet to form a gathering of leaves.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="fr">a pour format du livre</rdfs:label>
-  <skos:definition xml:lang="fr">Met une manifestation en relation avec le résultat du pliage d’une feuille imprimée pour former un cahier de feuillets (par exemple, une feuille pliée une fois pour former un in-folio, pliée deux fois pour former un in-quarto, pliée trois fois pour former un in-octavo, etc.).</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fr">format du livre</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Le résultat du pliage d’une feuille imprimée pour former un cahier de feuillets (par exemple, une feuille pliée une fois pour former un in-folio, pliée deux fois pour former un in-quarto, pliée trois fois pour former un in-octavo, etc.).</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">formato libro</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">El resultado del plegado de una hoja impresa para formar un conjunto de hojas (por ej., una hoja doblada una vez para formar un folio, dos veces para formar un cuarto, tres veces para formar un octavo).</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="sv">har bokformat</rdfs:label>
-  <rdakit:toolkitLabel xml:lang="sv">bokformat</rdakit:toolkitLabel>
 </rdf:Description>
 
 <!-- Property: has braille embosser -->
@@ -978,20 +978,20 @@
   <rdakit:toolkitLabel xml:lang="sv">detaljerad information om bärande matieral</rdakit:toolkitLabel>
 </rdf:Description>
 
-<!-- Property: has details of book format -->
+<!-- Property: has details of bibliographic format -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30218">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">detailsOfBookFormat</reg:name>
-  <rdfs:label xml:lang="en">has details of book format</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/detailsOfBookFormat.en" />
-  <skos:definition xml:lang="en">Relates a manifestation to details of a result of folding a printed sheet to form a gathering of leaves.</skos:definition>
+  <reg:name xml:lang="en">detailsOfBibliographicFormat</reg:name>
+  <rdfs:label xml:lang="en">has details of bibliographic format</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/detailsOfBibliographicFormat.en" />
+  <skos:definition xml:lang="en">Relates a manifestation to details of a proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60769" />
   <rdakit:instructionNumber xml:lang="">3.12.1.4</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">details of book format</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">Details of a result of folding a printed sheet to form a gathering of leaves.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">details of bibliographic format</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">Details of a proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">detalles del formato libro</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Detalles del resultado del plegado de una hoja impresa para formar un conjunto de hojas (por ej., una hoja doblada una vez para formar un folio, dos veces para formar un cuarto, tres veces para formar un octavo).</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="sv">har detaljerad information om bokformat</rdfs:label>
@@ -1528,6 +1528,23 @@
   <rdakit:toolkitLabel xml:lang="sv">detaljerad information om förminskningsgrad</rdakit:toolkitLabel>
 </rdf:Description>
 
+<!-- Property: has details of regional encoding -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30275">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has details of regional encoding</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">detailsOfRegionalEncoding</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/detailsOfRegionalEncoding.en" />
+  <skos:definition xml:lang="en">Relates a manifestation to details of a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60904" />
+  <rdakit:instructionNumber xml:lang="">3.19.6.4</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">details of regional encoding</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">Details of a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30221" />
+</rdf:Description>
+
 <!-- Property: has details of sound characteristic -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30245">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/" />
@@ -1972,7 +1989,7 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/editionStatement.en" />
-  <skos:scopeNote xml:lang="en">An edition statement sometimes includes a designation of a named revision of an edition. An edition statement sometimes includes a statement or statements of responsibility relating to the edition and/or to a named revision of an edition.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">An edition statement sometimes includes a designation of a named revision of an edition. An edition statement sometimes includes a statement of responsibility relating to the edition or to a named revision of an edition.</skos:scopeNote>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60329" />
   <rdakit:instructionNumber xml:lang="">2.5</rdakit:instructionNumber>
   <rdakit:toolkitLabel xml:lang="en">edition statement</rdakit:toolkitLabel>
@@ -2196,11 +2213,11 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30024" />
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is equivalent to a manifestation.</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is equivalent to another manifestation.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/equivalentManifestationRelationship.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60712" />
   <rdakit:toolkitLabel xml:lang="en">equivalent manifestation relationship</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is equivalent to a manifestation.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is equivalent to another manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour relation de manifestation équivalente</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une manifestation qui est équivalente à la manifestation.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">relation de manifestation équivalente</rdakit:toolkitLabel>
@@ -4640,7 +4657,7 @@
   <rdfs:label xml:lang="en">has plate number for notated music</rdfs:label>
   <skos:definition xml:lang="en">Relates a manifestation to a numbering designation assigned to a notated music manifestation by a publisher.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <skos:scopeNote xml:lang="en">A plate number for notated music sometimes includes initials, abbreviations, or words identifying the publisher and is sometimes followed by a number corresponding to the number of pages or plates.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">A plate number for notated music sometimes includes initials, abbreviations, or words identifying the publisher. It is sometimes followed by a number corresponding to the number of pages or plates or a number corresponding to an individual page or plate.</skos:scopeNote>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30004" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/plateNumberForNotatedMusic.en" />
@@ -5221,7 +5238,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">regionalEncoding</reg:name>
   <rdfs:label xml:lang="en">has regional encoding</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a code identifying the region of the world for which a videodisc has been encoded and preventing the disc from being played on a player sold in a different region.</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30124" />
@@ -5229,7 +5246,7 @@
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60059" />
   <rdakit:instructionNumber xml:lang="">3.19.6</rdakit:instructionNumber>
   <rdakit:toolkitLabel xml:lang="en">regional encoding</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A code identifying the region of the world for which a videodisc has been encoded and preventing the disc from being played on a player sold in a different region.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour code de région</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec un code identifiant la région du monde pour laquelle un vidéodisque a été encodé et empêchant le disque d’être lu sur un lecteur vendu dans une région différente.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">code de région</rdakit:toolkitLabel>
@@ -6287,11 +6304,11 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30020" />
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is contained in or contains a manifestation.</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is contained in or contains another manifestation.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/wholePartManifestationRelationship.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60714" />
   <rdakit:toolkitLabel xml:lang="en">whole-part manifestation relationship</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is contained in or contains a manifestation.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is contained in or contains another manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour relation de manifestation tout-partie</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une manifestation qui est contenue dans la manifestation ou la contient.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">relation de manifestation tout-partie</rdakit:toolkitLabel>

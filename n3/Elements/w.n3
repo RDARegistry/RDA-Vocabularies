@@ -562,7 +562,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
     skos:definition "Relates a work to a work that uses a musical work in a motion picture."@en .
 
 <http://rdaregistry.info/Elements/w/P10246> a rdf:Property ;
@@ -581,7 +581,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
     skos:definition "Relates a work to a musical work that is used in a motion picture."@en .
 
 <http://rdaregistry.info/Elements/w/P10308> a rdf:Property ;
@@ -727,6 +727,16 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10256> ;
     skos:definition "Relates a work to a nomen that a work is about."@en .
+
+<http://rdaregistry.info/Elements/w/P10324> a rdf:Property ;
+    rdfs:label "has subject (entity)"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60805> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectEntity.en> ;
+    reg:name "subjectEntity"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    skos:definition "Relates a work to an entity that a work is about."@en .
 
 <http://metadataregistry.org/uri/RegStatus/1008> a skos:Concept ;
     skos:prefLabel "Deprecated"@en .
@@ -1205,7 +1215,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
     skos:definition "Relates a work to a musical work that provides incidental music for a play or other spoken work for the stage."@en .
 
 <http://rdaregistry.info/Elements/w/P10032> a rdf:Property ;
@@ -1859,6 +1869,50 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10147> ;
     skos:definition "Relates a work to a serial or multipart work that consistently appears in a larger work; a title of a larger work appears on all issues or parts of a subseries"@en .
 
+<http://rdaregistry.info/Elements/w/P10081> a rdf:Property ;
+    rdfs:label "has longitude and latitude"@en,
+        "har longitud och latitud"@sv ;
+    rdakit:instructionNumber "7.4.2" ;
+    rdakit:toolkitDefinition "A system for identifying the area covered by the cartographic content of a work using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries."@en,
+        "Un sistema para identificar el área cubierta por el contenido cartográfico de un recurso."@es,
+        "Système permettant d’identifier la surface couverte par le contenu cartographique d’une ressource en utilisant la longitude des limites ouest et est et la latitude des limites nord et sud."@fr ;
+    rdakit:toolkitLabel "longitude and latitude"@en,
+        "longitud y latitud"@es,
+        "longitude et latitude"@fr,
+        "longitud och latitud"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10300>,
+        <http://rdaregistry.info/Elements/w/P10301> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60345> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/longitudeAndLatitude.en> ;
+    reg:name "longitudeAndLatitude"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10024> ;
+    skos:definition "Relates a work to a system for identifying the area covered by the cartographic content of a work using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries."@en .
+
+<http://rdaregistry.info/Elements/w/P10082> a rdf:Property ;
+    rdfs:label "has right ascension and declination"@en,
+        "har rektascension och deklination"@sv ;
+    rdakit:instructionNumber "7.4.4" ;
+    rdakit:toolkitDefinition "A system for identifying the location of a celestial object in the sky covered by the cartographic content of a work using the angles of right ascension and declination."@en,
+        "Un sistema para identificar la localización de un objeto celeste en el firmamento que está incluido en el contenido cartográfico de un recurso que utiliza los ángulos de ascensión directa y de declinación."@es,
+        "Système utilisant les angles d’ascension droite et de déclinaison pour identifier la localisation d’un objet céleste dans la zone du ciel couverte par le contenu cartographique d’une ressource."@fr ;
+    rdakit:toolkitLabel "right ascension and declination"@en,
+        "ascensión recta y declinación"@es,
+        "ascension droite et déclinaison"@fr,
+        "rektascension och deklination"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10302>,
+        <http://rdaregistry.info/Elements/w/P10303> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60346> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/rightAscensionAndDeclination.en> ;
+    reg:name "rightAscensionAndDeclination"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10024> ;
+    skos:definition "Relates a work to a system for identifying the location of a celestial object in the sky covered by the cartographic content of a work using the angles of right ascension and declination."@en .
+
 <http://rdaregistry.info/Elements/w/P10083> a rdf:Property ;
     rdfs:label "has strings of coordinate pairs"@en ;
     rdakit:instructionNumber "7.4.3" ;
@@ -2200,7 +2254,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10237> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10238> ;
     skos:definition "Relates a work to a work such as a play or other spoken work for the stage that uses a musical work as incidental music."@en .
 
 <http://rdaregistry.info/Elements/w/P10107> a rdf:Property ;
@@ -4191,54 +4245,6 @@
     skos:definition "Relates a work to an author who is appointed by an organization to report on the proceedings of its meetings."@en ;
     skos:scopeNote "Responsibility limited to taking minutes is excluded."@en .
 
-<http://rdaregistry.info/Elements/w/P10261> a rdf:Property ;
-    rdfs:label "has subject (person)"@en ;
-    rdakit:toolkitDefinition "A person that a work is about."@en,
-        "Una persona sobre la que trata la obra."@es ;
-    rdakit:toolkitLabel "subject (person)"@en,
-        "materia (persona)"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10261> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60805> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectPerson.en> ;
-    reg:name "subjectPerson"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10319> ;
-    skos:definition "Relates a work to a person that a work is about."@en .
-
-<http://rdaregistry.info/Elements/w/P10262> a rdf:Property ;
-    rdfs:label "has subject (family)"@en ;
-    rdakit:toolkitDefinition "A family that a work is about."@en,
-        "Una familia sobre la que trata la obra."@es ;
-    rdakit:toolkitLabel "subject (family)"@en,
-        "materia (familia)"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10262> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60805> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectFamily.en> ;
-    reg:name "subjectFamily"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10320> ;
-    skos:definition "Relates a work to a family that a work is about."@en .
-
-<http://rdaregistry.info/Elements/w/P10263> a rdf:Property ;
-    rdfs:label "has subject (corporate body)"@en ;
-    rdakit:toolkitDefinition "A corporate body that a work is about."@en,
-        "Una entidad corporativa sobre la que trata la obra."@es ;
-    rdakit:toolkitLabel "subject (corporate body)"@en,
-        "materia (entidad corporativa)"@es ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10263> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60805> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectCorporateBody.en> ;
-    reg:name "subjectCorporateBody"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10320> ;
-    skos:definition "Relates a work to a corporate body that a work is about."@en .
-
 <http://rdaregistry.info/Elements/w/P10266> a rdf:Property ;
     rdfs:label "is analysis of (item)"@en ;
     rdakit:instructionNumber "23.5" ;
@@ -4818,7 +4824,6 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10081> ;
     skos:definition "Relates a work to a distance of a point on a planet or satellite measured north and south from the equator."@en .
 
 <http://rdaregistry.info/Elements/w/P10301> a rdf:Property ;
@@ -4831,7 +4836,6 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10081> ;
     skos:definition "Relates a work to a distance of a point on a planet or satellite measured east and west from a reference meridian."@en .
 
 <http://rdaregistry.info/Elements/w/P10302> a rdf:Property ;
@@ -4844,7 +4848,6 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10082> ;
     skos:definition "Relates a work to an angular distance measured eastward on the equator from the vernal equinox to the hour circle through a celestial body, from 0 to 24 hours."@en .
 
 <http://rdaregistry.info/Elements/w/P10303> a rdf:Property ;
@@ -4857,7 +4860,6 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10082> ;
     skos:definition "Relates a work to an angular distance to a body on the celestial sphere measured north or south through 90° from the celestial equator along the hour circle of the body."@en .
 
 <http://rdaregistry.info/Elements/w/P10304> a rdf:Property ;
@@ -4906,6 +4908,54 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
     skos:definition "Relates a work to an agent responsible for creating an audio work by manipulating, recombining, mixing, and reproducing previously recorded sounds."@en ;
     skos:scopeNote "Remixing activities that do not substantially change the nature and content of the original work, and mixing recorded tracks together to appear as one continuous track are excluded."@en .
+
+<http://rdaregistry.info/Elements/w/P10325> a rdf:Property ;
+    rdfs:label "is description of (person)"@en ;
+    rdakit:instructionNumber "23.5" ;
+    rdakit:toolkitDefinition "A person described by a describing work."@en ;
+    rdakit:toolkitLabel "description of (person)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10325>,
+        <http://rdaregistry.info/Elements/w/object/P10325> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60190> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/descriptionOfPerson.en> ;
+    reg:name "descriptionOfPerson"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10261> ;
+    skos:definition "Relates a work to a person described by a describing work."@en .
+
+<http://rdaregistry.info/Elements/w/P10326> a rdf:Property ;
+    rdfs:label "is description of (corporate body)"@en ;
+    rdakit:instructionNumber "23.5" ;
+    rdakit:toolkitDefinition "A corporate body described by a describing work."@en ;
+    rdakit:toolkitLabel "description of (corporate body)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10326>,
+        <http://rdaregistry.info/Elements/w/object/P10326> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60190> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/descriptionOfCorporateBody.en> ;
+    reg:name "descriptionOfCorporateBody"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10263> ;
+    skos:definition "Relates a work to a corporate body described by a describing work."@en .
+
+<http://rdaregistry.info/Elements/w/P10327> a rdf:Property ;
+    rdfs:label "is description of (family)"@en ;
+    rdakit:instructionNumber "23.5" ;
+    rdakit:toolkitDefinition "A family described by a describing work."@en ;
+    rdakit:toolkitLabel "description of (family)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10327>,
+        <http://rdaregistry.info/Elements/w/object/P10327> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60190> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/descriptionOfFamily.en> ;
+    reg:name "descriptionOfFamily"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10262> ;
+    skos:definition "Relates a work to a family described by a describing work."@en .
 
 <http://rdaregistry.info/Elements/w/P10062> a rdf:Property ;
     rdfs:label "has architect"@en ;
@@ -5033,7 +5083,7 @@
 <http://rdaregistry.info/Elements/w/P10231> a rdf:Property ;
     rdfs:label "has sequential work relationship with"@en ;
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A work that is preceded by or succeeded by a work."@en,
+    rdakit:toolkitDefinition "A work that is preceded by or succeeded by another work."@en,
         "Una obra que es precedido por o sucedida por la obra."@es,
         "Œuvre qui est précédée ou suivie par l’œuvre."@fr ;
     rdakit:toolkitLabel "sequential work relationship"@en,
@@ -5048,7 +5098,8 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    skos:definition "Relates a work to a work that is preceded by or succeeded by a work."@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
+    skos:definition "Relates a work to a work that is preceded by or succeeded by another work."@en ;
     skos:scopeNote "Sequential works include sequels, prequels, continuations, superseding works, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10257> a rdf:Property ;
@@ -5117,6 +5168,57 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10256> ;
     skos:definition "Relates a work to an item that a work is about."@en .
+
+<http://rdaregistry.info/Elements/w/P10261> a rdf:Property ;
+    rdfs:label "has subject (person)"@en ;
+    rdakit:toolkitDefinition "A person that a work is about."@en,
+        "Una persona sobre la que trata la obra."@es ;
+    rdakit:toolkitLabel "subject (person)"@en,
+        "materia (persona)"@es ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10325>,
+        <http://rdaregistry.info/Elements/w/datatype/P10261> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60805> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectPerson.en> ;
+    reg:name "subjectPerson"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10319> ;
+    skos:definition "Relates a work to a person that a work is about."@en .
+
+<http://rdaregistry.info/Elements/w/P10262> a rdf:Property ;
+    rdfs:label "has subject (family)"@en ;
+    rdakit:toolkitDefinition "A family that a work is about."@en,
+        "Una familia sobre la que trata la obra."@es ;
+    rdakit:toolkitLabel "subject (family)"@en,
+        "materia (familia)"@es ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10327>,
+        <http://rdaregistry.info/Elements/w/datatype/P10262> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60805> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectFamily.en> ;
+    reg:name "subjectFamily"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10320> ;
+    skos:definition "Relates a work to a family that a work is about."@en .
+
+<http://rdaregistry.info/Elements/w/P10263> a rdf:Property ;
+    rdfs:label "has subject (corporate body)"@en ;
+    rdakit:toolkitDefinition "A corporate body that a work is about."@en,
+        "Una entidad corporativa sobre la que trata la obra."@es ;
+    rdakit:toolkitLabel "subject (corporate body)"@en,
+        "materia (entidad corporativa)"@es ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10326>,
+        <http://rdaregistry.info/Elements/w/datatype/P10263> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60805> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/subjectCorporateBody.en> ;
+    reg:name "subjectCorporateBody"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10320> ;
+    skos:definition "Relates a work to a corporate body that a work is about."@en .
 
 <http://rdaregistry.info/Elements/w/P10264> a rdf:Property ;
     rdfs:label "is subject of (work)"@en ;
@@ -5296,50 +5398,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
     skos:definition "Relates a work to a person or corporate body who is accused in a criminal proceeding or sued in a civil proceeding."@en .
 
-<http://rdaregistry.info/Elements/w/P10081> a rdf:Property ;
-    rdfs:label "has longitude and latitude"@en,
-        "har longitud och latitud"@sv ;
-    rdakit:instructionNumber "7.4.2" ;
-    rdakit:toolkitDefinition "A system for identifying the area covered by the cartographic content of a work using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries."@en,
-        "Un sistema para identificar el área cubierta por el contenido cartográfico de un recurso."@es,
-        "Système permettant d’identifier la surface couverte par le contenu cartographique d’une ressource en utilisant la longitude des limites ouest et est et la latitude des limites nord et sud."@fr ;
-    rdakit:toolkitLabel "longitude and latitude"@en,
-        "longitud y latitud"@es,
-        "longitude et latitude"@fr,
-        "longitud och latitud"@sv ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10300>,
-        <http://rdaregistry.info/Elements/w/P10301> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60345> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/longitudeAndLatitude.en> ;
-    reg:name "longitudeAndLatitude"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10024> ;
-    skos:definition "Relates a work to a system for identifying the area covered by the cartographic content of a work using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries."@en .
-
-<http://rdaregistry.info/Elements/w/P10082> a rdf:Property ;
-    rdfs:label "has right ascension and declination"@en,
-        "har rektascension och deklination"@sv ;
-    rdakit:instructionNumber "7.4.4" ;
-    rdakit:toolkitDefinition "A system for identifying the location of a celestial object in the sky covered by the cartographic content of a work using the angles of right ascension and declination."@en,
-        "Un sistema para identificar la localización de un objeto celeste en el firmamento que está incluido en el contenido cartográfico de un recurso que utiliza los ángulos de ascensión directa y de declinación."@es,
-        "Système utilisant les angles d’ascension droite et de déclinaison pour identifier la localisation d’un objet céleste dans la zone du ciel couverte par le contenu cartographique d’une ressource."@fr ;
-    rdakit:toolkitLabel "right ascension and declination"@en,
-        "ascensión recta y declinación"@es,
-        "ascension droite et déclinaison"@fr,
-        "rektascension och deklination"@sv ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10302>,
-        <http://rdaregistry.info/Elements/w/P10303> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60346> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/rightAscensionAndDeclination.en> ;
-    reg:name "rightAscensionAndDeclination"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10024> ;
-    skos:definition "Relates a work to a system for identifying the location of a celestial object in the sky covered by the cartographic content of a work using the angles of right ascension and declination."@en .
-
 <http://rdaregistry.info/Elements/w/P10147> a rdf:Property ;
     rdfs:label "is container of (work)"@en ;
     rdakit:instructionNumber "24.5" ;
@@ -5364,7 +5422,7 @@
 <http://rdaregistry.info/Elements/w/P10229> a rdf:Property ;
     rdfs:label "has derivative work relationship with"@en ;
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A work that is based on or is a derivative of a work."@en,
+    rdakit:toolkitDefinition "A work that is based on or is a derivative of another work."@en,
         "Una obra que se basa en, o es un derivado de la obra."@es,
         "Œuvre qui est basée sur l’œuvre ou en constitue un dérivé."@fr ;
     rdakit:toolkitLabel "derivative work relationship"@en,
@@ -5379,13 +5437,13 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
-    skos:definition "Relates a work to a work that is based on or is a derivative of a work."@en ;
+    skos:definition "Relates a work to a work that is based on or is a derivative of another work."@en ;
     skos:scopeNote "Derivative works include summaries, abstracts, digests, adaptations, dramatizations, novelizations, screenplays, free translations, paraphrases, imitations, parodies, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10232> a rdf:Property ;
     rdfs:label "has whole-part work relationship with"@en ;
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A work that is contained in or contains a work."@en,
+    rdakit:toolkitDefinition "A work that is contained in or contains another work."@en,
         "Una obra que es incluida en, o contiene la obra."@es,
         "Œuvre qui est contenue dans l’œuvre ou la contient."@fr ;
     rdakit:toolkitLabel "whole-part work relationship"@en,
@@ -5401,13 +5459,13 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
-    skos:definition "Relates a work to a work that is contained in or contains a work."@en ;
+    skos:definition "Relates a work to a work that is contained in or contains another work."@en ;
     skos:scopeNote "Parts of works include discrete components such as subseries, and individual poems, stories, or essays in a collection or anthology."@en .
 
 <http://rdaregistry.info/Elements/w/P10296> a rdf:Property ;
     rdfs:label "has referential work relationship with"@en ;
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A work that references a work."@en,
+    rdakit:toolkitDefinition "A work that references another work."@en,
         "Una obra que hace referencia a la obra."@es ;
     rdakit:toolkitLabel "referential work relationship"@en,
         "relación obra referencial"@es ;
@@ -5421,7 +5479,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
-    skos:definition "Relates a work to a work that references a work."@en .
+    skos:definition "Relates a work to a work that references another work."@en .
 
 <http://rdaregistry.info/Elements/w/P10058> a rdf:Property ;
     rdfs:label "has artist"@en ;
@@ -5555,29 +5613,10 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10103> ;
     skos:definition "Relates a work to a work that provides text for a motion picture, television program or video."@en .
 
-<http://rdaregistry.info/Elements/w/P10198> a rdf:Property ;
-    rdfs:label "has related work (work)"@en ;
-    rdakit:toolkitDefinition "A work associated with a work being described."@en ;
-    rdakit:toolkitLabel "related work (work)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10228>,
-        <http://rdaregistry.info/Elements/w/P10229>,
-        <http://rdaregistry.info/Elements/w/P10232>,
-        <http://rdaregistry.info/Elements/w/P10296>,
-        <http://rdaregistry.info/Elements/w/datatype/P10198>,
-        <http://rdaregistry.info/Elements/w/object/P10198> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/relatedWorkWork.en> ;
-    reg:name "relatedWorkWork"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10307> ;
-    skos:definition "Relates a work to a work associated with a work being described."@en .
-
 <http://rdaregistry.info/Elements/w/P10228> a rdf:Property ;
     rdfs:label "has accompanying work relationship with"@en ;
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A work that is an augmentation of, or is augmented by, or is complemented by a work."@en,
+    rdakit:toolkitDefinition "A work that is an augmentation of, or is augmented by, or is complemented by another work."@en,
         "Una obra que es un aumento de, o se ve aumentada por, o se complementa con la obra."@es,
         "Œuvre qui constitue une augmentation de l’œuvre ou qui est augmentée ou complétée par elle."@fr ;
     rdakit:toolkitLabel "accompanying work relationship"@en,
@@ -5594,7 +5633,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
-    skos:definition "Relates a work to a work that is an augmentation of, or is augmented by, or is complemented by a work."@en ;
+    skos:definition "Relates a work to a work that is an augmentation of, or is augmented by, or is complemented by another work."@en ;
     skos:scopeNote "Accompanying works include supplements, concordances, indexes, catalogues, teacher’s guides, music for a motion picture, etc."@en .
 
 <http://rdaregistry.info/Elements/w/P10311> a rdf:Property ;
@@ -5656,6 +5695,23 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10047> ;
     skos:definition "Relates a work to an agent responsible for most of the business aspects of a production for screen, sound recording, television, webcast, etc."@en ;
     skos:scopeNote "The producer is generally responsible for fund raising, managing the production, hiring key personnel, arranging for distributors, etc."@en .
+
+<http://rdaregistry.info/Elements/w/P10198> a rdf:Property ;
+    rdfs:label "has related work (work)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10228>,
+        <http://rdaregistry.info/Elements/w/P10229>,
+        <http://rdaregistry.info/Elements/w/P10232>,
+        <http://rdaregistry.info/Elements/w/P10296>,
+        <http://rdaregistry.info/Elements/w/datatype/P10198>,
+        <http://rdaregistry.info/Elements/w/object/P10198> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/relatedWorkWork.en> ;
+    reg:name "relatedWorkWork"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10307> ;
+    skos:definition "Relates a work to a work associated with a work being described."@en .
 
 <http://rdaregistry.info/Elements/w/P10237> a rdf:Property ;
     rdfs:label "is music (work)"@en ;

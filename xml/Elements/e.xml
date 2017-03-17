@@ -295,11 +295,11 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20100" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20105" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20192" />
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is an augmentation of, or is augmented by, or is complemented by an expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is an augmentation of, or is augmented by, or is complemented by another expression.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/accompanyingExpressionRelationship.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60709" />
   <rdakit:toolkitLabel xml:lang="en">accompanying expression relationship</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is an augmentation of, or is augmented by, or is complemented by an expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is an augmentation of, or is augmented by, or is complemented by another expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">relation d’expression d’accompagnement</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui constitue une augmentation de l’expression ou qui est augmentée ou complétée par elle.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">relaciones de expresión acompañante</rdakit:toolkitLabel>
@@ -1275,6 +1275,28 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20080" />
 </rdf:Description>
 
+<!-- Property: has capture information -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20217">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">capture information</reg:name>
+  <skos:definition xml:lang="en">Relates an expression to a place, date, or other information associated with the recording, filming, etc., of the content of an expression. </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/captureInformation.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60555" />
+  <rdakit:instructionNumber xml:lang="">7.11</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">capture information</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A place, date, or other information associated with the recording, filming, etc., of the content of an expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="fr">lieu et date de la captation</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Le lieu et la date associés à la captation (c’est-à-dire l’enregistrement, le tournage, etc.) du contenu de la ressource.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">lugar y fecha de captura</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">El lugar y fecha asociados con la captura (i.e., grabación, filmación, etc.) del contenido de un recurso.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="en">has capture information</rdfs:label>
+  <rdfs:label xml:lang="sv">har inspelningsort och inspelningstid</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="sv">inspelningsort och inspelningstid</rdakit:toolkitLabel>
+</rdf:Description>
+
 <!-- Property: has cartographer (expression) -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20042">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
@@ -2062,14 +2084,14 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">dateOfCapture</reg:name>
-  <skos:definition xml:lang="en">Relates an expression to a date or range of dates associated with the recording, filming, etc., of the content of an expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to a date associated with the recording, filming, etc., of the content of an expression.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/dateOfCapture.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60074" />
   <rdakit:instructionNumber xml:lang="">7.11.3</rdakit:instructionNumber>
   <rdakit:toolkitLabel xml:lang="en">date of capture</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A date or range of dates associated with the recording, filming, etc., of the content of an expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A date associated with the recording, filming, etc., of the content of an expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">date de captation</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">La date ou la fourchette de dates associée à la captation (c’est-à-dire l’enregistrement, le tournage, etc.) du contenu de la ressource.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">fecha de captura</rdakit:toolkitLabel>
@@ -2141,26 +2163,22 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20203" />
 </rdf:Description>
 
-<!-- Property: has derivative expression relationship with -->
+<!-- Property: has derivative expression relationship -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20233">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">derivativeExpressionRelationship</reg:name>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20205" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20203" />
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is based on or is a derivative of an expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is based on or is a derivative of another expression.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/derivativeExpressionRelationship.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60710" />
   <rdakit:toolkitLabel xml:lang="en">derivative expression relationship</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is based on or is a derivative of an expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is based on or is a derivative of another expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">relation d’expression dérivée</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui est basée sur l’expression ou en constitue un dérivé.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">relaciones de expresión derivada</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra que se basa en, o es una derivada de la expresión.</rdakit:toolkitDefinition>
-  <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
-  <rdfs:label xml:lang="en">has derivative expression relationship with</rdfs:label>
+  <rdfs:label xml:lang="en">has derivative expression relationship</rdfs:label>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20233" />
 </rdf:Description>
 
@@ -4180,6 +4198,24 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20022" />
 </rdf:Description>
 
+<!-- Property: has note on capture -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20309">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20071" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">noteOnCapture</reg:name>
+  <rdfs:label xml:lang="en">has note on capture</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/noteOnCapture.en" />
+  <skos:definition xml:lang="en">Relates an expression to a note providing information associated with the recording, filming, etc., of the content of an expression.</skos:definition>
+  <skos:scopeNote xml:lang="en">Note on capture includes the circumstances such as a live or studio recording, the equipment used, etc.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60905" />
+  <rdakit:instructionNumber xml:lang="">7.11.4</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">note on capture</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A note providing information associated with the recording, filming, etc., of the content of an expression.</rdakit:toolkitDefinition>
+</rdf:Description>
+
 <!-- Property: has note on changes in content characteristics -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20010">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
@@ -4553,28 +4589,6 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20288" />
 </rdf:Description>
 
-<!-- Property: has place and date of capture -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20217">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">placeAndDateOfCapture</reg:name>
-  <skos:definition xml:lang="en">Relates an expression to a place and date associated with the recording, filming, etc., of the content of an expression.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/placeAndDateOfCapture.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60555" />
-  <rdakit:instructionNumber xml:lang="">7.11</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">place and date of capture</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A place and date associated with the recording, filming, etc., of the content of an expression.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="fr">lieu et date de la captation</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Le lieu et la date associés à la captation (c’est-à-dire l’enregistrement, le tournage, etc.) du contenu de la ressource.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">lugar y fecha de captura</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">El lugar y fecha asociados con la captura (i.e., grabación, filmación, etc.) del contenido de un recurso.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="en">has place and date of capture</rdfs:label>
-  <rdfs:label xml:lang="sv">har inspelningsort och inspelningstid</rdfs:label>
-  <rdakit:toolkitLabel xml:lang="sv">inspelningsort och inspelningstid</rdakit:toolkitLabel>
-</rdf:Description>
-
 <!-- Property: has place of capture -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20218">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
@@ -4916,13 +4930,10 @@
   <skos:definition xml:lang="en">Relates an expression to an expression associated with an expression being described.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20233" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/relatedExpressionExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60313" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20232" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20234" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20235" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20236" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20205" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20205" />
   <rdfs:label xml:lang="sv">har relaterat uttryck</rdfs:label>
@@ -5561,27 +5572,23 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20168" />
 </rdf:Description>
 
-<!-- Property: has sequential expression relationship with -->
+<!-- Property: has sequential expression relationship -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20235">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">sequentialExpressionRelationship</reg:name>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is preceded by or succeeded by an expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is preceded by or succeeded by another expression.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/sequentialExpressionRelationship.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60713" />
   <rdakit:toolkitLabel xml:lang="en">sequential expression relationship</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is preceded by or succeeded by an expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is preceded by or succeeded by another expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">relation d’expression séquentielle</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui est précédée ou suivie par l’expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">relaciones de expresión secuencial</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra que es precedida por o sucedida por la expresión.</rdakit:toolkitDefinition>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20205" />
-  <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
-  <rdfs:label xml:lang="en">has sequential expression relationship with</rdfs:label>
+  <rdfs:label xml:lang="en">has sequential expression relationship</rdfs:label>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20235" />
 </rdf:Description>
 
@@ -6387,27 +6394,23 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20070" />
 </rdf:Description>
 
-<!-- Property: has whole-part expression relationship with -->
+<!-- Property: has whole-part expression relationship -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20236">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">wholePartExpressionRelationship</reg:name>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20074" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20145" />
-  <skos:definition xml:lang="en">Relates an expression to an expression that is contained in or contains an expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression that is contained in or contains another expression.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/wholePartExpressionRelationship.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60714" />
   <rdakit:toolkitLabel xml:lang="en">whole-part expression relationship</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression that is contained in or contains an expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression that is contained in or contains another expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">relation d’expression tout-partie</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui est contenue dans l’expression ou la contient.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">relación de la expresión todo-parte</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión que es incluida en, o contiene la expresión.</rdakit:toolkitDefinition>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20205" />
-  <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
-  <rdfs:label xml:lang="en">has whole-part expression relationship with</rdfs:label>
+  <rdfs:label xml:lang="en">has whole-part expression relationship</rdfs:label>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20236" />
 </rdf:Description>
 

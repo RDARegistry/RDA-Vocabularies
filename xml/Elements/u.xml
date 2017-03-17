@@ -1437,6 +1437,18 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
 </rdf:Description>
 
+<!-- Property: has bibliographic format -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60578">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">bibliographicFormat</reg:name>
+  <rdfs:label xml:lang="en">has bibliographic format</rdfs:label>
+  <skos:definition xml:lang="en">Relates a resource to a proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30197" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/bibliographicFormat.en" />
+</rdf:Description>
+
 <!-- Property: has binder -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60458">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -1529,18 +1541,6 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60409" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50170" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/bookDesignerOf.en" />
-</rdf:Description>
-
-<!-- Property: has book format -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60578">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">bookFormat</reg:name>
-  <rdfs:label xml:lang="en">has book format</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to the result of folding a printed sheet to form a gathering of leaves (e.g., a sheet folded once to form a folio, twice to form a quarto, three times to form an octavo, etc.).</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30197" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/bookFormat.en" />
 </rdf:Description>
 
 <!-- Property: is bound with -->
@@ -1689,6 +1689,18 @@
   <skos:definition xml:lang="en">Relates an artist responsible for creating a resource of calligraphy where a focus of interest lies in the aesthetic value of its penmanship or graphic artistry, regardless of whether the same agent also authored the inscribed text to a resource.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60752" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60660" />
+</rdf:Description>
+
+<!-- Property: has capture information -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60555">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">captureInformation</reg:name>
+  <rdfs:label xml:lang="en">has capture information</rdfs:label>
+  <skos:definition xml:lang="en">Relates a resource to a place, date, or other information associated with the recording, filming, etc., of the content of a resource. </skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20217" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/captureInformation.en" />
 </rdf:Description>
 
 <!-- Property: has carrier type -->
@@ -3101,7 +3113,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">dateOfCapture</reg:name>
   <rdfs:label xml:lang="en">has date of capture</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a date or range of dates associated with the capture (i.e., recording, filming, etc.) of the content of a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a date associated with the recording, filming, etc., of the content of a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20004" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dateOfCapture.en" />
@@ -3481,8 +3493,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60250" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60305" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60710" />
-  <skos:definition xml:lang="en">Relates a resource to a resource that is based on or is a derivative of a resource.</skos:definition>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20233" />
+  <skos:definition xml:lang="en">Relates a resource to a resource that is based on or is a derivative of another resource.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/derivativeResourceRelationshipWith.en" />
 </rdf:Description>
 
@@ -3505,6 +3516,9 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40062" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30254" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/describedIn.en" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50368" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50369" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50370" />
 </rdf:Description>
 
 <!-- Property: is description of -->
@@ -3526,6 +3540,9 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10271" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10277" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/descriptionOf.en" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10325" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10326" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10327" />
 </rdf:Description>
 
 <!-- Property: DEPRECATED -->
@@ -3621,15 +3638,15 @@
   <skos:definition xml:lang="en">Relates a resource to details of an underlying physical material of a resource.</skos:definition>
 </rdf:Description>
 
-<!-- Property: has details of book format -->
+<!-- Property: has details of bibliographic format -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60769">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">detailsOfBookFormat</reg:name>
-  <rdfs:label xml:lang="en">has details of book format</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/detailsOfBookFormat.en" />
-  <skos:definition xml:lang="en">Relates a resource to details of a result of folding a printed sheet to form a gathering of leaves (e.g., a sheet folded once to form a folio, twice to form a quarto, three times to form an octavo, etc.).</skos:definition>
+  <reg:name xml:lang="en">detailsOfBibliographicFormat</reg:name>
+  <rdfs:label xml:lang="en">has details of bibliographic format</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/detailsOfBibliographicFormat.en" />
+  <skos:definition xml:lang="en">Relates a resource to details of the proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded.</skos:definition>
 </rdf:Description>
 
 <!-- Property: has details of broadcast standard -->
@@ -4032,6 +4049,18 @@
   <rdfs:label xml:lang="en">has details of reduction ratio designation</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/detailsOfReductionRatioDesignation.en" />
   <skos:definition xml:lang="en">Relates a resource to details of a designation of the size of a micro-image to an original from which it was produced.</skos:definition>
+</rdf:Description>
+
+<!-- Property: has details of regional encoding -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60904">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has details of regional encoding</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">detailsOfRegionalEncoding</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/detailsOfRegionalEncoding.en" />
+  <skos:definition xml:lang="en">Relates a resource to details of a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it.</skos:definition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60772" />
 </rdf:Description>
 
 <!-- Property: has details of script -->
@@ -4913,7 +4942,7 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60191" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60712" />
-  <skos:definition xml:lang="en">Relates a resource to a resource that is equivalent to a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is equivalent to another resource.</skos:definition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40053" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30212" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/equivalentResourceRelationshipWith.en" />
@@ -7281,7 +7310,7 @@
   <rdfs:label xml:lang="en">is motion picture music</rdfs:label>
   <skos:definition xml:lang="en">Relates a resource to a musical resource that is used in a motion picture.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60724" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60723" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60731" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20252" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/motionPictureMusic.en" />
@@ -7570,6 +7599,19 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/natureOfContent.en" />
 </rdf:Description>
 
+<!-- Property: has note on capture -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60905">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60470" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">noteOnCapture</reg:name>
+  <rdfs:label xml:lang="en">has note on capture</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/noteOnCapture.en" />
+  <skos:definition xml:lang="en">Relates a resource to a note providing information associated with the recording, filming, etc., of the content of a resource.</skos:definition>
+  <skos:scopeNote xml:lang="en">Note on capture includes the circumstances such as a live or studio recording, the equipment used, etc.</skos:scopeNote>
+</rdf:Description>
+
 <!-- Property: has note on changes in carrier characteristics -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60124">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -7789,6 +7831,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60136" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60137" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60868" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60905" />
 </rdf:Description>
 
 <!-- Property: has note on resource-specific carrier characteristic -->
@@ -8871,18 +8914,6 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50272" />
 </rdf:Description>
 
-<!-- Property: has place and date of capture -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60555">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">placeAndDateOfCapture</reg:name>
-  <rdfs:label xml:lang="en">has place and date of capture</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a place and date associated with the capture (i.e., recording, filming, etc.) of the content of a resource.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20217" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/placeAndDateOfCapture.en" />
-</rdf:Description>
-
 <!-- Property: has place associated with agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60325">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -9075,7 +9106,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60052" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30066" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/plateNumberForMusic.en" />
-  <skos:scopeNote xml:lang="en">A plate number for notated music sometimes includes initials, abbreviations, or words identifying the publisher and is sometimes followed by a number corresponding to the number of pages or plates.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">A plate number for notated music sometimes includes initials, abbreviations, or words identifying the publisher. It is sometimes followed by a number corresponding to the number of pages or plates or a number corresponding to an individual page or plate.</skos:scopeNote>
 </rdf:Description>
 
 <!-- Property: has playing speed -->
@@ -10025,7 +10056,7 @@
   <reg:name xml:lang="en">referentialResourceRelationship</reg:name>
   <rdfs:label xml:lang="en">has referential resource relationship with</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/referentialResourceRelationship.en" />
-  <skos:definition xml:lang="en">Relates a resource to a resource that references a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that references another resource.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60848" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60846" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60847" />
@@ -10037,7 +10068,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">regionalEncoding</reg:name>
   <rdfs:label xml:lang="en">has regional encoding</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a code identifying a region of the world for which a videodisc has been encoded and preventing the disc from being played on a player sold in a different region.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60350" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30006" />
@@ -10783,8 +10814,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60261" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60278" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60713" />
-  <skos:definition xml:lang="en">Relates a resource to a resource that is preceded by or succeeded by a resource.</skos:definition>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20235" />
+  <skos:definition xml:lang="en">Relates a resource to a resource that is preceded by or succeeded by another resource.</skos:definition>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/sequentialResourceRelationshipWith.en" />
 </rdf:Description>
 
@@ -11288,6 +11318,7 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/subject.en" />
   <skos:definition xml:lang="en">Relates a resource to a subject of a resource; i.e., an indication of what a resource is about.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60806" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10324" />
 </rdf:Description>
 
 <!-- Property: is subject of -->
@@ -12186,8 +12217,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60101" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60249" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60714" />
-  <skos:definition xml:lang="en">Relates a resource to a resource that is contained in or contains a resource.</skos:definition>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20236" />
+  <skos:definition xml:lang="en">Relates a resource to a resource that is contained in or contains another resource.</skos:definition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40054" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30213" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/wholePartResourceRelationshipWith.en" />

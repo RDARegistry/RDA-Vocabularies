@@ -675,7 +675,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     skos:definition "Relates a manifestation to a statement identifying an edition to which a manifestation belongs."@en,
         "Met une manifestation en relation avec une mention identifiant l’édition à laquelle appartient la ressource."@fr ;
-    skos:scopeNote "An edition statement sometimes includes a designation of a named revision of an edition. An edition statement sometimes includes a statement or statements of responsibility relating to the edition and/or to a named revision of an edition."@en,
+    skos:scopeNote "An edition statement sometimes includes a designation of a named revision of an edition. An edition statement sometimes includes a statement of responsibility relating to the edition or to a named revision of an edition."@en,
         "Une mention d’édition comprend parfois une indication d’une révision nommée d’une édition. Une mention d’édition comprend parfois une ou plusieurs mentions de responsabilité relatives à l’édition et/ou à une révision nommée d’une édition."@fr .
 
 <http://rdaregistry.info/Elements/m/P30108> a rdf:Property ;
@@ -1530,24 +1530,24 @@
         "Met une manifestation en relation avec la relation des couleurs et des tons d’une image avec les couleurs et les tons de l’objet reproduit (par exemple, positif, négatif)."@fr .
 
 <http://rdaregistry.info/Elements/m/P30197> a rdf:Property ;
-    rdfs:label "has book format"@en,
+    rdfs:label "has bibliographic format"@en,
         "a pour format du livre"@fr,
         "har bokformat"@sv ;
     rdakit:instructionNumber "3.12" ;
-    rdakit:toolkitDefinition "A result of folding a printed sheet to form a gathering of leaves."@en,
+    rdakit:toolkitDefinition "A proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded."@en,
         "El resultado del plegado de una hoja impresa para formar un conjunto de hojas (por ej., una hoja doblada una vez para formar un folio, dos veces para formar un cuarto, tres veces para formar un octavo)."@es,
         "Le résultat du pliage d’une feuille imprimée pour former un cahier de feuillets (par exemple, une feuille pliée une fois pour former un in-folio, pliée deux fois pour former un in-quarto, pliée trois fois pour former un in-octavo, etc.)."@fr ;
-    rdakit:toolkitLabel "book format"@en,
+    rdakit:toolkitLabel "bibliographic format"@en,
         "formato libro"@es,
         "format du livre"@fr,
         "bokformat"@sv ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60578> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/bookFormat.en> ;
-    reg:name "bookFormat"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/bibliographicFormat.en> ;
+    reg:name "bibliographicFormat"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    skos:definition "Relates a manifestation to a result of folding a printed sheet to form a gathering of leaves (e.g., a sheet folded once to form a folio, twice to form a quarto, three times to form an octavo, etc.)."@en,
+    skos:definition "Relates a manifestation to a proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded."@en,
         "Met une manifestation en relation avec le résultat du pliage d’une feuille imprimée pour former un cahier de feuillets (par exemple, une feuille pliée une fois pour former un in-folio, pliée deux fois pour former un in-quarto, pliée trois fois pour former un in-octavo, etc.)."@fr .
 
 <http://rdaregistry.info/Elements/m/P30198> a rdf:Property ;
@@ -1681,21 +1681,21 @@
     skos:definition "Relates a manifestation to details of an underlying physical material of a manifestation."@en .
 
 <http://rdaregistry.info/Elements/m/P30218> a rdf:Property ;
-    rdfs:label "has details of book format"@en,
+    rdfs:label "has details of bibliographic format"@en,
         "har detaljerad information om bokformat"@sv ;
     rdakit:instructionNumber "3.12.1.4" ;
-    rdakit:toolkitDefinition "Details of a result of folding a printed sheet to form a gathering of leaves."@en,
+    rdakit:toolkitDefinition "Details of a proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded."@en,
         "Detalles del resultado del plegado de una hoja impresa para formar un conjunto de hojas (por ej., una hoja doblada una vez para formar un folio, dos veces para formar un cuarto, tres veces para formar un octavo)."@es ;
-    rdakit:toolkitLabel "details of book format"@en,
+    rdakit:toolkitLabel "details of bibliographic format"@en,
         "detalles del formato libro"@es,
         "detaljerad information om bokformat"@sv ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60769> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfBookFormat.en> ;
-    reg:name "detailsOfBookFormat"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfBibliographicFormat.en> ;
+    reg:name "detailsOfBibliographicFormat"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    skos:definition "Relates a manifestation to details of a result of folding a printed sheet to form a gathering of leaves."@en .
+    skos:definition "Relates a manifestation to details of a proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded."@en .
 
 <http://rdaregistry.info/Elements/m/P30226> a rdf:Property ;
     rdfs:label "has details of font size"@en,
@@ -1970,12 +1970,26 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     skos:definition "Relates a manifestation to a general designation of the size of a micro-image in relation to the original from which it was produced."@en .
 
+<http://rdaregistry.info/Elements/m/P30275> a rdf:Property ;
+    rdfs:label "has details of regional encoding"@en ;
+    rdakit:instructionNumber "3.19.6.4" ;
+    rdakit:toolkitDefinition "Details of a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it."@en ;
+    rdakit:toolkitLabel "details of regional encoding"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60904> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfRegionalEncoding.en> ;
+    reg:name "detailsOfRegionalEncoding"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30221> ;
+    skos:definition "Relates a manifestation to details of a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it."@en .
+
 <http://rdaregistry.info/Elements/m/P30006> a rdf:Property ;
     rdfs:label "has regional encoding"@en,
         "a pour code de région"@fr,
         "har regionkod"@sv ;
     rdakit:instructionNumber "3.19.6" ;
-    rdakit:toolkitDefinition "A code identifying the region of the world for which a videodisc has been encoded and preventing the disc from being played on a player sold in a different region."@en,
+    rdakit:toolkitDefinition "A designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it."@en,
         "Un código que identifica la región del mundo para la cual se codificó el videodisco DVD, para prevenir que el disco se use en un reproductor vendido en una región diferente."@es,
         "Code identifiant la région du monde pour laquelle un vidéodisque a été encodé et empêchant le disque d’être lu sur un lecteur vendu dans une région différente."@fr ;
     rdakit:toolkitLabel "regional encoding"@en,
@@ -1989,7 +2003,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30124> ;
-    skos:definition "Relates a manifestation to a code identifying the region of the world for which a videodisc has been encoded and preventing the disc from being played on a player sold in a different region."@en,
+    skos:definition "Relates a manifestation to a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it."@en,
         "Met une manifestation en relation avec un code identifiant la région du monde pour laquelle un vidéodisque a été encodé et empêchant le disque d’être lu sur un lecteur vendu dans une région différente."@fr .
 
 <http://rdaregistry.info/Elements/m/P30016> a rdf:Property ;
@@ -2703,7 +2717,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30004> ;
     skos:definition "Relates a manifestation to a numbering designation assigned to a notated music manifestation by a publisher."@en,
         "Met une manifestation en relation avec une numérotation attribuée à une ressource par un éditeur de musique."@fr ;
-    skos:scopeNote "A plate number for notated music sometimes includes initials, abbreviations, or words identifying the publisher and is sometimes followed by a number corresponding to the number of pages or plates."@en,
+    skos:scopeNote "A plate number for notated music sometimes includes initials, abbreviations, or words identifying the publisher. It is sometimes followed by a number corresponding to the number of pages or plates or a number corresponding to an individual page or plate."@en,
         "La numérotation est habituellement imprimée au bas de chaque page et figure aussi parfois sur la page de titre."@fr .
 
 <http://rdaregistry.info/Elements/m/P30067> a rdf:Property ;
@@ -4850,7 +4864,7 @@
     rdfs:label "has accompanying manifestation relationship with"@en,
         "a pour relation de manifestation d’accompagnement"@fr ;
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A manifestation that accompanies or is accompanied by a manifestation."@en,
+    rdakit:toolkitDefinition "A manifestation that accompanies or is accompanied by another manifestation."@en,
         "Una manifestación que acompaña o está acompañado por la manifestación."@es,
         "Manifestation qui accompagne la manifestation ou est accompagnée par elle."@fr ;
     rdakit:toolkitLabel "accompanying manifestation relationship"@en,
@@ -4865,14 +4879,14 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048> ;
-    skos:definition "Relates a manifestation to a manifestation that accompanies or is accompanied by a manifestation."@en,
+    skos:definition "Relates a manifestation to a manifestation that accompanies or is accompanied by another manifestation."@en,
         "Met une manifestation en relation avec une manifestation qui accompagne la manifestation ou est accompagnée par elle."@fr .
 
 <http://rdaregistry.info/Elements/m/P30212> a rdf:Property ;
     rdfs:label "has equivalent manifestation relationship with"@en,
         "a pour relation de manifestation équivalente"@fr ;
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A manifestation that is equivalent to a manifestation."@en,
+    rdakit:toolkitDefinition "A manifestation that is equivalent to another manifestation."@en,
         "Una manifestación que es equivalente a la manifestación."@es,
         "Manifestation qui est équivalente à la manifestation."@fr ;
     rdakit:toolkitLabel "equivalent manifestation relationship"@en,
@@ -4887,7 +4901,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048> ;
-    skos:definition "Relates a manifestation to a manifestation that is equivalent to a manifestation."@en,
+    skos:definition "Relates a manifestation to a manifestation that is equivalent to another manifestation."@en,
         "Met une manifestation en relation avec une manifestation qui est équivalente à la manifestation."@fr .
 
 <http://rdaregistry.info/Elements/m/P30250> a rdf:Property ;
@@ -4959,7 +4973,7 @@
     rdfs:label "has whole-part manifestation relationship with"@en,
         "a pour relation de manifestation tout-partie"@fr ;
     rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "A manifestation that is contained in or contains a manifestation."@en,
+    rdakit:toolkitDefinition "A manifestation that is contained in or contains another manifestation."@en,
         "Una manifestación que está incluida en, o contiene la manifestación."@es,
         "Manifestation qui est contenue dans la manifestation ou la contient."@fr ;
     rdakit:toolkitLabel "whole-part manifestation relationship"@en,
@@ -4975,7 +4989,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048> ;
-    skos:definition "Relates a manifestation to a manifestation that is contained in or contains a manifestation."@en,
+    skos:definition "Relates a manifestation to a manifestation that is contained in or contains another manifestation."@en,
         "Met une manifestation en relation avec une manifestation qui est contenue dans la manifestation ou la contient."@fr .
 
 <http://rdaregistry.info/Elements/m/P30214> a rdf:Property ;
@@ -5000,26 +5014,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     skos:definition "Relates a manifestation to a note providing information on attributes of a carrier or carriers of a manifestation."@en,
         "Met une manifestation en relation avec une note fournissant de l’information sur les attributs du ou des supports matériels de la manifestation."@fr .
-
-<http://rdaregistry.info/Elements/m/P30221> a rdf:Property ;
-    rdfs:label "has details of digital file characteristic"@en,
-        "har detaljerad information om egenskaper för resursens digitala kodning"@sv ;
-    rdakit:instructionNumber "3.19.1.4" ;
-    rdakit:toolkitDefinition "Details of a technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a manifestation."@en,
-        "Detalles de especificaciones técnicas relacionadas con la codificación digital de un texto, imagen, audio, vídeo y otros tipos de datos en un recurso."@es ;
-    rdakit:toolkitLabel "details of digital file characteristic"@en,
-        "detalles de las características del archivo digital"@es,
-        "detaljerad information om egenskaper för resursens digitala kodning"@sv ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30222>,
-        <http://rdaregistry.info/Elements/m/P30224>,
-        <http://rdaregistry.info/Elements/m/P30225> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60772> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfDigitalFileCharacteristic.en> ;
-    reg:name "detailsOfDigitalFileCharacteristic"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    skos:definition "Relates a manifestation to details of a technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a manifestation."@en .
 
 <http://rdaregistry.info/Elements/m/P30271> a rdf:Property ;
     rdfs:label "has related collective agent (manifestation)"@en ;
@@ -5100,6 +5094,26 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30264> ;
     skos:definition "Relates a manifestation to a manifestation associated with a manifestation being described."@en .
+
+<http://rdaregistry.info/Elements/m/P30221> a rdf:Property ;
+    rdfs:label "has details of digital file characteristic"@en,
+        "har detaljerad information om egenskaper för resursens digitala kodning"@sv ;
+    rdakit:instructionNumber "3.19.1.4" ;
+    rdakit:toolkitDefinition "Details of a technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a manifestation."@en,
+        "Detalles de especificaciones técnicas relacionadas con la codificación digital de un texto, imagen, audio, vídeo y otros tipos de datos en un recurso."@es ;
+    rdakit:toolkitLabel "details of digital file characteristic"@en,
+        "detalles de las características del archivo digital"@es,
+        "detaljerad information om egenskaper för resursens digitala kodning"@sv ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30222>,
+        <http://rdaregistry.info/Elements/m/P30224>,
+        <http://rdaregistry.info/Elements/m/P30225> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60772> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/detailsOfDigitalFileCharacteristic.en> ;
+    reg:name "detailsOfDigitalFileCharacteristic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    skos:definition "Relates a manifestation to details of a technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a manifestation."@en .
 
 <http://rdaregistry.info/Elements/m/P30024> a rdf:Property ;
     rdfs:label "has equivalent (manifestation)"@en,
