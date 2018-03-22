@@ -11,247 +11,640 @@
 <!-- Element Set: RDA Entity properties -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/">
   <dc:title xml:lang="en">RDA Entity properties</dc:title>
-  <skos:note  xml:lang="en">Properties derived from RDA elements and relationship designators with the domain of RDA Entity. </skos:note>
+  <skos:note  xml:lang="en">Properties derived from RDA elements and relationship designators with the domain of RDA Entity. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry.</skos:note>
 </rdf:Description>
 
 <!-- Properties -->
 
-<!-- Property: has related agent -->
+<!-- Property: has access point for RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00016">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">accessPointForRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has access point for RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/accessPointForRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an appellation of RDA entity in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">access point for RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An appellation of RDA entity in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00017" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60906" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00020" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00022" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has appellation of RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00017">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">appellationOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has appellation of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/appellationOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a nomen used within a given scheme or context to refer to an RDA entity.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">appellation of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A nomen used within a given scheme or context to refer to an RDA entity.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00013" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60909" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00016" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00018" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00019" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has authorized access point for RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00020">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">authorizededAccessPointForRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has authorized access point for RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/authorizedAccessPointForRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an access point for RDA entity that is selected for preference in a specific vocabulary encoding scheme.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">authorized access point for RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An access point for RDA entity that is selected for preference in a specific vocabulary encoding scheme.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00016" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60916" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has identifier for RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00018">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">identifierForRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has identifier for RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/identifierForRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an appellation of RDA entity consisting of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify an RDA entity.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">identifier for RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An appellation of RDA entity consisting of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify an RDA entity.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00017" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60919" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has name of RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00019">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">nameOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has name of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/nameOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an appellation of RDA entity in natural language and phrasing used in common discourse.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">name of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An appellation of RDA entity in natural language and phrasing used in common discourse.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00017" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00021" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00023" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has note on RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00015">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">noteonRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has note on RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/noteOnRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a broad unstructured description of one or more attributes of an RDA entity.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">note on RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A broad unstructured description of one or more attributes of an RDA entity.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10330" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50391" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70022" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80071" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30137" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40028" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20071" />
+</rdf:Description>
+
+<!-- Property: has preferred name of RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00021">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">preferredNameOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has preferred name of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/preferredNameOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a name of RDA entity that is selected for preference in a specific application or context.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">preferred name of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A name of RDA entity that is selected for preference in a specific application or context.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00019" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is RDA entity critiqued in -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00024">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">RDAEntityCritiquedIn</reg:name>
+  <rdfs:label xml:lang="en">is RDA entity critiqued in</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/RDAEntityCritiquedIn.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a work that contains a critical evaluation of a described RDA entity.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">RDA entity critiqued in</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that contains a critical evaluation of a described RDA entity.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00024" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00014" />
+</rdf:Description>
+
+<!-- Property: is RDA entity described in -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00025">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">RDAEntityDescribedIn</reg:name>
+  <rdfs:label xml:lang="en">is RDA entity described in</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/RDAEntityDescribedIn.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a work that describes a described RDA entity.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">RDA entity described in</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that describes a described RDA entity.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00025" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00014" />
+</rdf:Description>
+
+<!-- Property: is RDA entity evaluated in -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00026">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">RDAEntityEvaluatedIn</reg:name>
+  <rdfs:label xml:lang="en">is RDA entity evaluated in</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/RDAEntityEvaluatedIn.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a work that examines or judges a described RDA entity.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">RDA entity evaluated in</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that examines or judges a described RDA entity.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00026" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00014" />
+</rdf:Description>
+
+<!-- Property: is RDA entity reviewed in -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00027">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">RDAEntityReviewedIn</reg:name>
+  <rdfs:label xml:lang="en">is RDA entity reviewed in</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/RDAEntityReviewedIn.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a worky that contains a brief evaluation of a described RDA entity.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">RDA entity reviewed in</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that contains a brief evaluation of a described RDA entity.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00027" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00014" />
+</rdf:Description>
+
+<!-- Property: has related agent of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00006">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedAgent</reg:name>
-  <rdfs:label xml:lang="en">has related agent</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedAgent.en" />
-  <skos:definition xml:lang="en">Relates an entity to an agent associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedAgentOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has related agent of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedAgentOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an agent associated with an entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
-  <rdakit:toolkitLabel xml:lang="en">related agent</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An agent associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related agent of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An agent associated with an RDA entity.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00007" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10311" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50309" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80005" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40072" />
+  <skos:altLabel xml:lang="en">related agent</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated agent</skos:altLabel>
+  <skos:altLabel xml:lang="en">agent associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related collective agent -->
+<!-- Property: has related collective agentof RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00012">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">has related collective agent</rdfs:label>
+  <rdfs:label xml:lang="en">has related collective agentof RDA entity</rdfs:label>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedCollectiveAgent</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedCollectiveAgent.en" />
-  <skos:definition xml:lang="en">Relates an entity to a collective agent associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedCollectiveAgentOfRDAEntity</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedCollectiveAgentOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a collective agent associated with an entity.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00006" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00008" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00009" />
+  <rdakit:toolkitLabel xml:lang="en">related collective agent of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A collective agent associated with an RDA entity.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10315" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50337" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70009" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80006" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30271" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40076" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20305" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20305" />
+  <skos:altLabel xml:lang="en">related collective agent</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated collective agent</skos:altLabel>
+  <skos:altLabel xml:lang="en">collective agent associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related corporate body -->
+<!-- Property: has related corporate body of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00009">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedCorporateBody</reg:name>
-  <rdfs:label xml:lang="en">has related corporate body</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedCorporateBody.en" />
-  <skos:definition xml:lang="en">Relates an entity to a corporate body associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedCorporateBodyOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has related corporate body of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedCorporateBodyOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a corporate body associated with an entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <rdakit:instructionNumber xml:lang="">32.1</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">related corporate body</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A corporate body associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related corporate body of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body associated with an RDA entity.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="sv">har relaterad institution</rdfs:label>
   <rdakit:toolkitLabel xml:lang="sv">relaterad institution</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="fr">collectivité en relation</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="es">entidad corporativa relacionada</rdakit:toolkitLabel>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00012" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10314" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50218" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70016" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80013" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30270" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40075" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20304" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20304" />
+  <skos:altLabel xml:lang="en">related corporate body</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated corporate body</skos:altLabel>
+  <skos:altLabel xml:lang="en">corporate body associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related entity -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00001">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <skos:definition xml:lang="en">Relates an entity to an entity associated with an entity being described.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
-  <rdakit:toolkitLabel xml:lang="en">related entity</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An entity associated with an entity being described</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="en">has related entity</rdfs:label>
-  <reg:name xml:lang="en">relatedEntity</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedEntity.en" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30264" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40068" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00006" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00003" />
-</rdf:Description>
-
-<!-- Property: has related expression -->
+<!-- Property: has related expression of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00003">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedExpression</reg:name>
-  <rdfs:label xml:lang="en">has related expression</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedExpression.en" />
-  <skos:definition xml:lang="en">Relates an entity to an expression associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedExpressionOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has related expression of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedExpressionOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an expression associated with an entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <rdakit:instructionNumber xml:lang="">26.1</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">related expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related expression of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An expression associated with an RDA entity.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">expression en relation</rdfs:label>
   <rdakit:toolkitLabel xml:lang="fr">expression en relation</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="es">expresión relacionada</rdakit:toolkitLabel>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00003" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10308" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50306" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70005" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80002" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30266" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40070" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20205" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20205" />
+  <skos:altLabel xml:lang="en">related expression</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated expression</skos:altLabel>
+  <skos:altLabel xml:lang="en">expression associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related family -->
+<!-- Property: has related family of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00008">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedFamily</reg:name>
-  <rdfs:label xml:lang="en">has related family</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedFamily.en" />
-  <skos:definition xml:lang="en">Relates an entity to a family associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedFamilyOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has related family of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedFamilyOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a family associated with an entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <rdakit:instructionNumber xml:lang="">31.1</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">related family</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A family associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related family of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A family associated with an RDA entity.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="sv">har relaterad familj/släkt</rdfs:label>
   <rdakit:toolkitLabel xml:lang="sv">relaterad familj/släkt</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="fr">famille en relation</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="es">familia relacionada</rdakit:toolkitLabel>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00012" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10313" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50219" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70015" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80012" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30269" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40074" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20303" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20303" />
+  <skos:altLabel xml:lang="en">related family</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated family</skos:altLabel>
+  <skos:altLabel xml:lang="en">family associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related item -->
+<!-- Property: has related item of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00005">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedItem</reg:name>
-  <rdfs:label xml:lang="en">has related item</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedItem.en" />
-  <skos:definition xml:lang="en">Relates an entity to an item associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedItemOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has related item of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedItemOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an item associated with an entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <rdakit:instructionNumber xml:lang="">28.1</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">related item</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An item associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related item of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item associated with an RDA entity.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">item en relation</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="es">ítem relacionado</rdakit:toolkitLabel>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10310" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50308" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70007" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80004" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30140" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40046" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20300" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20300" />
+  <skos:altLabel xml:lang="en">related item</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated item</skos:altLabel>
+  <skos:altLabel xml:lang="en">item associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related manifestation -->
+<!-- Property: has related manifestation of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00004">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedManifestation</reg:name>
-  <rdfs:label xml:lang="en">has related manifestation</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedManifestation.en" />
-  <skos:definition xml:lang="en">Relates an entity to a manifestation associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedManifestationOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has related manifestation of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedManifestationOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a manifestation associated with an entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <rdakit:instructionNumber xml:lang="">27.1</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">related manifestation</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related manifestation of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation associated with an RDA entity.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">manifestation en relation</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="es">manifestación relacionada</rdakit:toolkitLabel>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10309" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50307" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70006" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80003" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30048" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40071" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20299" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20299" />
+  <skos:altLabel xml:lang="en">related manifestation</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated manifestation</skos:altLabel>
+  <skos:altLabel xml:lang="en">manifestation associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related nomen -->
+<!-- Property: has related nomen of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00013">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">has related nomen</rdfs:label>
+  <rdfs:label xml:lang="en">has related nomen of RDA entity</rdfs:label>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedNomen</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedNomen.en" />
-  <skos:definition xml:lang="en">Relates an entity to a nomen associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedNomenOfRDAEntity</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedNomenOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a nomen associated with an entity.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">related nomen of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A nomen associated with an RDA entity.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00017" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10318" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50340" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70012" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80009" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30274" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40079" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20308" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20308" />
+  <skos:altLabel xml:lang="en">related nomen</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated nomen</skos:altLabel>
+  <skos:altLabel xml:lang="en">nomen associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related person -->
+<!-- Property: has related person of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00007">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedPerson</reg:name>
-  <rdfs:label xml:lang="en">has related person</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedPerson.en" />
-  <skos:definition xml:lang="en">Relates an entity to a person associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedPersonOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has related person of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedPersonOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a person associated with an entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <rdakit:instructionNumber xml:lang="">30.1</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">related person</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A person associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related person of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person associated with an RDA entity.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="sv">har relaterad person</rdfs:label>
   <rdakit:toolkitLabel xml:lang="sv">relaterad person</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="fr">personne en relation</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="es">persona relacionada</rdakit:toolkitLabel>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00006" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10312" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50220" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70014" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80011" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30268" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40073" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20302" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20302" />
+  <skos:altLabel xml:lang="en">related person</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated person</skos:altLabel>
+  <skos:altLabel xml:lang="en">person associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related place -->
+<!-- Property: has related place of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00010">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">has related place</rdfs:label>
+  <rdfs:label xml:lang="en">has related place of RDA entity</rdfs:label>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedPlace</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedPlace.en" />
-  <skos:definition xml:lang="en">Relates an entity to a place associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedPlaceOfRDAEntity</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedPlaceOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a place associated with an entity.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
-  <rdakit:toolkitLabel xml:lang="en">related place</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A place associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related place of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A place associated with an RDA entity.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10316" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50338" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80007" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30272" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40077" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20306" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20306" />
+  <skos:altLabel xml:lang="en">related place</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated place</skos:altLabel>
+  <skos:altLabel xml:lang="en">place associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related time-span -->
+<!-- Property: has related RDA entity of RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00001">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an entity associated with an entity.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">related RDA entity of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity associated with an RDA entity</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="en">has related RDA entity of RDA entity</rdfs:label>
+  <reg:name xml:lang="en">relatedRDAEntityOfRDAEntity</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedRDAEntityOfRDAEntity.en" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30264" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40068" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00006" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00003" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70013" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20297" />
+  <skos:altLabel xml:lang="en">related entity</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated entity</skos:altLabel>
+  <skos:altLabel xml:lang="en">entity associated with RDA entity</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: has related time-span of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00011">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">has related time-span</rdfs:label>
+  <rdfs:label xml:lang="en">has related time-span of RDA entity</rdfs:label>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedTimeSpan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedTimeSpan.en" />
-  <skos:definition xml:lang="en">Relates an entity to a time-span associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedTimeSpanOfRDAEntity</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedTimeSpanOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a time-span associated with an entity.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">related timespan of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A timespan associated with an RDA entity.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10317" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50339" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70011" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/object/P70011" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80008" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30273" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40078" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20307" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20307" />
+  <skos:altLabel xml:lang="en">related timespan</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated timespan</skos:altLabel>
+  <skos:altLabel xml:lang="en">timespan associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: has related work -->
+<!-- Property: has related work of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00002">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedWork</reg:name>
-  <rdfs:label xml:lang="en">has related work</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedWork.en" />
-  <skos:definition xml:lang="en">Relates an entity to a work associated with an entity being described.</skos:definition>
+  <reg:name xml:lang="en">relatedWorkOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has related work of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/relatedWorkOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a work associated with an entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <rdakit:instructionNumber xml:lang="">25.1</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">related work</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work associated with an entity being described.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">related work of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work associated with an RDA entity.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">œuvre en relation</rdakit:toolkitLabel>
   <rdakit:toolkitLabel xml:lang="es">obra relacionada</rdakit:toolkitLabel>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10198" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50305" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70004" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/object/P70004" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80001" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30265" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40069" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20298" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20298" />
+  <skos:altLabel xml:lang="en">related work</skos:altLabel>
+  <skos:altLabel xml:lang="en">associated work</skos:altLabel>
+  <skos:altLabel xml:lang="en">work associated with RDA entity</skos:altLabel>
 </rdf:Description>
 
-<!-- Property: is subject of (entity) -->
+<!-- Property: is subject RDA entity of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00014">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">subjectOfEntity</reg:name>
-  <rdfs:label xml:lang="en">is subject of (entity)</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/subjectOfEntity.en" />
-  <skos:definition xml:lang="en">Relates an entity to a work that is about an entity.</skos:definition>
+  <reg:name xml:lang="en">subjectRDAEntityOf</reg:name>
+  <rdfs:label xml:lang="en">is subject RDA entity of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/subjectRDAEntityOf.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a work that is about an RDA entity.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00014" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50366" />
+  <rdakit:toolkitLabel xml:lang="en">subject RDA entity of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is about an RDA entity.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00024" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00025" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00026" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/P00027" />
+</rdf:Description>
+
+<!-- Property: has variant access point for RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00022">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">variantAccessPointForRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has variant access point for RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/variantAccessPointForRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to an access point for RDA entity that is not selected for preference in a specific vocabulary encoding scheme.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">variant access point for RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An access point for RDA entity that is not selected for preference in a specific vocabulary encoding scheme.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00016" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60917" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has variant name of RDA entity -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/P00023">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">variantNameOfRDAEntity</reg:name>
+  <rdfs:label xml:lang="en">has variant name of RDA entity</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/variantNameOfRDAEntity.en" />
+  <skos:definition xml:lang="en">Relates an RDA entity to a name of RDA entity that is not selected for preference in a specific application or context.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013" />
+  <rdakit:toolkitLabel xml:lang="en">variant name of RDA entity</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A name of RDA entity that is not selected for preference in a specific application or context.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00019" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
 </rdf:Description>
 
 

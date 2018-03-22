@@ -1,6 +1,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -11,173 +12,855 @@
 
 <http://rdaregistry.info/Elements/t/>
     dc:title "RDA Time-span properties"@en ;
-    skos:note "Properties derived from RDA elements and relationship designators with the domain of RDA Time-span."@en .
+    skos:note "Properties derived from RDA elements and relationship designators with the domain of RDA Time-span. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
 
 <http://rdaregistry.info/Elements/t/P70001>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70001>, <http://rdaregistry.info/Elements/t/object/P70001> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedWorkTimespan.en> ;
-    reg:name "relatedWorkTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A work associated with a timespan."@en ;
+    rdakit:toolkitLabel "related work of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70021>, <http://rdaregistry.info/Elements/t/P70022>, <http://rdaregistry.info/Elements/t/P70042>, <http://rdaregistry.info/Elements/t/P70054>, <http://rdaregistry.info/Elements/t/P70055>, <http://rdaregistry.info/Elements/t/datatype/P70001>, <http://rdaregistry.info/Elements/t/object/P70001> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedWorkOfTimespan.en> ;
+    reg:name "relatedWorkOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related work (time-span)"@en ;
+    rdfs:label "has related work of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70010> ;
-    skos:definition "Relates a time-span to a work associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a work associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70002>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70002>, <http://rdaregistry.info/Elements/t/object/P70002> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedExpressionTimespan.en> ;
-    reg:name "relatedExpressionTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An expression associated with a timespan."@en ;
+    rdakit:toolkitLabel "related expression of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70024>, <http://rdaregistry.info/Elements/t/P70041>, <http://rdaregistry.info/Elements/t/datatype/P70002>, <http://rdaregistry.info/Elements/t/object/P70002> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedExpressionOfTimespan.en> ;
+    reg:name "relatedExpressionOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related expression (time-span)"@en ;
+    rdfs:label "has related expression of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70010> ;
-    skos:definition "Relates a time-span to an expression associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to an expression associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70003>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70003>, <http://rdaregistry.info/Elements/t/object/P70003> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedManifestationTimespan.en> ;
-    reg:name "relatedManifestationTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A manifestation associated with a timespan."@en ;
+    rdakit:toolkitLabel "related manifestation of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70020>, <http://rdaregistry.info/Elements/t/datatype/P70003>, <http://rdaregistry.info/Elements/t/object/P70003> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedManifestationOfTimespan.en> ;
+    reg:name "relatedManifestationOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related manifestation (time-span)"@en ;
+    rdfs:label "has related manifestation of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70010> ;
-    skos:definition "Relates a time-span to a manifestation associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a manifestation associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70004>
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An item associated with a timespan."@en ;
+    rdakit:toolkitLabel "related item of timespan"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70004>, <http://rdaregistry.info/Elements/t/object/P70004> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedItemTimespan.en> ;
-    reg:name "relatedItemTimespan"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedItemOfTimespan.en> ;
+    reg:name "relatedItemOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related item (time-span)"@en ;
+    rdfs:label "has related item of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70010> ;
-    skos:definition "Relates a time-span to an item associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to an item associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70005>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70006>, <http://rdaregistry.info/Elements/t/P70011>, <http://rdaregistry.info/Elements/t/datatype/P70005>, <http://rdaregistry.info/Elements/t/object/P70005> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedAgentTimespan.en> ;
-    reg:name "relatedAgentTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An agent associated with a timespan."@en ;
+    rdakit:toolkitLabel "related agent of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70006>, <http://rdaregistry.info/Elements/t/P70011>, <http://rdaregistry.info/Elements/t/P70051>, <http://rdaregistry.info/Elements/t/datatype/P70005>, <http://rdaregistry.info/Elements/t/object/P70005> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedAgentOfTimespan.en> ;
+    reg:name "relatedAgentOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related agent (time-span)"@en ;
+    rdfs:label "has related agent of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70010> ;
-    skos:definition "Relates a time-span to an agent associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to an agent associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70006>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70012>, <http://rdaregistry.info/Elements/t/P70013>, <http://rdaregistry.info/Elements/t/datatype/P70006>, <http://rdaregistry.info/Elements/t/object/P70006> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedCollectiveAgentTimespan.en> ;
-    reg:name "relatedCollectiveAgentTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A collective agent associated with a timespan."@en ;
+    rdakit:toolkitLabel "related collective agent of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70012>, <http://rdaregistry.info/Elements/t/P70013>, <http://rdaregistry.info/Elements/t/P70052>, <http://rdaregistry.info/Elements/t/datatype/P70006>, <http://rdaregistry.info/Elements/t/object/P70006> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedCollectiveAgentOfTimespan.en> ;
+    reg:name "relatedCollectiveAgentOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related collective agent (time-span)"@en ;
+    rdfs:label "has related collective agent of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70005> ;
-    skos:definition "Relates a time-span to a collective agent associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a collective agent associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70007>
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A place associated with a timespan."@en ;
+    rdakit:toolkitLabel "related place of timespan"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70007>, <http://rdaregistry.info/Elements/t/object/P70007> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedPlaceTimespan.en> ;
-    reg:name "relatedPlaceTimespan"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedPlaceOfTimespan.en> ;
+    reg:name "relatedPlaceOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related place (time-span)"@en ;
+    rdfs:label "has related place of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70010> ;
-    skos:definition "Relates a time-span to a place associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a place associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70008>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70008>, <http://rdaregistry.info/Elements/t/object/P70008> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedTimespanTimespan.en> ;
-    reg:name "relatedTimespanTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A timespan associated with a timespan."@en ;
+    rdakit:toolkitLabel "related timespan of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70034>, <http://rdaregistry.info/Elements/t/P70035>, <http://rdaregistry.info/Elements/t/datatype/P70008>, <http://rdaregistry.info/Elements/t/object/P70008> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedTimespanOfTimespan.en> ;
+    reg:name "relatedTimespanOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related time-span (time-span)"@en ;
+    rdfs:label "has related timespan of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70010> ;
-    skos:definition "Relates a time-span to a time-span associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a timespan associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70009>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70009>, <http://rdaregistry.info/Elements/t/object/P70009> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedNomenTimespan.en> ;
-    reg:name "relatedNomenTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A nomen associated with a timespan."@en ;
+    rdakit:toolkitLabel "related nomen of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70016>, <http://rdaregistry.info/Elements/t/P70056>, <http://rdaregistry.info/Elements/t/datatype/P70009>, <http://rdaregistry.info/Elements/t/object/P70009> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedNomenOfTimespan.en> ;
+    reg:name "relatedNomenOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related nomen (time-span)"@en ;
+    rdfs:label "has related nomen of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70010> ;
-    skos:definition "Relates a time-span to a nomen associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a nomen associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70010>
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An RDA entity associated with a timespan."@en ;
+    rdakit:toolkitLabel "related RDA entity of timespan"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70001>, <http://rdaregistry.info/Elements/t/P70002>, <http://rdaregistry.info/Elements/t/P70003>, <http://rdaregistry.info/Elements/t/P70004>, <http://rdaregistry.info/Elements/t/P70005>, <http://rdaregistry.info/Elements/t/P70007>, <http://rdaregistry.info/Elements/t/P70008>, <http://rdaregistry.info/Elements/t/P70009>, <http://rdaregistry.info/Elements/t/datatype/P70010>, <http://rdaregistry.info/Elements/t/object/P70010> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedEntityTimespan.en> ;
-    reg:name "relatedEntityTimespan"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedRDAEntityOfTimespan.en> ;
+    reg:name "relatedRDAEntityOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related entity (time-span)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
-    skos:definition "Relates a time-span to an entity associated with a time-span being described."@en .
+    rdfs:label "has related RDA entity of timespan"@en ;
+    skos:definition "Relates a timespan to an RDA entity associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70011>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70011>, <http://rdaregistry.info/Elements/t/object/P70011> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedPersonTimespan.en> ;
-    reg:name "relatedPersonTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A person associated with a timespan."@en ;
+    rdakit:toolkitLabel "related person of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70038>, <http://rdaregistry.info/Elements/t/datatype/P70011>, <http://rdaregistry.info/Elements/t/object/P70011> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedPersonOfTimespan.en> ;
+    reg:name "relatedPersonOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related person (time-span)"@en ;
+    rdfs:label "has related person of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70005> ;
-    skos:definition "Relates a time-span to a person associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a person associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70012>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70012>, <http://rdaregistry.info/Elements/t/object/P70012> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedFamilyTimespan.en> ;
-    reg:name "relatedFamilyTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A family associated with a timespan."@en ;
+    rdakit:toolkitLabel "related family of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70037>, <http://rdaregistry.info/Elements/t/datatype/P70012>, <http://rdaregistry.info/Elements/t/object/P70012> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedFamilyOfTimespan.en> ;
+    reg:name "relatedFamilyOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related family (time-span)"@en ;
+    rdfs:label "has related family of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70006> ;
-    skos:definition "Relates a time-span to a family associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a family associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70013>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70013>, <http://rdaregistry.info/Elements/t/object/P70013> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedCorporateBodyTimespan.en> ;
-    reg:name "relatedCorporateBodyTimespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A corporate body associated with a timespan."@en ;
+    rdakit:toolkitLabel "related corporate body of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70036>, <http://rdaregistry.info/Elements/t/datatype/P70013>, <http://rdaregistry.info/Elements/t/object/P70013> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedCorporateBodyOfTimespan.en> ;
+    reg:name "relatedCorporateBodyOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "has related corporate body (time-span)"@en ;
+    rdfs:label "has related corporate body of timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70006> ;
-    skos:definition "Relates a time-span to a corporate body associated with a time-span being described."@en .
+    skos:definition "Relates a timespan to a corporate body associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70014>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that is about a timespan."@en ;
+    rdakit:toolkitLabel "subject timespan of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70014>, <http://rdaregistry.info/Elements/t/object/P70014> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/subjectOfTimespan.en> ;
-    reg:name "subjectOfTimespan"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/subjectTimespanOf.en> ;
+    reg:name "subjectTimespanOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:label "is subject of (time-span)"@en ;
+    rdfs:label "is subject timespan of"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10283> ;
-    skos:definition "Relates a time-span to a work that is about a time-span being described."@en .
+    skos:definition "Relates a timespan to a work that is about a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70015>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "An appellation of timespan in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme."@en ;
+    rdakit:toolkitLabel "access point for timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70047>, <http://rdaregistry.info/Elements/t/P70048>, <http://rdaregistry.info/Elements/t/object/P70015> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60906> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/accessPointForTimespan.en> ;
+    reg:name "accessPointForTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has access point for timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70016> ;
+    skos:definition "Relates a timespan to an appellation of timespan in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/t/P70016>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "A nomen used within a given scheme or context to refer to a timespan."@en ;
+    rdakit:toolkitLabel "appellation of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70015>, <http://rdaregistry.info/Elements/t/P70017>, <http://rdaregistry.info/Elements/t/P70018>, <http://rdaregistry.info/Elements/t/object/P70016> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60909> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/appellationOfTimespan.en> ;
+    reg:name "appellationOfTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has appellation of timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70009> ;
+    skos:definition "Relates a timespan to a nomen used within a given scheme or context to refer to a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70017>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "An appellation of timespan in natural language and phrasing used in common discourse."@en ;
+    rdakit:toolkitLabel "name of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70049>, <http://rdaregistry.info/Elements/t/P70050>, <http://rdaregistry.info/Elements/t/object/P70017> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60935> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/nameOfTimespan.en> ;
+    reg:name "nameOfTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has name of timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70016> ;
+    skos:definition "Relates a timespan to an appellation of timespan in natural language and phrasing used in common discourse."@en .
+
+<http://rdaregistry.info/Elements/t/P70018>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "An appellation of timepsan consisting of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a timespan."@en ;
+    rdakit:toolkitLabel "identifier for timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70018> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60919> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/identifierForTimespan.en> ;
+    reg:name "identiferForTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has identifier for timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70016> ;
+    skos:definition "Relates a timespan to an appellation of timepsan consisting of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70019>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation associated with a claim of protection under copyright or a similar regime during a timespan."@en ;
+    rdakit:toolkitLabel "copyright date of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70019> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/copyrightDateOf.en> ;
+    reg:name "copyrightDateOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is copyright date of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70020> ;
+    skos:definition "Relates a timespan to a manifestation associated with a claim of protection under copyright or a similar regime during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70020>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is published, released, issued, printed, duplicated, cast, distributed, etc., or an unpublished manifestation that is inscribed, fabricated, constructed, etc.,  during a timespan."@en ;
+    rdakit:toolkitLabel "date of manifestation of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70019>, <http://rdaregistry.info/Elements/t/P70025>, <http://rdaregistry.info/Elements/t/P70026>, <http://rdaregistry.info/Elements/t/P70027>, <http://rdaregistry.info/Elements/t/P70028>, <http://rdaregistry.info/Elements/t/object/P70020> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfManifestationOf.en> ;
+    reg:name "dateOfManifestationOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of manifestation of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70003> ;
+    skos:definition "Relates a timespan to a manifestation that is published, released, issued, printed, duplicated, cast, distributed, etc., in a published form or is inscribed, fabricated, constructed, etc., in a unpublished form during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70021>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that refers to measurements of position for a body or orientation for an orbit."@en ;
+    rdakit:toolkitLabel "epoch of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70021> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/epochOf.en> ;
+    reg:name "epochOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is epoch of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70001> ;
+    skos:definition "Relates a timespan to a work that refers to measurements of position for a body or orientation for an orbit."@en .
+
+<http://rdaregistry.info/Elements/t/P70022>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work associated with an earlist timespan."@en ;
+    rdakit:toolkitLabel "date of work of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70046>, <http://rdaregistry.info/Elements/t/object/P70022> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfWorkOf.en> ;
+    reg:name "dateOfWorkOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of work of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70001> ;
+    skos:definition "Relates a timespan to a work associated with an earlist timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70023>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An expression that is recorded, filmed, etc., during a timespan."@en ;
+    rdakit:toolkitLabel "date of capture of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70023> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60976> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfCaptureOf.en> ;
+    reg:name "dateOfCaptureOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of capture of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70024> ;
+    skos:definition "Relates a timespan to an expression that is recorded, filmed, etc., during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70024>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An expression associated with an earliest timespan."@en ;
+    rdakit:toolkitLabel "date of expression of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70023>, <http://rdaregistry.info/Elements/t/object/P70024> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfExpressionOf.en> ;
+    reg:name "dateOfExpressionOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of expression of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70002> ;
+    skos:definition "Relates a timespan to an expression associated with an earliest timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70025>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is distributed during a timespan."@en ;
+    rdakit:toolkitLabel "date of distribution of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70025> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60979> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfDistributionOf.en> ;
+    reg:name "dateOfDistributionOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of distribution of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70020> ;
+    skos:definition "Relates a timespan to a manifestation that is a published manifestation that is distributed during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70026>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is a published manifesation that is printed, duplicated, cast, etc., during a timespan."@en ;
+    rdakit:toolkitLabel "date of manufacture of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70026> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60981> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfManufactureOf.en> ;
+    reg:name "dateOfManufactureOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of manufacture of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70020> ;
+    skos:definition "Relates a timespan to a manifestation that is a published manifesation that is printed, duplicated, cast, etc., during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70027>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is an unpublished manifestation that is inscribed, fabricated, constructed, etc., during a timespan."@en ;
+    rdakit:toolkitLabel "date of production of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70027> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60982> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfProductionOf.en> ;
+    reg:name "dateOfProductionOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of production of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70020> ;
+    skos:definition "Relates a timespan to a manifestation that is an unpublished manifestation that is inscribed, fabricated, constructed, etc., during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70028>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is published, released, or issued in a published form during a timespan."@en ;
+    rdakit:toolkitLabel "date of publication of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70028> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60983> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfPublicationOf.en> ;
+    reg:name "dateOfPublicationOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of publication of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70020> ;
+    skos:definition "Relates a timespan to a manifestation that is published, released, or issued in a published form during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70029>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A person who was born during a timespan."@en ;
+    rdakit:toolkitLabel "date of birth of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70029> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60975> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfBirthOf.en> ;
+    reg:name "dateOfBirthOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of birth of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70038> ;
+    skos:definition "Relates a timespan to a person who was born during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70030>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A person who died during a timespan."@en ;
+    rdakit:toolkitLabel "date of death of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70030> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60978> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfDeathOf.en> ;
+    reg:name "dateOfDeathOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of death of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70038> ;
+    skos:definition "Relates a timespan to a person who died during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70031>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A conference, exhibition, or other event that gives rise to a work that is held during a timespan."@en ;
+    rdakit:toolkitLabel "date of conference, etc. of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70031> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60977> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfConferenceEtcOf.en> ;
+    reg:name "dateOfConferenceEtcOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of conference, etc. of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70036> ;
+    skos:definition "Relates a timespan to a conference, exhibition, or other event that gives rise to a work that is held during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70032>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A corporate body that is established or founded during a timespan."@en ;
+    rdakit:toolkitLabel "date of establishment of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70032> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60980> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfEstablishmentOf.en> ;
+    reg:name "dateOfEstablishmentOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of establishment of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70036> ;
+    skos:definition "Relates a timespan to a corporate body that is established or founded during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70033>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A corporate body that is terminated or dissolved during a timespan."@en ;
+    rdakit:toolkitLabel "date of termination of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70033> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60985> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfTerminationOf.en> ;
+    reg:name "dateOfTerminationOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of termination of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70036> ;
+    skos:definition "Relates a timespan to a corporate body that is terminated or dissolved during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70034>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A timespan that is a component of another timespan."@en ;
+    rdakit:toolkitLabel "part of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70034> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/partOfTimespan.en> ;
+    reg:name "partOfTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is part of timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70008> ;
+    skos:definition "Relates a timespan to a timespan that is a component of another timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70035>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A timespan that has another timespan as a component."@en ;
+    rdakit:toolkitLabel "part timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70035> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/partTimespan.en> ;
+    reg:name "partTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has part timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70008> ;
+    skos:definition "Relates a timespan to a timespan that has another timespan as a component."@en .
+
+<http://rdaregistry.info/Elements/t/P70036>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A corporate body that has a significant association with a timespan."@en ;
+    rdakit:toolkitLabel "date associated with corporate body of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70031>, <http://rdaregistry.info/Elements/t/P70032>, <http://rdaregistry.info/Elements/t/P70033>, <http://rdaregistry.info/Elements/t/P70043>, <http://rdaregistry.info/Elements/t/object/P70036> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateAssociatedWithCorporateBodyOf.en> ;
+    reg:name "dateAssociatedWithCorporateBodyOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has date associated with corporate body of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70013> ;
+    skos:definition "Relates a timespan to a corporate body that has a significant association with a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70037>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A family that has a significant association with a timespan."@en ;
+    rdakit:toolkitLabel "date associated with family of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70053>, <http://rdaregistry.info/Elements/t/object/P70037> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateAssociatedWithFamilyOf.en> ;
+    reg:name "dateAssociatedWithFamilyOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has date associated with family of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70012> ;
+    skos:definition "Relates a timespan to a family that has a significant association with a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70038>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A person who has a significant association with a timespan."@en ;
+    rdakit:toolkitLabel "date associated with person of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70029>, <http://rdaregistry.info/Elements/t/P70030>, <http://rdaregistry.info/Elements/t/P70044>, <http://rdaregistry.info/Elements/t/object/P70038> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateAssociatedWithPersonOf.en> ;
+    reg:name "dateAssociatedWithPersonOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has date associated with person of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70011> ;
+    skos:definition "Relates a timespan to a person who has a significant association with a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70039>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "The time at which a timespan starts."@en ;
+    rdakit:toolkitLabel "beginning"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/beginning,en.en> ;
+    reg:name "beginning"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has beginning"@en ;
+    skos:definition "Relates a timespan to the time at which the timespan starts."@en .
+
+<http://rdaregistry.info/Elements/t/P70040>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "The time at which a timespan ends."@en ;
+    rdakit:toolkitLabel "ending"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/ending.en> ;
+    reg:name "ending"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has ending"@en ;
+    skos:definition "Relates a timespan to the time at which the timespan ends."@en ;
+    skos:scopeNote "A time may be represented at different levels of granularity by a calendrical timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70041>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "An expression that has an extent of expression that is a playing time, performance time, running time, or other timespan."@en ;
+    rdakit:toolkitLabel "duration of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70041> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/durationOf.en> ;
+    reg:name "durationOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is duration of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70002> ;
+    skos:definition "Relates a timespan to an expression that has an extent of expression that is a playing time, performance time, running time, or other timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70042>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that uses a point of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°."@en ;
+    rdakit:toolkitLabel "equinox of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70042> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/equinoxOf.en> ;
+    reg:name "equinoxOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is equinox of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70001> ;
+    skos:definition "Relates a timespan to a work that uses a point of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°."@en .
+
+<http://rdaregistry.info/Elements/t/P70043>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A corporate body that is active in its primary field of endeavour during a timespan."@en ;
+    rdakit:toolkitLabel "period of activity of corporate body of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70043> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/periodOfActivityOfCorporateBodyOf.en> ;
+    reg:name "periodOfActivityOfCorporateBodyOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is period of activity of corporate body of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70036>, <http://rdaregistry.info/Elements/t/P70052> ;
+    skos:definition "Relates a timespan to a corporate body that is active in its primary field of endeavour during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70044>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A person who is active in their primary field of endeavour during a timespan."@en ;
+    rdakit:toolkitLabel "period of activity of person of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70044> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/periodOfActivityOfPersonOf.en> ;
+    reg:name "periodOfActivityOfPersonOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is period of activity of person of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70038>, <http://rdaregistry.info/Elements/t/P70051> ;
+    skos:definition "Relates a timespan to a person who is active in their primary field of endeavour during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70045>
+    rdakit:hasElementType "6" ;
+    rdakit:toolkitDefinition "A broad unstructured description of one or more attributes of a timespan."@en ;
+    rdakit:toolkitLabel "note on timespan"@en ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60936> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/noteOnTimespan.en> ;
+    reg:name "noteOnTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has note on timespan"@en ;
+    skos:definition "Relates a timespan to a broad unstructured description of one or more attributes of a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70046>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that is an academic degree conferred by a granting institution or faculty during a timespan."@en ;
+    rdakit:toolkitLabel "year degree granted of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70046> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/yearDegreeGrantedOf.en> ;
+    reg:name "yearDegreeGrantedOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is year degree granted of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70022> ;
+    skos:definition "Relates a timespan to a work that is an academic degree conferred by a granting institution or faculty during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70047>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "An access point for timespan that is selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "authorized access point for timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70047> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60916> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/authorizedAccessPointForTimespan.en> ;
+    reg:name "authorizedAccessPointForTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has authorized access point for timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70015> ;
+    skos:definition "Relates a timespan to an access point for timespan that is selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/t/P70048>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "An access point for timespan that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70048> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60917> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/variantAccessPointForTimespan.en> ;
+    reg:name "variantAccessPointForTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has variant access point for timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70015> ;
+    skos:definition "Relates a timespan to an access point for timespan that is not selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/t/P70049>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "A name of timespan that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "preferred name of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70049> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60930> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/preferredNameOfTimespan.en> ;
+    reg:name "preferredNameOfTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has preferred name of timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70017> ;
+    skos:definition "Relates a timespan to a name of timespan that is selected for preference in a specific application or context."@en .
+
+<http://rdaregistry.info/Elements/t/P70050>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "A name of timespan that is not selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "variant name of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70050> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60926> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/variantNameOfTimespan.en> ;
+    reg:name "variantNameOfTimespan"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has variant name of timespan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70017> ;
+    skos:definition "Relates a timespan to a name of timespan that is not selected for preference in a specific application or context."@en .
+
+<http://rdaregistry.info/Elements/t/P70051>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An agent that is active in its primary field of endeavour during a timespan."@en ;
+    rdakit:toolkitLabel "period of activity of agent of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70044> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/periodOfActivityOfAgentOf.en> ;
+    reg:name "periodOfActivityOfAgentOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is period of activity of agent of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70005> ;
+    skos:definition "Relates a timespan to an agent that is active in its primary field of endeavour during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70052>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A collective agent that is active in its primary field of endeavour during a timespan."@en ;
+    rdakit:toolkitLabel "period of activity of collective agent of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70043>, <http://rdaregistry.info/Elements/t/P70053> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/periodOfActivityOfCollectiveAgentOf.en> ;
+    reg:name "periodOfActivityOfCollectiveAgentOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is period of activity of collective agent of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70006>, <http://rdaregistry.info/Elements/t/P70051> ;
+    skos:definition "Relates a timespan to a collective agent that is active in its primary field of endeavour during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70053>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A family that is active in its primary field of endeavour during a timespan."@en ;
+    rdakit:toolkitLabel "period of activity of family of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/periodOfActivityOfFamilyOf.en> ;
+    reg:name "periodOfActivityOfFamilyOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is period of activity of family of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70037>, <http://rdaregistry.info/Elements/t/P70052> ;
+    skos:definition "Relates a timespan to a family that is active in its primary field of endeavour during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70054>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work associated with a representative expression that is recorded, filmed, etc., during a timespan."@en ;
+    rdakit:toolkitLabel "date of capture of representative expression of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfCaptureOfRepresentativeExpressionOf.en> ;
+    reg:name "dateOfCaptureOfRepresentativeExpressionOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is date of capture of representative expression of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70001> ;
+    skos:definition "Relates a timespan to a work associated with a representative expression that is recorded, filmed, etc., during a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70055>
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that has an extent of expression of a representative expression that is a playing time, performance time, running time, or other timespan."@en ;
+    rdakit:toolkitLabel "duration of representative expression of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/durationOfRepresentativeExpressionOf.en> ;
+    reg:name "durationOfRepresentativeExpressionOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "is duration of representative expression of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70001> ;
+    skos:definition "Relates a timespan to a work that has an extent of expression of a representative expression that is a playing time, performance time, running time, or other timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70056>
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "A name of agent used during a timespan."@en ;
+    rdakit:toolkitLabel "date of usage of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70056> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfUsageOf.en> ;
+    reg:name "dateOfUsageOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:label "has date of usage of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70009> ;
+    skos:definition "Relates a timespan to a name of agent used during a timespan."@en .
 

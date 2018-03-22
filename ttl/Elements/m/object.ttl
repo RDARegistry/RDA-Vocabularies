@@ -10,21 +10,109 @@
     a skos:Concept ;
     skos:prefLabel "Published"@en .
 
+<http://metadataregistry.org/uri/RegStatus/1008>
+    a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
+
 <http://rdaregistry.info/Elements/m/object/>
     dc:title "RDA Manifestation object properties"@en ;
-    skos:note "Object properties derived from RDA elements and relationship designators with the domain of RDA Item."@en .
+    skos:note "Object properties derived from RDA elements and relationship designators with the domain of RDA Item. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
 
-<http://rdaregistry.info/Elements/m/object/P30016>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/electronicReproductionManifestation.en> ;
-    reg:name "electronicReproductionManifestation"@en ;
+<http://rdaregistry.info/Elements/m/object/P30004>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/identifierForManifestation.en> ;
+    reg:name "identifierForManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has electronic reproduction (manifestation)"@en ;
+    rdfs:label "has identifier for manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30004>, <http://rdaregistry.info/Elements/m/object/P30277> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80048> .
+
+<http://rdaregistry.info/Elements/m/object/P30007>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/copyrightDate.en> ;
+    reg:name "copyrightDate"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has copyright date"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30007>, <http://rdaregistry.info/Elements/m/object/P30278> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/t/object/P70019> .
+
+<http://rdaregistry.info/Elements/m/object/P30008>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/dateOfDistribution.en> ;
+    reg:name "dateOfDistribution"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has date of distribution"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30008>, <http://rdaregistry.info/Elements/m/object/P30278> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/t/object/P70025> .
+
+<http://rdaregistry.info/Elements/m/object/P30009>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/dateOfProduction.en> ;
+    reg:name "dateOfProduction"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has date of production"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30009>, <http://rdaregistry.info/Elements/m/object/P30278> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/t/object/P70027> .
+
+<http://rdaregistry.info/Elements/m/object/P30010>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/dateOfManufacture.en> ;
+    reg:name "dateOfManufacture"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has date of manufacture"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30010>, <http://rdaregistry.info/Elements/m/object/P30278> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/t/object/P70026> .
+
+<http://rdaregistry.info/Elements/m/object/P30011>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/dateOfPublication.en> ;
+    reg:name "dateOfPublication"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has date of publication"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30011>, <http://rdaregistry.info/Elements/m/object/P30278> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/t/object/P70028> .
+
+<http://rdaregistry.info/Elements/m/object/P30016>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/electronicReproductionOfManifestation.en> ;
+    reg:name "electronicReproductionOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has electronic reproduction of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30016> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30016>, <http://rdaregistry.info/Elements/m/object/P30039> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30136> .
+
+<http://rdaregistry.info/Elements/m/object/P30017>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelNameOfDistributor.en> ;
+    reg:name "parallelNameOfDistributor"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel name of distributor"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30017>, <http://rdaregistry.info/Elements/m/object/P30173> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80127> .
 
 <http://rdaregistry.info/Elements/m/object/P30019>
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/facsimileContainedIn.en> ;
@@ -35,31 +123,32 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "is facsimile contained in"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30019> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30019>, <http://rdaregistry.info/Elements/m/object/P30020> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30046> .
 
 <http://rdaregistry.info/Elements/m/object/P30020>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30019>, <http://rdaregistry.info/Elements/m/object/P30025>, <http://rdaregistry.info/Elements/m/object/P30101> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/containedInManifestation.en> ;
     reg:name "containedInManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is contained in (manifestation)"@en ;
+    rdfs:label "is contained in manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30020> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30020>, <http://rdaregistry.info/Elements/m/object/P30048> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30033> .
 
 <http://rdaregistry.info/Elements/m/object/P30021>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/preservationFacsimileManifestation.en> ;
-    reg:name "preservationFacsimileManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/preservationFacsimileOfManifestation.en> ;
+    reg:name "preservationFacsimileOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has preservation facsimile (manifestation)"@en ;
+    rdfs:label "has preservation facsimile of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30021> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30021>, <http://rdaregistry.info/Elements/m/object/P30031> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30045> .
 
 <http://rdaregistry.info/Elements/m/object/P30022>
@@ -71,19 +160,20 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has insert"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30022> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30022>, <http://rdaregistry.info/Elements/m/object/P30033> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30025> .
 
 <http://rdaregistry.info/Elements/m/object/P30024>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30026>, <http://rdaregistry.info/Elements/m/object/P30028>, <http://rdaregistry.info/Elements/m/object/P30039>, <http://rdaregistry.info/Elements/m/object/P30043> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/equivalentManifestation.en> ;
     reg:name "equivalentManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has equivalent (manifestation)"@en ;
+    rdfs:label "has equivalent manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30024> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30024>, <http://rdaregistry.info/Elements/m/object/P30048> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30024> .
 
 <http://rdaregistry.info/Elements/m/object/P30025>
@@ -95,7 +185,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "is inserted in"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30025> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30025>, <http://rdaregistry.info/Elements/m/object/P30020> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30022> .
 
 <http://rdaregistry.info/Elements/m/object/P30026>
@@ -107,19 +197,20 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "is also issued as"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30026> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30026>, <http://rdaregistry.info/Elements/m/object/P30024> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30026> .
 
 <http://rdaregistry.info/Elements/m/object/P30027>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30035> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/accompaniedByManifestation.en> ;
     reg:name "accompaniedByManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is accompanied by (manifestation)"@en ;
+    rdfs:label "is accompanied by manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30027> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30027>, <http://rdaregistry.info/Elements/m/object/P30048> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30027> .
 
 <http://rdaregistry.info/Elements/m/object/P30028>
@@ -131,7 +222,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has mirror site"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30028> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30028>, <http://rdaregistry.info/Elements/m/object/P30024> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30028> .
 
 <http://rdaregistry.info/Elements/m/object/P30029>
@@ -141,9 +232,9 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has digital transfer (manifestation)"@en ;
+    rdfs:label "has digital transfer of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30029> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30029>, <http://rdaregistry.info/Elements/m/object/P30039> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30040> .
 
 <http://rdaregistry.info/Elements/m/object/P30030>
@@ -155,34 +246,37 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has special issue"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30030> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30030>, <http://rdaregistry.info/Elements/m/object/P30033> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30101> .
 
 <http://rdaregistry.info/Elements/m/object/P30031>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/facsimileManifestation.en> ;
-    reg:name "facsimileManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30021> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/facsimileOfManifestation.en> ;
+    reg:name "facsimileOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has facsimile (manifestation)"@en ;
+    rdfs:label "has facsimile of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30031> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30031>, <http://rdaregistry.info/Elements/m/object/P30039> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30047> .
 
 <http://rdaregistry.info/Elements/m/object/P30033>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30022>, <http://rdaregistry.info/Elements/m/object/P30030>, <http://rdaregistry.info/Elements/m/object/P30046> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/containerOfManifestation.en> ;
     reg:name "containerOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is container of (manifestation)"@en ;
+    rdfs:label "is container of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30033> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30033>, <http://rdaregistry.info/Elements/m/object/P30048> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30020> .
 
 <http://rdaregistry.info/Elements/m/object/P30035>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30036>, <http://rdaregistry.info/Elements/m/object/P30037> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/issuedWith.en> ;
     reg:name "issuedWith"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -191,7 +285,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "is issued with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30035> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30035>, <http://rdaregistry.info/Elements/m/object/P30027> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30035> .
 
 <http://rdaregistry.info/Elements/m/object/P30036>
@@ -201,9 +295,9 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is on disc with (manifestation)"@en ;
+    rdfs:label "is on disc with manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30036> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30036>, <http://rdaregistry.info/Elements/m/object/P30035> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30036> .
 
 <http://rdaregistry.info/Elements/m/object/P30037>
@@ -213,9 +307,9 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is filmed with (manifestation)"@en ;
+    rdfs:label "is filmed with manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30037> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30037>, <http://rdaregistry.info/Elements/m/object/P30035> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30037> .
 
 <http://rdaregistry.info/Elements/m/object/P30038>
@@ -225,21 +319,22 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is reprinted as (manifestation)"@en ;
+    rdfs:label "is reprinted as manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30038> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30038>, <http://rdaregistry.info/Elements/m/object/P30039> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30093> .
 
 <http://rdaregistry.info/Elements/m/object/P30039>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30016>, <http://rdaregistry.info/Elements/m/object/P30029>, <http://rdaregistry.info/Elements/m/object/P30031>, <http://rdaregistry.info/Elements/m/object/P30038> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/reproducedAsManifestation.en> ;
     reg:name "reproducedAsManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is reproduced as (manifestation)"@en ;
+    rdfs:label "is reproduced as manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30039> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30039>, <http://rdaregistry.info/Elements/m/object/P30024> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30043> .
 
 <http://rdaregistry.info/Elements/m/object/P30040>
@@ -249,21 +344,22 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is digital transfer of (manifestation)"@en ;
+    rdfs:label "is digital transfer of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30040> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30040>, <http://rdaregistry.info/Elements/m/object/P30043> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30029> .
 
 <http://rdaregistry.info/Elements/m/object/P30043>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30040>, <http://rdaregistry.info/Elements/m/object/P30047>, <http://rdaregistry.info/Elements/m/object/P30093>, <http://rdaregistry.info/Elements/m/object/P30136> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/reproductionOfManifestation.en> ;
     reg:name "reproductionOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is reproduction of (manifestation)"@en ;
+    rdfs:label "is reproduction of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30043> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30043>, <http://rdaregistry.info/Elements/m/object/P30024> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30039> .
 
 <http://rdaregistry.info/Elements/m/object/P30045>
@@ -273,9 +369,9 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is preservation facsimile of (manifestation)"@en ;
+    rdfs:label "is preservation facsimile of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30045> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30045>, <http://rdaregistry.info/Elements/m/object/P30047> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30021> .
 
 <http://rdaregistry.info/Elements/m/object/P30046>
@@ -287,32 +383,70 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "is facsimile container of"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30046> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30046>, <http://rdaregistry.info/Elements/m/object/P30033> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30019> .
 
 <http://rdaregistry.info/Elements/m/object/P30047>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30045> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/facsimileOfManifestation.en> ;
     reg:name "facsimileOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is facsimile of (manifestation)"@en ;
+    rdfs:label "is facsimile of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30047> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30047>, <http://rdaregistry.info/Elements/m/object/P30043> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30031> .
 
 <http://rdaregistry.info/Elements/m/object/P30048>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedManifestationManifestation.en> ;
-    reg:name "relatedManifestationManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30210>, <http://rdaregistry.info/Elements/m/object/P30212>, <http://rdaregistry.info/Elements/m/object/P30213> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedManifestationOfManifestation.en> ;
+    reg:name "relatedManifestationOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related manifestation (manifestation)"@en ;
+    rdfs:label "has related manifestation of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048>, <http://rdaregistry.info/Elements/m/object/P30264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30048>, <http://rdaregistry.info/Elements/m/object/P30264>, <http://rdaregistry.info/Elements/x/object/P00004> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30048> .
+
+<http://rdaregistry.info/Elements/m/object/P30049>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelNameOfManufacturer.en> ;
+    reg:name "parallelNameOfManufacturer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel name of manufacturer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30049>, <http://rdaregistry.info/Elements/m/object/P30175> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80128> .
+
+<http://rdaregistry.info/Elements/m/object/P30065>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/publisherNumberForNotatedMusic.en> ;
+    reg:name "publisherNumberForNotatedMusic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has publisher number for notated music"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30065>, <http://rdaregistry.info/Elements/m/object/P30004> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80156> .
+
+<http://rdaregistry.info/Elements/m/object/P30066>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/plateNumberForNotatedMusic.en> ;
+    reg:name "plateNumberForNotatedMusic"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has plate number for notated music"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30066>, <http://rdaregistry.info/Elements/m/object/P30004> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/P80155> .
 
 <http://rdaregistry.info/Elements/m/object/P30067>
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/broadcaster.en> ;
@@ -323,7 +457,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has broadcaster"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30067> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30067>, <http://rdaregistry.info/Elements/m/object/P30083> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50168> .
 
 <http://rdaregistry.info/Elements/m/object/P30068>
@@ -335,7 +469,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has film distributor"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30068> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30068>, <http://rdaregistry.info/Elements/m/object/P30080> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50169> .
 
 <http://rdaregistry.info/Elements/m/object/P30069>
@@ -347,7 +481,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has book designer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30069> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30069>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50170> .
 
 <http://rdaregistry.info/Elements/m/object/P30070>
@@ -359,7 +493,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has engraver"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30070> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30070>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50171> .
 
 <http://rdaregistry.info/Elements/m/object/P30071>
@@ -371,7 +505,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has braille embosser"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30071> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30071>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50172> .
 
 <http://rdaregistry.info/Elements/m/object/P30072>
@@ -383,7 +517,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has printmaker"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30072> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30072>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50173> .
 
 <http://rdaregistry.info/Elements/m/object/P30073>
@@ -395,7 +529,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has caster"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30073> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30073>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50174> .
 
 <http://rdaregistry.info/Elements/m/object/P30074>
@@ -407,7 +541,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has lithographer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30074> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30074>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50175> .
 
 <http://rdaregistry.info/Elements/m/object/P30075>
@@ -419,7 +553,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has platemaker"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30075> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30075>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50176> .
 
 <http://rdaregistry.info/Elements/m/object/P30076>
@@ -431,7 +565,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has etcher"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30076> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30076>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50177> .
 
 <http://rdaregistry.info/Elements/m/object/P30077>
@@ -443,7 +577,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has collotyper"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30077> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30077>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50178> .
 
 <http://rdaregistry.info/Elements/m/object/P30078>
@@ -455,7 +589,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has printer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30078> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30078>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50179> .
 
 <http://rdaregistry.info/Elements/m/object/P30079>
@@ -467,10 +601,11 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has other agent associated with manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30079> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30079>, <http://rdaregistry.info/Elements/m/object/P30267> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50181> .
 
 <http://rdaregistry.info/Elements/m/object/P30080>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30068> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/distributor.en> ;
     reg:name "distributor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -479,7 +614,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has distributor"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30080> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30080>, <http://rdaregistry.info/Elements/m/object/P30267> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50199> .
 
 <http://rdaregistry.info/Elements/m/object/P30081>
@@ -491,10 +626,11 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has producer of unpublished manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30081> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30081>, <http://rdaregistry.info/Elements/m/object/P30267> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50200> .
 
 <http://rdaregistry.info/Elements/m/object/P30082>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30069>, <http://rdaregistry.info/Elements/m/object/P30070>, <http://rdaregistry.info/Elements/m/object/P30071>, <http://rdaregistry.info/Elements/m/object/P30072>, <http://rdaregistry.info/Elements/m/object/P30073>, <http://rdaregistry.info/Elements/m/object/P30074>, <http://rdaregistry.info/Elements/m/object/P30075>, <http://rdaregistry.info/Elements/m/object/P30076>, <http://rdaregistry.info/Elements/m/object/P30077>, <http://rdaregistry.info/Elements/m/object/P30078>, <http://rdaregistry.info/Elements/m/object/P30215> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/manufacturer.en> ;
     reg:name "manufacturer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -503,10 +639,11 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has manufacturer"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30082>, <http://rdaregistry.info/Elements/m/object/P30267> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50202> .
 
 <http://rdaregistry.info/Elements/m/object/P30083>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30067> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/publisher.en> ;
     reg:name "publisher"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -515,8 +652,108 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has publisher"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30083> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30083>, <http://rdaregistry.info/Elements/m/object/P30267> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50203> .
+
+<http://rdaregistry.info/Elements/m/object/P30085>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30089> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/placeOfDistribution.en> ;
+    reg:name "placeOfDistribution"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has place of distribution"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30085>, <http://rdaregistry.info/Elements/m/object/P30279> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70039> .
+
+<http://rdaregistry.info/Elements/m/object/P30086>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30091> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/placeOfProduction.en> ;
+    reg:name "placeOfProduction"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has place of production"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30086>, <http://rdaregistry.info/Elements/m/object/P30279> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70041> .
+
+<http://rdaregistry.info/Elements/m/object/P30087>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30090> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/placeOfManufacture.en> ;
+    reg:name "placeOfManufacture"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has place of manufacture"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30087>, <http://rdaregistry.info/Elements/m/object/P30279> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70040> .
+
+<http://rdaregistry.info/Elements/m/object/P30088>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30092> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/placeOfPublication.en> ;
+    reg:name "placeOfPublication"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has place of publication"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30088>, <http://rdaregistry.info/Elements/m/object/P30279> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70042> .
+
+<http://rdaregistry.info/Elements/m/object/P30089>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelPlaceOfDistribution.en> ;
+    reg:name "parallelPlaceOfDistribution"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel place of distribution"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30089>, <http://rdaregistry.info/Elements/m/object/P30085> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70047> .
+
+<http://rdaregistry.info/Elements/m/object/P30090>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelPlaceOfManufacture.en> ;
+    reg:name "parallelPlaceOfManufacture"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel place of manufacture"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30090>, <http://rdaregistry.info/Elements/m/object/P30087> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70048> .
+
+<http://rdaregistry.info/Elements/m/object/P30091>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelPlaceOfProduction.en> ;
+    reg:name "parallelPlaceOfProduction"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel place of production"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30091>, <http://rdaregistry.info/Elements/m/object/P30086> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70049> .
+
+<http://rdaregistry.info/Elements/m/object/P30092>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelPlaceOfPublication.en> ;
+    reg:name "parallelPlaceOfPublication"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel place of publication"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30092>, <http://rdaregistry.info/Elements/m/object/P30088> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70050> .
 
 <http://rdaregistry.info/Elements/m/object/P30093>
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/reprintOfManifestation.en> ;
@@ -525,10 +762,34 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is reprint of (manifestation)"@en ;
+    rdfs:label "is reprint of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30093> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30093>, <http://rdaregistry.info/Elements/m/object/P30043> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30038> .
+
+<http://rdaregistry.info/Elements/m/object/P30094>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelNameOfProducer.en> ;
+    reg:name "parallelNameOfProducer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel name of producer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30094>, <http://rdaregistry.info/Elements/m/object/P30174> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80129> .
+
+<http://rdaregistry.info/Elements/m/object/P30095>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelNameOfPublisher.en> ;
+    reg:name "parallelNameOfPublisher"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel name of publisher"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30095>, <http://rdaregistry.info/Elements/m/object/P30176> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80130> .
 
 <http://rdaregistry.info/Elements/m/object/P30101>
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/specialIssueOf.en> ;
@@ -539,7 +800,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "is special issue of"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30101> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30101>, <http://rdaregistry.info/Elements/m/object/P30020> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30030> .
 
 <http://rdaregistry.info/Elements/m/object/P30103>
@@ -551,8 +812,70 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has exemplar of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30103> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30103>, <http://rdaregistry.info/Elements/m/object/P30140> ;
     owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40049> .
+
+<http://rdaregistry.info/Elements/m/object/P30128>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30131> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/variantTitleOfManifestation.en> ;
+    reg:name "variantTitleOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has variant title of manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30128>, <http://rdaregistry.info/Elements/m/object/P30134> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80111> .
+
+<http://rdaregistry.info/Elements/m/object/P30129>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/laterTitleProper.en> ;
+    reg:name "laterTitleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has later title proper"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30129>, <http://rdaregistry.info/Elements/m/object/P30156> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80124> .
+
+<http://rdaregistry.info/Elements/m/object/P30130>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/earlierTitleProper.en> ;
+    reg:name "earlierTitleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has earlier title proper"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30130>, <http://rdaregistry.info/Elements/m/object/P30156> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80123> .
+
+<http://rdaregistry.info/Elements/m/object/P30131>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/abbreviatedTitle.en> ;
+    reg:name "abbreviatedTitle"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has abbreviated title"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30131>, <http://rdaregistry.info/Elements/m/object/P30134> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80057> .
+
+<http://rdaregistry.info/Elements/m/object/P30134>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30128>, <http://rdaregistry.info/Elements/m/object/P30156>, <http://rdaregistry.info/Elements/m/object/P30203>, <http://rdaregistry.info/Elements/m/object/P30209> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/titleOfManifestation.en> ;
+    reg:name "titleOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has title of manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30134>, <http://rdaregistry.info/Elements/m/object/P30277> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80062> .
 
 <http://rdaregistry.info/Elements/m/object/P30135>
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/workManifested.en> ;
@@ -563,7 +886,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has work manifested"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30135> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30135>, <http://rdaregistry.info/Elements/m/object/P30265> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10072> .
 
 <http://rdaregistry.info/Elements/m/object/P30136>
@@ -573,9 +896,9 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is electronic reproduction of (manifestation)"@en ;
+    rdfs:label "is electronic reproduction of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30136> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30136>, <http://rdaregistry.info/Elements/m/object/P30043> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30016> .
 
 <http://rdaregistry.info/Elements/m/object/P30139>
@@ -587,55 +910,258 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has expression manifested"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30139> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30139>, <http://rdaregistry.info/Elements/m/object/P30266> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20059> .
 
 <http://rdaregistry.info/Elements/m/object/P30140>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedItemManifestation.en> ;
-    reg:name "relatedItemManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30103> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedItemOfManifestation.en> ;
+    reg:name "relatedItemOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related item (manifestation)"@en ;
+    rdfs:label "has related item of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30140>, <http://rdaregistry.info/Elements/m/object/P30264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30140>, <http://rdaregistry.info/Elements/m/object/P30264>, <http://rdaregistry.info/Elements/x/object/P00005> ;
     owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40071> .
 
-<http://rdaregistry.info/Elements/m/object/P30210>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/accompanyingManifestationRelationship.en> ;
-    reg:name "accompanyingManifestationRelationship"@en ;
+<http://rdaregistry.info/Elements/m/object/P30142>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/otherTitleInformation.en> ;
+    reg:name "otherTitleInformation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has accompanying manifestation relationship with"@en ;
+    rdfs:label "has other title information"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30142> .
+
+<http://rdaregistry.info/Elements/m/object/P30143>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/otherTitleInformationOfSeries.en> ;
+    reg:name "otherTitleInformationOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has other title information of series"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30143>, <http://rdaregistry.info/Elements/m/object/P30142> .
+
+<http://rdaregistry.info/Elements/m/object/P30144>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/otherTitleInformationOfSubseries.en> ;
+    reg:name "otherTitleInformationOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has other title information of subseries"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30144>, <http://rdaregistry.info/Elements/m/object/P30143> .
+
+<http://rdaregistry.info/Elements/m/object/P30151>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30152> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelOtherTitleInformation.en> ;
+    reg:name "parallelOtherTitleInformation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel other title information"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30151>, <http://rdaregistry.info/Elements/m/object/P30142> .
+
+<http://rdaregistry.info/Elements/m/object/P30152>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30153> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelOtherTitleInformationOfSeries.en> ;
+    reg:name "parallelOtherTitleInformationOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel other title information of series"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30152>, <http://rdaregistry.info/Elements/m/object/P30143>, <http://rdaregistry.info/Elements/m/object/P30151> .
+
+<http://rdaregistry.info/Elements/m/object/P30153>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelOtherTitleInformationOfSubseries.en> ;
+    reg:name "parallelOtherTitleInformationOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel other title information of subseries"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30153>, <http://rdaregistry.info/Elements/m/object/P30144>, <http://rdaregistry.info/Elements/m/object/P30152> .
+
+<http://rdaregistry.info/Elements/m/object/P30156>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/titleProper.en> ;
+    reg:name "titleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has title proper"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30156>, <http://rdaregistry.info/Elements/m/object/P30134> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80063> .
+
+<http://rdaregistry.info/Elements/m/object/P30157>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/titleProperOfSeries.en> ;
+    reg:name "titleProperOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has title proper of series"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30157>, <http://rdaregistry.info/Elements/m/object/P30156> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80125> .
+
+<http://rdaregistry.info/Elements/m/object/P30158>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/titleProperOfSubseries.en> ;
+    reg:name "titleProperOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has title proper of subseries"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30158>, <http://rdaregistry.info/Elements/m/object/P30157> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80126> .
+
+<http://rdaregistry.info/Elements/m/object/P30173>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/nameOfDistributor.en> ;
+    reg:name "nameOfDistributor"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has name of distributor"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30173>, <http://rdaregistry.info/Elements/m/object/P30274> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80115> .
+
+<http://rdaregistry.info/Elements/m/object/P30174>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/nameOfProducer.en> ;
+    reg:name "nameOfProducer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has name of producer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30174>, <http://rdaregistry.info/Elements/m/object/P30297> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80117> .
+
+<http://rdaregistry.info/Elements/m/object/P30175>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/nameOfManufacturer.en> ;
+    reg:name "nameOfManufacturer"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has name of manufacturer"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30175>, <http://rdaregistry.info/Elements/m/object/P30297> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80116> .
+
+<http://rdaregistry.info/Elements/m/object/P30176>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/nameOfPublisher.en> ;
+    reg:name "nameOfPublisher"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has name of publisher"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30176>, <http://rdaregistry.info/Elements/m/object/P30297> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80118> .
+
+<http://rdaregistry.info/Elements/m/object/P30203>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30204> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelTitleProper.en> ;
+    reg:name "parallelTitleProper"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel title proper"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30203>, <http://rdaregistry.info/Elements/m/object/P30134> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80135> .
+
+<http://rdaregistry.info/Elements/m/object/P30204>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30205> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelTitleProperOfSeries.en> ;
+    reg:name "parallelTitleProperOfSeries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel title proper of series"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30204>, <http://rdaregistry.info/Elements/m/object/P30157>, <http://rdaregistry.info/Elements/m/object/P30203> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80136> .
+
+<http://rdaregistry.info/Elements/m/object/P30205>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/parallelTitleProperOfSubseries.en> ;
+    reg:name "parallelTitleProperOfSubseries"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has parallel title proper of subseries"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30205>, <http://rdaregistry.info/Elements/m/object/P30158>, <http://rdaregistry.info/Elements/m/object/P30204> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80137> .
+
+<http://rdaregistry.info/Elements/m/object/P30209>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/keyTitle.en> ;
+    reg:name "keyTitle"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has key title"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30209>, <http://rdaregistry.info/Elements/m/object/P30134> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80071> .
+
+<http://rdaregistry.info/Elements/m/object/P30210>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30027> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/accompanyingManifestationRelationship.en> ;
+    reg:name "accompanyingManifestationRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30210> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30210>, <http://rdaregistry.info/Elements/m/object/P30048> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30210> .
 
 <http://rdaregistry.info/Elements/m/object/P30212>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30024> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/equivalentManifestationRelationship.en> ;
     reg:name "equivalentManifestationRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has equivalent manifestation relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30212> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30212>, <http://rdaregistry.info/Elements/m/object/P30048> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30212> .
 
 <http://rdaregistry.info/Elements/m/object/P30213>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30020>, <http://rdaregistry.info/Elements/m/object/P30033> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/wholePartManifestationRelationship.en> ;
     reg:name "wholePartManifestationRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has whole-part manifestation relationship with"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30213> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30213>, <http://rdaregistry.info/Elements/m/object/P30048> ;
     owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30213> .
 
 <http://rdaregistry.info/Elements/m/object/P30215>
@@ -647,225 +1173,405 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
     rdfs:label "has papermaker"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30215> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30215>, <http://rdaregistry.info/Elements/m/object/P30082> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50242> .
 
 <http://rdaregistry.info/Elements/m/object/P30253>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/subjectOfManifestation.en> ;
-    reg:name "subjectOfManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30254> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/subjectManifestationOf.en> ;
+    reg:name "subjectManifestationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is subject of (manifestation)"@en ;
+    rdfs:label "is subject manifestation of"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30253>, <http://rdaregistry.info/Elements/x/object/P00014> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10259> .
 
 <http://rdaregistry.info/Elements/m/object/P30254>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/describedInManifestation.en> ;
-    reg:name "describedInManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30255>, <http://rdaregistry.info/Elements/m/object/P30256>, <http://rdaregistry.info/Elements/m/object/P30257>, <http://rdaregistry.info/Elements/m/object/P30258>, <http://rdaregistry.info/Elements/m/object/P30259> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/manifestationDescribedIn.en> ;
+    reg:name "manifestationDescribedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is described in (manifestation)"@en ;
+    rdfs:label "is manifestation described in"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30254> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30254>, <http://rdaregistry.info/Elements/m/object/P30253> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10271> .
 
 <http://rdaregistry.info/Elements/m/object/P30255>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/analysedInManifestation.en> ;
-    reg:name "analysedInManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/manifestationAnalysedIn.en> ;
+    reg:name "manifestationAnalysedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is analysed in (manifestation)"@en ;
+    rdfs:label "is manifestation analysed in"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30255> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30255>, <http://rdaregistry.info/Elements/m/object/P30254> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10272> .
 
 <http://rdaregistry.info/Elements/m/object/P30256>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/commentaryInManifestation.en> ;
-    reg:name "commentaryInManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/manifestationCommentaryIn.en> ;
+    reg:name "manifestationCommentaryIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is commentary in (manifestation)"@en ;
+    rdfs:label "is manifestation commentary in"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30256> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30256>, <http://rdaregistry.info/Elements/m/object/P30254> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10276> .
 
 <http://rdaregistry.info/Elements/m/object/P30257>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/critiquedInManifestation.en> ;
-    reg:name "critiquedInManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/manifestationCritiquedIn.en> ;
+    reg:name "manifestationCritiquedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is critiqued in (manifestation)"@en ;
+    rdfs:label "is manifestation critiqued in"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30257> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30257>, <http://rdaregistry.info/Elements/m/object/P30254> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10275> .
 
 <http://rdaregistry.info/Elements/m/object/P30258>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/evaluatedInManifestation.en> ;
-    reg:name "evaluatedInManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/manifestationEvaluatedIn.en> ;
+    reg:name "manifestationEvaluatedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is evaluated in (manifestation)"@en ;
+    rdfs:label "is manifestation evaluated in"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30258> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30258>, <http://rdaregistry.info/Elements/m/object/P30254> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10273> .
 
 <http://rdaregistry.info/Elements/m/object/P30259>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/reviewedInManifestation.en> ;
-    reg:name "reviewedInManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/manifestationReviewedIn.en> ;
+    reg:name "manifestationReviewedIn"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "is reviewed in (manifestation)"@en ;
+    rdfs:label "is manifestation reviewed in"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30259> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30259>, <http://rdaregistry.info/Elements/m/object/P30254> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10274> .
 
 <http://rdaregistry.info/Elements/m/object/P30264>
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30048>, <http://rdaregistry.info/Elements/m/object/P30140>, <http://rdaregistry.info/Elements/m/object/P30265>, <http://rdaregistry.info/Elements/m/object/P30266>, <http://rdaregistry.info/Elements/m/object/P30267>, <http://rdaregistry.info/Elements/m/object/P30272>, <http://rdaregistry.info/Elements/m/object/P30273>, <http://rdaregistry.info/Elements/m/object/P30274> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedEntityManifestation.en> ;
-    reg:name "relatedEntityManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedEntityOfManifestation.en> ;
+    reg:name "relatedEntityOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related entity (manifestation)"@en ;
+    rdfs:label "has related entity of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10013> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30264>, <http://rdaregistry.info/Elements/x/object/P00001> ;
     owl:inverseOf <http://rdaregistry.info/Elements/x/object/P00004> .
 
 <http://rdaregistry.info/Elements/m/object/P30265>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedWorkManifestation.en> ;
-    reg:name "relatedWorkManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30135> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedWorkOfManifestation.en> ;
+    reg:name "relatedWorkOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related work (manifestation)"@en ;
+    rdfs:label "has related work of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30265>, <http://rdaregistry.info/Elements/m/object/P30264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30265>, <http://rdaregistry.info/Elements/m/object/P30264>, <http://rdaregistry.info/Elements/x/object/P00002> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10309> .
 
 <http://rdaregistry.info/Elements/m/object/P30266>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedExpressionManifestation.en> ;
-    reg:name "relatedExpressionManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30139> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedExpressionOfManifestation.en> ;
+    reg:name "relatedExpressionOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related expression (manifestation)"@en ;
+    rdfs:label "has related expression of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30266>, <http://rdaregistry.info/Elements/m/object/P30264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30266>, <http://rdaregistry.info/Elements/m/object/P30264>, <http://rdaregistry.info/Elements/x/object/P00003> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20299> .
 
 <http://rdaregistry.info/Elements/m/object/P30267>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30268>, <http://rdaregistry.info/Elements/m/object/P30271> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedAgentManifestation.en> ;
-    reg:name "relatedAgentManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30079>, <http://rdaregistry.info/Elements/m/object/P30080>, <http://rdaregistry.info/Elements/m/object/P30081>, <http://rdaregistry.info/Elements/m/object/P30082>, <http://rdaregistry.info/Elements/m/object/P30083>, <http://rdaregistry.info/Elements/m/object/P30268>, <http://rdaregistry.info/Elements/m/object/P30271> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedAgentOfManifestation.en> ;
+    reg:name "relatedAgentOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related agent (manifestation)"@en ;
+    rdfs:label "has related agent of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10002> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30267>, <http://rdaregistry.info/Elements/m/object/P30264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30267>, <http://rdaregistry.info/Elements/m/object/P30264>, <http://rdaregistry.info/Elements/x/object/P00006> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50307> .
 
 <http://rdaregistry.info/Elements/m/object/P30268>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedPersonManifestation.en> ;
-    reg:name "relatedPersonManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedPersonOfManifestation.en> ;
+    reg:name "relatedPersonOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related person (manifestation)"@en ;
+    rdfs:label "has related person of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30268>, <http://rdaregistry.info/Elements/m/object/P30267> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30268>, <http://rdaregistry.info/Elements/m/object/P30267>, <http://rdaregistry.info/Elements/x/object/P00007> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50313> .
 
 <http://rdaregistry.info/Elements/m/object/P30269>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedFamilyManifestation.en> ;
-    reg:name "relatedFamilyManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedFamilyOfManifestation.en> ;
+    reg:name "relatedFamilyOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related family (manifestation)"@en ;
+    rdfs:label "has related family of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10008> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30269>, <http://rdaregistry.info/Elements/m/object/P30271> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30269>, <http://rdaregistry.info/Elements/m/object/P30271>, <http://rdaregistry.info/Elements/x/object/P00008> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50322> .
 
 <http://rdaregistry.info/Elements/m/object/P30270>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedCorporateBodyManifestation.en> ;
-    reg:name "relatedCorporateBodyManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedCorporateBodyOfManifestation.en> ;
+    reg:name "relatedCorporateBodyOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related corporate body (manifestation)"@en ;
+    rdfs:label "has related corporate body of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30270>, <http://rdaregistry.info/Elements/m/object/P30271> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30270>, <http://rdaregistry.info/Elements/m/object/P30271>, <http://rdaregistry.info/Elements/x/object/P00009> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50331> .
 
 <http://rdaregistry.info/Elements/m/object/P30271>
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30269>, <http://rdaregistry.info/Elements/m/object/P30270> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedCollectiveAgentManifestation.en> ;
-    reg:name "relatedCollectiveAgentManifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedCollectiveAgentOfManifestation.en> ;
+    reg:name "relatedCollectiveAgentOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related collective agent (manifestation)"@en ;
+    rdfs:label "has related collective agent of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10011> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30271>, <http://rdaregistry.info/Elements/m/object/P30267> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30271>, <http://rdaregistry.info/Elements/m/object/P30267>, <http://rdaregistry.info/Elements/x/object/P00012> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50364> .
 
 <http://rdaregistry.info/Elements/m/object/P30272>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedPlaceManifestation.en> ;
-    reg:name "relatedPlaceManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30279> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedPlaceOfManifestation.en> ;
+    reg:name "relatedPlaceOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related place (manifestation)"@en ;
+    rdfs:label "has related place of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30272>, <http://rdaregistry.info/Elements/m/object/P30264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30272>, <http://rdaregistry.info/Elements/m/object/P30264>, <http://rdaregistry.info/Elements/x/object/P00010> ;
     owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70006> .
 
 <http://rdaregistry.info/Elements/m/object/P30273>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedTimespanManifestation.en> ;
-    reg:name "relatedTimespanManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30278> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedTimespanOfManifestation.en> ;
+    reg:name "relatedTimespanOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related time-span (manifestation)"@en ;
+    rdfs:label "has related timespan of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10010> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30273>, <http://rdaregistry.info/Elements/m/object/P30264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30273>, <http://rdaregistry.info/Elements/m/object/P30264>, <http://rdaregistry.info/Elements/x/object/P00011> ;
     owl:inverseOf <http://rdaregistry.info/Elements/t/object/P70003> .
 
 <http://rdaregistry.info/Elements/m/object/P30274>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedNomenManifestation.en> ;
-    reg:name "relatedNomenManifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30134>, <http://rdaregistry.info/Elements/m/object/P30277>, <http://rdaregistry.info/Elements/m/object/P30297> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/relatedNomenOfManifestation.en> ;
+    reg:name "relatedNomenOfManifestation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
-    rdfs:label "has related nomen (manifestation)"@en ;
+    rdfs:label "has related nomen of manifestation"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30274>, <http://rdaregistry.info/Elements/m/object/P30264> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30274>, <http://rdaregistry.info/Elements/m/object/P30264>, <http://rdaregistry.info/Elements/x/object/P00013> ;
     owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80003> .
+
+<http://rdaregistry.info/Elements/m/object/P30276>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30294>, <http://rdaregistry.info/Elements/m/object/P30295> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/accessPointForManifestation.en> ;
+    reg:name "accessPointForManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has access point for manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30276>, <http://rdaregistry.info/Elements/m/object/P30277> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80024> .
+
+<http://rdaregistry.info/Elements/m/object/P30277>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30004>, <http://rdaregistry.info/Elements/m/object/P30276> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/appellationOfManifestation.en> ;
+    reg:name "appellationOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has appellation of manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30277>, <http://rdaregistry.info/Elements/m/object/P30274> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80040> .
+
+<http://rdaregistry.info/Elements/m/object/P30278>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30008>, <http://rdaregistry.info/Elements/m/object/P30009>, <http://rdaregistry.info/Elements/m/object/P30010>, <http://rdaregistry.info/Elements/m/object/P30011> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/dateOfManifestation.en> ;
+    reg:name "dateOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has date of manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30278>, <http://rdaregistry.info/Elements/m/object/P30273> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/t/object/P70020> .
+
+<http://rdaregistry.info/Elements/m/object/P30279>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30085>, <http://rdaregistry.info/Elements/m/object/P30086>, <http://rdaregistry.info/Elements/m/object/P30087>, <http://rdaregistry.info/Elements/m/object/P30088> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/placeOfManifestation.en> ;
+    reg:name "placeOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has place of manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30279>, <http://rdaregistry.info/Elements/m/object/P30272> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/p/object/P70021> .
+
+<http://rdaregistry.info/Elements/m/object/P30294>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/authorizedAccessPointForManifestation.en> ;
+    reg:name "authorizedAccessPointForManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has authorized access point for manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30294>, <http://rdaregistry.info/Elements/m/object/P30276> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80089> .
+
+<http://rdaregistry.info/Elements/m/object/P30295>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/variantAccessPointForManifestation.en> ;
+    reg:name "variantAccessPointForManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has variant access point for manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30295>, <http://rdaregistry.info/Elements/m/object/P30276> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80090> .
+
+<http://rdaregistry.info/Elements/m/object/P30296>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/fingerprint.en> ;
+    reg:name "fingerprint"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has fingerprint"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30296>, <http://rdaregistry.info/Elements/m/object/P30004> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80138> .
+
+<http://rdaregistry.info/Elements/m/object/P30297>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30173>, <http://rdaregistry.info/Elements/m/object/P30174>, <http://rdaregistry.info/Elements/m/object/P30175>, <http://rdaregistry.info/Elements/m/object/P30176> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/nameOfAgentOfManifestation.en> ;
+    reg:name "nameOfAgentOfManifestation"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "has name of agent of manifestation"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30297>, <http://rdaregistry.info/Elements/m/object/P30274> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80114> .
+
+<http://rdaregistry.info/Elements/m/object/P30298>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/digitalTransferOfItem.en> ;
+    reg:name "digitalTransferOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "is digital transfer of item"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30298>, <http://rdaregistry.info/Elements/m/object/P30303> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40087> .
+
+<http://rdaregistry.info/Elements/m/object/P30299>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/electronicReproductionOfItem.en> ;
+    reg:name "electronicReproductionOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "is electronic reproduction of item"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30299>, <http://rdaregistry.info/Elements/m/object/P30303> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40088> .
+
+<http://rdaregistry.info/Elements/m/object/P30300>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/facsimileOfItem.en> ;
+    reg:name "facsimileOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "is facsimile of item"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30300>, <http://rdaregistry.info/Elements/m/object/P30303> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40089> .
+
+<http://rdaregistry.info/Elements/m/object/P30301>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/preservationFacsimileOfItem.en> ;
+    reg:name "preservationFacsimileOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "is preservation facsimile of item"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30301>, <http://rdaregistry.info/Elements/m/object/P30300> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40090> .
+
+<http://rdaregistry.info/Elements/m/object/P30302>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/reprintOfItem.en> ;
+    reg:name "reprintOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "is reprint of item"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30302>, <http://rdaregistry.info/Elements/m/object/P30303> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40091> .
+
+<http://rdaregistry.info/Elements/m/object/P30303>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/object/reproductionOfItem.en> ;
+    reg:name "reproductionOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/object/> ;
+    rdfs:label "is reproduction of item"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30303>, <http://rdaregistry.info/Elements/m/object/P30140> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40092> .
 

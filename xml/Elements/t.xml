@@ -2,6 +2,7 @@
     xml:base="http://rdaregistry.info/Elements/t/"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdakit="http://metadataregistry.org/uri/profile/rdakit/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
@@ -10,70 +11,914 @@
 <!-- Element Set: RDA Time-span properties -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/">
   <dc:title xml:lang="en">RDA Time-span properties</dc:title>
-  <skos:note  xml:lang="en">Properties derived from RDA elements and relationship designators with the domain of RDA Time-span.</skos:note>
+  <skos:note  xml:lang="en">Properties derived from RDA elements and relationship designators with the domain of RDA Time-span. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry.</skos:note>
 </rdf:Description>
 
 <!-- Properties -->
 
-<!-- Property: has related agent (time-span) -->
+<!-- Property: has access point for timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70015">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">accessPointForTimespan</reg:name>
+  <rdfs:label xml:lang="en">has access point for timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/accessPointForTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an appellation of timespan in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">access point for timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An appellation of timespan in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70016" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70047" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70048" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60906" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70015" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has appellation of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70016">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">appellationOfTimespan</reg:name>
+  <rdfs:label xml:lang="en">has appellation of timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/appellationOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a nomen used within a given scheme or context to refer to a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">appellation of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A nomen used within a given scheme or context to refer to a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70009" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70015" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70017" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70018" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60909" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70016" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has authorized access point for timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70047">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">authorizedAccessPointForTimespan</reg:name>
+  <rdfs:label xml:lang="en">has authorized access point for timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/authorizedAccessPointForTimespan.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">authorized access point for timespan</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70015" />
+  <skos:definition xml:lang="en">Relates a timespan to an access point for timespan that is selected for preference in a specific vocabulary encoding scheme.</skos:definition>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60916" />
+  <rdakit:toolkitDefinition xml:lang="en">An access point for timespan that is selected for preference in a specific vocabulary encoding scheme.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70047" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has beginning -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70039">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">beginning</reg:name>
+  <rdfs:label xml:lang="en">has beginning</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/beginning,en.en" />
+  <skos:definition xml:lang="en">Relates a timespan to the time at which the timespan starts.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">beginning</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">The time at which a timespan starts.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is copyright date of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70019">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">copyrightDateOf</reg:name>
+  <rdfs:label xml:lang="en">is copyright date of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/copyrightDateOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">copyright date of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70020" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70019" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to a manifestation associated with a claim of protection under copyright or a similar regime during a timespan.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation associated with a claim of protection under copyright or a similar regime during a timespan.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: has date associated with corporate body of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70036">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateAssociatedWithCorporateBodyOf</reg:name>
+  <rdfs:label xml:lang="en">has date associated with corporate body of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateAssociatedWithCorporateBodyOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a corporate body that has a significant association with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date associated with corporate body of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body that has a significant association with a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70013" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70031" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70032" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70033" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70043" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70036" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has date associated with family of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70037">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateAssociatedWithFamilyOf</reg:name>
+  <rdfs:label xml:lang="en">has date associated with family of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateAssociatedWithFamilyOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a family that has a significant association with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date associated with family of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A family that has a significant association with a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70012" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70037" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70053" />
+</rdf:Description>
+
+<!-- Property: has date associated with person of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70038">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateAssociatedWithPersonOf</reg:name>
+  <rdfs:label xml:lang="en">has date associated with person of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateAssociatedWithPersonOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a person who has a significant association with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date associated with person of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who has a significant association with a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70011" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70029" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70030" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70044" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70038" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of birth of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70029">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfBirthOf</reg:name>
+  <rdfs:label xml:lang="en">is date of birth of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfBirthOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a person who was born during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of birth of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who was born during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70038" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70029" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60975" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of capture of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70023">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfCaptureOf</reg:name>
+  <rdfs:label xml:lang="en">is date of capture of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfCaptureOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of capture of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70024" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70023" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60976" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to an expression that is recorded, filmed, etc., during a timespan.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression that is recorded, filmed, etc., during a timespan.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: is date of capture of representative expression of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70054">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is date of capture of representative expression of</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfCaptureOfRepresentativeExpressionOf</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfCaptureOfRepresentativeExpressionOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to a work associated with a representative expression that is recorded, filmed, etc., during a timespan.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">date of capture of representative expression of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work associated with a representative expression that is recorded, filmed, etc., during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
+</rdf:Description>
+
+<!-- Property: is date of conference, etc. of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70031">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfConferenceEtcOf</reg:name>
+  <rdfs:label xml:lang="en">is date of conference, etc. of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfConferenceEtcOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a conference, exhibition, or other event that gives rise to a work that is held during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of conference, etc. of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A conference, exhibition, or other event that gives rise to a work that is held during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70036" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70031" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60977" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of death of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70030">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfDeathOf</reg:name>
+  <rdfs:label xml:lang="en">is date of death of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfDeathOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a person who died during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of death of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who died during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70038" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70030" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60978" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of distribution of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70025">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfDistributionOf</reg:name>
+  <rdfs:label xml:lang="en">is date of distribution of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfDistributionOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a manifestation that is a published manifestation that is distributed during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of distribution of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is a published manifestation that is distributed during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70020" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70025" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60979" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of establishment of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70032">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfEstablishmentOf</reg:name>
+  <rdfs:label xml:lang="en">is date of establishment of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfEstablishmentOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a corporate body that is established or founded during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of establishment of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body that is established or founded during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70036" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70032" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60980" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of expression of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70024">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfExpressionOf</reg:name>
+  <rdfs:label xml:lang="en">is date of expression of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfExpressionOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an expression associated with an earliest timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of expression of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An expression associated with an earliest timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70002" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70023" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70024" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of manifestation of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70020">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfManifestationOf</reg:name>
+  <rdfs:label xml:lang="en">is date of manifestation of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfManifestationOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a manifestation that is published, released, issued, printed, duplicated, cast, distributed, etc., in a published form or is inscribed, fabricated, constructed, etc., in a unpublished form during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of manifestation of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is a published manifestation that is published, released, issued, printed, duplicated, cast, distributed, etc., or an unpublished manifestation that is inscribed, fabricated, constructed, etc.,  during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70003" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70019" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70025" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70026" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70027" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70028" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70020" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of manufacture of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70026">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfManufactureOf</reg:name>
+  <rdfs:label xml:lang="en">is date of manufacture of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfManufactureOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a manifestation that is a published manifesation that is printed, duplicated, cast, etc., during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of manufacture of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is a published manifesation that is printed, duplicated, cast, etc., during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70020" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70026" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60981" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of production of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70027">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfProductionOf</reg:name>
+  <rdfs:label xml:lang="en">is date of production of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfProductionOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a manifestation that is an unpublished manifestation that is inscribed, fabricated, constructed, etc., during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of production of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an unpublished manifestation that is inscribed, fabricated, constructed, etc., during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70020" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70027" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60982" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of publication of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70028">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfPublicationOf</reg:name>
+  <rdfs:label xml:lang="en">is date of publication of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfPublicationOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a manifestation that is published, released, or issued in a published form during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of publication of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is published, released, or issued in a published form during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70020" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70028" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60983" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is date of termination of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70033">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfTerminationOf</reg:name>
+  <rdfs:label xml:lang="en">is date of termination of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfTerminationOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a corporate body that is terminated or dissolved during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of termination of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body that is terminated or dissolved during a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70036" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70033" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60985" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has date of usage of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70056">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">dateOfUsageOf</reg:name>
+  <rdfs:label xml:lang="en">has date of usage of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfUsageOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a name of agent used during a timespan.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">date of usage of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A name of agent used during a timespan.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70056" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70009" />
+</rdf:Description>
+
+<!-- Property: is date of work of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70022">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfWorkOf</reg:name>
+  <rdfs:label xml:lang="en">is date of work of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfWorkOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of work of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70046" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70022" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to a work associated with an earlist timespan.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A work associated with an earlist timespan.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: is duration of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70041">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">durationOf</reg:name>
+  <rdfs:label xml:lang="en">is duration of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/durationOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an expression that has an extent of expression that is a playing time, performance time, running time, or other timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">duration of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An expression that has an extent of expression that is a playing time, performance time, running time, or other timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70002" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70041" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is duration of representative expression of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70055">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is duration of representative expression of</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">durationOfRepresentativeExpressionOf</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/durationOfRepresentativeExpressionOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to a work that has an extent of expression of a representative expression that is a playing time, performance time, running time, or other timespan.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">duration of representative expression of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that has an extent of expression of a representative expression that is a playing time, performance time, running time, or other timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
+</rdf:Description>
+
+<!-- Property: has ending -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70040">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">ending</reg:name>
+  <rdfs:label xml:lang="en">has ending</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/ending.en" />
+  <skos:definition xml:lang="en">Relates a timespan to the time at which the timespan ends.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">ending</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">The time at which a timespan ends.</rdakit:toolkitDefinition>
+  <skos:scopeNote xml:lang="en">A time may be represented at different levels of granularity by a calendrical timespan.</skos:scopeNote>
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is epoch of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70021">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">epochOf</reg:name>
+  <rdfs:label xml:lang="en">is epoch of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/epochOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">epoch of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70021" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to a work that refers to measurements of position for a body or orientation for an orbit.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that refers to measurements of position for a body or orientation for an orbit.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: is equinox of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70042">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">equinoxOf</reg:name>
+  <rdfs:label xml:lang="en">is equinox of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/equinoxOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">equinox of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70042" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to a work that uses a point of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that uses a point of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: has identifier for timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70018">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">identiferForTimespan</reg:name>
+  <rdfs:label xml:lang="en">has identifier for timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/identifierForTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an appellation of timepsan consisting of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">identifier for timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An appellation of timepsan consisting of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70016" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60919" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70018" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has name of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70017">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">nameOfTimespan</reg:name>
+  <rdfs:label xml:lang="en">has name of timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/nameOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an appellation of timespan in natural language and phrasing used in common discourse.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">name of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An appellation of timespan in natural language and phrasing used in common discourse.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70016" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70049" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70050" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60935" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70017" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has note on timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70045">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">noteOnTimespan</reg:name>
+  <rdfs:label xml:lang="en">has note on timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/noteOnTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a broad unstructured description of one or more attributes of a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">note on timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A broad unstructured description of one or more attributes of a timespan.</rdakit:toolkitDefinition>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60936" />
+  <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is part of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70034">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">partOfTimespan</reg:name>
+  <rdfs:label xml:lang="en">is part of timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/partOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a timespan that is a component of another timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">part of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A timespan that is a component of another timespan.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70008" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70034" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has part timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70035">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">partTimespan</reg:name>
+  <rdfs:label xml:lang="en">has part timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/partTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a timespan that has another timespan as a component.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">part timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A timespan that has another timespan as a component.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70008" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70035" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is period of activity of agent of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70051">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is period of activity of agent of</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">periodOfActivityOfAgentOf</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/periodOfActivityOfAgentOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an agent that is active in its primary field of endeavour during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">period of activity of agent of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An agent that is active in its primary field of endeavour during a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70005" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70044" />
+</rdf:Description>
+
+<!-- Property: is period of activity of collective agent of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70052">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is period of activity of collective agent of</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">periodOfActivityOfCollectiveAgentOf</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/periodOfActivityOfCollectiveAgentOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a collective agent that is active in its primary field of endeavour during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">period of activity of collective agent of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A collective agent that is active in its primary field of endeavour during a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70006" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70051" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70043" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70053" />
+</rdf:Description>
+
+<!-- Property: is period of activity of corporate body of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70043">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">periodOfActivityOfCorporateBodyOf</reg:name>
+  <rdfs:label xml:lang="en">is period of activity of corporate body of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/periodOfActivityOfCorporateBodyOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">period of activity of corporate body of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70036" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70043" />
+  <skos:definition xml:lang="en">Relates a timespan to a corporate body that is active in its primary field of endeavour during a timespan.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body that is active in its primary field of endeavour during a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70052" />
+</rdf:Description>
+
+<!-- Property: is period of activity of family of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70053">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is period of activity of family of</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">periodOfActivityOfFamilyOf</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/periodOfActivityOfFamilyOf.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a family that is active in its primary field of endeavour during a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">period of activity of family of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A family that is active in its primary field of endeavour during a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70037" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70052" />
+</rdf:Description>
+
+<!-- Property: is period of activity of person of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70044">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">periodOfActivityOfPersonOf</reg:name>
+  <rdfs:label xml:lang="en">is period of activity of person of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/periodOfActivityOfPersonOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">period of activity of person of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70038" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70044" />
+  <skos:definition xml:lang="en">Relates a timespan to a person who is active in their primary field of endeavour during a timespan.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A person who is active in their primary field of endeavour during a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70051" />
+</rdf:Description>
+
+<!-- Property: has preferred name of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70049">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">preferredNameOfTimespan</reg:name>
+  <rdfs:label xml:lang="en">has preferred name of timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/preferredNameOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a name of timespan that is selected for preference in a specific application or context.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">preferred name of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A name of timespan that is selected for preference in a specific application or context.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70017" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60930" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70049" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has related agent of timespan -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70005">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedAgentTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedAgentTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to an agent associated with a time-span being described.</skos:definition>
+  <reg:name xml:lang="en">relatedAgentOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedAgentOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an agent associated with a timespan.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70005" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70005" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70006" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70011" />
-  <rdfs:label xml:lang="en">has related agent (time-span)</rdfs:label>
+  <rdfs:label xml:lang="en">has related agent of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related agent of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An agent associated with a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70051" />
 </rdf:Description>
 
-<!-- Property: has related collective agent (time-span) -->
+<!-- Property: has related collective agent of timespan -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70006">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedCollectiveAgentTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedCollectiveAgentTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a collective agent associated with a time-span being described.</skos:definition>
+  <reg:name xml:lang="en">relatedCollectiveAgentOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedCollectiveAgentOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a collective agent associated with a timespan.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70006" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70005" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70012" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70013" />
-  <rdfs:label xml:lang="en">has related collective agent (time-span)</rdfs:label>
+  <rdfs:label xml:lang="en">has related collective agent of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related collective agent of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A collective agent associated with a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70052" />
 </rdf:Description>
 
-<!-- Property: has related corporate body (time-span) -->
+<!-- Property: has related corporate body of timespan -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70013">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedCorporateBodyTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedCorporateBodyTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a corporate body associated with a time-span being described.</skos:definition>
+  <reg:name xml:lang="en">relatedCorporateBodyOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedCorporateBodyOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a corporate body associated with a timespan.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70013" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70013" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70006" />
-  <rdfs:label xml:lang="en">has related corporate body (time-span)</rdfs:label>
+  <rdfs:label xml:lang="en">has related corporate body of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related corporate body of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body associated with a timespan.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70036" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
 </rdf:Description>
 
-<!-- Property: has related entity (time-span) -->
+<!-- Property: has related expression of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70002">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">relatedExpressionOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedExpressionOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an expression associated with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70002" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
+  <rdfs:label xml:lang="en">has related expression of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related expression of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An expression associated with a timespan.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70024" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70041" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has related family of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70012">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">relatedFamilyOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedFamilyOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a family associated with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70012" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70012" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70006" />
+  <rdfs:label xml:lang="en">has related family of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related family of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A family associated with a timespan.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70037" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has related item of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70004">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">relatedItemOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedItemOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an item associated with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70004" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70004" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
+  <rdfs:label xml:lang="en">has related item of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related item of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item associated with a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has related manifestation of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70003">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">relatedManifestationOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedManifestationOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a manifestation associated with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70003" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70003" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
+  <rdfs:label xml:lang="en">has related manifestation of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related manifestation of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation associated with a timespan.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70020" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has related nomen of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70009">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">relatedNomenOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedNomenOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a nomen associated with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70009" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70009" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
+  <rdfs:label xml:lang="en">has related nomen of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related nomen of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A nomen associated with a timespan.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70016" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70056" />
+</rdf:Description>
+
+<!-- Property: has related person of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70011">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">relatedPersonOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedPersonOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a person associated with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70011" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70011" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70005" />
+  <rdfs:label xml:lang="en">has related person of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related person of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person associated with a timespan.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70038" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has related place of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70007">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">relatedPlaceOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedPlaceOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a place associated with a timespan.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70007" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70007" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
+  <rdfs:label xml:lang="en">has related place of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related place of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A place associated with a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has related RDA entity of timespan -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70010">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedEntityTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to an entity associated with a time-span being described.</skos:definition>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedRDAEntityOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to an RDA entity associated with a timespan.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <reg:name xml:lang="en">relatedEntityTimespan</reg:name>
-  <rdfs:label xml:lang="en">has related entity (time-span)</rdfs:label>
+  <reg:name xml:lang="en">relatedRDAEntityOfTimespan</reg:name>
+  <rdfs:label xml:lang="en">has related RDA entity of timespan</rdfs:label>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70010" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70010" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
@@ -84,157 +929,123 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70007" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70008" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70009" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdakit:toolkitLabel xml:lang="en">related RDA entity of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An RDA entity associated with a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
 </rdf:Description>
 
-<!-- Property: has related expression (time-span) -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70002">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedExpressionTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedExpressionTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to an expression associated with a time-span being described.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70002" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70002" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
-  <rdfs:label xml:lang="en">has related expression (time-span)</rdfs:label>
-</rdf:Description>
-
-<!-- Property: has related family (time-span) -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70012">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedFamilyTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedFamilyTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a family associated with a time-span being described.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70012" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70012" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70006" />
-  <rdfs:label xml:lang="en">has related family (time-span)</rdfs:label>
-</rdf:Description>
-
-<!-- Property: has related item (time-span) -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70004">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedItemTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedItemTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to an item associated with a time-span being described.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70004" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70004" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
-  <rdfs:label xml:lang="en">has related item (time-span)</rdfs:label>
-</rdf:Description>
-
-<!-- Property: has related manifestation (time-span) -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70003">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedManifestationTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedManifestationTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a manifestation associated with a time-span being described.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70003" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70003" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
-  <rdfs:label xml:lang="en">has related manifestation (time-span)</rdfs:label>
-</rdf:Description>
-
-<!-- Property: has related nomen (time-span) -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70009">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedNomenTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedNomenTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a nomen associated with a time-span being described.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70009" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70009" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
-  <rdfs:label xml:lang="en">has related nomen (time-span)</rdfs:label>
-</rdf:Description>
-
-<!-- Property: has related person (time-span) -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70011">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedPersonTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedPersonTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a person associated with a time-span being described.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70011" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70011" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70005" />
-  <rdfs:label xml:lang="en">has related person (time-span)</rdfs:label>
-</rdf:Description>
-
-<!-- Property: has related place (time-span) -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70007">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedPlaceTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedPlaceTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a place associated with a time-span being described.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70007" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70007" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
-  <rdfs:label xml:lang="en">has related place (time-span)</rdfs:label>
-</rdf:Description>
-
-<!-- Property: has related time-span (time-span) -->
+<!-- Property: has related timespan of timespan -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70008">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedTimespanTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedTimespanTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a time-span associated with a time-span being described.</skos:definition>
+  <reg:name xml:lang="en">relatedTimespanOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedTimespanOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a timespan associated with a timespan.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70008" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70008" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
-  <rdfs:label xml:lang="en">has related time-span (time-span)</rdfs:label>
+  <rdfs:label xml:lang="en">has related timespan of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related timespan of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A timespan associated with a timespan.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70034" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70035" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
 </rdf:Description>
 
-<!-- Property: has related work (time-span) -->
+<!-- Property: has related work of timespan -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70001">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">relatedWorkTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedWorkTimespan.en" />
-  <skos:definition xml:lang="en">Relates a time-span to a work associated with a time-span being described.</skos:definition>
+  <reg:name xml:lang="en">relatedWorkOfTimespan</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedWorkOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a work associated with a timespan.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70001" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70001" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70010" />
-  <rdfs:label xml:lang="en">has related work (time-span)</rdfs:label>
+  <rdfs:label xml:lang="en">has related work of timespan</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">related work of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work associated with a timespan.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70021" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70022" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70042" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70054" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70055" />
 </rdf:Description>
 
-<!-- Property: is subject of (time-span) -->
+<!-- Property: is subject timespan of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70014">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">subjectOfTimespan</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/subjectOfTimespan.en" />
+  <reg:name xml:lang="en">subjectTimespanOf</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/subjectTimespanOf.en" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <skos:definition xml:lang="en">Relates a time-span to a work that is about a time-span being described.</skos:definition>
+  <skos:definition xml:lang="en">Relates a timespan to a work that is about a timespan.</skos:definition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70014" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70014" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/w/P10283" />
-  <rdfs:label xml:lang="en">is subject of (time-span)</rdfs:label>
+  <rdfs:label xml:lang="en">is subject timespan of</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="en">subject timespan of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is about a timespan.</rdakit:toolkitDefinition>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has variant access point for timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70048">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">variantAccessPointForTimespan</reg:name>
+  <rdfs:label xml:lang="en">has variant access point for timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/variantAccessPointForTimespan.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">variant access point for timespan</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70015" />
+  <skos:definition xml:lang="en">Relates a timespan to an access point for timespan that is not selected for preference in a specific vocabulary encoding scheme.</skos:definition>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60917" />
+  <rdakit:toolkitDefinition xml:lang="en">An access point for timespan that is not selected for preference in a specific vocabulary encoding scheme.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70048" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: has variant name of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70050">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">variantNameOfTimespan</reg:name>
+  <rdfs:label xml:lang="en">has variant name of timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/variantNameOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a name of timespan that is not selected for preference in a specific application or context.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">variant name of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A name of timespan that is not selected for preference in a specific application or context.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70017" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60926" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70050" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+</rdf:Description>
+
+<!-- Property: is year degree granted of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70046">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">yearDegreeGrantedOf</reg:name>
+  <rdfs:label xml:lang="en">is year degree granted of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/yearDegreeGrantedOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">year degree granted of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70022" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70046" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to a work that is an academic degree conferred by a granting institution or faculty during a timespan.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is an academic degree conferred by a granting institution or faculty during a timespan.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 
