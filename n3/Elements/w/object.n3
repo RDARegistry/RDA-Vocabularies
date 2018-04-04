@@ -1160,19 +1160,6 @@
         <http://rdaregistry.info/Elements/w/object/P10065> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50293> .
 
-<http://rdaregistry.info/Elements/w/object/P10310> a rdf:Property ;
-    rdfs:label "has related item of work"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/object/relatedItemOfWork.en> ;
-    reg:name "relatedItemOfWork"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/object/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10310>,
-        <http://rdaregistry.info/Elements/w/object/P10307>,
-        <http://rdaregistry.info/Elements/x/object/P00005> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40069> .
-
 <http://rdaregistry.info/Elements/w/object/P10312> a rdf:Property ;
     rdfs:label "has related person of work"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/object/relatedPersonOfWork.en> ;
@@ -1371,6 +1358,28 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10362>,
         <http://rdaregistry.info/Elements/w/object/P10324> ;
     owl:inverseOf <http://rdaregistry.info/Elements/x/object/P00027> .
+
+<http://rdaregistry.info/Elements/w/object/P10363> a rdf:Property ;
+    rdfs:label "is binding of manifestation of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/object/bindingOfManifestationOf.en> ;
+    reg:name "bindingOfManifestationOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/object/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10363>,
+        <http://rdaregistry.info/Elements/w/object/P10309> .
+
+<http://rdaregistry.info/Elements/w/object/P10364> a rdf:Property ;
+    rdfs:label "is binding of item of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/object/bindingOfItemOf.en> ;
+    reg:name "bindingOfItemOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/object/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10364>,
+        <http://rdaregistry.info/Elements/w/object/P10310> .
 
 <http://rdaregistry.info/Elements/w/object/P10002> a rdf:Property ;
     rdfs:label "has identifier for work"@en ;
@@ -3201,19 +3210,19 @@
         <http://rdaregistry.info/Elements/w/object/P10198> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10296> .
 
-<http://rdaregistry.info/Elements/w/object/P10309> a rdf:Property ;
-    rdfs:label "has related manifestation of work"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/object/P10072> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/object/relatedManifestationOfWork.en> ;
-    reg:name "relatedManifestationOfWork"@en ;
+<http://rdaregistry.info/Elements/w/object/P10310> a rdf:Property ;
+    rdfs:label "has related item of work"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/object/P10364> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/object/relatedItemOfWork.en> ;
+    reg:name "relatedItemOfWork"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/object/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10309>,
+    rdfs:range <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10310>,
         <http://rdaregistry.info/Elements/w/object/P10307>,
-        <http://rdaregistry.info/Elements/x/object/P00004> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30265> .
+        <http://rdaregistry.info/Elements/x/object/P00005> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/i/object/P40069> .
 
 <http://rdaregistry.info/Elements/w/object/P10322> a rdf:Property ;
     rdfs:label "has subject time-span"@en ;
@@ -3358,6 +3367,21 @@
         <http://rdaregistry.info/Elements/w/object/P10307>,
         <http://rdaregistry.info/Elements/x/object/P00003> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20298> .
+
+<http://rdaregistry.info/Elements/w/object/P10309> a rdf:Property ;
+    rdfs:label "has related manifestation of work"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/object/P10072>,
+        <http://rdaregistry.info/Elements/w/object/P10363> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/object/relatedManifestationOfWork.en> ;
+    reg:name "relatedManifestationOfWork"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/object/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10309>,
+        <http://rdaregistry.info/Elements/w/object/P10307>,
+        <http://rdaregistry.info/Elements/x/object/P00004> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/m/object/P30265> .
 
 <http://rdaregistry.info/Elements/w/object/P10315> a rdf:Property ;
     rdfs:label "has related collective agent of work"@en ;

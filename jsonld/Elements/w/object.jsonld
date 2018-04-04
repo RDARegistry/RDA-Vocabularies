@@ -18,15 +18,15 @@
             },
             "omr_api": "http://api.metadataregistry.org/elementsets/142",
             "omr_home": "http://metadataregistry.org/elementsets/142",
-            "count": 330,
+            "count": 332,
             "languages": [
                 {
                     "code": "en",
                     "lang": "English",
-                    "version": "v3.0.0"
+                    "version": "v3.0.1"
                 }
             ],
-            "dateOfPublication": "March 22, 2018"
+            "dateOfPublication": "April 4, 2018"
         },
         {
             "@id": "http://rdaregistry.info/Elements/w/object/P10001",
@@ -6805,7 +6805,7 @@
                     "@id": "http://rdaregistry.info/Elements/w/P10122",
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/prequel.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15425.html",
-                    "label": "is prequel"
+                    "label": "has prequel"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10156",
@@ -12449,9 +12449,9 @@
             ],
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/t/object/P70022",
-                "lexicalAlias": "http://rdaregistry.info/Elements/t/object/dateOfWorkOf.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/t/object/dateOfRepresentativeExpressionOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/33979.html",
-                "label": "is date of work of"
+                "label": "is date of representative expression of"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/w/object/",
@@ -12480,7 +12480,7 @@
                     "@id": "http://rdaregistry.info/Elements/w/P10219",
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/dateOfWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15522.html",
-                    "label": "has date of work"
+                    "label": "has date of representative expression"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10317",
@@ -13708,7 +13708,7 @@
                     "@id": "http://rdaregistry.info/Elements/w/P10243",
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/radioProgramMusicWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15618.html",
-                    "label": "is radio program music work"
+                    "label": "has radio program music work"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10238",
@@ -16836,7 +16836,7 @@
             },
             "subPropertyOf": [
                 {
-                    "@id": "",
+                    "@id": "http://rdaregistry.info/Elements/w/P10304",
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/audioProducer.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/23028.html",
                     "label": "has audio producer"
@@ -17105,6 +17105,12 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/object/manifestationOfWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/23987.html",
                     "label": "has manifestation of work"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10363",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/bindingOfManifestationOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34760.html",
+                    "label": "is binding of manifestation of"
                 }
             ],
             "inverseOf": {
@@ -17166,6 +17172,14 @@
                 "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
                 "label": "work"
             },
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10364",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/bindingOfItemOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34761.html",
+                    "label": "is binding of item of"
+                }
+            ],
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/i/object/P40069",
                 "lexicalAlias": "http://rdaregistry.info/Elements/i/object/relatedWorkOfItem.en",
@@ -18173,9 +18187,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10324",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/subjectEntity.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/subjectRDAEntity.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/33541.html",
-                    "label": "has subject entity"
+                    "label": "has subject RDA entity"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10307",
@@ -19752,6 +19766,104 @@
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/34704.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10363",
+            "@type": "Property",
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/object/",
+                "url": "http://metadataregistry.org/schema/show/id/142.html",
+                "label": "RDA Work object properties"
+            },
+            "label": {
+                "en": "is binding of manifestation of"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/object/bindingOfManifestationOf.en"
+            },
+            "name": "bindingOfManifestationOf",
+            "range": {
+                "@id": "http://rdaregistry.info/Elements/c/C10007",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
+                "label": "manifestation"
+            },
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10363",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/bindingOfManifestationOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34758.html",
+                    "label": "is binding of manifestation of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10309",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/relatedManifestationOfWork.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/25234.html",
+                    "label": "has related manifestation of work"
+                }
+            ],
+            "url": "http://metadataregistry.org/schemaprop/show/id/34760.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10364",
+            "@type": "Property",
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/object/",
+                "url": "http://metadataregistry.org/schema/show/id/142.html",
+                "label": "RDA Work object properties"
+            },
+            "label": {
+                "en": "is binding of item of"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/object/bindingOfItemOf.en"
+            },
+            "name": "bindingOfItemOf",
+            "range": {
+                "@id": "http://rdaregistry.info/Elements/c/C10003",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
+                "label": "item"
+            },
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10364",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/bindingOfItemOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34759.html",
+                    "label": "is binding of item of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10310",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/relatedItemOfWork.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/25235.html",
+                    "label": "has related item of work"
+                }
+            ],
+            "url": "http://metadataregistry.org/schemaprop/show/id/34761.html"
         }
     ]
 }
