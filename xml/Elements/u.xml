@@ -363,7 +363,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">accompaniedBy</reg:name>
   <rdfs:label xml:lang="en">is accompanied by</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource issued with a related resource, without any relationship to its content.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is issued with a related resource, without any relationship to its content.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60709" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60196" />
@@ -1258,7 +1258,7 @@
   <reg:name xml:lang="en">appellationOfEntityOf</reg:name>
   <rdfs:label xml:lang="en">is appellation of entity of</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/appellationOfEntityOf.en" />
-  <skos:definition xml:lang="en">Relates a nomen to an entity referred to by a nomen used within a given scheme or context.</skos:definition>
+  <skos:definition xml:lang="en">Relates a nomen to an entity that is referred to by a nomen used within a given scheme or context.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60909" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80016" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80028" />
@@ -4923,7 +4923,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">descriptionOf</reg:name>
   <rdfs:label xml:lang="en">is description of</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource described by an entity.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is described by an entity.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60805" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60215" />
@@ -7581,6 +7581,7 @@
   <rdfs:label xml:lang="da">har frekvens</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/frekvens.da" />
   <skos:definition xml:lang="da">Relaterer en ressource til et interval, ved hvilke en series numre eller dele udgives eller det interval der er mellem opdateringer af en integrerende ressource.</skos:definition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10368" />
 </rdf:Description>
 
 <!-- Property: has friend -->
@@ -8782,6 +8783,7 @@
   <rdfs:label xml:lang="da">har ISSN for serie</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/issnForSerie.da" />
   <skos:definition xml:lang="da">Relaterer en ressource til en unik identifikator givet til en serie af en ISSN-registreringsinstitution.</skos:definition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10366" />
 </rdf:Description>
 
 <!-- Property: has ISSN of subseries -->
@@ -8977,6 +8979,7 @@
   <rdfs:label xml:lang="da">har nøgletitel</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/nøgletitel.da" />
   <skos:definition xml:lang="da">Relaterer en ressource til et unikt navn, der gives til en ressource af et ISSN-registreringsorgan.</skos:definition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/P10367" />
 </rdf:Description>
 
 <!-- Property: has landscape architect -->
@@ -9596,13 +9599,13 @@
   <skos:definition xml:lang="da">Relaterer en agent der siges at være en kanal for kommunikation mellem den jordiske verden og en åndevereden, til en ressource.</skos:definition>
 </rdf:Description>
 
-<!-- Property: has medium of performance -->
+<!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60536">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
   <reg:name xml:lang="en">mediumOfPerformance</reg:name>
-  <rdfs:label xml:lang="en">has medium of performance</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an instrument, voice, or ensemble for which a musical resource was originally conceived.</skos:definition>
+  <rdfs:label xml:lang="en">has medium of performance (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">Relates a resource to an instrument, voice, or ensemble for which a musical resource was originally conceived. (Deprecated)</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/mediumOfPerformance.en" />
   <reg:name xml:lang="da">originalbesætning</reg:name>
@@ -9611,13 +9614,24 @@
   <skos:definition xml:lang="da">Relaterer en ressource til et instrument, en sangstemme og/eller en ensemble som en musikressource oprindeligt blev udtænkt til.</skos:definition>
 </rdf:Description>
 
+<!-- Property: has medium of performance of choreographic content -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P61044">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has medium of performance of choreographic content</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/mediumOfPerformanceOfChoreographicContent.en" />
+  <skos:definition xml:lang="en">Relates a resource to a type of performer or group of performers participating, or intended to participate, in a performance of choreographic or non-musical dramatic content.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">mediumOfPerformanceOfChoreographicContent</reg:name>
+</rdf:Description>
+
 <!-- Property: has medium of performance of musical content -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60537">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">mediumOfPerformanceOfMusicalContent</reg:name>
   <rdfs:label xml:lang="en">has medium of performance of musical content</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an instrument, voice, or ensemble used, or intended to be used, for performance of musical content.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an instrument, voice, or ensemble and the number of parts, performers and hands used, or intended to be used, to perform the musical content of a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20215" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/mediumOfPerformanceOfMusicalContent.en" />
@@ -9671,7 +9685,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">mergedToForm</reg:name>
   <rdfs:label xml:lang="en">is merged to form</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource formed from a coming together of two or more resources.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is formed from a coming together of two or more resources.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60278" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60505" />
@@ -15995,7 +16009,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">splitInto</reg:name>
   <rdfs:label xml:lang="en">is split into</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource resulting from a division of an earlier resource into two or more separate resources.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that results from a division of an earlier resource into two or more separate resources.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60278" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60276" />

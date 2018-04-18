@@ -14,13 +14,14 @@
     skos:note "Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
 
 <http://rdaregistry.info/Elements/x/datatype/P00001>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/relatedEntity.en> ;
-    reg:name "relatedEntity"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70013> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/relatedRDAEntity.en> ;
+    reg:name "relatedRDAEntity"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
-    rdfs:label "has related entity"@en ;
+    rdfs:label "has related RDA entity"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> .
 
 <http://rdaregistry.info/Elements/x/datatype/P00002>
@@ -120,7 +121,7 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
-    rdfs:label "has related time-span"@en ;
+    rdfs:label "has related timespan"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00011>, <http://rdaregistry.info/Elements/x/datatype/P00001> .
 
 <http://rdaregistry.info/Elements/x/datatype/P00012>
@@ -134,6 +135,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00012>, <http://rdaregistry.info/Elements/x/datatype/P00006> .
 
 <http://rdaregistry.info/Elements/x/datatype/P00013>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/x/datatype/P00017> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/relatedNomen.en> ;
     reg:name "relatedNomen"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -142,4 +144,148 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
     rdfs:label "has related nomen"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00013>, <http://rdaregistry.info/Elements/x/datatype/P00001> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00014>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/x/datatype/P00024>, <http://rdaregistry.info/Elements/x/datatype/P00025>, <http://rdaregistry.info/Elements/x/datatype/P00026>, <http://rdaregistry.info/Elements/x/datatype/P00027> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/subjectRDAEntityOf.en> ;
+    reg:name "subjectRDAEntityOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10013> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "is subject RDA entity of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00014> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00015>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/noteOnRDAEntity.en> ;
+    reg:name "noteOnRDAEntity"@en, "noteonRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10014> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has note on RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00015> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00016>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/x/datatype/P00020>, <http://rdaregistry.info/Elements/x/datatype/P00022> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/accessPointForRDAEntity.en> ;
+    reg:name "accessPointForRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10015> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has access point for RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00016>, <http://rdaregistry.info/Elements/x/datatype/P00017> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00017>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/x/datatype/P00018>, <http://rdaregistry.info/Elements/x/datatype/P00019> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/appellationOfRDAEntity.en> ;
+    reg:name "appellationOfRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10016> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has appellation of RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00017>, <http://rdaregistry.info/Elements/x/datatype/P00013> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00018>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/identifierForRDAEntity.en> ;
+    reg:name "identifierForRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10017> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has identifier for RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00018>, <http://rdaregistry.info/Elements/x/datatype/P00017> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00019>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/x/datatype/P00021>, <http://rdaregistry.info/Elements/x/datatype/P00023> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/nameOfRDAEntity.en> ;
+    reg:name "nameOfRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10018> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has name of RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00019>, <http://rdaregistry.info/Elements/x/datatype/P00017> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00020>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/authorizedAccessPointForRDAEntity.en> ;
+    reg:name "authorizedAccessPointForRDAEntity"@en, "authorizededAccessPointForRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10019> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has authorized access point for RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00020>, <http://rdaregistry.info/Elements/x/datatype/P00016> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00021>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/preferredNameOfRDAEntity.en> ;
+    reg:name "preferredNameOfRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10020> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has preferred name of RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00021>, <http://rdaregistry.info/Elements/x/datatype/P00019> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00022>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/variantAccessPointForRDAEntity.en> ;
+    reg:name "variantAccessPointForRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10021> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has variant access point for RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00022>, <http://rdaregistry.info/Elements/x/datatype/P00016> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00023>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/variantNameOfRDAEntity.en> ;
+    reg:name "variantNameOfRDAEntity" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10022> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "has variant name of RDA entity"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00023>, <http://rdaregistry.info/Elements/x/datatype/P00019> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00024>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/RDAEntityCritiquedIn.en> ;
+    reg:name "RDAEntityCritiquedIn" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10023> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "is RDA entity critiqued in"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00024>, <http://rdaregistry.info/Elements/x/datatype/P00014> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00025>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/RDAEntityDescribedIn.en> ;
+    reg:name "RDAEntityDescribedIn" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10024> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "is RDA entity described in"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00025>, <http://rdaregistry.info/Elements/x/datatype/P00014> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00026>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/RDAEntityEvaluatedIn.en> ;
+    reg:name "RDAEntityEvaluatedIn" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10025> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "is RDA entity evaluated in"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00026>, <http://rdaregistry.info/Elements/x/datatype/P00014> .
+
+<http://rdaregistry.info/Elements/x/datatype/P00027>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/x/datatype/RDAEntityReviewedIn.en> ;
+    reg:name "RDAEntityReviewedIn" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10026> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/x/datatype/> ;
+    rdfs:label "is RDA entity reviewed in"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00027>, <http://rdaregistry.info/Elements/x/datatype/P00014> .
 

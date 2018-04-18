@@ -9,6 +9,10 @@
     a skos:Concept ;
     skos:prefLabel "Published"@en .
 
+<http://metadataregistry.org/uri/RegStatus/1008>
+    a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
+
 <http://rdaregistry.info/Elements/e/datatype/>
     dc:title "RDA Expression datatype properties"@en ;
     skos:note "Datatype properties derived from RDA elements and relationship designators with the domain of RDA Expression. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
@@ -31,7 +35,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has identifier for expression"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20002> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20002>, <http://rdaregistry.info/Elements/e/datatype/P20311> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20003>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/otherDistinguishingCharacteristicOfExpression.en> ;
@@ -51,7 +55,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has date of capture"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20004> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20004>, <http://rdaregistry.info/Elements/e/datatype/P20214> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20005>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/award.en> ;
@@ -90,8 +94,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as motion picture (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20009> .
+    rdfs:label "is adapted as motion picture expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20009>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20010>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/noteOnChangesInContentCharacteristics.en> ;
@@ -101,9 +105,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has note on changes in content characteristics"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20010> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20010>, <http://rdaregistry.info/Elements/e/datatype/P20071> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20011>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20285>, <http://rdaregistry.info/Elements/e/datatype/P20286> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/conductor.en> ;
     reg:name "conductor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -111,9 +116,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has conductor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20011> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20011>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20012>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20070> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/actor.en> ;
     reg:name "actor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -121,7 +127,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has actor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20012> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20012>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20013>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/onScreenPresenter.en> ;
@@ -131,7 +137,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has on-screen presenter"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20013> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20013>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20014>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/dancer.en> ;
@@ -141,7 +147,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has dancer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20014> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20014>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20015>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/instructor.en> ;
@@ -151,7 +157,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has instructor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20015> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20015>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20016>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/host.en> ;
@@ -161,7 +167,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has host"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20016> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20016>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20017>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/moderator.en> ;
@@ -171,7 +177,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has moderator"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20017> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20017>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20018>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/puppeteer.en> ;
@@ -181,7 +187,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has puppeteer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20018> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20018>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20019>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/panelist.en> ;
@@ -191,7 +197,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has panelist"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20019> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20019>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20020>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/instrumentalist.en> ;
@@ -201,7 +207,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has instrumentalist"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20020> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20020>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20021>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/commentator.en> ;
@@ -211,7 +217,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has commentator"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20021> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20021>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20022>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/narrator.en> ;
@@ -221,7 +227,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has narrator"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20022> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20022>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20023>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/storyteller.en> ;
@@ -231,7 +237,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has storyteller"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20023> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20023>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20024>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/speaker.en> ;
@@ -241,7 +247,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has speaker"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20024> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20024>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20025>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/singer.en> ;
@@ -251,7 +257,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has singer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20025> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20025>, <http://rdaregistry.info/Elements/e/datatype/P20039> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20026>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/composerExpression.en> ;
@@ -260,8 +266,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has composer (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20026> .
+    rdfs:label "has composer of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20026>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20027>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/surveyor.en> ;
@@ -271,7 +277,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has surveyor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20027> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20027>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20028>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/animator.en> ;
@@ -281,7 +287,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has animator"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20028> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20028>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20029>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/arrangerOfMusic.en> ;
@@ -291,9 +297,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has arranger of music"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20029> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20029>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20030>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20068> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfAddedText.en> ;
     reg:name "writerOfAddedText"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -301,7 +308,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of added text"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20030> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20030>, <http://rdaregistry.info/Elements/e/datatype/P20046> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20031>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/stageDirector.en> ;
@@ -311,7 +318,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has stage director"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20031> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20031>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20032>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/interviewerExpression.en> ;
@@ -320,8 +327,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has interviewer (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20032> .
+    rdfs:label "has interviewer of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20032>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20033>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/draftsman.en> ;
@@ -331,7 +338,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has draftsman"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20033> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20033>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20034>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/transcriber.en> ;
@@ -341,7 +348,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has transcriber"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20034> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20034>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20035>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicalDirector.en> ;
@@ -351,7 +358,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has musical director"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20035> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20035>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20036>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/costumeDesigner.en> ;
@@ -361,7 +368,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has costume designer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20036> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20036>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20037>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/translator.en> ;
@@ -371,7 +378,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has translator"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20037> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20037>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20038>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/artDirector.en> ;
@@ -381,9 +388,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has art director"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20038> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20038>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20039>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20011>, <http://rdaregistry.info/Elements/e/datatype/P20012>, <http://rdaregistry.info/Elements/e/datatype/P20013>, <http://rdaregistry.info/Elements/e/datatype/P20014>, <http://rdaregistry.info/Elements/e/datatype/P20015>, <http://rdaregistry.info/Elements/e/datatype/P20016>, <http://rdaregistry.info/Elements/e/datatype/P20017>, <http://rdaregistry.info/Elements/e/datatype/P20018>, <http://rdaregistry.info/Elements/e/datatype/P20019>, <http://rdaregistry.info/Elements/e/datatype/P20020>, <http://rdaregistry.info/Elements/e/datatype/P20021>, <http://rdaregistry.info/Elements/e/datatype/P20022>, <http://rdaregistry.info/Elements/e/datatype/P20023>, <http://rdaregistry.info/Elements/e/datatype/P20024>, <http://rdaregistry.info/Elements/e/datatype/P20025> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/performer.en> ;
     reg:name "performer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -391,7 +399,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has performer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20039> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20039>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20040>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/courtReporter.en> ;
@@ -401,7 +409,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has court reporter"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20040> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20040>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20041>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfPreface.en> ;
@@ -411,7 +419,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of preface"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20041> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20041>, <http://rdaregistry.info/Elements/e/datatype/P20046> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20042>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/cartographerExpression.en> ;
@@ -420,8 +428,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has cartographer (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20042> .
+    rdfs:label "has cartographer of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20042>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20043>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/choreographerExpression.en> ;
@@ -430,8 +438,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has choreographer (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20043> .
+    rdfs:label "has choreographer of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20043>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20044>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfAddedCommentary.en> ;
@@ -441,7 +449,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of added commentary"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20044> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20044>, <http://rdaregistry.info/Elements/e/datatype/P20046> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20045>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfIntroduction.en> ;
@@ -451,9 +459,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of introduction"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20045> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20045>, <http://rdaregistry.info/Elements/e/datatype/P20046> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20046>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20030>, <http://rdaregistry.info/Elements/e/datatype/P20041>, <http://rdaregistry.info/Elements/e/datatype/P20044>, <http://rdaregistry.info/Elements/e/datatype/P20045>, <http://rdaregistry.info/Elements/e/datatype/P20237>, <http://rdaregistry.info/Elements/e/datatype/P20238>, <http://rdaregistry.info/Elements/e/datatype/P20275> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfSupplementaryTextualContent.en> ;
     reg:name "writerOfSupplementaryTextualContent"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -461,7 +470,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of supplementary textual content"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20046> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20046>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20047>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/intervieweeExpression.en> ;
@@ -470,8 +479,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has interviewee (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20047> .
+    rdfs:label "has interviewee of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20047>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20048>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/editor.en> ;
@@ -481,7 +490,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has editor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20048> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20048>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20049>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/abridger.en> ;
@@ -491,7 +500,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has abridger"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20049> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20049>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20050>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/recordingEngineer.en> ;
@@ -501,9 +510,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has recording engineer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20050> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20050>, <http://rdaregistry.info/Elements/e/datatype/P20292> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20051>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20259>, <http://rdaregistry.info/Elements/e/datatype/P20288> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/illustrator.en> ;
     reg:name "illustrator"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -511,7 +521,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has illustrator"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20051> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20051>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20052>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/recordist.en> ;
@@ -521,9 +531,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has recordist"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20052> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20052>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20053>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20026>, <http://rdaregistry.info/Elements/e/datatype/P20027>, <http://rdaregistry.info/Elements/e/datatype/P20028>, <http://rdaregistry.info/Elements/e/datatype/P20029>, <http://rdaregistry.info/Elements/e/datatype/P20031>, <http://rdaregistry.info/Elements/e/datatype/P20032>, <http://rdaregistry.info/Elements/e/datatype/P20033>, <http://rdaregistry.info/Elements/e/datatype/P20034>, <http://rdaregistry.info/Elements/e/datatype/P20035>, <http://rdaregistry.info/Elements/e/datatype/P20036>, <http://rdaregistry.info/Elements/e/datatype/P20037>, <http://rdaregistry.info/Elements/e/datatype/P20038>, <http://rdaregistry.info/Elements/e/datatype/P20039>, <http://rdaregistry.info/Elements/e/datatype/P20040>, <http://rdaregistry.info/Elements/e/datatype/P20042>, <http://rdaregistry.info/Elements/e/datatype/P20043>, <http://rdaregistry.info/Elements/e/datatype/P20046>, <http://rdaregistry.info/Elements/e/datatype/P20047>, <http://rdaregistry.info/Elements/e/datatype/P20048>, <http://rdaregistry.info/Elements/e/datatype/P20049>, <http://rdaregistry.info/Elements/e/datatype/P20051>, <http://rdaregistry.info/Elements/e/datatype/P20052>, <http://rdaregistry.info/Elements/e/datatype/P20054>, <http://rdaregistry.info/Elements/e/datatype/P20055>, <http://rdaregistry.info/Elements/e/datatype/P20056>, <http://rdaregistry.info/Elements/e/datatype/P20058>, <http://rdaregistry.info/Elements/e/datatype/P20257>, <http://rdaregistry.info/Elements/e/datatype/P20258>, <http://rdaregistry.info/Elements/e/datatype/P20276>, <http://rdaregistry.info/Elements/e/datatype/P20277>, <http://rdaregistry.info/Elements/e/datatype/P20279>, <http://rdaregistry.info/Elements/e/datatype/P20280>, <http://rdaregistry.info/Elements/e/datatype/P20283>, <http://rdaregistry.info/Elements/e/datatype/P20284>, <http://rdaregistry.info/Elements/e/datatype/P20287>, <http://rdaregistry.info/Elements/e/datatype/P20289>, <http://rdaregistry.info/Elements/e/datatype/P20292>, <http://rdaregistry.info/Elements/e/datatype/P20294>, <http://rdaregistry.info/Elements/e/datatype/P20295>, <http://rdaregistry.info/Elements/e/datatype/P20296> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/contributor.en> ;
     reg:name "contributor"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -531,7 +542,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has contributor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20053> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20053>, <http://rdaregistry.info/Elements/e/datatype/P20301> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20054>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/presenter.en> ;
@@ -541,7 +552,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has presenter"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20054> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20054>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20055>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/editorOfMovingImageWork.en> ;
@@ -551,7 +562,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has editor of moving image work"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20055> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20055>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20056>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/productionDesigner.en> ;
@@ -561,7 +572,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has production designer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20056> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20056>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20058>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/minuteTaker.en> ;
@@ -571,7 +582,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has minute taker"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20058> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20058>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20059>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/manifestationOfExpression.en> ;
@@ -581,7 +592,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has manifestation of expression"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20059> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20059>, <http://rdaregistry.info/Elements/e/datatype/P20299> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20060>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsRadioProgramExpression.en> ;
@@ -590,8 +601,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as radio program (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20060> .
+    rdfs:label "is adapted as radio program expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20060>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20061>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/formOfTactileNotation.en> ;
@@ -601,9 +612,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has form of tactile notation"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20061> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20061>, <http://rdaregistry.info/Elements/e/datatype/P20062> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20062>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20061>, <http://rdaregistry.info/Elements/e/datatype/P20063>, <http://rdaregistry.info/Elements/e/datatype/P20064>, <http://rdaregistry.info/Elements/e/datatype/P20065> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/formOfNotation.en> ;
     reg:name "formOfNotation"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -621,7 +633,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has form of notated movement"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20063> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20063>, <http://rdaregistry.info/Elements/e/datatype/P20062> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20064>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/formOfMusicalNotation.en> ;
@@ -631,7 +643,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has form of musical notation"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20064> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20064>, <http://rdaregistry.info/Elements/e/datatype/P20062> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20065>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/script.en> ;
@@ -641,7 +653,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has script"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20065> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20065>, <http://rdaregistry.info/Elements/e/datatype/P20062> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20066>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsTelevisionProgramExpression.en> ;
@@ -650,8 +662,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as television program (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20066> .
+    rdfs:label "is adapted as television program expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20066>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20067>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsVideoExpression.en> ;
@@ -660,8 +672,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as video (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20067> .
+    rdfs:label "is adapted as video expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20067>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20068>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfAddedLyrics.en> ;
@@ -671,7 +683,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of added lyrics"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20068> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20068>, <http://rdaregistry.info/Elements/e/datatype/P20030> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20069>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/summarizationOfContent.en> ;
@@ -691,9 +703,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has voice actor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20070> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20070>, <http://rdaregistry.info/Elements/e/datatype/P20012> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20071>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20010>, <http://rdaregistry.info/Elements/e/datatype/P20309> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/noteOnExpression.en> ;
     reg:name "noteOnExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -701,7 +714,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has note on expression"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20071> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20071>, <http://rdaregistry.info/Elements/x/P00015> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20073>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/dramatizedAsExpression.en> ;
@@ -710,8 +723,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is dramatized as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20073> .
+    rdfs:label "is dramatized as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20073>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20074>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/containedInExpression.en> ;
@@ -720,8 +733,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is contained in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20074> .
+    rdfs:label "is contained in expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20074>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20075>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/replacedInPartByExpression.en> ;
@@ -730,8 +743,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is replaced in part by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20075> .
+    rdfs:label "is replaced in part by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20075>, <http://rdaregistry.info/Elements/e/datatype/P20169> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20076>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/replacedByExpression.en> ;
@@ -740,8 +753,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is replaced by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20076> .
+    rdfs:label "is replaced by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20076>, <http://rdaregistry.info/Elements/e/datatype/P20169> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20077>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedInVerseAsExpression.en> ;
@@ -750,8 +763,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted in verse as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20077> .
+    rdfs:label "is adapted in verse as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20077>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20078>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/dubbedVersionOf.en> ;
@@ -761,7 +774,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is dubbed version of"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20078> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20078>, <http://rdaregistry.info/Elements/e/datatype/P20141> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20079>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/dubbedVersion.en> ;
@@ -770,7 +783,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has dubbed version"@en .
+    rdfs:label "has dubbed version"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20171> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20080>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/cadenzaExpression.en> ;
@@ -779,7 +793,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has cadenza (expression)"@en .
+    rdfs:label "has cadenza expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20081>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/variationsBasedOnExpression.en> ;
@@ -788,8 +803,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is variations based on (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20081> .
+    rdfs:label "is variations based on expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20081>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20082>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/modifiedByVariationAsExpression.en> ;
@@ -798,8 +813,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is modified by variation as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20082> .
+    rdfs:label "is modified by variation as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20082>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20083>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/cadenzaComposedForExpression.en> ;
@@ -808,8 +823,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is cadenza composed for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20083> .
+    rdfs:label "is cadenza composed for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20083>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20084>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/librettoForExpression.en> ;
@@ -818,8 +833,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is libretto for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20084> .
+    rdfs:label "is libretto for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20084>, <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20085>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/incidentalMusicExpression.en> ;
@@ -828,7 +843,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has incidental music (expression)"@en .
+    rdfs:label "has incidental music expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20243> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20086>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/remadeAsExpression.en> ;
@@ -837,8 +853,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is remade as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20086> .
+    rdfs:label "is remade as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20086>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20087>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/setToMusicAsExpression.en> ;
@@ -847,8 +863,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is set to music as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20087> .
+    rdfs:label "is set to music as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20087>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20088>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsNovelExpression.en> ;
@@ -857,8 +873,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as novel (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20088> .
+    rdfs:label "is adapted as novel expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20088>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20089>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/appendixToExpression.en> ;
@@ -867,8 +883,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is appendix to (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20089> .
+    rdfs:label "is appendix to expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20089>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20090>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/abstractedInExpression.en> ;
@@ -877,8 +893,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is abstracted in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20090> .
+    rdfs:label "is abstracted in expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20090>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20091>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/indexedInExpression.en> ;
@@ -887,8 +903,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is indexed in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20091> .
+    rdfs:label "is indexed in expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20091>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20092>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsChoreographyExpression.en> ;
@@ -897,8 +913,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as choreography (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20092> .
+    rdfs:label "is adapted as choreography expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20092>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20093>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/errataExpression.en> ;
@@ -907,7 +923,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has errata (expression)"@en .
+    rdfs:label "has errata expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20094>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/illustrationsExpression.en> ;
@@ -916,7 +933,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has illustrations (expression)"@en .
+    rdfs:label "has illustrations expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20095>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsMotionPictureScreenplayExpression.en> ;
@@ -925,18 +943,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as motion picture screenplay (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20095> .
+    rdfs:label "is adapted as motion picture screenplay expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20095>, <http://rdaregistry.info/Elements/e/datatype/P20096> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20096>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20095>, <http://rdaregistry.info/Elements/e/datatype/P20097>, <http://rdaregistry.info/Elements/e/datatype/P20098> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsScreenplayExpression.en> ;
     reg:name "adaptedAsScreenplayExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as screenplay (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20096> .
+    rdfs:label "is adapted as screenplay expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20096>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20097>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsTelevisionScreenplayExpression.en> ;
@@ -945,8 +964,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as television screenplay (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20097> .
+    rdfs:label "is adapted as television screenplay expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20097>, <http://rdaregistry.info/Elements/e/datatype/P20096> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20098>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsVideoScreenplayExpression.en> ;
@@ -955,8 +974,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as video screenplay (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20098> .
+    rdfs:label "is adapted as video screenplay expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20098>, <http://rdaregistry.info/Elements/e/datatype/P20096> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20099>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsRadioScriptExpression.en> ;
@@ -965,18 +984,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as radio script (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20099> .
+    rdfs:label "is adapted as radio script expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20099>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20100>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20084>, <http://rdaregistry.info/Elements/e/datatype/P20102>, <http://rdaregistry.info/Elements/e/datatype/P20157>, <http://rdaregistry.info/Elements/e/datatype/P20160>, <http://rdaregistry.info/Elements/e/datatype/P20163>, <http://rdaregistry.info/Elements/e/datatype/P20176>, <http://rdaregistry.info/Elements/e/datatype/P20243>, <http://rdaregistry.info/Elements/e/datatype/P20244>, <http://rdaregistry.info/Elements/e/datatype/P20253>, <http://rdaregistry.info/Elements/e/datatype/P20254> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/complementedByExpression.en> ;
     reg:name "complementedByExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is complemented by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20100> .
+    rdfs:label "is complemented by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20100>, <http://rdaregistry.info/Elements/e/datatype/P20232> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20101>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/continuedInPartByExpression.en> ;
@@ -985,18 +1005,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is continued in part by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20101> .
+    rdfs:label "is continued in part by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20101>, <http://rdaregistry.info/Elements/e/datatype/P20169> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20102>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20173>, <http://rdaregistry.info/Elements/e/datatype/P20174>, <http://rdaregistry.info/Elements/e/datatype/P20175> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/screenplayForExpression.en> ;
     reg:name "screenplayForExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is screenplay for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20102> .
+    rdfs:label "is screenplay for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20102>, <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20103>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/incidentalMusicForExpression.en> ;
@@ -1005,8 +1026,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is incidental music for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20103> .
+    rdfs:label "is incidental music for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20103>, <http://rdaregistry.info/Elements/e/datatype/P20244> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20104>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/abstractedAsExpression.en> ;
@@ -1015,18 +1036,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is abstracted as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20104> .
+    rdfs:label "is abstracted as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20104>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20105>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20080>, <http://rdaregistry.info/Elements/e/datatype/P20093>, <http://rdaregistry.info/Elements/e/datatype/P20094>, <http://rdaregistry.info/Elements/e/datatype/P20107>, <http://rdaregistry.info/Elements/e/datatype/P20108>, <http://rdaregistry.info/Elements/e/datatype/P20109>, <http://rdaregistry.info/Elements/e/datatype/P20118>, <http://rdaregistry.info/Elements/e/datatype/P20120>, <http://rdaregistry.info/Elements/e/datatype/P20155>, <http://rdaregistry.info/Elements/e/datatype/P20156>, <http://rdaregistry.info/Elements/e/datatype/P20172> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/augmentedByExpression.en> ;
     reg:name "augmentedByExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is augmented by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20105> .
+    rdfs:label "is augmented by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20105>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20106>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/summarizedAsExpression.en> ;
@@ -1035,8 +1057,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is summarized as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20106> .
+    rdfs:label "is summarized as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20106>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20107>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/catalogueExpression.en> ;
@@ -1045,7 +1067,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has catalogue (expression)"@en .
+    rdfs:label "has catalogue expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20108>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/concordanceExpression.en> ;
@@ -1054,7 +1077,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has concordance (expression)"@en .
+    rdfs:label "has concordance expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20109>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/addendaExpression.en> ;
@@ -1063,7 +1087,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has addenda (expression)"@en .
+    rdfs:label "has addenda expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20110>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsLibrettoExpression.en> ;
@@ -1072,18 +1097,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as libretto (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20110> .
+    rdfs:label "is adapted as libretto expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20110>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20114>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20142> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/imitatedAsExpression.en> ;
     reg:name "imitatedAsExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is imitated as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20114> .
+    rdfs:label "is imitated as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20114>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20115>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/expandedAsExpression.en> ;
@@ -1092,8 +1118,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is expanded as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20115> .
+    rdfs:label "is expanded as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20115>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20118>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/appendixExpression.en> ;
@@ -1102,7 +1128,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has appendix (expression)"@en .
+    rdfs:label "has appendix expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20119>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/freelyTranslatedAsExpression.en> ;
@@ -1111,8 +1138,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is freely translated as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20119> .
+    rdfs:label "is freely translated as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20119>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20120>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/guideExpression.en> ;
@@ -1121,7 +1148,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has guide (expression)"@en .
+    rdfs:label "has guide expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20121>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/abridgementOfExpression.en> ;
@@ -1130,8 +1158,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is abridgement of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20121> .
+    rdfs:label "is abridgement of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20121>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20122>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/abstractOfExpression.en> ;
@@ -1140,8 +1168,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is abstract of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20122> .
+    rdfs:label "is abstract of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20122>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20123>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/dramatizationOfExpression.en> ;
@@ -1150,8 +1178,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is dramatization of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20123> .
+    rdfs:label "is dramatization of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20123>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20124>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/verseAdaptationOfExpression.en> ;
@@ -1160,8 +1188,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is verse adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20124> .
+    rdfs:label "is verse adaptation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20124>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20125>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/motionPictureAdaptationOfExpression.en> ;
@@ -1170,8 +1198,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is motion picture adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20125> .
+    rdfs:label "is motion picture adaptation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20125>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20126>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/novelizationOfExpression.en> ;
@@ -1180,8 +1208,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is novelization of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20126> .
+    rdfs:label "is novelization of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20126>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20127>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/radioAdaptationOfExpression.en> ;
@@ -1190,8 +1218,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is radio adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20127> .
+    rdfs:label "is radio adaptation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20127>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20128>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/televisionAdaptationOfExpression.en> ;
@@ -1200,18 +1228,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is television adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20128> .
+    rdfs:label "is television adaptation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20128>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20129>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20130>, <http://rdaregistry.info/Elements/e/datatype/P20131>, <http://rdaregistry.info/Elements/e/datatype/P20132> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/screenplayBasedOnExpression.en> ;
     reg:name "screenplayBasedOnExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is screenplay based on (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20129> .
+    rdfs:label "is screenplay based on expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20129>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20130>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/motionPictureScreenplayBasedOnExpression.en> ;
@@ -1220,8 +1249,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is motion picture screenplay based on (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20130> .
+    rdfs:label "is motion picture screenplay based on expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20130>, <http://rdaregistry.info/Elements/e/datatype/P20129> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20131>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/televisionScreenplayBasedOnExpression.en> ;
@@ -1230,8 +1259,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is television screenplay based on (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20131> .
+    rdfs:label "is television screenplay based on expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20131>, <http://rdaregistry.info/Elements/e/datatype/P20129> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20132>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/videoScreenplayBasedOnExpression.en> ;
@@ -1240,8 +1269,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is video screenplay based on (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20132> .
+    rdfs:label "is video screenplay based on expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20132>, <http://rdaregistry.info/Elements/e/datatype/P20129> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20133>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/radioScriptBasedOnExpression.en> ;
@@ -1250,8 +1279,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is radio script based on (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20133> .
+    rdfs:label "is radio script based on expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20133>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20134>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/videoAdaptationOfExpression.en> ;
@@ -1260,8 +1289,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is video adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20134> .
+    rdfs:label "is video adaptation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20134>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20135>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/digestOfExpression.en> ;
@@ -1270,8 +1299,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is digest of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20135> .
+    rdfs:label "is digest of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20135>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20137>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/absorptionOfExpression.en> ;
@@ -1280,8 +1309,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is absorption of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20137> .
+    rdfs:label "is absorption of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20137>, <http://rdaregistry.info/Elements/e/datatype/P20154> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20138>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/absorptionInPartOfExpression.en> ;
@@ -1290,8 +1319,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is absorption in part of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20138> .
+    rdfs:label "is absorption in part of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20138>, <http://rdaregistry.info/Elements/e/datatype/P20154> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20139>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/arrangementOf.en> ;
@@ -1301,7 +1330,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is arrangement of"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20139> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20139>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20140>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/freeTranslationOfExpression.en> ;
@@ -1310,10 +1339,11 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is free translation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20140> .
+    rdfs:label "is free translation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20140>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20141>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20078> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/translationOf.en> ;
     reg:name "translationOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1321,7 +1351,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is translation of"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20141> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20141>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20142>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/parodiedAsExpression.en> ;
@@ -1330,8 +1360,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is parodied as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20142> .
+    rdfs:label "is parodied as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20142>, <http://rdaregistry.info/Elements/e/datatype/P20114> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20143>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/absorbedByExpression.en> ;
@@ -1340,8 +1370,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is absorbed by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20143> .
+    rdfs:label "is absorbed by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20143>, <http://rdaregistry.info/Elements/e/datatype/P20169> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20144>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/absorbedInPartByExpression.en> ;
@@ -1350,8 +1380,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is absorbed in part by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20144> .
+    rdfs:label "is absorbed in part by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20144>, <http://rdaregistry.info/Elements/e/datatype/P20169> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20145>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/containerOfExpression.en> ;
@@ -1360,8 +1390,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is container of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20145> .
+    rdfs:label "is container of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20145>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20146>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/errataToExpression.en> ;
@@ -1370,8 +1400,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is errata to (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20146> .
+    rdfs:label "is errata to expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20146>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20147>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/guideToExpression.en> ;
@@ -1380,8 +1410,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is guide to (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20147> .
+    rdfs:label "is guide to expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20147>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20148>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/illustrationsForExpression.en> ;
@@ -1390,8 +1420,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is illustrations for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20148> .
+    rdfs:label "is illustrations for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20148>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20149>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/continuationOfExpression.en> ;
@@ -1400,8 +1430,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is continuation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20149> .
+    rdfs:label "is continuation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20149>, <http://rdaregistry.info/Elements/e/datatype/P20154> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20151>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/supplementToExpression.en> ;
@@ -1410,38 +1440,41 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is supplement to (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20151> .
+    rdfs:label "is supplement to expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20151>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20152>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20123>, <http://rdaregistry.info/Elements/e/datatype/P20124>, <http://rdaregistry.info/Elements/e/datatype/P20125>, <http://rdaregistry.info/Elements/e/datatype/P20126>, <http://rdaregistry.info/Elements/e/datatype/P20127>, <http://rdaregistry.info/Elements/e/datatype/P20128>, <http://rdaregistry.info/Elements/e/datatype/P20129>, <http://rdaregistry.info/Elements/e/datatype/P20133>, <http://rdaregistry.info/Elements/e/datatype/P20134>, <http://rdaregistry.info/Elements/e/datatype/P20183>, <http://rdaregistry.info/Elements/e/datatype/P20190>, <http://rdaregistry.info/Elements/e/datatype/P20239>, <http://rdaregistry.info/Elements/e/datatype/P20240>, <http://rdaregistry.info/Elements/e/datatype/P20256>, <http://rdaregistry.info/Elements/e/datatype/P20281> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptationOfExpression.en> ;
     reg:name "adaptationOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20152> .
+    rdfs:label "is adaptation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20152>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20153>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20009>, <http://rdaregistry.info/Elements/e/datatype/P20060>, <http://rdaregistry.info/Elements/e/datatype/P20066>, <http://rdaregistry.info/Elements/e/datatype/P20067>, <http://rdaregistry.info/Elements/e/datatype/P20073>, <http://rdaregistry.info/Elements/e/datatype/P20077>, <http://rdaregistry.info/Elements/e/datatype/P20088>, <http://rdaregistry.info/Elements/e/datatype/P20092>, <http://rdaregistry.info/Elements/e/datatype/P20096>, <http://rdaregistry.info/Elements/e/datatype/P20099>, <http://rdaregistry.info/Elements/e/datatype/P20110>, <http://rdaregistry.info/Elements/e/datatype/P20241>, <http://rdaregistry.info/Elements/e/datatype/P20242>, <http://rdaregistry.info/Elements/e/datatype/P20255>, <http://rdaregistry.info/Elements/e/datatype/P20282> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsExpression.en> ;
     reg:name "adaptedAsExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is adapted as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20153> .
+    rdfs:label "is adapted as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20153>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20154>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20137>, <http://rdaregistry.info/Elements/e/datatype/P20138>, <http://rdaregistry.info/Elements/e/datatype/P20149>, <http://rdaregistry.info/Elements/e/datatype/P20167>, <http://rdaregistry.info/Elements/e/datatype/P20168>, <http://rdaregistry.info/Elements/e/datatype/P20198>, <http://rdaregistry.info/Elements/e/datatype/P20199>, <http://rdaregistry.info/Elements/e/datatype/P20201> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/precededByExpression.en> ;
     reg:name "precededByExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is preceded by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20154> .
+    rdfs:label "is preceded by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20154>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20155>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/findingAidExpression.en> ;
@@ -1450,7 +1483,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has finding aid (expression)"@en .
+    rdfs:label "has finding aid expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20156>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/indexExpression.en> ;
@@ -1459,16 +1493,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has index (expression)"@en .
+    rdfs:label "has index expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20157>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20158>, <http://rdaregistry.info/Elements/e/datatype/P20161>, <http://rdaregistry.info/Elements/e/datatype/P20162> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/screenplayExpression.en> ;
     reg:name "screenplayExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has screenplay (expression)"@en .
+    rdfs:label "has screenplay expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20158>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/motionPictureScreenplayExpression.en> ;
@@ -1477,7 +1514,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has motion picture screenplay (expression)"@en .
+    rdfs:label "has motion picture screenplay expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20157> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20159>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicalSettingOfExpression.en> ;
@@ -1486,8 +1524,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is musical setting of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20159> .
+    rdfs:label "is musical setting of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20159>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20160>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/radioScriptExpression.en> ;
@@ -1496,7 +1534,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has radio script (expression)"@en .
+    rdfs:label "has radio script expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20161>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/televisionScreenplayExpression.en> ;
@@ -1505,7 +1544,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has television screenplay (expression)"@en .
+    rdfs:label "has television screenplay expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20157> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20162>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/videoScreenplayExpression.en> ;
@@ -1514,7 +1554,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has video screenplay (expression)"@en .
+    rdfs:label "has video screenplay expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20157> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20163>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/librettoExpression.en> ;
@@ -1523,7 +1564,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has libretto (expression)"@en .
+    rdfs:label "has libretto expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20164>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/paraphrasedAsExpression.en> ;
@@ -1532,8 +1574,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is paraphrased as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20164> .
+    rdfs:label "is paraphrased as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20164>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20165>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/arrangedAs.en> ;
@@ -1543,7 +1585,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is arranged as"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20165> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20165>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20166>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/abridgedAsExpression.en> ;
@@ -1552,8 +1594,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is abridged as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20166> .
+    rdfs:label "is abridged as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20166>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20167>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/continuationInPartOfExpression.en> ;
@@ -1562,8 +1604,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is continuation in part of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20167> .
+    rdfs:label "is continuation in part of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20167>, <http://rdaregistry.info/Elements/e/datatype/P20154> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20168>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/separatedFromExpression.en> ;
@@ -1572,18 +1614,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is separated from (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20168> .
+    rdfs:label "is separated from expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20168>, <http://rdaregistry.info/Elements/e/datatype/P20154> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20169>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20075>, <http://rdaregistry.info/Elements/e/datatype/P20076>, <http://rdaregistry.info/Elements/e/datatype/P20101>, <http://rdaregistry.info/Elements/e/datatype/P20143>, <http://rdaregistry.info/Elements/e/datatype/P20144>, <http://rdaregistry.info/Elements/e/datatype/P20191>, <http://rdaregistry.info/Elements/e/datatype/P20200>, <http://rdaregistry.info/Elements/e/datatype/P20212> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/succeededByExpression.en> ;
     reg:name "succeededByExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is succeeded by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20169> .
+    rdfs:label "is succeeded by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20169>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20170>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/digestedAsExpression.en> ;
@@ -1592,10 +1635,11 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is digested as (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20170> .
+    rdfs:label "is digested as expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20170>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20171>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20079> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/translatedAs.en> ;
     reg:name "translatedAs"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1603,7 +1647,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is translated as"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20171> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20171>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20172>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/supplementExpression.en> ;
@@ -1612,7 +1656,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has supplement (expression)"@en .
+    rdfs:label "has supplement expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20105> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20173>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/screenplayForMotionPictureExpression.en> ;
@@ -1621,8 +1666,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is screenplay for motion picture (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20173> .
+    rdfs:label "is screenplay for motion picture expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20173>, <http://rdaregistry.info/Elements/e/datatype/P20102> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20174>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/screenplayForTelevisionProgramExpression.en> ;
@@ -1631,8 +1676,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is screenplay for television program (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20174> .
+    rdfs:label "is screenplay for television program expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20174>, <http://rdaregistry.info/Elements/e/datatype/P20102> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20175>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/screenplayForVideoExpression.en> ;
@@ -1641,8 +1686,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is screenplay for video (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20175> .
+    rdfs:label "is screenplay for video expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20175>, <http://rdaregistry.info/Elements/e/datatype/P20102> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20176>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/scriptForRadioProgramExpression.en> ;
@@ -1651,8 +1696,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is script for radio program (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20176> .
+    rdfs:label "is script for radio program expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20176>, <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20177>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/addendaToExpression.en> ;
@@ -1661,8 +1706,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is addenda to (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20177> .
+    rdfs:label "is addenda to expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20177>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20179>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/summaryOfExpression.en> ;
@@ -1671,8 +1716,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is summary of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20179> .
+    rdfs:label "is summary of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20179>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20180>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/catalogueOfExpression.en> ;
@@ -1681,8 +1726,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is catalogue of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20180> .
+    rdfs:label "is catalogue of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20180>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20181>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/concordanceToExpression.en> ;
@@ -1691,8 +1736,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is concordance to (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20181> .
+    rdfs:label "is concordance to expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20181>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20183>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/choreographicAdaptationOfExpression.en> ;
@@ -1701,8 +1746,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is choreographic adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20183> .
+    rdfs:label "is choreographic adaptation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20183>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20184>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/expandedVersionOfExpression.en> ;
@@ -1711,8 +1756,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is expanded version of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20184> .
+    rdfs:label "is expanded version of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20184>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20185>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/remakeOfExpression.en> ;
@@ -1721,8 +1766,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is remake of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20185> .
+    rdfs:label "is remake of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20185>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20186>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/paraphraseOfExpression.en> ;
@@ -1731,8 +1776,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is paraphrase of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20186> .
+    rdfs:label "is paraphrase of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20186>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20188>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/indexToExpression.en> ;
@@ -1741,8 +1786,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is index to (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20188> .
+    rdfs:label "is index to expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20188>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20189>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/revisionOf.en> ;
@@ -1752,7 +1797,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is revision of"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20189> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20189>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20190>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/librettoBasedOnExpression.en> ;
@@ -1761,8 +1806,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is libretto based on (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20190> .
+    rdfs:label "is libretto based on expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20190>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20191>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/continuedByExpression.en> ;
@@ -1771,18 +1816,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is continued by (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20191> .
+    rdfs:label "is continued by expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20191>, <http://rdaregistry.info/Elements/e/datatype/P20169> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20192>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20083>, <http://rdaregistry.info/Elements/e/datatype/P20089>, <http://rdaregistry.info/Elements/e/datatype/P20146>, <http://rdaregistry.info/Elements/e/datatype/P20147>, <http://rdaregistry.info/Elements/e/datatype/P20148>, <http://rdaregistry.info/Elements/e/datatype/P20151>, <http://rdaregistry.info/Elements/e/datatype/P20177>, <http://rdaregistry.info/Elements/e/datatype/P20180>, <http://rdaregistry.info/Elements/e/datatype/P20181>, <http://rdaregistry.info/Elements/e/datatype/P20188>, <http://rdaregistry.info/Elements/e/datatype/P20197> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/augmentationOfExpression.en> ;
     reg:name "augmentationOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is augmentation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20192> .
+    rdfs:label "is augmentation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20192>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20193>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/abstractsForExpression.en> ;
@@ -1791,8 +1837,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is abstracts for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20193> .
+    rdfs:label "is abstracts for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20193>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20194>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/indexingForExpression.en> ;
@@ -1801,18 +1847,19 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is indexing for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20194> .
+    rdfs:label "is indexing for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20194>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20195>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20196> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/imitationOfExpression.en> ;
     reg:name "imitationOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is imitation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20195> .
+    rdfs:label "is imitation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20195>, <http://rdaregistry.info/Elements/e/datatype/P20204> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20196>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/parodyOfExpression.en> ;
@@ -1821,8 +1868,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is parody of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20196> .
+    rdfs:label "is parody of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20196>, <http://rdaregistry.info/Elements/e/datatype/P20195> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20197>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/findingAidForExpression.en> ;
@@ -1831,8 +1878,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is finding aid for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20197> .
+    rdfs:label "is finding aid for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20197>, <http://rdaregistry.info/Elements/e/datatype/P20192> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20198>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/replacementInPartOfExpression.en> ;
@@ -1841,8 +1888,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is replacement in part of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20198> .
+    rdfs:label "is replacement in part of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20198>, <http://rdaregistry.info/Elements/e/datatype/P20154> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20199>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/replacementOfExpression.en> ;
@@ -1851,8 +1898,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is replacement of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20199> .
+    rdfs:label "is replacement of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20199>, <http://rdaregistry.info/Elements/e/datatype/P20154> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20200>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/splitIntoExpression.en> ;
@@ -1861,8 +1908,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is split into (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20200> .
+    rdfs:label "is split into expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20200>, <http://rdaregistry.info/Elements/e/datatype/P20169> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20201>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/mergerOfExpression.en> ;
@@ -1871,38 +1918,41 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is merger of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20201> .
+    rdfs:label "is merger of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20201>, <http://rdaregistry.info/Elements/e/datatype/P20154> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20203>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20082>, <http://rdaregistry.info/Elements/e/datatype/P20086>, <http://rdaregistry.info/Elements/e/datatype/P20087>, <http://rdaregistry.info/Elements/e/datatype/P20090>, <http://rdaregistry.info/Elements/e/datatype/P20091>, <http://rdaregistry.info/Elements/e/datatype/P20104>, <http://rdaregistry.info/Elements/e/datatype/P20106>, <http://rdaregistry.info/Elements/e/datatype/P20114>, <http://rdaregistry.info/Elements/e/datatype/P20115>, <http://rdaregistry.info/Elements/e/datatype/P20119>, <http://rdaregistry.info/Elements/e/datatype/P20153>, <http://rdaregistry.info/Elements/e/datatype/P20164>, <http://rdaregistry.info/Elements/e/datatype/P20165>, <http://rdaregistry.info/Elements/e/datatype/P20166>, <http://rdaregistry.info/Elements/e/datatype/P20170>, <http://rdaregistry.info/Elements/e/datatype/P20171>, <http://rdaregistry.info/Elements/e/datatype/P20211> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/derivativeExpression.en> ;
     reg:name "derivativeExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is derivative (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20203> .
+    rdfs:label "has derivative expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20203>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20204>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20081>, <http://rdaregistry.info/Elements/e/datatype/P20121>, <http://rdaregistry.info/Elements/e/datatype/P20122>, <http://rdaregistry.info/Elements/e/datatype/P20135>, <http://rdaregistry.info/Elements/e/datatype/P20139>, <http://rdaregistry.info/Elements/e/datatype/P20140>, <http://rdaregistry.info/Elements/e/datatype/P20141>, <http://rdaregistry.info/Elements/e/datatype/P20152>, <http://rdaregistry.info/Elements/e/datatype/P20159>, <http://rdaregistry.info/Elements/e/datatype/P20179>, <http://rdaregistry.info/Elements/e/datatype/P20184>, <http://rdaregistry.info/Elements/e/datatype/P20185>, <http://rdaregistry.info/Elements/e/datatype/P20186>, <http://rdaregistry.info/Elements/e/datatype/P20189>, <http://rdaregistry.info/Elements/e/datatype/P20193>, <http://rdaregistry.info/Elements/e/datatype/P20194>, <http://rdaregistry.info/Elements/e/datatype/P20195> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/basedOnExpression.en> ;
     reg:name "basedOnExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is based on (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20204> .
+    rdfs:label "is based on expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20204>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20205>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20074>, <http://rdaregistry.info/Elements/e/datatype/P20105>, <http://rdaregistry.info/Elements/e/datatype/P20145>, <http://rdaregistry.info/Elements/e/datatype/P20154>, <http://rdaregistry.info/Elements/e/datatype/P20169>, <http://rdaregistry.info/Elements/e/datatype/P20192>, <http://rdaregistry.info/Elements/e/datatype/P20203>, <http://rdaregistry.info/Elements/e/datatype/P20204>, <http://rdaregistry.info/Elements/e/datatype/P20319>, <http://rdaregistry.info/Elements/e/datatype/P20320> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedExpressionExpression.en> ;
     reg:name "relatedExpressionExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has related expression (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205> .
+    rdfs:label "has related expression of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>, <http://rdaregistry.info/Elements/e/datatype/P20297> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20206>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/supplementaryContent.en> ;
@@ -1962,7 +2012,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is revised as"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20211> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20211>, <http://rdaregistry.info/Elements/e/datatype/P20203> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20212>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/mergedToFormExpression.en> ;
@@ -1971,8 +2021,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "is merged to form (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20212> .
+    rdfs:label "is merged to form expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20212>, <http://rdaregistry.info/Elements/e/datatype/P20169> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20213>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/additionalScaleInformation.en> ;
@@ -1982,9 +2032,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has additional scale information"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20213> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20213>, <http://rdaregistry.info/Elements/e/datatype/P20228> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20214>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20004> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/dateOfExpression.en> ;
     reg:name "dateOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -1992,7 +2043,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has date of expression"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20214> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20214>, <http://rdaregistry.info/Elements/e/datatype/P20307> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20215>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/mediumOfPerformanceOfMusicalContent.en> ;
@@ -2032,7 +2083,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has place of capture"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20218> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20218>, <http://rdaregistry.info/Elements/e/datatype/P20306> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20219>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/duration.en> ;
@@ -2042,7 +2093,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has duration"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20219> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20219>, <http://rdaregistry.info/Elements/e/datatype/P20307> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20224>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/colourContent.en> ;
@@ -2072,7 +2123,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has horizontal scale of cartographic content"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20226> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20226>, <http://rdaregistry.info/Elements/e/datatype/P20228> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20227>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/scaleOfStillImageOrThreeDimensionalForm.en> ;
@@ -2082,9 +2133,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has scale of still image or three-dimensional form"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20227> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20227>, <http://rdaregistry.info/Elements/e/datatype/P20228> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20228>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20213>, <http://rdaregistry.info/Elements/e/datatype/P20226>, <http://rdaregistry.info/Elements/e/datatype/P20227>, <http://rdaregistry.info/Elements/e/datatype/P20230> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/scale.en> ;
     reg:name "scale"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2112,7 +2164,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has vertical scale of cartographic content"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20230> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20230>, <http://rdaregistry.info/Elements/e/datatype/P20228> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20231>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/workExpressed.en> ;
@@ -2122,46 +2174,47 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has work expressed"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20231> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20231>, <http://rdaregistry.info/Elements/e/datatype/P20298> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20232>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20100> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/accompanyingExpressionRelationship.en> ;
     reg:name "accompanyingExpressionRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has accompanying expression relationship with"@en ;
+    rdfs:label "has accompanying expression relationship with (Deprecated)"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20232> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20233>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/derivativeExpressionRelationship.en> ;
     reg:name "derivativeExpressionRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has derivative expression relationship with"@en ;
+    rdfs:label "has derivative expression relationship with (Deprecated)"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20233> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20235>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/sequentialExpressionRelationship.en> ;
     reg:name "sequentialExpressionRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has sequential expression relationship with"@en ;
+    rdfs:label "has sequential expression relationship with (Deprecated)"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20235> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20236>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/wholePartExpressionRelationship.en> ;
     reg:name "wholePartExpressionRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has whole-part expression relationship with"@en ;
+    rdfs:label "has whole-part expression relationship with (Deprecated)"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20236> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20237>
@@ -2172,7 +2225,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of afterword"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20237> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20237>, <http://rdaregistry.info/Elements/e/datatype/P20046> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20238>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfPostface.en> ;
@@ -2182,7 +2235,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of postface"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20238> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20238>, <http://rdaregistry.info/Elements/e/datatype/P20046> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20239>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicalTheatreAdaptationOfExpression.en> ;
@@ -2192,7 +2245,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is musical theatre adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20239> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20239>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20240>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/operaAdaptationOfExpression.en> ;
@@ -2202,7 +2255,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is opera adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20240> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20240>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20241>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsMusicalTheatreExpression.en> ;
@@ -2212,7 +2265,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is adapted as musical theatre (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20241> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20241>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20242>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsOperaExpression.en> ;
@@ -2222,18 +2275,21 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is adapted as opera (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20242> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20242>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20243>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20085>, <http://rdaregistry.info/Elements/e/datatype/P20245>, <http://rdaregistry.info/Elements/e/datatype/P20247>, <http://rdaregistry.info/Elements/e/datatype/P20249>, <http://rdaregistry.info/Elements/e/datatype/P20251> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicExpression.en> ;
     reg:name "musicExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has music (expression)"@en .
+    rdfs:label "has music (expression)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20244>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20103>, <http://rdaregistry.info/Elements/e/datatype/P20246>, <http://rdaregistry.info/Elements/e/datatype/P20248>, <http://rdaregistry.info/Elements/e/datatype/P20250>, <http://rdaregistry.info/Elements/e/datatype/P20252> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicForExpression.en> ;
     reg:name "musicForExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2241,7 +2297,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is music for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20244>, <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20245>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/videoMusicExpression.en> ;
@@ -2250,7 +2306,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has video music (expression)"@en .
+    rdfs:label "has video music (expression)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20243> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20246>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicForVideoExpression.en> ;
@@ -2260,7 +2317,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is music for video (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20246> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20246>, <http://rdaregistry.info/Elements/e/datatype/P20244> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20247>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/televisionProgramMusicExpression.en> ;
@@ -2269,7 +2326,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has television program music (expression)"@en .
+    rdfs:label "has television program music (expression)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20243> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20248>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicForTelevisionProgramExpression.en> ;
@@ -2279,7 +2337,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is music for television program (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20248> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20248>, <http://rdaregistry.info/Elements/e/datatype/P20244> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20249>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/radioProgramMusicExpression.en> ;
@@ -2288,7 +2346,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has radio program music (expression)"@en .
+    rdfs:label "has radio program music (expression)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20243> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20250>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicForRadioProgramExpression.en> ;
@@ -2298,7 +2357,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is music for radio program (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20250> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20250>, <http://rdaregistry.info/Elements/e/datatype/P20244> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20251>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/motionPictureMusicExpression.en> ;
@@ -2307,7 +2366,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has motion picture music (expression)"@en .
+    rdfs:label "has motion picture music (expression)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20243> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20252>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicForMotionPictureExpression.en> ;
@@ -2317,7 +2377,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is music for motion picture (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20252> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20252>, <http://rdaregistry.info/Elements/e/datatype/P20244> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20253>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/choreographyExpression.en> ;
@@ -2326,7 +2386,8 @@
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:label "has choreography (expression)"@en .
+    rdfs:label "has choreography (expression)"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20254>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/choreographyForExpression.en> ;
@@ -2336,7 +2397,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is choreography for (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20254> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20254>, <http://rdaregistry.info/Elements/e/datatype/P20100> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20255>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsGraphicNovelExpression.en> ;
@@ -2346,7 +2407,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is adapted as graphic novel (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20255> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20255>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20256>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/graphicNovelizationOfExpression.en> ;
@@ -2356,7 +2417,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is graphic novelization of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20256> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20256>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20257>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/visualEffectsProvider.en> ;
@@ -2366,7 +2427,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has visual effects provider"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20257> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20257>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20258>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/specialEffectsProvider.en> ;
@@ -2376,7 +2437,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has special effects provider"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20258> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20258>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20259>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/letterer.en> ;
@@ -2386,7 +2447,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has letterer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20259> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20259>, <http://rdaregistry.info/Elements/e/datatype/P20051> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20260>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/detailsOfAspectRatioDesignation.en> ;
@@ -2469,6 +2530,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20267> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20268>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20269> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/subjectOfExpression.en> ;
     reg:name "subjectOfExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2476,9 +2538,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is subject of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20268> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20268>, <http://rdaregistry.info/Elements/e/datatype/P20298> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20269>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20270>, <http://rdaregistry.info/Elements/e/datatype/P20271>, <http://rdaregistry.info/Elements/e/datatype/P20272>, <http://rdaregistry.info/Elements/e/datatype/P20273>, <http://rdaregistry.info/Elements/e/datatype/P20274> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/describedInExpression.en> ;
     reg:name "describedInExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2486,7 +2549,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is described in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20269> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20269>, <http://rdaregistry.info/Elements/e/datatype/P20268> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20270>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/analysedInExpression.en> ;
@@ -2496,7 +2559,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is analysed in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20270> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20270>, <http://rdaregistry.info/Elements/e/datatype/P20269> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20271>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/commentaryInExpression.en> ;
@@ -2506,7 +2569,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is commentary in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20271> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20271>, <http://rdaregistry.info/Elements/e/datatype/P20269> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20272>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/critiquedInExpression.en> ;
@@ -2516,7 +2579,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is critiqued in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20272> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20272>, <http://rdaregistry.info/Elements/e/datatype/P20269> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20273>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/evaluatedInExpression.en> ;
@@ -2526,7 +2589,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is evaluated in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20273> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20273>, <http://rdaregistry.info/Elements/e/datatype/P20269> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20274>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/reviewedInExpression.en> ;
@@ -2536,7 +2599,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is reviewed in (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20274> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20274>, <http://rdaregistry.info/Elements/e/datatype/P20269> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20275>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfForeword.en> ;
@@ -2546,7 +2609,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has writer of foreword"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20275> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20275>, <http://rdaregistry.info/Elements/e/datatype/P20046> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20276>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/soundDesigner.en> ;
@@ -2556,7 +2619,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has sound designer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20276> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20276>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20277>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/lightingDesigner.en> ;
@@ -2566,7 +2629,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has lighting designer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20277> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20277>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20278>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/detailsOfDuration.en> ;
@@ -2586,7 +2649,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has on-screen participant"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20279> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20279>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20280>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/softwareDeveloper.en> ;
@@ -2596,7 +2659,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has software developer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20280> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20280>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20281>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/oratorioAdaptationOfExpression.en> ;
@@ -2606,7 +2669,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is oratorio adaptation of (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20281> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20281>, <http://rdaregistry.info/Elements/e/datatype/P20152> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20282>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/adaptedAsOratorioExpression.en> ;
@@ -2616,7 +2679,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "is adapted as oratorio (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20282> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20282>, <http://rdaregistry.info/Elements/e/datatype/P20153> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20283>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/colourist.en> ;
@@ -2626,7 +2689,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has colourist"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20283> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20283>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20284>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/makeUpArtist.en> ;
@@ -2636,7 +2699,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has make-up artist"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20284> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20284>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20285>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/choralConductor.en> ;
@@ -2646,7 +2709,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has choral conductor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20285> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20285>, <http://rdaregistry.info/Elements/e/datatype/P20011> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20286>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/instrumentalConductor.en> ;
@@ -2656,7 +2719,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has instrumental conductor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20286> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20286>, <http://rdaregistry.info/Elements/e/datatype/P20011> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20287>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/censor.en> ;
@@ -2666,7 +2729,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has censor"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20287> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20287>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20288>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/photographerExpression.en> ;
@@ -2676,7 +2739,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has photographer (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20288> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20288>, <http://rdaregistry.info/Elements/e/datatype/P20051> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20289>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/restorationistExpression.en> ;
@@ -2686,7 +2749,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has restorationist (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20289> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20289>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20290>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/aspectRatioDesignation.en> ;
@@ -2709,6 +2772,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20291> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20292>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20050>, <http://rdaregistry.info/Elements/e/datatype/P20293> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/audioEngineer.en> ;
     reg:name "audioEngineer"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2716,7 +2780,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has audio engineer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20292> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20292>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20293>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/mixingEngineer.en> ;
@@ -2726,7 +2790,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has mixing engineer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20293> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20293>, <http://rdaregistry.info/Elements/e/datatype/P20292> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20294>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/musicProgrammer.en> ;
@@ -2736,7 +2800,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has music programmer"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20294> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20294>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20295>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/dubbingDirector.en> ;
@@ -2746,7 +2810,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has dubbing director"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20295> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20295>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20296>
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/DJ.en> ;
@@ -2756,9 +2820,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has DJ"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20296> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20296>, <http://rdaregistry.info/Elements/e/datatype/P20053> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20297>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20205> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedEntityExpression.en> ;
     reg:name "relatedEntityExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2766,9 +2831,10 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has related entity (expression)"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20297> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20297>, <http://rdaregistry.info/Elements/x/P00001> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20298>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20231>, <http://rdaregistry.info/Elements/e/datatype/P20268>, <http://rdaregistry.info/Elements/e/datatype/P20325> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedWorkExpression.en> ;
     reg:name "relatedWorkExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2779,6 +2845,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20298>, <http://rdaregistry.info/Elements/e/datatype/P20297> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20299>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20059> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedManifestationExpression.en> ;
     reg:name "relatedManifestationExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2799,6 +2866,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20300>, <http://rdaregistry.info/Elements/e/datatype/P20297> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20301>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20053> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedAgentExpression.en> ;
     reg:name "relatedAgentExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2849,6 +2917,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20305>, <http://rdaregistry.info/Elements/e/datatype/P20301> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20306>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20218> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedPlaceExpression.en> ;
     reg:name "relatedPlaceExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2859,6 +2928,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20306>, <http://rdaregistry.info/Elements/e/datatype/P20297> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20307>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20214>, <http://rdaregistry.info/Elements/e/datatype/P20219> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatetdTimespanExpression.en> ;
     reg:name "relatetdTimespanExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2869,6 +2939,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20307>, <http://rdaregistry.info/Elements/e/datatype/P20297> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20308>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20311> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedNomenExpression.en> ;
     reg:name "relatedNomenExpression"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2886,5 +2957,178 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:label "has note on capture"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20309> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20309>, <http://rdaregistry.info/Elements/e/datatype/P20071> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20310>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20313>, <http://rdaregistry.info/Elements/e/datatype/P20314> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/accessPointForExpression.en> ;
+    reg:name "accessPointForExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has access point for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20310>, <http://rdaregistry.info/Elements/e/datatype/P20311> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20311>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20312> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/appellationOfExpression.en> ;
+    reg:name "appellationOfExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has appellation of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20311>, <http://rdaregistry.info/Elements/e/datatype/P20308> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20312>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20315>, <http://rdaregistry.info/Elements/e/datatype/P20316> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/titleOfExpression.en> ;
+    reg:name "titleOfExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has title of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20312>, <http://rdaregistry.info/Elements/e/datatype/P20311> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20313>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/authorizedAccessPointForExpression.en> ;
+    reg:name "authorizedAccessPointForExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has authorized access point for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20313>, <http://rdaregistry.info/Elements/e/datatype/P20310> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20314>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/variantAccessPointForExpression.en> ;
+    reg:name "variantAccessPointForExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has variant access point for expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20314>, <http://rdaregistry.info/Elements/e/datatype/P20310> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20315>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/preferredTitleOfExpression.en> ;
+    reg:name "preferredTitleOfExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has preferred title of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20315>, <http://rdaregistry.info/Elements/e/datatype/P20312> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20316>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/variantTitleOfExpression.en> ;
+    reg:name "variantTitleOfExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has variant title of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20316>, <http://rdaregistry.info/Elements/e/datatype/P20312> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20317>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/primeMeridian.en> ;
+    reg:name "primeMeridian" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has prime meridian"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20317> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20318>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/reliefType.en> ;
+    reg:name "reliefType" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has relief type"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20318> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20319>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/aggregates.en> ;
+    reg:name "aggregates" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "aggregates"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20319>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20320>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/aggregatedBy.en> ;
+    reg:name "aggregatedBy" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "is aggregated by"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20320>, <http://rdaregistry.info/Elements/e/datatype/P20205> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20321>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/extentOfExpression.en> ;
+    reg:name "extentOfExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has extent of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20321> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20322>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/intendedAudienceOfExpression.en> ;
+    reg:name "intendedAudienceOfExpression" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has intended audience of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20322> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20323>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/interactivityMode.en> ;
+    reg:name "interactivityMode" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has interactivity mode"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20323> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20324>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/mediumOfPerformanceOfChoreographicContent.en> ;
+    reg:name "mediumOfPerformanceOfChoreographicContent" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has medium of performance of choreographic content"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20324> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20325>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/representativeExpressionOf.en> ;
+    reg:name "representativeExpressionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "is representative expression of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20325>, <http://rdaregistry.info/Elements/e/datatype/P20298> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20326>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/keyOfExpressioin.en>, <http://rdaregistry.info/Elements/e/datatype/keyOfExpression.en> ;
+    reg:name "keyOfExpressioin", "keyOfExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:label "has key of expressioin"@en, "has key of expression"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20326> .
 
