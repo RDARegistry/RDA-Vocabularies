@@ -831,6 +831,21 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20310" />
 </rdf:Description>
 
+<!-- Property: has author of expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20332">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has author of expression</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/authorOfExpression.en" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">authorOfExpression</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20332" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20331" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50452" />
+</rdf:Description>
+
 <!-- Property: is based on expression -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20204">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
@@ -1145,36 +1160,6 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20286" />
 </rdf:Description>
 
-<!-- Property: is contained in expression -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20074">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">containedInExpression</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/containedInExpression.en" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20145" />
-  <rdfs:label xml:lang="en">is contained in expression</rdfs:label>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20074" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20205" />
-</rdf:Description>
-
-<!-- Property: is container of expression -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20145">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">containerOfExpression</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/containerOfExpression.en" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20074" />
-  <rdfs:label xml:lang="en">is container of expression</rdfs:label>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20145" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20205" />
-</rdf:Description>
-
 <!-- Property: is continuation in part of expression -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20167">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
@@ -1235,17 +1220,95 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20169" />
 </rdf:Description>
 
-<!-- Property: has contributor -->
+<!-- Property: has contributor to aggregated content -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20331">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has contributor to aggregated content</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/contributorToAggregatedContent.en" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorToAggregatedContent</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20331" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20332" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50451" />
+</rdf:Description>
+
+<!-- Property: has contributor to amalgamated content -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20328">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has contributor to amalgamated content</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/contributorToAmalgamatedContent.en" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorToAmalgamatedContent</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20328" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20329" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50448" />
+</rdf:Description>
+
+<!-- Property: has contributor to performance content -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20329">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has contributor to performance content</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/contributorToPerformanceContent.en" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorToPerformanceContent</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20329" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20328" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20330" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50449" />
+</rdf:Description>
+
+<!-- Property: has costume designer -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20036">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">costumeDesigner</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/costumeDesigner.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50144" />
+  <rdfs:label xml:lang="en">has costume designer</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20036" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053" />
+</rdf:Description>
+
+<!-- Property: has court reporter -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20040">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">courtReporter</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/courtReporter.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50148" />
+  <rdfs:label xml:lang="en">has court reporter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20040" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053" />
+</rdf:Description>
+
+<!-- Property: has creator of expression -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20053">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">contributor</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/contributor.en" />
+  <reg:name xml:lang="en">creatorOfExpression</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/creatorOfExpression.en" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50161" />
-  <rdfs:label xml:lang="en">has contributor</rdfs:label>
+  <rdfs:label xml:lang="en">has creator of expression</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20053" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20301" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20026" />
@@ -1288,36 +1351,9 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20294" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20295" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20296" />
-</rdf:Description>
-
-<!-- Property: has costume designer -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20036">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">costumeDesigner</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/costumeDesigner.en" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
-  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50144" />
-  <rdfs:label xml:lang="en">has costume designer</rdfs:label>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20036" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053" />
-</rdf:Description>
-
-<!-- Property: has court reporter -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20040">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">courtReporter</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/courtReporter.en" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
-  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50148" />
-  <rdfs:label xml:lang="en">has court reporter</rdfs:label>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20040" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20327" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20328" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20331" />
 </rdf:Description>
 
 <!-- Property: has dancer -->
@@ -1591,6 +1627,21 @@
   <rdfs:label xml:lang="en">has editor of moving image work</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20055" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053" />
+</rdf:Description>
+
+<!-- Property: has editor of text -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20330">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has editor of text</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/editorOfText.en" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">editorOfText</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20330" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20329" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50450" />
 </rdf:Description>
 
 <!-- Property: has errata expression -->
@@ -2692,6 +2743,36 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20195" />
 </rdf:Description>
 
+<!-- Property: has part expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20145">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">partExpression</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/partExpression.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20074" />
+  <rdfs:label xml:lang="en">has part expression</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20145" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20205" />
+</rdf:Description>
+
+<!-- Property: is part of expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20074">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">partOfExpression</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/partOfExpression.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20145" />
+  <rdfs:label xml:lang="en">is part of expression</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20074" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20205" />
+</rdf:Description>
+
 <!-- Property: has performer -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20039">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
@@ -2959,7 +3040,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20301" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20303" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20304" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00012" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00012" />
 </rdf:Description>
 
 <!-- Property: has related corporate body of expression -->
@@ -2975,7 +3056,7 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50330" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20304" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20305" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00009" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00009" />
 </rdf:Description>
 
 <!-- Property: has related RDA entity of expression -->
@@ -3025,7 +3106,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20204" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20319" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20320" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00003" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00003" />
 </rdf:Description>
 
 <!-- Property: has related family of expression -->
@@ -3041,7 +3122,7 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50321" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20303" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20305" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00008" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00008" />
 </rdf:Description>
 
 <!-- Property: has related item of expression -->
@@ -3057,7 +3138,7 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40070" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20300" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20297" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00005" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00005" />
 </rdf:Description>
 
 <!-- Property: has related manifestation of expression -->
@@ -3074,7 +3155,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20299" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20297" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20059" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00004" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00004" />
 </rdf:Description>
 
 <!-- Property: has related nomen of expression -->
@@ -3091,7 +3172,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20308" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20297" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20311" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00013" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00013" />
 </rdf:Description>
 
 <!-- Property: has related person of expression -->
@@ -3107,7 +3188,7 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50312" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20302" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20301" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00007" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00007" />
 </rdf:Description>
 
 <!-- Property: has related place of expression -->
@@ -3124,7 +3205,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20306" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20297" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20218" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00010" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00010" />
 </rdf:Description>
 
 <!-- Property: has related timespan of expression -->
@@ -3142,7 +3223,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20297" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20214" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20219" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00011" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00011" />
 </rdf:Description>
 
 <!-- Property: has related work of expression -->
@@ -3160,7 +3241,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20297" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20231" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20268" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00002" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20325" />
 </rdf:Description>
 
@@ -3297,6 +3378,21 @@
   <rdfs:label xml:lang="en">is revised as</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20211" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20203" />
+</rdf:Description>
+
+<!-- Property: has reviser -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20327">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has reviser</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/reviser.en" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">reviser</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20327" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053" />
+  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50447" />
 </rdf:Description>
 
 <!-- Property: is revision of -->

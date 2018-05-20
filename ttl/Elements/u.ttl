@@ -475,14 +475,14 @@
     skos:definition "Relaterer en ressource til en kandidat til en akademisk grad, der forsvarer eller opponerer mod en tese, der er fremsat af præses i et akademisk afhandlingsforsvar."@da, "Relates a resource to a candidate for a degree who defends or opposes a thesis provided by a praeses in an academic disputation."@en .
 
 <http://rdaregistry.info/Elements/u/P60046>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50093> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50093>, <http://rdaregistry.info/Elements/n/P80169> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/ikkeEntydigNavneindikator.da>, <http://rdaregistry.info/Elements/u/undifferentiatedNameIndicator.en> ;
     reg:name "ikkeEntydigNavneindikator"@da, "undifferentiatedNameIndicator"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:label "har ikke entydig navneindikator"@da, "has undifferentiated name indicator"@en ;
-    skos:definition "Relaterer en ressource til en kategorisering, der angiver, at de registrerede kerneelementer er utilstrækkelige til at skelne mellem to eller flere agenter med det samme navn."@da, "Relates a resource to a categorization indicating that the core elements recorded are insufficient to differentiate between two or more agents with the same name."@en .
+    skos:definition "Relaterer en ressource til en kategorisering, der angiver, at de registrerede kerneelementer er utilstrækkelige til at skelne mellem to eller flere agenter med det samme navn."@da, "Relates a name to a categorization indicating that a name is insufficient to differentiate between two or more entities."@en .
 
 <http://rdaregistry.info/Elements/u/P60047>
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50051>, <http://rdaregistry.info/Elements/a/P50237>, <http://rdaregistry.info/Elements/a/P50238> ;
@@ -789,7 +789,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:label "har anvendelsesperiode"@da, "has date of usage"@en ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60986> ;
-    skos:definition "Relaterer et navn til et år eller dato eller række af år eller datoer datoer knyttet til brugen af det navn, der er valgt som det foretrukne navn for en agent."@da, "Relates a name to a date or range of dates associated with the use of the name chosen as a preferred name for an agent."@en .
+    skos:definition "Relaterer et navn til et år eller dato eller række af år eller datoer datoer knyttet til brugen af det navn, der er valgt som det foretrukne navn for en agent."@da, "Relates an appellation of an entity to a date or range of dates associated with the use of the appellation."@en .
 
 <http://rdaregistry.info/Elements/u/P60076>
     reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50098>, <http://rdaregistry.info/Elements/a/P50236>, <http://rdaregistry.info/Elements/a/P50430>, <http://rdaregistry.info/Elements/a/P50431>, <http://rdaregistry.info/Elements/a/P50432> ;
@@ -1054,14 +1054,15 @@
 
 <http://rdaregistry.info/Elements/u/P60101>
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20074>, <http://rdaregistry.info/Elements/i/P40009>, <http://rdaregistry.info/Elements/m/P30020>, <http://rdaregistry.info/Elements/u/P60100>, <http://rdaregistry.info/Elements/u/P60192>, <http://rdaregistry.info/Elements/u/P60193>, <http://rdaregistry.info/Elements/u/P60194>, <http://rdaregistry.info/Elements/u/P60317> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/containedIn.en>, <http://rdaregistry.info/Elements/u/indeholdtI.da> ;
-    reg:name "containedIn"@en, "indeholdtI"@da ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/indeholdtI.da>, <http://rdaregistry.info/Elements/u/partOfResource.en> ;
+    reg:name "indeholdtI"@da, "partOfResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:label "er indeholdt i"@da, "is contained in"@en ;
+    rdfs:label "er indeholdt i"@da, "is part of resource"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60714> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60249> ;
+    skos:altLabel "is contained in resource"@en ;
     skos:definition "Relaterer en ressource til en større ressource, som ressourcen udgør en separat del af."@da, "Relates a resource to a larger resource of which a part is a discrete component."@en .
 
 <http://rdaregistry.info/Elements/u/P60102>
@@ -1073,6 +1074,7 @@
     rdfs:label "er efterfølger"@da, "has sequel"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60278> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60577> ;
+    skos:altLabel "is prequel to"@en ;
     skos:definition "Relaterer en ressource til en senere ressource, der fortsætter en tidligere ressources fortælling."@da, "Relates a resource to a later resource that continues the narrative of an earlier resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60103>
@@ -2109,15 +2111,16 @@
     skos:definition "Relaterer en ressource til en ressource, i hvilket en del optræder regelmæssigt; titlen på den større ressource optræder på alle numre eller dele af underserien."@da, "Relates a resource to a resource in which a part consistently appears; a title of the larger resource appears on all issues or parts of a subseries."@en .
 
 <http://rdaregistry.info/Elements/u/P60193>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/delAfSerie.da>, <http://rdaregistry.info/Elements/u/inSeries.en> ;
-    reg:name "delAfSerie"@da, "inSeries"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/delAfSerie.da>, <http://rdaregistry.info/Elements/u/issueOf.en> ;
+    reg:name "delAfSerie"@da, "issueOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:label "er del af serie"@da, "is in series"@en ;
+    rdfs:label "er del af serie"@da, "is issue of"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60101> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60240> ;
-    skos:definition "Relaterer en ressource til en ressource, i hvilket en del er blevet udgivet; en titel på en større ressource optræder på delen."@da, "Relates a resource to a resource in which a part is issued; a title of a larger resource appears on a part."@en .
+    skos:altLabel "is in series"@en ;
+    skos:definition "Relaterer en ressource til en ressource, i hvilket en del er blevet udgivet; en titel på en større ressource optræder på delen."@da, "Relates a resource to a resource in which a part is issued."@en .
 
 <http://rdaregistry.info/Elements/u/P60194>
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30025> ;
@@ -2168,7 +2171,7 @@
     skos:definition "Relaterer en ressource til en ressource, der er en nøjagtig kopi af en hjemmeside, som er anvendt til at reducere netværkstrafik eller forbedre tilgængeligheden af originalsidens indhold."@da, "Relates a resource to a resource that is an exact copy of a website, used to reduce network traffic or improve the availability of the content of the original site."@en .
 
 <http://rdaregistry.info/Elements/u/P60198>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20100>, <http://rdaregistry.info/Elements/u/P60117>, <http://rdaregistry.info/Elements/u/P60201>, <http://rdaregistry.info/Elements/u/P60264>, <http://rdaregistry.info/Elements/u/P60267>, <http://rdaregistry.info/Elements/u/P60270>, <http://rdaregistry.info/Elements/u/P60285>, <http://rdaregistry.info/Elements/u/P60740>, <http://rdaregistry.info/Elements/u/P60741> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20100>, <http://rdaregistry.info/Elements/u/P60117>, <http://rdaregistry.info/Elements/u/P60201>, <http://rdaregistry.info/Elements/u/P60264>, <http://rdaregistry.info/Elements/u/P60267>, <http://rdaregistry.info/Elements/u/P60270>, <http://rdaregistry.info/Elements/u/P60285>, <http://rdaregistry.info/Elements/u/P60740>, <http://rdaregistry.info/Elements/u/P60741>, <http://rdaregistry.info/Elements/u/P61047>, <http://rdaregistry.info/Elements/u/P61048>, <http://rdaregistry.info/Elements/u/P61049>, <http://rdaregistry.info/Elements/u/P61050>, <http://rdaregistry.info/Elements/u/P61051>, <http://rdaregistry.info/Elements/u/P61052> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/complementedBy.en>, <http://rdaregistry.info/Elements/u/komplementeretAf.da> ;
     reg:name "complementedBy"@en, "komplementeretAf"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -2441,6 +2444,7 @@
     rdfs:label "er forhistorie"@da, "has prequel"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60261> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60310> ;
+    skos:altLabel "is sequel to"@en ;
     skos:definition "Relaterer en ressource til en ressource, der udvider en tidligere ressources fortælling bagud i tiden."@da, "Relates a resource to a resource that extends the narrative of an earlier resource backwards in time."@en .
 
 <http://rdaregistry.info/Elements/u/P60221>
@@ -2672,14 +2676,15 @@
     skos:definition "Relaterer en ressource til en ressource, der er blevet undersøgt for at identificere dets bestanddele og deres relationer."@da, "Relates a resource to a resource that is examined to identify its components and their relations."@en .
 
 <http://rdaregistry.info/Elements/u/P60240>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/serieindholderAf.da>, <http://rdaregistry.info/Elements/u/seriesContainerOf.en> ;
-    reg:name "serieindholderAf"@da, "seriesContainerOf"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/issue.en>, <http://rdaregistry.info/Elements/u/serieindholderAf.da> ;
+    reg:name "issue"@en, "serieindholderAf"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:label "er serieindholder af"@da, "is series container of"@en ;
+    rdfs:label "er serieindholder af"@da, "has issue"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60249> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60193> ;
+    skos:altLabel "is series container of"@en ;
     skos:definition "Relaterer en ressource til en ressource, der er blevet udgivet som del af en serie."@da, "Relates a resource to a resource that is issued as part of a series."@en .
 
 <http://rdaregistry.info/Elements/u/P60241>
@@ -2781,14 +2786,15 @@
 
 <http://rdaregistry.info/Elements/u/P60249>
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20145>, <http://rdaregistry.info/Elements/i/P40034>, <http://rdaregistry.info/Elements/m/P30033>, <http://rdaregistry.info/Elements/u/P60183>, <http://rdaregistry.info/Elements/u/P60207>, <http://rdaregistry.info/Elements/u/P60240>, <http://rdaregistry.info/Elements/u/P60300>, <http://rdaregistry.info/Elements/u/P60316> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/containerOf.en>, <http://rdaregistry.info/Elements/u/indeholderAf.da> ;
-    reg:name "containerOf"@en, "indeholderAf"@da ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/indeholderAf.da>, <http://rdaregistry.info/Elements/u/partResource.en> ;
+    reg:name "indeholderAf"@da, "partResource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:label "er indeholder af"@da, "is container of"@en ;
+    rdfs:label "er indeholder af"@da, "has part resource"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60714> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60101> ;
+    skos:altLabel "is container of resource"@en ;
     skos:definition "Relaterer en ressource til en ressource, der udgør en separat del af en større ressource."@da, "Relates a resource to a resource that is a discrete component of a larger resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60250>
@@ -3517,10 +3523,10 @@
 <http://rdaregistry.info/Elements/u/P60310>
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/forhistorieTil.da>, <http://rdaregistry.info/Elements/u/prequelTo.en> ;
     reg:name "forhistorieTil"@da, "prequelTo"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:label "er forhistorie til"@da, "is prequel to"@en ;
+    rdfs:label "er forhistorie til"@da, "is prequel to (Deprecated)"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60278> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60220> ;
     skos:definition "Relaterer en ressource til en ressource, hvis fortælling udvides bagud i tid af en senere ressource."@da, "Relates a resource to a resource whose narrative is extended backwards in time by the later resource."@en .
@@ -3550,7 +3556,7 @@
     skos:definition "Relaterer en ressource til en ressource, hvis stil eller indhold efterlignes for at opnå en komisk effekt."@da, "Relates a resource to a resource whose style or content is imitated for comic effect."@en .
 
 <http://rdaregistry.info/Elements/u/P60313>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20205>, <http://rdaregistry.info/Elements/i/P40046>, <http://rdaregistry.info/Elements/i/P40069>, <http://rdaregistry.info/Elements/i/P40070>, <http://rdaregistry.info/Elements/i/P40071>, <http://rdaregistry.info/Elements/m/P30048>, <http://rdaregistry.info/Elements/m/P30140>, <http://rdaregistry.info/Elements/m/P30265>, <http://rdaregistry.info/Elements/m/P30266>, <http://rdaregistry.info/Elements/u/P61005>, <http://rdaregistry.info/Elements/u/P61006> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20205>, <http://rdaregistry.info/Elements/i/P40046>, <http://rdaregistry.info/Elements/i/P40069>, <http://rdaregistry.info/Elements/i/P40070>, <http://rdaregistry.info/Elements/i/P40071>, <http://rdaregistry.info/Elements/m/P30048>, <http://rdaregistry.info/Elements/m/P30140>, <http://rdaregistry.info/Elements/m/P30265>, <http://rdaregistry.info/Elements/m/P30266>, <http://rdaregistry.info/Elements/u/P61005>, <http://rdaregistry.info/Elements/u/P61006>, <http://rdaregistry.info/Elements/u/P61069>, <http://rdaregistry.info/Elements/u/P61070> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedResourceOfResource.en>, <http://rdaregistry.info/Elements/u/relateretRessource.da> ;
     reg:name "relatedResourceOfResource"@en, "relateretRessource"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -4914,7 +4920,7 @@
     skos:definition "Relaterer en ressource til en agent, der er ansvarlig for at have skabt en ressource bestående af bevægelser."@da, "Relates a resource to an agent who is responsible for a choreographic resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60434>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60476>, <http://rdaregistry.info/Elements/u/P60477>, <http://rdaregistry.info/Elements/u/P60478>, <http://rdaregistry.info/Elements/u/P60751> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20332>, <http://rdaregistry.info/Elements/u/P60476>, <http://rdaregistry.info/Elements/u/P60477>, <http://rdaregistry.info/Elements/u/P60478>, <http://rdaregistry.info/Elements/u/P60751> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/author.en>, <http://rdaregistry.info/Elements/u/forfatter.da> ;
     reg:name "author"@en, "forfatter"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5186,7 +5192,7 @@
     skos:definition "Relaterer en ressource til en agent, der hører og træffer beslutning om juridiske anliggender i retten."@da, "Relates a resource to an agent who hears and decides on legal matters in court."@en .
 
 <http://rdaregistry.info/Elements/u/P60462>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10285>, <http://rdaregistry.info/Elements/w/P10286> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61092>, <http://rdaregistry.info/Elements/u/P61094>, <http://rdaregistry.info/Elements/w/P10285>, <http://rdaregistry.info/Elements/w/P10286> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/defendant.en>, <http://rdaregistry.info/Elements/u/sags\u00F8gt.da> ;
     reg:name "defendant"@en, "sagsøgt"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5819,6 +5825,7 @@
     skos:definition "Relaterer en ressource til et digitalt billedes skarphed eller finhedsgrad, udtrykt som en måling af pixels i et billede etc."@da, "Relates a resource to a clarity or fineness of detail in a digital image, expressed by a measurement of the image in pixels, etc."@en .
 
 <http://rdaregistry.info/Elements/u/P60520>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20322> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/intendedAudience.en>, <http://rdaregistry.info/Elements/u/m\u00E5lgruppe.da> ;
     reg:name "intendedAudience"@en, "målgruppe"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -5896,7 +5903,7 @@
     skos:definition "Relaterer en ressource til et år eller en dato eller en række heraf, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt."@da, "Relates a resource to a date or range of dates on which a conference, congress, meeting, exhibition, fair, festival, etc., was held."@en .
 
 <http://rdaregistry.info/Elements/u/P60527>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20214> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20214>, <http://rdaregistry.info/Elements/w/P10398> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/dateOfResource.en>, <http://rdaregistry.info/Elements/u/dateringafRessource.da> ;
     reg:name "dateOfResource"@en, "dateringafRessource"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6141,7 +6148,7 @@
     skos:definition "Relaterer en ressource til et navn eller en navneform, der er valgt til identifikation af en person."@da, "Relates an agent to a name of agent who is selected for preference in a specific application or context."@en .
 
 <http://rdaregistry.info/Elements/u/P60550>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30177>, <http://rdaregistry.info/Elements/m/P30178>, <http://rdaregistry.info/Elements/m/P30179>, <http://rdaregistry.info/Elements/m/P30180>, <http://rdaregistry.info/Elements/m/P30181>, <http://rdaregistry.info/Elements/m/P30182> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20321>, <http://rdaregistry.info/Elements/m/P30177>, <http://rdaregistry.info/Elements/m/P30178>, <http://rdaregistry.info/Elements/m/P30179>, <http://rdaregistry.info/Elements/m/P30180>, <http://rdaregistry.info/Elements/m/P30181>, <http://rdaregistry.info/Elements/m/P30182> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/extent.en>, <http://rdaregistry.info/Elements/u/omfang.da> ;
     reg:name "extent"@en, "omfang"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -6429,10 +6436,10 @@
 <http://rdaregistry.info/Elements/u/P60577>
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/efterf\u00F8lgerTil.da>, <http://rdaregistry.info/Elements/u/sequelTo.en> ;
     reg:name "efterfølgerTil"@da, "sequelTo"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:label "er efterfølger til"@da, "is sequel to"@en ;
+    rdfs:label "er efterfølger til"@da, "is sequel to (Deprecated)"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60261> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60102> ;
     skos:definition "Relaterer en ressource til en ressource, hvis fortælling fortsættes af en senere ressource."@da, "Relates a resource to a resource whose narrative is continued by a later resource."@en .
@@ -6459,6 +6466,7 @@
     skos:definition "Relaterer en ressource til en koteskala eller skala for vertikal dimension for en ressources kartografiske indhold."@da, "Relates a resource to a scale of elevation or vertical dimension of the cartographic content of a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60580>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20326> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/key.en>, <http://rdaregistry.info/Elements/u/toneart.da> ;
     reg:name "key"@en, "toneart"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -7435,7 +7443,7 @@
     skos:definition "Relaterer en agent, der er ansvarlig for at have skabt en ressource af bevægelser til en ressource."@da, "Relates an agent to a choreographic resource that involves a responsibility for choreography."@en .
 
 <http://rdaregistry.info/Elements/u/P60663>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50195>, <http://rdaregistry.info/Elements/u/P60706>, <http://rdaregistry.info/Elements/u/P60707>, <http://rdaregistry.info/Elements/u/P60708>, <http://rdaregistry.info/Elements/u/P60757> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50195>, <http://rdaregistry.info/Elements/a/P50452>, <http://rdaregistry.info/Elements/u/P60706>, <http://rdaregistry.info/Elements/u/P60707>, <http://rdaregistry.info/Elements/u/P60708>, <http://rdaregistry.info/Elements/u/P60757> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/authorOf.en>, <http://rdaregistry.info/Elements/u/forfatterTil.da> ;
     reg:name "authorOf"@en, "forfatterTil"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -7827,7 +7835,7 @@
     skos:definition "Relaterer en agent der er medlem af en agent til en agent."@da, "Relates an agent who is a member of an agent to an agent."@en .
 
 <http://rdaregistry.info/Elements/u/P60698>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50090>, <http://rdaregistry.info/Elements/a/P50258>, <http://rdaregistry.info/Elements/a/P50259> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50090>, <http://rdaregistry.info/Elements/a/P50258>, <http://rdaregistry.info/Elements/a/P50259>, <http://rdaregistry.info/Elements/u/P61093>, <http://rdaregistry.info/Elements/u/P61095> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/defendantOf.en>, <http://rdaregistry.info/Elements/u/sags\u00F8gtAf.da> ;
     reg:name "defendantOf"@en, "sagsøgtAf"@da ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -8013,12 +8021,12 @@
     reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40054>, <http://rdaregistry.info/Elements/m/P30213>, <http://rdaregistry.info/Elements/u/P60101>, <http://rdaregistry.info/Elements/u/P60249> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/helhedDelRessourceRelation.da>, <http://rdaregistry.info/Elements/u/wholePartResourceRelationshipWith.en> ;
     reg:name "helhedDelRessourceRelation"@da, "wholePartResourceRelationshipWith"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
-    rdfs:label "har helhed-del-ressource-relation med"@da, "has whole-part resource relationship with"@en ;
+    rdfs:label "har helhed-del-ressource-relation med"@da, "has whole-part resource relationship with (Deprecated)"@en ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60714> ;
-    skos:definition "Relaterer en ressource til en ressource, der indgår i, eller indeholder en ressouce."@da, "Relates a resource to a resource that is contained in or contains a related resource."@en .
+    skos:definition "Relaterer en ressource til en ressource, der indgår i, eller indeholder en ressouce."@da, "Relates a resource to a resource that is contained in or contains a related resource. (Deprecated)"@en .
 
 <http://rdaregistry.info/Elements/u/P60715>
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20237> ;
@@ -9116,6 +9124,7 @@
     skos:definition "Relaterer en ressource til et andet eller efterfølgende nummereringssystem i numerisk og/eller alfabetisk form på sidste nummer eller del af nummereringssekvensen for et periodikum."@da, "Relates a resource to a second or subsequent system of numbering presented in numeric or alphabetic form on the last issue or part of a sequence of numbering for a serial."@en .
 
 <http://rdaregistry.info/Elements/u/P60822>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80167> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/anvendelsessammenh\u00E6ng.da>, <http://rdaregistry.info/Elements/u/scopeOfUsage.en> ;
     reg:name "anvendelsessammenhæng"@da, "scopeOfUsage"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -9241,7 +9250,7 @@
     rdfs:label "er inspireret af"@da, "is inspired by"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60305> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60833> ;
-    skos:definition "Relaterer en ressource til en ressource, der tjener som inspiration for en anden ressource."@da, "Relates a resource to a resource which serves as the inspiration for a related resource."@en .
+    skos:definition "Relaterer en ressource til en ressource, der tjener som inspiration for en anden ressource."@da, "Relates a resource to a resource that serves as the inspiration for a related resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60833>
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/inspirationFor.en>, <http://rdaregistry.info/Elements/u/inspirationTil.da> ;
@@ -9252,7 +9261,7 @@
     rdfs:label "er inspiration til"@da, "is inspiration for"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60250> ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60832> ;
-    skos:definition "Relaterer en ressource til en ressource, der var inspireret af en anden ressource."@da, "Relates a resource to a resource which was inspired by a related resource."@en .
+    skos:definition "Relaterer en ressource til en ressource, der var inspireret af en anden ressource."@da, "Relates a resource to a resource that was inspired by a related resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60834>
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/participantInTreaty.en>, <http://rdaregistry.info/Elements/u/traktatdeltager.da> ;
@@ -10118,7 +10127,7 @@
     skos:definition "Relates an entity to a nomen used within a given scheme or context to refer to an entity."@en .
 
 <http://rdaregistry.info/Elements/u/P60910>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80015>, <http://rdaregistry.info/Elements/n/P80018>, <http://rdaregistry.info/Elements/n/P80019>, <http://rdaregistry.info/Elements/n/P80020>, <http://rdaregistry.info/Elements/n/P80021>, <http://rdaregistry.info/Elements/n/P80022>, <http://rdaregistry.info/Elements/n/P80023>, <http://rdaregistry.info/Elements/n/P80024>, <http://rdaregistry.info/Elements/n/P80025>, <http://rdaregistry.info/Elements/n/P80026>, <http://rdaregistry.info/Elements/n/P80027> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80015>, <http://rdaregistry.info/Elements/n/P80018>, <http://rdaregistry.info/Elements/n/P80019>, <http://rdaregistry.info/Elements/n/P80020>, <http://rdaregistry.info/Elements/n/P80021>, <http://rdaregistry.info/Elements/n/P80022>, <http://rdaregistry.info/Elements/n/P80023>, <http://rdaregistry.info/Elements/n/P80024>, <http://rdaregistry.info/Elements/n/P80025>, <http://rdaregistry.info/Elements/n/P80026>, <http://rdaregistry.info/Elements/n/P80027>, <http://rdaregistry.info/Elements/n/P80159> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/accessPointForEntityOf.en> ;
     reg:name "accessPointForEntityOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -10581,6 +10590,7 @@
     skos:definition "Relates a nomen to an entity that has a name of entity that is selected for preference in a specific application or context."@en .
 
 <http://rdaregistry.info/Elements/u/P60952>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80164>, <http://rdaregistry.info/Elements/n/P80165> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/variantNameOfEntityOf.en> ;
     reg:name "variantNameOfEntityOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -10933,6 +10943,7 @@
     skos:definition "Relates a timespan to a resource that is published, released, or issued in a published form during a timespan."@en .
 
 <http://rdaregistry.info/Elements/u/P60984>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70020>, <http://rdaregistry.info/Elements/t/P70022>, <http://rdaregistry.info/Elements/t/P70024>, <http://rdaregistry.info/Elements/t/P70057> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/dateOfResourceOf.en> ;
     reg:name "dateOfResourceOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -10963,7 +10974,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:label "is date of usage of"@en ;
     owl:inverseOf <http://rdaregistry.info/Elements/u/P60075> ;
-    skos:definition "Relates a timespan to a name of agent used during a timespan."@en .
+    skos:definition "Relates a timespan to an appellation of an entity used during a timespan."@en .
 
 <http://rdaregistry.info/Elements/u/P60987>
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/placeAssociatedWithResource.en> ;
@@ -11002,6 +11013,7 @@
     skos:scopeNote "A publisher number for notated music sometimes includes initials, abbreviations, or words identifying the publisher."@en .
 
 <http://rdaregistry.info/Elements/u/P60990>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70043>, <http://rdaregistry.info/Elements/t/P70044>, <http://rdaregistry.info/Elements/t/P70051>, <http://rdaregistry.info/Elements/t/P70052>, <http://rdaregistry.info/Elements/t/P70053> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/periodOfActivityOfAgentOf.en> ;
     reg:name "periodOfActivityOfAgentOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11013,6 +11025,7 @@
     skos:definition "Relates a timespan to an agent who is active in its primary field of endeavour during a timespan."@en .
 
 <http://rdaregistry.info/Elements/u/P60991>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70021> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/epochOf.en> ;
     reg:name "epochOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11023,6 +11036,7 @@
     skos:definition "Relates a timespan to a resource that refers to measurements of position for a body or orientation for an orbit."@en .
 
 <http://rdaregistry.info/Elements/u/P60992>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70042> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/equinoxOf.en> ;
     reg:name "equinoxOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11085,7 +11099,8 @@
     skos:definition "Relates a place to a conference, exhibition, or other event that gives rise to a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P60998>
-    reg:lexicalAlias <http://rdaregistry.info/Elements/u/beginning,en.en> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70039> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/beginning.en> ;
     reg:name "beginning,en" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
@@ -11104,6 +11119,7 @@
     skos:definition "Relates a place to an agent who is identified with a country."@en .
 
 <http://rdaregistry.info/Elements/u/P61000>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70040> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/ending.en> ;
     reg:name "ending" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11124,6 +11140,7 @@
     skos:definition "Relates a place to a place that is located within another place."@en .
 
 <http://rdaregistry.info/Elements/u/P61002>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70034> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/partOfTimespan.en> ;
     reg:name "partOfTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11146,6 +11163,7 @@
     skos:definition "Relates a place to a place that encompasses another place."@en .
 
 <http://rdaregistry.info/Elements/u/P61004>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70035> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/partTimespan.en> ;
     reg:name "partTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11203,7 +11221,7 @@
     skos:definition "Relates a resource to an agent who is associated with a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P61009>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61032> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50305>, <http://rdaregistry.info/Elements/a/P50306>, <http://rdaregistry.info/Elements/a/P50307>, <http://rdaregistry.info/Elements/a/P50308>, <http://rdaregistry.info/Elements/a/P50311>, <http://rdaregistry.info/Elements/a/P50312>, <http://rdaregistry.info/Elements/a/P50313>, <http://rdaregistry.info/Elements/a/P50314>, <http://rdaregistry.info/Elements/a/P50320>, <http://rdaregistry.info/Elements/a/P50321>, <http://rdaregistry.info/Elements/a/P50322>, <http://rdaregistry.info/Elements/a/P50323>, <http://rdaregistry.info/Elements/a/P50329>, <http://rdaregistry.info/Elements/a/P50330>, <http://rdaregistry.info/Elements/a/P50331>, <http://rdaregistry.info/Elements/a/P50332>, <http://rdaregistry.info/Elements/a/P50357>, <http://rdaregistry.info/Elements/a/P50361>, <http://rdaregistry.info/Elements/a/P50363>, <http://rdaregistry.info/Elements/a/P50364>, <http://rdaregistry.info/Elements/u/P61032> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedResourceOfAgent.en> ;
     reg:name "relatedResourceOfAgent" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11215,7 +11233,7 @@
     skos:definition "Relates an agent to resource that is associated with an agent."@en .
 
 <http://rdaregistry.info/Elements/u/P61010>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60974> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70005>, <http://rdaregistry.info/Elements/t/P70006>, <http://rdaregistry.info/Elements/t/P70011>, <http://rdaregistry.info/Elements/t/P70012>, <http://rdaregistry.info/Elements/t/P70013>, <http://rdaregistry.info/Elements/u/P60974> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedAgentOfTimespan.en> ;
     reg:name "relatedAgentOfTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11239,7 +11257,7 @@
     skos:definition "Relates a place to an agent who is associated with a place."@en .
 
 <http://rdaregistry.info/Elements/u/P61012>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60976>, <http://rdaregistry.info/Elements/u/P60979>, <http://rdaregistry.info/Elements/u/P60981>, <http://rdaregistry.info/Elements/u/P60982>, <http://rdaregistry.info/Elements/u/P60983>, <http://rdaregistry.info/Elements/u/P60984> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70001>, <http://rdaregistry.info/Elements/t/P70002>, <http://rdaregistry.info/Elements/t/P70003>, <http://rdaregistry.info/Elements/t/P70004>, <http://rdaregistry.info/Elements/u/P60976>, <http://rdaregistry.info/Elements/u/P60979>, <http://rdaregistry.info/Elements/u/P60981>, <http://rdaregistry.info/Elements/u/P60982>, <http://rdaregistry.info/Elements/u/P60983>, <http://rdaregistry.info/Elements/u/P60984> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedResourceOfTimespan.en> ;
     reg:name "relatedResourceOfTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11275,6 +11293,7 @@
     skos:definition "Relates a resource to a place that is associated with a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P61015>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70007> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedPlaceOfTimespan.en> ;
     reg:name "relatedPlaceOfTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11298,7 +11317,7 @@
     skos:definition "Relates a place to a place that is associated with a place."@en .
 
 <http://rdaregistry.info/Elements/u/P61017>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61002>, <http://rdaregistry.info/Elements/u/P61004> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70008>, <http://rdaregistry.info/Elements/u/P61002>, <http://rdaregistry.info/Elements/u/P61004> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedTimespanOfTimespan.en> ;
     reg:name "relatedTimespanOfTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11310,7 +11329,7 @@
     skos:definition "Relates a timespan to a timespan that is associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/u/P61018>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P60325> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50338>, <http://rdaregistry.info/Elements/a/P50342>, <http://rdaregistry.info/Elements/a/P50346>, <http://rdaregistry.info/Elements/a/P50350>, <http://rdaregistry.info/Elements/a/P50354>, <http://rdaregistry.info/Elements/u/P60325> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedPlaceOfAgent.en> ;
     reg:name "relatedPlaceOfAgent" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11345,6 +11364,7 @@
     skos:definition "Relates a resource to a timespan that is associated with a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P61021>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50339>, <http://rdaregistry.info/Elements/a/P50343>, <http://rdaregistry.info/Elements/a/P50347>, <http://rdaregistry.info/Elements/a/P50351>, <http://rdaregistry.info/Elements/a/P50355> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedTimespanOfAgent.en> ;
     reg:name "relatedTimespanOfAgent" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11356,6 +11376,7 @@
     skos:definition "Relates an agent to a timespan that is associated with an agent."@en .
 
 <http://rdaregistry.info/Elements/u/P61022>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50340>, <http://rdaregistry.info/Elements/a/P50344>, <http://rdaregistry.info/Elements/a/P50348>, <http://rdaregistry.info/Elements/a/P50352>, <http://rdaregistry.info/Elements/a/P50356> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedNomenOfAgent.en> ;
     reg:name "relatedNomenOfAgent" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11379,6 +11400,7 @@
     skos:definition "Relates a resource to a nomen that is associated with a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P61024>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70009> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedNomenOfTimespan.en> ;
     reg:name "relatedNomenOfTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11401,6 +11423,7 @@
     skos:definition "Relates a place to a nomen that is associated with a place."@en .
 
 <http://rdaregistry.info/Elements/u/P61026>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80009> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedNomenOfNomen.en> ;
     reg:name "relatedNomenOfNomen" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11412,6 +11435,7 @@
     skos:definition "Relates a nomen to a nomen that is associated with a nomen."@en .
 
 <http://rdaregistry.info/Elements/u/P61027>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80005>, <http://rdaregistry.info/Elements/n/P80006>, <http://rdaregistry.info/Elements/n/P80011>, <http://rdaregistry.info/Elements/n/P80012>, <http://rdaregistry.info/Elements/n/P80013> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedAgentOfNomen.en> ;
     reg:name "relatedAgentOfNomen" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11423,6 +11447,7 @@
     skos:definition "Relates a nomen to an agent who is associated with a nomen."@en .
 
 <http://rdaregistry.info/Elements/u/P61028>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80007> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedPlaceOfNomen.en> ;
     reg:name "relatedPlaceOfNomen" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11434,6 +11459,7 @@
     skos:definition "Relates a nomen to a place that is associated with a nomen."@en .
 
 <http://rdaregistry.info/Elements/u/P61029>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80008> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedTimespanOfNomen.en> ;
     reg:name "relatedTimespanOfNomen" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11445,6 +11471,7 @@
     skos:definition "Relates a nomen to a timespan that is associated with a nomen."@en .
 
 <http://rdaregistry.info/Elements/u/P61030>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80001>, <http://rdaregistry.info/Elements/n/P80002>, <http://rdaregistry.info/Elements/n/P80003>, <http://rdaregistry.info/Elements/n/P80004> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedResourceOfNomen.en> ;
     reg:name "relatedResourceOfNomen" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11480,6 +11507,7 @@
     skos:definition "Relates an agent to a resource that is changed by an agent without creating a new resource."@en .
 
 <http://rdaregistry.info/Elements/u/P61033>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50304>, <http://rdaregistry.info/Elements/a/P50310>, <http://rdaregistry.info/Elements/a/P50319>, <http://rdaregistry.info/Elements/a/P50328>, <http://rdaregistry.info/Elements/a/P50360>, <http://rdaregistry.info/Elements/u/P61033> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedEntityOfAgent.en> ;
     reg:name "relatedEntityOfAgent" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11491,7 +11519,7 @@
     skos:definition "Relates an agen to an entity that is associated with an agent."@en .
 
 <http://rdaregistry.info/Elements/u/P61034>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40068> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/P40068>, <http://rdaregistry.info/Elements/u/P61034> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedEntityOfResource.en> ;
     reg:name "relatedEntityOfResource" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11503,6 +11531,7 @@
     skos:definition "Relates a resource to an entity that is associated with a resource."@en .
 
 <http://rdaregistry.info/Elements/u/P61035>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/P70010>, <http://rdaregistry.info/Elements/u/P61035> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedEntityOfTimespan.en> ;
     reg:name "relatedEntityOfTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11514,6 +11543,7 @@
     skos:definition "Relates a timespan to an entity that is associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/u/P61036>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61036> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedEntityOfPlace.en> ;
     reg:name "relatedEntityOfPlace" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11525,6 +11555,7 @@
     skos:definition "Relates a place to an entity that is associated with a place."@en .
 
 <http://rdaregistry.info/Elements/u/P61037>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80010>, <http://rdaregistry.info/Elements/u/P61037> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedEntityOfNomen.en> ;
     reg:name "relatedEntityOfNomen" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11536,7 +11567,7 @@
     skos:definition "Relates a nomen to an entity that is associated with a nomen."@en .
 
 <http://rdaregistry.info/Elements/u/P61038>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61034>, <http://rdaregistry.info/Elements/u/P61035>, <http://rdaregistry.info/Elements/u/P61036>, <http://rdaregistry.info/Elements/u/P61037>, <http://rdaregistry.info/Elements/u/P61040>, <http://rdaregistry.info/Elements/u/P61041>, <http://rdaregistry.info/Elements/u/P61042>, <http://rdaregistry.info/Elements/u/P61043> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61034>, <http://rdaregistry.info/Elements/u/P61035>, <http://rdaregistry.info/Elements/u/P61036>, <http://rdaregistry.info/Elements/u/P61037>, <http://rdaregistry.info/Elements/u/P61038>, <http://rdaregistry.info/Elements/u/P61040>, <http://rdaregistry.info/Elements/u/P61041>, <http://rdaregistry.info/Elements/u/P61042>, <http://rdaregistry.info/Elements/u/P61043> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/relatedEntityOfEntity.en> ;
     reg:name "relatedEntityOfEntity" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11602,6 +11633,7 @@
     skos:definition "Relates an entity to a nomen that is associated with an entity."@en .
 
 <http://rdaregistry.info/Elements/u/P61044>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20324> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/u/mediumOfPerformanceOfChoreographicContent.en> ;
     reg:name "mediumOfPerformanceOfChoreographicContent" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -11609,4 +11641,588 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
     rdfs:label "has medium of performance of choreographic content"@en ;
     skos:definition "Relates a resource to a type of performer or group of performers participating, or intended to participate, in a performance of choreographic or non-musical dramatic content."@en .
+
+<http://rdaregistry.info/Elements/u/P61045>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10369> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/lyricsForResource.en> ;
+    reg:name "lyricsForResource" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is lyrics for work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61048> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61045> ;
+    skos:definition "Relates a resource to a "@en .
+
+<http://rdaregistry.info/Elements/u/P61046>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10370> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/lyricsResource.en> ;
+    reg:name "lyricsResource" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has lyrics work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61047> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61045> ;
+    skos:definition "Relates a resource to a resource "@en .
+
+<http://rdaregistry.info/Elements/u/P61047>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61047>, <http://rdaregistry.info/Elements/w/P10371> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/textResource> ;
+    reg:name "textResource" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has text work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60198> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61047> .
+
+<http://rdaregistry.info/Elements/u/P61048>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61048>, <http://rdaregistry.info/Elements/w/P10372> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/textForResource> ;
+    reg:name "textForResource" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is text for work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60198> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61047> .
+
+<http://rdaregistry.info/Elements/u/P61049>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10373> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/spokenWordResource.en> ;
+    reg:name "spokenWordResource" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has spoken word work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60198> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61049> .
+
+<http://rdaregistry.info/Elements/u/P61050>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10374> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/soundsResource.en> ;
+    reg:name "soundsResource" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has sounds work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60198> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61050> .
+
+<http://rdaregistry.info/Elements/u/P61051>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10375> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/spokenWordForResource.en> ;
+    reg:name "spokenWordForResource" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is spoken word for work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60198> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61049> .
+
+<http://rdaregistry.info/Elements/u/P61052>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10376> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/soundsForResource.en> ;
+    reg:name "soundsForResource" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is sounds for work"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60198> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61050> .
+
+<http://rdaregistry.info/Elements/u/P61053>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61055>, <http://rdaregistry.info/Elements/u/P61057>, <http://rdaregistry.info/Elements/u/P61058>, <http://rdaregistry.info/Elements/w/P10377> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByExtensionPlan.en> ;
+    reg:name "transformationByExtensionPlan" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has transformation by extension plan"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61067> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61053> ;
+    skos:definition "Relates a resource to a resource that is created by changing the extension plan of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61054>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61056>, <http://rdaregistry.info/Elements/u/P61075>, <http://rdaregistry.info/Elements/u/P61076>, <http://rdaregistry.info/Elements/w/P10378> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByExtensionPlanOf.en> ;
+    reg:name "transformationByExtensionPlanOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is transformation by extension plan of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61068> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61053> ;
+    skos:definition "Relates a resource to a resource that has an extension plan that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61055>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10379> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/sequentialVersion.en> ;
+    reg:name "sequentialVersion" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has sequential version"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61053> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61055> ;
+    skos:definition "Relates a resource to a resource that is created by changing the extension plan of a resource from integrating indeterminate to successive indeterminate."@en .
+
+<http://rdaregistry.info/Elements/u/P61056>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10380> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/sequentialVersionOf.en> ;
+    reg:name "sequentialVersionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is sequential version of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61054> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61055> ;
+    skos:definition "Relates a resource to a resource that has an extension plan that is changed from integrating indeterminate to successive indeterminate to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61057>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10381> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/serializedVersion.en> ;
+    reg:name "serializedVersion" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has serialized version"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61053> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61057> ;
+    skos:definition "Relates a resource to a resource that is created by changing the extension plan of a resource from static to successive determinate."@en .
+
+<http://rdaregistry.info/Elements/u/P61058>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10382> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/staticVersion.en> ;
+    reg:name "staticVersion" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has static version"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61053> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61058> ;
+    skos:definition "Relates a resource to a resource that is created by changing the extension plan of a resource from integrated to static."@en .
+
+<http://rdaregistry.info/Elements/u/P61059>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61061>, <http://rdaregistry.info/Elements/u/P61062>, <http://rdaregistry.info/Elements/u/P61063>, <http://rdaregistry.info/Elements/w/P10383> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByAudience.en> ;
+    reg:name "transformationByAudience" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has transformation by audience"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61069> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61059> ;
+    skos:definition "Relates a resource to a resource that is created by changing the audience of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61060>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61064>, <http://rdaregistry.info/Elements/u/P61065>, <http://rdaregistry.info/Elements/u/P61066>, <http://rdaregistry.info/Elements/w/P10384> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByAudienceOf.en> ;
+    reg:name "transformationByAudienceOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is transformation by audience of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61070> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61059> ;
+    skos:definition "Relates a resource to a resource that has an audience that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61061>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10385> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/languageVersion.en> ;
+    reg:name "languageVersion" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has language version"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61059> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61061> ;
+    skos:definition "Relates a resource to a resource that is created by changing the language audience of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61062>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10386> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/regionalVersion.en> ;
+    reg:name "regionalVersion" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has regional version"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61059> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61062> ;
+    skos:definition "Relates a resource to a resource that is created by changing the regional audience of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61063>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10387> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/carrierVersion.en> ;
+    reg:name "carrierVersion" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has carrier version"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61059> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61063> ;
+    skos:definition "Relates a resource to a resource that is created by changing the carrier of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61064>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10388> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/languageVersionOf.en> ;
+    reg:name "languageVersionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is language version of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61060> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61061> ;
+    skos:definition "Relates a resource to a resource that has a language audience that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61065>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10389> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/regionalVersionOf.en> ;
+    reg:name "regionalVersionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is regional version of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61060> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61062> ;
+    skos:definition "Relates a resource to a resource that has a regional audience that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61066>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10390> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/carrierVersionOf.en> ;
+    reg:name "carrierVersionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is carrier version of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61060> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61063> ;
+    skos:definition "Relates a resource to a resource that has a carrier that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61067>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61067> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByPolicy.en> ;
+    reg:name "transformationByPolicy" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has transformation by policy"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61069> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61067> ;
+    skos:definition "Relates a resource to a resource that is created by changing the scope or editorial policy of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61068>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61068> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByPolicyOf.en> ;
+    reg:name "transformationByPolicyOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is transformation by policy of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61070> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61067> ;
+    skos:definition "Relates a resource to a resource that has a policy that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61069>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61069>, <http://rdaregistry.info/Elements/u/P61071>, <http://rdaregistry.info/Elements/u/P61073> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformation.en> ;
+    reg:name "transformation" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has transformation"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60313> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61069> ;
+    skos:definition "Relates a resource to a resource that is created by changing the scope or editorial policy, the genre or literary form, the target audience, or the style of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61070>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/u/P61070>, <http://rdaregistry.info/Elements/u/P61072>, <http://rdaregistry.info/Elements/u/P61074> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationOf.en> ;
+    reg:name "transformationOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is transformation of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60313> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61069> ;
+    skos:definition "Relates a resource to a resource that has a scope or editorial policy, genre or literary form, target audience, or style that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61071>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByStyle.en> ;
+    reg:name "transformationByStyle" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has transformation by style"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61069> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61071> ;
+    skos:definition "Relates a resource to a resource that is created by changing the style of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61072>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByStyleOf.en> ;
+    reg:name "transformationByStyleOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is transformation by style of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61070> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61071> ;
+    skos:definition "Relates a resource to a resource that has a style that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61073>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByGenre.en> ;
+    reg:name "transformationByGenre" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has transformation by genre"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61069> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61073> ;
+    skos:definition "Relates a resource to a resource that is created by changing the genre or literary form of a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61074>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/transformationByGenreOf.en> ;
+    reg:name "transformationByGenreOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is transformation by genre of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61070> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61073> ;
+    skos:definition "Relates a resource to a resource that has a genre that is changed to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61075>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10391> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/serializedVersionOf.en> ;
+    reg:name "serializedVersionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is serialized version of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61054> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61057> ;
+    skos:definition "Relates a resource to a resource that has an extension plan that is changed from successive determinate to static to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61076>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10392> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/staticVersionOf.en> ;
+    reg:name "staticVersionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is static version of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P61054> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61058> ;
+    skos:definition "Relates a resource to a resource that has an extension plan that is changed from static to integrated to create a resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61077>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50447> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/reviserOf.en> ;
+    reg:name "reviserOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is reviser of"@en ;
+    skos:definition "Relates an agent to a resource that includes a contribution of making changes to the content."@en .
+
+<http://rdaregistry.info/Elements/u/P61078>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50448> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributorToAmalgamatedContentOf.en> ;
+    reg:name "contributorToAmalgamatedContentOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is contributor to amalgamated content of"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61078> ;
+    skos:definition "Relates an agent to a resource that includes a contribution to a seamless mix of kinds of content"@en .
+
+<http://rdaregistry.info/Elements/u/P61079>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50449> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributorToPerformanceContentOf.en> ;
+    reg:name "contributorToPerformanceContentOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is contributor to performance content of"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61079> ;
+    skos:definition "Relates an agent to a resource that includes a contribution to a performance."@en .
+
+<http://rdaregistry.info/Elements/u/P61080>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50450> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/editorOfTextOf.en> ;
+    reg:name "editorOfTextOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is editor of text of"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61080> ;
+    skos:definition "Relates an agent to a resource that includes a contribution of amending text created by other agents in order to meet publication standards such as consistency, clarity, and style."@en .
+
+<http://rdaregistry.info/Elements/u/P61081>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50451> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributorToAggregatedContentOf.en> ;
+    reg:name "contributorToAggregatedContentOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is contributor to aggregated content of"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61081> ;
+    skos:definition "Relates an agent to a resource that includes a contribution to an aggregation"@en .
+
+<http://rdaregistry.info/Elements/u/P61082>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20327> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/reviser.en> ;
+    reg:name "authorOfExpressionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has reviser"@en ;
+    skos:definition "Relates a resource to an agent who contributes to an expression by making changes to the content."@en .
+
+<http://rdaregistry.info/Elements/u/P61083>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20328> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributorToAmalgamatedContent.en> ;
+    reg:name "contributorToAmalgamatedContent" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has contributor to amalgamated content"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61078> ;
+    skos:definition "Relates a resource to an agent who contributes to an expression that is a seamless mix of kinds of content."@en .
+
+<http://rdaregistry.info/Elements/u/P61084>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20329> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributorToPerformanceContent.en> ;
+    reg:name "contributorToPerformanceContent" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has contributor to performance content"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61079> ;
+    skos:definition "Relates a resource to an agent who contributes to an expression that is a performance."@en .
+
+<http://rdaregistry.info/Elements/u/P61085>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20330> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/editorOfText.en> ;
+    reg:name "editorOfText" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has editor of text"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61080> ;
+    skos:definition "Relates a resource to an agent who contributes to an expression by amending text created by other agents in order to meet publication standards such as consistency, clarity, and style,"@en .
+
+<http://rdaregistry.info/Elements/u/P61086>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20331> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/contributorToAggregatedContent.en> ;
+    reg:name "contributorToAggregatedContent" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has contributor to aggregated content"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61081> ;
+    skos:definition "Relates a resource to an agent who contributes to an expression that is an aggregation."@en .
+
+<http://rdaregistry.info/Elements/u/P61087>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20319> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/aggregates.en> ;
+    reg:name "aggregates" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "aggregates"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61087> ;
+    skos:definition "Relates a resource to a resource that is chosen as part of the plan of an aggregating resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61088>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20320> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/aggregatedBy.en> ;
+    reg:name "aggregatedBy" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is aggregated by"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61087> ;
+    skos:definition "Relates a resource to a resource that aggregates a resource as part of the plan of an aggregating resource."@en .
+
+<http://rdaregistry.info/Elements/u/P61089>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/P20323> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/interactivityMode.en> ;
+    reg:name "interactivityMode" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has interactivity mode"@en ;
+    skos:definition "Relates a resource to a capacity of content to respond to actions performed by the user."@en .
+
+<http://rdaregistry.info/Elements/u/P61090>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50453> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/aggregatorOf.en> ;
+    reg:name "aggregatorOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is aggregator of"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61090> ;
+    skos:definition "Relates an agent to a resource that involves a responsibility for aggregation by selecting and arranging its components."@en .
+
+<http://rdaregistry.info/Elements/u/P61091>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10393> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/aggregator.en> ;
+    reg:name "aggregator" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has aggregator"@en ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61090> ;
+    skos:definition "Relates a resource to an agent who is responsible for creating a resource that is an aggregation by selecting and arranging its components."@en .
+
+<http://rdaregistry.info/Elements/u/P61092>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10394>, <http://rdaregistry.info/Elements/w/P10396> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/criminalDefendant.en> ;
+    reg:name "criminalDefendant" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has criminal defendant"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60462> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61092> ;
+    skos:definition "Relates a resource to an agent who is accused in a criminal proceeding."@en .
+
+<http://rdaregistry.info/Elements/u/P61093>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50454>, <http://rdaregistry.info/Elements/a/P50455> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/criminalDefendantOf.en> ;
+    reg:name "criminalDefendantOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is criminal defendant of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60698> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61092> ;
+    skos:definition "Relates an agent to a resource that involves a responsibility for being accused in a criminal proceeding."@en .
+
+<http://rdaregistry.info/Elements/u/P61094>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10395>, <http://rdaregistry.info/Elements/w/P10397> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/civilDefendant.en> ;
+    reg:name "civilDefendant" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "has civil defendant"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60462> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61094> ;
+    skos:definition "Relates a resource to an agent who is sued in a civil proceeding."@en .
+
+<http://rdaregistry.info/Elements/u/P61095>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/a/P50456>, <http://rdaregistry.info/Elements/a/P50457> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/u/civilDefendantOf.en> ;
+    reg:name "civilDefendantOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/u/> ;
+    rdfs:label "is civil defendant of"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/u/P60698> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/u/P61094> ;
+    skos:definition "Relates an agent to a resource that involves a responsibility for being sued in a civil proceeding."@en .
 

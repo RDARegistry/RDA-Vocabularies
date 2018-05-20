@@ -10,6 +10,10 @@
     a skos:Concept ;
     skos:prefLabel "Published"@en .
 
+<http://metadataregistry.org/uri/RegStatus/1008>
+    a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
+
 <http://rdaregistry.info/Elements/p/object/>
     dc:title "RDA Place object properties"@en ;
     skos:note "Object properties derived from RDA elements and relationship designators with the domain of RDA Place. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
@@ -52,7 +56,7 @@
     owl:inverseOf <http://rdaregistry.info/Elements/n/object/P80088> .
 
 <http://rdaregistry.info/Elements/p/object/P70004>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/object/P70023>, <http://rdaregistry.info/Elements/p/object/P70035> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/object/P70023>, <http://rdaregistry.info/Elements/p/object/P70035>, <http://rdaregistry.info/Elements/p/object/P70052> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/object/relatedWorkOfPlace.en> ;
     reg:name "relatedWorkOfPlace"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -150,7 +154,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/object/> ;
     rdfs:label "has related timespan of place"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10010> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70011>, <http://rdaregistry.info/Elements/p/object/P70013>, <http://rdaregistry.info/Elements/x/P00011> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70011>, <http://rdaregistry.info/Elements/p/object/P70013>, <http://rdaregistry.info/Elements/x/object/P00011> ;
     owl:inverseOf <http://rdaregistry.info/Elements/t/object/P70007> .
 
 <http://rdaregistry.info/Elements/p/object/P70012>
@@ -357,11 +361,11 @@
 <http://rdaregistry.info/Elements/p/object/P70029>
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/object/otherPlaceAssociatedWithCorporateBodyOf.en> ;
     reg:name "otherPlaceAssociatedWithCorporateBodyOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/object/> ;
-    rdfs:label "is other place associated with corporate body of"@en ;
+    rdfs:label "is other place associated with corporate body of (Deprecated)"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10005> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70029>, <http://rdaregistry.info/Elements/p/object/P70030> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50260> .
@@ -620,6 +624,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/object/> ;
     rdfs:label "is place of capture of representative expression of"@en ;
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70052> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70052>, <http://rdaregistry.info/Elements/p/object/P70004> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10354> .
 

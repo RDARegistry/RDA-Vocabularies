@@ -8,10 +8,10 @@
     xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
 
-<!-- Element Set: RDA Time-span properties -->
+<!-- Element Set: RDA Timespan properties -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/">
-  <dc:title xml:lang="en">RDA Time-span properties</dc:title>
-  <skos:note  xml:lang="en">Properties derived from RDA elements and relationship designators with the domain of RDA Time-span. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry.</skos:note>
+  <dc:title xml:lang="en">RDA Timespan properties</dc:title>
+  <skos:note  xml:lang="en">Properties derived from RDA elements and relationship designators with the domain of RDA Timespan. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry.</skos:note>
 </rdf:Description>
 
 <!-- Properties -->
@@ -92,6 +92,7 @@
   <rdakit:toolkitDefinition xml:lang="en">The time at which a timespan starts.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70039" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60998" />
 </rdf:Description>
 
 <!-- Property: is copyright date of -->
@@ -326,6 +327,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70024" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70024" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60984" />
 </rdf:Description>
 
 <!-- Property: is date of manifestation of -->
@@ -349,6 +351,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70020" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70020" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60984" />
 </rdf:Description>
 
 <!-- Property: is date of manufacture of -->
@@ -409,23 +412,22 @@
 </rdf:Description>
 
 <!-- Property: is date of representative expression of -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70022">
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70057">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">dateOfRepresentativeExpressionOf</reg:name>
   <rdfs:label xml:lang="en">is date of representative expression of</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfRepresentativeExpressionOf.en" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
-  <rdakit:toolkitLabel xml:lang="en">date of representative expression of</rdakit:toolkitLabel>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70046" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70022" />
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <skos:definition xml:lang="en">Relates a timespan to a work that is associated with an earliest timespan of a representative expression.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">date of representative expression of</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">A work that is associated with an earlist timespan of a representative expression.</rdakit:toolkitDefinition>
-  <skos:altLabel xml:lang="en">date of work</skos:altLabel>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70022" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">dateOfRepresentativeExpressionOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60984" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70057" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70057" />
 </rdf:Description>
 
 <!-- Property: is date of termination of -->
@@ -454,9 +456,9 @@
   <reg:name xml:lang="en">dateOfUsageOf</reg:name>
   <rdfs:label xml:lang="en">is date of usage of</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfUsageOf.en" />
-  <skos:definition xml:lang="en">Relates a timespan to a name of agent used during a timespan.</skos:definition>
+  <skos:definition xml:lang="en">Relates a timespan to an appellation of an RDA entity used during a timespan.</skos:definition>
   <rdakit:toolkitLabel xml:lang="en">date of usage of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A name of agent used during a timespan.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An appellation of an RDA entity used during a timespan.</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
@@ -464,6 +466,26 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70009" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60986" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70056" />
+</rdf:Description>
+
+<!-- Property: is date of work of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70022">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">dateOfWorkOf</reg:name>
+  <rdfs:label xml:lang="en">is date of work of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfWorkOf.en" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:toolkitLabel xml:lang="en">date of work of</rdakit:toolkitLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70001" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70046" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70022" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <skos:definition xml:lang="en">Relates a timespan to a work that is associated with an earliest timespan of a work.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is associated with an earliest timespan of a work.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70022" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60984" />
 </rdf:Description>
 
 <!-- Property: is duration of -->
@@ -516,6 +538,7 @@
   <skos:scopeNote xml:lang="en">A time may be represented at different levels of granularity by a calendrical timespan.</skos:scopeNote>
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70040" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61000" />
 </rdf:Description>
 
 <!-- Property: is epoch of -->
@@ -534,6 +557,7 @@
   <skos:definition xml:lang="en">Relates a timespan to a work that refers to measurements of position for a body or orientation for an orbit.</skos:definition>
   <rdakit:toolkitDefinition xml:lang="en">A work that refers to measurements of position for a body or orientation for an orbit.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70021" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60991" />
 </rdf:Description>
 
 <!-- Property: is equinox of -->
@@ -552,6 +576,7 @@
   <skos:definition xml:lang="en">Relates a timespan to a work that uses a point of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°.</skos:definition>
   <rdakit:toolkitDefinition xml:lang="en">A work that uses a point of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70042" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60992" />
 </rdf:Description>
 
 <!-- Property: has identifier for timespan -->
@@ -627,6 +652,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70034" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70034" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61002" />
 </rdf:Description>
 
 <!-- Property: has part timespan -->
@@ -645,6 +671,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70035" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70035" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61004" />
 </rdf:Description>
 
 <!-- Property: is period of activity of agent of -->
@@ -663,6 +690,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70005" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70044" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70051" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60990" />
 </rdf:Description>
 
 <!-- Property: is period of activity of collective agent of -->
@@ -683,6 +711,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70043" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70053" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70052" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60990" />
 </rdf:Description>
 
 <!-- Property: is period of activity of corporate body of -->
@@ -702,6 +731,7 @@
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70052" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70043" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60990" />
 </rdf:Description>
 
 <!-- Property: is period of activity of family of -->
@@ -720,6 +750,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70037" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70052" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70053" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60990" />
 </rdf:Description>
 
 <!-- Property: is period of activity of person of -->
@@ -739,6 +770,7 @@
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70051" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70044" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60990" />
 </rdf:Description>
 
 <!-- Property: has preferred name of timespan -->
@@ -779,6 +811,7 @@
   <rdakit:toolkitDefinition xml:lang="en">An agent who is associated with a timespan.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70051" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61010" />
 </rdf:Description>
 
 <!-- Property: has related collective agent of timespan -->
@@ -800,6 +833,7 @@
   <rdakit:toolkitDefinition xml:lang="en">A collective agent who is associated with a timespan.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70052" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61010" />
 </rdf:Description>
 
 <!-- Property: has related corporate body of timespan -->
@@ -819,6 +853,7 @@
   <rdakit:toolkitDefinition xml:lang="en">A corporate body who is associated with a timespan.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70036" />
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61010" />
 </rdf:Description>
 
 <!-- Property: has related expression of timespan -->
@@ -839,6 +874,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70024" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70041" />
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61012" />
 </rdf:Description>
 
 <!-- Property: has related family of timespan -->
@@ -858,6 +894,7 @@
   <rdakit:toolkitDefinition xml:lang="en">A family who is associated with a timespan.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70037" />
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61010" />
 </rdf:Description>
 
 <!-- Property: has related item of timespan -->
@@ -876,6 +913,7 @@
   <rdakit:toolkitLabel xml:lang="en">related item of timespan</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">An item that is associated with a timespan.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61012" />
 </rdf:Description>
 
 <!-- Property: has related manifestation of timespan -->
@@ -895,6 +933,7 @@
   <rdakit:toolkitDefinition xml:lang="en">A manifestation that is associated with a timespan.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70020" />
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61012" />
 </rdf:Description>
 
 <!-- Property: has related nomen of timespan -->
@@ -915,6 +954,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70016" />
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70056" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61024" />
 </rdf:Description>
 
 <!-- Property: has related person of timespan -->
@@ -934,6 +974,7 @@
   <rdakit:toolkitDefinition xml:lang="en">A person who is associated with a timespan.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70038" />
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61010" />
 </rdf:Description>
 
 <!-- Property: has related place of timespan -->
@@ -952,6 +993,7 @@
   <rdakit:toolkitLabel xml:lang="en">related place of timespan</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">A place that is associated with a timespan.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61015" />
 </rdf:Description>
 
 <!-- Property: has related RDA entity of timespan -->
@@ -977,6 +1019,7 @@
   <rdakit:toolkitLabel xml:lang="en">related RDA entity of timespan</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">An RDA entity that is associated with a timespan.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61035" />
 </rdf:Description>
 
 <!-- Property: has related timespan of timespan -->
@@ -997,6 +1040,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70034" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70035" />
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61017" />
 </rdf:Description>
 
 <!-- Property: has related work of timespan -->
@@ -1020,6 +1064,8 @@
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70054" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70055" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/P70057" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61012" />
 </rdf:Description>
 
 <!-- Property: is subject timespan of -->

@@ -408,6 +408,16 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70056>,
         <http://rdaregistry.info/Elements/t/datatype/P70009> .
 
+<http://rdaregistry.info/Elements/t/datatype/P70057> a rdf:Property ;
+    rdfs:label "is date of representative expression of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/dateOfRepresentativeExpressionOf.en> ;
+    reg:name "dateOfRepresentativeExpressionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70057>,
+        <http://rdaregistry.info/Elements/t/datatype/P70001> .
+
 <http://rdaregistry.info/Elements/t/datatype/P70002> a rdf:Property ;
     rdfs:label "has related expression of timespan"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70024>,
@@ -457,25 +467,15 @@
         <http://rdaregistry.info/Elements/t/datatype/P70016> .
 
 <http://rdaregistry.info/Elements/t/datatype/P70022> a rdf:Property ;
-    rdfs:label "is date of representative expression of"@en ;
+    rdfs:label "is date of work of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70046> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/dateOfRepresentativeExpressionOf.en> ;
-    reg:name "dateOfRepresentativeExpressionOf" ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/dateOfWorkOf.en> ;
+    reg:name "dateOfWorkOf" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70022>,
         <http://rdaregistry.info/Elements/t/datatype/P70001> .
-
-<http://rdaregistry.info/Elements/t/datatype/P70024> a rdf:Property ;
-    rdfs:label "is date of expression of"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/dateOfExpressionOf.en> ;
-    reg:name "dateOfExpressionOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70024>,
-        <http://rdaregistry.info/Elements/t/datatype/P70002> .
 
 <http://rdaregistry.info/Elements/t/datatype/P70037> a rdf:Property ;
     rdfs:label "is date associated with family of"@en ;
@@ -522,9 +522,21 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70017>,
         <http://rdaregistry.info/Elements/t/datatype/P70016> .
 
+<http://rdaregistry.info/Elements/t/datatype/P70024> a rdf:Property ;
+    rdfs:label "is date of expression of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70024> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/dateOfExpressionOf.en> ;
+    reg:name "dateOfExpressionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70024>,
+        <http://rdaregistry.info/Elements/t/datatype/P70002> .
+
 <http://rdaregistry.info/Elements/t/datatype/P70016> a rdf:Property ;
     rdfs:label "has appellation of timespan"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70017>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70016>,
+        <http://rdaregistry.info/Elements/t/datatype/P70017>,
         <http://rdaregistry.info/Elements/t/datatype/P70018> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/appellationOfTimespan.en> ;
     reg:name "appellationOfTimespan" ;
@@ -536,7 +548,8 @@
 
 <http://rdaregistry.info/Elements/t/datatype/P70038> a rdf:Property ;
     rdfs:label "is date associated with person of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70044> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70038>,
+        <http://rdaregistry.info/Elements/t/datatype/P70044> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/dateAssociatedWithPersonOf.en> ;
     reg:name "dateAssociatedWithPersonOf" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -551,7 +564,8 @@
         <http://rdaregistry.info/Elements/t/datatype/P70022>,
         <http://rdaregistry.info/Elements/t/datatype/P70042>,
         <http://rdaregistry.info/Elements/t/datatype/P70054>,
-        <http://rdaregistry.info/Elements/t/datatype/P70055> ;
+        <http://rdaregistry.info/Elements/t/datatype/P70055>,
+        <http://rdaregistry.info/Elements/t/datatype/P70057> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/relatedWorkOfTimespan.en> ;
     reg:name "relatedWorkOfTimespan"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -562,7 +576,8 @@
 
 <http://rdaregistry.info/Elements/t/datatype/P70036> a rdf:Property ;
     rdfs:label "is date associated with corporate body of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70043> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70036>,
+        <http://rdaregistry.info/Elements/t/datatype/P70043> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/dateAssociatedWithCorporateBodyOf.en> ;
     reg:name "dateAssociatedWithCorporateBodyOf" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -573,7 +588,8 @@
 
 <http://rdaregistry.info/Elements/t/datatype/P70020> a rdf:Property ;
     rdfs:label "is date of manifestation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70025>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70020>,
+        <http://rdaregistry.info/Elements/t/datatype/P70025>,
         <http://rdaregistry.info/Elements/t/datatype/P70026>,
         <http://rdaregistry.info/Elements/t/datatype/P70027>,
         <http://rdaregistry.info/Elements/t/datatype/P70028> ;
@@ -597,6 +613,6 @@
 <http://metadataregistry.org/uri/RegStatus/1001> a skos:Concept ;
     skos:prefLabel "Published"@en .
 
-<http://rdaregistry.info/Elements/t/datatype/> dc:title "RDA Time-span datatype properties"@en ;
-    skos:note "Datatype properties derived from RDA elements and relationship designators with the domain of RDA Time-span. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
+<http://rdaregistry.info/Elements/t/datatype/> dc:title "RDA Timespan datatype properties"@en ;
+    skos:note "Datatype properties derived from RDA elements and relationship designators with the domain of RDA Timespan. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
 

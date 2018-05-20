@@ -9,6 +9,10 @@
     a skos:Concept ;
     skos:prefLabel "Published"@en .
 
+<http://metadataregistry.org/uri/RegStatus/1008>
+    a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
+
 <http://rdaregistry.info/Elements/p/datatype/>
     dc:title "RDA Place datatype properties"@en ;
     skos:note "Datatype properties derived from RDA elements and relationship designators with the domain of RDA Place. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
@@ -45,7 +49,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70003>, <http://rdaregistry.info/Elements/p/datatype/P70001> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70004>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70023>, <http://rdaregistry.info/Elements/p/datatype/P70035> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70023>, <http://rdaregistry.info/Elements/p/datatype/P70035>, <http://rdaregistry.info/Elements/p/datatype/P70052> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/relatedWorkPlace.en> ;
     reg:name "relatedWorkPlace"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -204,7 +208,7 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70018>, <http://rdaregistry.info/Elements/p/datatype/P70019> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70019>
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70020> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70019>, <http://rdaregistry.info/Elements/p/datatype/P70020> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/appellationOfPlace.en> ;
     reg:name "appellationOfPlace" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -243,7 +247,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
     rdfs:label "has note on place"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70022>, <http://rdaregistry.info/Elements/x/P00015> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70022>, <http://rdaregistry.info/Elements/x/object/P00015> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70023>
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70034>, <http://rdaregistry.info/Elements/p/datatype/P70036>, <http://rdaregistry.info/Elements/p/datatype/P70037> ;
@@ -309,14 +313,15 @@
 <http://rdaregistry.info/Elements/p/datatype/P70029>
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/otherPlaceAssociatedWithCorporateBodyOf.en> ;
     reg:name "otherPlaceAssociatedWithCorporateBodyOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
-    rdfs:label "is other place associated with corporate body of"@en ;
+    rdfs:label "is other place associated with corporate body of (Deprecated)"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70029>, <http://rdaregistry.info/Elements/p/datatype/P70030> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70030>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70030> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/placeAssociatedWithCorporateBodyOf.en> ;
     reg:name "placeAssociatedWithCorporateBodyOf" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -548,5 +553,5 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
     rdfs:label "is place of capture of representative expression of"@en ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70052> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70052>, <http://rdaregistry.info/Elements/p/datatype/P70004> .
 

@@ -746,6 +746,7 @@
   <reg:name xml:lang="hu">kapcsolódóMűHely</reg:name>
   <rdfs:label xml:lang="hu">van kapcsolódó műve (hely)</rdfs:label>
   <skos:definition xml:lang="hu">Egy helyet hozzákapcsol egy műhöz, amely kötődik egy éppen leírt helyhez.</skos:definition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70052" />
 </rdf:Description>
 
 <!-- Property: has related nomen of place -->
@@ -987,16 +988,16 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/datatype/P70022" />
 </rdf:Description>
 
-<!-- Property: is other place associated with corporate body of -->
+<!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/p/P70029">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/p/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">otherPlaceAssociatedWithCorporateBodyOf</reg:name>
-  <rdfs:label xml:lang="en">is other place associated with corporate body of</rdfs:label>
+  <rdfs:label xml:lang="en">is other place associated with corporate body of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/p/otherPlaceAssociatedWithCorporateBodyOf.en" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10009" />
-  <rdakit:toolkitLabel xml:lang="en">other place associated with corporate body of</rdakit:toolkitLabel>
+  <rdakit:toolkitLabel xml:lang="en">other place associated with corporate body of (Deprecated)</rdakit:toolkitLabel>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/object/P70029" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/p/P70030" />
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
@@ -1194,6 +1195,7 @@
   <rdakit:toolkitDefinition xml:lang="en">A work that has content of a representative expression recorded, filmed, etc. in a place.</rdakit:toolkitDefinition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60966" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/datatype/P70052" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/p/P70004" />
 </rdf:Description>
 
 <!-- Property: is place of death of -->
@@ -1451,5 +1453,8 @@
 <!-- Status properties used in this document  -->
     <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
         <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
+        <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
     </skos:Concept>
 </rdf:RDF>

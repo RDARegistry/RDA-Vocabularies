@@ -45,7 +45,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70022>,
-        <http://rdaregistry.info/Elements/x/P00015> .
+        <http://rdaregistry.info/Elements/x/object/P00015> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70028> a rdf:Property ;
     rdfs:label "is location of conference, etc. of"@en ;
@@ -58,10 +58,10 @@
         <http://rdaregistry.info/Elements/p/datatype/P70030> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70029> a rdf:Property ;
-    rdfs:label "is other place associated with corporate body of"@en ;
+    rdfs:label "is other place associated with corporate body of (Deprecated)"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/otherPlaceAssociatedWithCorporateBodyOf.en> ;
     reg:name "otherPlaceAssociatedWithCorporateBodyOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70029>,
@@ -85,14 +85,8 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70044> .
 
-<http://rdaregistry.info/Elements/p/datatype/P70052> a rdf:Property ;
-    rdfs:label "is place of capture of representative expression of"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/placeOfCaptureOfRepresentativeExpressionOf.en> ;
-    reg:name "placeOfCaptureOfRepresentativeExpressionOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70052> .
+<http://metadataregistry.org/uri/RegStatus/1008> a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
 
 <http://rdaregistry.info/Elements/p/datatype/P70002> a rdf:Property ;
     rdfs:label "has preferred name for place"@en ;
@@ -358,6 +352,16 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70051>,
         <http://rdaregistry.info/Elements/p/datatype/P70016> .
 
+<http://rdaregistry.info/Elements/p/datatype/P70052> a rdf:Property ;
+    rdfs:label "is place of capture of representative expression of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/placeOfCaptureOfRepresentativeExpressionOf.en> ;
+    reg:name "placeOfCaptureOfRepresentativeExpressionOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70052>,
+        <http://rdaregistry.info/Elements/p/datatype/P70004> .
+
 <http://rdaregistry.info/Elements/p/datatype/P70001> a rdf:Property ;
     rdfs:label "has name of place"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70002>,
@@ -369,18 +373,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70001>,
         <http://rdaregistry.info/Elements/p/datatype/P70019> .
-
-<http://rdaregistry.info/Elements/p/datatype/P70004> a rdf:Property ;
-    rdfs:label "has related work (place)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70023>,
-        <http://rdaregistry.info/Elements/p/datatype/P70035> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/relatedWorkPlace.en> ;
-    reg:name "relatedWorkPlace"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70004>,
-        <http://rdaregistry.info/Elements/p/datatype/P70013> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70008> a rdf:Property ;
     rdfs:label "has related agent (place)"@en ;
@@ -482,15 +474,18 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70042>,
         <http://rdaregistry.info/Elements/p/datatype/P70021> .
 
-<http://rdaregistry.info/Elements/p/datatype/P70030> a rdf:Property ;
-    rdfs:label "is place associated with corporate body of"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/placeAssociatedWithCorporateBodyOf.en> ;
-    reg:name "placeAssociatedWithCorporateBodyOf" ;
+<http://rdaregistry.info/Elements/p/datatype/P70004> a rdf:Property ;
+    rdfs:label "has related work (place)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70023>,
+        <http://rdaregistry.info/Elements/p/datatype/P70035>,
+        <http://rdaregistry.info/Elements/p/datatype/P70052> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/relatedWorkPlace.en> ;
+    reg:name "relatedWorkPlace"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70030>,
-        <http://rdaregistry.info/Elements/p/datatype/P70016> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70004>,
+        <http://rdaregistry.info/Elements/p/datatype/P70013> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70014> a rdf:Property ;
     rdfs:label "has related person (place)"@en ;
@@ -506,17 +501,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70014>,
         <http://rdaregistry.info/Elements/p/datatype/P70008> .
 
-<http://rdaregistry.info/Elements/p/datatype/P70019> a rdf:Property ;
-    rdfs:label "has appellation of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70020> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/appellationOfPlace.en> ;
-    reg:name "appellationOfPlace" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70019>,
-        <http://rdaregistry.info/Elements/p/datatype/P70012> .
-
 <http://rdaregistry.info/Elements/p/datatype/P70023> a rdf:Property ;
     rdfs:label "is coordinates of cartographic content of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70034>,
@@ -529,6 +513,29 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70023>,
         <http://rdaregistry.info/Elements/p/datatype/P70004> .
+
+<http://rdaregistry.info/Elements/p/datatype/P70030> a rdf:Property ;
+    rdfs:label "is place associated with corporate body of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70030> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/placeAssociatedWithCorporateBodyOf.en> ;
+    reg:name "placeAssociatedWithCorporateBodyOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70030>,
+        <http://rdaregistry.info/Elements/p/datatype/P70016> .
+
+<http://rdaregistry.info/Elements/p/datatype/P70019> a rdf:Property ;
+    rdfs:label "has appellation of place"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70019>,
+        <http://rdaregistry.info/Elements/p/datatype/P70020> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/datatype/appellationOfPlace.en> ;
+    reg:name "appellationOfPlace" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70019>,
+        <http://rdaregistry.info/Elements/p/datatype/P70012> .
 
 <http://rdaregistry.info/Elements/p/datatype/P70021> a rdf:Property ;
     rdfs:label "is place of manifestation of"@en ;
