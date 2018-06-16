@@ -585,8 +585,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10078> .
 
 <http://rdaregistry.info/Elements/e/object/P20233> a rdf:Property ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/object/P20203>,
-        <http://rdaregistry.info/Elements/e/object/P20204> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/object/derivativeExpressionRelationship.en> ;
     reg:name "derivativeExpressionRelationship"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
@@ -597,7 +595,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20233> .
 
 <http://rdaregistry.info/Elements/e/object/P20235> a rdf:Property ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/object/P20169> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/object/sequentialExpressionRelationship.en> ;
     reg:name "sequentialExpressionRelationship"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
@@ -608,8 +605,6 @@
     owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20235> .
 
 <http://rdaregistry.info/Elements/e/object/P20236> a rdf:Property ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/object/P20074>,
-        <http://rdaregistry.info/Elements/e/object/P20145> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/object/wholePartExpressionRelationship.en> ;
     reg:name "wholePartExpressionRelationship"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
@@ -1166,6 +1161,18 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20073>,
         <http://rdaregistry.info/Elements/e/object/P20153> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20123> .
+
+<http://rdaregistry.info/Elements/e/object/P20074> a rdf:Property ;
+    rdfs:label "is part of expression"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/object/partOfExpression.en> ;
+    reg:name "partOfExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/object/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20074>,
+        <http://rdaregistry.info/Elements/e/object/P20205> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20145> .
 
 <http://rdaregistry.info/Elements/e/object/P20075> a rdf:Property ;
     rdfs:label "is replaced in part by expression"@en ;
@@ -1850,6 +1857,18 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20144>,
         <http://rdaregistry.info/Elements/e/object/P20169> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20138> .
+
+<http://rdaregistry.info/Elements/e/object/P20145> a rdf:Property ;
+    rdfs:label "has part expression"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/object/partExpression.en> ;
+    reg:name "partExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/object/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20145>,
+        <http://rdaregistry.info/Elements/e/object/P20205> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20074> .
 
 <http://rdaregistry.info/Elements/e/object/P20146> a rdf:Property ;
     rdfs:label "is errata to expression"@en ;
@@ -2738,18 +2757,6 @@
         <http://rdaregistry.info/Elements/e/object/P20039> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50070> .
 
-<http://rdaregistry.info/Elements/e/object/P20074> a rdf:Property ;
-    rdfs:label "is part of expression"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/e/object/partOfExpression.en> ;
-    reg:name "partOfExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/object/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20074>,
-        <http://rdaregistry.info/Elements/e/object/P20205> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20145> .
-
 <http://rdaregistry.info/Elements/e/object/P20114> a rdf:Property ;
     rdfs:label "is imitated as expression"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/object/P20142> ;
@@ -2775,18 +2782,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20141>,
         <http://rdaregistry.info/Elements/e/object/P20204> ;
     owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20171> .
-
-<http://rdaregistry.info/Elements/e/object/P20145> a rdf:Property ;
-    rdfs:label "has part expression"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/e/object/partExpression.en> ;
-    reg:name "partExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/object/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20145>,
-        <http://rdaregistry.info/Elements/e/object/P20205> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/e/object/P20074> .
 
 <http://rdaregistry.info/Elements/e/object/P20171> a rdf:Property ;
     rdfs:label "is translated as"@en ;

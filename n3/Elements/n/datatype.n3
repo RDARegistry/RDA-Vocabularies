@@ -228,7 +228,6 @@
 
 <http://rdaregistry.info/Elements/n/datatype/P80035> a rdf:Property ;
     rdfs:label "is identifier for corporate body of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80054> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/identifierForCorporateBodyOf.en> ;
     reg:name "identifierForCorporateBodyOf" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -239,7 +238,6 @@
 
 <http://rdaregistry.info/Elements/n/datatype/P80036> a rdf:Property ;
     rdfs:label "is identifier for family of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80055> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/identifierForFamilyOf.en> ;
     reg:name "identifierForFamilyOf" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -250,7 +248,6 @@
 
 <http://rdaregistry.info/Elements/n/datatype/P80037> a rdf:Property ;
     rdfs:label "is identifier for person of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80056> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/identifierForPersonOf.en> ;
     reg:name "identifierForPersonOf" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -278,6 +275,16 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80046>,
         <http://rdaregistry.info/Elements/n/datatype/P80038> .
+
+<http://rdaregistry.info/Elements/n/datatype/P80047> a rdf:Property ;
+    rdfs:label "is identifier for item of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/identifierForItemOf.en> ;
+    reg:name "identifierForItemOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80047>,
+        <http://rdaregistry.info/Elements/n/datatype/P80016> .
 
 <http://rdaregistry.info/Elements/n/datatype/P80050> a rdf:Property ;
     rdfs:label "is identifier for timespan of"@en ;
@@ -1265,16 +1272,41 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80027>,
         <http://rdaregistry.info/Elements/n/datatype/P80045> .
 
-<http://rdaregistry.info/Elements/n/datatype/P80047> a rdf:Property ;
-    rdfs:label "is identifier for item of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80047> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/identifierForItemOf.en> ;
-    reg:name "identifierForItemOf" ;
+<http://rdaregistry.info/Elements/n/datatype/P80054> a rdf:Property ;
+    rdfs:label "is name of corporate body of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80144>,
+        <http://rdaregistry.info/Elements/n/datatype/P80147> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/nameOfCorporateBodyOf.en> ;
+    reg:name "nameOfCorporateBodyOf" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80047>,
-        <http://rdaregistry.info/Elements/n/datatype/P80016> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80054>,
+        <http://rdaregistry.info/Elements/n/datatype/P80030> .
+
+<http://rdaregistry.info/Elements/n/datatype/P80055> a rdf:Property ;
+    rdfs:label "is name of family of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80145>,
+        <http://rdaregistry.info/Elements/n/datatype/P80148> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/nameOfFamilyOf.en> ;
+    reg:name "nameOfFamilyOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80055>,
+        <http://rdaregistry.info/Elements/n/datatype/P80031> .
+
+<http://rdaregistry.info/Elements/n/datatype/P80056> a rdf:Property ;
+    rdfs:label "is name of person of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80146>,
+        <http://rdaregistry.info/Elements/n/datatype/P80149> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/nameOfPersonOf.en> ;
+    reg:name "nameOfPersonOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80056>,
+        <http://rdaregistry.info/Elements/n/datatype/P80032> .
 
 <http://rdaregistry.info/Elements/n/datatype/P80115> a rdf:Property ;
     rdfs:label "is name of distributor of"@en ;
@@ -1453,42 +1485,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80053>,
         <http://rdaregistry.info/Elements/n/datatype/P80029> .
-
-<http://rdaregistry.info/Elements/n/datatype/P80054> a rdf:Property ;
-    rdfs:label "is name of corporate body of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80144>,
-        <http://rdaregistry.info/Elements/n/datatype/P80147> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/nameOfCorporateBodyOf.en> ;
-    reg:name "nameOfCorporateBodyOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80054>,
-        <http://rdaregistry.info/Elements/n/datatype/P80030> .
-
-<http://rdaregistry.info/Elements/n/datatype/P80055> a rdf:Property ;
-    rdfs:label "is name of family of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80145>,
-        <http://rdaregistry.info/Elements/n/datatype/P80148> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/nameOfFamilyOf.en> ;
-    reg:name "nameOfFamilyOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80055>,
-        <http://rdaregistry.info/Elements/n/datatype/P80031> .
-
-<http://rdaregistry.info/Elements/n/datatype/P80056> a rdf:Property ;
-    rdfs:label "is name of person of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80146>,
-        <http://rdaregistry.info/Elements/n/datatype/P80149> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/datatype/nameOfPersonOf.en> ;
-    reg:name "nameOfPersonOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80056>,
-        <http://rdaregistry.info/Elements/n/datatype/P80032> .
 
 <http://rdaregistry.info/Elements/n/datatype/P80062> a rdf:Property ;
     rdfs:label "is title of manifestation of"@en ;

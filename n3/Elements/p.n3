@@ -8,6 +8,120 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://rdaregistry.info/Elements/p/P70017> a rdf:Property ;
+    rdfs:label "és matèria de (lloc)"@ca,
+        "er emne for sted"@da,
+        "είναι θέμα του (τόπος)"@el,
+        "is subject place of"@en,
+        "paikka aiheena teoksessa"@fi,
+        "est un sujet de (lieu)"@fr,
+        "tárgya (hely)"@hu,
+        "là chủ đề của (địa điểm)"@vi ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that is about a place."@en ;
+    rdakit:toolkitLabel "subject place of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70017>,
+        <http://rdaregistry.info/Elements/p/object/P70017> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/emneForSted.da>,
+        <http://rdaregistry.info/Elements/p/paikkaAiheenaTeoksessa.fi>,
+        <http://rdaregistry.info/Elements/p/subjecfPlaceOf.en>,
+        <http://rdaregistry.info/Elements/p/sujetDeLieu.fr>,
+        <http://rdaregistry.info/Elements/p/θέμαΤουΤόπου.el> ;
+    reg:name "emneForSted"@da,
+        "θέμαΤουΤόπου"@el,
+        "subjecfPlaceOf"@en,
+        "paikkaAiheenaTeoksessa"@fi,
+        "sujetDeLieu"@fr,
+        "Helytárgya"@hu,
+        "chủĐềCủaĐịaĐiểm"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10283> ;
+    skos:altLabel "subject of (place)"@en ;
+    skos:definition "Relaciona un lloc amb una obra que tracta d’un lloc."@ca,
+        "Relaterer et sted til et verk der handler om et sted."@da,
+        "Συνδέει έναν τόπο με ένα έργο που αναφέρεται σε έναν τόπο."@el,
+        "Relates a place to a work that is about a place."@en,
+        "Liittää paikan teokseen, jonka aiheena paikka on."@fi,
+        "Met un lieu en relation avec une œuvre qui traite d’un lieu."@fr,
+        "Egy helyet hozzákapcsol egy műhöz, amely egy helyről szól."@hu,
+        "Liên kết địa điểm với tác phẩm về địa điểm."@vi .
+
+<http://rdaregistry.info/Elements/p/P70022> a rdf:Property ;
+    rdfs:label "has note on place"@en ;
+    rdakit:hasElementType "6" ;
+    rdakit:toolkitDefinition "A broad unstructured description of one or more attributes of a place."@en ;
+    rdakit:toolkitLabel "note on place"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70022> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60936> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/noteOnPlace.en> ;
+    reg:name "noteOnPlace"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00015> ;
+    skos:definition "Relates a place to a broad unstructured description of one or more attributes of a place."@en .
+
+<http://rdaregistry.info/Elements/p/P70024> a rdf:Property ;
+    rdfs:label "is country associated with person of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A person who is identified with a country."@en ;
+    rdakit:toolkitLabel "country associated with person of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70024>,
+        <http://rdaregistry.info/Elements/p/object/P70024> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60993> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/countryAssociatedWithPersonOf.en> ;
+    reg:name "countryAssociatedWithPersonOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70014> ;
+    skos:definition "Relates a place to a person who is identified with a country."@en .
+
+<http://rdaregistry.info/Elements/p/P70031> a rdf:Property ;
+    rdfs:label "is place associated with family of (Deprecated)"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A family who is associated with a place. (Deprecated)"@en ;
+    rdakit:toolkitLabel "place associated with family of (Deprecated)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70031>,
+        <http://rdaregistry.info/Elements/p/object/P70031> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60993> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeAssociatedWithFamilyOf.en> ;
+    reg:name "placeAssociatedWithFamilyOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70015> ;
+    skos:definition "Relates a place to a family who is associated with a place. (Deprecated)"@en .
+
+<http://rdaregistry.info/Elements/p/P70043> a rdf:Property ;
+    rdfs:label "has location"@en ;
+    rdakit:hasElementType "6" ;
+    rdakit:toolkitDefinition "A delimitation of the physical territory of a place."@en ;
+    rdakit:toolkitLabel "location"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70043> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/location.en> ;
+    reg:name "location"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    skos:definition "Relates a place to a delimitation of the physical territory of the place."@en .
+
+<http://rdaregistry.info/Elements/p/P70044> a rdf:Property ;
+    rdfs:label "has category of place"@en ;
+    rdakit:hasElementType "5" ;
+    rdakit:toolkitDefinition "A type of place."@en ;
+    rdakit:toolkitLabel "category of place"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70044> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60944> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/categoryOfPlace.en> ;
+    reg:name "categoryOfPlace"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    skos:definition "Relates a place to a type of place."@en .
+
 <http://rdaregistry.info/Elements/p/P70002> a rdf:Property ;
     rdfs:label "té com a nom preferit de lloc"@ca,
         "har foretrukken navneform for et sted"@da,
@@ -138,45 +252,83 @@
         "A helynévváltozat magában foglal egy nevet vagy névformát, amely a referenszforrásokban található, vagy egy nevet, amely egy név stb. eltérő átírásából származik."@hu,
         "Tên khác của địa điểm bao gồm tên hoặc hình thái của tên được tìm thấy trong các nguồn tham khảo, hoặc tên sinh ra từ phiên âm khác nhau của tên, v.v..."@vi .
 
-<http://rdaregistry.info/Elements/p/P70017> a rdf:Property ;
-    rdfs:label "és matèria de (lloc)"@ca,
-        "er emne for sted"@da,
-        "είναι θέμα του (τόπος)"@el,
-        "is subject place of"@en,
-        "paikka aiheena teoksessa"@fi,
-        "est un sujet de (lieu)"@fr,
-        "tárgya (hely)"@hu,
-        "là chủ đề của (địa điểm)"@vi ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that is about a place."@en ;
-    rdakit:toolkitLabel "subject place of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70017>,
-        <http://rdaregistry.info/Elements/p/object/P70017> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/emneForSted.da>,
-        <http://rdaregistry.info/Elements/p/paikkaAiheenaTeoksessa.fi>,
-        <http://rdaregistry.info/Elements/p/subjecfPlaceOf.en>,
-        <http://rdaregistry.info/Elements/p/sujetDeLieu.fr>,
-        <http://rdaregistry.info/Elements/p/θέμαΤουΤόπου.el> ;
-    reg:name "emneForSted"@da,
-        "θέμαΤουΤόπου"@el,
-        "subjecfPlaceOf"@en,
-        "paikkaAiheenaTeoksessa"@fi,
-        "sujetDeLieu"@fr,
-        "Helytárgya"@hu,
-        "chủĐềCủaĐịaĐiểm"@vi ;
+<http://rdaregistry.info/Elements/p/P70007> a rdf:Property ;
+    rdfs:label "té com a ítem relacionat (lloc)"@ca,
+        "har relateret eksemplar (sted)"@da,
+        "έχει σχετικό αντίτυπο (τόπος)"@el,
+        "has related item of place"@en,
+        "paikkaan liittyvä kappale"@fi,
+        "a pour item en relation (lieu)"@fr,
+        "van kapcsolódó példánya (hely)"@hu,
+        "có bản có liên quan (địa điểm)"@vi ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An item that is associated with a place."@en ;
+    rdakit:toolkitLabel "related item of place"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70007> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/itemEnRelationLieu.fr>,
+        <http://rdaregistry.info/Elements/p/paikkaanLiittyvaKappale.fi>,
+        <http://rdaregistry.info/Elements/p/relatedItemOfPlace.en>,
+        <http://rdaregistry.info/Elements/p/relateretEksemplarSted.da>,
+        <http://rdaregistry.info/Elements/p/σχετικόΑντίτυποΤόπος.el> ;
+    reg:name "relateretEksemplarSted"@da,
+        "σχετικόΑντίτυποΤόπος"@el,
+        "relatedItemOfPlace"@en,
+        "paikkaanLiittyvaKappale"@fi,
+        "itemEnRelationLieu"@fr,
+        "kapcsolódóPéldányHely"@hu,
+        "địaĐiểmBảnCóLiênQuan"@vi ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10283> ;
-    skos:altLabel "subject of (place)"@en ;
-    skos:definition "Relaciona un lloc amb una obra que tracta d’un lloc."@ca,
-        "Relaterer et sted til et verk der handler om et sted."@da,
-        "Συνδέει έναν τόπο με ένα έργο που αναφέρεται σε έναν τόπο."@el,
-        "Relates a place to a work that is about a place."@en,
-        "Liittää paikan teokseen, jonka aiheena paikka on."@fi,
-        "Met un lieu en relation avec une œuvre qui traite d’un lieu."@fr,
-        "Egy helyet hozzákapcsol egy műhöz, amely egy helyről szól."@hu,
-        "Liên kết địa điểm với tác phẩm về địa điểm."@vi .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70013>,
+        <http://rdaregistry.info/Elements/x/P00005> ;
+    skos:definition "Relaciona un lloc amb una obra associada amb un lloc que es descriu."@ca,
+        "Relaterer et sted til et eksemplar der er knyttet til et beskrevet sted."@da,
+        "Συνδέει έναν τόπο με ένα αντίτυπο που συνδέεται με έναν περιγραφόμενο τόπο."@el,
+        "Relates a place to an item that is associated with a place."@en,
+        "Liittää paikan kappaleeseen, johon kuvailun kohteena oleva paikka liittyy."@fi,
+        "Met un lieu en relation avec un item associé à un lieu décrit."@fr,
+        "Egy helyet hozzákapcsol egy példányhoz, amely kötődik egy éppen leírt helyhez."@hu,
+        "Liên kết địa điểm với bản liên quan tới địa điểm đang được mô tả."@vi .
+
+<http://rdaregistry.info/Elements/p/P70011> a rdf:Property ;
+    rdfs:label "té com a període de temps relacionat (lloc)"@ca,
+        "har relateret periode (sted)"@da,
+        "έχει σχετικό χρονικό διάστημα (τόπος)"@el,
+        "has related timespan of place"@en,
+        "paikkaan liittyvä ajankohta"@fi,
+        "a pour laps de temps en relation (lieu)"@fr,
+        "van kapcsolódó időtartama (hely)"@hu,
+        "có khung thời gian có liên quan (địa điểm)"@vi ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A timespan that is associated with a place."@en ;
+    rdakit:toolkitLabel "related timespan of place"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70011> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/lapsDeTempsEnRelationLieu.fr>,
+        <http://rdaregistry.info/Elements/p/paikkaanLiittyvaAjankohta.fi>,
+        <http://rdaregistry.info/Elements/p/relatedTimespanOfPlace.en>,
+        <http://rdaregistry.info/Elements/p/relateretPeriode.da>,
+        <http://rdaregistry.info/Elements/p/σχετικόΧρονικόΔιάστημαΤόπος.el> ;
+    reg:name "relateretPeriode"@da,
+        "σχετικόΧρονικόΔιάστημαΤόπος"@el,
+        "relatedTimespanOfPlace"@en,
+        "paikkaanLiittyvaAjankohta"@fi,
+        "lapsDeTempsEnRelationLieu"@fr,
+        "kapcsolódóIdőtartamHely"@hu,
+        "địaĐiểmKhungThờiGianCóLiênQuan"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70013>,
+        <http://rdaregistry.info/Elements/x/P00011> ;
+    skos:definition "Relaciona un lloc amb un període de temps associat amb un lloc que es descriu."@ca,
+        "Relaterer et sted til en periode der er knyttet til et beskrevet sted."@da,
+        "Συνδέει έναν τόπο με ένα χρονικό διάστημα που συνδέεται με έναν περιγραφόμενο τόπο."@el,
+        "Relates a place to a timespan that is associated with a place."@en,
+        "Liittää paikan ajankohtaan, johon kuvailun kohteena oleva paikka liittyy."@fi,
+        "Met un lieu en relation avec un laps de temps associé à un lieu décrit."@fr,
+        "Egy helyet hozzákapcsol egy időtartamhoz, amely kötődik egy éppen leírt helyhez."@hu,
+        "Liên kết địa điểm với khung thời gian liên quan tới địa điểm đang được mô tả."@vi .
 
 <http://rdaregistry.info/Elements/p/P70020> a rdf:Property ;
     rdfs:label "has identifier for place"@en ;
@@ -194,37 +346,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70019> ;
     skos:definition "Relates a place to an appellation of place that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a place."@en .
-
-<http://rdaregistry.info/Elements/p/P70022> a rdf:Property ;
-    rdfs:label "has note on place"@en ;
-    rdakit:hasElementType "6" ;
-    rdakit:toolkitDefinition "A broad unstructured description of one or more attributes of a place."@en ;
-    rdakit:toolkitLabel "note on place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70022> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60936> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/noteOnPlace.en> ;
-    reg:name "noteOnPlace"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00015> ;
-    skos:definition "Relates a place to a broad unstructured description of one or more attributes of a place."@en .
-
-<http://rdaregistry.info/Elements/p/P70024> a rdf:Property ;
-    rdfs:label "is country associated with person of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A person who is identified with a country."@en ;
-    rdakit:toolkitLabel "country associated with person of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70024>,
-        <http://rdaregistry.info/Elements/p/object/P70024> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60993> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/countryAssociatedWithPersonOf.en> ;
-    reg:name "countryAssociatedWithPersonOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70014> ;
-    skos:definition "Relates a place to a person who is identified with a country."@en .
 
 <http://rdaregistry.info/Elements/p/P70025> a rdf:Property ;
     rdfs:label "is place of birth of"@en ;
@@ -302,21 +423,22 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70030> .
 
-<http://rdaregistry.info/Elements/p/P70031> a rdf:Property ;
-    rdfs:label "is place associated with family of (Deprecated)"@en ;
+<http://rdaregistry.info/Elements/p/P70030> a rdf:Property ;
+    rdfs:label "is place associated with corporate body of (Deprecated)"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A family who is associated with a place. (Deprecated)"@en ;
-    rdakit:toolkitLabel "place associated with family of (Deprecated)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70031>,
-        <http://rdaregistry.info/Elements/p/object/P70031> ;
+    rdakit:toolkitDefinition "A corporate body who is associated with a place. (Deprecated)"@en ;
+    rdakit:toolkitLabel "place associated with corporate body of (Deprecated)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70029>,
+        <http://rdaregistry.info/Elements/p/datatype/P70030>,
+        <http://rdaregistry.info/Elements/p/object/P70030> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60993> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeAssociatedWithFamilyOf.en> ;
-    reg:name "placeAssociatedWithFamilyOf"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeAssociatedWithCorporateBodyOf.en> ;
+    reg:name "placeAssociatedWithCorporateBodyOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70015> ;
-    skos:definition "Relates a place to a family who is associated with a place. (Deprecated)"@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70016> ;
+    skos:definition "Relates a place to a corporate body who is associated with a place. (Deprecated)"@en .
 
 <http://rdaregistry.info/Elements/p/P70032> a rdf:Property ;
     rdfs:label "is part of place"@en ;
@@ -412,7 +534,7 @@
 <http://rdaregistry.info/Elements/p/P70038> a rdf:Property ;
     rdfs:label "is place of capture of"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An expression that has content recorded, filmed, etc. in a place."@en ;
+    rdakit:toolkitDefinition "An expression that has content that is recorded, filmed, etc., in a place."@en ;
     rdakit:toolkitLabel "place of capture of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70038>,
         <http://rdaregistry.info/Elements/p/object/P70038> ;
@@ -423,34 +545,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70005> ;
-    skos:definition "Relates a place to an expression that has content recorded, filmed, etc. in a place."@en .
-
-<http://rdaregistry.info/Elements/p/P70043> a rdf:Property ;
-    rdfs:label "has location"@en ;
-    rdakit:hasElementType "6" ;
-    rdakit:toolkitDefinition "A delimitation of the physical territory of a place."@en ;
-    rdakit:toolkitLabel "location"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70043> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/location.en> ;
-    reg:name "location"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    skos:definition "Relates a place to a delimitation of the physical territory of the place."@en .
-
-<http://rdaregistry.info/Elements/p/P70044> a rdf:Property ;
-    rdfs:label "has category of place"@en ;
-    rdakit:hasElementType "5" ;
-    rdakit:toolkitDefinition "A type of place."@en ;
-    rdakit:toolkitLabel "category of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70044> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60944> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/categoryOfPlace.en> ;
-    reg:name "categoryOfPlace"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    skos:definition "Relates a place to a type of place."@en .
+    skos:definition "Relates a place to an expression that has content that is recorded, filmed, etc., in a place."@en .
 
 <http://rdaregistry.info/Elements/p/P70045> a rdf:Property ;
     rdfs:label "has authorized access point for place"@en ;
@@ -536,164 +631,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70042> .
 
-<http://rdaregistry.info/Elements/p/P70007> a rdf:Property ;
-    rdfs:label "té com a ítem relacionat (lloc)"@ca,
-        "har relateret eksemplar (sted)"@da,
-        "έχει σχετικό αντίτυπο (τόπος)"@el,
-        "has related item of place"@en,
-        "paikkaan liittyvä kappale"@fi,
-        "a pour item en relation (lieu)"@fr,
-        "van kapcsolódó példánya (hely)"@hu,
-        "có bản có liên quan (địa điểm)"@vi ;
-    rdakit:hasElementType "1" ;
-    rdakit:toolkitDefinition "An item that is associated with a place."@en ;
-    rdakit:toolkitLabel "related item of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70007> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/itemEnRelationLieu.fr>,
-        <http://rdaregistry.info/Elements/p/paikkaanLiittyvaKappale.fi>,
-        <http://rdaregistry.info/Elements/p/relatedItemOfPlace.en>,
-        <http://rdaregistry.info/Elements/p/relateretEksemplarSted.da>,
-        <http://rdaregistry.info/Elements/p/σχετικόΑντίτυποΤόπος.el> ;
-    reg:name "relateretEksemplarSted"@da,
-        "σχετικόΑντίτυποΤόπος"@el,
-        "relatedItemOfPlace"@en,
-        "paikkaanLiittyvaKappale"@fi,
-        "itemEnRelationLieu"@fr,
-        "kapcsolódóPéldányHely"@hu,
-        "địaĐiểmBảnCóLiênQuan"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70013>,
-        <http://rdaregistry.info/Elements/x/P00005> ;
-    skos:definition "Relaciona un lloc amb una obra associada amb un lloc que es descriu."@ca,
-        "Relaterer et sted til et eksemplar der er knyttet til et beskrevet sted."@da,
-        "Συνδέει έναν τόπο με ένα αντίτυπο που συνδέεται με έναν περιγραφόμενο τόπο."@el,
-        "Relates a place to an item that is associated with a place."@en,
-        "Liittää paikan kappaleeseen, johon kuvailun kohteena oleva paikka liittyy."@fi,
-        "Met un lieu en relation avec un item associé à un lieu décrit."@fr,
-        "Egy helyet hozzákapcsol egy példányhoz, amely kötődik egy éppen leírt helyhez."@hu,
-        "Liên kết địa điểm với bản liên quan tới địa điểm đang được mô tả."@vi .
-
-<http://rdaregistry.info/Elements/p/P70011> a rdf:Property ;
-    rdfs:label "té com a període de temps relacionat (lloc)"@ca,
-        "har relateret periode (sted)"@da,
-        "έχει σχετικό χρονικό διάστημα (τόπος)"@el,
-        "has related timespan of place"@en,
-        "paikkaan liittyvä ajankohta"@fi,
-        "a pour laps de temps en relation (lieu)"@fr,
-        "van kapcsolódó időtartama (hely)"@hu,
-        "có khung thời gian có liên quan (địa điểm)"@vi ;
-    rdakit:hasElementType "1" ;
-    rdakit:toolkitDefinition "A timespan that is associated with a place."@en ;
-    rdakit:toolkitLabel "related timespan of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70011> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/lapsDeTempsEnRelationLieu.fr>,
-        <http://rdaregistry.info/Elements/p/paikkaanLiittyvaAjankohta.fi>,
-        <http://rdaregistry.info/Elements/p/relatedTimespanOfPlace.en>,
-        <http://rdaregistry.info/Elements/p/relateretPeriode.da>,
-        <http://rdaregistry.info/Elements/p/σχετικόΧρονικόΔιάστημαΤόπος.el> ;
-    reg:name "relateretPeriode"@da,
-        "σχετικόΧρονικόΔιάστημαΤόπος"@el,
-        "relatedTimespanOfPlace"@en,
-        "paikkaanLiittyvaAjankohta"@fi,
-        "lapsDeTempsEnRelationLieu"@fr,
-        "kapcsolódóIdőtartamHely"@hu,
-        "địaĐiểmKhungThờiGianCóLiênQuan"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70013>,
-        <http://rdaregistry.info/Elements/x/P00011> ;
-    skos:definition "Relaciona un lloc amb un període de temps associat amb un lloc que es descriu."@ca,
-        "Relaterer et sted til en periode der er knyttet til et beskrevet sted."@da,
-        "Συνδέει έναν τόπο με ένα χρονικό διάστημα που συνδέεται με έναν περιγραφόμενο τόπο."@el,
-        "Relates a place to a timespan that is associated with a place."@en,
-        "Liittää paikan ajankohtaan, johon kuvailun kohteena oleva paikka liittyy."@fi,
-        "Met un lieu en relation avec un laps de temps associé à un lieu décrit."@fr,
-        "Egy helyet hozzákapcsol egy időtartamhoz, amely kötődik egy éppen leírt helyhez."@hu,
-        "Liên kết địa điểm với khung thời gian liên quan tới địa điểm đang được mô tả."@vi .
-
-<http://rdaregistry.info/Elements/p/P70030> a rdf:Property ;
-    rdfs:label "is place associated with corporate body of (Deprecated)"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A corporate body who is associated with a place. (Deprecated)"@en ;
-    rdakit:toolkitLabel "place associated with corporate body of (Deprecated)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70030>,
-        <http://rdaregistry.info/Elements/p/object/P70030> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60993> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeAssociatedWithCorporateBodyOf.en> ;
-    reg:name "placeAssociatedWithCorporateBodyOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70016> ;
-    skos:definition "Relates a place to a corporate body who is associated with a place. (Deprecated)"@en .
-
-<http://rdaregistry.info/Elements/p/P70039> a rdf:Property ;
-    rdfs:label "is place of distribution of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is distributed from a place."@en ;
-    rdakit:toolkitLabel "place of distribution of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70039>,
-        <http://rdaregistry.info/Elements/p/object/P70039> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60968> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfDistributionOf.en> ;
-    reg:name "placeOfDistributionOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70021> ;
-    skos:definition "Relates a place to a manifestation that is a published manifestation that is distributed from a place."@en .
-
-<http://rdaregistry.info/Elements/p/P70040> a rdf:Property ;
-    rdfs:label "is place of manufacture of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is printed, duplicated, cast, etc. in a place."@en ;
-    rdakit:toolkitLabel "place of manufacture of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70040>,
-        <http://rdaregistry.info/Elements/p/object/P70040> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60969> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfManufactureOf.en> ;
-    reg:name "placeOfManufactureOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70021> ;
-    skos:definition "Relates a place to a manifestation that is a published manifestation that is printed, duplicated, cast, etc. in a place."@en .
-
-<http://rdaregistry.info/Elements/p/P70041> a rdf:Property ;
-    rdfs:label "is place of production of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that is an unpublished manifestation that is inscribed, fabricated, constructed, etc. in a place."@en ;
-    rdakit:toolkitLabel "place of production of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70041>,
-        <http://rdaregistry.info/Elements/p/object/P70041> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60971> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfProductionOf.en> ;
-    reg:name "placeOfProductionOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70021> ;
-    skos:definition "Relates a place to a manifestation that is an unpublished manifestation that is inscribed, fabricated, constructed, etc. in a place."@en .
-
-<http://rdaregistry.info/Elements/p/P70042> a rdf:Property ;
-    rdfs:label "is place of publication of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is published, released, or issued in a place."@en ;
-    rdakit:toolkitLabel "place of publication of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70042>,
-        <http://rdaregistry.info/Elements/p/object/P70042> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60972> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfPublication.en> ;
-    reg:name "placeOfPublicationOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70021> ;
-    skos:definition "Relates a place to a manifestation that is a published manifestation that is published, released, or issued in a place."@en .
-
 <http://rdaregistry.info/Elements/p/P70051> a rdf:Property ;
     rdfs:label "is jurisdiction governed of"@en ;
     rdakit:hasElementType "2" ;
@@ -712,7 +649,7 @@
 <http://rdaregistry.info/Elements/p/P70052> a rdf:Property ;
     rdfs:label "is place of capture of representative expression of"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that has content of a representative expression recorded, filmed, etc. in a place."@en ;
+    rdakit:toolkitDefinition "A work that has content of a representative expression that is recorded, filmed, etc., in a place."@en ;
     rdakit:toolkitLabel "place of capture of representative expression of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70052> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60966> ;
@@ -722,7 +659,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70004> ;
-    skos:definition "Relates a place to a work that has content of a representative expression recorded, filmed, etc. in a place."@en .
+    skos:definition "Relates a place to a work that has content of a representative expression that is recorded, filmed, etc., in a place."@en .
 
 <http://rdaregistry.info/Elements/p/P70005> a rdf:Property ;
     rdfs:label "té com a expressió relacionada (lloc)"@ca,
@@ -736,7 +673,8 @@
     rdakit:hasElementType "1" ;
     rdakit:toolkitDefinition "An expression that is associated with a place."@en ;
     rdakit:toolkitLabel "related expression of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70005> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70038>,
+        <http://rdaregistry.info/Elements/p/datatype/P70005> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/expressionEnRelationLieu.fr>,
         <http://rdaregistry.info/Elements/p/paikkaanLiittyvaEkspressio.fi>,
         <http://rdaregistry.info/Elements/p/relatedExpressionOfPlace.en>,
@@ -775,7 +713,8 @@
     rdakit:hasElementType "1" ;
     rdakit:toolkitDefinition "A manifestation that is associated with a place."@en ;
     rdakit:toolkitLabel "related manifestation of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70006> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70021>,
+        <http://rdaregistry.info/Elements/p/datatype/P70006> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/manifestationEnRelationLieu.fr>,
         <http://rdaregistry.info/Elements/p/paikkaanLiittyvaManifestaatio.fi>,
         <http://rdaregistry.info/Elements/p/relatedManifestationOfPlace.en>,
@@ -814,7 +753,8 @@
     rdakit:hasElementType "1" ;
     rdakit:toolkitDefinition "A nomen that is associated with a place."@en ;
     rdakit:toolkitLabel "related nomen of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70012> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70019>,
+        <http://rdaregistry.info/Elements/p/datatype/P70012> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/nomenEnRelationLieu.fr>,
         <http://rdaregistry.info/Elements/p/paikkaanLiittyvaNomen.fi>,
         <http://rdaregistry.info/Elements/p/relatedNomenOfPlace.en>,
@@ -841,21 +781,73 @@
         "Egy helyet hozzákapcsol egy nomenhez, amely kötődik egy éppen leírt helyhez."@hu,
         "Liên kết địa điểm với danh pháp liên quan tới địa điểm đang được mô tả."@vi .
 
-<http://rdaregistry.info/Elements/p/P70018> a rdf:Property ;
-    rdfs:label "has access point for place"@en ;
-    rdakit:hasElementType "3" ;
-    rdakit:toolkitDefinition "An appellation of place in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme."@en ;
-    rdakit:toolkitLabel "access point for place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70018>,
-        <http://rdaregistry.info/Elements/p/object/P70018> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60906> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/accessPointForPlace.en> ;
-    reg:name "accessPointForPlace"@en ;
+<http://rdaregistry.info/Elements/p/P70039> a rdf:Property ;
+    rdfs:label "is place of distribution of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is distributed from a place."@en ;
+    rdakit:toolkitLabel "place of distribution of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70047>,
+        <http://rdaregistry.info/Elements/p/datatype/P70039>,
+        <http://rdaregistry.info/Elements/p/object/P70039> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60968> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfDistributionOf.en> ;
+    reg:name "placeOfDistributionOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70019> ;
-    skos:definition "Relates a place to an appellation of place in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70021> ;
+    skos:definition "Relates a place to a manifestation that is a published manifestation that is distributed from a place."@en .
+
+<http://rdaregistry.info/Elements/p/P70040> a rdf:Property ;
+    rdfs:label "is place of manufacture of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is printed, duplicated, cast, etc., in a place."@en ;
+    rdakit:toolkitLabel "place of manufacture of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70048>,
+        <http://rdaregistry.info/Elements/p/datatype/P70040>,
+        <http://rdaregistry.info/Elements/p/object/P70040> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60969> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfManufactureOf.en> ;
+    reg:name "placeOfManufactureOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70021> ;
+    skos:definition "Relates a place to a manifestation that is a published manifestation that is printed, duplicated, cast, etc., in a place."@en .
+
+<http://rdaregistry.info/Elements/p/P70041> a rdf:Property ;
+    rdfs:label "is place of production of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is an unpublished manifestation that is inscribed, fabricated, constructed, etc., in a place."@en ;
+    rdakit:toolkitLabel "place of production of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70049>,
+        <http://rdaregistry.info/Elements/p/datatype/P70041>,
+        <http://rdaregistry.info/Elements/p/object/P70041> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60971> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfProductionOf.en> ;
+    reg:name "placeOfProductionOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70021> ;
+    skos:definition "Relates a place to a manifestation that is an unpublished manifestation that is inscribed, fabricated, constructed, etc., in a place."@en .
+
+<http://rdaregistry.info/Elements/p/P70042> a rdf:Property ;
+    rdfs:label "is place of publication of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is published, released, or issued in a place."@en ;
+    rdakit:toolkitLabel "place of publication of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70050>,
+        <http://rdaregistry.info/Elements/p/datatype/P70042>,
+        <http://rdaregistry.info/Elements/p/object/P70042> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60972> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfPublication.en> ;
+    reg:name "placeOfPublicationOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70021> ;
+    skos:definition "Relates a place to a manifestation that is a published manifestation that is published, released, or issued in a place."@en .
 
 <http://rdaregistry.info/Elements/p/P70001> a rdf:Property ;
     rdfs:label "té com a nom de lloc"@ca,
@@ -889,7 +881,9 @@
         "helynév"@hu,
         "stedsnavn"@no,
         "tên địa điểm"@vi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70001>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70002>,
+        <http://rdaregistry.info/Elements/p/P70003>,
+        <http://rdaregistry.info/Elements/p/datatype/P70001>,
         <http://rdaregistry.info/Elements/p/object/P70001> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60366> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/nameOfPlace.en>,
@@ -1012,7 +1006,9 @@
     rdakit:hasElementType "1" ;
     rdakit:toolkitDefinition "A place that is associated with a place."@en ;
     rdakit:toolkitLabel "related place of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70010> ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70032>,
+        <http://rdaregistry.info/Elements/p/P70033>,
+        <http://rdaregistry.info/Elements/p/datatype/P70010> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/lieuEnRelationLieu.fr>,
         <http://rdaregistry.info/Elements/p/paikkaanLiittyvaPaikka.fi>,
         <http://rdaregistry.info/Elements/p/relatedPlaceOfPlace.en>,
@@ -1080,37 +1076,23 @@
         "Egy helyet hozzákapcsol egy családhoz, amely kötődik egy éppen leírt helyhez."@hu,
         "Liên kết địa điểm với gia đình liên quan tới địa điểm đang được mô tả."@vi .
 
-<http://rdaregistry.info/Elements/p/P70019> a rdf:Property ;
-    rdfs:label "has appellation of place"@en ;
+<http://rdaregistry.info/Elements/p/P70018> a rdf:Property ;
+    rdfs:label "has access point for place"@en ;
     rdakit:hasElementType "3" ;
-    rdakit:toolkitDefinition "A nomen used within a given scheme or context to refer to a place."@en ;
-    rdakit:toolkitLabel "appellation of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70001>,
-        <http://rdaregistry.info/Elements/p/datatype/P70019>,
-        <http://rdaregistry.info/Elements/p/object/P70019> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60909> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/appellationOfPlace.en> ;
-    reg:name "appellationOfPlace"@en ;
+    rdakit:toolkitDefinition "An appellation of place in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme."@en ;
+    rdakit:toolkitLabel "access point for place"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70045>,
+        <http://rdaregistry.info/Elements/p/P70046>,
+        <http://rdaregistry.info/Elements/p/datatype/P70018>,
+        <http://rdaregistry.info/Elements/p/object/P70018> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60906> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/accessPointForPlace.en> ;
+    reg:name "accessPointForPlace"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70012> ;
-    skos:definition "Relates a place to a nomen used within a given scheme or context to refer to a place."@en .
-
-<http://rdaregistry.info/Elements/p/P70023> a rdf:Property ;
-    rdfs:label "is coordinates of cartographic content of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that is cartographic that locates an area by using a mathematical system."@en ;
-    rdakit:toolkitLabel "coordinates of cartographic content of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70023>,
-        <http://rdaregistry.info/Elements/p/object/P70023> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/coordinatesOfCartographicContentOf.en> ;
-    reg:name "coordinatesOfCartographicContentOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70004> ;
-    skos:definition "Relates a place to a work that is cartographic that locates an area by using a mathematical system."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70019> ;
+    skos:definition "Relates a place to an appellation of place in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme."@en .
 
 <http://rdaregistry.info/Elements/p/P70004> a rdf:Property ;
     rdfs:label "té com a obra relacionada (lloc)"@ca,
@@ -1124,7 +1106,9 @@
     rdakit:hasElementType "1" ;
     rdakit:toolkitDefinition "A work that is associated with a place."@en ;
     rdakit:toolkitLabel "related work of place"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70052>,
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70023>,
+        <http://rdaregistry.info/Elements/p/P70035>,
+        <http://rdaregistry.info/Elements/p/P70052>,
         <http://rdaregistry.info/Elements/p/datatype/P70004>,
         <http://rdaregistry.info/Elements/p/object/P70004> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/paikkaanLiittyvaTeos.fi>,
@@ -1153,20 +1137,42 @@
         "Egy helyet hozzákapcsol egy műhöz, amely kötődik egy éppen leírt helyhez."@hu,
         "Liên kết địa điểm với tác phẩm liên quan tới địa điểm đang được mô tả."@vi .
 
-<http://rdaregistry.info/Elements/p/P70021> a rdf:Property ;
-    rdfs:label "is place of manifestation of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is distributed, printed, duplicated, cast, published, released, or issued, etc. or an unpublished manifestation that is inscribed, fabricated, constructed, etc., in a place."@en ;
-    rdakit:toolkitLabel "place of manifestation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70021>,
-        <http://rdaregistry.info/Elements/p/object/P70021> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfManifestationOf.en> ;
-    reg:name "placeOfManifestationOf"@en ;
+<http://rdaregistry.info/Elements/p/P70019> a rdf:Property ;
+    rdfs:label "has appellation of place"@en ;
+    rdakit:hasElementType "3" ;
+    rdakit:toolkitDefinition "A nomen used within a given scheme or context to refer to a place."@en ;
+    rdakit:toolkitLabel "appellation of place"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70001>,
+        <http://rdaregistry.info/Elements/p/P70018>,
+        <http://rdaregistry.info/Elements/p/P70020>,
+        <http://rdaregistry.info/Elements/p/datatype/P70019>,
+        <http://rdaregistry.info/Elements/p/object/P70019> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60909> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/appellationOfPlace.en> ;
+    reg:name "appellationOfPlace"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70006> ;
-    skos:definition "Relates a place to a manifestation that is a published manifestation that is distributed, printed, duplicated, cast, published, released, or issued, etc. or an unpublished manifestation that is inscribed, fabricated, constructed, etc., in a place."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70012> ;
+    skos:definition "Relates a place to a nomen used within a given scheme or context to refer to a place."@en .
+
+<http://rdaregistry.info/Elements/p/P70023> a rdf:Property ;
+    rdfs:label "is coordinates of cartographic content of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that is cartographic that locates an area by using a mathematical system."@en ;
+    rdakit:toolkitLabel "coordinates of cartographic content of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70034>,
+        <http://rdaregistry.info/Elements/p/P70036>,
+        <http://rdaregistry.info/Elements/p/P70037>,
+        <http://rdaregistry.info/Elements/p/datatype/P70023>,
+        <http://rdaregistry.info/Elements/p/object/P70023> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/coordinatesOfCartographicContentOf.en> ;
+    reg:name "coordinatesOfCartographicContentOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70004> ;
+    skos:definition "Relates a place to a work that is cartographic that locates an area by using a mathematical system."@en .
 
 <http://rdaregistry.info/Elements/p/P70016> a rdf:Property ;
     rdfs:label "té com a entitat corporativa relacionada (lloc)"@ca,
@@ -1181,6 +1187,7 @@
     rdakit:toolkitDefinition "A corporate body who is associated with a place."@en ;
     rdakit:toolkitLabel "related corporate body of place"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70016>,
+        <http://rdaregistry.info/Elements/p/P70028>,
         <http://rdaregistry.info/Elements/p/P70051>,
         <http://rdaregistry.info/Elements/p/datatype/P70016> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/collectivitéEnRelationLieu.fr>,
@@ -1210,6 +1217,25 @@
         "Egy helyet hozzákapcsol egy testülethez, amely kötődik egy éppen leírt helyhez."@hu,
         "Liên kết địa điểm với tập thể liên quan tới địa điểm đang được mô tả."@vi .
 
+<http://rdaregistry.info/Elements/p/P70021> a rdf:Property ;
+    rdfs:label "is place of manifestation of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that is a published manifestation that is distributed, printed, duplicated, cast, published, released, or issued, etc., or an unpublished manifestation that is inscribed, fabricated, constructed, etc., in a place."@en ;
+    rdakit:toolkitLabel "place of manifestation of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70039>,
+        <http://rdaregistry.info/Elements/p/P70040>,
+        <http://rdaregistry.info/Elements/p/P70041>,
+        <http://rdaregistry.info/Elements/p/P70042>,
+        <http://rdaregistry.info/Elements/p/datatype/P70021>,
+        <http://rdaregistry.info/Elements/p/object/P70021> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfManifestationOf.en> ;
+    reg:name "placeOfManifestationOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70006> ;
+    skos:definition "Relates a place to a manifestation that is a published manifestation that is distributed, printed, duplicated, cast, published, released, or issued, etc., or an unpublished manifestation that is inscribed, fabricated, constructed, etc., in a place."@en .
+
 <http://rdaregistry.info/Elements/p/P70014> a rdf:Property ;
     rdfs:label "té com a persona relacionada (lloc)"@ca,
         "har relateret person (sted)"@da,
@@ -1223,6 +1249,9 @@
     rdakit:toolkitDefinition "A person who is associated with a place."@en ;
     rdakit:toolkitLabel "related person of place"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/P70014>,
+        <http://rdaregistry.info/Elements/p/P70025>,
+        <http://rdaregistry.info/Elements/p/P70026>,
+        <http://rdaregistry.info/Elements/p/P70027>,
         <http://rdaregistry.info/Elements/p/datatype/P70014> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/paikkaanLiittyvaHenkilo.fi>,
         <http://rdaregistry.info/Elements/p/personneEnRelationLieu.fr>,

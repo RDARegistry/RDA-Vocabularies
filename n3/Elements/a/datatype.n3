@@ -494,7 +494,6 @@
 
 <http://rdaregistry.info/Elements/a/datatype/P50058> a rdf:Property ;
     rdfs:label "has date associated with family (Deprecated)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/datatype/P50432> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/dateAssociatedWithFamily.en> ;
     reg:name "dateAssociatedWithFamily"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
@@ -1128,7 +1127,6 @@
 
 <http://rdaregistry.info/Elements/a/datatype/P50131> a rdf:Property ;
     rdfs:label "is other agent associated with work of (Deprecated)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/datatype/P50458> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/otherAgentWorkOf.en> ;
     reg:name "otherAgentWorkOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
@@ -1559,7 +1557,6 @@
 
 <http://rdaregistry.info/Elements/a/datatype/P50182> a rdf:Property ;
     rdfs:label "is other agent associated with item of (Deprecated)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/a/datatype/P50446> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/otherAgentItemOf.en> ;
     reg:name "otherAgentItemOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
@@ -2603,6 +2600,16 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50372>,
         <http://rdaregistry.info/Elements/a/datatype/P50326> .
 
+<http://rdaregistry.info/Elements/a/datatype/P50446> a rdf:Property ;
+    rdfs:label "is modifier of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/modifierOf.en> ;
+    reg:name "modifierOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50446>,
+        <http://rdaregistry.info/Elements/a/datatype/P50308> .
+
 <http://rdaregistry.info/Elements/a/datatype/P50459> a rdf:Property ;
     rdfs:label "is composer of aggregate of"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/composerOfAggregateOf.en> ;
@@ -2953,15 +2960,16 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50429>,
         <http://rdaregistry.info/Elements/a/datatype/P50348> .
 
-<http://rdaregistry.info/Elements/a/datatype/P50446> a rdf:Property ;
-    rdfs:label "is modifier of"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/modifierOf.en> ;
-    reg:name "modifierOf" ;
+<http://rdaregistry.info/Elements/a/datatype/P50432> a rdf:Property ;
+    rdfs:label "has period of activity of family"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/periodOfActivityOfFamily.en> ;
+    reg:name "periodOfActivityOfFamily" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10008> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50446>,
-        <http://rdaregistry.info/Elements/a/datatype/P50308> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50432>,
+        <http://rdaregistry.info/Elements/a/datatype/P50355>,
+        <http://rdaregistry.info/Elements/a/datatype/P50431> .
 
 <http://rdaregistry.info/Elements/a/datatype/P50450> a rdf:Property ;
     rdfs:label "is editor of text of"@en ;
@@ -3022,6 +3030,16 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50457>,
         <http://rdaregistry.info/Elements/a/datatype/P50259> .
+
+<http://rdaregistry.info/Elements/a/datatype/P50458> a rdf:Property ;
+    rdfs:label "is academic supervisor of"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/academicSupervisorOf.en> ;
+    reg:name "academicSupervisorOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10004> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50458>,
+        <http://rdaregistry.info/Elements/a/datatype/P50305> .
 
 <http://rdaregistry.info/Elements/a/datatype/P50463> a rdf:Property ;
     rdfs:label "is cartographer of aggregate of"@en ;
@@ -3484,17 +3502,6 @@
         <http://rdaregistry.info/Elements/a/datatype/P50326>,
         <http://rdaregistry.info/Elements/a/datatype/P50423> .
 
-<http://rdaregistry.info/Elements/a/datatype/P50432> a rdf:Property ;
-    rdfs:label "has period of activity of family"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/periodOfActivityOfFamily.en> ;
-    reg:name "periodOfActivityOfFamily" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10008> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50432>,
-        <http://rdaregistry.info/Elements/a/datatype/P50355>,
-        <http://rdaregistry.info/Elements/a/datatype/P50431> .
-
 <http://rdaregistry.info/Elements/a/datatype/P50435> a rdf:Property ;
     rdfs:label "has corporate body member of family"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/corporateBodyMemberOfFamily.en> ;
@@ -3568,16 +3575,6 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10002> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/datatype/> .
-
-<http://rdaregistry.info/Elements/a/datatype/P50458> a rdf:Property ;
-    rdfs:label "is academic supervisor of"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/a/datatype/academicSupervisorOf.en> ;
-    reg:name "academicSupervisorOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10004> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/a/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50458>,
-        <http://rdaregistry.info/Elements/a/datatype/P50305> .
 
 <http://rdaregistry.info/Elements/a/datatype/P50192> a rdf:Property ;
     rdfs:label "is artist of"@en ;
