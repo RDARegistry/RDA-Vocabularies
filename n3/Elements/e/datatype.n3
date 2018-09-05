@@ -161,6 +161,16 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20229> .
 
+<http://rdaregistry.info/Elements/e/datatype/P20232> a rdf:Property ;
+    rdfs:label "has accompanying expression relationship with (Deprecated)"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20100> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/accompanyingExpressionRelationship.en> ;
+    reg:name "accompanyingExpressionRelationship"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20232> .
+
 <http://rdaregistry.info/Elements/e/datatype/P20233> a rdf:Property ;
     rdfs:label "has derivative expression relationship with (Deprecated)"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/derivativeExpressionRelationship.en> ;
@@ -2041,16 +2051,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20231>,
         <http://rdaregistry.info/Elements/e/datatype/P20298> .
 
-<http://rdaregistry.info/Elements/e/datatype/P20232> a rdf:Property ;
-    rdfs:label "has accompanying expression relationship with (Deprecated)"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20100> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/accompanyingExpressionRelationship.en> ;
-    reg:name "accompanyingExpressionRelationship"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20232> .
-
 <http://rdaregistry.info/Elements/e/datatype/P20237> a rdf:Property ;
     rdfs:label "has writer of afterword (Deprecated)"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/writerOfAfterword.en> ;
@@ -2729,13 +2729,14 @@
 <http://rdaregistry.info/Elements/e/datatype/P20268> a rdf:Property ;
     rdfs:label "is subject expression of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20269> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/subjectOfExpression.en> ;
-    reg:name "subjectOfExpression"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/subjectExpressionOf.en> ;
+    reg:name "subjectExpressionOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20268>,
-        <http://rdaregistry.info/Elements/e/datatype/P20298> .
+        <http://rdaregistry.info/Elements/e/datatype/P20298>,
+        <http://rdaregistry.info/Elements/x/datatype/P00014> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20305> a rdf:Property ;
     rdfs:label "has related collective agent of expression"@en ;
@@ -3074,8 +3075,7 @@
         <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20328> a rdf:Property ;
-    rdfs:label "has contributor to amalgamated content"@en,
-        "has contributor to amalgamation"@en ;
+    rdfs:label "has contributor to amalgamation"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20329> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/contributorToAmalgamatedContent.en>,
         <http://rdaregistry.info/Elements/e/datatype/contributorToAmalgamation.en> ;
@@ -3105,27 +3105,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20100>,
-        <http://rdaregistry.info/Elements/e/datatype/P20232> .
-
-<http://rdaregistry.info/Elements/e/datatype/P20205> a rdf:Property ;
-    rdfs:label "has related expression of expression"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20074>,
-        <http://rdaregistry.info/Elements/e/datatype/P20105>,
-        <http://rdaregistry.info/Elements/e/datatype/P20145>,
-        <http://rdaregistry.info/Elements/e/datatype/P20154>,
-        <http://rdaregistry.info/Elements/e/datatype/P20169>,
-        <http://rdaregistry.info/Elements/e/datatype/P20192>,
-        <http://rdaregistry.info/Elements/e/datatype/P20203>,
-        <http://rdaregistry.info/Elements/e/datatype/P20204>,
-        <http://rdaregistry.info/Elements/e/datatype/P20319>,
-        <http://rdaregistry.info/Elements/e/datatype/P20320> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedExpressionExpression.en> ;
-    reg:name "relatedExpressionExpression"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
-        <http://rdaregistry.info/Elements/e/datatype/P20297> .
+        <http://rdaregistry.info/Elements/e/datatype/P20205> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20053> a rdf:Property ;
     rdfs:label "has creator of expression"@en ;
@@ -3221,6 +3201,26 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20192>,
         <http://rdaregistry.info/Elements/e/datatype/P20205> .
+
+<http://rdaregistry.info/Elements/e/datatype/P20205> a rdf:Property ;
+    rdfs:label "has related expression of expression"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20074>,
+        <http://rdaregistry.info/Elements/e/datatype/P20105>,
+        <http://rdaregistry.info/Elements/e/datatype/P20145>,
+        <http://rdaregistry.info/Elements/e/datatype/P20154>,
+        <http://rdaregistry.info/Elements/e/datatype/P20169>,
+        <http://rdaregistry.info/Elements/e/datatype/P20192>,
+        <http://rdaregistry.info/Elements/e/datatype/P20203>,
+        <http://rdaregistry.info/Elements/e/datatype/P20204>,
+        <http://rdaregistry.info/Elements/e/datatype/P20319>,
+        <http://rdaregistry.info/Elements/e/datatype/P20320> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/relatedExpressionExpression.en> ;
+    reg:name "relatedExpressionExpression"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10006> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/e/P20205>,
+        <http://rdaregistry.info/Elements/e/datatype/P20297> .
 
 <http://rdaregistry.info/Elements/e/datatype/P20152> a rdf:Property ;
     rdfs:label "is adaptation of expression"@en ;
@@ -3355,8 +3355,7 @@
     skos:prefLabel "Deprecated"@en .
 
 <http://rdaregistry.info/Elements/e/datatype/P20329> a rdf:Property ;
-    rdfs:label "has contributor to performance"@en,
-        "has contributor to performance content"@en ;
+    rdfs:label "has contributor to performance"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/e/datatype/P20330> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/e/datatype/contributorToPerformance.en>,
         <http://rdaregistry.info/Elements/e/datatype/contributorToPerformanceContent.en> ;
