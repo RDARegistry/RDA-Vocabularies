@@ -76,7 +76,7 @@
         "har værkets art eller form"@da,
         "hat Form eines Werks"@de,
         "έχει μορφή του έργου"@el,
-        "has form of work"@en,
+        "has category of work"@en,
         "teoksen muoto"@fi,
         "a pour forme d’une œuvre"@fr,
         "van műformája"@hu,
@@ -88,7 +88,7 @@
         "Art, form eller genre, som et værk tilhører."@da,
         "Eine Klasse oder ein Genre, zu der/dem ein Werk gehört."@de,
         "Μια τάξη ή ένα είδος στο οποίο ανήκει ένα έργο."@el,
-        "A class or genre to which a work belongs."@en,
+        "A type to which a work belongs."@en,
         "Una clase o género al cual pertenece una obra."@es,
         "Luokka tai genre, johon teos kuuluu"@fi,
         "Catégorie ou genre auquel une œuvre appartient."@fr,
@@ -99,7 +99,7 @@
         "værkets art eller form"@da,
         "Form eines Werks"@de,
         "μορφή του έργου"@el,
-        "form of work"@en,
+        "category of work"@en,
         "forma de la obra"@es,
         "teoksen muoto"@fi,
         "forme d’une œuvre"@fr,
@@ -109,12 +109,12 @@
         "hình thái của tác phẩm"@vi ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10004> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60058> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/formOfWork.en>,
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/categoryOfWork.en>,
         <http://rdaregistry.info/Elements/w/teoksenMuoto.fi>,
         <http://rdaregistry.info/Elements/w/værketsArtEllerForm.da> ;
     reg:name "værketsArtEllerForm"@da,
         "μορφήΤουΈργου"@el,
-        "formOfWork"@en,
+        "categoryOfWork"@en,
         "teoksenMuoto"@fi,
         "formeDuneŒuvre"@fr,
         "Műforma"@hu,
@@ -122,15 +122,18 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00029> ;
+    skos:altLabel "form of work"@en ;
     skos:definition "Relaciona una obra amb una classe o gènere al qual pertany una obra."@ca,
         "Relaterer et værk til en art, form eller genre, som et værk tilhører."@da,
         "Setzt ein Werk mit einer Klasse oder einem Genre, zu der/dem ein Werk gehört, in Beziehung."@de,
         "Συνδέει ένα έργο με μια τάξη ή ένα είδος στο οποίο ανήκει ένα έργο."@el,
-        "Relates a work to a class or genre to which a work belongs."@en,
+        "Relates a work to a type to which a work belongs."@en,
         "Liittää teoksen luokkaan tai genreen, johon teos kuuluu"@fi,
         "Met une œuvre en relation avec une catégorie ou un genre auquel une œuvre appartient."@fr,
         "Egy művet hozzákapcsol a műhöz tartozó osztályhoz vagy műfajhoz."@hu,
-        "Liên kết tác phẩm với lớp hoặc loại mà tác phẩm thuộc vào."@vi .
+        "Liên kết tác phẩm với lớp hoặc loại mà tác phẩm thuộc vào."@vi ;
+    skos:scopeNote "Includes a class or genre."@en .
 
 <http://rdaregistry.info/Elements/w/P10012> a rdf:Property ;
     rdfs:label "té com a numeració d’una part"@ca,
@@ -149,7 +152,7 @@
         "Sekvensbetegnelse for en del eller flere dele i et større værk."@da,
         "Eine Bezeichnung einer Abfolge eines Teils oder mehrerer Teile innerhalb eines größeren Werks."@de,
         "Ένας προσδιορισμός μιας ακολουθίας ενός μέρους ή μερών εντός ενός μεγαλύτερου έργου."@el,
-        "A designation of a sequencing of a part or parts within a larger work."@en,
+        "A designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a part work within a whole work."@en,
         "Una designación de la secuencia de una parte o partes dentro de una obra mayor."@es,
         "Teoksen laajemman teoksen osan tai osien numerointijakson määrite. Osan numerointi sisältää numeron, kirjaimen, minkä tahansa muun merkin tai näiden yhdistelmän joko selitetekstin (volyymi, numero jne.) kanssa tai ilman ja/tai aikamääritteen"@fi,
         "Désignation d’un ordre séquentiel d’une ou plusieurs parties à l’intérieur d’une œuvre plus vaste."@fr,
@@ -187,7 +190,7 @@
         "Relaterer et værk til en sekvensbetegnelse for en del eller flere dele i et større værk."@da,
         "Setzt ein Werk mit einer Bezeichnung einer Abfolge eines Teils oder mehrerer Teile innerhalb eines größeren Werks, in Beziehung."@de,
         "Συνδέει ένα έργο με έναν προσδιορισμό μιας ακολουθίας ενός μέρους ή μερών εντός ενός μεγαλύτερου έργου."@el,
-        "Relates a work to a designation of a sequencing of a part or parts within a larger work."@en,
+        "Relates a work to a designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a part work within a whole work."@en,
         "Liittää teoksen laajemman teoksen osan tai osien numerointijakson määritteeseen"@fi,
         "Met une œuvre en relation avec une désignation d’un ordre séquentiel d’une ou plusieurs parties à l’intérieur d’une œuvre plus vaste."@fr,
         "Egy művet hozzákapcsol egy rész vagy részek sorrendiségének jelöléséhez egy nagyobb művön belül."@hu,
@@ -196,7 +199,6 @@
         "Nummerering af del kan omfatte et tal, et bogstav, ethvert andet tegn eller en kombination af disse med eller uden tilhørende tekst og/eller en kronologisk betegnelse"@da,
         "Zur Zählung des Teils kann eine Ziffer, ein Buchstabe oder jedes andere Zeichen oder eine Kombination aus diesen, mit oder ohne Begleittext (Band, Nummer usw.) und/oder chronologische Bezeichnung gehören."@de,
         "Η αρίθμηση περιλαμβάνει ένα αριθμητικό, ένα γράμμα, οποιονδήποτε άλλο χαρακτήρα ή τον συνδυασμό τους με ή χωρίς συνοδευτική κεφαλίδα ή/και χρονολογικό προσδιορισμό."@el,
-        "Numbering may consist of a numeral, a letter, any other character, or the combination of these with or without an accompanying caption, or a chronological designation."@en,
         "La numérotation comprend un chiffre, une lettre, tout autre caractère ou la combinaison de ces éléments accompagnés ou non d’une appellation, et/ou une désignation chronologique."@fr,
         "A számozás magába foglal egy számot, betűt, bármely egyéb karaktert, vagy ezek kombinációját kísérő képaláírással vagy anélkül, és/vagy kronológiai jelölést."@hu,
         "Đánh số vao gồm chưc số, chữ cái, ký tự bấy kỳ khác, hoặc tổ hợp của chùng có hoặc không kèm theo đầu đề, và/hoặc định danh biên niên."@vi .
@@ -1908,7 +1910,7 @@
         "er efterfølger"@da,
         "ist Sequel"@de,
         "είναι συνέχεια"@el,
-        "has sequel"@en,
+        "has sequel work"@en,
         "jatko-osa"@fi,
         "a pour suite"@fr,
         "folytatás"@hu,
@@ -1919,7 +1921,7 @@
         "Senere værk, der fortsætter et tidligere værks fortælling."@da,
         "Ein späteres Werk, das an den Erzählstrang eines früheren Werks anknüpft."@de,
         "Ένα μεταγενέστερο έργο που συνεχίζει την αφήγηση ενός προηγούμενου έργου."@el,
-        "A work that continues the narrative of another work."@en,
+        "A work that extends the narrative of another work forwards in time."@en,
         "Una obra posterior que continúa la narración de una obra anterior."@es,
         "Teos, joka juonellisesti jatkaa aikaisemmin ilmestynyttä teosta"@fi,
         "Œuvre ultérieure qui continue le récit d’une œuvre antérieure."@fr,
@@ -1930,7 +1932,7 @@
         "efterfølger"@da,
         "Sequel"@de,
         "είναι συνέχεια"@el,
-        "sequel"@en,
+        "sequel work"@en,
         "secuela"@es,
         "jatko-osa"@fi,
         "suite"@fr,
@@ -1941,10 +1943,10 @@
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60102> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/efterfølger.da>,
         <http://rdaregistry.info/Elements/w/jatkoOsa.fi>,
-        <http://rdaregistry.info/Elements/w/sequel.en> ;
+        <http://rdaregistry.info/Elements/w/sequelWork.en> ;
     reg:name "efterfølger"@da,
         "συνέχεια"@el,
-        "sequel"@en,
+        "sequelWork"@en,
         "jatkoOsa"@fi,
         "suite"@fr,
         "folytatás"@hu,
@@ -1958,7 +1960,7 @@
         "Relaterer et værk til et senere værk, der fortsætter et tidligere værks fortælling."@da,
         "Setzt ein Werk mit einem späteren Werk, das an den Erzählstrang eines früheren Werks anknüpft, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα μεταγενέστερο έργο που συνεχίζει την αφήγηση ενός προηγούμενου έργου."@el,
-        "Relates a work to a work that continues the narrative of another work."@en,
+        "Relates a work to a work that extends the narrative of another work forwards in time."@en,
         "Liittää teoksen teokseen, joka juonellisesti jatkaa aikaisemmin ilmestynyttä teosta"@fi,
         "Met une œuvre en relation avec une œuvre ultérieure qui continue le récit d’une œuvre antérieure."@fr,
         "Egy művet hozzákapcsol egy nagyobb műhöz, amely folytatja egy korábbi mű narratíváját. "@hu,
@@ -1980,7 +1982,7 @@
         "Senere værk, der er anvendt delvist i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."@da,
         "Ein späteres Werk, das teilweise anstelle eines früheren Werks verwendet wird, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen."@de,
         "Ένα μεταγενέστερο έργο το οποίο χρησιμοποιείται μερικώς στη θέση ενός προηγούμενου έργου, συνήθως λόγω του ότι το μεταγενέστερο έργο περιέχει ενημερωμένη/ανανεωμένη ή νέα πληροφορία, η οποία καθιστά μέρος του προηγούμενου έργου παρωχημένο."@el,
-        "A later work that is used in part in place of an earlier work, usually because the later work contains updated or new information that makes part of the earlier work obsolete."@en,
+        "A work whose content partially supersedes and renders obsolete the content of another work."@en,
         "Una obra posterior usada en parte en lugar de una obra anterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta parte de la obra anterior."@es,
         "Teos, joka osittain korvaa aiemman teoksen sisällön, josta osa on vanhentunut yleensä päivitetyn tai uuden tiedon myötä. Sovelletaan tavallisesti yksiosaisiin aineistoihin, moniosaisiin monografioihin ja päivittyviin aineistoihin"@fi,
         "Œuvre ultérieure utilisée en partie à la place d’une œuvre antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend une partie de l’œuvre antérieure obsolète."@fr,
@@ -2018,7 +2020,7 @@
         "Relaterer et senere værk, der er anvendt delvist i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."@da,
         "Setzt ein Werk mit einem späteren Werk, das teilweise anstelle eines früheren Werks verwendet wird, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα μεταγενέστερο έργο το οποίο χρησιμοποιείται μερικώς στη θέση ενός προηγούμενου έργου, συνήθως λόγω του ότι το μεταγενέστερο έργο περιέχει ενημερωμένη/ανανεωμένη ή νέα πληροφορία, η οποία καθιστά μέρος του προηγούμενου έργου παρωχημένο."@el,
-        "Relates a work to a later work that is used in part in place of an earlier work, usually because the later work contains updated or new information that makes part of the earlier work obsolete."@en,
+        "Relates a work to a work whose content partially supersedes and renders obsolete the content of another work."@en,
         "Liittää teoksen teokseen, joka osittain korvaa aiemman teoksen sisällön, josta osa on vanhentunut yleensä päivitetyn tai uuden tiedon myötä"@fi,
         "Met une œuvre en relation avec une œuvre ultérieure utilisée en partie à la place d’une œuvre antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend une partie de l’œuvre antérieure obsolète."@fr,
         "Egy művet hozzákapcsol egy későbbi műhöz, amelyet részben egy korábbi mű helyett használnak, általában azért, mert a későbbi mű frissített vagy új információkat tartalmaz, amelyek a korábbi művet elavulttá teszik."@hu,
@@ -2027,7 +2029,7 @@
         "Den her relation bruges generelt til enkeltstyksenheder, flerbindsværker og integrerende ressourcer."@da,
         "Wird im Allgemeinen für Einzelbände, mehrteilige Monografien und integrierende Ressourcen angewendet."@de,
         "Αυτή η σχέση βρίσκει γενική εφαρμογή σε μονομερείς μονάδες, πολυμερείς μονογραφίες και ενσωματωμένους πόρους."@el,
-        "This relationship applies generally to single-part units, multipart monographs, and integrating resources."@en,
+        "This element applies in general to a static work or an integrating work."@en,
         "Cette relation s’applique généralement aux unités en une seule partie, aux monographies en plusieurs parties et aux ressources intégratrices."@fr,
         "Ez a kapcsolat általában az egyrészes egységekre, többrészes monográfiákra és integráló forrásokra érvényes."@hu,
         "Mối quan hệ này áp dụng tổng quá đối với đơn vị một phần, chuyên khảo nhiều phần, và tài nguyên tích hợp."@vi .
@@ -2048,7 +2050,8 @@
         "Senere værk, der er anvendt i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."@da,
         "Ein späteres Werk, das anstelle eines früheren Werks verwendet wird, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen."@de,
         "Ένα μεταγενέστερο έργο το οποίο χρησιμοποιείται στη θέση ενός προηγούμενου έργου, συνήθως λόγω του ότι το μεταγενέστερο έργο περιέχει ενημερωμένη/ανανεωμένη ή νέα πληροφορία, η οποία καθιστά το προηγούμενο έργο παρωχημένο."@el,
-        "A later work that is used in place of an earlier work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en,
+        """A work whose content supersedes and renders obsolete the content of another work.
+"""@en,
         "Una obra posterior usada en lugar de una obra anterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la obra anterior."@es,
         "Teos, joka korvaa aiemman teoksen sisällön, josta osa on vanhentunut yleensä päivitetyn tai uuden tiedon myötä. Sovelletaan tavallisesti yksiosaisiin aineistoihin, moniosaisiin monografioihin ja päivittyviin aineistoihin"@fi,
         "Œuvre ultérieure utilisée à la place d’une œuvre antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète."@fr,
@@ -2086,7 +2089,8 @@
         "Relaterer et værk til et senere værk, der er anvendt i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."@da,
         "Setzt ein Werk mit einem späteren Werk, das anstelle eines früheren Werks verwendet wird, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα μεταγενέστερο έργο το οποίο χρησιμοποιείται στη θέση ενός προηγούμενου έργου, συνήθως λόγω του ότι το μεταγενέστερο έργο περιέχει ενημερωμένη/ανανεωμένη ή νέα πληροφορία, η οποία καθιστά το προηγούμενο έργο παρωχημένο."@el,
-        "Relates a work to a later work that is used in place of an earlier work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en,
+        """Relates a work to a work whose content supersedes and renders obsolete the content of another work.
+"""@en,
         "Liittää teoksen teokseen, joka korvaa aiemman teoksen sisällön, josta osa on vanhentunut yleensä päivitetyn tai uuden tiedon myötä"@fi,
         "Met une œuvre en relation avec une œuvre ultérieure utilisée à la place d’une œuvre antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète."@fr,
         "Egy művet hozzákapcsol egy későbbi műhöz, amelyet egy korábbi mű helyett használnak, általában azért, mert a későbbi mű frissített vagy új információkat tartalmaz, amelyek a korábbi művet elavulttá teszik."@hu,
@@ -2095,7 +2099,7 @@
         "Denne relation bruges generelt til enkeltstående monografier, flerbindsværk og integrerende ressourcer."@da,
         "Wird im Allgemeinen für Einzelbände, mehrteilige Monografien und integrierende Ressourcen angewendet."@de,
         "Αυτή η σχέση βρίσκει γενική εφαρμογή σε μονομερείς μονάδες, πολυμερείς μονογραφίες και ενσωματωμένους πόρους."@el,
-        "This relationship applies generally to single-part units, multipart monographs, and integrating resources."@en,
+        "This element applies in general to a static work or an integrating work."@en,
         "Cette relation s’applique généralement aux unités en une seule partie, aux monographies en plusieurs parties et aux ressources intégratrices."@fr,
         "Ez a kapcsolat általában az egyrészes egységekre, többrészes monográfiákra és integráló forrásokra érvényes."@hu,
         "Mối quan hệ này áp dụng tổng quá đối với đơn vị một phần, chuyên khảo nhiều phần, và tài nguyên tích hợp."@vi .
@@ -3078,68 +3082,6 @@
         "Met une œuvre en relation avec une personne ou une collectivité qui est accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée."@fr,
         "Liên kết tác phẩm với cá nhân hoặc tập thể bị buộc tội trong vụ kiện hình sự hoặc bị kiện trong vụ kiện dân sự."@vi .
 
-<http://rdaregistry.info/Elements/w/P10041> a rdf:Property ;
-    rdfs:label "té com a supervisor acadèmic"@ca,
-        "har vejleder"@da,
-        "hat akademischen Betreuer"@de,
-        "έχει επόπτη καθηγητή"@el,
-        "has degree supervisor"@en,
-        "opinnäytteen ohjaaja"@fi,
-        "a pour superviseur académique"@fr,
-        "van témavezetője"@hu,
-        "có người giám sát văn bằng"@vi ;
-    rdakit:hasElementType "2" ;
-    rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "Persona, com ara un tutor o un supervisor d’una tesi o una recerca acadèmica, que supervisa un grau acadèmic o una tesi."@ca,
-        "Person, der vejleder ved udarbejdelsen af afhandlingen til enten en akademisk grad eller et speciale."@da,
-        "Eine Person, zum Beispiel ein Berater oder Betreuer von Forschungen für eine Hochschulschrift, die die Arbeiten für einen akademischen Grad oder eine Hochschulschrift betreut."@de,
-        "Συνδέει ένα έργο με ένα φυσικό πρόσωπο, όπως έναν σύμβουλο ή επόπτη μιας γραπτής εργασίας ή διατριβής ή διδακτορικής έρευνας, είτε για την απόκτηση ανώτερου εκπαιδευτικού επιπέδου πτυχίου είτε διδακτορικού."@el,
-        "A person who oversees an academic degree or thesis."@en,
-        "Una persona, tal como un director o supervisor de tesis de grado o investigación, que supervisa un grado académico o tesis."@es,
-        "Henkilö, joka ohjaa akateemisen opinnäytteen tai väitöskirjan tekemistä"@fi,
-        "Personne telle qu’un conseiller ou un directeur de thèse ou de mémoire qui supervise un diplôme universitaire ou une thèse."@fr,
-        "Egy személy, mint például egy szakdolgozati vagy disszertációs kutatás tanácsadója vagy felügyelője, aki egy tudományos fokozatot vagy értekezést ellenőriz."@hu,
-        "En person, for eksempel en veileder for forskning knyttet til avhandlinger eller masteroppgaver, som fører tilsyn med en akademisk grad eller avhandling."@no,
-        "Cá nhân, như là cố vấn hoặc người giám sát của nghiên cứu luận văn hoặc luận án, giám sát hoặc văn bằng học thuật hoặc luận đề."@vi ;
-    rdakit:toolkitLabel "supervisor acadèmic"@ca,
-        "vejleder"@da,
-        "Akademischer Betreuer"@de,
-        "επόπτης καθηγητής"@el,
-        "degree supervisor"@en,
-        "supervisor de grado"@es,
-        "opinnäytteen ohjaaja"@fi,
-        "superviseur académique"@fr,
-        "témavezető"@hu,
-        "veileder"@no,
-        "người giám sát văn bằng"@vi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10041>,
-        <http://rdaregistry.info/Elements/w/object/P10041> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60420> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/degreeSupervisor.en>,
-        <http://rdaregistry.info/Elements/w/opinnaytteenOhjaaja.fi>,
-        <http://rdaregistry.info/Elements/w/vejleder.da> ;
-    reg:name "vejleder"@da,
-        "επόπτηςΚαθηγητής"@el,
-        "degreeSupervisor"@en,
-        "opinnaytteenOhjaaja"@fi,
-        "superviseurAcadémique"@fr,
-        "témaVezető"@hu,
-        "ngườiGiámSátVănBằng"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10311> ;
-    skos:definition "Relaciona una obra amb una persona, com ara un tutor o un supervisor d’una tesi o una recerca acadèmica, que supervisa un grau acadèmic o una tesi."@ca,
-        "Relaterer et værk til en person, der vejleder ved udarbejdelsen af afhandlingen til enten en akademisk grad eller et speciale."@da,
-        "Setzt ein Werk mit einer Person, zum Beispiel ein Berater oder Betreuer von Forschungen für eine Hochschulschrift, die die Arbeiten für einen akademischen Grad oder eine Hochschulschrift betreut, in Beziehung."@de,
-        "Συνδέει ένα έργο με ένα φυσικό πρόσωπο, όπως έναν σύμβουλο ή επόπτη μιας γραπτής εργασίας ή διατριβής ή διδακτορικής έρευνας, είτε για την απόκτηση ανώτερου εκπαιδευτικού επιπέδου πτυχίου είτε διδακτορικού."@el,
-        "Relates a work to a person who oversees an academic degree or thesis."@en,
-        "Liittää teoksen henkilöön, joka ohjaa akateemisen opinnäytteen tai väitöskirjan tekemistä"@fi,
-        "Met une œuvre en relation avec une personne telle qu’un conseiller ou un directeur de thèse ou de mémoire qui supervise un diplôme universitaire ou une thèse."@fr,
-        "Egy művet hozzákapcsol egy olyan személyhez, mint egy szakdolgozati vagy disszertációs kutatás tanácsadója vagy felügyelője, aki egy tudományos fokozatot vagy értekezést ellenőriz."@hu,
-        "Liên kết tác phẩm với cá nhân, như là cố vấn hoặc người giám sát của nghiên cứu luận văn hoặc luận án, giám sát hoặc văn bằng học thuật hoặc luận đề."@vi ;
-    skos:scopeNote "Includes an advisor or supervisor of thesis or dissertation research."@en .
-
 <http://rdaregistry.info/Elements/w/P10042> a rdf:Property ;
     rdfs:label "té com a persona apel·lant"@ca,
         "har appellerende person"@da,
@@ -3939,7 +3881,7 @@
         "Revisioner eller indholdspræciseringer, eller udvælgelse og sammensætning af værker og dele af værker, af et eller flere ophav er ikke omfattet."@da,
         "Überarbeiten oder Erläutern des Inhalts oder Auswählen und Zusammenstellen von Werken oder Teilen von Werken von einem oder mehreren geistigen Schöpfern ist hiervon ausgenommen."@de,
         "Δεν περιλαμβάνεται η αναθεώρηση ή η αποσαφήνιση του περιεχομένου ή η επιλογή και η συγκέντρωση έργων ή μερών ενός έργου από έναν ή περισσότερους δημιουργούς."@el,
-        "Revising or clarifying the content, or selecting and putting together works or parts of work, by one or more creators is excluded."@en,
+        "Revising or clarifying the content of an expression of a work and selecting and putting together expressions of works or parts of works are excluded."@en,
         "Le fait de réviser ou de clarifier le contenu, ou de choisir et de rassembler des œuvres, ou des parties d’œuvres, d’un ou plusieurs créateurs, est exclu."@fr,
         "Nem tartozik bele a tartalom átdolgozása vagy pontosítása, ill. művek vagy műrészek kiválasztása és összeállítása egy vagy több alkotó által."@hu,
         "Sửa lại hoặc làm rõ nội dung, hoặc lưa chọn và kết hợp lại các tác phẩm hoặc phần của tác phẩm, bởi một hoặc nhiều hơn người sáng tạo, được bao gồm"@vi .
@@ -4459,7 +4401,7 @@
         "Agent, som et værk eller en del af et værk er adresseret til."@da,
         "Ein Akteur, an den ein Werk oder ein Teil eines Werks adressiert ist."@de,
         "Ένας φορέας, στον οποίο ένα έργο ή μέρος ενός έργου απευθύνεται."@el,
-        "An agent to whom a work or part of a work is addressed."@en,
+        "An agent to whom a work or a portion of a work is addressed."@en,
         "Una persona, familia o entidad corporativa a quien va dirigida una obra o parte de ella"@es,
         "Toimija, jolle teos tai sen osa on osoitettu"@fi,
         "Agent à qui une œuvre ou une partie d’œuvre est adressée."@fr,
@@ -4498,7 +4440,7 @@
         "Relaterer et værk til en agent, som et værk eller en del af et værk er adresseret til."@da,
         "Setzt ein Werk mit einem Akteur, an den ein Werk oder ein Teil eines Werks adressiert ist, in Beziehung."@de,
         "Συνδέει ένα έργο με έναν φορέα, στον οποίο ένα έργο ή μέρος ενός έργου απευθύνεται."@el,
-        "Relates a work to an agent to whom a work or part of a work is addressed."@en,
+        "Relates a work to an agent to whom a work or a portion of a work is addressed."@en,
         "Liittää teoksen toimija, jolle teos tai sen osa on osoitettu"@fi,
         "Met une œuvre en relation avec un agent à qui une œuvre ou une partie d’œuvre est adressée."@fr,
         "Egy művet hozzákapcsol egy ágenshez (személyhez, családhoz vagy testülethez), akinek/amelynek egy művet vagy egy mű egy részét címezték."@hu,
@@ -6024,73 +5966,12 @@
         "Egy művet hozzákapcsol egy műhöz, amelyben egy rész következetesen megjelenik."@hu,
         "Liên kết tác phẩm với tác phẩm mà trong đó phần xuất hiện thường kỳ; nhan đề của tác phẩm lớn hơn xuất hiện trong tất cả các số hoặc phần của tiểu tùng thư"@vi .
 
-<http://rdaregistry.info/Elements/w/P10102> a rdf:Property ;
-    rdfs:label "és en una col·lecció"@ca,
-        "er del af serie"@da,
-        "ist in einer Reihe"@de,
-        "είναι στη σειρά"@el,
-        "is issue of"@en,
-        "sisältyy sarjaan"@fi,
-        "est dans la collection"@fr,
-        "sorozatban"@hu,
-        "trong tùng thư"@vi ;
-    rdakit:hasElementType "2" ;
-    rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "Obra en la qual s’ha publicat una part; un títol d’una obra més àmplia figura a la part."@ca,
-        "Værk, i hvilket en del er blevet udgivet; en titel på et større værk optræder på delen."@da,
-        "Ein Werk, in dem ein Teil erschienen ist, wobei ein Titel eines größeren Werks auf dem Teil erscheint."@de,
-        "Ένα έργο μέσα στο οποίο έχει κυκλοφορήσει το μέρος; ένας τίτλος του μεγαλύτερου έργου εμφανίζεται στο μέρος."@el,
-        "A work that is a successive aggregating work that inspires the editorial policy, scope, and style of a static work."@en,
-        "Una obra en la cual se publica la parte; el título de la obra mayor aparece en la parte."@es,
-        "Teos, jonka osana sarjan osa on ilmestynyt."@fi,
-        "Œuvre dans laquelle une partie a été publiée ; un titre d’œuvre plus vaste figure sur la partie."@fr,
-        "Et verk der en del er utgitt; tittelen til det større verket vises på delen."@no,
-        "Tác phẩm mà trong đó phần đã được công bố; nhan đề của tác phẩm lớn hơn xuất hiện trong phần đó."@vi ;
-    rdakit:toolkitLabel "en una col·lecció"@ca,
-        "del af serie"@da,
-        "In einer Reihe"@de,
-        "στη σειρά"@el,
-        "issue of"@en,
-        "en la serie (obra)"@es,
-        "sisältyy sarjaan"@fi,
-        "dans la collection"@fr,
-        "i serie"@no,
-        "trong tùng thư"@vi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10102>,
-        <http://rdaregistry.info/Elements/w/object/P10102> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60193> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/delAfSerie.da>,
-        <http://rdaregistry.info/Elements/w/issueOf.en>,
-        <http://rdaregistry.info/Elements/w/sisaltyySarjaan.fi> ;
-    reg:name "delAfSerie"@da,
-        "στηΣειρά"@el,
-        "issueOf"@en,
-        "sisaltyySarjaan"@fi,
-        "dansLaCollection"@fr,
-        "Sorozatban"@hu,
-        "trongTùngThư"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10290> ;
-    skos:altLabel "in series"@en ;
-    skos:definition "Relaciona una obra amb una obra en la qual s’ha publicat una part; un títol d’una obra més àmplia figura a la part."@ca,
-        "Relaterer et værk til et værk, i hvilket en del er blevet udgivet; en titel på et større værk optræder på delen."@da,
-        "Setzt ein Werk mit einem Werk, in dem ein Teil erschienen ist, wobei ein Titel eines größeren Werks auf dem Teil erscheint, in Beziehung."@de,
-        "Συνδέει ένα έργο με ένα έργο μέσα στο οποίο έχει κυκλοφορήσει το μέρος; ένας τίτλος του μεγαλύτερου έργου εμφανίζεται στο μέρος."@el,
-        "Relates a work to a work that is a successive aggregating work that inspires the editorial policy, scope, and style of a static work."@en,
-        "Liittää teoksen teokseen, jonka osana sarjan osa on ilmestynyt."@fi,
-        "Met une œuvre en relation avec une œuvre dans laquelle une partie a été publiée ; un titre d’œuvre plus vaste figure sur la partie."@fr,
-        "Egy művet hozzákapcsol egy műhöz, amelyben egy részt jelentettek meg. "@hu,
-        "Liên kết tác phẩm với tác phẩm mà trong đó phần đã được công bố; nhan đề của tác phẩm lớn hơn xuất hiện trong phần đó."@vi ;
-    skos:scopeNote "An issue static work can be a single work or an aggregating work."@en .
-
 <http://rdaregistry.info/Elements/w/P10104> a rdf:Property ;
     rdfs:label "és continuat en part per (obra)"@ca,
         "er delvis fortsat i (værk)"@da,
         "ist teilweise fortgesetzt durch (Werk)"@de,
         "συνεχίζεται μερικώς από (έργο)"@el,
-        "is continued in part by work"@en,
+        "is separated into work"@en,
         "jatkuu osittain teoksessa"@fi,
         "est continué en partie par (œuvre)"@fr,
         "részben folytatva (mű)"@hu,
@@ -6101,7 +5982,7 @@
         "Værk, hvoraf en del af indholdet er udskilt fra et tidligere værk, så et nyt værk er dannet."@da,
         "Ein Werk, dessen Inhalte teilweise aus einem früheren Werk abgetrennt wurden, um ein neues Werk zu bilden."@de,
         "Ένα έργο, μέρος του περιεχομένου του οποίου διαχωρίστηκε από ένα προηγούμενο έργο για να σχηματίσει ένα νέο έργο."@el,
-        "A work part of whose content separated from an earlier work to form a new work."@en,
+        "A work that is a diachronic work that continues the partial content of another diachronic work that is continuing."@en,
         "Una obra de la cual parte de su contenido se separa de una obra anterior para formar una nueva obra."@es,
         "Teoksen osa, joka on eronnut aiemmasta teoksesta muodostaakseen uuden teoksen. Tätä suhdetta käytetään yleensä sarja-aineistoissa."@fi,
         "Œuvre dont une partie du contenu a été détachée d’une œuvre antérieure pour former une nouvelle œuvre."@fr,
@@ -6112,7 +5993,7 @@
         "delvis fortsat i (værk)"@da,
         "Teilweise fortgesetzt durch (Werk)"@de,
         "συνεχίζεται μερικώς από (έργο)"@el,
-        "continued in part by work"@en,
+        "separated into work"@en,
         "continuada en parte por (obra)"@es,
         "jatkuu osittain teoksessa"@fi,
         "continué en partie par (œuvre)"@fr,
@@ -6121,12 +6002,12 @@
         "được tiếp tục một phần bởi (tác phẩm)"@vi ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/object/P10104> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60199> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/continuedInPartByWork.en>,
-        <http://rdaregistry.info/Elements/w/delvisFortsatIVærk.da>,
-        <http://rdaregistry.info/Elements/w/jatkuuOsittainTeoksessa.fi> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/delvisFortsatIVærk.da>,
+        <http://rdaregistry.info/Elements/w/jatkuuOsittainTeoksessa.fi>,
+        <http://rdaregistry.info/Elements/w/separatedIntoWork.en> ;
     reg:name "delvisFortsatIVærk"@da,
         "συνεχίζεταιΜερικώςΑπόΈργο"@el,
-        "continuedInPartByWork"@en,
+        "separatedIntoWork"@en,
         "jatkuuOsittainTeoksessa"@fi,
         "continuéEnPartieParŒuvre"@fr,
         "MűÁltalRészbenfolytatva"@hu,
@@ -6135,11 +6016,12 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
+    skos:altLabel "continued in part by work"@en ;
     skos:definition "Relaciona una obra amb una part d’una obra el contingut de la qual s’ha separat d’una obra anterior per formar una obra nova."@ca,
         "Relaterer et værk til et værk, hvoraf en del af indholdet er udskilt fra et tidligere værk, så et nyt værk er dannet."@da,
         "Setzt ein Werk mit einem Werk, dessen Inhalte teilweise aus einem früheren Werk abgetrennt wurden, um ein neues Werk zu bilden, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο, μέρος του περιεχομένου του οποίου διαχωρίστηκε από ένα προηγούμενο έργο για να σχηματίσει ένα νέο έργο."@el,
-        "Relates a work to a work part of whose content separated from an earlier work to form a new work."@en,
+        "Relates a work to a work that is a diachronic work that continues the partial content of another diachronic work that is continuing."@en,
         "Liittää teoksen teoksen osaan, joka on eronnut aiemmasta teoksesta muodostaakseen uuden teoksen."@fi,
         "Met une œuvre en relation avec une œuvre dont une partie du contenu a été détachée d’une œuvre antérieure pour former une nouvelle œuvre."@fr,
         "Egy művet hozzákapcsol egy műhöz, amelynek a tartalmát egy korábbi műtől elkülönítették egy új mű létrehozása céljából."@hu,
@@ -6148,7 +6030,7 @@
         "Anvend generelt for periodika."@da,
         "Wird im Allgemeinen bei fortlaufenden Ressourcen angewendet."@de,
         "Αυτή η σχέση βρίσκει γενική εφαρμογή στα περιοδικά."@el,
-        "This relationship applies generally to serials."@en,
+        "This element applies in general to a successive work."@en,
         "Cette relation s’applique généralement aux publications en série."@fr,
         "Ez a kapcsolat általában a folyóiratokra érvényes."@hu,
         "Mối quan hệ này áp dụng tổng quát cho ấn phẩm nhiều kỳ."@vi .
@@ -6882,7 +6764,7 @@
         "er analyseret i (værk)"@da,
         "ist analysiert in (Werk)"@de,
         "αναλύεται στο (έργο)"@el,
-        "is analysed in work"@en,
+        "is work analysed in"@en,
         "teoksen analyysi"@fi,
         "est analysé dans (œuvre)"@fr,
         "elemezve (mű)"@hu,
@@ -6893,7 +6775,7 @@
         "Værk der undersøger et oprindeligt værk for at identificere dets bestanddele og deres relationer."@da,
         "Ein Werk, das ein ursprüngliches Werk untersucht, um seine Bestandteile und deren Beziehungen zu identifizieren."@de,
         "Ένα έργο το οποίο εξετάζει ένα έργο-πηγή για την ταύτιση των συστατικών του και τις σχέσεις τους."@el,
-        "A work that examines a source work to identify its components and their relations."@en,
+        "A work that describes the structure of another work."@en,
         "Una obra que examina la obra fuente para identificar sus componentes y sus relaciones."@es,
         "Teos, joka tutkii lähdeteoksen osia ja niiden välisiä suhteita analyyttisesti."@fi,
         "Œuvre qui examine une œuvre source pour identifier ses composantes et leurs relations."@fr,
@@ -6904,7 +6786,7 @@
         "analyseret i (værk)"@da,
         "Analysiert in (Werk)"@de,
         "αναλύεται στο (έργο)"@el,
-        "analysed in work"@en,
+        "work analysed in"@en,
         "analizada en (obra)"@es,
         "teoksen analyysi"@fi,
         "analysé dans (œuvre)"@fr,
@@ -6913,12 +6795,12 @@
         "được phân tích trong (tác phẩm)"@vi ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/object/P10121> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60219> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/analysedInWork.en>,
-        <http://rdaregistry.info/Elements/w/analyseretIVærk.da>,
-        <http://rdaregistry.info/Elements/w/teoksenAnalyysi.fi> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/analyseretIVærk.da>,
+        <http://rdaregistry.info/Elements/w/teoksenAnalyysi.fi>,
+        <http://rdaregistry.info/Elements/w/workAnalysedIn.en> ;
     reg:name "analyseretIVærk"@da,
         "αναλύεταιΣτοΈργο"@el,
-        "analysedInWork"@en,
+        "workAnalysedIn"@en,
         "teoksenAnalyysi"@fi,
         "analyséDansŒuvre"@fr,
         "Műbenelemezve"@hu,
@@ -6927,11 +6809,12 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10118> ;
+    skos:altLabel "analysed in (work)"@en ;
     skos:definition "Relaciona una obra amb una obra que examina una obra font per identificar els seus components i les seves relacions."@ca,
         "Relaterer et værk til et værk der undersøger et oprindeligt værk for at identificere dets bestanddele og deres relationer."@da,
         "Setzt ein Werk mit einem Werk, das ein ursprüngliche Werk untersucht, um seine Bestandteile und deren Beziehungen zu identifizieren, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο εξετάζει ένα έργο-πηγή για την ταύτιση των συστατικών του και τις σχέσεις τους."@el,
-        "Relates a work to a work that examines a source work to identify its components and their relations."@en,
+        "Relates a work to a work that describes the structure of another work."@en,
         "Liittää teoksen teokseen, joka tutkii lähdeteoksen osia ja niiden välisiä suhteita analyyttisesti."@fi,
         "Met une œuvre en relation avec une œuvre qui examine une œuvre source pour identifier ses composantes et leurs relations."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely egy forrásművet vizsgál, hogy azonosíthassa annak alkotóelemeit és azok viszonyait."@hu,
@@ -6942,7 +6825,7 @@
         "er forhistorie"@da,
         "ist Prequel"@de,
         "είναι προοίμιο"@el,
-        "has prequel"@en,
+        "has prequel work"@en,
         "esiosa (teos)"@fi,
         "a pour antépisode"@fr,
         "előzmény"@hu,
@@ -6964,7 +6847,7 @@
         "forhistorie"@da,
         "Prequel"@de,
         "προοίμιο"@el,
-        "prequel"@en,
+        "prequel work"@en,
         "precuela"@es,
         "esiosa (teos)"@fi,
         "antépisode"@fr,
@@ -6975,10 +6858,10 @@
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60220> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/esiosaTeos.fi>,
         <http://rdaregistry.info/Elements/w/forhistorie.da>,
-        <http://rdaregistry.info/Elements/w/prequel.en> ;
+        <http://rdaregistry.info/Elements/w/prequelWork.en> ;
     reg:name "forhistorie"@da,
         "προοίμιο"@el,
-        "prequel"@en,
+        "prequelWork"@en,
         "esiosaTeos"@fi,
         "antépisode"@fr,
         "előzmény"@hu,
@@ -7981,7 +7864,7 @@
         "Værk, der er blevet undersøgt for at identificere dets bestanddele og deres relationer."@da,
         "Ein Werk, das untersucht wurde, um seine Bestandteile und deren Beziehungen zu identifizieren."@de,
         "Ένα έργο το οποίο έχει εξεταστεί για την ταύτιση των συστατικών του και των σχέσεών τους."@el,
-        "A work that is examined to identify its components and their relations."@en,
+        "A work whose structure is described by another work."@en,
         "Una obra que ha sido examinada para identificar sus componentes y sus relaciones."@es,
         "Teos, jonka osia ja niiden välisiä suhteita on tutkittu analyyttisesti."@fi,
         "Œuvre qui a été examinée pour identifier ses composantes et leurs relations."@fr,
@@ -8019,74 +7902,11 @@
         "Relaterer et værk til et værk, der er blevet undersøgt for at identificere dets bestanddele og deres relationer."@da,
         "Setzt ein Werk mit einem Werk, das untersucht wurde, um seine Bestandteile und deren Beziehungen zu identifizieren, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο έχει εξεταστεί για την ταύτιση των συστατικών του και των σχέσεών τους."@el,
-        "Relates a work to a work that is examined to identify its components and their relations."@en,
+        "Relates a work to a work whose structure is described by another work."@en,
         "Liittää teoksen teokseen, jonka osia ja niiden välisiä suhteita on tutkittu analyyttisesti."@fi,
         "Met une œuvre en relation avec une œuvre qui a été examinée pour identifier ses composantes et leurs relations."@fr,
         "Egy művet hozzákapcsol egy műhöz, amelyet azért vizsgáltak, hogy azonosítsák annak alkotóelemeit és azok viszonyait."@hu,
         "Liên kết tác phẩm với tác phẩm đã được kiểm tra để nhận dạng các bộ phận cấu thành và liên quan của chúng."@vi .
-
-<http://rdaregistry.info/Elements/w/P10141> a rdf:Property ;
-    rdfs:label "és col·lecció contenidor de"@ca,
-        "er serieindeholder af"@da,
-        "?"@de,
-        "είναι περιέκτης σειράς του"@el,
-        "has issue"@en,
-        "sarjan osa (teos)"@fi,
-        "est un conteneur collection de"@fr,
-        "sorozattárolója "@hu,
-        "là vỏ chứa tùng thư của"@vi ;
-    rdakit:hasElementType "2" ;
-    rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "Obra que s’ha publicat com a part d’una col·lecció."@ca,
-        "Værk, der er blevet udgivet som del af en serie."@da,
-        "Ein Werk, das als Teil einer Reihe erschienen ist."@de,
-        "Ένα έργο το οποίο έχει εκδοθεί ως μέρος μιας σειράς."@el,
-        "A work that is a static work that is inspired by the overall editorial policy, scope, and style of a successive aggregating work."@en,
-        "Una obra que se publicó como parte de una serie."@es,
-        "Teos, joka on julkaistu sarjassa."@fi,
-        "Œuvre qui a été publiée comme partie d’une collection."@fr,
-        "Egy mű, amelyet egy sorozat részeként adtak ki."@hu,
-        "Et verk som er utgitt som del av en serie."@no,
-        "Tác phẩm đã được công bố như là phần của tùng thư."@vi ;
-    rdakit:toolkitLabel "col·lecció contenidor de"@ca,
-        "serieindeholder af"@da,
-        "Reihe enthält"@de,
-        "περιέκτης σειράς του"@el,
-        "issue"@en,
-        "la serie incluye (obra)"@es,
-        "sarjan osa (teos)"@fi,
-        "conteneur collection de"@fr,
-        "sorozattartója "@hu,
-        "serie omfatter"@no,
-        "vỏ chứa tùng thư của"@vi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10141>,
-        <http://rdaregistry.info/Elements/w/object/P10141> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60240> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/issue.en>,
-        <http://rdaregistry.info/Elements/w/sarjanOsaTeos.fi>,
-        <http://rdaregistry.info/Elements/w/serieIndeholderAf.da> ;
-    reg:name "serieIndeholderAf"@da,
-        "περιέκτηςΣειράςΤου"@el,
-        "issue"@en,
-        "sarjanOsaTeos"@fi,
-        "conteneurCollectionDe"@fr,
-        "sorozattárolója"@hu,
-        "vỏChứaTùngThưCủa"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10291> ;
-    skos:altLabel "series container of"@en ;
-    skos:definition "Relaciona una obra amb una obra que s’ha publicat com a part d’una col·lecció."@ca,
-        "Relaterer et værk til et værk, der er blevet udgivet som del af en serie."@da,
-        "Setzt ein Werk mit einem Werk, das als Teil einer Reihe erschienen ist, in Beziehung."@de,
-        "Συνδέει ένα έργο με ένα έργο το οποίο έχει εκδοθεί ως μέρος μιας σειράς."@el,
-        "Relates a work to a work that is a static work that is inspired by the overall editorial policy, scope, and style of a successive aggregating work."@en,
-        "Liittää teoksen teokseen, joka on julkaistu sarjassa."@fi,
-        "Met une œuvre en relation avec une œuvre qui a été publiée comme partie d’une collection."@fr,
-        "Egy művet hozzákapcsol egy műhöz, amelyet egy sorozat részeként jelentettek meg. "@hu,
-        "Liên kết tác phẩm với tác phẩm đã được công bố như là phần của tùng thư."@vi ;
-    skos:scopeNote "An issue static work can be a single work or an aggregating work."@en .
 
 <http://rdaregistry.info/Elements/w/P10143> a rdf:Property ;
     rdfs:label "és traducció lliure de (obra)"@ca,
@@ -8225,7 +8045,7 @@
         "Værk, der inkorporerer et andet værk."@da,
         "Ein Werk, in das ein anderes Werk eingeflossen ist."@de,
         "Ένα έργο το οποίο ενσωματώνει ένα άλλο έργο."@el,
-        "A work that incorporates a related work."@en,
+        "A work whose content incorporates the content of another work."@en,
         "Una obra que incorpora otra obra."@es,
         "Teos, joka on sulautunut osaksi toista teosta."@fi,
         "Œuvre qui intègre une autre œuvre."@fr,
@@ -8263,7 +8083,7 @@
         "Relaterer et værk til et værk, der inkorporerer et andet værk."@da,
         "Setzt ein Werk mit einem Werk, in das ein anderes Werk eingeflossen ist, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο ενσωματώνει ένα άλλο έργο."@el,
-        "Relates a work to a work that incorporates a related work."@en,
+        "Relates a work to a work whose content incorporates the content of another work."@en,
         "Liittää teoksen teokseen, joka on sulautunut osaksi toista teosta."@fi,
         "Met une œuvre en relation avec une œuvre qui intègre une autre œuvre."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely egy másik művet magába olvaszt."@hu,
@@ -8285,7 +8105,7 @@
         "Værk, der inkorporerer en del af et andet værks indhold."@da,
         "Ein Werk, in das ein Teil des Inhalts eines anderen Werks eingeflossen ist."@de,
         "Ένα έργο το οποίο ενσωματώνει μέρος του περιεχομένου ενός άλλου έργου."@el,
-        "A work that incorporates part of the content of a related work."@en,
+        "A work whose content incorporates the partial content of another work."@en,
         "Una obra que incorpora parte del contenido de otra obra."@es,
         "Teos, joka on osittain sulautunut osaksi toista teosta."@fi,
         "Œuvre qui intègre une partie du contenu d’une autre œuvre."@fr,
@@ -8323,7 +8143,7 @@
         "Relaterer et værk til et værk, der inkorporerer en del af et andet værks indhold."@da,
         "Setzt ein Werk mit einem Werk, in das ein Teil des Inhalts eines anderen Werks eingeflossen ist, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο ενσωματώνει μέρος του περιεχομένου ενός άλλου έργου."@el,
-        "Relates a work to a work that incorporates part of the content of a related work."@en,
+        "Relates a work to a work whose content incorporates the partial content of another work."@en,
         "Liittää teoksen teokseen, joka on sulautunut osittain osaksi toista teosta."@fi,
         "Met une œuvre en relation avec une œuvre qui intègre une partie du contenu d’une autre œuvre."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely egy másik mű tartalmának egy részét magába olvasztja."@hu,
@@ -9367,7 +9187,7 @@
         "er delvis fortsættelse af (værk)"@da,
         "ist teilweise Fortsetzung von (Werk)"@de,
         "είναι συνέχεια σε μέρη του (έργου)"@el,
-        "is continuation in part of work"@en,
+        "is split from work"@en,
         "jatkaa osittain teosta"@fi,
         "est une continuation partielle de (œuvre)"@fr,
         "részleges folytatása (mű)"@hu,
@@ -9378,7 +9198,7 @@
         "Værk, der er delt i to eller flere separate værker med nye titler."@da,
         "Ein Werk, das in mehrere separate Werke mit neuen Titeln gesplittet wurde."@de,
         "Ένα έργο το οποίο χωρίζεται σε δύο ή περισσότερα διακριτά έργα με νέους τίτλους."@el,
-        "A work that split into two or more separate works with new titles."@en,
+        "A work that is a diachronic work that is completed whose partial content is continued by another diachronic work."@en,
         "Una obra que se divide en dos o más obras separadas con títulos nuevos."@es,
         "Teos, joka jakaantuu kahdeksi tai useammiksi erillisiksi uudelleen nimetyiksi teoksiksi. Käytetään yleensä sarja-aineistossa."@fi,
         "Œuvre qui s’est scindée en deux ou plusieurs œuvres distinctes avec de nouveaux titres."@fr,
@@ -9389,7 +9209,7 @@
         "delvis fortsættelse af (værk)"@da,
         "Teilweise Fortsetzung von (Werk)"@de,
         "συνέχεια σε μέρη του (έργο)"@el,
-        "continuation in part of work"@en,
+        "split from work"@en,
         "continúa en parte (obra)"@es,
         "jatkaa osittain teosta"@fi,
         "continuation partielle de (œuvre)"@fr,
@@ -9398,12 +9218,12 @@
         "tiếp tục một phần của (tác phẩm)"@vi ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/object/P10168> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60276> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/continuationInPartOfWork.en>,
-        <http://rdaregistry.info/Elements/w/delvisFortsættelseAfVærk.da>,
-        <http://rdaregistry.info/Elements/w/jatkaaOsittainTeosta.fi> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/delvisFortsættelseAfVærk.da>,
+        <http://rdaregistry.info/Elements/w/jatkaaOsittainTeosta.fi>,
+        <http://rdaregistry.info/Elements/w/splitFromWork.en> ;
     reg:name "delvisFortsættelseAfVærk"@da,
         "συνέχειαΣεΜέρηΤουΈργου"@el,
-        "continuationInPartOfWork"@en,
+        "splitFromWork"@en,
         "jatkaaOsittainTeosta"@fi,
         "continuationPartielleDeŒuvre"@fr,
         "MűRészlegesfolytatása"@hu,
@@ -9412,11 +9232,12 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
+    skos:altLabel "continuation in part of work"@en ;
     skos:definition "Relaciona una obra amb una obra que es divideix en dues o més obres separades amb títols nous."@ca,
         "Relaterer et værk til et værk, der er delt i to eller flere separate værker med nye titler."@da,
         "Setzt ein Werk mit einem Werk, das in mehrere separate Werke mit neuen Titeln gesplittet wurde, in Beziehung"@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο χωρίζεται σε δύο ή περισσότερα διακριτά έργα με νέους τίτλους."@el,
-        "Relates a work to a work that split into two or more separate works with new titles."@en,
+        "Relates a work to a work that is a diachronic work that is completed whose partial content is continued by another diachronic work."@en,
         "Liittää teoksen teokseen, joka jakaantuu kahdeksi tai useammiksi erillisiksi uudelleen nimetyiksi teoksiksi."@fi,
         "Met une œuvre en relation avec une œuvre qui s’est scindée en deux ou plusieurs œuvres distinctes avec de nouveaux titres."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely két vagy több különálló műre bomlott új címekkel."@hu,
@@ -9425,7 +9246,7 @@
         "Denne relation anvendes generelt for periodika."@da,
         "Wird im Allgemeinen bei fortlaufenden Ressourcen angewendet."@de,
         "Αυτή η σχέση βρίσκει γενική εφαρμογή στα περιοδικά."@el,
-        "This relationship applies generally to serials."@en,
+        "This element applies in general to a successive work."@en,
         "Cette relation s’applique généralement aux publications en série."@fr,
         "Ez a kapcsolat általában a periodikákra érvényes."@hu,
         "Mối quan hệ này áp dụng tổng quát cho ấn phẩm nhiều kỳ."@vi .
@@ -9446,7 +9267,7 @@
         "Værk, hvoraf en del af indholdet er udskilt, så der er dannet et nyt værk."@da,
         "Ein Werk, das einen Teil seines Inhalts ausgegliedert hat, um ein neues Werk zu bilden."@de,
         "Ένα έργο το οποίο αποσχίστηκε από το περιεχόμενό του για να σχηματίσει ένα νέο έργο."@el,
-        "A work that spun off a part of its content to form a new work."@en,
+        "A work that is a diachronic work that is continuing whose partial content is continued by another diachronic work."@en,
         "Una obra que se desprende de una parte de su contenido para formar una obra nueva."@es,
         "Teos, jonka sisällöstä on eronnut osa, joka muodostaa uuden teoksen."@fi,
         "Œuvre dont une partie du contenu a été détachée pour former une nouvelle œuvre."@fr,
@@ -9484,11 +9305,12 @@
         "Relaterer et værk til et værk, hvoraf en del af indholdet er udskilt, så der er dannet et nyt værk."@da,
         "Setzt ein Werk mit einem Werk, das einen Teil seines Inhalts ausgegliedert hat, um ein neues Werk zu bilden, in Beziehung"@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο αποσχίστηκε από το περιεχόμενό του για να σχηματίσει ένα νέο έργο."@el,
-        "Relates a work to a work that spun off a part of its content to form a new work."@en,
+        "Relates a work to a work that is a diachronic work that is continuing whose partial content is continued by another diachronic work."@en,
         "Liittää teoksen teokseen, jonka sisällöstä on eronnut osa, joka muodostaa uuden teoksen."@fi,
         "Met une œuvre en relation avec une œuvre dont une partie du contenu a été détachée pour former une nouvelle œuvre."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely kipörgeti magából tartalma egy részét egy új mű létrehozásához. "@hu,
-        "Liên kết tác phẩm với tác phẩm chia tách một phần nội dung để tạo thành tác phẩm mới."@vi .
+        "Liên kết tác phẩm với tác phẩm chia tách một phần nội dung để tạo thành tác phẩm mới."@vi ;
+    skos:scopeNote "This element applies in general to a successive work."@en .
 
 <http://rdaregistry.info/Elements/w/P10171> a rdf:Property ;
     rdfs:label "és compendiat com (obra)"@ca,
@@ -10648,7 +10470,7 @@
         "Værk, hvis indhold fortsætter et tidligere værk."@da,
         "Ein Werk, dessen Inhalt ein früheres Werk fortsetzt."@de,
         "Ένα έργο του οποίου το περιεχόμενο συνεχίζει ένα προηγούμενο έργο."@el,
-        "A work whose content continues an earlier work."@en,
+        "A work that is a diachronic work that continues the content of another diachronic work that is completed."@en,
         "Una obra cuyo contenido continúa una obra anterior bajo un título nuevo."@es,
         "Teos, joka seuraa sitä edeltävää teosta. Käytetään yleensä sarja-aineistossa."@fi,
         "Œuvre dont le contenu continue une œuvre antérieure."@fr,
@@ -10686,7 +10508,7 @@
         "Relaterer et værk til et værk, hvis indhold fortsætter et tidligere værk."@da,
         "Setzt ein Werk mit einem Werk, dessen Inhalt ein früheres Werk fortsetzt, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο του οποίου το περιεχόμενο συνεχίζει ένα προηγούμενο έργο."@el,
-        "Relates a work to a work whose content continues an earlier work."@en,
+        "Relates a work to a work that is a diachronic work that continues the content of another diachronic work that is completed."@en,
         "Liittää teoksen teokseen, joka seuraa sitä edeltävää teosta."@fi,
         "Met une œuvre en relation avec une œuvre dont le contenu continue une œuvre antérieure."@fr,
         "Egy művet hozzákapcsol egy műhöz, amelynek tartalma egy korábbi művet folytat."@hu,
@@ -10695,7 +10517,7 @@
         "Denne relation anvendes generelt for periodika."@da,
         "Wird im Allgemeinen bei fortlaufenden Ressourcen angewendet."@de,
         "Αυτή η σχέση βρίσκει γενική εφαρμογή στα περιοδικά."@el,
-        "This relationship applies generally to serials."@en,
+        "This element applies in general to a successive work."@en,
         "Cette relation s’applique généralement aux publications en série."@fr,
         "Ez a kapcsolat általában a periodikákra érvényes."@hu,
         "Mối quan hệ này áp dụng tổng quát cho ấn phẩm nhiều kỳ."@vi .
@@ -11258,7 +11080,7 @@
         "Tidligere værk, hvis indhold er blevet delvist erstattet af et senere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."@da,
         "Ein früheres Werk, dessen Inhalt teilweise durch ein späteres Werk ersetzt wurde, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen."@de,
         "Ένα προηγούμενο έργο του οποίου τα περιεχόμενα έχουν μερικώς αντικατασταθεί από ένα μεταγενέστερο έργο, συνήθως γιατί το μεταγενέστερο έργο περιέχει ενημερωμένη ή νέα πληροφόρηση η οποία καθιστά το προηγούμενο έργο παρωχημένο."@el,
-        "An earlier work whose content is partially replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en,
+        "A work whose content is partially superseded and rendered obsolete by the content of another work."@en,
         "Una obra anterior cuyo contenido ha sido reemplazado parcialmente por una obra posterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la obra anterior."@es,
         "Teos, jonka sisällön myöhempi teos osittain korvaa. Myöhempi teos sisältää tavallisesti päivitetty tietoa, joka korvaa vanhemman teoksen tiedon. Käytetään tavallisesti yksiosaisissa teoksissa, moniosaisissa monografioissa ja päivittyvissä julkaisuissa."@fi,
         "Œuvre antérieure dont le contenu a été partiellement remplacé par une œuvre ultérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète."@fr,
@@ -11296,7 +11118,7 @@
         "Relaterer et værk til et tidligere værk, hvis indhold er blevet delvist erstattet af et senere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."@da,
         "Setzt ein Werk mit einem früheren Werk, dessen Inhalt teilweise durch ein späteres Werk ersetzt wurde, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα προηγούμενο έργο του οποίου τα περιεχόμενα έχουν μερικώς αντικατασταθεί από ένα μεταγενέστερο έργο, συνήθως γιατί το μεταγενέστερο έργο περιέχει ενημερωμένη ή νέα πληροφόρηση η οποία καθιστά το προηγούμενο έργο παρωχημένο."@el,
-        "Relates a work to an earlier work whose content is partially replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en,
+        "Relates a work to a work whose content is partially superseded and rendered obsolete by the content of another work."@en,
         "Liittää teoksen teokseen, jonka sisällön myöhempi teos osittain korvaa. Myöhempi teos sisältää tavallisesti päivitetty tietoa, joka korvaa vanhemman teoksen tiedon."@fi,
         "Met une œuvre en relation avec une œuvre antérieure dont le contenu a été partiellement remplacé par une œuvre ultérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète."@fr,
         "Egy művet hozzákapcsol egy korábbi műhöz, amelynek tartalmát részben kicserélték egy másik mű tartalmával, rendszerint azért, mert a későbbi mű olyan frissített vagy új információkat tartalmaz, amelyek a korábbi művet elavulttá teszik."@hu,
@@ -11305,7 +11127,7 @@
         "Denne relation anvendes generelt til enkeltstående monografier, flerbindsværker og integrerende ressourcer."@da,
         "Wird im Allgemeinen für Einzelbände, mehrteilige Monografien und integrierende Ressourcen angewendet."@de,
         "Αυτή η σχέση βρίσκει γενική εφαρμογή σε μονομερείς μονάδες, πολυμερείς μονογραφίες και ενσωματωμένους πόρους."@el,
-        "This relationship applies generally to single-part units, multipart monographs, and integrating resources."@en,
+        "This element applies in general to a static work or an integrating work."@en,
         "Cette relation s’applique généralement aux unités en une seule partie, aux monographies en plusieurs parties et aux ressources intégratrices."@fr,
         "Ez a kapcsolat általában az egyrészes egységekre, többrészes monográfiákra és integráló forrásokra érvényes."@hu,
         "Mối quan hệ này áp dụng tổng quát cho đơn vị một phần, chuyên khảo nhiều phần, và tài nguyên tích hợp."@vi .
@@ -11326,7 +11148,7 @@
         "Tidligere værk, hvis indhold er blevet erstattet af et senere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."@da,
         "Ein früheres Werk, dessen Inhalt durch ein späteres Werk ersetzt wurde, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen."@de,
         "Ένα προηγούμενο έργο του οποίου το περιεχόμενο έχει αντικατασταθεί από ένα μεταγενέστερο έργο, συνήθως γιατί το μεταγενέστερο έργο περιέχει ενημερωμένη ή νέα πληροφόρηση η οποία καθιστά το προηγούμενο έργο παρωχημένο."@el,
-        "An earlier work whose content is replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en,
+        "A work whose content is superseded and rendered obsolete by the content of another work."@en,
         "Una obra anterior cuyo contenido ha sido reemplazado por una obra posterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la obra anterior."@es,
         "Teos, jonka sisällön myöhempi teos  korvaa. Myöhempi teos sisältää tavallisesti päivitetty tietoa, joka korvaa vanhemman teoksen tiedon. Käytetään tavallisesti yksiosaisissa teoksissa, moniosaisissa monografioissa ja päivittyvissä julkaisuissa."@fi,
         "Œuvre antérieure dont le contenu a été remplacé par une œuvre ultérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète."@fr,
@@ -11364,7 +11186,7 @@
         "Relaterer et værk til et tidligere værk, hvis indhold er blevet erstattet af et senere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."@da,
         "Setzt ein Werk mit einem früheren Werk, dessen Inhalt durch ein späteres Werk ersetzt wurde, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα προηγούμενο έργο του οποίου το περιεχόμενο έχει αντικατασταθεί από ένα μεταγενέστερο έργο, συνήθως γιατί το μεταγενέστερο έργο περιέχει ενημερωμένη ή νέα πληροφόρηση η οποία καθιστά το προηγούμενο έργο παρωχημένο."@el,
-        "Relates a work to an earlier work whose content is replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete."@en,
+        "Relates a work to a work whose content is superseded and rendered obsolete by the content of another work."@en,
         "Liittää teoksen teokseen, jonka sisällön myöhempi teos  korvaa. Myöhempi teos sisältää tavallisesti päivitetty tietoa, joka korvaa vanhemman teoksen tiedon."@fi,
         "Met une œuvre en relation avec une œuvre antérieure dont le contenu a été remplacé par une œuvre ultérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète."@fr,
         "Egy művet hozzákapcsol egy korábbi műhöz, amelynek tartalmát kicserélték egy másik mű tartalmával, rendszerint azért, mert a későbbi mű olyan frissített vagy új információkat tartalmaz, amelyek a korábbi művet elavulttá teszik."@hu,
@@ -11373,7 +11195,7 @@
         "Denne relation anvendes generelt til enkeltstående monografier, flerbindsværker og integrerende ressourcer."@da,
         "Wird im Allgemeinen für Einzelbände, mehrteilige Monografien und integrierende Ressourcen angewendet."@de,
         "Αυτή η σχέση βρίσκει γενική εφαρμογή σε μονομερείς μονάδες, πολυμερείς μονογραφίες και ενσωματωμένους πόρους."@el,
-        "This relationship applies generally to single-part units, multipart monographs, and integrating resources."@en,
+        "This element applies in general to a static work or an integrating work."@en,
         "Cette relation s’applique généralement aux unités en une seule partie, aux monographies en plusieurs parties et aux ressources intégratrices."@fr,
         "Ez a kapcsolat általában az egyrészes egységekre, többrészes monográfiákra és integráló forrásokra érvényes."@hu,
         "Mối quan hệ này áp dụng tổng quát cho đơn vị một phần, chuyên khảo nhiều phần, và tài nguyên tích hợp."@vi .
@@ -11454,7 +11276,7 @@
     rdakit:toolkitDefinition "Obra que és el resultat de la divisió d’una obra anterior en dues o més obres separades."@ca,
         "Et værk, der er resultatet af opdelingen af et tidligere værk i to eller flere separate værker."@da,
         "Ein Werk, das aus der Teilung eines früheren Werks, in zwei oder mehrere getrennte Werke, entstanden ist."@de,
-        "A work resulting from division of an earlier work into two or more separate works."@en,
+        "A work that is a diachronic work that continues the partial content of another diachronic work that is completed."@en,
         "Una de dos o más obras que resultan de la división de una obra anterior en obras separadas."@es,
         "Teos, joka on tulosta aiemman teoksen jakautumisesta kahteen tai useampiin teoksiin."@fi,
         "Œuvre qui résulte de la division d’une œuvre antérieure en deux ou plusieurs œuvres distinctes."@fr,
@@ -11492,11 +11314,12 @@
         "Relaterer et værk til et værk, der er resultatet af opdelingen af et tidligere værk i to eller flere separate værker."@da,
         "Setzt ein Werk mit einem Werk, das aus der Teilung eines früheren Werks, in zwei oder mehrere getrennte Werke, entstanden ist, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο προερχόμενο από τη διαίρεση ενός προηγούμενου έργου σε δύο ή περισσότερα διακριτά έργα."@el,
-        "Relates a work to a work resulting from division of an earlier work into two or more separate works."@en,
+        "Relates a work to a work that is a diachronic work that continues the partial content of another diachronic work that is completed."@en,
         "Liittää teoksen teokseen, joka on tulosta aiemman teoksen jakautumisesta kahteen tai useampiin teoksiin."@fi,
         "Met une œuvre en relation avec une œuvre qui résulte de la division d’une œuvre antérieure en deux ou plusieurs œuvres distinctes."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely egy korábbi mű két vagy több különálló műre történt felosztásának eredménye. "@hu,
-        "Liên kết tác phẩm với tác phẩm sinh ra từ chia tác phẩm trước đây thành hai hoặc nhiều hơn tác phẩm tách biệt."@vi .
+        "Liên kết tác phẩm với tác phẩm sinh ra từ chia tác phẩm trước đây thành hai hoặc nhiều hơn tác phẩm tách biệt."@vi ;
+    skos:scopeNote "This element applies in general to a successive work."@en .
 
 <http://rdaregistry.info/Elements/w/P10212> a rdf:Property ;
     rdfs:label "és fusionat per formar (obra)"@ca,
@@ -11889,7 +11712,7 @@
         "Værk, der er blevet inkorporeret i et andet værk."@da,
         "Ein Werk, das in ein anderes Werk eingeflossen ist."@de,
         "Ένα έργο το οποίο έχει ενσωματωθεί σε ένα άλλο έργο."@el,
-        "A work that is incorporated into a related work."@en,
+        "A work whose content is incorporated in the content of another work."@en,
         "La obra que se ha incorporado en otra obra."@es,
         "Teos, joka on sulautunut osaksi toista teosta."@fi,
         "Œuvre qui a été intégrée dans une autre œuvre."@fr,
@@ -11927,7 +11750,7 @@
         "Relaterer et værk til et værk, der er blevet inkorporeret i et andet værk."@da,
         "Setzt ein Werk mit einem Werk, das in ein anderes Werk eingeflossen ist, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο έχει ενσωματωθεί σε ένα άλλο έργο."@el,
-        "Relates a work to a work that is incorporated into a related work."@en,
+        "Relates a work to a work whose content is incorporated in the content of another work."@en,
         "Liittää teoksen teokseen, joka on sulautunut osaksi toista teosta."@fi,
         "Met une œuvre en relation avec une œuvre qui a été intégrée dans une autre œuvre."@fr,
         "Egy művet hozzákapcsol egy műhöz, amelyet egy másik műbe olvasztottak. "@hu,
@@ -11949,7 +11772,7 @@
         "Værk, der er delvis inkorporeret i et andet værk."@da,
         "Ein Werk, das teilweise in ein anderes Werk eingeflossen ist."@de,
         "Ένα έργο το οποίο έχει ενσωματωθεί μερικώς σε ένα άλλο έργο."@el,
-        "A work that is partially incorporated into a related work."@en,
+        "A work whose partial content is incorporated in the content of another work."@en,
         "Una obra que incorpora parte del contenido de otra obra."@es,
         "Teos, joka on osittain sulautunut osaksi toista teosta."@fi,
         "Œuvre qui a été partiellement intégrée dans une autre œuvre."@fr,
@@ -11987,7 +11810,7 @@
         "Relaterer et værk til et værk, der er delvis inkorporeret i et andet værk."@da,
         "Setzt ein Werk mit einem Werk, das teilweise in ein anderes Werk eingeflossen ist, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο έχει ενσωματωθεί μερικώς σε ένα άλλο έργο."@el,
-        "Relates a work to a work that is partially incorporated into a related work."@en,
+        "Relates a work to a work whose partial content is incorporated in the content of another work."@en,
         "Liittää teoksen teokseen, joka on osittain sulautunut osaksi toista teosta."@fi,
         "Met une œuvre en relation avec une œuvre qui a été partiellement intégrée dans une autre œuvre."@fr,
         "Egy művet hozzákapcsol egy műhöz, amelyet részben beolvasztottak egy másik műbe. "@hu,
@@ -12009,7 +11832,7 @@
         "Værk, der fortsættes af et senere værks indhold."@da,
         "Ein Werk, das vom Inhalt eines späteren Werks fortgesetzt wird."@de,
         "Ένα έργο το οποίο συνεχίζεται από το περιεχόμενο ενός μεταγενέστερου έργου."@el,
-        "A work that is continued by the content of a later work."@en,
+        "A work that is a diachronic work that is completed whose content is continued by another diachronic work."@en,
         "La obra que es continuada por el contenido de una obra posterior."@es,
         "Teos, jonka sisältöä myöhempi teos jatkaa. Sovelletaan yleensä sarja-aineistoihin."@fi,
         "Œuvre qui est continuée par le contenu d’une œuvre ultérieure."@fr,
@@ -12047,7 +11870,7 @@
         "Relaterer et værk til et værk, der fortsættes af et senere værks indhold."@da,
         "Setzt ein Werk mit einem Werk, das vom Inhalt eines späteren Werks fortgesetzt wird, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο συνεχίζεται από το περιεχόμενο ενός μεταγενέστερου έργου."@el,
-        "Relates a work to a work that is continued by the content of a later work."@en,
+        "Relates a work to a work that is a diachronic work that is completed whose content is continued by another diachronic work."@en,
         "Liittää teoksen teokseen, jonka sisältöä myöhempi teos jatkaa."@fi,
         "Met une œuvre en relation avec une œuvre qui est continuée par le contenu d’une œuvre ultérieure."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely egy későbbi mű tartalmával folytatódik. "@hu,
@@ -12056,7 +11879,7 @@
         "Denne relation anvends generelt for periodika."@da,
         "Wird im Allgemeinen bei fortlaufenden Ressourcen angewendet."@de,
         "Αυτή η σχέση βρίσκει γενική εφαρμογή στα περιοδικά."@el,
-        "This relationship applies generally to serials."@en,
+        "This element applies in general to a successive work."@en,
         "Cette relation s’applique généralement aux publications en série."@fr,
         "Ez a kapcsolat általában a periodikákra érvényes."@hu,
         "Mối quan hệ này áp dụng tổng quát cho ấn phẩm nhiều kỳ."@vi .
@@ -13662,7 +13485,7 @@
         "Eksemplar beskrevet af et beskrivende værk."@da,
         "Ein Exemplar, das untersucht wurde, um seine Bestandteile und deren Beziehungen zu identifizieren."@de,
         "Ένα αντίτυπο που έχει εξεταστεί για την ταύτιση των συστατικών του και των σχέσεων τους."@el,
-        "An item that is examined to identify its components and their relations."@en,
+        "An item whose structure is described by a work."@en,
         "Un ítem que ha sido examinado para identificar sus componentes y sus relaciones."@es,
         "Kappale, jonka osia ja niiden välisiä suhteita on tutkittu analyyttisesti."@fi,
         "Item qui a été examiné pour identifier ses composantes et leurs relations."@fr,
@@ -13700,7 +13523,7 @@
         "Relaterer et værk til et eksemplar beskrevet af et beskrivende værk."@da,
         "Setzt ein Werk mit einem Exemplar, das untersucht wurde, um seine Bestandteile und deren Beziehungen zu identifizieren, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα αντίτυπο που έχει εξεταστεί για την ταύτιση των συστατικών του και των σχέσεων τους."@el,
-        "Relates a work to an item that is examined to identify its components and their relations."@en,
+        "Relates a work to an item whose structure is described by a work."@en,
         "Liittää teoksen kappaleeseen, jonka osia ja niiden välisiä suhteita on tutkittu analyyttisesti."@fi,
         "Met une œuvre en relation avec un item qui a été examiné pour identifier ses composantes et leurs relations."@fr,
         "Egy művet hozzákapcsol egy példányhoz, amelyet elemeztek, hogy azonosítsák alkotóelemeit és azok viszonyait."@hu,
@@ -13962,7 +13785,7 @@
         "Manifestation der er blevet undersøgt for at identificere dets elementer og deres relationer."@da,
         "Eine Manifestation, die untersucht wurde, um ihre Bestandteile und deren Beziehungen zu identifizieren."@de,
         "Μια εκδήλωση που έχει εξεταστεί για την ταύτιση των συστατικών του και των σχέσεών τους."@el,
-        "A manifestation that is examined to identify its components and their relations."@en,
+        "A manifestation whose structure is described by a work."@en,
         "Una manifestación que ha sido examinada para identificar sus componentes y sus relaciones."@es,
         "Manifestaatio, jonka osia ja niiden välisiä suhteita on tutkittu analyyttisesti."@fi,
         "Manifestation qui a été examinée pour identifier ses composantes et leurs relations."@fr,
@@ -14000,7 +13823,7 @@
         "Relaterer et værk til en manifestation der er blevet undersøgt for at identificere dets elementer og deres relationer."@da,
         "Setzt ein Werk mit einer Manifestation, die untersucht wurde, um ihre Bestandteile und deren Beziehungen zu identifizieren, in Beziehung."@de,
         "Συνδέει ένα έργο με μια εκδήλωση που έχει εξεταστεί για την ταύτιση των συστατικών του και των σχέσεων τους."@el,
-        "Relates a work to a manifestation that is examined to identify its components and their relations."@en,
+        "Relates a work to a manifestation whose structure is described by a work."@en,
         "Liittää teoksen manifestaatioon,  jonka osia ja niiden välisiä suhteita on tutkittu analyyttisesti."@fi,
         "Met une œuvre en relation avec une manifestation qui a été examinée pour identifier ses composantes et leurs relations."@fr,
         "Egy művet hozzákapcsol egy megjelenési formához, amelyet elemeztek, hogy azonosítsák alkotóelemeit és azok viszonyait."@hu,
@@ -14262,7 +14085,7 @@
         "Udtryk, der er blevet undersøgt for at identificere dets komponenter og deres relationer."@da,
         "Eine Expression, die untersucht wurde, um ihre Bestandteile und deren Beziehungen zu identifizieren."@de,
         "Μια έκφραση που έχει εξεταστεί για την ταύτιση των συστατικών της και των σχέσεών τους."@el,
-        "An expression that is examined to identify its components and their relations."@en,
+        "An expression whose structure is described by a work."@en,
         "Una expresión que ha sido examinada para identificar sus componentes y sus relaciones."@es,
         "Ekspressio, jonka osia ja niiden välisiä suhteita on tutkittu analyyttisesti."@fi,
         "Expression qui a été examinée pour identifier ses composantes et leurs relations."@fr,
@@ -14300,7 +14123,7 @@
         "Relaterer et værk til et udtryk, der er blevet undersøgt for at identificere dets komponenter og deres relationer."@da,
         "Setzt ein Werk mit einer Expression, die untersucht wurde, um ihre Bestandteile und deren Beziehungen zu identifizieren, in Beziehung."@de,
         "Συνδέει ένα έργο με μια έκφραση που έχει εξεταστεί για την ταύτιση των συστατικών της και των σχέσεων τους."@el,
-        "Relates a work to an expression that is examined to identify its components and their relations."@en,
+        "Relates a work to an expression whose structure is described by a work."@en,
         "Liittää teoksen ekspressioon, jonka osia ja niiden välisiä suhteita on tutkittu analyyttisesti."@fi,
         "Met une œuvre en relation avec une expression qui a été examinée pour identifier ses composantes et leurs relations."@fr,
         "Egy művet hozzákapcsol egy kifejezési formához, amelyet elemeztek, hogy azonosítsák alkotóelemeit és azok viszonyait."@hu,
@@ -15161,7 +14984,7 @@
         "Agent, der er juridisk og/eller intellektuelt ansvarlig for indholdet, bortset fra dets skabelse, af et periodikum, en integrerende ressource eller et flerbindsværk."@da,
         "Ein Akteur, der rechtliche und/oder intellektuelle Verantwortung für den Inhalt einer fortlaufenden oder integrierenden Ressource oder einer mehrteiligen Monografie trägt."@de,
         "Ένας φορέας υπεύθυνος για τη νομική ή/και πνευματική υπευθυνότητα, άλλη από τη δημιουργία, για το περιεχόμενο ενός περιοδικού, ενός ενσωματωμένου πόρου ή μιας πολυμερούς μονογραφίας."@el,
-        "An agent who has legal or intellectual responsibility other than creation for the content of a serial, integrating resource, or multipart monographic work."@en,
+        "An agent who has legal or intellectual responsibility, but not creative responsibility, for the editorial policy and content of a diachronic work."@en,
         "Toimija, joka on juridisesti tai tiedollisesti vastuussa (muutoin kuin tekijänä) sarja-aineiston, päivittyvän aineiston tai moniosaisen monografian sisällöstä. Teoksen ekspression sisällön tarkastaminen, selkeyttäminen tms. ei sisälly tähän rooliin."@fi,
         "Agent qui a la responsabilité légale ou intellectuelle, autre que la création, du contenu d’une œuvre présentée sous forme de publication en série, de ressource intégratrice ou de monographie en plusieurs parties."@fr,
         "Egy ágens (személy, család vagy testület), akinek/amelynek jogi és/vagy szellemi felelőssége van, de nem egy periodika, integráló forrás vagy többkötetes monografikus mű tartalmának létrehozásáért. "@hu,
@@ -15198,7 +15021,7 @@
         "Relaterer et værk til en agent, der er juridisk og/eller intellektuelt ansvarlig for indholdet, bortset fra dets skabelse, af et periodikum, en integrerende ressource eller et flerbindsværk."@da,
         "Setzt ein Werk mit einem Akteur, der rechtliche und/oder intellektuelle Verantwortung für den Inhalt einer fortlaufenden oder integrierenden Ressource oder einer mehrteiligen Monografie trägt, in Beziehung."@de,
         "Συνδέει ένα έργο με έναν φορέα υπεύθυνο για τη νομική ή/και πνευματική υπευθυνότητα, άλλη από τη δημιουργία, για το περιεχόμενο ενός περιοδικού, ενός ενσωματωμένου πόρου ή μιας πολυμερούς μονογραφίας."@el,
-        "Relates a work to an agent who has legal or intellectual responsibility other than creation for the content of a serial, integrating resource, or multipart monographic work."@en,
+        "Relates a work to an agent who has legal or intellectual responsibility, but not creative responsibility, for the editorial policy and content of a diachronic work."@en,
         "Liittää teoksen toimijaan, joka on juridisesti tai tiedollisesti vastuussa (muutoin kuin tekijänä) sarja-aineiston, päivittyvän aineiston tai moniosaisen monografian sisällöstä."@fi,
         "Met une œuvre en relation avec un agent qui a la responsabilité légale ou intellectuelle, autre que la création, du contenu d’une œuvre présentée sous forme de publication en série, de ressource intégratrice ou de monographie en plusieurs parties."@fr,
         "Egy művet hozzákapcsol egy ágenshez (személyhez, családhoz vagy testülethez), akinek/amelynek jogi és/vagy szellemi, de nem alkotói felelőssége van egy periodika, egy integráló forrás vagy egy többkötetes monografikus mű tartalmáért. "@hu,
@@ -15207,7 +15030,7 @@
         "Omfatter ikke revisioner, indholdspræciseringer etc. i et udtryk af et værk."@da,
         "Überarbeitungen, Erläuterungen usw. in einer Expression eines Werks sind hiervon ausgenommen."@de,
         "Δεν περιλαμβάνεται η αναθεώρηση, η αποσαφήνιση του περιεχομένου κ.λπ. σε μια έκφραση ενός έργου."@el,
-        "Revision, content clarification, etc., in an expression of a work is excluded."@en,
+        "Revision, clarification, or other change of content of an expression of a work is excluded."@en,
         "Les révisions, les clarifications de contenu, etc. dans une expression d’une œuvre sont exclues."@fr,
         "Egy mű kifejezési formájába nem tartozik bele a revízió, áttekintés, tartalmi pontosítás stb."@hu,
         "Duyệt lại, làm rõ nội dung, v.v..., trong biểu hiện của tác phẩm không được bao gồm."@vi .
@@ -15228,7 +15051,7 @@
         "En agent, der er ansvarlig for at have etableret et periodikum, en integrerende ressource eller et flerbindsværk."@da,
         "Ein Akteur, der für das Begründen einer fortlaufenden oder einer integrierenden Ressource oder einer mehrteiligen Monografie verantwortlich ist."@de,
         "Ένας φορέας υπεύθυνος για την ίδρυση ενός περιοδικού, ενός ενσωματωμένου πόρου ή μιας πολυμερούς μονογραφίας."@el,
-        "An agent who is responsible for establishing a serial, integrating resource, or multipart monograph."@en,
+        "An agent who is responsible for initiating a diachronic work."@en,
         "Toimija, joka on vastuussa sarja-aineiston, päivittyvän aineiston tai moniosaisen monografian perustamisesta."@fi,
         "Agent responsable de l’établissement d’une publication en série, d’une ressource intégratrice ou d’une monographie en plusieurs parties."@fr,
         "Egy ágens (személy, család vagy testület), aki/amely felelős egy periodika,  integráló forrás vagy többkötetes monográfia létrehozásáért."@hu,
@@ -15265,7 +15088,7 @@
         "Relaterer et værk til en agent, der er ansvarlig for at have etableret et periodikum, en integrerende ressource eller et flerbindsværk."@da,
         "Setzt ein Werk mit einem Akteur, der für das Begründen einer fortlaufenden oder einer integrierenden Ressource oder einer mehrteiligen Monografie verantwortlich ist, in Beziehung."@de,
         "Συνδέει ένα έργο με έναν φορέα υπεύθυνο για την ίδρυση ενός περιοδικού, ενός ενσωματωμένου πόρου ή μιας πολυμερούς μονογραφίας."@el,
-        "Relates a work to an agent responsible for establishing a serial, integrating resource, or multipart monograph."@en,
+        "Relates a work to an agent who is responsible for initiating a diachronic work."@en,
         "Liittää teoksen toimijaan, joka on vastuussa sarja-aineiston, päivittyvän aineiston tai moniosaisen monografian perustamisesta."@fi,
         "Met une œuvre en relation avec un agent responsable de l’établissement d’une publication en série, d’une ressource intégratrice ou d’une monographie en plusieurs parties."@fr,
         "Egy művet hozzákapcsol egy ágenshez (személyhez, családhoz vagy testülethez), aki/amely felelős egy periodika, egy integráló forrás, vagy egy többkötetes monográfia létrehozásáért."@hu,
@@ -16676,7 +16499,7 @@
 <http://rdaregistry.info/Elements/w/P10393> a rdf:Property ;
     rdfs:label "has aggregator"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An agent who is responsible for creating a work that is an aggregation by selecting and arranging its components."@en ;
+    rdakit:toolkitDefinition "An agent who is responsible for creating an aggregating work by selecting and arranging expressions of other works."@en ;
     rdakit:toolkitLabel "aggregator"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10393>,
         <http://rdaregistry.info/Elements/w/object/P10393> ;
@@ -16687,7 +16510,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
-    skos:definition "Relates a work to an agent who is responsible for creating a work that is an aggregation by selecting and arranging its components."@en .
+    skos:definition "Relates a work to an agent who is responsible for creating an aggregating work by selecting and arranging expressions of other works."@en .
 
 <http://rdaregistry.info/Elements/w/P10394> a rdf:Property ;
     rdfs:label "has criminal defendant corporate body"@en ;
@@ -16816,6 +16639,143 @@
         "explanation of relationship"@en ;
     skos:definition "Relates a work to a broad unstructured description of one or more attributes of a metadata work."@en .
 
+<http://rdaregistry.info/Elements/w/P10406> a rdf:Property ;
+    rdfs:label "has source consulted"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation in which there is evidence for a metadata work."@en ;
+    rdakit:toolkitLabel "source consulted"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10406>,
+        <http://rdaregistry.info/Elements/w/object/P10406> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/sourceConsulted.en> ;
+    reg:name "sourceConsulted" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10309> ;
+    skos:definition "Relates a work to a manifestation in which there is evidence for a metadata work."@en .
+
+<http://rdaregistry.info/Elements/w/P10408> a rdf:Property ;
+    rdfs:label "has project supervisor"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An academic supervisor who is responsible for advising or supervising a project undertaken by a student that results in a work."@en ;
+    rdakit:toolkitLabel "project supervisor"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10408>,
+        <http://rdaregistry.info/Elements/w/object/P10408> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/projectSupervisor.en> ;
+    reg:name "projectSupervisor" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10407> ;
+    skos:definition "Relates a work to an academic supervisor who is responsible for advising or supervising a project undertaken by a student that results in a work."@en .
+
+<http://rdaregistry.info/Elements/w/P10409> a rdf:Property ;
+    rdfs:label "has research supervisor"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An academic supervisor who is responsible for advising or supervising research that results in a work."@en ;
+    rdakit:toolkitLabel "research supervisor"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10409>,
+        <http://rdaregistry.info/Elements/w/object/P10409> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/researchSupervisor.en> ;
+    reg:name "researchSupervisor" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10407> ;
+    skos:definition "Relates a work to an academic supervisor who is responsible for advising or supervising research that results in a work."@en .
+
+<http://rdaregistry.info/Elements/w/P10410> a rdf:Property ;
+    rdfs:label "has special issue"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that is an issue that is devoted to a specific topic."@en ;
+    rdakit:toolkitLabel "special issue"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10410>,
+        <http://rdaregistry.info/Elements/w/object/P10410> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/specialIssue.en> ;
+    reg:name "specialIssue" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10141> ;
+    skos:definition "Relates a work to a work that is an issue that is devoted to a specific topic."@en .
+
+<http://rdaregistry.info/Elements/w/P10411> a rdf:Property ;
+    rdfs:label "is special issue of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that has an issue that is devoted to a specific topic."@en ;
+    rdakit:toolkitLabel "special issue of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10411>,
+        <http://rdaregistry.info/Elements/w/object/P10411> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/specialIssueOf.en> ;
+    reg:name "specialIssueOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10102> ;
+    skos:definition "Relates a work to a work that has an issue that is devoted to a specific topic."@en .
+
+<http://rdaregistry.info/Elements/w/P10041> a rdf:Property ;
+    rdfs:label "té com a supervisor acadèmic"@ca,
+        "har vejleder"@da,
+        "hat akademischen Betreuer"@de,
+        "έχει επόπτη καθηγητή"@el,
+        "has degree supervisor"@en,
+        "opinnäytteen ohjaaja"@fi,
+        "a pour superviseur académique"@fr,
+        "van témavezetője"@hu,
+        "có người giám sát văn bằng"@vi ;
+    rdakit:hasElementType "2" ;
+    rdakit:instructionNumber "18.5" ;
+    rdakit:toolkitDefinition "Persona, com ara un tutor o un supervisor d’una tesi o una recerca acadèmica, que supervisa un grau acadèmic o una tesi."@ca,
+        "Person, der vejleder ved udarbejdelsen af afhandlingen til enten en akademisk grad eller et speciale."@da,
+        "Eine Person, zum Beispiel ein Berater oder Betreuer von Forschungen für eine Hochschulschrift, die die Arbeiten für einen akademischen Grad oder eine Hochschulschrift betreut."@de,
+        "Συνδέει ένα έργο με ένα φυσικό πρόσωπο, όπως έναν σύμβουλο ή επόπτη μιας γραπτής εργασίας ή διατριβής ή διδακτορικής έρευνας, είτε για την απόκτηση ανώτερου εκπαιδευτικού επιπέδου πτυχίου είτε διδακτορικού."@el,
+        "An academic supervisor who is responsible for advising or overseeing thesis or dissertation research for an academic degree that results in a work."@en,
+        "Una persona, tal como un director o supervisor de tesis de grado o investigación, que supervisa un grado académico o tesis."@es,
+        "Henkilö, joka ohjaa akateemisen opinnäytteen tai väitöskirjan tekemistä"@fi,
+        "Personne telle qu’un conseiller ou un directeur de thèse ou de mémoire qui supervise un diplôme universitaire ou une thèse."@fr,
+        "Egy személy, mint például egy szakdolgozati vagy disszertációs kutatás tanácsadója vagy felügyelője, aki egy tudományos fokozatot vagy értekezést ellenőriz."@hu,
+        "En person, for eksempel en veileder for forskning knyttet til avhandlinger eller masteroppgaver, som fører tilsyn med en akademisk grad eller avhandling."@no,
+        "Cá nhân, như là cố vấn hoặc người giám sát của nghiên cứu luận văn hoặc luận án, giám sát hoặc văn bằng học thuật hoặc luận đề."@vi ;
+    rdakit:toolkitLabel "supervisor acadèmic"@ca,
+        "vejleder"@da,
+        "Akademischer Betreuer"@de,
+        "επόπτης καθηγητής"@el,
+        "degree supervisor"@en,
+        "supervisor de grado"@es,
+        "opinnäytteen ohjaaja"@fi,
+        "superviseur académique"@fr,
+        "témavezető"@hu,
+        "veileder"@no,
+        "người giám sát văn bằng"@vi ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10041>,
+        <http://rdaregistry.info/Elements/w/object/P10041> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60420> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/degreeSupervisor.en>,
+        <http://rdaregistry.info/Elements/w/opinnaytteenOhjaaja.fi>,
+        <http://rdaregistry.info/Elements/w/vejleder.da> ;
+    reg:name "vejleder"@da,
+        "επόπτηςΚαθηγητής"@el,
+        "degreeSupervisor"@en,
+        "opinnaytteenOhjaaja"@fi,
+        "superviseurAcadémique"@fr,
+        "témaVezető"@hu,
+        "ngườiGiámSátVănBằng"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10407> ;
+    skos:definition "Relaciona una obra amb una persona, com ara un tutor o un supervisor d’una tesi o una recerca acadèmica, que supervisa un grau acadèmic o una tesi."@ca,
+        "Relaterer et værk til en person, der vejleder ved udarbejdelsen af afhandlingen til enten en akademisk grad eller et speciale."@da,
+        "Setzt ein Werk mit einer Person, zum Beispiel ein Berater oder Betreuer von Forschungen für eine Hochschulschrift, die die Arbeiten für einen akademischen Grad oder eine Hochschulschrift betreut, in Beziehung."@de,
+        "Συνδέει ένα έργο με ένα φυσικό πρόσωπο, όπως έναν σύμβουλο ή επόπτη μιας γραπτής εργασίας ή διατριβής ή διδακτορικής έρευνας, είτε για την απόκτηση ανώτερου εκπαιδευτικού επιπέδου πτυχίου είτε διδακτορικού."@el,
+        "Relates a work to an academic supervisor who is responsible for advising or overseeing thesis or dissertation research for an academic degree that results in a work."@en,
+        "Liittää teoksen henkilöön, joka ohjaa akateemisen opinnäytteen tai väitöskirjan tekemistä"@fi,
+        "Met une œuvre en relation avec une personne telle qu’un conseiller ou un directeur de thèse ou de mémoire qui supervise un diplôme universitaire ou une thèse."@fr,
+        "Egy művet hozzákapcsol egy olyan személyhez, mint egy szakdolgozati vagy disszertációs kutatás tanácsadója vagy felügyelője, aki egy tudományos fokozatot vagy értekezést ellenőriz."@hu,
+        "Liên kết tác phẩm với cá nhân, như là cố vấn hoặc người giám sát của nghiên cứu luận văn hoặc luận án, giám sát hoặc văn bằng học thuật hoặc luận đề."@vi ;
+    skos:scopeNote "Includes an advisor or supervisor of thesis or dissertation research."@en .
+
 <http://rdaregistry.info/Elements/w/P10062> a rdf:Property ;
     rdfs:label "té com a arquitecte"@ca,
         "har arkitekt"@da,
@@ -16876,6 +16836,68 @@
         "Met une œuvre en relation avec un agent responsable de concevoir une création architecturale, y compris une représentation illustrée conçue pour montrer de quoi aura l’air un bâtiment, etc. une fois terminé."@fr,
         "Egy művet hozzákapcsol egy ágenshez (személyhez, családhoz vagy testülethez), aki/amely felelős egy építészeti tervezet megalkotásáért, beleértve a képi ábrázolást, amelynek célja bemutatni, hogy egy épület stb. elkészülte után hogyan fog kinézni."@hu,
         "Liên kết tác phẩm với tác nhân có trách nhiệm tạo lập thiết kế kiến trúc, bao gồm cả trình bày bằng tranh để chỉ ra toà nhà sẽ trông như thế nào khi hoàn thành."@vi .
+
+<http://rdaregistry.info/Elements/w/P10102> a rdf:Property ;
+    rdfs:label "és en una col·lecció"@ca,
+        "er del af serie"@da,
+        "ist in einer Reihe"@de,
+        "είναι στη σειρά"@el,
+        "is issue of"@en,
+        "sisältyy sarjaan"@fi,
+        "est dans la collection"@fr,
+        "sorozatban"@hu,
+        "trong tùng thư"@vi ;
+    rdakit:hasElementType "2" ;
+    rdakit:instructionNumber "24.5" ;
+    rdakit:toolkitDefinition "Obra en la qual s’ha publicat una part; un títol d’una obra més àmplia figura a la part."@ca,
+        "Værk, i hvilket en del er blevet udgivet; en titel på et større værk optræder på delen."@da,
+        "Ein Werk, in dem ein Teil erschienen ist, wobei ein Titel eines größeren Werks auf dem Teil erscheint."@de,
+        "Ένα έργο μέσα στο οποίο έχει κυκλοφορήσει το μέρος; ένας τίτλος του μεγαλύτερου έργου εμφανίζεται στο μέρος."@el,
+        "A work that is a successive aggregating work that inspires the editorial policy, scope, and style of a static work."@en,
+        "Una obra en la cual se publica la parte; el título de la obra mayor aparece en la parte."@es,
+        "Teos, jonka osana sarjan osa on ilmestynyt."@fi,
+        "Œuvre dans laquelle une partie a été publiée ; un titre d’œuvre plus vaste figure sur la partie."@fr,
+        "Et verk der en del er utgitt; tittelen til det større verket vises på delen."@no,
+        "Tác phẩm mà trong đó phần đã được công bố; nhan đề của tác phẩm lớn hơn xuất hiện trong phần đó."@vi ;
+    rdakit:toolkitLabel "en una col·lecció"@ca,
+        "del af serie"@da,
+        "In einer Reihe"@de,
+        "στη σειρά"@el,
+        "issue of"@en,
+        "en la serie (obra)"@es,
+        "sisältyy sarjaan"@fi,
+        "dans la collection"@fr,
+        "i serie"@no,
+        "trong tùng thư"@vi ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10411>,
+        <http://rdaregistry.info/Elements/w/datatype/P10102>,
+        <http://rdaregistry.info/Elements/w/object/P10102> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60193> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/delAfSerie.da>,
+        <http://rdaregistry.info/Elements/w/issueOf.en>,
+        <http://rdaregistry.info/Elements/w/sisaltyySarjaan.fi> ;
+    reg:name "delAfSerie"@da,
+        "στηΣειρά"@el,
+        "issueOf"@en,
+        "sisaltyySarjaan"@fi,
+        "dansLaCollection"@fr,
+        "Sorozatban"@hu,
+        "trongTùngThư"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10290> ;
+    skos:altLabel "in series"@en ;
+    skos:definition "Relaciona una obra amb una obra en la qual s’ha publicat una part; un títol d’una obra més àmplia figura a la part."@ca,
+        "Relaterer et værk til et værk, i hvilket en del er blevet udgivet; en titel på et større værk optræder på delen."@da,
+        "Setzt ein Werk mit einem Werk, in dem ein Teil erschienen ist, wobei ein Titel eines größeren Werks auf dem Teil erscheint, in Beziehung."@de,
+        "Συνδέει ένα έργο με ένα έργο μέσα στο οποίο έχει κυκλοφορήσει το μέρος; ένας τίτλος του μεγαλύτερου έργου εμφανίζεται στο μέρος."@el,
+        "Relates a work to a work that is a successive aggregating work that inspires the editorial policy, scope, and style of a static work."@en,
+        "Liittää teoksen teokseen, jonka osana sarjan osa on ilmestynyt."@fi,
+        "Met une œuvre en relation avec une œuvre dans laquelle une partie a été publiée ; un titre d’œuvre plus vaste figure sur la partie."@fr,
+        "Egy művet hozzákapcsol egy műhöz, amelyben egy részt jelentettek meg. "@hu,
+        "Liên kết tác phẩm với tác phẩm mà trong đó phần đã được công bố; nhan đề của tác phẩm lớn hơn xuất hiện trong phần đó."@vi ;
+    skos:scopeNote "An issue static work can be a single work or an aggregating work."@en .
 
 <http://rdaregistry.info/Elements/w/P10117> a rdf:Property ;
     rdfs:label "és imitat com (obra)"@ca,
@@ -16938,6 +16960,70 @@
         "Met une œuvre en relation avec une œuvre qui copie le style ou le contenu d’une œuvre source."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely egy forrásmű stílusát vagy tartalmát másolja."@hu,
         "Liên kết tác phẩm với tác phẩm sao lại phong cách hoặc nội dung của tác phẩm nguồn."@vi .
+
+<http://rdaregistry.info/Elements/w/P10141> a rdf:Property ;
+    rdfs:label "és col·lecció contenidor de"@ca,
+        "er serieindeholder af"@da,
+        "?"@de,
+        "είναι περιέκτης σειράς του"@el,
+        "has issue"@en,
+        "sarjan osa (teos)"@fi,
+        "est un conteneur collection de"@fr,
+        "sorozattárolója "@hu,
+        "là vỏ chứa tùng thư của"@vi ;
+    rdakit:hasElementType "2" ;
+    rdakit:instructionNumber "24.5" ;
+    rdakit:toolkitDefinition "Obra que s’ha publicat com a part d’una col·lecció."@ca,
+        "Værk, der er blevet udgivet som del af en serie."@da,
+        "Ein Werk, das als Teil einer Reihe erschienen ist."@de,
+        "Ένα έργο το οποίο έχει εκδοθεί ως μέρος μιας σειράς."@el,
+        "A work that is a static work that is inspired by the overall editorial policy, scope, and style of a successive aggregating work."@en,
+        "Una obra que se publicó como parte de una serie."@es,
+        "Teos, joka on julkaistu sarjassa."@fi,
+        "Œuvre qui a été publiée comme partie d’une collection."@fr,
+        "Egy mű, amelyet egy sorozat részeként adtak ki."@hu,
+        "Et verk som er utgitt som del av en serie."@no,
+        "Tác phẩm đã được công bố như là phần của tùng thư."@vi ;
+    rdakit:toolkitLabel "col·lecció contenidor de"@ca,
+        "serieindeholder af"@da,
+        "Reihe enthält"@de,
+        "περιέκτης σειράς του"@el,
+        "issue"@en,
+        "la serie incluye (obra)"@es,
+        "sarjan osa (teos)"@fi,
+        "conteneur collection de"@fr,
+        "sorozattartója "@hu,
+        "serie omfatter"@no,
+        "vỏ chứa tùng thư của"@vi ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10410>,
+        <http://rdaregistry.info/Elements/w/datatype/P10141>,
+        <http://rdaregistry.info/Elements/w/object/P10141> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60240> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/issue.en>,
+        <http://rdaregistry.info/Elements/w/sarjanOsaTeos.fi>,
+        <http://rdaregistry.info/Elements/w/serieIndeholderAf.da> ;
+    reg:name "serieIndeholderAf"@da,
+        "περιέκτηςΣειράςΤου"@el,
+        "issue"@en,
+        "sarjanOsaTeos"@fi,
+        "conteneurCollectionDe"@fr,
+        "sorozattárolója"@hu,
+        "vỏChứaTùngThưCủa"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10291> ;
+    skos:altLabel "series container of"@en ;
+    skos:definition "Relaciona una obra amb una obra que s’ha publicat com a part d’una col·lecció."@ca,
+        "Relaterer et værk til et værk, der er blevet udgivet som del af en serie."@da,
+        "Setzt ein Werk mit einem Werk, das als Teil einer Reihe erschienen ist, in Beziehung."@de,
+        "Συνδέει ένα έργο με ένα έργο το οποίο έχει εκδοθεί ως μέρος μιας σειράς."@el,
+        "Relates a work to a work that is a static work that is inspired by the overall editorial policy, scope, and style of a successive aggregating work."@en,
+        "Liittää teoksen teokseen, joka on julkaistu sarjassa."@fi,
+        "Met une œuvre en relation avec une œuvre qui a été publiée comme partie d’une collection."@fr,
+        "Egy művet hozzákapcsol egy műhöz, amelyet egy sorozat részeként jelentettek meg. "@hu,
+        "Liên kết tác phẩm với tác phẩm đã được công bố như là phần của tùng thư."@vi ;
+    skos:scopeNote "An issue static work can be a single work or an aggregating work."@en .
 
 <http://rdaregistry.info/Elements/w/P10196> a rdf:Property ;
     rdfs:label "és imitació de (obra)"@ca,
@@ -17201,7 +17287,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10307> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10405> ;
     skos:definition "Relaciona una obra amb una relació entre una obra i un identificador, un punt d’accés autoritzat o una descripció que indica de què tracta una obra."@ca,
         "Relaterer et værk til en relation mellem et værk og en identifikator, en autoriseret søgeindgang og/eller en beskrivelse, der angiver, hvad et værk handler om."@da,
         "Setzt ein Werk mit einer Beziehung zwischen einem Werk und einem Identifikator, einem normierten Sucheinstieg und/oder einer Beschreibung, der/die angibt, wovon ein Werk handelt, in Beziehung."@de,
@@ -17756,6 +17842,19 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10337> ;
     skos:definition "Relates a work to a work that has a genre that is changed to create a work."@en .
 
+<http://rdaregistry.info/Elements/w/P10405> a rdf:Property ;
+    rdfs:label "has related entity of work"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An entity that is associated with a work."@en ;
+    rdakit:toolkitLabel "related entity of work"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/relatedEntityOfWork> ;
+    reg:name "relatedEntityOfWork" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00028> ;
+    skos:definition "Relates a work to an entity that is associated with a work."@en .
+
 <http://rdaregistry.info/Elements/w/P10002> a rdf:Property ;
     rdfs:label "té com a identificador d’obra"@ca,
         "har identifikator for værk"@da,
@@ -18235,50 +18334,6 @@
         "Met une œuvre en relation avec une expression associée à une œuvre décrite."@fr,
         "Egy művet hozzákapcsol egy kifejezési formához, amely egy éppen leírt műhöz kötődik."@hu,
         "Liên kết tác phẩm với biểu hiện liên quan tới tác phẩm đang được mô tả."@vi .
-
-<http://rdaregistry.info/Elements/w/P10309> a rdf:Property ;
-    rdfs:label "té com a manifestació relacionada (obra)"@ca,
-        "har relateret manifestation (værk)"@da,
-        "έχει σχετική εκδήλωση (έργο)"@el,
-        "has related manifestation of work"@en,
-        "teokseen liittyvä manifestaatio"@fi,
-        "a pour manifestation en relation (œuvre)"@fr,
-        "van kapcsolódó megjelenési formája (mű)"@hu,
-        "có biểu thị có liên quan (tác phẩm)"@vi ;
-    rdakit:hasElementType "1" ;
-    rdakit:toolkitDefinition "A manifestation that is associated with a work."@en,
-        "Manifestaatio, johon kuvailun kohteena oleva teos liittyy."@fi,
-        "Biểu thị liên quan tới tác phẩm đang được mô tả."@vi ;
-    rdakit:toolkitLabel "related manifestation of work"@en,
-        "teokseen liittyvä manifestaatio"@fi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10072>,
-        <http://rdaregistry.info/Elements/w/P10363>,
-        <http://rdaregistry.info/Elements/w/datatype/P10309>,
-        <http://rdaregistry.info/Elements/w/object/P10309> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/relatedManifestationOfWork.en>,
-        <http://rdaregistry.info/Elements/w/relateretManifestationVærk.da>,
-        <http://rdaregistry.info/Elements/w/teokseenLiittyvaManifestaatio.fi> ;
-    reg:name "relateretManifestationVærk"@da,
-        "σχετικήΕκδήλωσηΈργο"@el,
-        "relatedManifestationOfWork"@en,
-        "teokseenLiittyvaManifestaatio"@fi,
-        "manifestationEnRelationŒuvre"@fr,
-        "kapcsolódóMegjelenésiformaMű"@hu,
-        "tácPhẩmBiểuThịCóLiênQuan"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10307>,
-        <http://rdaregistry.info/Elements/x/P00004> ;
-    skos:definition "Relaciona una obra amb una manifestació associada amb una obra que es descriu."@ca,
-        "Relaterer et værk til en manifestation, der er knyttet til et beskrevet værk."@da,
-        "Συνδέει ένα έργο με μια εκδήλωση που συνδέεται με ένα περιγραφόμενο έργο."@el,
-        "Relates a work to a manifestation that is associated with a work."@en,
-        "Liittää teoksen manifestaatioon, johon kuvailun kohteena oleva teos liittyy."@fi,
-        "Met une œuvre en relation avec une manifestation associée à une œuvre décrite."@fr,
-        "Egy művet hozzákapcsol egy megjelenési formához, amely egy éppen leírt műhöz kötődik."@hu,
-        "Liên kết tác phẩm với biểu thị liên quan tới tác phẩm đang được mô tả."@vi .
 
 <http://rdaregistry.info/Elements/w/P10315> a rdf:Property ;
     rdfs:label "té com a agent col·lectiu relacionat (obra)"@ca,
@@ -19052,6 +19107,51 @@
         "Egy művet hozzákapcsol egy műhöz, amely szöveggel lát el egy mozifilmet,  tévéműsort vagy videót. "@hu,
         "Liên kết tác phẩm với tác phẩm cung cấp văn bản cho phim điện ảnh, chương trình truyền hình hoặc video."@vi .
 
+<http://rdaregistry.info/Elements/w/P10309> a rdf:Property ;
+    rdfs:label "té com a manifestació relacionada (obra)"@ca,
+        "har relateret manifestation (værk)"@da,
+        "έχει σχετική εκδήλωση (έργο)"@el,
+        "has related manifestation of work"@en,
+        "teokseen liittyvä manifestaatio"@fi,
+        "a pour manifestation en relation (œuvre)"@fr,
+        "van kapcsolódó megjelenési formája (mű)"@hu,
+        "có biểu thị có liên quan (tác phẩm)"@vi ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A manifestation that is associated with a work."@en,
+        "Manifestaatio, johon kuvailun kohteena oleva teos liittyy."@fi,
+        "Biểu thị liên quan tới tác phẩm đang được mô tả."@vi ;
+    rdakit:toolkitLabel "related manifestation of work"@en,
+        "teokseen liittyvä manifestaatio"@fi ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10072>,
+        <http://rdaregistry.info/Elements/w/P10363>,
+        <http://rdaregistry.info/Elements/w/P10406>,
+        <http://rdaregistry.info/Elements/w/datatype/P10309>,
+        <http://rdaregistry.info/Elements/w/object/P10309> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/relatedManifestationOfWork.en>,
+        <http://rdaregistry.info/Elements/w/relateretManifestationVærk.da>,
+        <http://rdaregistry.info/Elements/w/teokseenLiittyvaManifestaatio.fi> ;
+    reg:name "relateretManifestationVærk"@da,
+        "σχετικήΕκδήλωσηΈργο"@el,
+        "relatedManifestationOfWork"@en,
+        "teokseenLiittyvaManifestaatio"@fi,
+        "manifestationEnRelationŒuvre"@fr,
+        "kapcsolódóMegjelenésiformaMű"@hu,
+        "tácPhẩmBiểuThịCóLiênQuan"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10307>,
+        <http://rdaregistry.info/Elements/x/P00004> ;
+    skos:definition "Relaciona una obra amb una manifestació associada amb una obra que es descriu."@ca,
+        "Relaterer et værk til en manifestation, der er knyttet til et beskrevet værk."@da,
+        "Συνδέει ένα έργο με μια εκδήλωση που συνδέεται με ένα περιγραφόμενο έργο."@el,
+        "Relates a work to a manifestation that is associated with a work."@en,
+        "Liittää teoksen manifestaatioon, johon kuvailun kohteena oleva teos liittyy."@fi,
+        "Met une œuvre en relation avec une manifestation associée à une œuvre décrite."@fr,
+        "Egy művet hozzákapcsol egy megjelenési formához, amely egy éppen leírt műhöz kötődik."@hu,
+        "Liên kết tác phẩm với biểu thị liên quan tới tác phẩm đang được mô tả."@vi .
+
 <http://rdaregistry.info/Elements/w/P10316> a rdf:Property ;
     rdfs:label "té com a lloc relacionat (obra)"@ca,
         "har relateret sted (værk)"@da,
@@ -19147,7 +19247,9 @@
     rdakit:toolkitLabel "transformation by extension plan"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10379>,
         <http://rdaregistry.info/Elements/w/P10381>,
-        <http://rdaregistry.info/Elements/w/P10382> ;
+        <http://rdaregistry.info/Elements/w/P10382>,
+        <http://rdaregistry.info/Elements/w/datatype/P10377>,
+        <http://rdaregistry.info/Elements/w/object/P10377> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61053> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/transformationByExtensionPlan.en> ;
     reg:name "transformationByExtensionPlan" ;
@@ -19164,7 +19266,9 @@
     rdakit:toolkitLabel "transformation by extension plan of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10380>,
         <http://rdaregistry.info/Elements/w/P10391>,
-        <http://rdaregistry.info/Elements/w/P10392> ;
+        <http://rdaregistry.info/Elements/w/P10392>,
+        <http://rdaregistry.info/Elements/w/datatype/P10378>,
+        <http://rdaregistry.info/Elements/w/object/P10378> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61054> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/transformationByExtensionPlanOf.en> ;
     reg:name "transformationByExtensionPlanOf" ;
@@ -19210,6 +19314,24 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10337> ;
     skos:definition "Relates a work to a work that has an audience that is changed to create a work."@en .
+
+<http://rdaregistry.info/Elements/w/P10407> a rdf:Property ;
+    rdfs:label "has academic supervisor"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A person who is responsible for overseeing academic activity of any kind that results in a work, including theses, research, and projects."@en ;
+    rdakit:toolkitLabel "academic supervisor"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10041>,
+        <http://rdaregistry.info/Elements/w/P10408>,
+        <http://rdaregistry.info/Elements/w/P10409>,
+        <http://rdaregistry.info/Elements/w/datatype/P10407>,
+        <http://rdaregistry.info/Elements/w/object/P10407> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/academicSupervisor.en> ;
+    reg:name "academicSupervisor" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10311> ;
+    skos:definition "Relates a work to a person who is responsible for overseeing academic activity of any kind that results in a work, including theses, research, and projects."@en .
 
 <http://rdaregistry.info/Elements/w/P10061> a rdf:Property ;
     rdfs:label "té com a autor"@ca,
@@ -20109,7 +20231,8 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10405>,
+        <http://rdaregistry.info/Elements/x/P00001> ;
     skos:definition "Relaciona una obra amb una entitat associada amb una obra que es descriu."@ca,
         "Relaterer et værk til en entitet der er knyttet til et beskrevet værk."@da,
         "Συνδέει ένα έργο με μια οντότητα που συνδέεται με ένα περιγραφόμενο έργο."@el,
@@ -20288,7 +20411,7 @@
         "Værk, der går forud for det efterfølgende værk, fx på et tidligere tidspunkt eller før noget i en fortælling."@da,
         "Ein Werk, das einem nachfolgenden Werk vorangegangen ist, zeitlich früher oder früher im Erzählstrang usw."@de,
         "Ένα έργο το οποίο προηγείται, δηλαδή είναι προγενέστερο χρονικά ή αφηγηματικά κ.λπ. ενός έργου που ακολουθεί."@el,
-        "A work that precedes, that is, is earlier in time or before in a narrative, etc., a succeeding work."@en,
+        "A work whose chronological coverage is before that of another work."@en,
         "Una obra que precede (por ej., es anterior en el tiempo en una narración) a otra que la sigue."@es,
         "Teos, joka edeltää joko juonellisesti tai ajallisesti sitä seuraavaa teosta."@fi,
         "Œuvre qui précède une œuvre suivante, c’est-à-dire qui lui est antérieure dans le temps ou dans un récit."@fr,
@@ -20337,7 +20460,7 @@
         "Relaterer et værk til et værk, der går forud for det efterfølgende værk, fx på et tidligere tidspunkt eller før noget i en fortælling."@da,
         "Setzt ein Werk mit einem Werk, das einem nachfolgenden Werk vorangegangen ist, zeitlich früher oder früher im Erzählstrang usw., in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο το οποίο προηγείται, δηλαδή είναι προγενέστερο χρονικά ή αφηγηματικά κ.λπ. ενός έργου που ακολουθεί."@el,
-        "Relates a work to a work that precedes, that is, is earlier in time or before in a narrative, etc., a succeeding work."@en,
+        "Relates a work to a work whose chronological coverage is before that of another work."@en,
         "Liittää teoksen teokseen, joka edeltää joko juonellisesti tai ajallisesti sitä seuraavaa teosta."@fi,
         "Met une œuvre en relation avec une œuvre qui précède une œuvre suivante, c’est-à-dire qui lui est antérieure dans le temps ou dans un récit."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely narratívában megelőz egy rákövetkező művet, azaz időben korábbi vagy előbbi annál. "@hu,
@@ -20359,7 +20482,7 @@
         "Værk, der følger efter det forudgående værk, dvs. på et senere tidspunkt eller efter noget i en fortælling."@da,
         "Ein Werk, das einem vorangehenden Werk folgt, zeitlich später oder dem Erzählstrang nachgelagert usw."@de,
         "Ένα έργο που έπεται, ακολουθεί δηλαδή χρονικά σε μια αφήγηση κ.λπ. ένα προηγούμενο έργο."@el,
-        "A work that succeeds, that is, is later in time or after in a narrative, etc., a preceding work."@en,
+        "A work whose chronological coverage is after that of another work."@en,
         "Una obra que reemplaza (por ej., más tarde en el tiempo o después en una narración) la obra anterior."@es,
         "Teos, joka seuraa joko juonellisesti tai ajallisesti sitä edeltävää teosta."@fi,
         "Œuvre qui succède à une œuvre précédente, c’est-à-dire qui lui est ultérieure dans le temps ou dans un récit."@fr,
@@ -20408,7 +20531,7 @@
         "Relaterer et værk til et værk, der følger efter det forudgående værk, dvs. på et senere tidspunkt eller efter noget i en fortælling."@da,
         "Setzt ein Werk mit einem Werk, das einem vorangehenden Werk folgt, zeitlich später oder dem Erzählstrang nachgelagert usw. in Beziehung."@de,
         "Συνδέει ένα έργο με ένα έργο που έπεται, ακολουθεί δηλαδή χρονικά σε μια αφήγηση κ.λπ. ένα προηγούμενο έργο."@el,
-        "Relates a work to a work that succeeds, that is, is later in time or after in a narrative, etc., a preceding work."@en,
+        "Relates a work to a work whose chronological coverage is after that of another work."@en,
         "Liittää teoksen teokseen, joka seuraa joko juonellisesti tai ajallisesti sitä edeltävää teosta."@fi,
         "Met une œuvre en relation avec une œuvre qui succède à une œuvre précédente, c’est-à-dire qui lui est ultérieure dans le temps ou dans un récit."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely narratívában stb. egy megelőző művet követ, azaz időben későbbi vagy azutáni."@hu,
@@ -20759,7 +20882,7 @@
         "Gælder for ændringer i form eller for værker, der er omskrevet fuldstændigt i samme form."@da,
         "Bezieht sich auf Änderungen der Form oder auf Werke, die in derselben Form vollständig neu geschrieben wurden."@de,
         "Αυτή η σχέση βρίσκει εφαρμογή στις αλλαγές στη μορφή ή στα έργα που έχουν ξαναγραφτεί ολοκληρωτικά στην ίδια μορφή."@el,
-        "This relationship applies to changes in form or to works completely rewritten in the same form."@en,
+        "This element applies to changes in form or to works completely rewritten in the same form."@en,
         "Cette relation s’applique aux changements dans la forme ou aux œuvres complètement réécrites dans la même forme."@fr,
         "Ez a kapcsolat érvényes a formai változásokra, vagy ugyanabban a formában teljesen újraírt művekre."@hu,
         "Nối quan hệ này áp dụng đối với thay đổi về hình thái hoặc đối cới tác phẩm được viết lại toàn bộ dưới cùng hình thái."@vi .
@@ -20841,7 +20964,7 @@
         "Denne relation gælder for ændringer i form eller for værker, der er omskrevet fuldstændigt i samme form."@da,
         "Bezieht sich auf Änderungen der Form oder auf Werke, die in derselben Form vollständig neu geschrieben wurden."@de,
         "Αυτή η σχέση βρίσκει εφαρμογή στις αλλαγές στη μορφή ή στα έργα που έχουν ξαναγραφτεί ολοκληρωτικά στην ίδια μορφή."@el,
-        "This relationship applies to changes in form or to works completely rewritten in the same form."@en,
+        "This element applies to changes in form or to works completely rewritten in the same form."@en,
         "Cette relation s’applique aux changements dans la forme ou aux œuvres complètement réécrites dans la même forme."@fr,
         "Ez a kapcsolat érvényes a formai változásokra, vagy ugyanabban a formában teljesen újraírt művekre."@hu,
         "Nối quan hệ này áp dụng đối với thay đổi về hình thái hoặc đối cới tác phẩm được viết lại toàn bộ dưới cùng hình thái."@vi .
@@ -21015,6 +21138,7 @@
         <http://rdaregistry.info/Elements/w/P10047>,
         <http://rdaregistry.info/Elements/w/P10065>,
         <http://rdaregistry.info/Elements/w/P10208>,
+        <http://rdaregistry.info/Elements/w/P10407>,
         <http://rdaregistry.info/Elements/w/datatype/P10311>,
         <http://rdaregistry.info/Elements/w/object/P10311> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/relatedAgentOfWork.en>,

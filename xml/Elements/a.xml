@@ -23,9 +23,9 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdfs:label xml:lang="en">is academic supervisor of</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/academicSupervisorOf.en" />
-  <skos:definition xml:lang="en">Relates a person to a work that involves a responsibility as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis.</skos:definition>
+  <skos:definition xml:lang="en">Relates a person to a work that involves a responsibility for overseeing academic activity of any kind that results in a work, including theses, research, and projects.</skos:definition>
   <rdakit:toolkitLabel xml:lang="en">academic supervisor of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility for overseeing academic activity of any kind that results in a work, including theses, research, and projects.</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="">academicSupervisorOf</reg:name>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
@@ -33,6 +33,8 @@
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50458" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50458" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50486" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50487" />
 </rdf:Description>
 
 <!-- Property: has access point for agent -->
@@ -160,12 +162,10 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
   <rdakit:toolkitLabel xml:lang="en">address of agent</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">An address of an agent.</rdakit:toolkitDefinition>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50340" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60512" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50419" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50114" />
   <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50114" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50418" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50418" />
 </rdf:Description>
@@ -180,15 +180,13 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/addressOfCollectiveAgent.en" />
   <skos:definition xml:lang="en">Relates a collective agent to an address of a collective agent.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50344" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50418" />
   <rdakit:toolkitLabel xml:lang="en">address of collective agent</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">An address of a collective agent.</rdakit:toolkitDefinition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60512" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50418" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50036" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50420" />
   <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50036" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50419" />
 </rdf:Description>
 
@@ -202,11 +200,10 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/addressOfFamily.en" />
   <skos:definition xml:lang="en">Relates a family to an address of a family.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50356" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50419" />
   <rdakit:toolkitLabel xml:lang="en">address of family</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">An address of a family.</rdakit:toolkitDefinition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60512" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50419" />
   <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50420" />
 </rdf:Description>
@@ -392,9 +389,9 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdfs:label xml:lang="en">is aggregator of</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/aggregatorOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to a work that involves a responsibility for aggregation by selecting and arranging its components.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a work that involves a responsibility for aggregation by selecting and arranging expressions of other works.</skos:definition>
   <rdakit:toolkitLabel xml:lang="en">aggregator of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility for aggregation by selecting and arranging its components.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility for aggregation by selecting and arranging expressions of other works.</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="">aggregatorOf</reg:name>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
@@ -1175,11 +1172,11 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">alternateIdentityOfPerson</reg:name>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/alternateIdentityOfPerson.en" />
-  <skos:definition xml:lang="en">Relates a person to a nomen that is a pseudonym or other identity assumed by a person.</skos:definition>
+  <skos:definition xml:lang="en">Relates a person to a nomen that is a pseudonym or other appellation used by a person.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60036" />
   <rdakit:toolkitLabel xml:lang="en">alternate identity of person</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A nomen that is a pseudonym or other identity assumed by a person.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A nomen that is a pseudonym or other appellation used by a person.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50348" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50428" />
@@ -2418,25 +2415,244 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50172" />
 </rdf:Description>
 
-<!-- Property: is cartographer of aggregate of -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50463">
+<!-- Property: has category of agent -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50490">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">is cartographer of aggregate of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/cartographerOfAggregateOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that includes a contribution of providing additional cartography or modifying previous cartography.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">cartographer of aggregate of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that includes a contribution of providing additional cartography or modifying previous cartography.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="en">has category of agent</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/categoryOfAgent.en" />
+  <skos:definition xml:lang="en">Relates an agent to a type to which an agent belongs.</skos:definition>
+  <skos:altLabel xml:lang="en">type of agent</skos:altLabel>
+  <rdakit:toolkitLabel xml:lang="en">category of agent</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which an agent belongs.</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="">cartographerOfAggregateOf</reg:name>
+  <reg:name xml:lang="">categoryOfAgent</reg:name>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60654" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
-  <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50463" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50463" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50460" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00029" />
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50490" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50489" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50491" />
+</rdf:Description>
+
+<!-- Property: has category of collective agent -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50491">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has category of collective agent</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/categoryOfCollectiveAgent.en" />
+  <skos:definition xml:lang="en">Relates a collective agent to a type to which a collective agent belongs.</skos:definition>
+  <skos:altLabel xml:lang="en">type of collective agent</skos:altLabel>
+  <rdakit:toolkitLabel xml:lang="en">category of collective agent</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which a collective agent belongs.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">categoryOfCollectiveAgent</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50490" />
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50491" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50237" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50051" />
+</rdf:Description>
+
+<!-- Property: has category of corporate body -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50237">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">categoryOfCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">has category of corporate body</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/categoryOfCorporateBody.en" />
+  <skos:definition xml:lang="en">Relates a corporate body to a type to which a corporate body belongs.</skos:definition>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60047" />
+  <rdakit:instructionNumber xml:lang="">11.7.1.4</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">category of corporate body</rdakit:toolkitLabel>
+  <rdfs:label xml:lang="fr">a pour type de collectivité</rdfs:label>
+  <skos:definition xml:lang="fr">Met une collectivité en relation avec une catégorisation pour un type de collectivité.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fr">type de collectivité</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Catégorisation pour un type de collectivité.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">tipo de entidad corporativa</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which a corporate body belongs.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50237" />
+  <reg:name xml:lang="el">τύποςΤουΣυλλογικούΟργάνου</reg:name>
+  <rdfs:label xml:lang="el">έχει τύπο του συλλογικού οργάνου</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τύποςΤουΣυλλογικούΟργάνου.el" />
+  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με έναν τύπο συλλογικού οργάνου.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="el">τύπος του συλλογικού οργάνου</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Μια κατηγοριοποίηση για έναν τύπο συλλογικού οργάνου.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einer Kategorisierung für eine Art der Körperschaft in Beziehung.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="de">Art einer Körperschaft</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Eine Kategorisierung für eine Art der Körperschaft.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">typeAfKorporation</reg:name>
+  <rdfs:label xml:lang="da">har type af korporation</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/typeAfKorporation.da" />
+  <skos:definition xml:lang="da">Relaterer en korporation til en type af korporation.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="da">type af korporation</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Kategorisering for type af korporation.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">té com a tipus d’entitat corporativa</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb un tipus d’entitat corporativa.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="ca">tipus d’entitat corporativa</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Categorització d’un tipus d’entitat corporativa.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">yhteisonTyyppi</reg:name>
+  <rdfs:label xml:lang="fi">yhteisön tyyppi</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/yhteisonTyyppi.fi" />
+  <skos:definition xml:lang="fi">Liittää yhteisön yhteisön tyyppiin.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fi">yhteisön tyyppi</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Yhteisön tyyppiin perustuva jaottelu.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">type korporasjon</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">En inndeling for en type korporasjon.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">hat Art einer Körperschaft</rdfs:label>
+  <reg:name xml:lang="fr">typeDeCollectivité</reg:name>
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:name xml:lang="hu">testülettípusa</reg:name>
+  <rdfs:label xml:lang="hu">van testülettípusa</rdfs:label>
+  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy testülettípushoz. </skos:definition>
+  <rdakit:toolkitLabel xml:lang="hu">testület típusa</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Kategorizálás testülettípusok számára.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50238" />
+  <skos:altLabel xml:lang="en">type of corporate body</skos:altLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50491" />
+</rdf:Description>
+
+<!-- Property: has category of family -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50051">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">categoryOfFamily</reg:name>
+  <rdfs:label xml:lang="en">has category of family</rdfs:label>
+  <skos:definition xml:lang="en">Relates a family to a type to which a family belongs.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/categoryOfFamily.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60047" />
+  <rdakit:instructionNumber xml:lang="">10.3</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">category of family</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which a family belongs.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="fr">a pour type de famille</rdfs:label>
+  <skos:definition xml:lang="fr">Met une famille en relation avec une catégorisation ou un descripteur générique pour un type de famille.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fr">type de famille</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Catégorisation ou descripteur générique pour un type de famille.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">tipo de familia</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">Una categorización o descriptor genérico del tipo de familia.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="sv">har typ av familj/släkt</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="sv">typ av familj/släkt</rdakit:toolkitLabel>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50051" />
+  <reg:name xml:lang="el">τύποςΤηςΟικογένειας</reg:name>
+  <rdfs:label xml:lang="el">έχει τύπο της οικογένειας</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τύποςΤηςΟικογένειας.el" />
+  <skos:definition xml:lang="el">Συνδέει μια οικογένεια με μια κατηγοριοποίηση ή με έναν γενικό περιγραφέα για έναν τύπο οικογένειας.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="el">τύπος της οικογένειας</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Μια κατηγοριοποίηση ή γενικός περιγραφέας για έναν τύπο οικογένειας.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="de">Setzt eine Familie mit einer Kategorisierung oder einem generischem Deskriptor für eine Art einer Familie in Beziehung.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="de">Art einer Familie</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Eine Kategorisierung oder ein generischer Deskriptor für eine Art einer Familie.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">familietype</reg:name>
+  <rdfs:label xml:lang="da">har familietype</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/familietype.da" />
+  <skos:definition xml:lang="da">Relaterer en familie til en kategorisering eller generisk benævnelse for en type af familie.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="da">familietype</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Kategorisering eller generisk benævnelse for en type af familie.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">té com a tipus de família</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una família amb una categorització o descriptor genèric del tipus de família.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="ca">tipus de família</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Categorització o descriptor genèric d’un tipus de família.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">suvunTyyppi</reg:name>
+  <rdfs:label xml:lang="fi">suvun tyyppi</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/suvunTyyppi.fi" />
+  <skos:definition xml:lang="fi">Liittää suvun jaotteluun tai yleiskuvaukseen suvun tyypistä.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fi">suvun tyyppi</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Jaottelu tai yleiskuvaus suvun tyypille.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">type of family</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">En inndeling eller generisk betegnelse for en type familie.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">hat Art einer Familie</rdfs:label>
+  <reg:name xml:lang="fr">typeDeFamille</reg:name>
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:name xml:lang="hu">Családtípusa</reg:name>
+  <rdfs:label xml:lang="hu">van család típusa</rdfs:label>
+  <skos:definition xml:lang="hu">Egy családot hozzákapcsol egy családtípus kategóriájához vagy általános deszkriptorához.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="hu">család típusa</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Egy családtípus kategorizációja vagy általános deszkriptora.</rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">type of family</skos:altLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50491" />
+</rdf:Description>
+
+<!-- Property: has category of government -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50238">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">categoryOfGovernment</reg:name>
+  <rdfs:label xml:lang="en">has category of government</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50237" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/categoryOfGovernment.en" />
+  <skos:definition xml:lang="en">Relates a corporate body to a type to which a government belongs.</skos:definition>
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60047" />
+  <rdakit:instructionNumber xml:lang="">11.7.1.5</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">category of government</rdakit:toolkitLabel>
+  <rdfs:label xml:lang="fr">a pour type de juridiction</rdfs:label>
+  <skos:definition xml:lang="fr">Met une collectivité en relation avec une catégorisation pour un type de juridiction.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fr">type de juridiction</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Catégorisation pour un type de juridiction.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">tipo de jurisdicción</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which a government belongs.</rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50238" />
+  <reg:name xml:lang="el">τύποςΤηςΔικαιοδοσίας</reg:name>
+  <rdfs:label xml:lang="el">έχει τύπο της δικαιοδοσίας</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τύποςΤηςΔικαιοδοσίας.el" />
+  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με έναν τύπο δικαιοδοσίας.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="el">τύπος της δικαιοδοσίας</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Μια κατηγοριοποίηση για έναν τύπο συλλογικού οργάνου.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einer Kategorisierung für eine Art der Gebietskörperschaft in Beziehung.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="de">Art einer Gebietskörperschaft</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Eine Kategorisierung für eine Art der Gebietskörperschaft.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">typeAfJurisdiktion</reg:name>
+  <rdfs:label xml:lang="da">har type af jurisdiktion</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/typeAfJurisdiktion.da" />
+  <skos:definition xml:lang="da">Relaterer en korporation til en type af myndighedsområde.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="da">type af jurisdiktion</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Kategorisering for type af myndighedsområde.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">té com a tipus de jurisdicció</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb una categorització d’un tipus de jurisdicció.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="ca">tipus de jurisdicció</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Categorització d’un tipus de jurisdicció.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">hallintoalueenTyyppi</reg:name>
+  <rdfs:label xml:lang="fi">hallintoalueen tyyppi</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/hallintoalueenTyyppi.fi" />
+  <skos:definition xml:lang="fi">Liittää yhteisön hallintoalueen tyyppiin perustuvaan jaotteluun.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fi">hallintoalueen tyyppi</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Hallintoalueen tyyppiin perustuva jaottelu.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">type jurisdiksjon</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">En inndeling for en type jurisdiksjon.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">hat Art einer Gebietskörperschaft</rdfs:label>
+  <reg:name xml:lang="fr">typeDeJuridiction</reg:name>
+  <skos:altLabel xml:lang="en">type of jurisdiction</skos:altLabel>
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:name xml:lang="hu">joghatóságtípusa</reg:name>
+  <rdfs:label xml:lang="hu">van törvénykezési típusa</rdfs:label>
+  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy joghatósági típus kategorizációjához. </skos:definition>
+  <rdakit:toolkitLabel xml:lang="hu">jogilletékesség típusa</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Kategorizálás joghatósági típusok számára.</rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">type of government</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: has category of person -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50489">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has category of person</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/categoryOfPerson.en" />
+  <skos:definition xml:lang="en">Relates a person to a type to which a person belongs.</skos:definition>
+  <skos:altLabel xml:lang="en">type of person</skos:altLabel>
+  <rdakit:toolkitLabel xml:lang="en">category of person</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which a person belongs.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">categoryOfPerson</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50489" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50490" />
 </rdf:Description>
 
 <!-- Property: is censor of -->
@@ -2447,11 +2663,11 @@
   <reg:name xml:lang="en">censorOf</reg:name>
   <rdfs:label xml:lang="en">is censor of</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/censorOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to an expression that includes a contribution for revising the content of another expression for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content substantially unchanged.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an expression that includes a contribution of revising the content of another expression for the purpose of suppressing content that is deemed objectionable on moral, political, military, or other grounds, but leaving the nature and general content substantially unchanged.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60852" />
   <rdakit:toolkitLabel xml:lang="en">censor of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression that includes a contribution of revising the content of another expression for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content substantially unchanged.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression that includes a contribution of revising the content of another expression for the purpose of suppressing content that is deemed objectionable on moral, political, military, or other grounds, but leaving the nature and general content substantially unchanged.</rdakit:toolkitDefinition>
   <rdakit:seeAlso rdf:resource="http://rdaregistry.info/Elements/a/P50195" />
   <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50271" />
@@ -2497,33 +2713,13 @@
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amely felelősséget hordoz a tartalom átdolgozásáért a morális, politikai, katonai vagy egyéb okokból kifogásolható részek kiküszöbölésének a céljával, ugyanakkor a jellegét és tartalmát lényegében változatlanul hagyja.</rdakit:toolkitDefinition>
 </rdf:Description>
 
-<!-- Property: is choreographer of aggregate of -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50464">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">is choreographer of aggregate of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/choreographerOfAggregateOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that includes a contribution of providing additional choreography or modifying previous choreography.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">choreographer of aggregate of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that includes a contribution of providing additional choreography or modifying previous choreography.</rdakit:toolkitDefinition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="">choreographerOfAggregateOf</reg:name>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60662" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
-  <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50464" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50464" />
-</rdf:Description>
-
 <!-- Property: is addressee of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50209">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">addresseeOf</reg:name>
   <rdfs:label xml:lang="en">is addressee of</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to whom a work or part of a work is addressed to a work.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a work or a portion of a work that is addressed to an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50305" />
@@ -2534,7 +2730,7 @@
   <rdakit:toolkitLabel xml:lang="fr">destinataire de</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Œuvre ou partie d’œuvre adressée à un agent.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="en">addressee of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work or part of a work that is addressed to an agent.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A work or a portion of a work that is addressed to an agent.</rdakit:toolkitDefinition>
   <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50209" />
   <reg:name xml:lang="el">αλληλογράφοςΤου</reg:name>
@@ -2635,17 +2831,116 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50427" />
 </rdf:Description>
 
-<!-- Property: is composer of aggregate of -->
+<!-- Property: is contributor of cartography of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50463">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is contributor of cartography of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfCartographyOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a a manifestation that is an aggregate that embodies a cartographic work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">contributor of cartography of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies a cartographic work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorOfCartographyOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60654" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
+  <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50463" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50463" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50460" />
+</rdf:Description>
+
+<!-- Property: is contributor of choreography of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50464">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is contributor of choreography of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfChoreographyOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that embodies a choreographic work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">contributor of choreography of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies a choreographic work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorOfChoreographyOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60662" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
+  <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50464" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50464" />
+</rdf:Description>
+
+<!-- Property: is contributor of computer content of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50485">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is contributor of computer content of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfComputerContentOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that embodies computer content.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">contributor of computer content of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies computer content.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorOfComputerContentOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50485" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50485" />
+</rdf:Description>
+
+<!-- Property: is contributor of still image of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50469">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is contributor of still image of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfStillImageOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that embodies a still image work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">contributor of still image of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies a still image work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorOfImageOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60624" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
+  <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50469" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50469" />
+  <skos:altLabel xml:lang="en">illustrator of</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: is contributor of moving image of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50474">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is contributor of moving image of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfMovingImageOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that embodies a moving image work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">contributor of moving image of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies a moving image work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorOfMovingImageOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
+  <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50474" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50474" />
+</rdf:Description>
+
+<!-- Property: is contributor of music of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50459">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">is composer of aggregate of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/composerOfAggregateOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that includes a contribution of adding music to a work that originally lacked it or by composing new music to substitute for original music or supplement existing music.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">composer of aggregate of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that includes a contribution of adding music to a work that originally lacked it or by composing new music to substitute for original music or supplement existing music.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="en">is contributor of music of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfMusicOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that embodies a musical work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">contributor of music of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies a musical work.</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="">composerOfAggregateOf</reg:name>
+  <reg:name xml:lang="">contributorOfMusicOf</reg:name>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60655" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
@@ -2653,6 +2948,70 @@
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50459" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50459" />
+</rdf:Description>
+
+<!-- Property: is contributor of object of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50484">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is contributor of object of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfObjectOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that embodies an object work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">contributor of object of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies an object work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorOfObjectOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50484" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50484" />
+</rdf:Description>
+
+<!-- Property: is contributor of speech of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50483">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is contributor of speech of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfSpeechOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that embodies a spoken word work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">contributor of speech of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies a spoken word work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorOfSpeechOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50483" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50483" />
+</rdf:Description>
+
+<!-- Property: is contributor of text of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50475">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is contributor of text of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/contributorOfTextOf.en" />
+  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that embodies a textual work.</skos:definition>
+  <skos:altLabel xml:lang="en">writer of supplementary textual content of</skos:altLabel>
+  <skos:altLabel xml:lang="en">writer of postface of</skos:altLabel>
+  <rdakit:toolkitLabel xml:lang="en">contributor of text of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that embodies a textual work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">contributorOfTextOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60663" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50475" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50475" />
+  <skos:altLabel xml:lang="en">writer of added text of</skos:altLabel>
+  <skos:altLabel xml:lang="en">writer of preface of</skos:altLabel>
+  <skos:altLabel xml:lang="en">writer of added commentary of</skos:altLabel>
+  <skos:altLabel xml:lang="en">writer of introduction of</skos:altLabel>
+  <skos:altLabel xml:lang="en">writer of added lyrics of</skos:altLabel>
+  <skos:altLabel xml:lang="en">writer of afterword of</skos:altLabel>
+  <skos:altLabel xml:lang="en">writer of foreword of</skos:altLabel>
 </rdf:Description>
 
 <!-- Property: DEPRECATED -->
@@ -2690,6 +3049,9 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50463" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50464" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50474" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50483" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50484" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50485" />
 </rdf:Description>
 
 <!-- Property: is contributor to amalgamation of -->
@@ -4007,66 +4369,6 @@
   <rdakit:toolkitDefinition xml:lang="hu">Egy család által szponzorált szervezet.</rdakit:toolkitDefinition>
 </rdf:Description>
 
-<!-- Property: has type of family -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50051">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">typeOfFamily</reg:name>
-  <rdfs:label xml:lang="en">has type of family</rdfs:label>
-  <skos:definition xml:lang="en">Relates a family to a categorization or generic descriptor for a type of family.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/typeOfFamily.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60047" />
-  <rdakit:instructionNumber xml:lang="">10.3</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">type of family</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A categorization or generic descriptor for a type of family.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="fr">a pour type de famille</rdfs:label>
-  <skos:definition xml:lang="fr">Met une famille en relation avec une catégorisation ou un descripteur générique pour un type de famille.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fr">type de famille</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Catégorisation ou descripteur générique pour un type de famille.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">tipo de familia</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">Una categorización o descriptor genérico del tipo de familia.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="sv">har typ av familj/släkt</rdfs:label>
-  <rdakit:toolkitLabel xml:lang="sv">typ av familj/släkt</rdakit:toolkitLabel>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50051" />
-  <reg:name xml:lang="el">τύποςΤηςΟικογένειας</reg:name>
-  <rdfs:label xml:lang="el">έχει τύπο της οικογένειας</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τύποςΤηςΟικογένειας.el" />
-  <skos:definition xml:lang="el">Συνδέει μια οικογένεια με μια κατηγοριοποίηση ή με έναν γενικό περιγραφέα για έναν τύπο οικογένειας.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="el">τύπος της οικογένειας</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Μια κατηγοριοποίηση ή γενικός περιγραφέας για έναν τύπο οικογένειας.</rdakit:toolkitDefinition>
-  <skos:definition xml:lang="de">Setzt eine Familie mit einer Kategorisierung oder einem generischem Deskriptor für eine Art einer Familie in Beziehung.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="de">Art einer Familie</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Eine Kategorisierung oder ein generischer Deskriptor für eine Art einer Familie.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">familietype</reg:name>
-  <rdfs:label xml:lang="da">har familietype</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/familietype.da" />
-  <skos:definition xml:lang="da">Relaterer en familie til en kategorisering eller generisk benævnelse for en type af familie.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="da">familietype</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Kategorisering eller generisk benævnelse for en type af familie.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">té com a tipus de família</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una família amb una categorització o descriptor genèric del tipus de família.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="ca">tipus de família</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Categorització o descriptor genèric d’un tipus de família.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">suvunTyyppi</reg:name>
-  <rdfs:label xml:lang="fi">suvun tyyppi</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/suvunTyyppi.fi" />
-  <skos:definition xml:lang="fi">Liittää suvun jaotteluun tai yleiskuvaukseen suvun tyypistä.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fi">suvun tyyppi</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Jaottelu tai yleiskuvaus suvun tyypille.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">type of family</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">En inndeling eller generisk betegnelse for en type familie.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">hat Art einer Familie</rdfs:label>
-  <reg:name xml:lang="fr">typeDeFamille</reg:name>
-  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
-  <reg:name xml:lang="hu">Családtípusa</reg:name>
-  <rdfs:label xml:lang="hu">van család típusa</rdfs:label>
-  <skos:definition xml:lang="hu">Egy családot hozzákapcsol egy családtípus kategóriájához vagy általános deszkriptorához.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="hu">család típusa</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Egy családtípus kategorizációja vagy általános deszkriptora.</rdakit:toolkitDefinition>
-</rdf:Description>
-
 <!-- Property: has family history -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50064">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
@@ -4123,6 +4425,69 @@
   <skos:definition xml:lang="hu">Egy családot hozzákapcsol  egy család és/vagy annak tagjai történetéről szóló információk összefoglalásához.</skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">családtörténet</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy családnak és/vagy annak tagjainak a történetéről szóló  információk összefoglalója.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: has date of conference -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50039">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">dateOfConference</reg:name>
+  <rdfs:label xml:lang="en">has date of conference</rdfs:label>
+  <skos:definition xml:lang="en">Relates a corporate body to a timespan during which a conference, exhibition, or other formally named and convened event that gives rise to a work is held.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50351" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/dateOfConference.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60526" />
+  <rdakit:instructionNumber xml:lang="">11.4.2</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">date of conference</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A timespan during which a conference, exhibition, or other formally named and convened event that gives rise to a work is held.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="fr">a pour date de congrès, etc.</rdfs:label>
+  <skos:definition xml:lang="fr">Met une collectivité en relation avec une date ou une fourchette de dates à laquelle un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fr">date de congrès, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Date ou fourchette de dates à laquelle un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">fecha de la conferencia, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">La fecha o rango de fechas en las que se realizó una conferencia, congreso, reunión, exposición, feria, festival, etc.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="sv">har tid för konferens</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="sv">tid för konferens</rdakit:toolkitLabel>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50039" />
+  <reg:name xml:lang="el">χρονολογίαΤουΣυνεδρίουΚλπ</reg:name>
+  <rdfs:label xml:lang="el">έχει χρονολογία του συνεδρίου κ.λπ.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/χρονολογίαΤουΣυνεδρίουΚλπ.el" />
+  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με μια χρονολογία ή ένα εύρος από ημερομηνίες κατά τις οποίες ένα συνέδριο, συνάντηση, έκθεση, εορτή, φεστιβάλ κ.λπ. έλαβε χώρα.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="el">χρονολογία του συνεδρίου κ.λπ.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Μια χρονολογία ή εύρος χρονολογιών κατά τις οποίες ένα συνέδριο, συνάντηση, εορτή, φεστιβάλ κ.λπ. έλαβε χώρα.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einem Datum oder einer Zeitspanne an dem eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat, in Beziehung.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="de">Datum einer Konferenz usw.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Ein Datum oder eine Zeitspanne an dem eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">dateringAfKonferenceEtc</reg:name>
+  <rdfs:label xml:lang="da">har datering af konference etc.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/dateringAfKonferenceEtc.da" />
+  <skos:definition xml:lang="da">Relaterer en korporation til et år eller en dato eller en række heraf, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="da">datering af konference etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">År eller dato eller en række heraf, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">té com a data de congrés</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb una data o rang de dates en el qual s’ha celebrat un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="ca">data de congrés, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Data o rang de dates en el qual s’ha celebrat un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">konferenssinTmsAjankohta</reg:name>
+  <rdfs:label xml:lang="fi">konferenssin tms. ajankohta</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/konferenssinTmsAjankohta.fi" />
+  <skos:definition xml:lang="fi">Liittää yhteisön ajankohtaan, jolloin konferenssi, kongressi, kokous, näyttely, messut, festivaalit tms. järjestettiin.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fi">konferenssin tms. ajankohta</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Ajankohta, jolloin konferenssi, kongressi, kokous, näyttely, messut, festivaalit tms. järjestettiin.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">tidspunkt for konferanse etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">Ett eller flere tidspunkter da en konferanse, en kongress, et møte, en utstilling, en messe, en festival etc. ble holdt.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">hat Datum einer Konferenz usw.</rdfs:label>
+  <reg:name xml:lang="fr">dateDeCongrèsEtc</reg:name>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50039" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+  <reg:name xml:lang="hu">Konferenciaidőpontja</reg:name>
+  <rdfs:label xml:lang="hu">van konferencia stb. időpontja</rdfs:label>
+  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy időponthoz vagy időpontok egy tartományához, amikor egy konferenciát, kongresszust, ülést, kiállítást, vásárt, fesztivált stb. tartottak. </skos:definition>
+  <rdakit:toolkitLabel xml:lang="hu">konferencia stb. időpontja</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Egy időpont vagy időpontok egy tartománya, amikor egy konferenciát, kongresszust, ülést, kiállítást, vásárt, fesztivált stb. tartottak. </rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">date of conference, etc.</skos:altLabel>
 </rdf:Description>
 
 <!-- Property: DEPRECATED -->
@@ -6476,10 +6841,10 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60870" />
   <rdakit:toolkitLabel xml:lang="en">editorial director of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility other than creation for the content of a serial, integrating resource, or multipart monographic work.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that involves a legal or intellectual responsibility, but not creative responsibility, for the editorial policy and content of a diachronic work.</rdakit:toolkitDefinition>
   <rdakit:seeAlso rdf:resource="http://rdaregistry.info/Elements/a/P50156" />
   <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
-  <skos:definition xml:lang="en">Relates an agent to a work that involves a responsibility other than creation for the content of a serial, integrating resource, or multipart monographic work.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a work that involves a legal or intellectual responsibility, but not creative responsibility, for the editorial policy and content of a diachronic work.</skos:definition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50289" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50305" />
   <reg:name xml:lang="el">διευθυντήςΣύνταξηςΤου</reg:name>
@@ -7788,27 +8153,6 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50092" />
 </rdf:Description>
 
-<!-- Property: is illustrator of -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50469">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">is illustrator of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/illustratorOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to a manifestation of aggregate that includes a contribution of images.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">illustrator of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation of aggregate that includes a contribution of images.</rdakit:toolkitDefinition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="">illustratorOf</reg:name>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60624" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50469" />
-  <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50469" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50469" />
-  <skos:scopeNote xml:lang="en">Images include drawings, diagrams, and photographs.</skos:scopeNote>
-</rdf:Description>
-
 <!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50159">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
@@ -8449,65 +8793,6 @@
   <rdakit:toolkitLabel xml:lang="hu">jelmeztervezője</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amely hozzájárulást jelent azzal, hogy kosztümöket tervez egy mozgóképi produkció számára, vagy egy zenei vagy drámai megjelenítés, vagy szórakoztatás számára.   </rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50144" />
-</rdf:Description>
-
-<!-- Property: has type of government -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50238">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">typeOfGovernment</reg:name>
-  <rdfs:label xml:lang="en">has type of government</rdfs:label>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50237" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/typeOfGovernment.en" />
-  <skos:definition xml:lang="en">Relates a corporate body to a categorization for a type of jurisdiction.</skos:definition>
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60047" />
-  <rdakit:instructionNumber xml:lang="">11.7.1.5</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">type of government</rdakit:toolkitLabel>
-  <rdfs:label xml:lang="fr">a pour type de juridiction</rdfs:label>
-  <skos:definition xml:lang="fr">Met une collectivité en relation avec une catégorisation pour un type de juridiction.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fr">type de juridiction</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Catégorisation pour un type de juridiction.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">tipo de jurisdicción</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A categorization for a type of government.</rdakit:toolkitDefinition>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50238" />
-  <reg:name xml:lang="el">τύποςΤηςΔικαιοδοσίας</reg:name>
-  <rdfs:label xml:lang="el">έχει τύπο της δικαιοδοσίας</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τύποςΤηςΔικαιοδοσίας.el" />
-  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με έναν τύπο δικαιοδοσίας.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="el">τύπος της δικαιοδοσίας</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Μια κατηγοριοποίηση για έναν τύπο συλλογικού οργάνου.</rdakit:toolkitDefinition>
-  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einer Kategorisierung für eine Art der Gebietskörperschaft in Beziehung.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="de">Art einer Gebietskörperschaft</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Eine Kategorisierung für eine Art der Gebietskörperschaft.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">typeAfJurisdiktion</reg:name>
-  <rdfs:label xml:lang="da">har type af jurisdiktion</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/typeAfJurisdiktion.da" />
-  <skos:definition xml:lang="da">Relaterer en korporation til en type af myndighedsområde.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="da">type af jurisdiktion</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Kategorisering for type af myndighedsområde.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">té com a tipus de jurisdicció</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb una categorització d’un tipus de jurisdicció.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="ca">tipus de jurisdicció</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Categorització d’un tipus de jurisdicció.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">hallintoalueenTyyppi</reg:name>
-  <rdfs:label xml:lang="fi">hallintoalueen tyyppi</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/hallintoalueenTyyppi.fi" />
-  <skos:definition xml:lang="fi">Liittää yhteisön hallintoalueen tyyppiin perustuvaan jaotteluun.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fi">hallintoalueen tyyppi</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Hallintoalueen tyyppiin perustuva jaottelu.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">type jurisdiksjon</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">En inndeling for en type jurisdiksjon.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">hat Art einer Gebietskörperschaft</rdfs:label>
-  <reg:name xml:lang="fr">typeDeJuridiction</reg:name>
-  <skos:altLabel xml:lang="en">type of jurisdiction</skos:altLabel>
-  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
-  <reg:name xml:lang="hu">joghatóságtípusa</reg:name>
-  <rdfs:label xml:lang="hu">van törvénykezési típusa</rdfs:label>
-  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy joghatósági típus kategorizációjához. </skos:definition>
-  <rdakit:toolkitLabel xml:lang="hu">jogilletékesség típusa</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Kategorizálás joghatósági típusok számára.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has jurisdiction governed -->
@@ -11514,11 +11799,11 @@
   <reg:name xml:lang="en">givenName</reg:name>
   <rdfs:label xml:lang="en">has given name</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/givenName.en" />
-  <skos:definition xml:lang="en">Relates a person to a name given to a person at birth or at some later point in addition to, or instead of, a surname.</skos:definition>
+  <skos:definition xml:lang="en">Relates a person to a name of person given at birth or at some later point in addition to, or instead of, a surname.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60879" />
   <rdakit:toolkitLabel xml:lang="en">given name</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A name given to a person at birth or at some later point in addition to, or instead of, a surname.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A name of person given at birth or at some later point in addition to, or instead of, a surname.</rdakit:toolkitDefinition>
   <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50292" />
   <reg:name xml:lang="el">μικρόΌνομα</reg:name>
@@ -11560,6 +11845,8 @@
   <skos:definition xml:lang="hu">Egy személyt hozzákapcsol egy névhez, amelyet egy személynek születéskor adtak vagy valamely későbbi időpontban egy vezetéknév mellett vagy helyett.</skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">utónév</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy név, amelyet születéskor vagy egy későbbi időpontban adnak egy személynek vezetékneve mellett, vagy ahelyett.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50111" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50292" />
 </rdf:Description>
 
 <!-- Property: is mixing engineer of -->
@@ -12104,190 +12391,6 @@
   <rdakit:toolkitLabel xml:lang="hu">kommentátora</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy olyan mű kifejezési formája, amely egy téma értelmezésének, elemzésének a megtételét vagy megvitatását testesíti meg egy felvevő, filmes vagy egyéb audiovizuális médiumon. </rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50080" />
-</rdf:Description>
-
-<!-- Property: has date of conference, etc. -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50039">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">dateOfConferenceEtc</reg:name>
-  <rdfs:label xml:lang="en">has date of conference, etc.</rdfs:label>
-  <skos:definition xml:lang="en">Relates a corporate body to a timespan during which a conference, exhibition, or other event that gives rise to a work is held.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50351" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/dateOfConferenceEtc.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60526" />
-  <rdakit:instructionNumber xml:lang="">11.4.2</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">date of conference, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A timespan during which a conference, exhibition, or other event that gives rise to a work is held.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="fr">a pour date de congrès, etc.</rdfs:label>
-  <skos:definition xml:lang="fr">Met une collectivité en relation avec une date ou une fourchette de dates à laquelle un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fr">date de congrès, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Date ou fourchette de dates à laquelle un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">fecha de la conferencia, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">La fecha o rango de fechas en las que se realizó una conferencia, congreso, reunión, exposición, feria, festival, etc.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="sv">har tid för konferens</rdfs:label>
-  <rdakit:toolkitLabel xml:lang="sv">tid för konferens</rdakit:toolkitLabel>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50039" />
-  <reg:name xml:lang="el">χρονολογίαΤουΣυνεδρίουΚλπ</reg:name>
-  <rdfs:label xml:lang="el">έχει χρονολογία του συνεδρίου κ.λπ.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/χρονολογίαΤουΣυνεδρίουΚλπ.el" />
-  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με μια χρονολογία ή ένα εύρος από ημερομηνίες κατά τις οποίες ένα συνέδριο, συνάντηση, έκθεση, εορτή, φεστιβάλ κ.λπ. έλαβε χώρα.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="el">χρονολογία του συνεδρίου κ.λπ.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Μια χρονολογία ή εύρος χρονολογιών κατά τις οποίες ένα συνέδριο, συνάντηση, εορτή, φεστιβάλ κ.λπ. έλαβε χώρα.</rdakit:toolkitDefinition>
-  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einem Datum oder einer Zeitspanne an dem eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat, in Beziehung.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="de">Datum einer Konferenz usw.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Ein Datum oder eine Zeitspanne an dem eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">dateringAfKonferenceEtc</reg:name>
-  <rdfs:label xml:lang="da">har datering af konference etc.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/dateringAfKonferenceEtc.da" />
-  <skos:definition xml:lang="da">Relaterer en korporation til et år eller en dato eller en række heraf, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="da">datering af konference etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">År eller dato eller en række heraf, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">té com a data de congrés</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb una data o rang de dates en el qual s’ha celebrat un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="ca">data de congrés, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Data o rang de dates en el qual s’ha celebrat un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">konferenssinTmsAjankohta</reg:name>
-  <rdfs:label xml:lang="fi">konferenssin tms. ajankohta</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/konferenssinTmsAjankohta.fi" />
-  <skos:definition xml:lang="fi">Liittää yhteisön ajankohtaan, jolloin konferenssi, kongressi, kokous, näyttely, messut, festivaalit tms. järjestettiin.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fi">konferenssin tms. ajankohta</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Ajankohta, jolloin konferenssi, kongressi, kokous, näyttely, messut, festivaalit tms. järjestettiin.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">tidspunkt for konferanse etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">Ett eller flere tidspunkter da en konferanse, en kongress, et møte, en utstilling, en messe, en festival etc. ble holdt.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">hat Datum einer Konferenz usw.</rdfs:label>
-  <reg:name xml:lang="fr">dateDeCongrèsEtc</reg:name>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50039" />
-  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
-  <reg:name xml:lang="hu">Konferenciaidőpontja</reg:name>
-  <rdfs:label xml:lang="hu">van konferencia stb. időpontja</rdfs:label>
-  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy időponthoz vagy időpontok egy tartományához, amikor egy konferenciát, kongresszust, ülést, kiállítást, vásárt, fesztivált stb. tartottak. </skos:definition>
-  <rdakit:toolkitLabel xml:lang="hu">konferencia stb. időpontja</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Egy időpont vagy időpontok egy tartománya, amikor egy konferenciát, kongresszust, ülést, kiállítást, vásárt, fesztivált stb. tartottak. </rdakit:toolkitDefinition>
-</rdf:Description>
-
-<!-- Property: has location of conference, etc. -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50024">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">locationOfConferenceEtc</reg:name>
-  <rdfs:label xml:lang="en">has location of conference, etc.</rdfs:label>
-  <skos:definition xml:lang="en">Relates a corporate body to a place where a conference, exhibition, or other event that gives rise to a work is held.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50350" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/locationOfConferenceEtc.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60107" />
-  <rdakit:instructionNumber xml:lang="">11.3.2</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">location of conference, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A place where a conference, exhibition, or other event that gives rise to a work is held.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="fr">a pour emplacement d’un congrès, etc.</rdfs:label>
-  <skos:definition xml:lang="fr">Met une collectivité en relation avec un ou plusieurs lieux où un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fr">emplacement d’un congrès, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Un ou plusieurs lieux où un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">lugar de la conferencia, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">Una localidad en la que se se realizó una conferencia, congreso, reunión, exposición, feria, festival, etc.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="sv">har konferensort</rdfs:label>
-  <rdakit:toolkitLabel xml:lang="sv">konferensort</rdakit:toolkitLabel>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50024" />
-  <reg:name xml:lang="el">τοποθεσίαΣυνεδρίουΚλπ</reg:name>
-  <rdfs:label xml:lang="el">έχει τοποθεσία του συνεδρίου κ.λπ.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τοποθεσίαΣυνεδρίουΚλπ.el" />
-  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με έναν τόπο ή τόπους στους οποίους ένα συνέδριο, συνάντηση, έκθεση, φεστιβάλ κ.λπ. διεξήχθησαν.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="el">τοποθεσία του συνεδρίου κ.λπ.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Ένας τόπος ή τόποι στους οποίους ένα συνέδριο, συνάντηση, έκθεση, φεστιβάλ κ.λπ. διεξήχθησαν.</rdakit:toolkitDefinition>
-  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einem Ort oder mehreren Orten, an dem/denen eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat, in Beziehung.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="de">Ort einer Konferenz usw.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Ein Ort oder Orte, an dem/denen eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">stedForKonferenceEtc</reg:name>
-  <rdfs:label xml:lang="da">har sted for konference etc.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/stedForKonferenceEtc.da" />
-  <skos:definition xml:lang="da">Relaterer en korporation til et sted, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="da">sted for konference etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Sted, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">té com a localització de congrés, etc.</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb una localitat on se celebra un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="ca">localització de congrés, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Localitat on se celebra un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">konferenssinTmsPaikka</reg:name>
-  <rdfs:label xml:lang="fi">konferenssin tms. paikka</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/konferenssinTmsPaikka.fi" />
-  <skos:definition xml:lang="fi">Liittää yhteisön paikkaan tai paikkoihin, jossa konferenssi, kongressi, kokous, näyttely, messut, festivaalit, tms. on järjestetty.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fi">konferenssin tms. paikka</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Paikka tai paikat, jossa konferenssi, kongressi, kokous, näyttely, messut, festivaalit, tms. on järjestetty.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">møtested for konferanse etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">Sted der en konferanse, kongress, møte, utstilling, messe, festival etc. ble holdt.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">hat Ort einer Konferenz usw.</rdfs:label>
-  <reg:name xml:lang="fr">emplacementDunCongrèsEtc</reg:name>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50024" />
-  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
-  <reg:name xml:lang="hu">konferenciaStbhelye</reg:name>
-  <rdfs:label xml:lang="hu">van konferencia stb. helye</rdfs:label>
-  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy helyhez (vagy helyekhez), amelyben konferenciát, kongresszust, ülést, kiállítást, vásárt, fesztivált stb. tartottak.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="hu">konferencia stb. helye</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Egy olyan hely vagy helyek, amelyben vagy amelyekben egy konferenciát, kongresszust, ülést, kiállítást, vásárt, fesztivált stb. tartottak.</rdakit:toolkitDefinition>
-</rdf:Description>
-
-<!-- Property: has number of conference, etc. -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50019">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">numberOfConferenceEtc</reg:name>
-  <rdfs:label xml:lang="en">has number of conference, etc.</rdfs:label>
-  <skos:definition xml:lang="en">Relates a corporate body to a designation of the sequencing of a conference, etc., within a series of conferences, etc.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/numberOfConferenceEtc.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60079" />
-  <rdakit:instructionNumber xml:lang="">11.6</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">number of conference, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A designation of the sequencing of a conference, etc., within a series of conferences, etc.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="fr">a pour numéro d’ordre d’un congrès, etc.</rdfs:label>
-  <skos:definition xml:lang="fr">Met une collectivité en relation avec une désignation de l’ordre séquentiel d’un congrès, etc. à l’intérieur d’une série de congrès, etc.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fr">numéro d’ordre d’un congrès, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Désignation de l’ordre séquentiel d’un congrès, etc. à l’intérieur d’une série de congrès, etc.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">número de una conferencia, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">Una designación de la secuencia de una conferencia, etc., dentro de una serie de conferencias, etc.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="sv">har ordningsnummer för konferens etc.</rdfs:label>
-  <rdakit:toolkitLabel xml:lang="sv">ordningsnummer för konferens etc.</rdakit:toolkitLabel>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50019" />
-  <reg:name xml:lang="el">αριθμόςΣυνεδρίουΚλπ</reg:name>
-  <rdfs:label xml:lang="el">έχει αριθμό συνεδρίου κ.λπ.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/αριθμόςΣυνεδρίουΚλπ.el" />
-  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με έναν προσδιορισμό της αλληλουχίας ενός συνεδρίου κ.λπ. εντός μιας σειράς συνεδρίων κ.λπ.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="el">αριθμός συνεδρίου κ.λπ.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Ο προσδιορισμός της αλληλουχίας ενός συνεδρίου κ.λπ. σε μια σειρά συνεδρίων κ.λπ.</rdakit:toolkitDefinition>
-  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einer Bezeichnung der Abfolge einer Konferenz usw. innerhalb einer Folge von Konferenzen usw. in Beziehung.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="de">Zählung einer Konferenz usw.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Eine Bezeichnung der Abfolge einer Konferenz usw. innerhalb einer Folge von Konferenzen usw.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">nummerPåKonferenceEtc</reg:name>
-  <rdfs:label xml:lang="da">har nummer på konference etc.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/nummerPåKonferenceEtc.da" />
-  <skos:definition xml:lang="da">Relaterer en korporation til en sekvensbetegnelse etc. i en række af konferencer etc.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="da">nummer på konference etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Sekvensbetegnelse for en konference etc. i en række af konferencer etc.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">té com a número de congrés, etc.</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb una designació de la seqüència d’un congrés, etc., dins d’una sèrie de congressos, etc.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="ca">número de congrés, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Designació de la seqüència d’un congrés, etc., dins d’una sèrie de congressos, etc.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">konferenssinTmsNumero</reg:name>
-  <rdfs:label xml:lang="fi">konferenssin tms. numero</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/konferenssinTmsNumero.fi" />
-  <skos:definition xml:lang="fi">Liittää yhteisön konferenssin tms. järjestysnumeroon konferenssisarjassa, tapahtumasarjassa tms.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fi">konferenssin tms. numero</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Konferenssin tms. järjestysnumero konferenssisarjassa, tapahtumasarjassa tms.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">nummer for konferanse, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">En betegnelse for nummerering av en konferanse, etc. innen en konferanserekke, etc.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">hat Zählung einer Konferenz usw.</rdfs:label>
-  <reg:name xml:lang="fr">numéroDordreDunCongrèsEtc</reg:name>
-  <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
-  <reg:name xml:lang="hu">konferenciaszámstb.</reg:name>
-  <rdfs:label xml:lang="hu">van konferenciaszáma stb.</rdfs:label>
-  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy konferencia stb. sorrendjének a kijelöléséhez egy konferenciasorozaton stb. belül.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="hu">konferencia stb. száma</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Egy konferencia stb. sorrendjének megjelölése konferenciák stb. sorozatán belül. </rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is lithographer of -->
@@ -13109,75 +13212,6 @@
   <skos:definition xml:lang="hu">Egy ágenst (személyt, családot vagy testületet), aki/amely egy mű megalkotásának a támogatásához kutatást végez, hozzákapcsol egy műhöz. </skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">kutatója</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű, amely felelősséget hordoz egy mű létrehozásának a támogatásában végzett kutatásért. </rdakit:toolkitDefinition>
-</rdf:Description>
-
-<!-- Property: has place of residence, etc. -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50109">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">placeOfResidenceEtc</reg:name>
-  <rdfs:label xml:lang="en">has place of residence, etc.</rdfs:label>
-  <skos:definition xml:lang="en">Relates a person to a place where a person resides or has resided, or another significant place that is associated with the person other than place of birth, place of death, or residence.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/placeOfResidenceEtc.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60360" />
-  <rdakit:instructionNumber xml:lang="">9.11</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">place of residence, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A place where a person resides or has resided, or another significant place that is associated with a person other than place of birth, place of death, or residence.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="fr">a pour lieu de résidence, etc.</rdfs:label>
-  <skos:definition xml:lang="fr">Met une personne en relation avec une municipalité, une ville, une province, un État et/ou un pays où une personne réside ou a résidé, ou un autre lieu important associé à une personne et différent d’un lieu de naissance, de décès ou de résidence.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fr">lieu de résidence, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Municipalité, ville, province, État et/ou pays où une personne réside ou a résidé, ou autre lieu important associé à une personne et différent d’un lieu de naissance, de décès ou de résidence.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">lugar de residencia</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">Un poblado, ciudad, provincia, estado y/o país en el que residió o ha residido una persona, u otro lugar significativo asociado con la persona diferente del lugar de nacimiento, fallecimiento o residencia (por ej., un lugar donde la persona ha trabajado o estudiado).</rdakit:toolkitDefinition>
-  <skos:scopeNote xml:lang="en">A place where a person has worked or studied is included.</skos:scopeNote>
-  <rdfs:label xml:lang="sv">har bostadsort</rdfs:label>
-  <rdakit:toolkitLabel xml:lang="sv">bostadsort</rdakit:toolkitLabel>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50109" />
-  <reg:name xml:lang="el">τόποςΚατοικίαςΚλπ</reg:name>
-  <rdfs:label xml:lang="el">έχει τόπο κατοικίας κ.λπ.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τόποςΚατοικίαςΚλπ.el" />
-  <skos:definition xml:lang="el">Συνδέει ένα φυσικό πρόσωπο με μια πόλη, επαρχία, πολιτεία/κράτος ή/και χώρα στην οποία ένα φυσικό πρόσωπο διαμένει ή έχει διαμείνει ή άλλον σημαντικό τόπο συνδεδεμένο με το φυσικό πρόσωπο, άλλον από τον τόπο γέννησης, τόπο θανάτου ή διαμονής.</skos:definition>
-  <skos:scopeNote xml:lang="el">Περιλαμβάνεται ο τόπος όπου το φυσικό πρόσωπο εργάστηκε ή σπούδασε.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="el">τόπος κατοικίας κ.λπ.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Μια πόλη, επαρχία, πολιτεία/κράτος ή/και χώρα στην οποία ένα φυσικό πρόσωπο διαμένει ή έχει διαμείνει ή ένας άλλος σημαντικός τόπος συνδεδεμένος με ένα φυσικό πρόσωπο, άλλος από τον τόπο γέννησης, τον τόπο θανάτου ή διαμονής.</rdakit:toolkitDefinition>
-  <skos:definition xml:lang="de">Setzt eine Person mit einer Ortschaft, einer Stadt, einer Provinz, einem Staat und/oder einem Land, in der/dem eine Person wohnt oder gewohnt hat, oder einem anderen bedeutenden Ort, der mit einer Person in Verbindung steht, der nicht Geburtsort, Sterbeort oder Wohnort ist, in Beziehung.</skos:definition>
-  <skos:scopeNote xml:lang="de">Ein Ort, an dem eine Person gearbeitet oder studiert hat, ist eingeschlossen.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="de">Wohnort usw.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Eine Ortschaft, eine Stadt, eine Provinz, ein Staat und/oder ein Land, in der/dem eine Person wohnt oder gewohnt hat, oder ein anderer bedeutender Ort, der mit einer Person in Verbindung steht, der nicht Geburtsort, Sterbeort oder Wohnort ist.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">opholdsstedEtc</reg:name>
-  <rdfs:label xml:lang="da">har opholdssted etc.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/opholdsstedEtc.da" />
-  <skos:definition xml:lang="da">Relaterer en person til en landsby, by, region, stat og/eller land, hvor en person bor eller har boet, eller andet væsentligt sted forbundet med personen, bortset fra fødested, dødssted eller bopæl.</skos:definition>
-  <skos:scopeNote xml:lang="da">Sted, hvor en person har arbejdet eller studeret er omfattet.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="da">opholdssted etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Landsby, by, region, stat og/eller land, hvor en person bor eller har boet, eller andet væsentligt sted forbundet med personen, bortset fra fødested, dødssted eller bopæl.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">té com a lloc de residència, etc.</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una persona amb una població, ciutat, província, estat i/o país on resideix o ha residit una persona, o qualsevol altre lloc significatiu associat amb una persona diferent del lloc de naixement, del lloc de defunció o de residència.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="ca">lloc de residència, etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Població, ciutat, província, estat i/o país on resideix o ha residit una persona, o qualsevol altre lloc significatiu associat amb una persona diferent del lloc de naixement, del lloc de defunció o de residència.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">asuinpaikkaTms</reg:name>
-  <rdfs:label xml:lang="fi">asuinpaikka tms.</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/asuinpaikkaTms.fi" />
-  <skos:definition xml:lang="fi">Liittää henkilön kuntaan, kaupunkiin, maakuntaan tms., osavaltioon ja/tai maahan, jossa henkilö asuu tai on asunut, tai muuhun merkittävään paikkaan, johon henkilö liitetään ja joka on muu kuin syntymäpaikka, kuolinpaikka tai asuinpaikka.</skos:definition>
-  <skos:scopeNote xml:lang="fi">Tähän sisältyy myös paikka, jossa henkilö on työskennellyt tai opiskellut.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="fi">asuinpaikka tms.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Kunta, kaupunki, maakunta tms., osavaltio ja/tai maa, jossa henkilö asuu tai on asunut tai muu merkittävä paikka, johon henkilö liitetään ja joka on muu kuin syntymäpaikka, kuolinpaikka tai asuinpaikka. Tähän sisältyy myös paikka, jossa henkilö on työskennellyt tai opiskellut.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">bosted etc.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">Et sted, en by, en kommune, et fylke, en provins, en delstat og/eller et land hvor en person bor eller har bodd, eller et annet viktig sted enn fødested, dødssted eller bosted som forbindes med en person.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">hat Wohnort usw.</rdfs:label>
-  <reg:name xml:lang="fr">lieuDeRésidenceEtc</reg:name>
-  <skos:scopeNote xml:lang="fr">Un lieu où une personne a travaillé ou étudié est inclus.</skos:scopeNote>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50346" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50109" />
-  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
-  <reg:name xml:lang="hu">LakóhelyStb</reg:name>
-  <rdfs:label xml:lang="hu">van lakóhelye stb.</rdfs:label>
-  <skos:definition xml:lang="hu">Egy személyt hozzákapcsol egy településhez, városhoz, államhoz és/vagy országhoz, amelyben egy személy él vagy élt, vagy a személlyel összefüggésben álló másik jelentős helyhez, amely nem a születési helye, halálának helye és nem a lakóhelye.</skos:definition>
-  <skos:scopeNote xml:lang="hu">A hely, ahol egy személy dolgozott vagy tanult, bele tartozik.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="hu">lakóhely stb.</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Egy település, város, vidék, állam és/vagy ország, amelyben egy személy lakik vagy lakott, vagy egy személlyel kapcsolatos másik fontos hely, amely nem a születési hely, elhalálozási hely, vagy lakóhely.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has language of agent -->
@@ -14873,11 +14907,11 @@
   <reg:name xml:lang="en">founderOfWorkOf</reg:name>
   <rdfs:label xml:lang="en">is founder of work of</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/founderOfWorkOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to a work that involves a responsibility for establishing a serial, integrating resource, or multipart monograph.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a work that involves a responsibility for initiating a diachronic work.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60872" />
   <rdakit:toolkitLabel xml:lang="en">founder of work of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility for establishing a serial, integrating resource, or multipart monograph.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility for initiating a diachronic work.</rdakit:toolkitDefinition>
   <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50290" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50305" />
@@ -15221,14 +15255,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">fullerFormOfName</reg:name>
   <rdfs:label xml:lang="en">has fuller form of name</rdfs:label>
-  <skos:definition xml:lang="en">Relates a person to a name or names associated with a person who includes the fuller form of a part of any name represented only by an initial, abbreviation, or shortened or otherwise modified variant in the form chosen as the preferred name or a part of the name not included in the form chosen as the preferred name.</skos:definition>
+  <skos:definition xml:lang="en">Relates a person to a name of person that includes the fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/fullerFormOfName.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60530" />
   <rdakit:instructionNumber xml:lang="">9.5</rdakit:instructionNumber>
   <rdakit:toolkitLabel xml:lang="en">fuller form of name</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A name or names associated with a person who includes the fuller form of a part of any name represented only by an initial, abbreviation, or shortened or otherwise modified variant in the form chosen as the preferred name or a part of the name not included in the form chosen as the preferred name.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A name of person that includes the fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour forme développée du nom</rdfs:label>
   <skos:definition xml:lang="fr">Met une personne en relation avec un ou plusieurs noms associés à une personne qui comportent la forme développée d’une partie de tout nom représentée seulement par une initiale, une abréviation ou une variante raccourcie ou autrement modifiée dans la forme choisie comme nom privilégié et/ou une partie du nom non incluse dans la forme choisie comme nom privilégié.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">forme développée du nom</rdakit:toolkitLabel>
@@ -15273,6 +15307,8 @@
   <skos:definition xml:lang="hu">Egy személyt hozzákapcsol egy személyhez kötődő névhez (vagy nevekhez), amely bármilyen olyan név részének a teljes formáját magában foglalja, amelyet csak egy kezdőbetű, rövidítés vagy rövidített vagy más módon módosított változat képvisel a kitűntetett névként választott formában és/vagy a névnek egy része, amely nem tartozik bele a kitűntetett névként választott formába.</skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">teljesebb névforma</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy személyhez kötődő név (vagy nevek), amely magában foglalja bármely név részének teljesebb formáját, amelyet csak egy kezdőbetű, rövidítés, vagy rövidített vagy másképpen módosított változat reprezentál a kitűntetett névként választott formában és/vagy egy névrész , amely nincs benne a kitűntetett névként választott formában. </rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50111" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50115" />
 </rdf:Description>
 
 <!-- Property: has note on agent -->
@@ -15367,6 +15403,68 @@
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60956" />
   <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50395" />
+</rdf:Description>
+
+<!-- Property: has number of conference -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50019">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">numberOfConference</reg:name>
+  <rdfs:label xml:lang="en">has number of conference</rdfs:label>
+  <skos:definition xml:lang="en">Relates a corporate body to a designation of the sequencing of a conference, exhibition, or other formally named and convened event that gives rise to a work
+</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/numberOfConference.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60079" />
+  <rdakit:instructionNumber xml:lang="">11.6</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">number of conference</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A designation of the sequencing of a conference, exhibition, or other formally named and convened event that gives rise to a work.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="fr">a pour numéro d’ordre d’un congrès, etc.</rdfs:label>
+  <skos:definition xml:lang="fr">Met une collectivité en relation avec une désignation de l’ordre séquentiel d’un congrès, etc. à l’intérieur d’une série de congrès, etc.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fr">numéro d’ordre d’un congrès, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Désignation de l’ordre séquentiel d’un congrès, etc. à l’intérieur d’une série de congrès, etc.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">número de una conferencia, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">Una designación de la secuencia de una conferencia, etc., dentro de una serie de conferencias, etc.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="sv">har ordningsnummer för konferens etc.</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="sv">ordningsnummer för konferens etc.</rdakit:toolkitLabel>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50019" />
+  <reg:name xml:lang="el">αριθμόςΣυνεδρίουΚλπ</reg:name>
+  <rdfs:label xml:lang="el">έχει αριθμό συνεδρίου κ.λπ.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/αριθμόςΣυνεδρίουΚλπ.el" />
+  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με έναν προσδιορισμό της αλληλουχίας ενός συνεδρίου κ.λπ. εντός μιας σειράς συνεδρίων κ.λπ.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="el">αριθμός συνεδρίου κ.λπ.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Ο προσδιορισμός της αλληλουχίας ενός συνεδρίου κ.λπ. σε μια σειρά συνεδρίων κ.λπ.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einer Bezeichnung der Abfolge einer Konferenz usw. innerhalb einer Folge von Konferenzen usw. in Beziehung.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="de">Zählung einer Konferenz usw.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Eine Bezeichnung der Abfolge einer Konferenz usw. innerhalb einer Folge von Konferenzen usw.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">nummerPåKonferenceEtc</reg:name>
+  <rdfs:label xml:lang="da">har nummer på konference etc.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/nummerPåKonferenceEtc.da" />
+  <skos:definition xml:lang="da">Relaterer en korporation til en sekvensbetegnelse etc. i en række af konferencer etc.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="da">nummer på konference etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Sekvensbetegnelse for en konference etc. i en række af konferencer etc.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">té com a número de congrés, etc.</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb una designació de la seqüència d’un congrés, etc., dins d’una sèrie de congressos, etc.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="ca">número de congrés, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Designació de la seqüència d’un congrés, etc., dins d’una sèrie de congressos, etc.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">konferenssinTmsNumero</reg:name>
+  <rdfs:label xml:lang="fi">konferenssin tms. numero</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/konferenssinTmsNumero.fi" />
+  <skos:definition xml:lang="fi">Liittää yhteisön konferenssin tms. järjestysnumeroon konferenssisarjassa, tapahtumasarjassa tms.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fi">konferenssin tms. numero</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Konferenssin tms. järjestysnumero konferenssisarjassa, tapahtumasarjassa tms.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">nummer for konferanse, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">En betegnelse for nummerering av en konferanse, etc. innen en konferanserekke, etc.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">hat Zählung einer Konferenz usw.</rdfs:label>
+  <reg:name xml:lang="fr">numéroDordreDunCongrèsEtc</reg:name>
+  <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
+  <reg:name xml:lang="hu">konferenciaszámstb.</reg:name>
+  <rdfs:label xml:lang="hu">van konferenciaszáma stb.</rdfs:label>
+  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy konferencia stb. sorrendjének a kijelöléséhez egy konferenciasorozaton stb. belül.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="hu">konferencia stb. száma</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Egy konferencia stb. sorrendjének megjelölése konferenciák stb. sorozatán belül. </rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">number of conference, etc.</skos:altLabel>
 </rdf:Description>
 
 <!-- Property: is printer of -->
@@ -15784,6 +15882,7 @@
   <rdakit:toolkitLabel xml:lang="hu">összeállítója</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű, amely alkotási felelősséget jelent egy új művel, mint például egy bibliográfiával vagy címtárral kapcsolatban az adatok, információk stb. kiválasztásával, elrendezésével, összeállításával és szerkesztésével. </rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50189" />
+  <skos:scopeNote xml:lang="en">Revising or clarifying the content of an expression of a work and selecting and putting together expressions of works or parts of works are excluded.</skos:scopeNote>
 </rdf:Description>
 
 <!-- Property: has product of merger -->
@@ -16306,24 +16405,137 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50444" />
 </rdf:Description>
 
-<!-- Property: is photographer of aggregate of -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50474">
+<!-- Property: has place of conference -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50024">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">is photographer of aggregate of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/photographerOfAggregateOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that includes a contribution of providing supplementary photographic content.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">photographer of aggregate of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that includes a contribution of providing supplementary photographic content.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="en">placeOfConference</reg:name>
+  <rdfs:label xml:lang="en">has place of conference</rdfs:label>
+  <skos:definition xml:lang="en">Relates a corporate body to a place where a conference, exhibition, or other formally named and convened event that gives rise to a work is held.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="">photographerOfAggregateOf</reg:name>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60658" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
-  <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50474" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50474" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50350" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/placeOfConference.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60107" />
+  <rdakit:instructionNumber xml:lang="">11.3.2</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">place of conference</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A place where a conference, exhibition, or other formally named and convened event that gives rise to a work is held.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="fr">a pour emplacement d’un congrès, etc.</rdfs:label>
+  <skos:definition xml:lang="fr">Met une collectivité en relation avec un ou plusieurs lieux où un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fr">emplacement d’un congrès, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Un ou plusieurs lieux où un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">lugar de la conferencia, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">Una localidad en la que se se realizó una conferencia, congreso, reunión, exposición, feria, festival, etc.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="sv">har konferensort</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="sv">konferensort</rdakit:toolkitLabel>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50024" />
+  <reg:name xml:lang="el">τοποθεσίαΣυνεδρίουΚλπ</reg:name>
+  <rdfs:label xml:lang="el">έχει τοποθεσία του συνεδρίου κ.λπ.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τοποθεσίαΣυνεδρίουΚλπ.el" />
+  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με έναν τόπο ή τόπους στους οποίους ένα συνέδριο, συνάντηση, έκθεση, φεστιβάλ κ.λπ. διεξήχθησαν.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="el">τοποθεσία του συνεδρίου κ.λπ.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Ένας τόπος ή τόποι στους οποίους ένα συνέδριο, συνάντηση, έκθεση, φεστιβάλ κ.λπ. διεξήχθησαν.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einem Ort oder mehreren Orten, an dem/denen eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat, in Beziehung.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="de">Ort einer Konferenz usw.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Ein Ort oder Orte, an dem/denen eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">stedForKonferenceEtc</reg:name>
+  <rdfs:label xml:lang="da">har sted for konference etc.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/stedForKonferenceEtc.da" />
+  <skos:definition xml:lang="da">Relaterer en korporation til et sted, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="da">sted for konference etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Sted, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">té com a localització de congrés, etc.</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb una localitat on se celebra un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="ca">localització de congrés, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Localitat on se celebra un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">konferenssinTmsPaikka</reg:name>
+  <rdfs:label xml:lang="fi">konferenssin tms. paikka</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/konferenssinTmsPaikka.fi" />
+  <skos:definition xml:lang="fi">Liittää yhteisön paikkaan tai paikkoihin, jossa konferenssi, kongressi, kokous, näyttely, messut, festivaalit, tms. on järjestetty.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fi">konferenssin tms. paikka</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Paikka tai paikat, jossa konferenssi, kongressi, kokous, näyttely, messut, festivaalit, tms. on järjestetty.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">møtested for konferanse etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">Sted der en konferanse, kongress, møte, utstilling, messe, festival etc. ble holdt.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">hat Ort einer Konferenz usw.</rdfs:label>
+  <reg:name xml:lang="fr">emplacementDunCongrèsEtc</reg:name>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50024" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+  <reg:name xml:lang="hu">konferenciaStbhelye</reg:name>
+  <rdfs:label xml:lang="hu">van konferencia stb. helye</rdfs:label>
+  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy helyhez (vagy helyekhez), amelyben konferenciát, kongresszust, ülést, kiállítást, vásárt, fesztivált stb. tartottak.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="hu">konferencia stb. helye</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Egy olyan hely vagy helyek, amelyben vagy amelyekben egy konferenciát, kongresszust, ülést, kiállítást, vásárt, fesztivált stb. tartottak.</rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">location of conference, etc.</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: has place of residence -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50109">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">placeOfResidence</reg:name>
+  <rdfs:label xml:lang="en">has place of residence</rdfs:label>
+  <skos:definition xml:lang="en">Relates a person to a place where a person resides or has resided.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/placeOfResidence.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60360" />
+  <rdakit:instructionNumber xml:lang="">9.11</rdakit:instructionNumber>
+  <rdakit:toolkitLabel xml:lang="en">place of residence</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A place where a person resides or has resided.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="fr">a pour lieu de résidence, etc.</rdfs:label>
+  <skos:definition xml:lang="fr">Met une personne en relation avec une municipalité, une ville, une province, un État et/ou un pays où une personne réside ou a résidé, ou un autre lieu important associé à une personne et différent d’un lieu de naissance, de décès ou de résidence.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fr">lieu de résidence, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Municipalité, ville, province, État et/ou pays où une personne réside ou a résidé, ou autre lieu important associé à une personne et différent d’un lieu de naissance, de décès ou de résidence.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">lugar de residencia</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">Un poblado, ciudad, provincia, estado y/o país en el que residió o ha residido una persona, u otro lugar significativo asociado con la persona diferente del lugar de nacimiento, fallecimiento o residencia (por ej., un lugar donde la persona ha trabajado o estudiado).</rdakit:toolkitDefinition>
+  <skos:scopeNote xml:lang="en">A place where a person has worked or studied is included.</skos:scopeNote>
+  <rdfs:label xml:lang="sv">har bostadsort</rdfs:label>
+  <rdakit:toolkitLabel xml:lang="sv">bostadsort</rdakit:toolkitLabel>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50109" />
+  <reg:name xml:lang="el">τόποςΚατοικίαςΚλπ</reg:name>
+  <rdfs:label xml:lang="el">έχει τόπο κατοικίας κ.λπ.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τόποςΚατοικίαςΚλπ.el" />
+  <skos:definition xml:lang="el">Συνδέει ένα φυσικό πρόσωπο με μια πόλη, επαρχία, πολιτεία/κράτος ή/και χώρα στην οποία ένα φυσικό πρόσωπο διαμένει ή έχει διαμείνει ή άλλον σημαντικό τόπο συνδεδεμένο με το φυσικό πρόσωπο, άλλον από τον τόπο γέννησης, τόπο θανάτου ή διαμονής.</skos:definition>
+  <skos:scopeNote xml:lang="el">Περιλαμβάνεται ο τόπος όπου το φυσικό πρόσωπο εργάστηκε ή σπούδασε.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="el">τόπος κατοικίας κ.λπ.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Μια πόλη, επαρχία, πολιτεία/κράτος ή/και χώρα στην οποία ένα φυσικό πρόσωπο διαμένει ή έχει διαμείνει ή ένας άλλος σημαντικός τόπος συνδεδεμένος με ένα φυσικό πρόσωπο, άλλος από τον τόπο γέννησης, τον τόπο θανάτου ή διαμονής.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="de">Setzt eine Person mit einer Ortschaft, einer Stadt, einer Provinz, einem Staat und/oder einem Land, in der/dem eine Person wohnt oder gewohnt hat, oder einem anderen bedeutenden Ort, der mit einer Person in Verbindung steht, der nicht Geburtsort, Sterbeort oder Wohnort ist, in Beziehung.</skos:definition>
+  <skos:scopeNote xml:lang="de">Ein Ort, an dem eine Person gearbeitet oder studiert hat, ist eingeschlossen.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="de">Wohnort usw.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Eine Ortschaft, eine Stadt, eine Provinz, ein Staat und/oder ein Land, in der/dem eine Person wohnt oder gewohnt hat, oder ein anderer bedeutender Ort, der mit einer Person in Verbindung steht, der nicht Geburtsort, Sterbeort oder Wohnort ist.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">opholdsstedEtc</reg:name>
+  <rdfs:label xml:lang="da">har opholdssted etc.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/opholdsstedEtc.da" />
+  <skos:definition xml:lang="da">Relaterer en person til en landsby, by, region, stat og/eller land, hvor en person bor eller har boet, eller andet væsentligt sted forbundet med personen, bortset fra fødested, dødssted eller bopæl.</skos:definition>
+  <skos:scopeNote xml:lang="da">Sted, hvor en person har arbejdet eller studeret er omfattet.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="da">opholdssted etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Landsby, by, region, stat og/eller land, hvor en person bor eller har boet, eller andet væsentligt sted forbundet med personen, bortset fra fødested, dødssted eller bopæl.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">té com a lloc de residència, etc.</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una persona amb una població, ciutat, província, estat i/o país on resideix o ha residit una persona, o qualsevol altre lloc significatiu associat amb una persona diferent del lloc de naixement, del lloc de defunció o de residència.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="ca">lloc de residència, etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Població, ciutat, província, estat i/o país on resideix o ha residit una persona, o qualsevol altre lloc significatiu associat amb una persona diferent del lloc de naixement, del lloc de defunció o de residència.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">asuinpaikkaTms</reg:name>
+  <rdfs:label xml:lang="fi">asuinpaikka tms.</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/asuinpaikkaTms.fi" />
+  <skos:definition xml:lang="fi">Liittää henkilön kuntaan, kaupunkiin, maakuntaan tms., osavaltioon ja/tai maahan, jossa henkilö asuu tai on asunut, tai muuhun merkittävään paikkaan, johon henkilö liitetään ja joka on muu kuin syntymäpaikka, kuolinpaikka tai asuinpaikka.</skos:definition>
+  <skos:scopeNote xml:lang="fi">Tähän sisältyy myös paikka, jossa henkilö on työskennellyt tai opiskellut.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="fi">asuinpaikka tms.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Kunta, kaupunki, maakunta tms., osavaltio ja/tai maa, jossa henkilö asuu tai on asunut tai muu merkittävä paikka, johon henkilö liitetään ja joka on muu kuin syntymäpaikka, kuolinpaikka tai asuinpaikka. Tähän sisältyy myös paikka, jossa henkilö on työskennellyt tai opiskellut.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">bosted etc.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">Et sted, en by, en kommune, et fylke, en provins, en delstat og/eller et land hvor en person bor eller har bodd, eller et annet viktig sted enn fødested, dødssted eller bosted som forbindes med en person.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">hat Wohnort usw.</rdfs:label>
+  <reg:name xml:lang="fr">lieuDeRésidenceEtc</reg:name>
+  <skos:scopeNote xml:lang="fr">Un lieu où une personne a travaillé ou étudié est inclus.</skos:scopeNote>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50346" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50109" />
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
+  <reg:name xml:lang="hu">LakóhelyStb</reg:name>
+  <rdfs:label xml:lang="hu">van lakóhelye stb.</rdfs:label>
+  <skos:definition xml:lang="hu">Egy személyt hozzákapcsol egy településhez, városhoz, államhoz és/vagy országhoz, amelyben egy személy él vagy élt, vagy a személlyel összefüggésben álló másik jelentős helyhez, amely nem a születési helye, halálának helye és nem a lakóhelye.</skos:definition>
+  <skos:scopeNote xml:lang="hu">A hely, ahol egy személy dolgozott vagy tanult, bele tartozik.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="hu">lakóhely stb.</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Egy település, város, vidék, állam és/vagy ország, amelyben egy személy lakik vagy lakott, vagy egy személlyel kapcsolatos másik fontos hely, amely nem a születési hely, elhalálozási hely, vagy lakóhely.</rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">place of residence, etc.</skos:altLabel>
 </rdf:Description>
 
 <!-- Property: DEPRECATED -->
@@ -16645,6 +16857,24 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50184" />
 </rdf:Description>
 
+<!-- Property: is project supervisor of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50487">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is project supervisor of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/projectSupervisorOf.en" />
+  <skos:definition xml:lang="en">Relates a person to a work that involves a responsibility as an academic supervisor of a project undertaken by a student that results in a work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">project supervisor of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility as an academic supervisor of a project undertaken by a student that results in a work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">projectSupervisorOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50458" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50487" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50487" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+</rdf:Description>
+
 <!-- Property: is prominent member of family of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50417">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
@@ -16953,10 +17183,10 @@
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">realIdentityOfPerson</reg:name>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/realIdentityOfPerson.en" />
-  <skos:definition xml:lang="en">Relates a person to a nomen that is a real identity of a person who assumes another identity.</skos:definition>
+  <skos:definition xml:lang="en">Relates a person to a nomen that is a real appellation of a person who uses another nomen.</skos:definition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60037" />
   <rdakit:toolkitLabel xml:lang="en">real identity of person</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A nomen that is a real identity of a person who assumes another identity.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A nomen that is a real appellation of a person who uses another nomen.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50348" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
@@ -17022,6 +17252,90 @@
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű, amely felelősséget hordoz egy szervezet ülései anyagáról szóló jelentésekért.</rdakit:toolkitDefinition>
 </rdf:Description>
 
+<!-- Property: has related entity of agent -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50478">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of agent</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/relatedEntityOfAgent" />
+  <skos:definition xml:lang="en">Relates an agent to an entity that is associated with an agent.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of agent</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with an agent.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfAgent</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00028" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50479" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50482" />
+</rdf:Description>
+
+<!-- Property: has related entity of collective agent -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50479">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of collective agent</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/relatedEntityOfCollectiveAgent" />
+  <skos:definition xml:lang="en">Relates a collective agent to an entity that is associated with a collective agent.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of collective agent</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with a collective agent.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfCollectiveAgent</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50478" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50480" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50481" />
+</rdf:Description>
+
+<!-- Property: has related entity of corporate body -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50480">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of corporate body</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/relatedEntityOfCorporateBody" />
+  <skos:definition xml:lang="en">Relates a corporate body to an entity that is associated with a corporate body.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of corporate body</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with a corporate body.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfCorporateBody</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50479" />
+</rdf:Description>
+
+<!-- Property: has related entity of family -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50481">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of family</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/relatedEntityOfFamily" />
+  <skos:definition xml:lang="en">Relates a family to an entity that is associated with a family.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of family</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with a family.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfFamily</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50479" />
+</rdf:Description>
+
+<!-- Property: has related entity of person -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50482">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of person</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/relatedEntityOfPerson" />
+  <skos:definition xml:lang="en">Relates a person to an entity that is associated with a person.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of person</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with a person.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfPerson</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50478" />
+</rdf:Description>
+
 <!-- Property: has related RDA entity of agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50304">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
@@ -17046,7 +17360,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50360" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50304" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50304" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50478" />
   <reg:name xml:lang="el">σχετικήΟντότηταΦορέας</reg:name>
   <rdfs:label xml:lang="el">έχει σχετική οντότητα (φορέας)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/σχετικήΟντότηταΦορέα.el" />
@@ -17073,13 +17387,14 @@
   <rdfs:label xml:lang="hu">van kapcsolódó entitása (ágens)</rdfs:label>
   <skos:definition xml:lang="hu">Egy ágenst (személyt, családot vagy testületet) hozzákapcsol egy entitáshoz, amely egy éppen leírt ágenssel kapcsolatban áll.</skos:definition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61033" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
 </rdf:Description>
 
 <!-- Property: has related RDA entity of collective agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50360">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50304" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50479" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">relatedRDAEntityOfCollectiveAgent</reg:name>
   <rdfs:label xml:lang="en">has related RDA entity of collective agent</rdfs:label>
@@ -17122,14 +17437,14 @@
   <rdfs:label xml:lang="hu">van kapcsolódó entitása  (kollektív ágens)</rdfs:label>
   <skos:definition xml:lang="hu">Egy kollektív ágenst hozzákapcsol egy entitáshoz, amely egy kollektív ágenssel kapcsolatban van. </skos:definition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61033" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50304" />
 </rdf:Description>
 
 <!-- Property: has related RDA entity of corporate body -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50328">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50360" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50480" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">relatedRDAEntityOfCorporateBody</reg:name>
   <rdfs:label xml:lang="en">has related RDA entity of corporate body</rdfs:label>
@@ -17168,14 +17483,14 @@
   <rdfs:label xml:lang="hu">van kapcsolódó entitása (testület)</rdfs:label>
   <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy entitáshoz, amely egy éppen leírt testülettel kapcsolatban van. </skos:definition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61033" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50360" />
 </rdf:Description>
 
 <!-- Property: has related RDA entity of family -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50319">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50360" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50481" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">relatedRDAEntityOfFamily</reg:name>
   <rdfs:label xml:lang="en">has related RDA entity of family</rdfs:label>
@@ -17218,14 +17533,14 @@
   <rdfs:label xml:lang="hu">van kapcsolódó entitása (család)</rdfs:label>
   <skos:definition xml:lang="hu">Egy családot hozzákapcsol egy entitáshoz, amely egy éppen leírt csalláddal kapcsolatban van. </skos:definition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61033" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50360" />
 </rdf:Description>
 
 <!-- Property: has related RDA entity of person -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50310">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50304" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50482" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">relatedRDAEntityOfPerson</reg:name>
   <rdfs:label xml:lang="en">has related RDA entity of person</rdfs:label>
@@ -17268,7 +17583,7 @@
   <rdfs:label xml:lang="hu">van kapcsolódó entitása (személy)</rdfs:label>
   <skos:definition xml:lang="hu">Egy személyt hozzákapcsol egy entitáshoz, amely egy éppen leírt személlyel kapcsolatban van.</skos:definition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61033" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50304" />
 </rdf:Description>
 
 <!-- Property: is remix artist of -->
@@ -17398,6 +17713,24 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50049" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50050" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50205" />
+</rdf:Description>
+
+<!-- Property: is research supervisor of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50486">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is research supervisor of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/researchSupervisorOf.en" />
+  <skos:definition xml:lang="en">Relates a person to a work that involves a responsibility as an academic supervisor of research that results in a work.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">research supervisor of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility as an academic supervisor of research that results in a work.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">researchSupervisorOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50458" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50486" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50486" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
 </rdf:Description>
 
 <!-- Property: is restorationist of expression of -->
@@ -18012,7 +18345,6 @@
   <rdfs:label xml:lang="de">hat Adresse einer Person</rdfs:label>
   <reg:name xml:lang="fr">adresseDunePersonne</reg:name>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50114" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50348" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50418" />
   <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
   <reg:name xml:lang="hu">Személycíme</reg:name>
@@ -18284,6 +18616,9 @@ person, som fx en autoritetsregistrering.</rdakit:toolkitDefinition>
   <rdakit:toolkitDefinition xml:lang="hu">Egy szó, betű vagy szavak és/vagy betűk egy csoportja, amely révén egy személy ismert.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50103" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50117" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50115" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50292" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/P50291" />
 </rdf:Description>
 
 <!-- Property: has period of activity of person -->
@@ -20392,7 +20727,7 @@ person, som fx en autoritetsregistrering.</rdakit:toolkitDefinition>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">degreeSupervisorOf</reg:name>
   <rdfs:label xml:lang="en">is degree supervisor of</rdfs:label>
-  <skos:definition xml:lang="en">Relates a person to a work that involves a responsibility as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis.</skos:definition>
+  <skos:definition xml:lang="en">Relates a person to a work that involves a responsibility as an academic supervisor of thesis or dissertation research for an academic degree that results in a work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50458" />
@@ -20403,7 +20738,7 @@ person, som fx en autoritetsregistrering.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">superviseur académique de</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Œuvre qui comporte une responsabilité à titre de conseiller ou de directeur de thèse ou de mémoire qui supervise un diplôme universitaire ou une thèse.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="en">degree supervisor of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that involves a responsibility as an academic supervisor of thesis or dissertation research for an academic degree that results in a work.</rdakit:toolkitDefinition>
   <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50091" />
   <reg:name xml:lang="el">επόπτηςΚαθηγητήςΤου</reg:name>
@@ -20794,7 +21129,6 @@ person, som fx en autoritetsregistrering.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="de">hat Adresse einer Körperschaft</rdfs:label>
   <reg:name xml:lang="fr">adresseDuneCollectivité</reg:name>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50036" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50352" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50419" />
   <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
   <reg:name xml:lang="hu">Testületcím</reg:name>
@@ -21788,64 +22122,6 @@ person, som fx en autoritetsregistrering.</rdakit:toolkitDefinition>
   <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy testülethez, amelyet egy másik testület szponzorál. </skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">testület szponzorált testülete</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy másik testület által szponzorált testület.</rdakit:toolkitDefinition>
-</rdf:Description>
-
-<!-- Property: has type of corporate body -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50237">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">typeOfCorporateBody</reg:name>
-  <rdfs:label xml:lang="en">has type of corporate body</rdfs:label>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/typeOfCorporateBody.en" />
-  <skos:definition xml:lang="en">Relates a corporate body to a type of corporate body.</skos:definition>
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60047" />
-  <rdakit:instructionNumber xml:lang="">11.7.1.4</rdakit:instructionNumber>
-  <rdakit:toolkitLabel xml:lang="en">type of corporate body</rdakit:toolkitLabel>
-  <rdfs:label xml:lang="fr">a pour type de collectivité</rdfs:label>
-  <skos:definition xml:lang="fr">Met une collectivité en relation avec une catégorisation pour un type de collectivité.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fr">type de collectivité</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Catégorisation pour un type de collectivité.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">tipo de entidad corporativa</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A categorization for a type of corporate body.</rdakit:toolkitDefinition>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50237" />
-  <reg:name xml:lang="el">τύποςΤουΣυλλογικούΟργάνου</reg:name>
-  <rdfs:label xml:lang="el">έχει τύπο του συλλογικού οργάνου</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/τύποςΤουΣυλλογικούΟργάνου.el" />
-  <skos:definition xml:lang="el">Συνδέει ένα συλλογικό όργανο με έναν τύπο συλλογικού οργάνου.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="el">τύπος του συλλογικού οργάνου</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Μια κατηγοριοποίηση για έναν τύπο συλλογικού οργάνου.</rdakit:toolkitDefinition>
-  <skos:definition xml:lang="de">Setzt eine Körperschaft mit einer Kategorisierung für eine Art der Körperschaft in Beziehung.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="de">Art einer Körperschaft</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Eine Kategorisierung für eine Art der Körperschaft.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">typeAfKorporation</reg:name>
-  <rdfs:label xml:lang="da">har type af korporation</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/typeAfKorporation.da" />
-  <skos:definition xml:lang="da">Relaterer en korporation til en type af korporation.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="da">type af korporation</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Kategorisering for type af korporation.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">té com a tipus d’entitat corporativa</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una entitat corporativa amb un tipus d’entitat corporativa.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="ca">tipus d’entitat corporativa</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Categorització d’un tipus d’entitat corporativa.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">yhteisonTyyppi</reg:name>
-  <rdfs:label xml:lang="fi">yhteisön tyyppi</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/yhteisonTyyppi.fi" />
-  <skos:definition xml:lang="fi">Liittää yhteisön yhteisön tyyppiin.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fi">yhteisön tyyppi</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Yhteisön tyyppiin perustuva jaottelu.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">type korporasjon</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">En inndeling for en type korporasjon.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">hat Art einer Körperschaft</rdfs:label>
-  <reg:name xml:lang="fr">typeDeCollectivité</reg:name>
-  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
-  <reg:name xml:lang="hu">testülettípusa</reg:name>
-  <rdfs:label xml:lang="hu">van testülettípusa</rdfs:label>
-  <skos:definition xml:lang="hu">Egy testületet hozzákapcsol egy testülettípushoz. </skos:definition>
-  <rdakit:toolkitLabel xml:lang="hu">testület típusa</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Kategorizálás testülettípusok számára.</rdakit:toolkitDefinition>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50238" />
 </rdf:Description>
 
 <!-- Property: has corporate history -->
@@ -22900,12 +23176,12 @@ navn.</rdakit:toolkitDefinition>
   <reg:name xml:lang="en">surname</reg:name>
   <rdfs:label xml:lang="en">has surname</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/surname.en" />
-  <skos:definition xml:lang="en">Relates a person to a name that is used as a family name.</skos:definition>
+  <skos:definition xml:lang="en">Relates a person to a name of person that is used as a family name.</skos:definition>
   <skos:scopeNote xml:lang="en">Names used as family names by Romans of classical times are excluded. A surname may consist of a single letter or initial.</skos:scopeNote>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60878" />
   <rdakit:toolkitLabel xml:lang="en">surname</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A name that is used as a family name.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A name of person that is used as a family name.</rdakit:toolkitDefinition>
   <rdakit:instructionNumber xml:lang="">18.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50291" />
   <reg:name xml:lang="el">επώνυμο</reg:name>
@@ -22953,6 +23229,9 @@ navn.</rdakit:toolkitDefinition>
   <skos:scopeNote xml:lang="hu">A klasszikus időkben  a rómaiak által használt családnevek nem tartoznak bele.</skos:scopeNote>
   <rdakit:toolkitLabel xml:lang="hu">vezetéknév</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy családi névként használt név.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50111" />
+  <rdakit:seeAlso rdf:resource="http://rdaregistry.info/Elements/a/P50061" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50291" />
 </rdf:Description>
 
 <!-- Property: is lighting designer of -->
@@ -23067,34 +23346,6 @@ navn.</rdakit:toolkitDefinition>
   <skos:definition xml:lang="hu">Egy ágenst (személyt, családot vagy testületet), aki/amely hozzájárul egy mozgóképi mű kifejezési formájához azzal, hogy megtervezi és létrehozza az utómunkálati szakaszban a vizuális effektusokat, hozzákapcsol egy kifejezési formához.</skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">vizuális effektusok előállítója</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy mozgóképi mű kifejezési formája, amely felelősséget jelent az utómunka vizuális effektusainak a tervezéséért és létrehozásáért.</rdakit:toolkitDefinition>
-</rdf:Description>
-
-<!-- Property: is writer of aggregate of -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/P50475">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:label xml:lang="en">is writer of aggregate of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/writerOfAggregateOf.en" />
-  <skos:definition xml:lang="en">Relates an agent to a manifestation that is an aggregate that includes a contribution of providing text.</skos:definition>
-  <skos:altLabel xml:lang="en">writer of supplementary textual content of</skos:altLabel>
-  <skos:altLabel xml:lang="en">writer of postface of</skos:altLabel>
-  <rdakit:toolkitLabel xml:lang="en">writer of aggregate of</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is an aggregate that includes a contribution of providing text.</rdakit:toolkitDefinition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="">writerOfAggregateOf</reg:name>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60663" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50476" />
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50475" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50475" />
-  <skos:altLabel xml:lang="en">writer of added text of</skos:altLabel>
-  <skos:altLabel xml:lang="en">writer of preface of</skos:altLabel>
-  <skos:altLabel xml:lang="en">writer of added commentary of</skos:altLabel>
-  <skos:altLabel xml:lang="en">writer of introduction of</skos:altLabel>
-  <skos:altLabel xml:lang="en">writer of added lyrics of</skos:altLabel>
-  <skos:altLabel xml:lang="en">writer of afterword of</skos:altLabel>
-  <skos:altLabel xml:lang="en">writer of foreword of</skos:altLabel>
 </rdf:Description>
 
 <!-- Property: is music programmer of -->

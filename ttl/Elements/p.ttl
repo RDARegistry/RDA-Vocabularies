@@ -217,7 +217,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:label "a pour entité en relation (lieu)"@fr, "có thực thể có liên quan (địa điểm)"@vi, "har relateret entitet (sted)"@da, "has related RDA entity of place"@en, "paikkaan liittyvä entiteetti"@fi, "té com a entitat relacionada (lloc)"@ca, "van kapcsolódó entitása (hely)"@hu, "έχει σχετική οντότητα (τόπος)"@el ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70053>, <http://rdaregistry.info/Elements/x/P00001> ;
     skos:definition "Egy helyet hozzákapcsol egy entitáshoz, amely kötődik egy éppen leírt helyhez."@hu, "Liittää paikan entiteettiin, johon kuvailun kohteena oleva paikka liittyy."@fi, "Liên kết địa điểm với thực thể liên quan tới địa điểm đang được mô tả."@vi, "Met un lieu en relation avec une entité associée à un lieu décrit."@fr, "Relaciona un lloc amb una entitat associada amb un lloc que es descriu."@ca, "Relaterer et sted til en entitet der er knyttet til et beskrevet sted."@da, "Relates a place to an RDA entity that is associated with a place."@en, "Συνδέει έναν τόπο με μια οντότητα που συνδέεται με έναν περιγραφόμενο τόπο."@el .
 
 <http://rdaregistry.info/Elements/p/P70014>
@@ -428,34 +428,34 @@
 
 <http://rdaregistry.info/Elements/p/P70027>
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A person who resides or has resided in, or is associated other than birth, death, or residence with a place."@en ;
-    rdakit:toolkitLabel "place of residence, etc. of"@en ;
+    rdakit:toolkitDefinition "A person who resides or has resided in a place."@en ;
+    rdakit:toolkitLabel "place of residence of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70027>, <http://rdaregistry.info/Elements/p/object/P70027> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60973> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfResidenceEtcOf.en> ;
-    reg:name "placeOfResidenceEtcOf"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfResidenceOf.en> ;
+    reg:name "placeOfResidenceOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:label "is place of residence, etc. of"@en ;
+    rdfs:label "is place of residence of"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70014> ;
-    skos:definition "Relates a place to a person who resides or has resided in, or is associated other than birth, death, or residence with a place."@en .
+    skos:definition "Relates a place to a person who resides or has resided in a place."@en .
 
 <http://rdaregistry.info/Elements/p/P70028>
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A conference, exhibition, or other event that gives rise to a work."@en ;
-    rdakit:toolkitLabel "location of conference, etc. of"@en ;
+    rdakit:toolkitDefinition "A conference, exhibition, or other formally named and convened event that gives rise to a work."@en ;
+    rdakit:toolkitLabel "place of conference of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70028>, <http://rdaregistry.info/Elements/p/object/P70028> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/p/locationOfConferenceEtcOf.en> ;
-    reg:name "locationOfConferenceEtcOf"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/placeOfConferenceOf.en> ;
+    reg:name "placeOfConferenceOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
-    rdfs:label "is location of conference, etc. of"@en ;
+    rdfs:label "is place of conference of"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70016> ;
-    skos:definition "Relates a place to a conference, exhibition, or other event that gives rise to a work."@en .
+    skos:definition "Relates a place to a conference, exhibition, or other formally named and convened event that gives rise to a work."@en .
 
 <http://rdaregistry.info/Elements/p/P70029>
     rdakit:hasElementType "3" ;
@@ -486,7 +486,7 @@
 
 <http://rdaregistry.info/Elements/p/P70032>
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A place that is located within another place."@en ;
+    rdakit:toolkitDefinition "A place that encompasses another place."@en ;
     rdakit:toolkitLabel "part of place"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70032>, <http://rdaregistry.info/Elements/p/object/P70032> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/partOfPlace.en> ;
@@ -497,11 +497,11 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:label "is part of place"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70010> ;
-    skos:definition "Relates a place to a place that is located within another place."@en .
+    skos:definition "Relates a place to a place that encompasses another place."@en .
 
 <http://rdaregistry.info/Elements/p/P70033>
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A place that encompasses another place."@en ;
+    rdakit:toolkitDefinition "A place that is located within another place."@en ;
     rdakit:toolkitLabel "part place"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70033>, <http://rdaregistry.info/Elements/p/object/P70033> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/p/partPlace.en> ;
@@ -512,7 +512,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:label "has part place"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70010> ;
-    skos:definition "Relates a place to a place that encompasses another place."@en .
+    skos:definition "Relates a place to a place that is located within another place."@en .
 
 <http://rdaregistry.info/Elements/p/P70034>
     rdakit:hasElementType "2" ;
@@ -671,7 +671,7 @@
 
 <http://rdaregistry.info/Elements/p/P70044>
     rdakit:hasElementType "5" ;
-    rdakit:toolkitDefinition "A type of place."@en ;
+    rdakit:toolkitDefinition "A type to which a place belongs."@en ;
     rdakit:toolkitLabel "category of place"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/p/datatype/P70044> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60944> ;
@@ -682,7 +682,9 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
     rdfs:label "has category of place"@en ;
-    skos:definition "Relates a place to a type of place."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00029> ;
+    skos:altLabel "type of place"@en ;
+    skos:definition "Relates a place to a type to which a place belongs."@en .
 
 <http://rdaregistry.info/Elements/p/P70045>
     rdakit:hasElementType "3" ;
@@ -783,4 +785,18 @@
     rdfs:label "is place of capture of representative expression of"@en ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/p/P70004> ;
     skos:definition "Relates a place to a work that has content of a representative expression that is recorded, filmed, etc., in a place."@en .
+
+<http://rdaregistry.info/Elements/p/P70053>
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An entity that is associated with a place."@en ;
+    rdakit:toolkitLabel "related entity of place"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/p/relatedEntityOfPlace> ;
+    reg:name "relatedEntityOfPlace" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10009> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/p/> ;
+    rdfs:label "has related entity of place"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00028> ;
+    skos:definition "Relates a place to an entity that is associated with a place."@en .
 

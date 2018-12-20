@@ -65,7 +65,22 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00015> ;
     skos:definition "Relates a timespan to a broad unstructured description of one or more attributes of a timespan."@en .
+
+<http://rdaregistry.info/Elements/t/P70059> a rdf:Property ;
+    rdfs:label "has category of timespan"@en ;
+    rdakit:hasElementType "5" ;
+    rdakit:toolkitDefinition "A type to which a timespan belongs."@en ;
+    rdakit:toolkitLabel "category of timespan"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70059> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/categoryOfTimespan.en> ;
+    reg:name "categoryOfTimespan" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00029> ;
+    skos:definition "Relates a timespan to a type to which a timespan belongs."@en .
 
 <http://rdaregistry.info/Elements/t/P70004> a rdf:Property ;
     rdfs:label "has related item of timespan"@en ;
@@ -261,15 +276,15 @@
     skos:definition "Relates a timespan to a person who died during a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70031> a rdf:Property ;
-    rdfs:label "is date of conference, etc. of"@en ;
+    rdfs:label "is date of conference of"@en ;
     rdakit:hasElementType "2" ;
     rdakit:toolkitDefinition "A conference, exhibition, or other event that gives rise to a work that is held during a timespan."@en ;
     rdakit:toolkitLabel "date of conference, etc. of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70031>,
         <http://rdaregistry.info/Elements/t/object/P70031> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60977> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfConferenceEtcOf.en> ;
-    reg:name "dateOfConferenceEtcOf"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/dateOfConferenceOf.en> ;
+    reg:name "dateOfConferenceOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
@@ -311,7 +326,7 @@
 <http://rdaregistry.info/Elements/t/P70034> a rdf:Property ;
     rdfs:label "is part of timespan"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A timespan that is a component of another timespan."@en ;
+    rdakit:toolkitDefinition "A timespan that has another timespan as a discrete component."@en ;
     rdakit:toolkitLabel "part of timespan"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70034>,
         <http://rdaregistry.info/Elements/t/object/P70034> ;
@@ -322,12 +337,12 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70008> ;
-    skos:definition "Relates a timespan to a timespan that is a component of another timespan."@en .
+    skos:definition "Relates a timespan to a timespan that has another timespan as a discrete component."@en .
 
 <http://rdaregistry.info/Elements/t/P70035> a rdf:Property ;
     rdfs:label "has part timespan"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A timespan that has another timespan as a component."@en ;
+    rdakit:toolkitDefinition "A timespan that is a discrete component of another timespan."@en ;
     rdakit:toolkitLabel "part timespan"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70035>,
         <http://rdaregistry.info/Elements/t/object/P70035> ;
@@ -338,7 +353,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70008> ;
-    skos:definition "Relates a timespan to a timespan that has another timespan as a component."@en .
+    skos:definition "Relates a timespan to a timespan that is a discrete component of another timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70036> a rdf:Property ;
     rdfs:label "is date associated with corporate body of (Deprecated)"@en ;
@@ -552,6 +567,19 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70001> ;
     skos:definition "Relates a timespan to a work that is associated with an earliest timespan of a representative expression."@en .
+
+<http://rdaregistry.info/Elements/t/P70058> a rdf:Property ;
+    rdfs:label "has related entity of timespan"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An entity that is associated with a timespan."@en ;
+    rdakit:toolkitLabel "related entity of timespan"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/relatedEntityOfTimespan> ;
+    reg:name "relatedEntityOfTimespan" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00028> ;
+    skos:definition "Relates a timespan to an entity that is associated with a timespan."@en .
 
 <http://rdaregistry.info/Elements/t/P70003> a rdf:Property ;
     rdfs:label "has related manifestation of timespan"@en ;
@@ -968,7 +996,8 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70058>,
+        <http://rdaregistry.info/Elements/x/P00001> ;
     skos:definition "Relates a timespan to an RDA entity that is associated with a timespan."@en .
 
 <http://metadataregistry.org/uri/RegStatus/1001> a skos:Concept ;

@@ -413,6 +413,21 @@
         "Egy példányt hozzákapcsol egy forráshoz, amelytől egy ügynökség közvetlenül beszerzett egy példányt és azok a körülmények, amelyek között azt megkapták. "@hu,
         "Liên kết bản với nguồn mà từ đó cơ quan bổ sung trực tiếp bản và điều kiện quy định để nhận được nó."@vi .
 
+<http://rdaregistry.info/Elements/i/P40096> a rdf:Property ;
+    rdfs:label "has category of item"@en ;
+    rdakit:hasElementType "5" ;
+    rdakit:toolkitDefinition "A type to which an item belongs."@en ;
+    rdakit:toolkitLabel "category of item"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40096> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/categoryOfItem.en> ;
+    reg:name "categoryOfItem" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00029> ;
+    skos:altLabel "type of item"@en ;
+    skos:definition "Relates an item to a type to which an item belongs."@en .
+
 <http://rdaregistry.info/Elements/i/P40001> a rdf:Property ;
     rdfs:label "té com a identificador d’ítem"@ca,
         "har identifikator for eksemplaret"@da,
@@ -556,7 +571,7 @@
         "Kurator, der har opstillet en liste eller udarbejdet en inventarliste over eksemplarer i et samlingsværk, såsom en samling af eksemplarer eller værker."@da,
         "Ein Kurator, der die Exemplare eines aggregierten Werks, wie beispielsweise eine Sammlung von Exemplaren oder Werken, verzeichnet und inventarisiert."@de,
         "Ένας έφορος που απαριθμεί ή καταγράφει τα αντίτυπα σε ένα συγκεντρωτικό έργο, όπως μια συλλογή αντιτύπων ή έργων."@el,
-        "A curator who lists or inventories items in an aggregate work such as a collection of items or works."@en,
+        "A curator who lists or inventories items in a collection aggregate."@en,
         "Un conservador que lista o hace inventarios de ítems en una obra agregada tal como una colección de ítems u obras."@es,
         "Kuraattori, joka luetteloi tai inventoi agregaattiteokseen eli esine- tai teoskokoelmaan kuuluvat kappaleet."@fi,
         "Conservateur qui dresse une liste ou un inventaire des items faisant partie d’une œuvre agrégative telle qu’une collection d’items ou d’œuvres."@fr,
@@ -596,7 +611,7 @@
         "Relaterer et eksemplar til en kurator, der har opstillet en liste eller udarbejdet en inventarliste over eksemplarer i et samlingsværk, såsom en samling af eksemplarer eller værker."@da,
         "Setzt ein Exemplar mit einem Kurator, der die Exemplare eines aggregierten Werks, wie beispielsweise eine Sammlung von Exemplaren oder Werken, verzeichnet und inventarisiert, in Beziehung."@de,
         "Συνδέει ένα αντίτυπο με έναν έφορο ο οποίος απαριθμεί ή καταγράφει τα αντίτυπα σε ένα συγκεντρωτικό έργο, όπως μια συλλογή αντιτύπων ή έργων."@el,
-        "Relates an item to a curator who lists or inventories items in an aggregate work such as a collection of items or works."@en,
+        "Relates an item to a curator who lists or inventories items in a collection aggregate."@en,
         "Liittää kappaleen kuraattoriin, joka luetteloi tai inventoi agregaattiteokseen eli esine- tai teoskokoelmaan kuuluvat kappaleet."@fi,
         "Met un item en relation avec un conservateur qui dresse une liste ou un inventaire des items faisant partie d’une œuvre agrégative telle qu’une collection d’items ou d’œuvres."@fr,
         "Egy példányt hozzákapcsol egy gyűjteményvezetőhöz, aki példányokat listáz vagy leltárba vesz egy olyan összesített műben, mint egy példányok vagy művek gyűjteménye. "@hu,
@@ -2469,7 +2484,7 @@
         "Værk, der undersøger et oprindeligt eksemplar for at identificere dets dele og deres relationer."@da,
         "Ein Werk, das ein ursprüngliches Exemplar untersucht, um seine Bestandteile und deren Beziehungen zu identifizieren."@de,
         "Ένα έργο που εξετάζει ένα αντίτυπο-πηγή για την ταύτιση των συστατικών του και των σχέσεων τους."@el,
-        "A work that examines a source item to identify its components and their relations."@en,
+        "A work that describes the structure of an item."@en,
         "Una obra que examina el ítem fuente para identificar sus componentes y sus relaciones."@es,
         "Teos, joka tutkii lähteenä olevan kappaleen osia ja niiden välisiä suhteita analyyttisesti."@fi,
         "Œuvre qui examine un item source pour identifier ses composantes et leurs relations."@fr,
@@ -3162,6 +3177,19 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40069> ;
     skos:definition "Relates an item to a work that is a binding of an item."@en .
+
+<http://rdaregistry.info/Elements/i/P40095> a rdf:Property ;
+    rdfs:label "has related entity of item"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An entity that is associated with an item."@en ;
+    rdakit:toolkitLabel "related entity of item"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/relatedEntityOfItem> ;
+    reg:name "relatedEntityOfItem" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00028> ;
+    skos:definition "Relates an item to an entity that is associated with an item."@en .
 
 <http://rdaregistry.info/Elements/i/P40003> a rdf:Property ;
     rdfs:label "té com a nota sobre característiques de suport físic específiques d’un ítem concret"@ca,
@@ -4272,7 +4300,8 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40095>,
+        <http://rdaregistry.info/Elements/x/P00001> ;
     skos:definition "Relaciona un item amb una entitat associada amb un ítem que es descriu."@ca,
         "Relaterer et eksemplar til en entitet, der er knyttet til et beskrevet eksemplar."@da,
         "Συνδέει ένα αντίτυπο με μια οντότητα που συνδέεται με ένα περιγραφόμενο αντίτυπο."@el,

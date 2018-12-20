@@ -18,7 +18,7 @@
             },
             "omr_api": "http://api.metadataregistry.org/elementsets/157",
             "omr_home": "http://metadataregistry.org/elementsets/157",
-            "count": 169,
+            "count": 173,
             "languages": [
                 {
                     "code": "ar",
@@ -48,7 +48,7 @@
                 {
                     "code": "en",
                     "lang": "English",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "es",
@@ -126,7 +126,7 @@
                     "version": "WIP"
                 }
             ],
-            "dateOfPublication": "October 12, 2018"
+            "dateOfPublication": "December 20, 2018"
         },
         {
             "@id": "http://rdaregistry.info/Elements/n/P80001",
@@ -643,7 +643,7 @@
                     "@id": "http://rdaregistry.info/Elements/x/P00012",
                     "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedCollectiveAgentOfRDAEntity.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/25168.html",
-                    "label": "has related collective agentof RDA entity"
+                    "label": "has related collective agent of RDA entity"
                 }
             ],
             "ToolkitDefinition": {
@@ -805,9 +805,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/x/P00011",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedTimeSpanOfRDAEntity.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedTimespanOfRDAEntity.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/25167.html",
-                    "label": "has related time-span of RDA entity"
+                    "label": "has related timespan of RDA entity"
                 }
             ],
             "ToolkitDefinition": {
@@ -1029,6 +1029,12 @@
                 "label": "Published"
             },
             "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/x/P00001",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedRDAEntityOfRDAEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/25155.html",
+                    "label": "has related RDA entity of RDA entity"
+                },
                 {
                     "@id": "http://rdaregistry.info/Elements/x/P00001",
                     "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedRDAEntityOfRDAEntity.en",
@@ -4802,6 +4808,24 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/n/datatype/nameOfPersonOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/34958.html",
                     "label": "is name of person of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/P80175",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/giveNameOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35544.html",
+                    "label": "is given name of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/P80176",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/surnameOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35545.html",
+                    "label": "is surname of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/P80177",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/fullerFormOfNameOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35546.html",
+                    "label": "is fuller form of name of"
                 }
             ],
             "hasUnconstrained": {
@@ -4914,7 +4938,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a nomen to a nomen that is a component of another nomen."
+                    "Relates a nomen to a nomen that is a discrete component of another nomen."
                 ]
             },
             "domain": {
@@ -4963,7 +4987,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A nomen that is a component of another nomen."
+                "en": "A nomen that is a discrete component of another nomen."
             },
             "ToolkitLabel": {
                 "en": "part nomen"
@@ -4975,7 +4999,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a nomen to a nomen that uses another nomen as a component."
+                    "Relates a nomen to a nomen that has another nomen as a discrete component."
                 ]
             },
             "domain": {
@@ -5024,7 +5048,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A nomen that uses another nomen as a component."
+                "en": "A nomen that has another nomen as a discrete component."
             },
             "ToolkitLabel": {
                 "en": "part of nomen"
@@ -5506,7 +5530,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a nomen to a context in which an appellation of an RDA entity is used."
+                    "Relates a nomen to the circumstances or situation in which an appellation of an RDA entity is used."
                 ]
             },
             "domain": {
@@ -5541,7 +5565,7 @@
                 "label": "Published"
             },
             "ToolkitDefinition": {
-                "en": "A context in which an appellation of an RDA entity is used."
+                "en": "The circumstances or situation in which an appellation of an RDA entity is used."
             },
             "ToolkitLabel": {
                 "en": "context of use"
@@ -6213,6 +6237,11 @@
         {
             "@id": "http://rdaregistry.info/Elements/n/P80078",
             "@type": "Property",
+            "altLabel": {
+                "en": [
+                    "type of nomen"
+                ]
+            },
             "description": {
                 "en": [
                     "Relates a nomen to a type to which a nomen belongs."
@@ -6255,6 +6284,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/x/P00029",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/x/categoryOfRDAEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35522.html",
+                    "label": "has category of RDA entity"
+                }
+            ],
             "ToolkitDefinition": {
                 "en": "A type to which a nomen belongs."
             },
@@ -9150,7 +9187,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a nomen to a manifestation that is published that has a name of agent who is responsible for publication, release, or issue."
+                    "Relates a nomen to a manifestation that is published that has a name of agent who is responsible for its publication."
                 ]
             },
             "domain": {
@@ -9190,6 +9227,11 @@
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/n/nameOfPublisherOf.en",
             "name": "nameOfPublisherOf",
+            "note": {
+                "en": [
+                    "Publication includes release and issuance."
+                ]
+            },
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
                 "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -9205,7 +9247,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A manifestation that is published that has a name of agent who is responsible for publication, release, or issue."
+                "en": "A manifestation that is published that has a name of agent who is responsible for its publication."
             },
             "ToolkitLabel": {
                 "en": "name of publisher of"
@@ -9357,7 +9399,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a nomen to a musical work that has a numeric designation of musical work  assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance."
+                    "Relates a nomen to a musical work that has a numeric designation of musical work assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance."
                 ]
             },
             "domain": {
@@ -9406,7 +9448,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A musical work that has a numeric designation of musical work  assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance."
+                "en": "A musical work that has a numeric designation of musical work assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance."
             },
             "ToolkitLabel": {
                 "en": "serial number of musical work of"
@@ -12408,6 +12450,226 @@
                 "en": "authorized access point for work group of"
             },
             "url": "http://metadataregistry.org/schemaprop/show/id/35389.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/n/P80174",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a nomen to an entity that is associated with a nomen."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10012",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Nomen.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/25153.html",
+                "label": "nomen"
+            },
+            "has element type": "1",
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/n/",
+                "url": "http://metadataregistry.org/schema/show/id/157.html",
+                "label": "RDA Nomen properties"
+            },
+            "label": {
+                "en": "has related entity of nomen"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/n/relatedEntityOfNomen"
+            },
+            "name": "relatedEntityOfNomen",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/x/P00028",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedEntityOfRDAEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35481.html",
+                    "label": "has related entity of RDA entity"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "An entity that is associated with a nomen."
+            },
+            "ToolkitLabel": {
+                "en": "related entity of nomen"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35477.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/n/P80175",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a nomen to a person who uses a name given at birth or at some later point in addition to, or instead of, a surname."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10012",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Nomen.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/25153.html",
+                "label": "nomen"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/object/P80175",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/object/giveNameOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35547.html",
+                    "label": "is given name of"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/n/",
+                "url": "http://metadataregistry.org/schema/show/id/157.html",
+                "label": "RDA Nomen properties"
+            },
+            "label": {
+                "en": "is given name of"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/n/giveNameOf.en"
+            },
+            "name": "givenNameOf",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/P80056",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/nameOfPersonOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33918.html",
+                    "label": "is name of person of"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "A person who uses a name given at birth or at some later point in addition to, or instead of, a surname."
+            },
+            "ToolkitLabel": {
+                "en": "given name of"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35544.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/n/P80176",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a nomen to a person who uses a family name."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10012",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Nomen.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/25153.html",
+                "label": "nomen"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/object/P80176",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/object/surnameOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35548.html",
+                    "label": "is surname of"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/n/",
+                "url": "http://metadataregistry.org/schema/show/id/157.html",
+                "label": "RDA Nomen properties"
+            },
+            "label": {
+                "en": "is surname of"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/n/surnameOf.en"
+            },
+            "name": "surnameOf",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/P80056",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/nameOfPersonOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33918.html",
+                    "label": "is name of person of"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "A person who uses a family name."
+            },
+            "ToolkitLabel": {
+                "en": "surname of"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35545.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/n/P80177",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a nomen to a person who has a fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10012",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Nomen.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/25153.html",
+                "label": "nomen"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/object/P80177",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/object/fullerFormOfNameOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35549.html",
+                    "label": "is fuller form of name of"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/n/",
+                "url": "http://metadataregistry.org/schema/show/id/157.html",
+                "label": "RDA Nomen properties"
+            },
+            "label": {
+                "en": "is fuller form of name of"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/n/fullerFormOfNameOf.en"
+            },
+            "name": "fullerFormOfNameOf",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/n/P80056",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/n/nameOfPersonOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33918.html",
+                    "label": "is name of person of"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "A person who has a fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form."
+            },
+            "ToolkitLabel": {
+                "en": "fuller form of name of"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35546.html"
         }
     ]
 }

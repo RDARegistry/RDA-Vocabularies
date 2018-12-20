@@ -1040,6 +1040,8 @@
   <rdakit:toolkitDefinition xml:lang="en">A type to which a nomen belongs.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/datatype/P80078" />
+  <skos:altLabel xml:lang="en">type of nomen</skos:altLabel>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00029" />
 </rdf:Description>
 
 <!-- Property: has context of use -->
@@ -1050,10 +1052,10 @@
   <reg:name xml:lang="en">contextOfUse</reg:name>
   <rdfs:label xml:lang="en">has context of use</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/n/contextOfUse.en" />
-  <skos:definition xml:lang="en">Relates a nomen to a context in which an appellation of an RDA entity is used.</skos:definition>
+  <skos:definition xml:lang="en">Relates a nomen to the circumstances or situation in which an appellation of an RDA entity is used.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10012" />
   <rdakit:toolkitLabel xml:lang="en">context of use</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A context in which an appellation of an RDA entity is used.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">The circumstances or situation in which an appellation of an RDA entity is used.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/datatype/P80067" />
 </rdf:Description>
@@ -1157,6 +1159,40 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/datatype/P80138" />
   <skos:definition xml:lang="en">Relates a nomen to a manifestation that has an identifier for manifestation that consists of a group of characters from specified locations in a manifestation combined with a date of publication or other element.</skos:definition>
   <rdakit:toolkitDefinition xml:lang="en">A manifestation that has an identifier for manifestation that consists of a group of characters from specified locations in a manifestation combined with a date of publication or other element.</rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: is fuller form of name of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/n/P80177">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/n/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is fuller form of name of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/n/fullerFormOfNameOf.en" />
+  <skos:definition xml:lang="en">Relates a nomen to a person who has a fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">fuller form of name of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who has a fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">fullerFormOfNameOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10012" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/n/P80056" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/object/P80177" />
+</rdf:Description>
+
+<!-- Property: is given name of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/n/P80175">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/n/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is given name of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/n/giveNameOf.en" />
+  <skos:definition xml:lang="en">Relates a nomen to a person who uses a name given at birth or at some later point in addition to, or instead of, a surname.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">given name of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who uses a name given at birth or at some later point in addition to, or instead of, a surname.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">givenNameOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10012" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/n/P80056" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/object/P80175" />
 </rdf:Description>
 
 <!-- Property: is identifier for agent of -->
@@ -1683,6 +1719,9 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80149" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/datatype/P80056" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80175" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80176" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80177" />
 </rdf:Description>
 
 <!-- Property: is name of place of -->
@@ -1740,8 +1779,9 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80130" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/datatype/P80118" />
-  <skos:definition xml:lang="en">Relates a nomen to a manifestation that is published that has a name of agent who is responsible for publication, release, or issue.</skos:definition>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is published that has a name of agent who is responsible for publication, release, or issue.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates a nomen to a manifestation that is published that has a name of agent who is responsible for its publication.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is published that has a name of agent who is responsible for its publication.</rdakit:toolkitDefinition>
+  <skos:scopeNote xml:lang="en">Publication includes release and issuance.</skos:scopeNote>
 </rdf:Description>
 
 <!-- Property: is name of RDA entity of -->
@@ -2002,10 +2042,10 @@
   <reg:name xml:lang="en">partNomen</reg:name>
   <rdfs:label xml:lang="en">has part (nomen)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/n/partNomen.en" />
-  <skos:definition xml:lang="en">Relates a nomen to a nomen that is a component of another nomen.</skos:definition>
+  <skos:definition xml:lang="en">Relates a nomen to a nomen that is a discrete component of another nomen.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10012" />
   <rdakit:toolkitLabel xml:lang="en">part nomen</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A nomen that is a component of another nomen.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A nomen that is a discrete component of another nomen.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/object/P80058" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/n/P80009" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
@@ -2020,10 +2060,10 @@
   <reg:name xml:lang="en">partOfNomen</reg:name>
   <rdfs:label xml:lang="en">is part of (nomen)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/n/partOfNomen.en" />
-  <skos:definition xml:lang="en">Relates a nomen to a nomen that uses another nomen as a component.</skos:definition>
+  <skos:definition xml:lang="en">Relates a nomen to a nomen that has another nomen as a discrete component.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10012" />
   <rdakit:toolkitLabel xml:lang="en">part of nomen</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A nomen that uses another nomen as a component.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A nomen that has another nomen as a discrete component.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/object/P80059" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/n/P80009" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
@@ -2383,6 +2423,22 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80150" />
 </rdf:Description>
 
+<!-- Property: has related entity of nomen -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/n/P80174">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/n/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of nomen</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/n/relatedEntityOfNomen" />
+  <skos:definition xml:lang="en">Relates a nomen to an entity that is associated with a nomen.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of nomen</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with a nomen.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfNomen</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10012" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00028" />
+</rdf:Description>
+
 <!-- Property: has related expression of nomen -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/n/P80002">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/n/" />
@@ -2563,8 +2619,9 @@
   <rdakit:toolkitDefinition xml:lang="en">An RDA entity that is associated with a nomen.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/P80112" />
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/n/P80174" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61037" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
 </rdf:Description>
 
 <!-- Property: has related timespan of nomen -->
@@ -2674,8 +2731,8 @@
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60961" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/datatype/P80121" />
-  <skos:definition xml:lang="en">Relates a nomen to a musical work that has a numeric designation of musical work  assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance.</skos:definition>
-  <rdakit:toolkitDefinition xml:lang="en">A musical work that has a numeric designation of musical work  assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates a nomen to a musical work that has a numeric designation of musical work assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A musical work that has a numeric designation of musical work assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has status of identification -->
@@ -2713,6 +2770,23 @@
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <skos:altLabel xml:lang="en">subject of (nomen)</skos:altLabel>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00014" />
+</rdf:Description>
+
+<!-- Property: is surname of -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/n/P80176">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/n/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">is surname of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/n/surnameOf.en" />
+  <skos:definition xml:lang="en">Relates a nomen to a person who uses a family name.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">surname of</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who uses a family name.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">surnameOf</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10012" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/n/P80056" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/object/P80176" />
 </rdf:Description>
 
 <!-- Property: is thematic index number of -->

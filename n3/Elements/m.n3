@@ -62,6 +62,8 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    skos:altLabel "category of carrier"@en,
+        "type of carrier"@en ;
     skos:definition "Relaciona una manifestació amb una categorització que reflecteix el format del suport d’emmagatzematge i d’allotjament d’un suport físic en combinació amb el tipus d’aparell de mediació requerit per visionar, reproduir, fer funcionar, etc., el contingut d’una manifestació."@ca,
         "Relaterer en manifestation til en kategorisering der specifikt afspejler lagringsmediet og dets udstyr i kombination med den type af afspilningsudstyr, der kræves for at se, spille, fremvise etc. en manifestations indhold."@da,
         "Setzt eine Manifestation mit einer Kategorisierung, die das Format des Speichermediums und das Gehäuse eines Datenträgers widerspiegelt, in Kombination mit der Art des Hilfsmittels, das benötigt wird, um den Inhalt einer Manifestation anzuschauen, abzuspielen oder laufen zu lassen usw., in Beziehung."@de,
@@ -281,7 +283,7 @@
         "Sekvensbetegnelse for en del eller flere dele i en serie."@da,
         "Eine Bezeichnung der Abfolge von einem bzw. mehreren Teilen innerhalb einer Reihe."@de,
         "Ένας προσδιορισμός της ακολουθίας ενός μέρους ή μερών εντός μια σειράς."@el,
-        "A designation of the sequencing of a part or parts within a series."@en,
+        "A designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a manifestation of a part, issue, or iteration of a diachronic work."@en,
         "Una designación de la secuencia de una parte o partes dentro de la serie."@es,
         "Sarjan numerointi osoittaa sarjan osan tai osien järjestystä sarjassa."@fi,
         "Désignation de l’ordre séquentiel d’une ou plusieurs parties à l’intérieur d’une collection."@fr,
@@ -322,7 +324,7 @@
         "Relaterer en manifestation til en sekvensbetegnelse for en del eller flere dele i en serie."@da,
         "Setzt eine Manifestation mit einer Bezeichnung der Abfolge von einem bzw. mehreren Teilen innerhalb einer Reihe in Beziehung."@de,
         "Συνδέει μια εκδήλωση με έναν προσδιορισμό της ακολουθίας ενός μέρους ή μερών εντός μια σειράς."@el,
-        "Relates a manifestation to a designation of the sequencing of a part or parts within a series."@en,
+        "Relates a manifestation to a designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a manifestation of a part, issue, or iteration of a diachronic work."@en,
         "Liittää manifestaation sarjan numerointiin, joka osoittaa sarjan osan tai osien järjestystä sarjassa."@fi,
         "Met une manifestation en relation avec une désignation de l’ordre séquentiel d’une ou plusieurs parties à l’intérieur d’une collection."@fr,
         "Egy megjelenési formát hozzákapcsol egy rész vagy részek sorrendiségének a jelöléséhez egy sorozaton belül."@hu,
@@ -2955,6 +2957,21 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     skos:definition "Relates a manifestation to a method used to bind a published or unpublished manifestation."@en .
 
+<http://rdaregistry.info/Elements/m/P30335> a rdf:Property ;
+    rdfs:label "has category of manifestation"@en ;
+    rdakit:hasElementType "5" ;
+    rdakit:toolkitDefinition "A type to which a manifestation belongs."@en ;
+    rdakit:toolkitLabel "category of manifestation"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30335> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/categoryOfManifestation> ;
+    reg:name "categoryOfManifestation" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00029> ;
+    skos:altLabel "type of manifestation"@en ;
+    skos:definition "Relates a manifestation to a type to which a manifestation belongs."@en .
+
 <http://rdaregistry.info/Elements/m/P30006> a rdf:Property ;
     rdfs:label "té com a codi de regió"@ca,
         "har regional kodning"@da,
@@ -3683,7 +3700,7 @@
         "er faksimile indeholdt i"@da,
         "ist Faksimile enthalten in"@de,
         "είναι ομοιότυπο που περιέχεται σε"@el,
-        "is facsimile contained in"@en,
+        "is facsimile part of"@en,
         "näköispainos sisältyy manifestaatioon"@fi,
         "est un fac-similé contenu dans (manifestation)"@fr,
         "hasonmás"@hu,
@@ -3694,7 +3711,7 @@
         "Større manifestation, hvoraf en del udgør en separat del, der er en nøjagtig reproduktion af en anden manifestation, der omfatter det samme udtryk af et værk."@da,
         "Eine größere Manifestation, von der ein Teil ein eigenständiger Bestandteil ist, der exakt eine andere Manifestation reproduziert, die dieselbe Expression eines Werks verkörpert."@de,
         "Μια μεγαλύτερη εκδήλωση της οποίας ένα μέρος συνιστά ένα διακριτό συστατικό, το οποίο αναπαράγει με ακρίβεια μια άλλη εκδήλωση που ενσωματώνει την ίδια έκφραση ενός έργου."@el,
-        "A larger manifestation of which a part is a discrete component that exactly reproduces another manifestation embodying the same expression of a work."@en,
+        "A manifestation that is a part manifestation that exactly reproduces another manifestation."@en,
         "Una manifestación mayor de la cual una parte es un componente independiente que reproduce exactamente otra manifestación que materializa la misma expresión de una obra."@es,
         "Laajempi manifestaatio, jonka osa on täsmällinen jäljennös toisesta manifestaatiosta, joka sisältää saman teoksen ekspression manifestaation."@fi,
         "Manifestation plus vaste dont une partie est une composante distincte qui reproduit exactement une autre manifestation matérialisant la même expression d’une œuvre."@fr,
@@ -3706,7 +3723,7 @@
         "faksimile indeholdt i"@da,
         "Faksimile enthalten in"@de,
         "ομοιότυπο περιέχεται σε"@el,
-        "facsimile contained in"@en,
+        "facsimile part of"@en,
         "facsímil contenido en (manifestación)"@es,
         "näköispainos sisältyy manifestaatioon"@fi,
         "fac-similé contenu dans (manifestation)"@fr,
@@ -3716,13 +3733,13 @@
         "bản sao được chứa trong"@vi ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30019> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60100> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/facsimileContainedIn.en>,
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/facsimilePartOf.en>,
         <http://rdaregistry.info/Elements/m/faksimileIndeholdtI.da>,
         <http://rdaregistry.info/Elements/m/nakoispainosSisaltyyManifestaatioon.fi>,
         <http://rdaregistry.info/Elements/m/ομοιότυποΠεριέχεταιΣε.el> ;
     reg:name "faksimileIndeholdtI"@da,
         "ομοιότυποΠεριέχεταιΣε"@el,
-        "facsimileContainedIn"@en,
+        "facsimilePartOf"@en,
         "nakoispainosSisaltyyManifestaatioon"@fi,
         "facsimiléContenuDansManifestation"@fr,
         "hasonmás"@hu,
@@ -3735,7 +3752,7 @@
         "Relaterer en manifestation til en større manifestation, hvoraf en del udgør en separat del, der er en nøjagtig reproduktion af en anden manifestation, der omfatter det samme udtryk af et værk."@da,
         "Setzt eine Manifestation mit einer größeren Manifestation, von der ein Teil ein eigenständiger Bestandteil ist, der exakt eine andere Manifestation reproduziert, die dieselbe Expression eines Werks verkörpert, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με μια μεγαλύτερη εκδήλωση της οποίας ένα μέρος συνιστά ένα διακριτό συστατικό, το οποίο αναπαράγει με ακρίβεια μια άλλη εκδήλωση που ενσωματώνει την ίδια έκφραση ενός έργου."@el,
-        "Relates a manifestation to a larger manifestation of which a part is a discrete component that exactly reproduces another manifestation embodying the same expression of a work."@en,
+        "Relates a manifestation to a manifestation that is a part manifestation that exactly reproduces another manifestation."@en,
         "Liittää manifestaation laajempaan manifestaatioon, jonka osa on täsmällinen jäljennös toisesta manifestaatiosta, joka sisältää saman teoksen ekspression manifestaation."@fi,
         "Met une manifestation en relation avec une manifestation plus vaste dont une partie est une composante distincte qui reproduit exactement une autre manifestation matérialisant la même expression d’une œuvre."@fr,
         "Egy megjelenési formát hozzákapcsol egy nagyobb megjelenési formához, amelynek egy része különálló alkotóelem, amely pontosan újraalkot egy másik megjelenési formát, amely egy műnek ugyanazt a kifejezési formáját testesíti meg.  "@hu,
@@ -3820,7 +3837,7 @@
         "Manifestation, der består af separat udgivet materiale, der ikke er en integreret del af den større manifestation, som den er indlagt i."@da,
         "Eine Manifestation, die aus separat erscheinendem Material besteht, das kein integraler Bestandteil der größeren Manifestation ist, in die es beigelegt wurde."@de,
         "Mια εκδήλωση που συνίσταται από χωριστά εκδιδόμενο υλικό που δεν είναι ενσωματωμένο μέρος μιας μεγαλύτερης εκδήλωσης στην οποία έχει προστεθεί με ένθεση."@el,
-        "A manifestation that consists of separately issued material that is not an integral part of a larger manifestation into which it has been inserted."@en,
+        "A manifestation that is a separate part of another manifestation"@en,
         "Una manifestación que consiste en material publicado separadamente, que no es parte integral de la manifestación mayor en la cual se inserta."@es,
         "Manifestaatio, joka koostuu erikseen julkaistusta aineistosta, joka ei ole olennainen osa laajempaa manifestaatiota, johon se sisältyy."@fi,
         "Manifestation qui consiste en un document publié séparément ne faisant pas partie intégrante d’une manifestation plus vaste dans laquelle il a été encarté."@fr,
@@ -3861,11 +3878,12 @@
         "Relaterer en manifestation til en manifestation, der består af separat udgivet materiale, der ikke er en integreret del af den større manifestation, som den er indlagt i."@da,
         "Setzt eine Manifestation mit einer Manifestation, die aus separat erscheinendem Material besteht, das kein integraler Bestandteil der größeren Manifestation ist, in die es beigelegt wurde, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με μια εκδήλωση που συνίσταται από χωριστά εκδιδόμενο υλικό που δεν είναι ενσωματωμένο μέρος μιας μεγαλύτερης εκδήλωσης στην οποία έχει προστεθεί με ένθεση."@el,
-        "Relates a manifestation to a manifestation that consists of separately issued material that is not an integral part of a larger manifestation into which it has been inserted."@en,
+        "Relates a manifestation to a manifestation that is a separate part of another manifestation"@en,
         "Liittää manifestaation manifestaatioon, joka koostuu erikseen julkaistusta aineistosta, joka ei ole olennainen osa laajempaa manifestaatiota, johon se sisältyy."@fi,
         "Met une manifestation en relation avec une manifestation qui consiste en un document publié séparément ne faisant pas partie intégrante d’une manifestation plus vaste dans laquelle il a été encarté."@fr,
         "Egy megjelenési formát hozzákapcsol egy megjelenési formához, amely külön kiadott anyagból áll, amely nem szerves része egy nagyobb megjelenési formának, amelybe azt beillesztették."@hu,
-        "Liên kết biểu thị với biểu thị có chứa tài liệu được công bố tách biệt không phải là phần cấu thành của biểu thị lớn hơn mà nó được chèn thêm vào."@vi .
+        "Liên kết biểu thị với biểu thị có chứa tài liệu được công bố tách biệt không phải là phần cấu thành của biểu thị lớn hơn mà nó được chèn thêm vào."@vi ;
+    skos:scopeNote "An insert includes a map, illustration, or advertising supplement that is not integrated with the other manifestation."@en .
 
 <http://rdaregistry.info/Elements/m/P30025> a rdf:Property ;
     rdfs:label "és encartat en"@ca,
@@ -3883,7 +3901,7 @@
         "Manifestation, hvori der er indlagt materiale, der ikke er en integreret del af publikationen."@da,
         "Eine Manifestation, in welche Material beigelegt wurde, das kein integraler Bestandteil der Veröffentlichung ist."@de,
         "Μια εκδήλωση στην οποία έχει προστεθεί υλικό με ένθεση το οποίο δεν είναι ενσωματωμένο μέρος της δημοσίευσης."@el,
-        "A manifestation into which material has been inserted that is not an integral part of the publication."@en,
+        "A manifestation that includes another manifestation as a separate part."@en,
         "Una manifestación en la cual se ha insertado material que no es parte integral de la publicación."@es,
         "Manifestaatio, johon kuvailun kohde on sisällytetty liitteenä, mutta jonka olennainen osa se ei ole."@fi,
         "Manifestation dans laquelle un document qui ne fait pas partie intégrante de la publication a été encarté."@fr,
@@ -3924,11 +3942,12 @@
         "Relaterer en manifestation til en manifestation, hvori der er indlagt materiale, der ikke er en integreret del af publikationen."@da,
         "Setzt eine Manifestation mit einer Manifestation, in welche Material beigelegt wurde, das kein integraler Bestandteil der Veröffentlichung ist, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με μια εκδήλωση στην οποία έχει προστεθεί υλικό με ένθεση το οποίο δεν είναι ενσωματωμένο μέρος της δημοσίευσης."@el,
-        "Relates a manifestation to a manifestation into which material has been inserted that is not an integral part of the publication."@en,
+        "Relates a manifestation to a manifestation that includes another manifestation as a separate part."@en,
         "Liittää manifestaation manifestaatioon, johon kuvailun kohde on sisällytetty liitteenä, mutta jonka olennainen osa se ei ole."@fi,
         "Met une manifestation en relation avec une manifestation dans laquelle un document qui ne fait pas partie intégrante de la publication a été encarté."@fr,
         "Egy megjelenési formát hozzákapcsol egy megjelenési formához, amelybe olyan anyagot illesztettek, amely nem szerves része a kiadványnak."@hu,
-        "Liên kết biểu thị với biểu thị mà tài liệu được chèn vào nhưng không phải là phần cấu thành của xuất bản phẩm."@vi .
+        "Liên kết biểu thị với biểu thị mà tài liệu được chèn vào nhưng không phải là phần cấu thành của xuất bản phẩm."@vi ;
+    skos:scopeNote "An insert includes a map, illustration, or advertising supplement that is not integrated with the other manifestation."@en .
 
 <http://rdaregistry.info/Elements/m/P30026> a rdf:Property ;
     rdfs:label "és també publicat com"@ca,
@@ -4501,7 +4520,7 @@
     rdfs:label "és facsímil contenidor de"@ca,
         "er faksimile, der indeholder"@da,
         "είναι περιέκτης του ομοιότυπου του"@el,
-        "is facsimile container of"@en,
+        "has facsimile part"@en,
         "sisältää näköispainoksen"@fi,
         "est un conteneur fac-similé de (manifestation)"@fr,
         "hasonmás tárolója"@hu,
@@ -4512,7 +4531,7 @@
         "Manifestation, der er anvendt som grundlag for en nøjagtig reproduktion, som udgør en separat del af en større manifestation."@da,
         "Eine Manifestation, die als Grundlage für eine exakte Reproduktion verwendet wurde, die ein einzelner Bestandteil einer größeren Manifestation ist."@de,
         "Μια εκδήλωση που χρησιμοποιείται ως η βάση για μια αναπαραγωγή ακριβείας, η οποία είναι διακριτό συστατικό μιας μεγαλύτερης εκδήλωσης."@el,
-        "A manifestation that is used as the basis for an exact reproduction that is a discrete component of a larger manifestation."@en,
+        "A manifestation that is exactly reproduced as a part of another manifestation."@en,
         "Una manifestación utilizada como base para una reproducción exacta que es un componente individual de una entidad mayor."@es,
         "Laajempi manifestaatio, johon kuvailtava näköispainos sisältyy itsenäisenä osana."@fi,
         "Manifestation qui sert de base à une reproduction exacte formant une composante distincte d’une manifestation plus vaste."@fr,
@@ -4524,7 +4543,7 @@
         "faksimile, der indeholder"@da,
         "Enthält Faksimile von"@de,
         "περιέκτης του ομοιότυπου"@el,
-        "facsimile container of"@en,
+        "facsimile part"@en,
         "contiene facsímil de (manifestación)"@es,
         "sisältää näköispainoksen"@fi,
         "conteneur fac-similé de (manifestation)"@fr,
@@ -4534,13 +4553,13 @@
         "vỏ chứa bản sao chép của"@vi ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/object/P30046> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60300> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/facsimileContainerOf.en>,
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/facsimilePart.en>,
         <http://rdaregistry.info/Elements/m/faksimileDerIndeholder.da>,
         <http://rdaregistry.info/Elements/m/sisaltaaNakoispainoksen.fi>,
         <http://rdaregistry.info/Elements/m/περιέκτηςΤουΟμοιότυπου.el> ;
     reg:name "faksimileDerIndeholder"@da,
         "περιέκτηςΤουΟμοιότυπου"@el,
-        "facsimileContainerOf"@en,
+        "facsimilePart"@en,
         "sisaltaaNakoispainoksen"@fi,
         "conteneurFacsimiléDeManifestation"@fr,
         "hasonmástároló"@hu,
@@ -4553,7 +4572,7 @@
         "Relaterer en manifestation til en manifestation, der er anvendt som grundlag for en nøjagtig reproduktion, som udgør en separat del af en større manifestation."@da,
         "Setzt eine Manifestation mit einer Manifestation, die als Grundlage für eine exakte Reproduktion verwendet wurde, die ein einzelner Bestandteil einer größeren Manifestation ist, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με μια εκδήλωση που χρησιμοποιείται ως η βάση για μια αναπαραγωγή ακριβείας, η οποία είναι διακριτό συστατικό μιας μεγαλύτερης εκδήλωσης."@el,
-        "Relates a manifestation to a manifestation that is used as the basis for an exact reproduction that is a discrete component of a larger manifestation."@en,
+        "Relates a manifestation to a manifestation that is exactly reproduced as a part of another manifestation."@en,
         "Liittää manifestaation laajempaan manifestaatioon, johon kuvailtava näköispainos sisältyy itsenäisenä osana."@fi,
         "Met une manifestation en relation avec une manifestation qui sert de base à une reproduction exacte formant une composante distincte d’une manifestation plus vaste."@fr,
         "Egy megjelenési formát hozzákapcsol egy olyan megjelenési formához, amelyet pontos reprodukció alapjaként használnak, amely egy nagyobb megjelenési forma megkülönböztethető alkotóeleme."@hu,
@@ -4705,7 +4724,7 @@
         "Note om ændringer i bærerens karakteristika, der optræder i efterfølgende numre eller dele af en manifestation, der er udgivet i successive dele, eller mellem iterationer af en integrerende ressource."@da,
         "Eine Anmerkung über Veränderungen bei den Eigenschaften des Datenträgers, die bei aufeinander folgenden Ausgaben oder Teilen einer Manifestation, die in mehreren Teilen erscheint, oder zwischen Iterationen einer integrierenden Ressource vorkommen können."@de,
         "Μια σημείωση σχετικά με τις αλλαγές στα χαρακτηριστικά του φορέα αποθήκευσης που εμφανίζονται σε διαδοχικά τεύχη ή μέρη μιας εκδήλωσης τα οποία εκδίδονται σε διαδοχικά μέρη ή μεταξύ επαναλήψεων ενός ενσωματωμένου πόρου ή πόρου διαρκούς ενημέρωσης/ανανέωσης."@el,
-        "A note on changes in the characteristics of the carrier that occur in subsequent issues or parts of a manifestation issued in successive parts or between iterations of an integrating resource."@en,
+        "A note on variations in the carrier characteristics that are found on manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Una nota sobre cambios en las características del soporte que ocurren en entregas o partes subsecuentes del recurso publicado en partes sucesivas o entre iteraciones de un recurso integrado."@es,
         "Huomautus tallenteen muutoksista manifestaation toisiaan seuraavien osien välillä tai päivittyvien aineistojen päivitysten välillä."@fi,
         "Note sur les changements dans les caractéristiques du support matériel survenant dans les livraisons ou parties ultérieures d’une manifestation publiée en parties successives ou bien entre les différentes itérations d’une ressource intégratrice."@fr,
@@ -4746,7 +4765,7 @@
         "Relaterer en manifestation til en note om ændringer i bærerens karakteristika, der optræder i efterfølgende numre eller dele af en manifestation, der er udgivet i successive dele, eller mellem iterationer af en integrerende ressource."@da,
         "Setzt eine Manifestation mit einer Anmerkung über Veränderungen bei den Eigenschaften des Datenträgers, die bei aufeinander folgenden Ausgaben oder Teilen einer Manifestation, die in mehreren Teilen erscheint, oder zwischen Iterationen einer integrierenden Ressource vorkommen können, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με μια σημείωση για τις αλλαγές στα χαρακτηριστικά του φορέα αποθήκευσης που εμφανίζονται σε διαδοχικά τεύχη ή μέρη μιας εκδήλωσης τα οποία εκδίδονται σε διαδοχικά μέρη ή μεταξύ επαναλήψεων ενός ενσωματωμένου πόρου ή πόρου διαρκούς ενημέρωσης/ανανέωσης."@el,
-        "Relates a manifestation to a note on changes in the characteristics of the carrier that occur in subsequent issues or parts of a manifestation issued in successive parts or between iterations of an integrating resource."@en,
+        "Relates a manifestation to a note on variations in the carrier characteristics that are found on manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation huomautukseen tallenteen muutoksista manifestaation toisiaan seuraavien osien välillä tai päivittyvien aineistojen päivitysten välillä."@fi,
         "Met une manifestation en relation avec une note sur les changements dans les caractéristiques du support matériel survenant dans les livraisons ou parties ultérieures d’une manifestation publiée en parties successives ou bien entre les différentes itérations d’une ressource intégratrice."@fr,
         "Egy megjelenési formát hozzákapcsol egy a hordozójellemzők változásairól szóló megjegyzéshez, amely egy egymást követő részekben kiadott megjelenési forma rákövetkező számaiban vagy részeiben fordulnak elő, vagy egy integráló forrás iterációi között."@hu,
@@ -5397,7 +5416,7 @@
         "har note om periodikanummerering"@da,
         "hat Anmerkung zur Zählung von fortlaufenden Ressourcen"@de,
         "έχει σημείωση στην αρίθμηση των περιοδικών"@el,
-        "has note on numbering of serials"@en,
+        "has note on designation of sequence"@en,
         "huomautus sarja-aineiston numeroinnista"@fi,
         "a pour note sur la numérotation des publications en série"@fr,
         "van megjegyzése periodika számozásáról"@hu,
@@ -5409,7 +5428,7 @@
         "Note, der giver oplysninger om nummereringen af første og/eller sidste nummer eller del, om kompleks eller uregelmæssig nummerering (inkl. nummereringsfejl), om den periode, der dækkes af et bind, et nummer, en del etc., eller om andre oplysninger relateret til nummerering af periodika."@da,
         "Eine Anmerkung, die Informationen liefert zur Zählung der ersten oder letzten Ausgabe bzw. des ersten oder letzten Teils, zu komplexen oder unregelmäßigen Zählungen (einschließlich Fehler bei der Zählung), zur Zeitspanne, die durch einen Band, eine Ausgabe oder einen Teil usw. abgedeckt wird, oder zu anderen Informationen, die sich auf die Zählung von fortlaufenden Ressourcen beziehen."@de,
         "Μια σημείωση που παρέχει τις πληροφορίες για την αρίθμηση του πρώτου ή/και τελευταίου τεύχους ή μέρους, για τη σύνθετη ή ακανόνιστη αρίθμηση περιλαμβανομένων των λαθών στην αρίθμηση, για την περίοδο που καλύπτεται από έναν τόμο, τεύχος, μέρος κ.λπ. ή για άλλες πληροφορίες που σχετίζονται με την αρίθμηση των περιοδικών."@el,
-        "A note providing information on the numbering of the first or last issue or part, on complex or irregular numbering including numbering errors, on the period covered by a volume, issue, part, etc., or on other information relating to numbering of serials."@en,
+        "A note providing information on the range of designators that is used to indicate a sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Una nota que proporciona información sobre la numeración de la primera y/o última entrega o parte, numeración compleja o irregular (incluyendo errores de numeración), o el período cubierto por un volumen, entrega o parte, etc."@es,
         "Huomautus, joka sisältää tietoa ensimmäisen ja/tai viimeisen numeron tai osan numeroinnista, mutkikkaasta tai epäsäännöllisestä numeroinnista (mukaan lukien numerointivirheet) tai vuosikerroissa, numeroissa, osissa jne. esiintyvästä ajanjaksosta, tai muuta sarja-aineiston numerointiin liittyvää tietoa."@fi,
         "Note qui fournit de l’information sur la numérotation de la première et/ou de la dernière livraison ou partie, sur une numérotation complexe ou irrégulière y compris les erreurs de numérotation, sur la période couverte par un volume, une livraison, une partie, etc. ou sur toute autre information relative à la numérotation des publications en série."@fr,
@@ -5421,7 +5440,7 @@
         "note om periodikanummerering"@da,
         "Anmerkung zur Zählung von fortlaufenden Ressourcen"@de,
         "σημείωση στην αρίθμηση των περιοδικών"@el,
-        "note on numbering of serials"@en,
+        "note on designation of sequence"@en,
         "nota sobre numeración de las publicaciones seriadas"@es,
         "huomautus sarja-aineiston numeroinnista"@fi,
         "note sur la numérotation des publications en série"@fr,
@@ -5433,11 +5452,11 @@
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60135> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/huomautusSarja-aineistonNumeroinnista.fi>,
         <http://rdaregistry.info/Elements/m/noteOmPeriodikanummerering.da>,
-        <http://rdaregistry.info/Elements/m/noteOnNumberingOfSerials.en>,
+        <http://rdaregistry.info/Elements/m/noteOnDesignationOfSequence.en>,
         <http://rdaregistry.info/Elements/m/σημείωσηΣτηνΑρίθμησηΤωνΠεριοδικών.el> ;
     reg:name "noteOmPeriodikanummerering"@da,
         "σημείωσηΣτηνΑρίθμησηΤωνΠεριοδικών"@el,
-        "noteOnNumberingOfSerials"@en,
+        "noteOnDesignationOfSequence"@en,
         "huomautusSarja-aineistonNumeroinnista"@fi,
         "noteSurLaNumérotationDesPublicationsEnSérie"@fr,
         "megjegyzésperiodikaszámozásáról"@hu,
@@ -5446,15 +5465,17 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30137> ;
+    skos:altLabel "note on numbering of serials"@en ;
     skos:definition "Relaciona una manifestació amb una nota que proporciona la informació sobre la numeració del primer número o la primera part i/o el darrer número o la darrera part, sobre una numeració complexa o irregular, inclosos els errors en la numeració, o sobre el període cobert per un volum, un número, una part, etc.. o sobre altres informacions relatives a la numeració de les publicacions en sèrie."@ca,
         "Relaterer en manifestation til en note, der giver oplysninger om nummereringen af første og/eller sidste nummer eller del, om kompleks eller uregelmæssig nummerering (inkl. nummereringsfejl), om den periode, der dækkes af et bind, et nummer, en del etc., eller om andre oplysninger relateret til nummerering af periodika."@da,
         "Setzt eine Manifestation mit einer Anmerkung, die Informationen liefert zur Zählung der ersten oder letzten Ausgabe bzw. des ersten oder letzten Teils, zu komplexen oder unregelmäßigen Zählungen (einschließlich Fehler bei der Zählung), zur Zeitspanne, die durch einen Band, eine Ausgabe oder einen Teil usw. abgedeckt wird, oder zu anderen Informationen, die sich auf die Zählung von fortlaufenden Ressourcen beziehen, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με μια σημείωση που παρέχει τις πληροφορίες για την αρίθμηση του πρώτου ή/και τελευταίου τεύχους ή μέρους, για τη σύνθετη ή ακανόνιστη αρίθμηση περιλαμβανομένων των λαθών στην αρίθμηση, για την περίοδο που καλύπτεται από έναν τόμο, τεύχος, μέρος κ.λπ. ή για άλλες πληροφορίες που σχετίζονται με την αρίθμηση των περιοδικών."@el,
-        "Relates a manifestation to a note providing information on the numbering of the first or last issue or part, on complex or irregular numbering including numbering errors, on the period covered by a volume, issue, part, etc., or on other information relating to numbering of serials."@en,
+        "Relates a manifestation to a note providing information on the range of designators that is used to indicate a sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation huomautukseen, joka sisältää tietoa ensimmäisen ja/tai viimeisen numeron tai osan numeroinnista, mutkikkaasta tai epäsäännöllisestä numeroinnista (mukaan lukien numerointivirheet) tai vuosikerroissa, numeroissa, osissa jne. esiintyvästä ajanjaksosta, tai muuta sarja-aineiston numerointiin liittyvää tietoa."@fi,
         "Met une manifestation en relation avec une note qui fournit de l’information sur la numérotation de la première et/ou de la dernière livraison ou partie, sur une numérotation complexe ou irrégulière y compris les erreurs de numérotation, sur la période couverte par un volume, une livraison, une partie, etc. ou sur toute autre information relative à la numérotation des publications en série."@fr,
         "Egy megjelenési formát hozzákapcsol egy megjegyzéshez, amely információkat közöl az első és/vagy utolsó szám vagy rész számozásáról, az összetett vagy szabálytalan számozásról, beleértve a számozási hibákat, az egy kötet, szám, rész stb. által lefedett időszakról, vagy egyéb olyan információkról, amelyek összefüggésben állnak a periodikák számozásával."@hu,
-        "Liên kết biểu thị với ghi chú cung cấp thông tin về đánh số của số hoặc phần đầu tiên và/hoặc cuối cùng, về đánh số phức hợp hoặc bất quy bao gồm cả đánh số lỗi, về thời kỳ được bao quát bởi tập, số, phần, v.v..., hoặc về thông tin khác liên quan tới đánh số ấn phẩm nhiều kỳ."@vi .
+        "Liên kết biểu thị với ghi chú cung cấp thông tin về đánh số của số hoặc phần đầu tiên và/hoặc cuối cùng, về đánh số phức hợp hoặc bất quy bao gồm cả đánh số lỗi, về thời kỳ được bao quát bởi tập, số, phần, v.v..., hoặc về thông tin khác liên quan tới đánh số ấn phẩm nhiều kỳ."@vi ;
+    skos:scopeNote "A note includes information on complex, irregular, or erroneous designations."@en .
 
 <http://rdaregistry.info/Elements/m/P30063> a rdf:Property ;
     rdfs:label "té com a nota sobre títol"@ca,
@@ -7224,7 +7245,7 @@
         "Et andet eller efterfølgende nummereringssystem i numerisk og/eller alfabetisk form på første nummer eller del af nummereringssekvensen for et periodikum."@da,
         "Ein zweites oder folgendes System von Zählungen, das in alphanumerischer Form auf der ersten Ausgabe oder dem ersten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Ένα δεύτερο ή διαδοχικό σύστημα αρίθμησης που παρουσιάζεται σε αριθμητική ή αλφαβητική μορφή στο πρώτο τεύχος ή μέρος μιας αριθμητικής ακολουθίας για ένα περιοδικό."@el,
-        "A designation in numeric or alphabetic form presented on the first issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "A designation in the form of numbers or alphabetic characters that is used to indicate the first in a parallel sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Un segundo o subsecuente sistema de numeración que se presenta en forma numérica y/o alfabética en la primera entrega o parte de una secuencia de numeración para una publicación seriada."@es,
         "Toinen sarja-aineiston numerointijakson ensimmäisessä osassa esiintyvä numeroista ja/tai kirjaimista muodostuvaa numerointitieto."@fi,
         "Deuxième système de numérotation ou système subséquent présenté sous forme numérique et/ou alphabétique sur la première livraison ou partie d’une séquence de numérotation d’une publication en série."@fr,
@@ -7266,7 +7287,7 @@
         "Relaterer en manifestation til et andet eller efterfølgende nummereringssystem i numerisk og/eller alfabetisk form på første nummer eller del af nummereringssekvensen for et periodikum."@da,
         "Setzt eine Manifestation mit einem zweiten oder folgenden System von Zählungen, das in alphanumerischer Form auf der ersten Ausgabe oder dem ersten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με ένα δεύτερο ή διαδοχικό σύστημα αρίθμησης που παρουσιάζεται σε αριθμητική ή αλφαβητική μορφή στο πρώτο τεύχος ή μέρος μιας αριθμητικής ακολουθίας για ένα περιοδικό."@el,
-        "Relates a manifestation to a designation in numeric or alphabetic form presented on the first issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "Relates a manifestation to a designation in the form of numbers or alphabetic characters that is used to indicate the first in a parallel sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation toiseen sarja-aineiston numerointijakson ensimmäisessä osassa esiintyvään numeroista ja/tai kirjaimista muodostuvaa numerointitietoon."@fi,
         "Met une manifestation en relation avec un deuxième système de numérotation ou un système subséquent présenté sous forme numérique et/ou alphabétique sur la première livraison ou partie d’une séquence de numérotation d’une publication en série."@fr,
         "Egy megjelenési formát hozzákapcsol a számozás egy második vagy azt követő rendszeréhez, amely numerikus vagy alfabetikus formában megjelenik egy periodika vagy folytatódó dokumentum számozási sorrendjének első számán vagy részén."@hu,
@@ -7289,7 +7310,7 @@
         "Et andet eller efterfølgende nummereringssystem i numerisk og/eller alfabetisk form på sidste nummer eller del af nummereringssekvensen for et periodikum."@da,
         "Ein zweites oder folgendes System von Zählungen, das in alphanumerischer Form auf der letzten Ausgabe oder dem letzten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Ένα δεύτερο ή διαδοχικό σύστημα αρίθμησης που παρουσιάζεται σε αριθμητική ή/και αλφαβητική μορφή στο τελευταίο τεύχος ή μέρος μιας αριθμητικής ακολουθίας για ένα περιοδικό."@el,
-        "A designation in numeric or alphabetic form presented on the last issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "A designation in the form of numbers or alphabetic characters that is used to indicate the first in a parallel sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Un segundo o subsecuente sistema de numeración que se presenta en forma numérica y/o alfabética en la última entrega o parte de una secuencia de numeración para una publicación seriada."@es,
         "Toinen sarja-aineiston numerointijakson viimeisessä osassa esiintyvä numeroista ja/tai kirjaimista muodostuvaa numerointitieto."@fi,
         "Deuxième système de numérotation ou système subséquent présenté sous forme numérique et/ou alphabétique sur la dernière livraison ou partie d’une séquence de numérotation d’une publication en série."@fr,
@@ -7331,7 +7352,7 @@
         "Relaterer en manifestation til et andet eller efterfølgende nummereringssystem i numerisk og/eller alfabetisk form på sidste nummer eller del af nummereringssekvensen for et periodikum."@da,
         "Setzt eine Manifestation mit einem zweiten oder folgenden System von Zählungen, das in alphanumerischer Form auf der letzten Ausgabe oder dem letzten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με ένα δεύτερο ή διαδοχικό σύστημα αρίθμησης που παρουσιάζεται σε αριθμητική ή/και αλφαβητική μορφή στο τελευταίο τεύχος ή μέρος μιας αριθμητικής ακολουθίας για ένα περιοδικό."@el,
-        "Relates a manifestation to a designation in numeric or alphabetic form presented on the last issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "Relates a manifestation to a designation in the form of numbers or alphabetic characters that is used to indicate the last in a parallel sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation toiseen sarja-aineiston numerointijakson viimeisessä osassa esiintyvään numeroista ja/tai kirjaimista muodostuvaan numerointitietoon."@fi,
         "Met une manifestation en relation avec un deuxième système de numérotation ou un système subséquent présenté sous forme numérique et/ou alphabétique sur la dernière livraison ou partie d’une séquence de numérotation d’une publication en série."@fr,
         "Egy megjelenési formát hozzákapcsol a számozás egy második vagy azt követő rendszeréhez, amely numerikus és/vagy alfabetikus formában megjelenik egy periodika vagy folytatódó dokumentum számozási sorrendjének utolsó számán vagy részén."@hu,
@@ -7353,7 +7374,7 @@
         "Et andet eller efterfølgende nummereringssystem i form af en datering på første nummer eller del af nummereringssekvensen for et periodikum."@da,
         "Ein zweites oder folgendes System von Zählungen, das in Form eines Datums auf der ersten Ausgabe oder dem ersten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Ένα δεύτερο ή διαδοχικό σύστημα αρίθμησης που παρουσιάζεται στη μορφή μιας χρονολογίας στο πρώτο τεύχος ή μέρος μιας αριθμητικής ακολουθίας για ένα περιοδικό."@el,
-        "A designation in date form presented on the first issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "A designation in the form of a date or other timespan that is used to indicate the first in a parallel sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Un segundo o subsecuente sistema de numeración que se presenta en forma de fecha (por ej., un año; año y mes; mes, día y año) en la primera entrega o parte de una secuencia de numeración para una publicación seriada."@es,
         "Toinen sarja-aineiston numerointijakson ensimmäisessä osassa aikamääritteen muodossa esiintyvä numerointitapa."@fi,
         "Deuxième système de numérotation ou système subséquent présenté sous la forme d’une date sur la première livraison ou partie d’une séquence de numérotation d’une publication en série."@fr,
@@ -7392,7 +7413,7 @@
         "Relaterer en manifestation til et andet eller efterfølgende nummereringssystem i form af en datering på første nummer eller del af nummereringssekvensen for et periodikum."@da,
         "Setzt eine Manifestation mit einem zweiten oder folgenden System von Zählungen, das in Form eines Datums auf der ersten Ausgabe oder dem ersten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με ένα δεύτερο ή διαδοχικό σύστημα αρίθμησης που παρουσιάζεται στη μορφή μιας χρονολογίας στο πρώτο τεύχος ή μέρος μιας αριθμητικής ακολουθίας για ένα περιοδικό."@el,
-        "Relates a manifestation to a designation in date form presented on the first issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "Relates a manifestation to a designation in the form of a date or other timespan that is used to indicate the first in a parallel sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation toiseen sarja-aineiston numerointijakson ensimmäisessä osassa aikamääritteen muodossa esiintyvään numerointitapaan."@fi,
         "Met une manifestation en relation avec un deuxième système de numérotation ou un système subséquent présenté sous la forme d’une date sur la première livraison ou partie d’une séquence de numérotation d’une publication en série."@fr,
         "Egy megjelenési formát hozzákapcsol a számozás egy második vagy azt követő rendszeréhez, amely időpont formájában megjelenik egy periodika vagy folytatódó dokumentum számozási sorrendjének első számán vagy részén."@hu,
@@ -7401,7 +7422,7 @@
         "Betegnelsen omfatter et år; år og måned; måned, dag og år. En alternativ kronologisk betegnelse kan omfatte en dato i en anden kalender."@da,
         "Zur Bezeichnung gehören ein Jahr; Jahr und Monat; Monat, Tag und Jahr. Zu einer alternativen chronologischen Bezeichnung kann auch ein Datum nach einem anderen Kalender gehören."@de,
         "Ο προσδιορισμός περιλαμβάνει ένα έτος; έτος και μήνα; μήνα, ημέρα και έτος. Ένας εναλλακτικός χρονολογικός προσδιορισμός μπορεί να περιλαμβάνει μια χρονολογία σε ένα διαφορετικό ημερολόγιο."@el,
-        "Designation includes a year; year and month; month, day, and year. An alternative chronological designation may include a date in a different calendar."@en,
+        "A designation includes a year; year and month; month, day, and year. An alternative chronological designation may include a date in a different calendar."@en,
         "Des exemples de désignation comprennent : année ; année et mois ; jour, mois et année. Une autre désignation chronologique peut inclure une date exprimée selon un calendrier différent."@fr,
         "A jelölés egy évet is tartalmaz."@hu,
         "Aanduiding omvat een jaar; jaar en maand, maand, dag en jaar. Een alternatieve chronologische aanduiding kan een datum zijn in een andere jaartelling."@nl,
@@ -7423,7 +7444,7 @@
         "Et andet eller efterfølgende nummereringssystem i form af en datering på sidste nummer eller del af nummereringssekvensen for et periodikum."@da,
         "Ein zweites oder folgendes System von Zählungen, das in Form eines Datums auf der letzten Ausgabe oder dem letzten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Ένα δεύτερο ή διαδοχικό σύστημα αρίθμησης που παρουσιάζεται στη μορφή μιας χρονολογίας στο τελευταίο τεύχος ή μέρος μιας αριθμητικής ακολουθίας για ένα περιοδικό."@el,
-        "A designation in date form presented on the last issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "A designation in the form of a date or other timespan that is used to indicae the last in a parallel sequence of manifestations of a parts, issues, or iterations of a diachronic work."@en,
         "Un segundo o subsecuente sistema de numeración que se presenta en la forma de fecha (por ej., un año; año y mes; mes, día y año) en la última entrega o parte de una secuencia de numeración para una publicación seriada."@es,
         "Toinen sarja-aineiston numerointijakson viimeisessä osassa aikamääritteen muodossa esiintyvä numerointitapa."@fi,
         "Deuxième système de numérotation ou système subséquent présenté sous la forme d’une date sur la dernière livraison ou partie d’une séquence de numérotation d’une publication en série."@fr,
@@ -7462,7 +7483,7 @@
         "Relaterer en manifestation til et andet eller efterfølgende nummereringssystem i form af en datering på sidste nummer eller del af nummereringssekvensen for et periodikum."@da,
         "Setzt eine Manifestation mit einem zweiten oder folgenden System von Zählungen, das in Form eines Datums auf der letzten Ausgabe oder dem letzten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Συνδέει μια εκδήλωση με ένα δεύτερο ή διαδοχικό σύστημα αρίθμησης που παρουσιάζεται στη μορφή μιας χρονολογίας στο τελευταίο τεύχος ή μέρος μιας αριθμητικής ακολουθίας για ένα περιοδικό."@el,
-        "Relates a manifestation to a designation in date form presented on the last issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "Relates a manifestation to a designation in the form of a date or other timespan that is used to indicae the last in a parallel sequence of manifestations of a parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation toiseen sarja-aineiston numerointijakson viimeisessä osassa aikamääritteen muodossa esiintyvään numerointitapaan."@fi,
         "Met une manifestation en relation avec un deuxième système de numérotation ou un système subséquent présenté sous la forme d’une date sur la dernière livraison ou partie d’une séquence de numérotation d’une publication en série."@fr,
         "Egy megjelenési formát hozzákapcsol a számozás egy második vagy azt követő rendszeréhez, amely időpont formájában megjelenik egy periodika vagy folytatódó dokumentum számozási sorrendjének utolsó számán vagy részén."@hu,
@@ -7471,7 +7492,7 @@
         "Betegnelsen omfatter et år; år og måned; måned, dag og år. En alternativ kronologisk betegnelse kan omfatte en dato i en anden kalender."@da,
         "Zur Bezeichnung gehören ein Jahr; Jahr und Monat; Monat, Tag und Jahr. Zu einer alternativen chronologischen Bezeichnung kann auch ein Datum nach einem anderen Kalender gehören."@de,
         "Ο προσδιορισμός περιλαμβάνει ένα έτος; έτος και μήνα; μήνα, ημέρα και έτος. Ένας εναλλακτικός χρονολογικός προσδιορισμός μπορεί να περιλαμβάνει μια χρονολογία σε ένα διαφορετικό ημερολόγιο."@el,
-        "Designation includes a year; year and month; month, day, and year. An alternative chronological designation may include a date in a different calendar."@en,
+        "A designation includes a year; year and month; month, day, and year. An alternative chronological designation may include a date in a different calendar."@en,
         "Des exemples de désignation comprennent : année ; année et mois ; jour, mois et année. Une autre désignation chronologique peut inclure une date exprimée selon un calendrier différent."@fr,
         "A jelölés egy évet is tartalmaz."@hu,
         "Aanduiding omvat een jaar; jaar en maand, maand, dag en jaar. Een alternatieve chronologische aanduiding kan een datum zijn in een andere jaartelling."@nl,
@@ -8195,7 +8216,7 @@
         "Titel, der er knyttet til en manifestation, der afviger fra en titel, der er registreret som hovedtitel, parallel hovedtitel, andre titeloplysninger, andre parallele titeloplysninger, tidligere hovedtitel, senere hovedtitel, nøgletitel eller forkortet titel."@da,
         "Ein Titel, der mit einer Manifestation in Verbindung steht, der von dem als Haupttitel erfassten Titel, von einem Paralleltitel, von Titelzusätzen, parallelen Titelzusätzen, früheren Haupttiteln, späteren Haupttiteln, Key-Titeln oder Kurztiteln abweicht."@de,
         "Ένας τίτλος που συνδέεται με μια εκδήλωση που διαφέρει από έναν τίτλο που καταχωρίστηκε ως κύριος τίτλος, ως παράλληλος κύριος τίτλος, ως άλλες πληροφορίες σχετικές με τον τίτλο, ως άλλες πληροφορίες σχετικές με τον παράλληλο τίτλο, ως προηγούμενος κύριος τίτλος, ως μεταγενέστερος κύριος τίτλος, ως τίτλος κλειδί ή ως συντομευμένος τίτλος."@el,
-        "A title associated with a manifestation that differs from a title recorded as a title proper, a parallel title proper, other title information, parallel other title information, earlier title proper, later title proper, key title, or abbreviated title."@en,
+        "A title of manifestation that is not selected for preference in a specific application or context"@en,
         "Un título asociado con un recurso que difiere de un título registrado como el título propiamente dicho, un título paralelo propiamente dicho, información complementaria del título, información complementaria paralela del título, título anterior propiamente dicho, título posterior propiamente dicho, título clave, o título abreviado."@es,
         "Manifestaatioon liittyvä nimeke, joka eroaa kuvailuun merkitystä päänimekkeestä, rinnakkaisesta päänimekkeestä, muusta nimeketiedosta, rinnakkaisesta muusta nimeketiedosta, aiemmasta päänimekkeestä, myöhemmästä päänimekkeestä, avainnimekkeestä ja lyhennetystä nimekkeestä."@fi,
         "Titre associé à une manifestation et qui diffère du titre enregistré comme titre propre, titre propre parallèle, complément de titre, complément de titre parallèle, titre propre antérieur, titre propre ultérieur, titre-clé ou titre abrégé."@fr,
@@ -8237,7 +8258,7 @@
         "Relaterer en manifestation til en titel, der er knyttet til en manifestation, der afviger fra en titel, der er registreret som hovedtitel, parallel hovedtitel, andre titeloplysninger, andre parallel titeloplysninger, tidligere hovedtitel, senere hovedtitel, nøgletitel eller forkortet titel."@da,
         "Setzt eine Manifestation mit einem Titel, der mit einer Manifestation in Verbindung steht, der von dem als Haupttitel erfassten Titel, von einem Paralleltitel, von Titelzusätzen, parallelen Titelzusätzen, früheren Haupttiteln, späteren Haupttiteln, Key-Titeln oder Kurztiteln abweicht, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με έναν τίτλο που συνδέεται με μια εκδήλωση που διαφέρει από έναν τίτλο που καταχωρίστηκε ως κύριος τίτλος, ως παράλληλος κύριος τίτλος, ως άλλες πληροφορίες σχετικές με τον τίτλο, ως άλλες πληροφορίες σχετικές με τον παράλληλο τίτλο, ως προηγούμενος κύριος τίτλος, ως μεταγενέστερος κύριος τίτλος, ως τίτλος κλειδί ή ως συντομευμένος τίτλος."@el,
-        "Relates a manifestation to a title associated with a manifestation that differs from a title recorded as a title proper, a parallel title proper, other title information, parallel other title information, earlier title proper, later title proper, key title, or abbreviated title."@en,
+        "Relates a manifestation to a title of manifestation that is not selected for preference in a specific application or context"@en,
         "Liittää manifestaation manifestaatioon liittyvään nimekkeeseen, joka eroaa kuvailuun merkitystä päänimekkeestä, rinnakkaisesta päänimekkeestä, muusta nimeketiedosta, rinnakkaisesta muusta nimeketiedosta, aiemmasta päänimekkeestä, myöhemmästä päänimekkeestä, avainnimekkeestä ja lyhennetystä nimekkeestä."@fi,
         "Met une manifestation en relation avec un titre associé à une manifestation et qui diffère du titre enregistré comme titre propre, titre propre parallèle, complément de titre, complément de titre parallèle, titre propre antérieur, titre propre ultérieur, titre-clé ou titre abrégé."@fr,
         "Egy megjelenési formát hozzákapcsol egy címhez, amely kötődik egy olyan megjelenési formához, amely különbözik a valódi címként rögzített címtől, a valódi párhuzamos címtől, egyéb címinformációktól, párhuzamos egyéb címinformációktól, korábbi valódi címtől, későbbi valódi címtől, kulcscímtől vagy rövidített címtől."@hu,
@@ -8972,7 +8993,7 @@
         "Betegnelse i numerisk og/eller alfabetisk form på første nummer eller del af en nummereringssekvens for et periodikum."@da,
         "Eine Zählung, die in alphanumerischer Form auf der ersten Ausgabe oder dem ersten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Ένας προσδιορισμός σε αριθμητική ή/και αλφαβητική μορφή που παρουσιάζεται στο πρώτο τεύχος ή μέρος ενός περιοδικού που εκδίδεται σε μια αριθμητική ακολουθία."@el,
-        "A designation in numeric or alphabetic form presented on the first issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "A designation in the form of numbers or alphabetic characters that is used to indicate the first in a sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Numeración presentada en forma numérica y/o alfabética en la primera entrega o parte de una secuencia de numeración de una publicación seriada."@es,
         "Sarja-aineiston numerointijakson ensimmäisessä osassa esiintyvä numeroista ja/tai kirjaimista muodostuva numerointitieto."@fi,
         "Désignation numérique et/ou alphabétique qui figure sur la première livraison ou partie d’une publication en série publiée au sein d’une séquence de numérotation."@fr,
@@ -9014,7 +9035,7 @@
         "Relaterer en manifestation til en betegnelse i numerisk og/eller alfabetisk form på første nummer eller del af en nummereringssekvens for et periodikum."@da,
         "Setzt eine Manifestation mit einer Zählung, die in alphanumerischer Form auf der ersten Ausgabe oder dem ersten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με έναν προσδιορισμό σε αριθμητική ή/και αλφαβητική μορφή που παρουσιάζεται στο πρώτο τεύχος ή μέρος ενός περιοδικού που εκδίδεται σε μια αριθμητική ακολουθία."@el,
-        "Relates a manifestation to a designation in numeric or alphabetic form presented on the first issue of a serial that uses a sequence of numbering."@en,
+        "Relates a manifestation to a designation in the form of numbers or alphabetic characters that is used to indicate the first in a sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation sarja-aineiston numerointijakson ensimmäisessä osassa esiintyvään numeroista ja/tai kirjaimista muodostuvaan numerointitietoon."@fi,
         "Met une manifestation en relation avec une désignation numérique et/ou alphabétique qui figure sur la première livraison ou partie d’une publication en série publiée au sein d’une séquence de numérotation."@fr,
         "Egy megjelenési formát hozzákapcsol egy numerikus és/vagy alfabetikus formájú jelöléshez, amely egy számozási szekvenciában megjelenő periodika első számán vagy részén jelenik meg.  "@hu,
@@ -9037,7 +9058,7 @@
         "Betegnelse i numerisk og/eller alfabetisk form på sidste nummer eller del af en nummereringssekvens for et periodikum."@da,
         "Eine Zählung, die in alphanumerischer Form auf der letzten Ausgabe oder dem letzten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Ένας προσδιορισμός σε αριθμητική ή/και αλφαβητική μορφή που παρουσιάζεται στο τελευταίο τεύχος ή μέρος ενός περιοδικού που εκδίδεται σε μια αριθμητική ακολουθία."@el,
-        "A designation in numeric or alphabetic form presented on the last issue of a serial that uses a second or subsequent sequence of numbering."@en,
+        "A designation in the form of numbers or alphabetic characters that is used to indicate the last in a sequence of a manifestation of a part, issue, or iteration of a diachronic work."@en,
         "Numeración presentada en forma numérica y/o alfabética en la última entrega o parte de una secuencia de numeración de una publicación seriada."@es,
         "Sarja-aineiston numerointijakson viimeisessä osassa esiintyvä numeroista ja/tai kirjaimista muodostuva numerointitieto."@fi,
         "Désignation numérique et/ou alphabétique qui figure sur la dernière livraison ou partie d’une publication en série publiée au sein d’une séquence de numérotation."@fr,
@@ -9079,7 +9100,7 @@
         "Relaterer en manifestation til en betegnelse i numerisk og/eller alfabetisk form på sidste nummer eller del af en nummereringssekvens for et periodikum."@da,
         "Setzt eine Manifestation mit einer Zählung, die in alphanumerischer Form auf der letzten Ausgabe oder dem letzten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με έναν προσδιορισμό σε αριθμητική ή/και αλφαβητική μορφή που παρουσιάζεται στο τελευταίο τεύχος ή μέρος ενός περιοδικού που εκδίδεται σε μια αριθμητική ακολουθία."@el,
-        "Relates a manifestation to a designation in numeric or alphabetic form presented on the last issue of a serial that uses a sequence of numbering."@en,
+        "Relates a manifestation to a designation in the form of numbers or alphabetic characters that is used to indicate the last in a sequence of a manifestation of a part, issue, or iteration of a diachronic work."@en,
         "Liittää manifestaation sarja-aineiston numerointijakson viimeisessä osassa esiintyvään numeroista ja/tai kirjaimista muodostuvaan numerointitietoon."@fi,
         "Met une manifestation en relation avec une désignation numérique et/ou alphabétique qui figure sur la dernière livraison ou partie d’une publication en série publiée au sein d’une séquence de numérotation."@fr,
         "Egy megjelenési formát hozzákapcsol egy numerikus és/vagy alfabetikus formájú jelöléshez, amely egy számozási szekvenciában megjelenő periodika utolsó számán vagy részén jelenik meg."@hu,
@@ -9101,7 +9122,7 @@
         "Betegnelse i form af en datering på første nummer eller del af en nummereringssekvens for et periodikum."@da,
         "Eine Zählung, die in Form eines Datums auf der ersten Ausgabe oder dem ersten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Ένας προσδιορισμός στη μορφή χρονολογίας που παρουσιάζεται στο πρώτο τεύχος ή μέρος ενός περιοδικού που εκδίδεται σε μια αριθμητική ακολουθία."@el,
-        "A designation in date form presented on the first issue of a serial that uses a sequence of numbering."@en,
+        "A designation in the form of a date or other timespan that is used to indicate the first in a sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Numeración presentada en forma de fecha (por ej., un año; año y mes; mes, día, y año) en la primera entrega o parte de una secuencia de numeración de una publicación seriada."@es,
         "Sarja-aineiston numerointijakson ensimmäisessä osassa esiintyvästä aikamääritteestä muodostuva numerointitieto."@fi,
         "Désignation sous forme de date qui figure sur la première livraison ou partie d’une publication en série publiée au sein d’une séquence de numérotation."@fr,
@@ -9140,7 +9161,7 @@
         "Relaterer en manifestation til en betegnelse i form af en datering på første nummer eller del af en nummereringssekvens for et periodikum."@da,
         "Setzt eine Manifestation mit einer Zählung, die in Form eines Datums auf der ersten Ausgabe oder dem ersten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με έναν προσδιορισμό στη μορφή χρονολογίας που παρουσιάζεται στο πρώτο τεύχος ή μέρος ενός περιοδικού που εκδίδεται σε μια αριθμητική ακολουθία."@el,
-        "Relates a manifestation to a designation in date form presented on the first issue of a serial that uses a sequence of numbering."@en,
+        "Relates a manifestation to a designation in the form of a date or other timespan that is used to indicate the first in a sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation sarja-aineiston numerointijakson ensimmäisessä osassa esiintyvästä aikamääritteestä muodostuvaan numerointitietoon."@fi,
         "Met une manifestation en relation avec une désignation sous forme de date qui figure sur la première livraison ou partie d’une publication en série publiée au sein d’une séquence de numérotation."@fr,
         "Egy megjelenési formát hozzákapcsol egy dátum formájú jelöléshez, amely egy számozási szekvenciában kiadott periodika első számán vagy részén jelenik meg."@hu,
@@ -9149,7 +9170,7 @@
         "Betegnelsen omfatter et år; år og måned; måned, dag og år."@da,
         "Zur Bezeichnung gehören ein Jahr; Jahr und Monat; Monat, Tag und Jahr."@de,
         "Ο προσδιορισμός περιλαμβάνει ένα έτος; έτος και μήνα; μήνα, ημέρα και έτος."@el,
-        "Designation includes a year; year and month; month, day, and year."@en,
+        "A designation includes a year; year and month; month, day, and year."@en,
         "Des exemples de désignation comprennent : année ; année et mois ; jour, mois et année."@fr,
         "A jelölés egy évet is tartalmaz."@hu,
         "Aanduiding omvat een jaar; jaar en maand, maand, dag en jaar."@nl,
@@ -9171,7 +9192,7 @@
         "Betegnelse i form af en datering på sidste nummer eller del af en nummereringssekvens for et periodikum."@da,
         "Eine Zählung, die in Form eines Datums auf der letzten Ausgabe oder dem letzten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird."@de,
         "Ένας προσδιορισμός στη μορφή χρονολογίας που παρουσιάζεται στο τελευταίο τεύχος ή μέρος ενός περιοδικού που εκδίδεται σε μια αριθμητική ακολουθία."@el,
-        "A designation in date form presented on the last issue of a serial that uses a sequence of numbering."@en,
+        "A designation in the form of a date or other timespan that is used to indicate the last in a sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Numeración presentada en forma de fecha (por ej., un año; año y mes; mes, día y año) en la última entrega o parte de una secuencia de numeración de una publicación seriada."@es,
         "Sarja-aineiston numerointijakson viimeisessä osassa esiintyvästä aikamääritteestä muodostuva numerointitieto."@fi,
         "Désignation sous forme de date qui figure sur la dernière livraison ou partie d’une publication en série publiée au sein d’une séquence de numérotation."@fr,
@@ -9210,7 +9231,7 @@
         "Relaterer en manifestation til en betagnelse i form af en datering på sidste nummer eller del af en nummereringssekvens for et periodikum."@da,
         "Setzt eine Manifestation mit einer Zählung, die in Form eines Datums auf der letzten Ausgabe oder dem letzten Teil einer Folge von Zählungen für eine fortlaufende Ressource präsentiert wird, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με έναν προσδιορισμό στη μορφή χρονολογίας που παρουσιάζεται στο τελευταίο τεύχος ή μέρος ενός περιοδικού που εκδίδεται σε μια αριθμητική ακολουθία."@el,
-        "Relates a manifestation to a designation in date form presented on the last issue of a serial that uses a sequence of numbering."@en,
+        "Relates a manifestation to a designation in the form of a date or other timespan that is used to indicate the last in a sequence of manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation sarja-aineiston numerointijakson viimeisessä osassa esiintyvästä aikamääritteestä muodostuvaan numerointitietoon."@fi,
         "Met une manifestation en relation avec une désignation sous forme de date qui figure sur la dernière livraison ou partie d’une publication en série publiée au sein d’une séquence de numérotation."@fr,
         "Egy megjelenési formát hozzákapcsol egy dátum formájú jelöléshez, amely egy számozási szekvenciában kiadott periodika utolsó számán vagy részén jelenik meg. "@hu,
@@ -9219,7 +9240,7 @@
         "Betegnelsen omfatter et år; år og måned; måned, dag og år."@da,
         "Zur Bezeichnung gehören ein Jahr; Jahr und Monat; Monat, Tag und Jahr."@de,
         "Ο προσδιορισμός περιλαμβάνει ένα έτος; έτος και μήνα; μήνα, ημέρα και έτος."@el,
-        "Designation includes a year; year and month; month, day, and year."@en,
+        "A designation includes a year; year and month; month, day, and year."@en,
         "Des exemples de désignation comprennent : année ; année et mois ; jour, mois et année."@fr,
         "A jelölés egy évet is tartalmaz."@hu,
         "Aanduiding omvat een jaar; jaar en maand, maand, dag en jaar."@nl,
@@ -9481,12 +9502,87 @@
         "Egy megjelenési formát hozzákapcsol egy analóg lemez vagy diszk barázdaszélességéhez, vagy egy analóg henger barázdamagasságához. "@hu,
         "Liên kết biểu thị với chiều rộng đường rãnh của đĩa tương tự hoặc mức đương rãnh trong trục lăn tương tự."@vi .
 
+<http://rdaregistry.info/Elements/m/P30169> a rdf:Property ;
+    rdfs:label "té com a dimensions"@ca,
+        "har størrelse"@da,
+        "hat Maße"@de,
+        "έχει διαστάσεις"@el,
+        "has dimensions"@en,
+        "koko"@fi,
+        "a pour dimensions"@fr,
+        "vannak méretarányai"@hu,
+        "har mått"@sv,
+        "có kích thước"@vi ;
+    rdakit:hasElementType "6" ;
+    rdakit:instructionNumber "3.5" ;
+    rdakit:toolkitDefinition "Mida d’un suport físic o d’un contenidor d’una manifestació."@ca,
+        "Mål for en manifestations bærer eller dens opbevaringsudstyr."@da,
+        "Eine Abmessung eines Datenträgers oder des Behältnisses einer Manifestation."@de,
+        "Μια μέτρηση ενός φορέα αποθήκευσης ή ενός περιέκτη μιας εκδήλωσης."@el,
+        "A measurement of a carrier or a container of a manifestation."@en,
+        "Las medidas del soporte o soportes y/o el envase de un recurso."@es,
+        "Tallenteen tai tallenteiden tai säilytyskotelon mitat."@fi,
+        "Mesure d’un support matériel ou d’un conteneur d’une manifestation."@fr,
+        "Egy megjelenési forma hordozójának vagy tárolójának méretarányai."@hu,
+        "Een afmeting van een drager en/of houder van een resource."@nl,
+        "Målene til manifestasjonens bærer eller beholder."@no,
+        "Độ đo của vật mang tin hoặc vỏ chứa của biểu thị."@vi ;
+    rdakit:toolkitLabel "dimensions"@ca,
+        "størrelse"@da,
+        "Maße"@de,
+        "διαστάσεις"@el,
+        "dimensions"@en,
+        "dimensiones"@es,
+        "koko"@fi,
+        "dimensions"@fr,
+        "méretarányok"@hu,
+        "afmetingen"@nl,
+        "størrelse"@no,
+        "mått"@sv,
+        "kích thước"@vi ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30170>,
+        <http://rdaregistry.info/Elements/m/P30171>,
+        <http://rdaregistry.info/Elements/m/datatype/P30169> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60539> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/dimensions.en>,
+        <http://rdaregistry.info/Elements/m/koko.fi>,
+        <http://rdaregistry.info/Elements/m/størrelse.da>,
+        <http://rdaregistry.info/Elements/m/διαστάσεις.el> ;
+    reg:name "størrelse"@da,
+        "διαστάσεις"@el,
+        "dimensions"@en,
+        "koko"@fi,
+        "dimensions"@fr,
+        "méretarányok"@hu,
+        "kíchThước"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    skos:definition "Relaciona una manifestació amb una mida d’un suport físic o d’un contenidor d’una manifestació."@ca,
+        "Relaterer en manifestation til et mål for en manifestations bærer eller dens opbevaringsudstyr."@da,
+        "Setzt eine Manifestation mit den Abmessungen eines Datenträgers oder des Behältnisses einer Manifestation in Beziehung."@de,
+        "Συνδέει μια εκδήλωση με μια μέτρηση ενός φορέα αποθήκευσης ή ενός περιέκτη μιας εκδήλωσης."@el,
+        "Relates a manifestation to a measurement of a carrier or a container of a manifestation."@en,
+        "Liittää manifestaation tallenteen tai tallenteiden tai säilytyskotelon mittoihin."@fi,
+        "Met une manifestation en relation avec une mesure d’un support matériel ou d’un conteneur d’une manifestation."@fr,
+        "Egy megjelenési formát hozzákapcsol egy megjelenési forma hordozójának vagy tartóeszközének méretéhez."@hu,
+        "Liên kết biểu thị với độ đo của vật mang tin hoặc vỏ chứa của biểu thị."@vi ;
+    skos:scopeNote "Les dimensions inclouen les mesures d’alçada, amplada, profunditat, llargada, format i diàmetre."@ca,
+        "Størrelse inkluderer mål på højde, bredde, længde, gauge og diameter."@da,
+        "Zu den Maßen gehören Abmessungen der Höhe, Breite, Tiefe, Länge, Spurbreite und des Durchmessers."@de,
+        "Οι διαστάσεις περιλαμβάνουν τις μετρήσεις του ύψους, του πλάτους, του μήκους, του πάχους και της διαμέτρου."@el,
+        "Dimensions include measurements of height, width, depth, length, gauge, and diameter."@en,
+        "Les dimensions comprennent les mesures de hauteur, de largeur, de profondeur, de longueur et de diamètre ainsi que le format."@fr,
+        "A méretarányok magukba foglalják a magasság, szélesség, mélység, hosszúság, űrtartalom és belső átmérő méreteit."@hu,
+        "Afmetingen kunnen de gemeten waarde omvatten van hoogte, breedte, lengte, diepte en diameter."@nl,
+        "Kích thước bao gồm độ đo chiều cao, chiều rộng, chiều sâu, chiều dài, khoảng cách, và đường kính"@vi .
+
 <http://rdaregistry.info/Elements/m/P30170> a rdf:Property ;
     rdfs:label "té com a dimensions d’un mapa, etc."@ca,
         "har størrelse på kort etc. - kartografi"@da,
         "hat Maße einer Karte usw."@de,
         "έχει διαστάσεις του χάρτη κ.λπ."@el,
-        "has dimensions of map, etc."@en,
+        "has dimensions of cartographic image"@en,
         "kartan tms. koko"@fi,
         "a pour dimensions d’une carte, etc."@fr,
         "vannak térkép stb. méretarányai"@hu,
@@ -9498,7 +9594,7 @@
         "Mål for en billedside af et kort etc."@da,
         "Eine Abmessung eines Kartenfeldes usw."@de,
         "Μια μέτρηση μιας όψης ενός χάρτη κ.λπ."@el,
-        "A measurement of a face of a map, etc."@en,
+        "A measurement of a face of a map or cartographic diagram, view, profile, or section."@en,
         "Las medidas de la cara de un mapa, etc."@es,
         "Karttakuvan tms. mitat."@fi,
         "Mesure d’une surface d’une carte, etc."@fr,
@@ -9510,7 +9606,7 @@
         "størrelse på kort etc. - kartografi"@da,
         "Maße einer Karte usw."@de,
         "διαστάσεις του χάρτη κ.λπ."@el,
-        "dimensions of map, etc."@en,
+        "dimensions of cartographic image"@en,
         "dimensiones del mapa, etc."@es,
         "kartan tms. koko"@fi,
         "dimensions d’une carte, etc."@fr,
@@ -9520,13 +9616,13 @@
         "mått på kartor etc."@sv,
         "kích thước của bản đồ vv"@vi ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60540> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/dimensionsOfMapEtc.en>,
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/dimensionsOfCartographicImage.en>,
         <http://rdaregistry.info/Elements/m/kartanKoko.fi>,
         <http://rdaregistry.info/Elements/m/størrelsePåKortEtcKartografi.da>,
         <http://rdaregistry.info/Elements/m/διαστάσειςΤουΧάρτηΚλπ.el> ;
     reg:name "størrelsePåKortEtcKartografi"@da,
         "διαστάσειςΤουΧάρτηΚλπ"@el,
-        "dimensionsOfMapEtc"@en,
+        "dimensionsOfCartographicImage"@en,
         "kartanKoko"@fi,
         "dimensionsDuneCarteEtc"@fr,
         "Térképstbméretarányai"@hu,
@@ -9534,80 +9630,17 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30169> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30171> ;
+    skos:altLabel "dimensions of map, etc."@en ;
     skos:definition "Relaciona una manifestació amb una mida de la superfície d’un mapa, etc."@ca,
         "Relaterer en manifestation til et mål for en billedside af et kort etc."@da,
         "Setzt eine Manifestation mit einer Abmessung eines Kartenfeldes usw. in Beziehung."@de,
         "Συνδέει μια εκδήλωση με μια μέτρηση μιας όψης ενός χάρτη κ.λπ."@el,
-        "Relates a manifestation to a measurement of a face of a map, etc."@en,
+        "Relates a manifestation to a measurement of a face of a map or cartographic diagram, view, profile, or section."@en,
         "Liittää manifestaation karttakuvan tms. mittoihin."@fi,
         "Met une manifestation en relation avec une mesure d’une surface d’une carte, etc."@fr,
         "Egy megjelenési formát hozzákapcsol egy térképábrázolás stb. méretéhez."@hu,
         "Liên kết biểu thị với độ đo của bề mặt của bản đồ, v.v..."@vi .
-
-<http://rdaregistry.info/Elements/m/P30171> a rdf:Property ;
-    rdfs:label "té com a dimensions d’una imatge fixa"@ca,
-        "har størrelse på fast billede"@da,
-        "hat Maße eines unbewegten Bildes"@de,
-        "έχει διαστάσεις της σταθερής εικόνας"@el,
-        "has dimensions of still image"@en,
-        "stillkuvan koko"@fi,
-        "a pour dimensions d’une image fixe"@fr,
-        "vannak állókép méretarányai"@hu,
-        "har bildytans mått"@sv,
-        "có kích thước của hình ảnh tĩnh"@vi ;
-    rdakit:hasElementType "6" ;
-    rdakit:instructionNumber "3.5.3" ;
-    rdakit:toolkitDefinition "Mida de l’àrea il·lustrada d’una imatge fixa."@ca,
-        "Mål for et fast billedes billedområde."@da,
-        "Eine Abmessung der Bildfläche eines unbewegten Bildes."@de,
-        "Μια μέτρηση της εικονογραφικής περιοχής μιας σταθερής εικόνας."@el,
-        "A measurement of a pictorial area of a still image."@en,
-        "La medidas del área pictórica de una imagen fija."@es,
-        "Kuva-alueen mitat."@fi,
-        "Mesure de la partie graphique d’une image fixe."@fr,
-        "Egy állókép képi területének méretarányai."@hu,
-        "Een afmeting van het beeldgedeelte van een stilstaand beeld."@nl,
-        "Målene til bildeflaten for et bilde."@no,
-        "Độ đo của khu vực có hình của hình ảnh tĩnh."@vi ;
-    rdakit:toolkitLabel "dimensions d’una imatge fixa"@ca,
-        "størrelse på fast billede"@da,
-        "Maße eines unbewegten Bildes"@de,
-        "διαστάσεις της σταθερής εικόνας"@el,
-        "dimensions of still image"@en,
-        "dimensiones de la imagen fija"@es,
-        "stillkuvan koko"@fi,
-        "dimensions d’une image fixe"@fr,
-        "állókép méretarányai"@hu,
-        "afmetingen van stilstaand beeld"@nl,
-        "bildestørrelse"@no,
-        "bildytans mått"@sv,
-        "kích thước của hình ảnh tĩnh"@vi ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60541> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/dimensionsOfStillImage.en>,
-        <http://rdaregistry.info/Elements/m/stillkuvanKoko.fi>,
-        <http://rdaregistry.info/Elements/m/størrelsePåFastBillede.da>,
-        <http://rdaregistry.info/Elements/m/διαστάσειςΤηςΣταθερήςΕικόνας.el> ;
-    reg:name "størrelsePåFastBillede"@da,
-        "διαστάσειςΤηςΣταθερήςΕικόνας"@el,
-        "dimensionsOfStillImage"@en,
-        "stillkuvanKoko"@fi,
-        "dimensionsDuneImageFixe"@fr,
-        "Állóképméretarányai"@hu,
-        "kíchThướcCủaHìnhảnhTĩnh"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30169> ;
-    skos:definition "Relaciona una manifestació amb una mida de l’àrea il·lustrada d’una imatge fixa."@ca,
-        "Relaterer en manifestation til et mål for et fast billedes billedområde."@da,
-        "Setzt eine Manifestation mit den Abmessungen der Bildfläche eines unbewegten Bildes in Beziehung."@de,
-        "Συνδέει μια εκδήλωση με μια μέτρηση της εικονογραφικής περιοχής μιας σταθερής εικόνας."@el,
-        "Relates a manifestation to a measurement of the pictorial area of a still image."@en,
-        "Liittää manifestaation kuva-alueen mittoihin."@fi,
-        "Met une manifestation en relation avec une mesure de la partie graphique d’une image fixe."@fr,
-        "Egy megjelenési formát hozzákapcsol egy állókép képterületének a méretéhez."@hu,
-        "Liên kết biểu thị với độ đo của khu vực có hình của hình ảnh tĩnh."@vi .
 
 <http://rdaregistry.info/Elements/m/P30172> a rdf:Property ;
     rdfs:label "té com a tipus d’enregistrament"@ca,
@@ -11780,7 +11813,7 @@
         "Værk der undersøger en oprindelig manifestation for at identificere dets bestanddele og deres relationer."@da,
         "Ein Werk, das die ursprüngliche Manifestation untersucht, um ihre Bestandteile und deren Beziehungen zu identifizieren."@de,
         "Ένα έργο που εξετάζει μια εκδήλωση-πηγή για την ταύτιση των συστατικών της και των σχέσεών τους."@el,
-        "A work that examines a source manifestation to identify its components and their relations."@en,
+        "A work that describes the structure of a manifestation."@en,
         "Una obra que examina la manifestación fuente para identificar sus componentes y sus relaciones."@es,
         "Teos, jossa tutkitaan lähteenä olevan manifestaation sisältöä, sen osia ja niiden suhteita."@fi,
         "Œuvre qui examine une manifestation source pour identifier ses composantes et leurs relations."@fr,
@@ -11822,7 +11855,7 @@
         "Relaterer en manifestation til et værk der undersøger en oprindelig manifestation for at identificere dets bestanddele og deres relationer."@da,
         "Setzt eine Manifestation mit einem Werk, das die ursprüngliche Manifestation untersucht, um ihre Bestandteile und deren Beziehungen zu identifizieren, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με ένα έργο που εξετάζει μια εκδήλωση-πηγή για την ταύτιση των συστατικών της και των σχέσεών τους."@el,
-        "Relates a manifestation to a work that examines a source manifestation to identify its components and their relations."@en,
+        "Relates a manifestation to a work that describes the structure of a manifestation."@en,
         "Liittää manifestaation teokseen, jossa tutkitaan lähteenä olevan manifestaation sisältöä, sen osia ja niiden suhteita."@fi,
         "Met une manifestation en relation avec une œuvre qui examine une manifestation source pour identifier ses composantes et leurs relations."@fr,
         "Egy megjelenési formát hozzákapcsol egy műhöz, amely egy forrásmegjelenési formát vizsgál, hogy azonosítsa és megnevezze annak alkotóelemeit és azok viszonyait."@hu,
@@ -12342,19 +12375,19 @@
     skos:scopeNote "Copyright dates include phonogram dates associated with claims of protection for audio recordings."@en .
 
 <http://rdaregistry.info/Elements/m/P30281> a rdf:Property ;
-    rdfs:label "has manifestation designation of serial statement"@en ;
+    rdfs:label "has manifestation designation of sequence statement"@en ;
     rdakit:hasElementType "6" ;
-    rdakit:toolkitDefinition "A manifestation statement about a designation for a part of a serial."@en ;
-    rdakit:toolkitLabel "manifestation designation of serial statement"@en ;
+    rdakit:toolkitDefinition "A manifestation statement about the designation of a sequence of a manifestation of a part, issue, or iteration of a diachronic work."@en ;
+    rdakit:toolkitLabel "manifestation designation of sequence statement"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30281> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/manifestationDesignationOfSerialStatement.en> ;
-    reg:name "manifestationDesignationOfSerialStatement"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/manifestationDesignationOfSequenceStatement.en> ;
+    reg:name "manifestationDesignationOfSequenceStatement"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30292> ;
-    skos:definition "Relates a manifestation to a manifestation statement about a designation for a part of a serial."@en ;
-    skos:scopeNote "The statement includes any or all of an alphabetic, chronological, or numeric designation."@en .
+    skos:definition "Relates a manifestation to a manifestation statement about the designation of a sequence of a manifestation of a part, issue, or iteration of a diachronic work. "@en ;
+    skos:scopeNote "A statement includes an alphanumeric or chronological designation."@en .
 
 <http://rdaregistry.info/Elements/m/P30282> a rdf:Property ;
     rdfs:label "has manifestation dissertation statement"@en ;
@@ -12404,7 +12437,7 @@
 <http://rdaregistry.info/Elements/m/P30285> a rdf:Property ;
     rdfs:label "has manifestation frequency statement"@en ;
     rdakit:hasElementType "6" ;
-    rdakit:toolkitDefinition "A manifestation statement about an interval at which an issue or part of a serial or an update to an integrating resource is issued"@en ;
+    rdakit:toolkitDefinition "A manifestation statement about an interval at which the manifestations of parts, issues, or iterations of a diachronic work are issued."@en ;
     rdakit:toolkitLabel "manifestation frequency statement"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30285> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/m/manifestationFrequencyStatement.en> ;
@@ -12413,7 +12446,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30292> ;
-    skos:definition "Relates a manifestation to a manifestation statement about an interval at which an issue or part of a serial or an update to an integrating resource is issued"@en .
+    skos:definition "Relates a manifestation to a manifestation statement about an interval at which the manifestations of parts, issues, or iterations of a diachronic work are issued."@en .
 
 <http://rdaregistry.info/Elements/m/P30286> a rdf:Property ;
     rdfs:label "has manifestation identifier statement"@en ;
@@ -12648,21 +12681,21 @@
     skos:definition "Relates a manifestation to a work that is a binding of a manifestation."@en .
 
 <http://rdaregistry.info/Elements/m/P30311> a rdf:Property ;
-    rdfs:label "has composer of aggregate"@en ;
+    rdfs:label "has contributor of music"@en ;
     rdakit:hasElementType "2" ;
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A contributor to aggregate who adds music or composes new music to substitute for original music or supplement existing music."@en ;
-    rdakit:toolkitLabel "composer of aggregate"@en ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates a musical work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of music"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30311>,
         <http://rdaregistry.info/Elements/m/object/P30311> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60426> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/composerOfAggregate.en> ;
-    reg:name "composerOfAggregate" ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfMusic.en> ;
+    reg:name "contributorOfMusic" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
-    skos:definition "Relates a manifestation to a contributor to aggregate who adds music, composes new music to substitute for original music, or composes new music to supplement existing music."@en .
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates a musical work that is embodied in an aggregate."@en .
 
 <http://rdaregistry.info/Elements/m/P30312> a rdf:Property ;
     rdfs:label "has surveyor"@en ;
@@ -12682,49 +12715,66 @@
     skos:definition "Relates a manifestation to a cartographer of aggregate who provides measurements or dimensional relationships for a geographic area."@en .
 
 <http://rdaregistry.info/Elements/m/P30316> a rdf:Property ;
-    rdfs:label "has choreographer of aggregate"@en ;
+    rdfs:label "has contributor of choreography"@en ;
     rdakit:hasElementType "2" ;
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A contributor to aggregate who provides additional choreography or modifies previous choreography."@en ;
-    rdakit:toolkitLabel "choreographer of aggregate"@en ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates a choreographic work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of choreography"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30316>,
         <http://rdaregistry.info/Elements/m/object/P30316> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60433> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/choreographerOfAggregate.en> ;
-    reg:name "choreographerOfAggregate" ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfChoreography.en> ;
+    reg:name "contributorOfChoreography" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
-    skos:definition "Relates a manifestation to a contributor to aggregate who provides additional choreography or modifies previous choreography."@en .
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates a choreographic work that is embodied in an aggregate."@en .
 
-<http://rdaregistry.info/Elements/m/P30326> a rdf:Property ;
-    rdfs:label "has photographer of aggregate"@en ;
+<http://rdaregistry.info/Elements/m/P30321> a rdf:Property ;
+    rdfs:label "has contributor of still image"@en ;
     rdakit:hasElementType "2" ;
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "An illustrator who provides photographs."@en ;
-    rdakit:toolkitLabel "photographer of aggregate"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30326>,
-        <http://rdaregistry.info/Elements/m/object/P30326> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60429> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/photographerOfAggregate.en> ;
-    reg:name "photographerOfAggregate" ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates a still image work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of still image"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30321>,
+        <http://rdaregistry.info/Elements/m/object/P30321> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60396> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfStillImage.en> ;
+    reg:name "contributorOfStillImage" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30321> ;
-    skos:definition "Relates a manifestation to an illustrator who provides photographs."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
+    skos:altLabel "illustrator"@en ;
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates a still image work that is embodied in an aggregate."@en .
+
+<http://rdaregistry.info/Elements/m/P30326> a rdf:Property ;
+    rdfs:label "has contributor of moving image"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:instructionNumber "18.5" ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates a moving image work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of moving image"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30326>,
+        <http://rdaregistry.info/Elements/m/object/P30326> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfMovingImage.en> ;
+    reg:name "contributorOfMovingImage" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates a moving image work that is embodied in an aggregate."@en .
 
 <http://rdaregistry.info/Elements/m/P30328> a rdf:Property ;
-    rdfs:label "has writer of aggregate"@en ;
+    rdfs:label "has contributor of text"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A contributor to aggregate who provides text."@en ;
-    rdakit:toolkitLabel "writer of aggregate"@en ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates a textual work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of text"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30328>,
         <http://rdaregistry.info/Elements/m/object/P30328> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60434> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/writerOfAggregate.en> ;
-    reg:name "writerOfAggregate" ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfText.en> ;
+    reg:name "contributorOfText" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
@@ -12738,7 +12788,80 @@
         "writer of postface"@en,
         "writer of preface"@en,
         "writer of supplementary textual content"@en ;
-    skos:definition "Relates a manifestation to a contributor to aggregate who provides additional text."@en .
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates a textual work that is embodied in an aggregate."@en .
+
+<http://rdaregistry.info/Elements/m/P30330> a rdf:Property ;
+    rdfs:label "has related entity of manifestation"@en ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "An entity that is associated with a manifestation."@en ;
+    rdakit:toolkitLabel "related entity of manifestation"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/relatedEntityOfManifestation> ;
+    reg:name "relatedEntityOfManifestation" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00028> ;
+    skos:definition "Relates a manifestation to an entity that is associated with a manifestation."@en .
+
+<http://rdaregistry.info/Elements/m/P30331> a rdf:Property ;
+    rdfs:label "has contributor of speech"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates a spoken word work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of speech"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30331>,
+        <http://rdaregistry.info/Elements/m/object/P30331> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfSpeech.en> ;
+    reg:name "contributorOfSpeech" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates a spoken word work that is embodied in an aggregate."@en .
+
+<http://rdaregistry.info/Elements/m/P30332> a rdf:Property ;
+    rdfs:label "has contributor of object"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates an object work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of object"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30332>,
+        <http://rdaregistry.info/Elements/m/object/P30332> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfObject.en> ;
+    reg:name "contributorOfObject" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates an object work that is embodied in an aggregate."@en .
+
+<http://rdaregistry.info/Elements/m/P30333> a rdf:Property ;
+    rdfs:label "has contributor of computer content"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates computer content that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of computer content"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30333>,
+        <http://rdaregistry.info/Elements/m/object/P30333> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfComputerContent.en> ;
+    reg:name "contributorOfComputerContent" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates computer content that is embodied in an aggregate."@en .
+
+<http://rdaregistry.info/Elements/m/P30334> a rdf:Property ;
+    rdfs:label "is source consulted of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that is a metadata work for which a manifestation provides evidence."@en ;
+    rdakit:toolkitLabel "source consulted of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30334>,
+        <http://rdaregistry.info/Elements/m/object/P30334> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/sourceConsultedOf.en> ;
+    reg:name "sourceConsultedOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30265> ;
+    skos:definition "Relates a manifestation to a work that is a metadata work for which a manifestation provides evidence."@en .
 
 <http://rdaregistry.info/Elements/m/P30027> a rdf:Property ;
     rdfs:label "és acompanyat de (manifestació)"@ca,
@@ -14054,80 +14177,69 @@
         "Egy megjelenési formát hozzákapcsol egy alsorozat nevéhez, amely az alsorozat egy részének a megjelenési formáján jelenik meg. "@hu,
         "Liên kết biểu thị với tên của tùng thư xuất hiện trên biểu thị của phần của tiểu tùng thư."@vi .
 
-<http://rdaregistry.info/Elements/m/P30169> a rdf:Property ;
-    rdfs:label "té com a dimensions"@ca,
-        "har størrelse"@da,
-        "hat Maße"@de,
-        "έχει διαστάσεις"@el,
-        "has dimensions"@en,
-        "koko"@fi,
-        "a pour dimensions"@fr,
-        "vannak méretarányai"@hu,
-        "har mått"@sv,
-        "có kích thước"@vi ;
+<http://rdaregistry.info/Elements/m/P30171> a rdf:Property ;
+    rdfs:label "té com a dimensions d’una imatge fixa"@ca,
+        "har størrelse på fast billede"@da,
+        "hat Maße eines unbewegten Bildes"@de,
+        "έχει διαστάσεις της σταθερής εικόνας"@el,
+        "has dimensions of still image"@en,
+        "stillkuvan koko"@fi,
+        "a pour dimensions d’une image fixe"@fr,
+        "vannak állókép méretarányai"@hu,
+        "har bildytans mått"@sv,
+        "có kích thước của hình ảnh tĩnh"@vi ;
     rdakit:hasElementType "6" ;
-    rdakit:instructionNumber "3.5" ;
-    rdakit:toolkitDefinition "Mida d’un suport físic o d’un contenidor d’una manifestació."@ca,
-        "Mål for en manifestations bærer eller dens opbevaringsudstyr."@da,
-        "Eine Abmessung eines Datenträgers oder des Behältnisses einer Manifestation."@de,
-        "Μια μέτρηση ενός φορέα αποθήκευσης ή ενός περιέκτη μιας εκδήλωσης."@el,
-        "A measurement of a carrier or a container of a manifestation."@en,
-        "Las medidas del soporte o soportes y/o el envase de un recurso."@es,
-        "Tallenteen tai tallenteiden tai säilytyskotelon mitat."@fi,
-        "Mesure d’un support matériel ou d’un conteneur d’une manifestation."@fr,
-        "Egy megjelenési forma hordozójának vagy tárolójának méretarányai."@hu,
-        "Een afmeting van een drager en/of houder van een resource."@nl,
-        "Målene til manifestasjonens bærer eller beholder."@no,
-        "Độ đo của vật mang tin hoặc vỏ chứa của biểu thị."@vi ;
-    rdakit:toolkitLabel "dimensions"@ca,
-        "størrelse"@da,
-        "Maße"@de,
-        "διαστάσεις"@el,
-        "dimensions"@en,
-        "dimensiones"@es,
-        "koko"@fi,
-        "dimensions"@fr,
-        "méretarányok"@hu,
-        "afmetingen"@nl,
-        "størrelse"@no,
-        "mått"@sv,
-        "kích thước"@vi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30170>,
-        <http://rdaregistry.info/Elements/m/P30171>,
-        <http://rdaregistry.info/Elements/m/datatype/P30169> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60539> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/dimensions.en>,
-        <http://rdaregistry.info/Elements/m/koko.fi>,
-        <http://rdaregistry.info/Elements/m/størrelse.da>,
-        <http://rdaregistry.info/Elements/m/διαστάσεις.el> ;
-    reg:name "størrelse"@da,
-        "διαστάσεις"@el,
-        "dimensions"@en,
-        "koko"@fi,
-        "dimensions"@fr,
-        "méretarányok"@hu,
-        "kíchThước"@vi ;
+    rdakit:instructionNumber "3.5.3" ;
+    rdakit:toolkitDefinition "Mida de l’àrea il·lustrada d’una imatge fixa."@ca,
+        "Mål for et fast billedes billedområde."@da,
+        "Eine Abmessung der Bildfläche eines unbewegten Bildes."@de,
+        "Μια μέτρηση της εικονογραφικής περιοχής μιας σταθερής εικόνας."@el,
+        "A measurement of a pictorial area of a still image."@en,
+        "La medidas del área pictórica de una imagen fija."@es,
+        "Kuva-alueen mitat."@fi,
+        "Mesure de la partie graphique d’une image fixe."@fr,
+        "Egy állókép képi területének méretarányai."@hu,
+        "Een afmeting van het beeldgedeelte van een stilstaand beeld."@nl,
+        "Målene til bildeflaten for et bilde."@no,
+        "Độ đo của khu vực có hình của hình ảnh tĩnh."@vi ;
+    rdakit:toolkitLabel "dimensions d’una imatge fixa"@ca,
+        "størrelse på fast billede"@da,
+        "Maße eines unbewegten Bildes"@de,
+        "διαστάσεις της σταθερής εικόνας"@el,
+        "dimensions of still image"@en,
+        "dimensiones de la imagen fija"@es,
+        "stillkuvan koko"@fi,
+        "dimensions d’une image fixe"@fr,
+        "állókép méretarányai"@hu,
+        "afmetingen van stilstaand beeld"@nl,
+        "bildestørrelse"@no,
+        "bildytans mått"@sv,
+        "kích thước của hình ảnh tĩnh"@vi ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60541> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/dimensionsOfStillImage.en>,
+        <http://rdaregistry.info/Elements/m/stillkuvanKoko.fi>,
+        <http://rdaregistry.info/Elements/m/størrelsePåFastBillede.da>,
+        <http://rdaregistry.info/Elements/m/διαστάσειςΤηςΣταθερήςΕικόνας.el> ;
+    reg:name "størrelsePåFastBillede"@da,
+        "διαστάσειςΤηςΣταθερήςΕικόνας"@el,
+        "dimensionsOfStillImage"@en,
+        "stillkuvanKoko"@fi,
+        "dimensionsDuneImageFixe"@fr,
+        "Állóképméretarányai"@hu,
+        "kíchThướcCủaHìnhảnhTĩnh"@vi ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    skos:definition "Relaciona una manifestació amb una mida d’un suport físic o d’un contenidor d’una manifestació."@ca,
-        "Relaterer en manifestation til et mål for en manifestations bærer eller dens opbevaringsudstyr."@da,
-        "Setzt eine Manifestation mit den Abmessungen eines Datenträgers oder des Behältnisses einer Manifestation in Beziehung."@de,
-        "Συνδέει μια εκδήλωση με μια μέτρηση ενός φορέα αποθήκευσης ή ενός περιέκτη μιας εκδήλωσης."@el,
-        "Relates a manifestation to a measurement of a carrier or a container of a manifestation."@en,
-        "Liittää manifestaation tallenteen tai tallenteiden tai säilytyskotelon mittoihin."@fi,
-        "Met une manifestation en relation avec une mesure d’un support matériel ou d’un conteneur d’une manifestation."@fr,
-        "Egy megjelenési formát hozzákapcsol egy megjelenési forma hordozójának vagy tartóeszközének méretéhez."@hu,
-        "Liên kết biểu thị với độ đo của vật mang tin hoặc vỏ chứa của biểu thị."@vi ;
-    skos:scopeNote "Les dimensions inclouen les mesures d’alçada, amplada, profunditat, llargada, format i diàmetre."@ca,
-        "Størrelse inkluderer mål på højde, bredde, længde, gauge og diameter."@da,
-        "Zu den Maßen gehören Abmessungen der Höhe, Breite, Tiefe, Länge, Spurbreite und des Durchmessers."@de,
-        "Οι διαστάσεις περιλαμβάνουν τις μετρήσεις του ύψους, του πλάτους, του μήκους, του πάχους και της διαμέτρου."@el,
-        "Dimensions include measurements of height, width, depth, length, gauge, and diameter."@en,
-        "Les dimensions comprennent les mesures de hauteur, de largeur, de profondeur, de longueur et de diamètre ainsi que le format."@fr,
-        "A méretarányok magukba foglalják a magasság, szélesség, mélység, hosszúság, űrtartalom és belső átmérő méreteit."@hu,
-        "Afmetingen kunnen de gemeten waarde omvatten van hoogte, breedte, lengte, diepte en diameter."@nl,
-        "Kích thước bao gồm độ đo chiều cao, chiều rộng, chiều sâu, chiều dài, khoảng cách, và đường kính"@vi .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30169> ;
+    skos:definition "Relaciona una manifestació amb una mida de l’àrea il·lustrada d’una imatge fixa."@ca,
+        "Relaterer en manifestation til et mål for et fast billedes billedområde."@da,
+        "Setzt eine Manifestation mit den Abmessungen der Bildfläche eines unbewegten Bildes in Beziehung."@de,
+        "Συνδέει μια εκδήλωση με μια μέτρηση της εικονογραφικής περιοχής μιας σταθερής εικόνας."@el,
+        "Relates a manifestation to a measurement of the pictorial area of a still image."@en,
+        "Liittää manifestaation kuva-alueen mittoihin."@fi,
+        "Met une manifestation en relation avec une mesure de la partie graphique d’une image fixe."@fr,
+        "Egy megjelenési formát hozzákapcsol egy állókép képterületének a méretéhez."@hu,
+        "Liên kết biểu thị với độ đo của khu vực có hình của hình ảnh tĩnh."@vi .
 
 <http://rdaregistry.info/Elements/m/P30173> a rdf:Property ;
     rdfs:label "té com a nom de distribuïdor"@ca,
@@ -14350,7 +14462,7 @@
         "Navn på en agent, der er ansvarlig for at publicere, offentliggøre eller udgive en manifestation."@da,
         "Eine Name eines Akteurs, der für das Veröffentlichen, die Freigabe oder die Herausgabe einer Manifestation verantwortlich ist."@de,
         "Ένα όνομα ενός φορέα υπεύθυνου για τη δημοσίευση, την κυκλοφορία ή την έκδοση μιας εκδήλωσης."@el,
-        "A name of an agent who is responsible for publishing, releasing, or issuing a published manifestation."@en,
+        "A name of an agent who is responsible for publishing a manifestation."@en,
         "El nombre de una persona, familia o entidad corporativa responsable por la publicación, entrega o emisión de un recurso."@es,
         "Manifestaation kustantamisesta, julkaisemisesta tai ilmestymisestä vastuussa olevan toimijan nimi."@fi,
         "Nom d’un agent responsable de la publication, de la mise à disposition ou de l’édition d’une manifestation."@fr,
@@ -14395,11 +14507,12 @@
         "Relaterer en manifestation til et navn på en agent, der er ansvarlig for at publicere, offentliggøre eller udgive en manifestation."@da,
         "Setzt eine Manifestation mit einem Namen eines Akteurs, der für das Veröffentlichen, die Freigabe oder die Herausgabe einer Manifestation verantwortlich ist, in Beziehung."@de,
         "Συνδέει μια εκδήλωση με ένα όνομα ενός φορέα υπεύθυνου για τη δημοσίευση, την κυκλοφορία ή την έκδοση μιας εκδήλωσης."@el,
-        "Relates a manifestation to a name of an agent who is responsible for publishing, releasing, or issuing a published manifestation."@en,
+        "Relates a manifestation to a name of an agent who is responsible for publishing a manifestation."@en,
         "Liittää manifestaation manifestaation kustantamisesta, julkaisemisesta tai ilmestymisestä vastuussa olevan toimijan nimeen."@fi,
         "Met une manifestation en relation avec un nom d’un agent responsable de la publication, de la mise à disposition ou de l’édition d’une manifestation."@fr,
         "Egy megjelenési formát hozzákapcsol egy ágens (személy, család vagy testület)  nevéhez, aki/amely felelős egy megjelenési forma kiadásáért, kibocsájtásáért vagy megjelentetéséért. "@hu,
-        "Liên kết biểu thị với tên của tác nhân có trách nhiệm về xuất bản, đăng tảu, công bố biểu hiện."@vi .
+        "Liên kết biểu thị với tên của tác nhân có trách nhiệm về xuất bản, đăng tảu, công bố biểu hiện."@vi ;
+    skos:scopeNote "Publication includes release and issuance."@en .
 
 <http://rdaregistry.info/Elements/m/P30187> a rdf:Property ;
     rdfs:label "té com a mètode de producció"@ca,
@@ -14832,39 +14945,21 @@
     skos:definition "Relates a manifestation to a physical or chemical substance used to create a manifestation."@en .
 
 <http://rdaregistry.info/Elements/m/P30315> a rdf:Property ;
-    rdfs:label "has cartographer of aggregate"@en ;
+    rdfs:label "has contributor of cartography"@en ;
     rdakit:hasElementType "2" ;
     rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A contributor to aggregate who provides additional cartography or modifies previous cartography."@en ;
-    rdakit:toolkitLabel "cartographer of aggregate"@en ;
+    rdakit:toolkitDefinition "A contributor to aggregate who creates a cartographic work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor of cartography"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30315>,
         <http://rdaregistry.info/Elements/m/object/P30315> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60425> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/cartographerOfAggregate.en> ;
-    reg:name "cartographerOfAggregate" ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorOfCartography.en> ;
+    reg:name "contributorOfCartography" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
-    skos:definition "Relates a manifestation to a contributor to aggregate who provides additional cartography or modifies previous cartography."@en .
-
-<http://rdaregistry.info/Elements/m/P30321> a rdf:Property ;
-    rdfs:label "has illustrator"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:instructionNumber "18.5" ;
-    rdakit:toolkitDefinition "A contributor to aggregate who provides images."@en ;
-    rdakit:toolkitLabel "illustrator"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/datatype/P30321>,
-        <http://rdaregistry.info/Elements/m/object/P30321> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60396> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/illustrator.en> ;
-    reg:name "illustrator" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30327> ;
-    skos:definition "Relates a manifestation to a contributor to aggregate who provides images."@en ;
-    skos:scopeNote "Images include drawings, diagrams, and photographs."@en .
+    skos:definition "Relates a manifestation to a contributor to aggregate who creates a cartographic work that is embodied in an aggregate."@en .
 
 <http://rdaregistry.info/Elements/m/P30004> a rdf:Property ;
     rdfs:label "té com a identificador de manifestació"@ca,
@@ -15654,50 +15749,6 @@
         "Egy megjelenési formát hozzákapcsol egy műszaki előíráshoz vagy specifikációhoz, amely kötődik a szöveg, kép, hang, videó és más adattípusok digitális kódolásához egy megjelenési formában."@hu,
         "Liên kết biểu thị với chi tiết của đặc tính kỹ thuật liên quan tới ghi mã văn bản, hình ảnh, audio, video, và các loại dữ liệu khác trong biểu hiện."@vi .
 
-<http://rdaregistry.info/Elements/m/P30265> a rdf:Property ;
-    rdfs:label "té com a obra relacionada (manifestació)"@ca,
-        "har relateret værk (manifestation)"@da,
-        "έχει σχετικό έργο (εκδήλωση)"@el,
-        "has related work of manifestation"@en,
-        "manifestaatioon liittyvä teos"@fi,
-        "a pour œuvre en relation (manifestation)"@fr,
-        "van kapcsolódó műve (megjelenési forma)"@hu,
-        "có biểu thị tác phẩm có liên quan"@vi ;
-    rdakit:hasElementType "1" ;
-    rdakit:toolkitDefinition "A work that is associated with a manifestation."@en,
-        "Teos, joka liittyy kuvailtavaan manifestaatioon."@fi ;
-    rdakit:toolkitLabel "related work of manifestation"@en,
-        "manifestaatioon liittyvä teos"@fi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30135>,
-        <http://rdaregistry.info/Elements/m/P30310>,
-        <http://rdaregistry.info/Elements/m/datatype/P30265>,
-        <http://rdaregistry.info/Elements/m/object/P30265> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/manifestaatioonLiittyvaTeos.fi>,
-        <http://rdaregistry.info/Elements/m/relatedWorkOfManifestation.en>,
-        <http://rdaregistry.info/Elements/m/relateretværkManifestation.da>,
-        <http://rdaregistry.info/Elements/m/σχετικόΈργοΕκδήλωσης.el> ;
-    reg:name "relateretværkManifestation"@da,
-        "σχετικόΈργοΕκδήλωσης"@el,
-        "relatedWorkOfManifestation"@en,
-        "manifestaatioonLiittyvaTeos"@fi,
-        "ŒuvreEnRelation"@fr,
-        "kapcsolódóMűMegjelenésiforma"@hu,
-        "biểuThịTácPhẩmCóLiênQuan"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30264>,
-        <http://rdaregistry.info/Elements/x/P00002> ;
-    skos:definition "Relaciona una manifestació amb una obra associada amb una manifestació que es descriu."@ca,
-        "Relaterer en manifestation til et værk der er knyttet til en beskreven manifestation."@da,
-        "Συνδέει μια εκδήλωση με ένα έργο που συνδέεται με μια περιγραφόμενη εκδήλωση."@el,
-        "Relates a manifestation to a work that is associated with a manifestation."@en,
-        "Liittää manifestaation teokseen, joka liittyy kuvailtavaan manifestaatioon."@fi,
-        "Met une manifestation en relation avec une œuvre associée à une manifestation décrite."@fr,
-        "Egy megjelenési formát hozzákapcsol egy műhöz, amely egy éppen leírt megjelenési formához kötődik."@hu,
-        "Liên kết biểu thị với tác phẩm liên quan tới biểu thị đang được mô tả."@vi .
-
 <http://rdaregistry.info/Elements/m/P30277> a rdf:Property ;
     rdfs:label "has appellation of manifestation"@en ;
     rdakit:hasElementType "3" ;
@@ -16212,6 +16263,51 @@
         "Egy megjelenési formát hozzákapcsol egy eredeti hordozó és az eredetiből készült reprodukció hordozója közötti viszonyhoz."@hu,
         "Liên kết biểu thị với mối quan hệ giữa vật mang tin nguyên gốc và vật mang tin của phiên bản được tạo ra từ nguyên gốc."@vi .
 
+<http://rdaregistry.info/Elements/m/P30265> a rdf:Property ;
+    rdfs:label "té com a obra relacionada (manifestació)"@ca,
+        "har relateret værk (manifestation)"@da,
+        "έχει σχετικό έργο (εκδήλωση)"@el,
+        "has related work of manifestation"@en,
+        "manifestaatioon liittyvä teos"@fi,
+        "a pour œuvre en relation (manifestation)"@fr,
+        "van kapcsolódó műve (megjelenési forma)"@hu,
+        "có biểu thị tác phẩm có liên quan"@vi ;
+    rdakit:hasElementType "1" ;
+    rdakit:toolkitDefinition "A work that is associated with a manifestation."@en,
+        "Teos, joka liittyy kuvailtavaan manifestaatioon."@fi ;
+    rdakit:toolkitLabel "related work of manifestation"@en,
+        "manifestaatioon liittyvä teos"@fi ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30135>,
+        <http://rdaregistry.info/Elements/m/P30310>,
+        <http://rdaregistry.info/Elements/m/P30334>,
+        <http://rdaregistry.info/Elements/m/datatype/P30265>,
+        <http://rdaregistry.info/Elements/m/object/P30265> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60313> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/manifestaatioonLiittyvaTeos.fi>,
+        <http://rdaregistry.info/Elements/m/relatedWorkOfManifestation.en>,
+        <http://rdaregistry.info/Elements/m/relateretværkManifestation.da>,
+        <http://rdaregistry.info/Elements/m/σχετικόΈργοΕκδήλωσης.el> ;
+    reg:name "relateretværkManifestation"@da,
+        "σχετικόΈργοΕκδήλωσης"@el,
+        "relatedWorkOfManifestation"@en,
+        "manifestaatioonLiittyvaTeos"@fi,
+        "ŒuvreEnRelation"@fr,
+        "kapcsolódóMűMegjelenésiforma"@hu,
+        "biểuThịTácPhẩmCóLiênQuan"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30264>,
+        <http://rdaregistry.info/Elements/x/P00002> ;
+    skos:definition "Relaciona una manifestació amb una obra associada amb una manifestació que es descriu."@ca,
+        "Relaterer en manifestation til et værk der er knyttet til en beskreven manifestation."@da,
+        "Συνδέει μια εκδήλωση με ένα έργο που συνδέεται με μια περιγραφόμενη εκδήλωση."@el,
+        "Relates a manifestation to a work that is associated with a manifestation."@en,
+        "Liittää manifestaation teokseen, joka liittyy kuvailtavaan manifestaatioon."@fi,
+        "Met une manifestation en relation avec une œuvre associée à une manifestation décrite."@fr,
+        "Egy megjelenési formát hozzákapcsol egy műhöz, amely egy éppen leírt megjelenési formához kötődik."@hu,
+        "Liên kết biểu thị với tác phẩm liên quan tới biểu thị đang được mô tả."@vi .
+
 <http://rdaregistry.info/Elements/m/P30279> a rdf:Property ;
     rdfs:label "has place of manifestation"@en ;
     rdakit:hasElementType "3" ;
@@ -16359,29 +16455,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30273> ;
     skos:definition "Relates a manifestation to a timespan during which a published manifestation is published, released, issued, printed, duplicated, cast, distributed, etc., or an unpublished manifestatioin is inscribed, fabricated, constructed, etc."@en .
-
-<http://rdaregistry.info/Elements/m/P30327> a rdf:Property ;
-    rdfs:label "has contributor to aggregate"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An agent who creates a work that is embodied in an aggregate."@en ;
-    rdakit:toolkitLabel "contributor to aggregate"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30311>,
-        <http://rdaregistry.info/Elements/m/P30312>,
-        <http://rdaregistry.info/Elements/m/P30315>,
-        <http://rdaregistry.info/Elements/m/P30316>,
-        <http://rdaregistry.info/Elements/m/P30321>,
-        <http://rdaregistry.info/Elements/m/P30326>,
-        <http://rdaregistry.info/Elements/m/P30328>,
-        <http://rdaregistry.info/Elements/m/datatype/P30327>,
-        <http://rdaregistry.info/Elements/m/object/P30327> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61086> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorToAggregate.en> ;
-    reg:name "contributorToAggregate" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30267> ;
-    skos:definition "Relates a manifestation to an agent who creates a work that is embodied in an aggregate."@en .
 
 <http://rdaregistry.info/Elements/m/P30124> a rdf:Property ;
     rdfs:label "té com a característica de fitxer digital"@ca,
@@ -16651,7 +16724,7 @@
         "har nummerering af periodika"@da,
         "hat Zählung von fortlaufenden Ressourcen"@de,
         "έχει αρίθμηση των περιοδικών"@el,
-        "has numbering of serials"@en,
+        "has designation of sequence"@en,
         "sarja-aineistojen numerointi"@fi,
         "a pour numérotation des publications en série"@fr,
         "van periodikaszámozása"@hu,
@@ -16663,7 +16736,7 @@
         "Betegnelse for hvert nummer eller hver del af et periodikum."@da,
         "Eine Identifizierung von jeder Ausgabe oder jedem Teil einer fortlaufenden Ressource."@de,
         "Ένας προσδιορισμός για κάθε ένα από τα τεύχη ή μέρη ενός περιοδικού."@el,
-        "A designation for each of the issues or parts of a serial."@en,
+        "The first and last designations in the form of numbers or alphabetic characters, or a date or other timespan, that are in in a sequence that is used to number the manifestations of parts, issues, or iterations of a diachronic work."@en,
         "La identificación de cada una de las entregas o partes de una publicación seriada."@es,
         "Sarja-aineiston kunkin osan määrite."@fi,
         "Désignation de chacune des livraisons ou parties d’une publication en série."@fr,
@@ -16675,7 +16748,7 @@
         "nummerering af periodika"@da,
         "Zählung von fortlaufenden Ressourcen"@de,
         "αρίθμηση των περιοδικών"@el,
-        "numbering of serials"@en,
+        "designation of sequence"@en,
         "numeración de publicaciones seriadas"@es,
         "sarja-aineistojen numerointi"@fi,
         "numérotation des publications en série"@fr,
@@ -16694,13 +16767,13 @@
         <http://rdaregistry.info/Elements/m/P30150>,
         <http://rdaregistry.info/Elements/m/datatype/P30165> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60533> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/m/numberingOfSerials.en>,
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/designationOfSequence.en>,
         <http://rdaregistry.info/Elements/m/nummereringAfPeriodika.da>,
         <http://rdaregistry.info/Elements/m/sarjaAineistojenNumerointi.fi>,
         <http://rdaregistry.info/Elements/m/αρίθμησηΤωνΠεριοδικών.el> ;
     reg:name "nummereringAfPeriodika"@da,
         "αρίθμησηΤωνΠεριοδικών"@el,
-        "numberingOfSerials"@en,
+        "designationOfSequence"@en,
         "sarjaAineistojenNumerointi"@fi,
         "numérotationDesPublicationsEnSérie"@fr,
         "Periodikákszámozása"@hu,
@@ -16708,11 +16781,12 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    skos:altLabel "numbering of serials"@en ;
     skos:definition "Relaciona una manifestació amb una designació de cada un dels números o les parts d’una publicació en sèrie."@ca,
         "Relaterer en manifestation til en betegnelse for hvert nummer eller hver del af et periodikum."@da,
         "Setzt eine Manifestation mit einer Identifizierung von jeder Ausgabe oder jedem Teil einer fortlaufenden Ressource in Beziehung."@de,
         "Συνδέει μια εκδήλωση με έναν προσδιορισμό για κάθε ένα από τα τεύχη ή μέρη ενός περιοδικού."@el,
-        "Relates a manifestation to a designation for each of the issues or parts of a serial."@en,
+        "Relates a manifestation to the first and last designations in the form of numbers or alphabetic characters, or a date or other timespan, that are in in a sequence that is used to number the manifestations of parts, issues, or iterations of a diachronic work."@en,
         "Liittää manifestaation sarja-aineiston kunkin osan määritteeseen."@fi,
         "Met une manifestation en relation avec une désignation de chacune des livraisons ou parties d’une publication en série."@fr,
         "Egy megjelenési formát hozzákapcsol egy periodika minden egyes számának vagy részének jelöléséhez."@hu,
@@ -16721,7 +16795,6 @@
         "Nummerering af omfatter et tal, et bogstav, ethvert andet tegn eller en kombination af disse med eller uden tilhørende tekst og/eller en kronologisk betegnelse."@da,
         "Die Zählung beinhaltet eine Ziffer, einen Buchstaben, ein anderes Zeichen oder die Kombination davon, mit oder ohne Begleittext und/oder eine chronologische Bezeichnung."@de,
         "Η αρίθμηση περιλαμβάνει ένα αριθμητικό, ένα γράμμα, οποιονδήποτε άλλον χαρακτήρα ή τον συνδυασμό αυτών με ή χωρίς συνοδευτική κεφαλίδα ή/και χρονολογικό προσδιορισμό."@el,
-        "Numbering includes a numeral, a letter, any other character, or the combination of these with or without an accompanying caption or a chronological designation."@en,
         "La numérotation comprend un chiffre, une lettre, tout autre caractère ou la combinaison de ces éléments, accompagnés ou non d’une appellation et/ou d’une désignation chronologique."@fr,
         "A számozás magába foglal egy számot, betűt, vagy bármilyen más karaktert, vagy ezek kombinációját kísérő felirattal vagy anélkül, és/vagy egy kronológiai jelölést. "@hu,
         "Nummering omvat een getal, een letter, elk ander karakter of een combinatie daarvan met of zonder een begeleidende tekst en/of een chronologische aanduiding."@nl,
@@ -16765,7 +16838,8 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/x/P00001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30330>,
+        <http://rdaregistry.info/Elements/x/P00001> ;
     skos:definition "Relaciona una manifestació amb una entitat associada amb una manifestació que es descriu."@ca,
         "Relaterer en manifestation til en entitet der er knyttet til en beskreven manifestation."@da,
         "Συνδέει μια εκδήλωση με μια οντότητα που συνδέεται με μια περιγραφόμενη εκδήλωση."@el,
@@ -16820,6 +16894,32 @@
         "Met une manifestation en relation avec un agent associé à une manifestation décrite."@fr,
         "Egy megjelenési formát hozzákapcsol egy ágenshez (személyhez, családhoz vagy testülethez), aki/amely egy éppen leírt megjelenési formához kötődik."@hu,
         "Liên kết biểu thị với tác nhân liên quan tới biểu thị đang được mô tả."@vi .
+
+<http://rdaregistry.info/Elements/m/P30327> a rdf:Property ;
+    rdfs:label "has contributor to aggregate"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An agent who creates a work that is embodied in an aggregate."@en ;
+    rdakit:toolkitLabel "contributor to aggregate"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/m/P30311>,
+        <http://rdaregistry.info/Elements/m/P30312>,
+        <http://rdaregistry.info/Elements/m/P30315>,
+        <http://rdaregistry.info/Elements/m/P30316>,
+        <http://rdaregistry.info/Elements/m/P30321>,
+        <http://rdaregistry.info/Elements/m/P30326>,
+        <http://rdaregistry.info/Elements/m/P30328>,
+        <http://rdaregistry.info/Elements/m/P30331>,
+        <http://rdaregistry.info/Elements/m/P30332>,
+        <http://rdaregistry.info/Elements/m/P30333>,
+        <http://rdaregistry.info/Elements/m/datatype/P30327>,
+        <http://rdaregistry.info/Elements/m/object/P30327> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61086> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/m/contributorToAggregate.en> ;
+    reg:name "contributorToAggregate" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10007> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/m/P30267> ;
+    skos:definition "Relates a manifestation to an agent who creates a work that is embodied in an aggregate."@en .
 
 <http://rdaregistry.info/Elements/m/P30082> a rdf:Property ;
     rdfs:label "té com a fabricant"@ca,

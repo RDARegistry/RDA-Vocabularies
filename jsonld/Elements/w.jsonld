@@ -19,7 +19,7 @@
             "omr_api": "http://api.metadataregistry.org/elementsets/77",
             "omr_home": "http://metadataregistry.org/elementsets/77",
             "documentation": "http://www.rdaregistry.info/Elements/w/",
-            "count": 404,
+            "count": 411,
             "languages": [
                 {
                     "code": "ar",
@@ -29,42 +29,42 @@
                 {
                     "code": "ca",
                     "lang": "Catalan",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "da",
                     "lang": "Danish",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "de",
                     "lang": "German",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "el",
                     "lang": "Greek",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "en",
                     "lang": "English",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "es",
                     "lang": "Spanish",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "fi",
                     "lang": "Finnish",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "fr",
                     "lang": "French",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "he",
@@ -74,7 +74,7 @@
                 {
                     "code": "hu",
                     "lang": "Hungarian",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "it",
@@ -89,7 +89,7 @@
                 {
                     "code": "no",
                     "lang": "Norwegian",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "pl",
@@ -109,7 +109,7 @@
                 {
                     "code": "sv",
                     "lang": "Swedish",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "uk",
@@ -119,7 +119,7 @@
                 {
                     "code": "vi",
                     "lang": "Vietnamese",
-                    "version": "v3.0.11"
+                    "version": "v3.0.12"
                 },
                 {
                     "code": "zh",
@@ -127,7 +127,7 @@
                     "version": "WIP"
                 }
             ],
-            "dateOfPublication": "October 12, 2018"
+            "dateOfPublication": "December 20, 2018"
         },
         {
             "@id": "http://rdaregistry.info/Elements/w/P10001",
@@ -514,9 +514,14 @@
         {
             "@id": "http://rdaregistry.info/Elements/w/P10004",
             "@type": "Property",
+            "altLabel": {
+                "en": [
+                    "form of work"
+                ]
+            },
             "description": {
                 "en": [
-                    "Relates a work to a class or genre to which a work belongs."
+                    "Relates a work to a type to which a work belongs."
                 ],
                 "da": [
                     "Relaterer et værk til en art, form eller genre, som et værk tilhører."
@@ -553,9 +558,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/datatype/P10004",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/formOfWork.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/categoryOfWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/23622.html",
-                    "label": "has form of work"
+                    "label": "has category of work"
                 }
             ],
             "hasUnconstrained": {
@@ -571,7 +576,7 @@
                 "label": "RDA Work properties"
             },
             "label": {
-                "en": "has form of work",
+                "en": "has category of work",
                 "sv": "har verkets form",
                 "da": "har værkets art eller form",
                 "vi": "có hình thái của tác phẩm",
@@ -582,16 +587,29 @@
                 "el": "έχει μορφή του έργου",
                 "hu": "van műformája"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/formOfWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/categoryOfWork.en",
             "name": "Műforma",
+            "note": {
+                "en": [
+                    "Includes a class or genre."
+                ]
+            },
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
                 "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/x/P00029",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/x/categoryOfRDAEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35522.html",
+                    "label": "has category of RDA entity"
+                }
+            ],
             "ToolkitDefinition": {
-                "en": "A class or genre to which a work belongs.",
+                "en": "A type to which a work belongs.",
                 "fr": "Catégorie ou genre auquel une œuvre appartient.",
                 "es": "Una clase o género al cual pertenece una obra.",
                 "da": "Art, form eller genre, som et værk tilhører.",
@@ -604,7 +622,7 @@
                 "hu": "Egy osztály vagy műfaj, amelyhez egy mű tartozik."
             },
             "ToolkitLabel": {
-                "en": "form of work",
+                "en": "category of work",
                 "fr": "forme d’une œuvre",
                 "es": "forma de la obra",
                 "sv": "verkets form",
@@ -1464,7 +1482,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a designation of a sequencing of a part or parts within a larger work."
+                    "Relates a work to a designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a part work within a whole work."
                 ],
                 "da": [
                     "Relaterer et værk til en sekvensbetegnelse for en del eller flere dele i et større værk."
@@ -1533,9 +1551,6 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/w/numberingOfPart.en",
             "name": "Részszámozás",
             "note": {
-                "en": [
-                    "Numbering may consist of a numeral, a letter, any other character, or the combination of these with or without an accompanying caption, or a chronological designation."
-                ],
                 "da": [
                     "Nummerering af del kan omfatte et tal, et bogstav, ethvert andet tegn eller en kombination af disse med eller uden tilhørende tekst og/eller en kronologisk betegnelse"
                 ],
@@ -1565,7 +1580,7 @@
                 "label": "Published"
             },
             "ToolkitDefinition": {
-                "en": "A designation of a sequencing of a part or parts within a larger work.",
+                "en": "A designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a part work within a whole work.",
                 "fr": "Désignation d’un ordre séquentiel d’une ou plusieurs parties à l’intérieur d’une œuvre plus vaste.",
                 "es": "Una designación de la secuencia de una parte o partes dentro de una obra mayor.",
                 "da": "Sekvensbetegnelse for en del eller flere dele i et større værk.",
@@ -2428,7 +2443,7 @@
             },
             "description": {
                 "en": [
-                    "Relates a work to a work that continues the narrative of another work."
+                    "Relates a work to a work that extends the narrative of another work forwards in time."
                 ],
                 "da": [
                     "Relaterer et værk til et senere værk, der fortsætter et tidligere værks fortælling."
@@ -2465,9 +2480,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10020",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/sequel.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/sequelWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/23939.html",
-                    "label": "has sequel"
+                    "label": "has sequel work"
                 }
             ],
             "hasUnconstrained": {
@@ -2483,7 +2498,7 @@
                 "label": "RDA Work properties"
             },
             "label": {
-                "en": "has sequel",
+                "en": "has sequel work",
                 "da": "er efterfølger",
                 "vi": "là tiếp theo",
                 "de": "ist Sequel",
@@ -2493,7 +2508,7 @@
                 "el": "είναι συνέχεια",
                 "hu": "folytatás"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/sequel.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/sequelWork.en",
             "name": "folytatás",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -2510,7 +2525,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that continues the narrative of another work.",
+                "en": "A work that extends the narrative of another work forwards in time.",
                 "fr": "Œuvre ultérieure qui continue le récit d’une œuvre antérieure.",
                 "es": "Una obra posterior que continúa la narración de una obra anterior.",
                 "da": "Senere værk, der fortsætter et tidligere værks fortælling.",
@@ -2523,7 +2538,7 @@
                 "hu": "Egy későbbi mű, amely egy korábbi mű narratíváját folytatja."
             },
             "ToolkitLabel": {
-                "en": "sequel",
+                "en": "sequel work",
                 "fr": "suite",
                 "es": "secuela",
                 "da": "efterfølger",
@@ -2542,7 +2557,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a later work that is used in part in place of an earlier work, usually because the later work contains updated or new information that makes part of the earlier work obsolete."
+                    "Relates a work to a work whose content partially supersedes and renders obsolete the content of another work."
                 ],
                 "da": [
                     "Relaterer et senere værk, der er anvendt delvist i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."
@@ -2611,7 +2626,7 @@
             "name": "Műrészbenhelyettesíti",
             "note": {
                 "en": [
-                    "This relationship applies generally to single-part units, multipart monographs, and integrating resources."
+                    "This element applies in general to a static work or an integrating work."
                 ],
                 "da": [
                     "Den her relation bruges generelt til enkeltstyksenheder, flerbindsværker og integrerende ressourcer."
@@ -2650,7 +2665,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A later work that is used in part in place of an earlier work, usually because the later work contains updated or new information that makes part of the earlier work obsolete.",
+                "en": "A work whose content partially supersedes and renders obsolete the content of another work.",
                 "fr": "Œuvre ultérieure utilisée en partie à la place d’une œuvre antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend une partie de l’œuvre antérieure obsolète.",
                 "es": "Una obra posterior usada en parte en lugar de una obra anterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta parte de la obra anterior.",
                 "da": "Senere værk, der er anvendt delvist i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet.",
@@ -2682,7 +2697,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a later work that is used in place of an earlier work, usually because the later work contains updated or new information that makes the earlier work obsolete."
+                    "Relates a work to a work whose content supersedes and renders obsolete the content of another work.\n"
                 ],
                 "da": [
                     "Relaterer et værk til et senere værk, der er anvendt i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."
@@ -2751,7 +2766,7 @@
             "name": "Műhelyettesíti",
             "note": {
                 "en": [
-                    "This relationship applies generally to single-part units, multipart monographs, and integrating resources."
+                    "This element applies in general to a static work or an integrating work."
                 ],
                 "da": [
                     "Denne relation bruges generelt til enkeltstående monografier, flerbindsværk og integrerende ressourcer."
@@ -2790,7 +2805,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A later work that is used in place of an earlier work, usually because the later work contains updated or new information that makes the earlier work obsolete.",
+                "en": "A work whose content supersedes and renders obsolete the content of another work.\n",
                 "fr": "Œuvre ultérieure utilisée à la place d’une œuvre antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète.",
                 "es": "Una obra posterior usada en lugar de una obra anterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la obra anterior.",
                 "da": "Senere værk, der er anvendt i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet.",
@@ -4878,7 +4893,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a person who oversees an academic degree or thesis."
+                    "Relates a work to an academic supervisor who is responsible for advising or overseeing thesis or dissertation research for an academic degree that results in a work."
                 ],
                 "da": [
                     "Relaterer et værk til en person, der vejleder ved udarbejdelsen af afhandlingen til enten en akademisk grad eller et speciale."
@@ -4964,14 +4979,14 @@
             },
             "subPropertyOf": [
                 {
-                    "@id": "http://rdaregistry.info/Elements/w/P10311",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedAgentOfWork.en",
-                    "url": "http://metadataregistry.org/schemaprop/show/id/25224.html",
-                    "label": "has related agent of work"
+                    "@id": "http://rdaregistry.info/Elements/w/P10407",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/academicSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35513.html",
+                    "label": "has academic supervisor"
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A person who oversees an academic degree or thesis.",
+                "en": "An academic supervisor who is responsible for advising or overseeing thesis or dissertation research for an academic degree that results in a work.",
                 "fr": "Personne telle qu’un conseiller ou un directeur de thèse ou de mémoire qui supervise un diplôme universitaire ou une thèse.",
                 "es": "Una persona, tal como un director o supervisor de tesis de grado o investigación, que supervisa un grado académico o tesis.",
                 "da": "Person, der vejleder ved udarbejdelsen af afhandlingen til enten en akademisk grad eller et speciale.",
@@ -6826,7 +6841,7 @@
             "name": "összeállító",
             "note": {
                 "en": [
-                    "Revising or clarifying the content, or selecting and putting together works or parts of work, by one or more creators is excluded."
+                    "Revising or clarifying the content of an expression of a work and selecting and putting together expressions of works or parts of works are excluded."
                 ],
                 "da": [
                     "Revisioner eller indholdspræciseringer, eller udvælgelse og sammensætning af værker og dele af værker, af et eller flere ophav er ikke omfattet."
@@ -8867,7 +8882,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to an agent to whom a work or part of a work is addressed."
+                    "Relates a work to an agent to whom a work or a portion of a work is addressed."
                 ],
                 "da": [
                     "Relaterer et værk til en agent, som et værk eller en del af et værk er adresseret til."
@@ -8955,7 +8970,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "An agent to whom a work or part of a work is addressed.",
+                "en": "An agent to whom a work or a portion of a work is addressed.",
                 "fr": "Agent à qui une œuvre ou une partie d’œuvre est adressée.",
                 "es": "Una persona, familia o entidad corporativa a quien va dirigida una obra o parte de ella",
                 "da": "Agent, som et værk eller en del af et værk er adresseret til.",
@@ -9712,7 +9727,7 @@
                     "@id": "http://rdaregistry.info/Elements/w/object/P10077",
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/object/academicDegree.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/34182.html",
-                    "label": "has academic degree"
+                    "label": "has academic degree (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/datatype/P10077",
@@ -12750,6 +12765,12 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/issueOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/23720.html",
                     "label": "is issue of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10411",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/specialIssueOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35557.html",
+                    "label": "is special issue of"
                 }
             ],
             "hasUnconstrained": {
@@ -13023,9 +13044,14 @@
         {
             "@id": "http://rdaregistry.info/Elements/w/P10104",
             "@type": "Property",
+            "altLabel": {
+                "en": [
+                    "continued in part by work"
+                ]
+            },
             "description": {
                 "en": [
-                    "Relates a work to a work part of whose content separated from an earlier work to form a new work."
+                    "Relates a work to a work that is a diachronic work that continues the partial content of another diachronic work that is continuing."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, hvoraf en del af indholdet er udskilt fra et tidligere værk, så et nyt værk er dannet."
@@ -13062,9 +13088,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10104",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/continuedInPartByWork.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/separatedIntoWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/24011.html",
-                    "label": "is continued in part by work"
+                    "label": "is separated into work"
                 }
             ],
             "hasUnconstrained": {
@@ -13080,7 +13106,7 @@
                 "label": "RDA Work properties"
             },
             "label": {
-                "en": "is continued in part by work",
+                "en": "is separated into work",
                 "da": "er delvis fortsat i (værk)",
                 "vi": "được tiếp tục một phần bởi (tác phẩm)",
                 "de": "ist teilweise fortgesetzt durch (Werk)",
@@ -13090,11 +13116,11 @@
                 "el": "συνεχίζεται μερικώς από (έργο)",
                 "hu": "részben folytatva (mű)"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/continuedInPartByWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/separatedIntoWork.en",
             "name": "MűÁltalRészbenfolytatva",
             "note": {
                 "en": [
-                    "This relationship applies generally to serials."
+                    "This element applies in general to a successive work."
                 ],
                 "da": [
                     "Anvend generelt for periodika."
@@ -13133,7 +13159,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work part of whose content separated from an earlier work to form a new work.",
+                "en": "A work that is a diachronic work that continues the partial content of another diachronic work that is continuing.",
                 "fr": "Œuvre dont une partie du contenu a été détachée d’une œuvre antérieure pour former une nouvelle œuvre.",
                 "es": "Una obra de la cual parte de su contenido se separa de una obra anterior para formar una nueva obra.",
                 "da": "Værk, hvoraf en del af indholdet er udskilt fra et tidligere værk, så et nyt værk er dannet.",
@@ -13146,7 +13172,7 @@
                 "hu": "Egy mű, amelynek tartalma egy részét elválasztják egy korábbi műtől, hogy egy új művet hozzanak létre."
             },
             "ToolkitLabel": {
-                "en": "continued in part by work",
+                "en": "separated into work",
                 "fr": "continué en partie par (œuvre)",
                 "es": "continuada en parte por (obra)",
                 "da": "delvis fortsat i (værk)",
@@ -14824,9 +14850,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10121",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/analysedInWork.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/workAnalysedIn.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15424.html",
-                    "label": "is analysed in work"
+                    "label": "is work analysed in"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10118",
@@ -15138,9 +15164,14 @@
         {
             "@id": "http://rdaregistry.info/Elements/w/P10121",
             "@type": "Property",
+            "altLabel": {
+                "en": [
+                    "analysed in (work)"
+                ]
+            },
             "description": {
                 "en": [
-                    "Relates a work to a work that examines a source work to identify its components and their relations."
+                    "Relates a work to a work that describes the structure of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk der undersøger et oprindeligt værk for at identificere dets bestanddele og deres relationer."
@@ -15177,9 +15208,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10121",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/analysedInWork.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/workAnalysedIn.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/24028.html",
-                    "label": "is analysed in work"
+                    "label": "is work analysed in"
                 }
             ],
             "hasUnconstrained": {
@@ -15195,7 +15226,7 @@
                 "label": "RDA Work properties"
             },
             "label": {
-                "en": "is analysed in work",
+                "en": "is work analysed in",
                 "da": "er analyseret i (værk)",
                 "vi": "được phân tích trong (tác phẩm)",
                 "de": "ist analysiert in (Werk)",
@@ -15205,7 +15236,7 @@
                 "el": "αναλύεται στο (έργο)",
                 "hu": "elemezve (mű)"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/analysedInWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/workAnalysedIn.en",
             "name": "Műbenelemezve",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -15222,7 +15253,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that examines a source work to identify its components and their relations.",
+                "en": "A work that describes the structure of another work.",
                 "fr": "Œuvre qui examine une œuvre source pour identifier ses composantes et leurs relations.",
                 "es": "Una obra que examina la obra fuente para identificar sus componentes y sus relaciones.",
                 "da": "Værk der undersøger et oprindeligt værk for at identificere dets bestanddele og deres relationer.",
@@ -15235,7 +15266,7 @@
                 "hu": "Egy mű, amely egy forrásművet vizsgál, hogy azonosítsa annak alkotóelemeit és azok viszonyait."
             },
             "ToolkitLabel": {
-                "en": "analysed in work",
+                "en": "work analysed in",
                 "fr": "analysé dans (œuvre)",
                 "es": "analizada en (obra)",
                 "da": "analyseret i (værk)",
@@ -15296,9 +15327,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10122",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/prequel.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/prequelWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/24029.html",
-                    "label": "is prequel"
+                    "label": "has prequel work"
                 }
             ],
             "hasUnconstrained": {
@@ -15314,7 +15345,7 @@
                 "label": "RDA Work properties"
             },
             "label": {
-                "en": "has prequel",
+                "en": "has prequel work",
                 "da": "er forhistorie",
                 "vi": "là tác phẩm mở rộng",
                 "de": "ist Prequel",
@@ -15324,7 +15355,7 @@
                 "el": "είναι προοίμιο",
                 "hu": "előzmény"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/prequel.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/prequelWork.en",
             "name": "előzmény",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -15354,7 +15385,7 @@
                 "hu": "Egy mű, amely egy korábbi mű narratíváját időben visszafelé kitágítja."
             },
             "ToolkitLabel": {
-                "en": "prequel",
+                "en": "prequel work",
                 "fr": "antépisode",
                 "es": "precuela",
                 "da": "forhistorie",
@@ -17352,7 +17383,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that is examined to identify its components and their relations."
+                    "Relates a work to a work whose structure is described by another work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der er blevet undersøgt for at identificere dets bestanddele og deres relationer."
@@ -17434,7 +17465,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that is examined to identify its components and their relations.",
+                "en": "A work whose structure is described by another work.",
                 "fr": "Œuvre qui a été examinée pour identifier ses composantes et leurs relations.",
                 "es": "Una obra que ha sido examinada para identificar sus componentes y sus relaciones.",
                 "da": "Værk, der er blevet undersøgt for at identificere dets bestanddele og deres relationer.",
@@ -17517,6 +17548,12 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/issue.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/23759.html",
                     "label": "has issue"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10410",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/specialIssue.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35556.html",
+                    "label": "has special issue"
                 }
             ],
             "hasUnconstrained": {
@@ -17749,7 +17786,7 @@
             "name": "Műadaptációja",
             "note": {
                 "en": [
-                    "This relationship applies to changes in form or to works completely rewritten in the same form."
+                    "This element applies to changes in form or to works completely rewritten in the same form."
                 ],
                 "da": [
                     "Gælder for ændringer i form eller for værker, der er omskrevet fuldstændigt i samme form."
@@ -18054,7 +18091,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that incorporates a related work."
+                    "Relates a work to a work whose content incorporates the content of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der inkorporerer et andet værk."
@@ -18136,7 +18173,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that incorporates a related work.",
+                "en": "A work whose content incorporates the content of another work.",
                 "fr": "Œuvre qui intègre une autre œuvre.",
                 "es": "Una obra que incorpora otra obra.",
                 "da": "Værk, der inkorporerer et andet værk.",
@@ -18168,7 +18205,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that incorporates part of the content of a related work."
+                    "Relates a work to a work whose content incorporates the partial content of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der inkorporerer en del af et andet værks indhold."
@@ -18250,7 +18287,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that incorporates part of the content of a related work.",
+                "en": "A work whose content incorporates the partial content of another work.",
                 "fr": "Œuvre qui intègre une partie du contenu d’une autre œuvre.",
                 "es": "Una obra que incorpora parte del contenido de otra obra.",
                 "da": "Værk, der inkorporerer en del af et andet værks indhold.",
@@ -19512,7 +19549,7 @@
             "name": "Műkéntátdolgozva",
             "note": {
                 "en": [
-                    "This relationship applies to changes in form or to works completely rewritten in the same form."
+                    "This element applies to changes in form or to works completely rewritten in the same form."
                 ],
                 "da": [
                     "Denne relation gælder for ændringer i form eller for værker, der er omskrevet fuldstændigt i samme form."
@@ -19583,7 +19620,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that precedes, that is, is earlier in time or before in a narrative, etc., a succeeding work."
+                    "Relates a work to a work whose chronological coverage is before that of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der går forud for det efterfølgende værk, fx på et tidligere tidspunkt eller før noget i en fortælling."
@@ -19620,15 +19657,15 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10122",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/prequel.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/prequelWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15425.html",
-                    "label": "has prequel"
+                    "label": "has prequel work"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10168",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/continuationInPartOfWork.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/splitFromWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15471.html",
-                    "label": "is continuation in part of work"
+                    "label": "is split from work"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10169",
@@ -19731,7 +19768,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that precedes, that is, is earlier in time or before in a narrative, etc., a succeeding work.",
+                "en": "A work whose chronological coverage is before that of another work.",
                 "fr": "Œuvre qui précède une œuvre suivante, c’est-à-dire qui lui est antérieure dans le temps ou dans un récit.",
                 "es": "Una obra que precede (por ej., es anterior en el tiempo en una narración) a otra que la sigue.",
                 "da": "Værk, der går forud for det efterfølgende værk, fx på et tidligere tidspunkt eller før noget i en fortælling.",
@@ -21039,9 +21076,14 @@
         {
             "@id": "http://rdaregistry.info/Elements/w/P10168",
             "@type": "Property",
+            "altLabel": {
+                "en": [
+                    "continuation in part of work"
+                ]
+            },
             "description": {
                 "en": [
-                    "Relates a work to a work that split into two or more separate works with new titles."
+                    "Relates a work to a work that is a diachronic work that is completed whose partial content is continued by another diachronic work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der er delt i to eller flere separate værker med nye titler."
@@ -21078,9 +21120,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10168",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/continuationInPartOfWork.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/splitFromWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/24075.html",
-                    "label": "is continuation in part of work"
+                    "label": "is split from work"
                 }
             ],
             "hasUnconstrained": {
@@ -21096,7 +21138,7 @@
                 "label": "RDA Work properties"
             },
             "label": {
-                "en": "is continuation in part of work",
+                "en": "is split from work",
                 "da": "er delvis fortsættelse af (værk)",
                 "vi": "là tiếp tục một phần của (tác phẩm)",
                 "de": "ist teilweise Fortsetzung von (Werk)",
@@ -21106,11 +21148,11 @@
                 "el": "είναι συνέχεια σε μέρη του (έργου)",
                 "hu": "részleges folytatása (mű)"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/continuationInPartOfWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/splitFromWork.en",
             "name": "MűRészlegesfolytatása",
             "note": {
                 "en": [
-                    "This relationship applies generally to serials."
+                    "This element applies in general to a successive work."
                 ],
                 "da": [
                     "Denne relation anvendes generelt for periodika."
@@ -21149,7 +21191,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that split into two or more separate works with new titles.",
+                "en": "A work that is a diachronic work that is completed whose partial content is continued by another diachronic work.",
                 "fr": "Œuvre qui s’est scindée en deux ou plusieurs œuvres distinctes avec de nouveaux titres.",
                 "es": "Una obra que se divide en dos o más obras separadas con títulos nuevos.",
                 "da": "Værk, der er delt i to eller flere separate værker med nye titler.",
@@ -21162,7 +21204,7 @@
                 "hu": "Egy mű, amely kettő vagy több különálló műre bomlott új címekkel."
             },
             "ToolkitLabel": {
-                "en": "continuation in part of work",
+                "en": "split from work",
                 "fr": "continuation partielle de (œuvre)",
                 "es": "continúa en parte (obra)",
                 "da": "delvis fortsættelse af (værk)",
@@ -21181,7 +21223,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that spun off a part of its content to form a new work."
+                    "Relates a work to a work that is a diachronic work that is continuing whose partial content is continued by another diachronic work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, hvoraf en del af indholdet er udskilt, så der er dannet et nyt værk."
@@ -21248,6 +21290,11 @@
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/w/separatedFromWork.en",
             "name": "Műtőlelválasztva",
+            "note": {
+                "en": [
+                    "This element applies in general to a successive work."
+                ]
+            },
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
                 "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -21263,7 +21310,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that spun off a part of its content to form a new work.",
+                "en": "A work that is a diachronic work that is continuing whose partial content is continued by another diachronic work.",
                 "fr": "Œuvre dont une partie du contenu a été détachée pour former une nouvelle œuvre.",
                 "es": "Una obra que se desprende de una parte de su contenido para formar una obra nueva.",
                 "da": "Værk, hvoraf en del af indholdet er udskilt, så der er dannet et nyt værk.",
@@ -21295,7 +21342,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that succeeds, that is, is later in time or after in a narrative, etc., a preceding work."
+                    "Relates a work to a work whose chronological coverage is after that of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der følger efter det forudgående værk, dvs. på et senere tidspunkt eller efter noget i en fortælling."
@@ -21332,9 +21379,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10020",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/sequel.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/sequelWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15323.html",
-                    "label": "has sequel"
+                    "label": "has sequel work"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10021",
@@ -21350,9 +21397,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10104",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/continuedInPartByWork.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/separatedIntoWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15407.html",
-                    "label": "is continued in part by work"
+                    "label": "is separated into work"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10145",
@@ -21443,7 +21490,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that succeeds, that is, is later in time or after in a narrative, etc., a preceding work.",
+                "en": "A work whose chronological coverage is after that of another work.",
                 "fr": "Œuvre qui succède à une œuvre précédente, c’est-à-dire qui lui est ultérieure dans le temps ou dans un récit.",
                 "es": "Una obra que reemplaza (por ej., más tarde en el tiempo o después en una narración) la obra anterior.",
                 "da": "Værk, der følger efter det forudgående værk, dvs. på et senere tidspunkt eller efter noget i en fortælling.",
@@ -23875,7 +23922,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work whose content continues an earlier work."
+                    "Relates a work to a work that is a diachronic work that continues the content of another diachronic work that is completed."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, hvis indhold fortsætter et tidligere værk."
@@ -23944,7 +23991,7 @@
             "name": "MűÁltalfolytatva",
             "note": {
                 "en": [
-                    "This relationship applies generally to serials."
+                    "This element applies in general to a successive work."
                 ],
                 "da": [
                     "Denne relation anvendes generelt for periodika."
@@ -23983,7 +24030,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work whose content continues an earlier work.",
+                "en": "A work that is a diachronic work that continues the content of another diachronic work that is completed.",
                 "fr": "Œuvre dont le contenu continue une œuvre antérieure.",
                 "es": "Una obra cuyo contenido continúa una obra anterior bajo un título nuevo.",
                 "da": "Værk, hvis indhold fortsætter et tidligere værk.",
@@ -25800,7 +25847,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to an earlier work whose content is partially replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete."
+                    "Relates a work to a work whose content is partially superseded and rendered obsolete by the content of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et tidligere værk, hvis indhold er blevet delvist erstattet af et senere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."
@@ -25869,7 +25916,7 @@
             "name": "MűRészlegeshelyettesítése",
             "note": {
                 "en": [
-                    "This relationship applies generally to single-part units, multipart monographs, and integrating resources."
+                    "This element applies in general to a static work or an integrating work."
                 ],
                 "da": [
                     "Denne relation anvendes generelt til enkeltstående monografier, flerbindsværker og integrerende ressourcer."
@@ -25908,7 +25955,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "An earlier work whose content is partially replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete.",
+                "en": "A work whose content is partially superseded and rendered obsolete by the content of another work.",
                 "fr": "Œuvre antérieure dont le contenu a été partiellement remplacé par une œuvre ultérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète.",
                 "es": "Una obra anterior cuyo contenido ha sido reemplazado parcialmente por una obra posterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la obra anterior.",
                 "da": "Tidligere værk, hvis indhold er blevet delvist erstattet af et senere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet.",
@@ -25940,7 +25987,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to an earlier work whose content is replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete."
+                    "Relates a work to a work whose content is superseded and rendered obsolete by the content of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et tidligere værk, hvis indhold er blevet erstattet af et senere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."
@@ -26009,7 +26056,7 @@
             "name": "Műhelyettesítése",
             "note": {
                 "en": [
-                    "This relationship applies generally to single-part units, multipart monographs, and integrating resources."
+                    "This element applies in general to a static work or an integrating work."
                 ],
                 "da": [
                     "Denne relation anvendes generelt til enkeltstående monografier, flerbindsværker og integrerende ressourcer."
@@ -26048,7 +26095,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "An earlier work whose content is replaced by a later work, usually because the later work contains updated or new information that makes the earlier work obsolete.",
+                "en": "A work whose content is superseded and rendered obsolete by the content of another work.",
                 "fr": "Œuvre antérieure dont le contenu a été remplacé par une œuvre ultérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’œuvre antérieure obsolète.",
                 "es": "Una obra anterior cuyo contenido ha sido reemplazado por una obra posterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la obra anterior.",
                 "da": "Tidligere værk, hvis indhold er blevet erstattet af et senere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet.",
@@ -26416,7 +26463,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work resulting from division of an earlier work into two or more separate works."
+                    "Relates a work to a work that is a diachronic work that continues the partial content of another diachronic work that is completed."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der er resultatet af opdelingen af et tidligere værk i to eller flere separate værker."
@@ -26483,6 +26530,11 @@
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/w/splitIntoWork.en",
             "name": "Műrekettéválva",
+            "note": {
+                "en": [
+                    "This element applies in general to a successive work."
+                ]
+            },
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
                 "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -26498,7 +26550,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work resulting from division of an earlier work into two or more separate works.",
+                "en": "A work that is a diachronic work that continues the partial content of another diachronic work that is completed.",
                 "fr": "Œuvre qui résulte de la division d’une œuvre antérieure en deux ou plusieurs œuvres distinctes.",
                 "es": "Una de dos o más obras que resultan de la división de una obra anterior en obras separadas.",
                 "da": "Et værk, der er resultatet af opdelingen af et tidligere værk i to eller flere separate værker.",
@@ -27936,7 +27988,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that is incorporated into a related work."
+                    "Relates a work to a work whose content is incorporated in the content of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der er blevet inkorporeret i et andet værk."
@@ -28018,7 +28070,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that is incorporated into a related work.",
+                "en": "A work whose content is incorporated in the content of another work.",
                 "fr": "Œuvre qui a été intégrée dans une autre œuvre.",
                 "es": "La obra que se ha incorporado en otra obra.",
                 "da": "Værk, der er blevet inkorporeret i et andet værk.",
@@ -28050,7 +28102,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that is partially incorporated into a related work."
+                    "Relates a work to a work whose partial content is incorporated in the content of another work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der er delvis inkorporeret i et andet værk."
@@ -28132,7 +28184,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that is partially incorporated into a related work.",
+                "en": "A work whose partial content is incorporated in the content of another work.",
                 "fr": "Œuvre qui a été partiellement intégrée dans une autre œuvre.",
                 "es": "Una obra que incorpora parte del contenido de otra obra.",
                 "da": "Værk, der er delvis inkorporeret i et andet værk.",
@@ -28164,7 +28216,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a work that is continued by the content of a later work."
+                    "Relates a work to a work that is a diachronic work that is completed whose content is continued by another diachronic work."
                 ],
                 "da": [
                     "Relaterer et værk til et værk, der fortsættes af et senere værks indhold."
@@ -28233,7 +28285,7 @@
             "name": "Műfolytatása",
             "note": {
                 "en": [
-                    "This relationship applies generally to serials."
+                    "This element applies in general to a successive work."
                 ],
                 "da": [
                     "Denne relation anvends generelt for periodika."
@@ -28272,7 +28324,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A work that is continued by the content of a later work.",
+                "en": "A work that is a diachronic work that is completed whose content is continued by another diachronic work.",
                 "fr": "Œuvre qui est continuée par le contenu d’une œuvre ultérieure.",
                 "es": "La obra que es continuada por el contenido de una obra posterior.",
                 "da": "Værk, der fortsættes af et senere værks indhold.",
@@ -33104,7 +33156,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to an item that is examined to identify its components and their relations."
+                    "Relates a work to an item whose structure is described by a work."
                 ],
                 "da": [
                     "Relaterer et værk til et eksemplar beskrevet af et beskrivende værk."
@@ -33186,7 +33238,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "An item that is examined to identify its components and their relations.",
+                "en": "An item whose structure is described by a work.",
                 "fr": "Item qui a été examiné pour identifier ses composantes et leurs relations.",
                 "es": "Un ítem que ha sido examinado para identificar sus componentes y sus relaciones.",
                 "da": "Eksemplar beskrevet af et beskrivende værk.",
@@ -33818,7 +33870,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to a manifestation that is examined to identify its components and their relations."
+                    "Relates a work to a manifestation whose structure is described by a work."
                 ],
                 "da": [
                     "Relaterer et værk til en manifestation der er blevet undersøgt for at identificere dets elementer og deres relationer."
@@ -33900,7 +33952,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "A manifestation that is examined to identify its components and their relations.",
+                "en": "A manifestation whose structure is described by a work.",
                 "fr": "Manifestation qui a été examinée pour identifier ses composantes et leurs relations.",
                 "es": "Una manifestación que ha sido examinada para identificar sus componentes y sus relaciones.",
                 "da": "Manifestation der er blevet undersøgt for at identificere dets elementer og deres relationer.",
@@ -34532,7 +34584,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to an expression that is examined to identify its components and their relations."
+                    "Relates a work to an expression whose structure is described by a work."
                 ],
                 "da": [
                     "Relaterer et værk til et udtryk, der er blevet undersøgt for at identificere dets komponenter og deres relationer."
@@ -34614,7 +34666,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "An expression that is examined to identify its components and their relations.",
+                "en": "An expression whose structure is described by a work.",
                 "fr": "Expression qui a été examinée pour identifier ses composantes et leurs relations.",
                 "es": "Una expresión que ha sido examinada para identificar sus componentes y sus relaciones.",
                 "da": "Udtryk, der er blevet undersøgt for at identificere dets komponenter og deres relationer.",
@@ -36946,7 +36998,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to an agent who has legal or intellectual responsibility other than creation for the content of a serial, integrating resource, or multipart monographic work."
+                    "Relates a work to an agent who has legal or intellectual responsibility, but not creative responsibility, for the editorial policy and content of a diachronic work."
                 ],
                 "da": [
                     "Relaterer et værk til en agent, der er juridisk og/eller intellektuelt ansvarlig for indholdet, bortset fra dets skabelse, af et periodikum, en integrerende ressource eller et flerbindsværk."
@@ -37021,7 +37073,7 @@
             "name": "szerkesztőségiIgazgató",
             "note": {
                 "en": [
-                    "Revision, content clarification, etc., in an expression of a work is excluded."
+                    "Revision, clarification, or other change of content of an expression of a work is excluded."
                 ],
                 "da": [
                     "Omfatter ikke revisioner, indholdspræciseringer etc. i et udtryk af et værk."
@@ -37068,7 +37120,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "An agent who has legal or intellectual responsibility other than creation for the content of a serial, integrating resource, or multipart monographic work.",
+                "en": "An agent who has legal or intellectual responsibility, but not creative responsibility, for the editorial policy and content of a diachronic work.",
                 "da": "Agent, der er juridisk og/eller intellektuelt ansvarlig for indholdet, bortset fra dets skabelse, af et periodikum, en integrerende ressource eller et flerbindsværk.",
                 "vi": "Tác nhân có trách nhiệm pháp lý và/hoặc trú tuệ khác với sáng tạo nội dung của ấn phẩm nhiều kỳ, tài nguyên tích hợp, hoặc chuyên khảo nhiều phần.",
                 "de": "Ein Akteur, der rechtliche und/oder intellektuelle Verantwortung für den Inhalt einer fortlaufenden oder integrierenden Ressource oder einer mehrteiligen Monografie trägt.",
@@ -37098,7 +37150,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to an agent responsible for establishing a serial, integrating resource, or multipart monograph."
+                    "Relates a work to an agent who is responsible for initiating a diachronic work."
                 ],
                 "da": [
                     "Relaterer et værk til en agent, der er ansvarlig for at have etableret et periodikum, en integrerende ressource eller et flerbindsværk."
@@ -37186,7 +37238,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "An agent who is responsible for establishing a serial, integrating resource, or multipart monograph.",
+                "en": "An agent who is responsible for initiating a diachronic work.",
                 "da": "En agent, der er ansvarlig for at have etableret et periodikum, en integrerende ressource eller et flerbindsværk.",
                 "vi": "Tác nhân có trách nhiệm tạo lập ấn phẩm nhiều kỳ, tài nguyên tích hợp, hoặc chuyên khảo nhiều phần.",
                 "de": "Ein Akteur, der für das Begründen einer fortlaufenden oder einer integrierenden Ressource oder einer mehrteiligen Monografie verantwortlich ist.",
@@ -38070,6 +38122,12 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedRDAEntityOfRDAEntity.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/25155.html",
                     "label": "has related RDA entity of RDA entity"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/x/P00001",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedRDAEntityOfRDAEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/25155.html",
+                    "label": "has related RDA entity of RDA entity"
                 }
             ],
             "ToolkitDefinition": {
@@ -38259,6 +38317,12 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/manifestationOfWork.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15375.html",
                     "label": "has manifestation of work"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10406",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/sourceConsulted.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35501.html",
+                    "label": "has source consulted"
                 }
             ],
             "hasUnconstrained": {
@@ -38527,6 +38591,12 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/grantingInstitutionOrFaculty.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15511.html",
                     "label": "has granting institution or faculty"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10407",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/academicSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35513.html",
+                    "label": "has academic supervisor"
                 }
             ],
             "isDefinedBy": {
@@ -38955,7 +39025,7 @@
                     "@id": "http://rdaregistry.info/Elements/x/P00012",
                     "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedCollectiveAgentOfRDAEntity.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/25168.html",
-                    "label": "has related collective agentof RDA entity"
+                    "label": "has related collective agent of RDA entity"
                 }
             ],
             "ToolkitDefinition": {
@@ -39197,9 +39267,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/x/P00011",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedTimeSpanOfRDAEntity.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedTimespanOfRDAEntity.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/25167.html",
-                    "label": "has related time-span of RDA entity"
+                    "label": "has related timespan of RDA entity"
                 }
             ],
             "ToolkitDefinition": {
@@ -43453,6 +43523,18 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/staticVersion.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/35271.html",
                     "label": "has static version"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/datatype/P10377",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/transformationByExtensionPlan.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35465.html",
+                    "label": "has transformation by extension plan"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10377",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/transformationByExtensionPlan.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35467.html",
+                    "label": "has transformation by extension plan"
                 }
             ],
             "hasUnconstrained": {
@@ -43528,6 +43610,18 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/staticVersionOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/35281.html",
                     "label": "is static version of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/datatype/P10378",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/transformationByExtensionPlanOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35466.html",
+                    "label": "is transformation by extension plan of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10378",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/transformationByExtensionPlanOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35468.html",
+                    "label": "is transformation by extension plan of"
                 }
             ],
             "hasUnconstrained": {
@@ -44571,7 +44665,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a work to an agent who is responsible for creating a work that is an aggregation by selecting and arranging its components."
+                    "Relates a work to an agent who is responsible for creating an aggregating work by selecting and arranging expressions of other works."
                 ]
             },
             "domain": {
@@ -44628,7 +44722,7 @@
                 }
             ],
             "ToolkitDefinition": {
-                "en": "An agent who is responsible for creating a work that is an aggregation by selecting and arranging its components."
+                "en": "An agent who is responsible for creating an aggregating work by selecting and arranging expressions of other works."
             },
             "ToolkitLabel": {
                 "en": "aggregator"
@@ -44998,9 +45092,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10399",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/appellationOfWorkCluster.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/appellationOfWorkGroup.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/35402.html",
-                    "label": "has appellation of work cluster"
+                    "label": "has appellation of work group"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/P10401",
@@ -45073,9 +45167,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10400",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/identifierForWorkCluster.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/identifierForWorkGroup.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/35403.html",
-                    "label": "has identifier for work cluster"
+                    "label": "has identifier for work group"
                 }
             ],
             "isDefinedBy": {
@@ -45136,9 +45230,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/w/object/P10401",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/authorizedAccessPointForWorkCluster.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/authorizedAccessPointForWorkGroup.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/35404.html",
-                    "label": "has authorized access point for work cluster"
+                    "label": "has authorized access point for work group"
                 }
             ],
             "isDefinedBy": {
@@ -45334,6 +45428,451 @@
                 "en": "recording source"
             },
             "url": "http://metadataregistry.org/schemaprop/show/id/35463.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10405",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a work to an entity that is associated with a work."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "has element type": "1",
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/",
+                "url": "http://metadataregistry.org/schema/show/id/77.html",
+                "label": "RDA Work properties"
+            },
+            "label": {
+                "en": "has related entity of work"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/relatedEntityOfWork"
+            },
+            "name": "relatedEntityOfWork",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/x/P00028",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/x/relatedEntityOfRDAEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35481.html",
+                    "label": "has related entity of RDA entity"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "An entity that is associated with a work."
+            },
+            "ToolkitLabel": {
+                "en": "related entity of work"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35480.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10406",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a work to a manifestation in which there is evidence for a metadata work."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/datatype/P10406",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/sourceConsulted.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35502.html",
+                    "label": "has source consulted"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10406",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/sourceConsulted.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35503.html",
+                    "label": "has source consulted"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/",
+                "url": "http://metadataregistry.org/schema/show/id/77.html",
+                "label": "RDA Work properties"
+            },
+            "label": {
+                "en": "has source consulted"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/sourceConsulted.en"
+            },
+            "name": "sourceConsulted",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10309",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedManifestationOfWork.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/25222.html",
+                    "label": "has related manifestation of work"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "A manifestation in which there is evidence for a metadata work."
+            },
+            "ToolkitLabel": {
+                "en": "source consulted"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35501.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10407",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a work to a person who is responsible for overseeing academic activity of any kind that results in a work, including theses, research, and projects."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/datatype/P10407",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/academicSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35516.html",
+                    "label": "has academic supervisor"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10407",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/academicSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35519.html",
+                    "label": "has academic supervisor"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10041",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/degreeSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15344.html",
+                    "label": "has degree supervisor"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10408",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/projectSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35514.html",
+                    "label": "has project supervisor"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10409",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/researchSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35515.html",
+                    "label": "has research supervisor"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/",
+                "url": "http://metadataregistry.org/schema/show/id/77.html",
+                "label": "RDA Work properties"
+            },
+            "label": {
+                "en": "has academic supervisor"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/academicSupervisor.en"
+            },
+            "name": "academicSupervisor",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10311",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedAgentOfWork.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/25224.html",
+                    "label": "has related agent of work"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "A person who is responsible for overseeing academic activity of any kind that results in a work, including theses, research, and projects."
+            },
+            "ToolkitLabel": {
+                "en": "academic supervisor"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35513.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10408",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a work to an academic supervisor who is responsible for advising or supervising a project undertaken by a student that results in a work."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/datatype/P10408",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/projectSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35517.html",
+                    "label": "has project supervisor"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10408",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/projectSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35520.html",
+                    "label": "has project supervisor"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/",
+                "url": "http://metadataregistry.org/schema/show/id/77.html",
+                "label": "RDA Work properties"
+            },
+            "label": {
+                "en": "has project supervisor"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/projectSupervisor.en"
+            },
+            "name": "projectSupervisor",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10407",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/academicSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35513.html",
+                    "label": "has academic supervisor"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "An academic supervisor who is responsible for advising or supervising a project undertaken by a student that results in a work."
+            },
+            "ToolkitLabel": {
+                "en": "project supervisor"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35514.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10409",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a work to an academic supervisor who is responsible for advising or supervising research that results in a work."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/datatype/P10409",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/researchSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35518.html",
+                    "label": "has research supervisor"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10409",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/researchSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35521.html",
+                    "label": "has research supervisor"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/",
+                "url": "http://metadataregistry.org/schema/show/id/77.html",
+                "label": "RDA Work properties"
+            },
+            "label": {
+                "en": "has research supervisor"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/researchSupervisor.en"
+            },
+            "name": "researchSupervisor",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10407",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/academicSupervisor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35513.html",
+                    "label": "has academic supervisor"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "An academic supervisor who is responsible for advising or supervising research that results in a work."
+            },
+            "ToolkitLabel": {
+                "en": "research supervisor"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35515.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10410",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a work to a work that is an issue that is devoted to a specific topic."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/datatype/P10410",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/specialIssue.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35558.html",
+                    "label": "has special issue"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10410",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/specialIssue.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35560.html",
+                    "label": "has special issue"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/",
+                "url": "http://metadataregistry.org/schema/show/id/77.html",
+                "label": "RDA Work properties"
+            },
+            "label": {
+                "en": "has special issue"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/specialIssue.en"
+            },
+            "name": "specialIssue",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10141",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/issue.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15444.html",
+                    "label": "has issue"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "A work that is an issue that is devoted to a specific topic."
+            },
+            "ToolkitLabel": {
+                "en": "special issue"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35556.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10411",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a work to a work that has an issue that is devoted to a specific topic."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/datatype/P10411",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/datatype/specialIssueOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35559.html",
+                    "label": "is special issue of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/object/P10411",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/object/specialIssueOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/35561.html",
+                    "label": "is special issue of"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/w/",
+                "url": "http://metadataregistry.org/schema/show/id/77.html",
+                "label": "RDA Work properties"
+            },
+            "label": {
+                "en": "is special issue of"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/w/specialIssueOf.en"
+            },
+            "name": "specialIssueOf",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/w/P10102",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/w/issueOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15405.html",
+                    "label": "is issue of"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "A work that has an issue that is devoted to a specific topic."
+            },
+            "ToolkitLabel": {
+                "en": "special issue of"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/35557.html"
         }
     ]
 }

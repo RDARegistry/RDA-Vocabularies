@@ -1019,18 +1019,37 @@
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amely egy domináns kifejezési forma tartalmát bővíti. </rdakit:toolkitDefinition>
 </rdf:Description>
 
+<!-- Property: has category of expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20331">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has category of expression</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">categoryOfExpression</reg:name>
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20331" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20331" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/categoryOfExpression.en" />
+  <skos:definition xml:lang="en">Relates an expression to a type to which an expression belongs.</skos:definition>
+  <skos:altLabel xml:lang="en">type of expression</skos:altLabel>
+  <rdakit:toolkitLabel xml:lang="en">category of expression</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which an expression belongs.</rdakit:toolkitDefinition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00029" />
+</rdf:Description>
+
 <!-- Property: has censor -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20287">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">censor</reg:name>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/censor.en" />
-  <skos:definition xml:lang="en">Relates an expression to an agent who contributes to an expression by revising the content of another expression for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content substantially unchanged.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an agent who contributes to an expression by revising the content of another expression for the purpose of suppressing content deemed objectionable on moral, political, military, or other grounds, but leaving the nature and general content substantially unchanged.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60851" />
   <rdakit:toolkitLabel xml:lang="en">censor</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An agent who contributes to an expression by revising the content of another expression for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content substantially unchanged.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An agent who contributes to an expression by revising the content of another expression for the purpose of suppressing content deemed objectionable on moral, political, military, or other grounds, but leaving the nature and general content substantially unchanged.</rdakit:toolkitDefinition>
   <skos:scopeNote xml:lang="en">Substantial modification that results in the creation of a new work is excluded.</skos:scopeNote>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20327" />
   <rdakit:seeAlso rdf:resource="http://rdaregistry.info/Elements/w/P10061" />
@@ -1137,18 +1156,6 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20072" />
-</rdf:Description>
-
-<!-- Property: DEPRECATED -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20331">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
-  <rdfs:label xml:lang="en">has contributor to aggregated content (Deprecated)</rdfs:label>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="">contributorToAggregatedContent</reg:name>
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20331" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20331" />
 </rdf:Description>
 
 <!-- Property: has contributor to amalgamation -->
@@ -2122,6 +2129,71 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20072" />
 </rdf:Description>
 
+<!-- Property: is expression analysed in -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20270">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="en">expressionAnalysedIn</reg:name>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/expressionAnalysedIn.en" />
+  <skos:definition xml:lang="en">Relates an expression to a work that describes the structure of an expression of another work.</skos:definition>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60219" />
+  <rdakit:toolkitLabel xml:lang="en">expression analysed in</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that describes the structure of an expression of another work.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="fr">analysé dans (expression)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Œuvre qui examine une expression source pour identifier ses composantes et leurs relations.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">analizada en (expresión)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">Una obra que examina la expresión fuente para identificar sus componentes y sus relaciones.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20269" />
+  <rdakit:instructionNumber xml:lang="">23.5</rdakit:instructionNumber>
+  <rdfs:label xml:lang="en">is expression analysed in</rdfs:label>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20270" />
+  <rdfs:label xml:lang="fr">est analysé dans (expression)</rdfs:label>
+  <skos:definition xml:lang="fr">Met une expression en relation avec une œuvre qui examine une expression source pour identifier ses composantes et leurs relations.</skos:definition>
+  <reg:name xml:lang="vi">đượcPhânTíchTrongBiểuHiện</reg:name>
+  <rdfs:label xml:lang="vi">được phân tích trong (biểu hiện)</rdfs:label>
+  <skos:definition xml:lang="vi">Liên kết một biểu hiện với chi tác phẩm kiểm tra biểu hiện nguồn để nhận dạng các bộ phận cấu thành và quan hệ giữa chúng.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="vi">được phân tích trong (biểu hiện)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="vi">Tác phẩm kiểm tra biểu hiện nguồn để nhận dạng các bộ phận cấu thành và quan hệ giữa chúng.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">analyseretIUdtryk</reg:name>
+  <rdfs:label xml:lang="da">er analyseret i (udtryk)</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/analyseretIUdtryk.da" />
+  <skos:definition xml:lang="da">Relaterer et udtryk til et værk der undersøger et oprindeligt udtryk for at identificere dets dele og deres relationer.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="da">analyseret i (udtryk)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Værk der undersøger et oprindeligt udtryk for at identificere dets dele og deres relationer.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="el">αναλύεταιΣτηνΈκφραση</reg:name>
+  <rdfs:label xml:lang="el">αναλύεται στην (έκφραση)</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/αναλύεταιΣτηνΈκφραση.el" />
+  <skos:definition xml:lang="el">Συνδέει μια έκφραση με ένα έργο το οποίο εξετάζει μια έκφραση-πηγή για την ταύτιση των συστατικών του και τις σχέσεις τους.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="el">αναλύεται στην (έκφραση)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Ένα έργο το οποίο εξετάζει μια έκφραση-πηγή για την ταύτιση των συστατικών του και τις σχέσεις τους.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">ist analysiert in (Expression)</rdfs:label>
+  <skos:definition xml:lang="de">Setzt eine Expression mit einem Werk, das eine ursprüngliche Expression untersucht, um ihre Bestandteile und deren Beziehungen zu identifizieren, in Beziehung.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="de">Analysiert in (Expression)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Ein Werk, das eine ursprüngliche Expression untersucht, um ihre Bestandteile und deren Beziehungen zu identifizieren.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">és analitzat en (expressió)</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una expressió amb una obra que examina una expressió font per identificar els seus components i les seves relacions.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="ca">analitzat en (expressió)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Obra que examina una expressió font per identificar els seus components i les seves relacions.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">ekspressionAnalyysi</reg:name>
+  <rdfs:label xml:lang="fi">ekspression analyysi</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/ekspressionAnalyysi.fi" />
+  <skos:definition xml:lang="fi">Liittää ekspression teokseen, joka tutkii lähteenä olevan ekspression osia ja niiden välisiä suhteita.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="fi">ekspression analyysi</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Teos, joka tutkii lähteenä olevan ekspression osia ja niiden välisiä suhteita.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">analysert i (uttrykk)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">Et verk som utforsker et kildeuttrykk for å identifisere kildeuttrykkets elementer og forhold mellom elementene.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fr">analyséDansExpression</reg:name>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:name xml:lang="hu">Kifejezésiformábanelemezve</reg:name>
+  <rdfs:label xml:lang="hu">elemezve (kifejezési forma)</rdfs:label>
+  <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy műhöz, amely egy forráskifejezési formát vizsgál, hogy azonosítsa alkotóelemeit és azok viszonyait.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="hu">elemzése (kifejezési forma)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Egy mű, amely egy forráskifejezési formát vizsgál, hogy azonosítsa alkotóelemeit és azok viszonyait.</rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">analysed in (expression)</skos:altLabel>
+</rdf:Description>
+
 <!-- Property: has extent of expression -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20321">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
@@ -2144,14 +2216,14 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">splitIntoExpression</reg:name>
-  <skos:definition xml:lang="en">Relates an expression to an expression of one of two or more works resulting from division of an earlier expression into separate expressions.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is a diachronic work that continues the partial content of another diachronic work that is completed.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/splitIntoExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60503" />
   <rdakit:toolkitLabel xml:lang="en">split into expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of one of two or more works resulting from division of an earlier expression into separate expressions.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is a diachronic work that continues the partial content of another diachronic work that is completed.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">scindé en (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression de l’une de deux ou plusieurs œuvres résultant de la division d’une expression antérieure en expressions distinctes.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">escindida en (expresión)</rdakit:toolkitLabel>
@@ -2201,6 +2273,7 @@
   <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol két vagy több mű egyikének a kifejezési formájához, egy korábbi kifejezési forma különálló kifejezési formákba történt felosztásának eredményeképpen. </skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">kettévált (kifejezési forma)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Két vagy több mű egyikének egy kifejezési formája, amely egy korábbi kifejezési forma különálló kifejezési formákká való felosztásának az eredménye. </rdakit:toolkitDefinition>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a successive work.</skos:scopeNote>
 </rdf:Description>
 
 <!-- Property: has date of capture -->
@@ -4992,7 +5065,6 @@
   <rdakit:toolkitLabel xml:lang="hu">rögzítési információk</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy hely, időpont vagy más információk, amelyek egy kifejezési forma tartalmának rögzítéséhez, filmezéséhez stb. kötődnek.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20004" />
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20309" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20218" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20217" />
 </rdf:Description>
@@ -6324,19 +6396,19 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">continuedByExpression</reg:name>
   <rdfs:label xml:lang="en">is continued by expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose content continues an expression of an earlier work.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is a diachronic work that continues the content of another diachronic work that is completed.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/continuedByExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60306" />
   <rdakit:toolkitLabel xml:lang="en">continued by expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose content continues an expression of an earlier work.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is a diachronic work that continues the content of another diachronic work that is completed.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">continué par (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre dont le contenu continue une expression d’une œuvre antérieure.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">continuada por (expresión)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra cuyo contenido continúa una entidad anterior bajo un título nuevo.</rdakit:toolkitDefinition>
-  <skos:scopeNote xml:lang="en">This relationship applies generally to serials.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a successive work.</skos:scopeNote>
   <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20191" />
   <rdfs:label xml:lang="fr">est continué par (expression)</rdfs:label>
@@ -6396,19 +6468,19 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">replacedByExpression</reg:name>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a later work used in place of an earlier expression, usually because the later work contains updated or new information that makes the earlier expression obsolete.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose content supersedes and renders obsolete the content of an expression of another work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/replacedByExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60104" />
   <rdakit:toolkitLabel xml:lang="en">replaced by expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a later work used in place of an earlier expression, usually because the later work contains updated or new information that makes the earlier expression obsolete.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose content supersedes and renders obsolete the content of an expression of another work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">remplacé par (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre ultérieure utilisée à la place d’une expression antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’expression antérieure obsolète.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">reemplazo de (expresión)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra anterior cuyo contenido ha sido reemplazado por una expresión posterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la expresión anterior.</rdakit:toolkitDefinition>
-  <skos:scopeNote xml:lang="en">This relationship applies generally to single-part units, multipart monographs, and integrating resources.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a static work or an integrating work.</skos:scopeNote>
   <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
   <rdfs:label xml:lang="en">is replaced by expression</rdfs:label>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20076" />
@@ -6534,6 +6606,7 @@
   <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy mű kifejezési formájához, amely egy korábbi kifejezési formát követ, azaz később vagy utána történik a narratívában stb.</skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">folytatása (kifejezési forma)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amely egy megelőző kifejezési formát követ, azaz időben későbbi vagy azt követi egy narratívában stb. </rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20335" />
 </rdf:Description>
 
 <!-- Property: is preceded by expression -->
@@ -6606,6 +6679,7 @@
   <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy mű kifejezési formájához, amely megelőz egy azt követő kifejezési formát, azaz időben korábban vagy narratívában stb. előtte áll. </skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">előzménye (kifejezési forma)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amely egy rákövetkező kifejezési formát megelőz, azaz időben korábbi vagy előtti egy narratívában stb. </rdakit:toolkitDefinition>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20334" />
 </rdf:Description>
 
 <!-- Property: is replaced in part by expression -->
@@ -6613,19 +6687,19 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">replacedInPartByExpression</reg:name>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a later work used in part in place of an earlier expression usually because the later work contains updated or new information that makes part of the earlier expression obsolete.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose content partially supersedes and renders obsolete the content of an expression of another work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/replacedInPartByExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60103" />
   <rdakit:toolkitLabel xml:lang="en">replaced in part by expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a later work used in part in place of an earlier expression usually because the later work contains updated or new information that makes part of the earlier expression obsolete.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose content partially supersedes and renders obsolete the content of an expression of another work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">remplacé en partie par (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre ultérieure utilisée en partie à la place d’une expression antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend une partie de l’expression antérieure obsolète.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">reemplazo en parte de (expresión)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra anterior cuyo contenido ha sido reemplazado parcialmente por una expresión posterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la expresión anterior.</rdakit:toolkitDefinition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
-  <skos:scopeNote xml:lang="en">This relationship applies generally to single-part units, multipart monographs, and integrating resources.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a static work.</skos:scopeNote>
   <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
   <rdfs:label xml:lang="en">is replaced in part by expression</rdfs:label>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20075" />
@@ -6679,70 +6753,6 @@
   <skos:scopeNote xml:lang="hu">Ez a kapcsolat általában az egyrészes egységekre, többrészes monográfiákra és integráló forrásokra érvényes. </skos:scopeNote>
   <rdakit:toolkitLabel xml:lang="hu">részben helyettesítve (kifejezési forma)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy olyan mű kifejezési formája, amelyet részben egy korábbi kifejezési forma helyett használnak, rendszerint  azért, mert a későbbi mű olyan frissített vagy új információkat tartalmaz, amelyek a korábbi kifejezési formát részben elavulttá teszik.</rdakit:toolkitDefinition>
-</rdf:Description>
-
-<!-- Property: is analysed in expression -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20270">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">analysedInExpression</reg:name>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/analysedInExpression.en" />
-  <skos:definition xml:lang="en">Relates an expression to a work that examines a source expression to identify its components and their relations.</skos:definition>
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60219" />
-  <rdakit:toolkitLabel xml:lang="en">analysed in expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that examines a source expression to identify its components and their relations.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="fr">analysé dans (expression)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Œuvre qui examine une expression source pour identifier ses composantes et leurs relations.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">analizada en (expresión)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">Una obra que examina la expresión fuente para identificar sus componentes y sus relaciones.</rdakit:toolkitDefinition>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20269" />
-  <rdakit:instructionNumber xml:lang="">23.5</rdakit:instructionNumber>
-  <rdfs:label xml:lang="en">is analysed in expression</rdfs:label>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20270" />
-  <rdfs:label xml:lang="fr">est analysé dans (expression)</rdfs:label>
-  <skos:definition xml:lang="fr">Met une expression en relation avec une œuvre qui examine une expression source pour identifier ses composantes et leurs relations.</skos:definition>
-  <reg:name xml:lang="vi">đượcPhânTíchTrongBiểuHiện</reg:name>
-  <rdfs:label xml:lang="vi">được phân tích trong (biểu hiện)</rdfs:label>
-  <skos:definition xml:lang="vi">Liên kết một biểu hiện với chi tác phẩm kiểm tra biểu hiện nguồn để nhận dạng các bộ phận cấu thành và quan hệ giữa chúng.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="vi">được phân tích trong (biểu hiện)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="vi">Tác phẩm kiểm tra biểu hiện nguồn để nhận dạng các bộ phận cấu thành và quan hệ giữa chúng.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">analyseretIUdtryk</reg:name>
-  <rdfs:label xml:lang="da">er analyseret i (udtryk)</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/analyseretIUdtryk.da" />
-  <skos:definition xml:lang="da">Relaterer et udtryk til et værk der undersøger et oprindeligt udtryk for at identificere dets dele og deres relationer.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="da">analyseret i (udtryk)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Værk der undersøger et oprindeligt udtryk for at identificere dets dele og deres relationer.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="el">αναλύεταιΣτηνΈκφραση</reg:name>
-  <rdfs:label xml:lang="el">αναλύεται στην (έκφραση)</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/αναλύεταιΣτηνΈκφραση.el" />
-  <skos:definition xml:lang="el">Συνδέει μια έκφραση με ένα έργο το οποίο εξετάζει μια έκφραση-πηγή για την ταύτιση των συστατικών του και τις σχέσεις τους.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="el">αναλύεται στην (έκφραση)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Ένα έργο το οποίο εξετάζει μια έκφραση-πηγή για την ταύτιση των συστατικών του και τις σχέσεις τους.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">ist analysiert in (Expression)</rdfs:label>
-  <skos:definition xml:lang="de">Setzt eine Expression mit einem Werk, das eine ursprüngliche Expression untersucht, um ihre Bestandteile und deren Beziehungen zu identifizieren, in Beziehung.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="de">Analysiert in (Expression)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Ein Werk, das eine ursprüngliche Expression untersucht, um ihre Bestandteile und deren Beziehungen zu identifizieren.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">és analitzat en (expressió)</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una expressió amb una obra que examina una expressió font per identificar els seus components i les seves relacions.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="ca">analitzat en (expressió)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Obra que examina una expressió font per identificar els seus components i les seves relacions.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">ekspressionAnalyysi</reg:name>
-  <rdfs:label xml:lang="fi">ekspression analyysi</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/ekspressionAnalyysi.fi" />
-  <skos:definition xml:lang="fi">Liittää ekspression teokseen, joka tutkii lähteenä olevan ekspression osia ja niiden välisiä suhteita.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="fi">ekspression analyysi</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Teos, joka tutkii lähteenä olevan ekspression osia ja niiden välisiä suhteita.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">analysert i (uttrykk)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">Et verk som utforsker et kildeuttrykk for å identifisere kildeuttrykkets elementer og forhold mellom elementene.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fr">analyséDansExpression</reg:name>
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:name xml:lang="hu">Kifejezésiformábanelemezve</reg:name>
-  <rdfs:label xml:lang="hu">elemezve (kifejezési forma)</rdfs:label>
-  <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy műhöz, amely egy forráskifejezési formát vizsgál, hogy azonosítsa alkotóelemeit és azok viszonyait.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="hu">elemzése (kifejezési forma)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Egy mű, amely egy forráskifejezési formát vizsgál, hogy azonosítsa alkotóelemeit és azok viszonyait.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is expression described in -->
@@ -6821,14 +6831,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">absorptionOfExpression</reg:name>
   <rdfs:label xml:lang="en">is absorption of expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is incorporated into a related expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose content is incorporated in the content of an expression of another work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/absorptionOfExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60574" />
   <rdakit:toolkitLabel xml:lang="en">absorption of expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is incorporated into a related expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose content is incorporated in the content of an expression of another work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">absorption de (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui a été intégrée dans une autre expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">absorción de (expresión)</rdakit:toolkitLabel>
@@ -7024,19 +7034,19 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">replacementOfExpression</reg:name>
   <rdfs:label xml:lang="en">is replacement of expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of an earlier work whose content is replaced by a later expression, usually because the later work contains updated or new information that makes the earlier expression obsolete.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose content is superseded and rendered obsolete by the content of an expression of another work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/replacementOfExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60480" />
   <rdakit:toolkitLabel xml:lang="en">replacement of expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of an earlier work whose content is replaced by a later expression, usually because the later work contains updated or new information that makes the earlier expression obsolete.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose content is superseded and rendered obsolete by the content of an expression of another work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">remplacement de (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre antérieure dont le contenu a été remplacé par une expression ultérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’expression antérieure obsolète.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">reemplazo de (expresión)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra anterior cuyo contenido ha sido reemplazado por una expresión posterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la expresión anterior.</rdakit:toolkitDefinition>
-  <skos:scopeNote xml:lang="en">This relationship applies generally to single-part units, multipart monographs, and integrating resources.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a static work or an integrating work.</skos:scopeNote>
   <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20199" />
   <rdfs:label xml:lang="fr">est un remplacement de (expression)</rdfs:label>
@@ -7225,19 +7235,19 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">continuationOfExpression</reg:name>
   <rdfs:label xml:lang="en">is continuation of expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is continued by the content of an expression of a later work.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is a completed diachronic work whose content is continued by an expression of another diachronic work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/continuationOfExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60576" />
   <rdakit:toolkitLabel xml:lang="en">continuation of expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is continued by the content of an expression of a later work.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is a completed diachronic work whose content is continued by an expression of another diachronic work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">continuation de (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui est continuée par le contenu d’une expression d’une œuvre ultérieure.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">continuación de (expresión)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra que es continuada por el contenido de una expresión de una obra posterior.</rdakit:toolkitDefinition>
-  <skos:scopeNote xml:lang="en">This relationship applies generally to serials.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a successive work.</skos:scopeNote>
   <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20149" />
   <rdfs:label xml:lang="fr">est une continuation de (expression)</rdfs:label>
@@ -7621,14 +7631,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">absorbedByExpression</reg:name>
   <rdfs:label xml:lang="en">is absorbed by expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that incorporates a related expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose content incorporates the content of an expression of another work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/absorbedByExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60247" />
   <rdakit:toolkitLabel xml:lang="en">absorbed by expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that incorporates a related expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose content incorporates the content of an expression of another work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">absorbé par (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui intègre une autre expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">absorbida por (expresión)</rdakit:toolkitLabel>
@@ -7941,14 +7951,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">absorbedInPartByExpression</reg:name>
   <rdfs:label xml:lang="en">is absorbed in part by expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that incorporates part of the content of a related expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose content incorporates the partial content of an expression of another work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/absorbedInPartByExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60248" />
   <rdakit:toolkitLabel xml:lang="en">absorbed in part by expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that incorporates part of the content of a related expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose content incorporates the partial content of an expression of another work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">absorbé en partie par (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui intègre une partie du contenu d’une autre expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">absorbida en parte por (expresión)</rdakit:toolkitLabel>
@@ -10141,14 +10151,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">absorptionInPartOfExpression</reg:name>
   <rdfs:label xml:lang="en">is absorption in part of expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is partially incorporated into a related expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose partial content is incorporated in the content of an expression of another work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/absorptionInPartOfExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60575" />
   <rdakit:toolkitLabel xml:lang="en">absorption in part of expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is partially incorporated into a related expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose partial content is incorporated in the content of an expression of another work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">absorption partielle de (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui a été partiellement intégrée dans une autre expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">absorción en parte de (expresión)</rdakit:toolkitLabel>
@@ -10205,19 +10215,19 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">replacementInPartOfExpression</reg:name>
   <rdfs:label xml:lang="en">is replacement in part of expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of an earlier work whose content is partially replaced by a later expression, usually because the later work contains updated or new information that makes the earlier expression obsolete.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work whose content is partially superseded and rendered obsolete by the content of an expression of another work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/replacementInPartOfExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60479" />
   <rdakit:toolkitLabel xml:lang="en">replacement in part of expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of an earlier work whose content is partially replaced by a later expression, usually because the later work contains updated or new information that makes the earlier expression obsolete.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work whose content is partially superseded and rendered obsolete by the content of an expression of another work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">remplacement partiel de (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre antérieure dont le contenu a été partiellement remplacé par une expression ultérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend l’expression antérieure obsolète.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">reemplazo en parte de (expresión)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra anterior cuyo contenido ha sido reemplazado parcialmente por una expresión posterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta la expresión anterior.</rdakit:toolkitDefinition>
-  <skos:scopeNote xml:lang="en">This relationship applies generally to single-part units, multipart monographs, and integrating resources.</skos:scopeNote>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a static work.</skos:scopeNote>
   <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20198" />
   <rdfs:label xml:lang="fr">est un remplacement partiel de (expression)</rdfs:label>
@@ -10270,79 +10280,6 @@
   <skos:scopeNote xml:lang="hu">Ez a kapcsolat általában az egyrészes egységekre, többrészes monográfiákra és integráló forrásokra érvényes. </skos:scopeNote>
   <rdakit:toolkitLabel xml:lang="hu">részbeni helyettesítése (kifejezési forma)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy korábbi mű kifejezési formája, amelynek tartalmát részben egy későbbi kifejezési formára cseréltek le, rendszerint azért, mert a későbbi mű frissített vagy új információkat tartalmaz, amelyek a korábbi kifejezési formát elavulttá teszik. </rdakit:toolkitDefinition>
-</rdf:Description>
-
-<!-- Property: is continuation in part of expression -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20167">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">continuationInPartOfExpression</reg:name>
-  <rdfs:label xml:lang="en">is continuation in part of expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that split into two or more separate expressions with new titles.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/continuationInPartOfExpression.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60276" />
-  <rdakit:toolkitLabel xml:lang="en">continuation in part of expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that split into two or more separate expressions with new titles.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="fr">continuation partielle de (expression)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui s’est scindée en deux ou plusieurs expressions distinctes avec de nouveaux titres.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">continúa en parte (expresión)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra que se divide en dos o más entidades separadas con nuevos títulos.</rdakit:toolkitDefinition>
-  <skos:scopeNote xml:lang="en">This relationship applies generally to serials.</skos:scopeNote>
-  <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20167" />
-  <rdfs:label xml:lang="fr">est une continuation partielle de (expression)</rdfs:label>
-  <skos:definition xml:lang="fr">Met une expression en relation avec une expression d’une œuvre qui s’est scindée en deux ou plusieurs expressions distinctes avec de nouveaux titres.</skos:definition>
-  <reg:name xml:lang="vi">tiếpTụcMộtPhầnCủaBiểuHiện</reg:name>
-  <rdfs:label xml:lang="vi">là tiếp tục một phần của (biểu hiện)</rdfs:label>
-  <skos:definition xml:lang="vi">Liên kết một biểu hiện với biểu hiện của tác phẩm phân chia thành hai hoặc nhiều hơn biểu hiện riêng rẽ với các nhan đề mới.</skos:definition>
-  <skos:scopeNote xml:lang="vi">Mối quan hệ này áp dụng nói chung cho ấn phẩm nhiều kỳ.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="vi">tiếp tục một phần của (biểu hiện)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="vi">Biểu hiện của tác phẩm phân chia thành hai hoặc nhiều hơn biểu hiện riêng rẽ với các nhan đề mới.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">delvisFortsættelseAfUdtryk</reg:name>
-  <rdfs:label xml:lang="da">er delvis fortsættelse af (udtryk)</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/delvisFortsættelseAfUdtryk.da" />
-  <skos:definition xml:lang="da">Relaterer et udtryk til et udtryk af et værk, der er delt i to eller flere separate udtryk med nye titler.</skos:definition>
-  <skos:scopeNote xml:lang="da">Denne relation anvendes generelt for periodika.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="da">delvis fortsættelse af (udtryk)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Udtryk af et værk, der er delt i to eller flere separate udtryk med nye titler.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="el">συνέχειαΣεΜέρηΤηςΈκφρασης</reg:name>
-  <rdfs:label xml:lang="el">είναι συνέχεια σε μέρη της (έκφραση)</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/συνέχειαΣεΜέρηΤηςΈκφρασης.el" />
-  <skos:definition xml:lang="el">Συνδέει μια έκφραση με μια έκφραση ενός έργου το οποίο χωρίζεται σε δύο ή περισσότερες διακριτές εκφράσεις με νέους τίτλους.</skos:definition>
-  <skos:scopeNote xml:lang="el">Αυτή η σχέση βρίσκει εφαρμογή γενικά στα περιοδικά.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="el">συνέχεια σε μέρη της (έκφραση)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Μια έκφραση ενός έργου το οποίο χωρίζεται σε δύο ή περισσότερες διακριτές εκφράσεις με νέους τίτλους.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">ist teilweise Fortsetzung von (Expression)</rdfs:label>
-  <skos:definition xml:lang="de">Setzt eine Expression mit einer Expression eines Werks, die sich in mehrere separate Expressionen mit neuen Titeln gesplittet hat, in Beziehung.</skos:definition>
-  <skos:scopeNote xml:lang="de">Wird im Allgemeinen bei fortlaufenden Ressourcen angewendet.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="de">Teilweise Fortsetzung von (Expression)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Eine Expression eines Werks, die sich in mehrere separate Expressionen mit neuen Titeln gesplittet hat.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">és continuació en part de (expressió)</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una expressió amb una expressió d’una obra que es divideix en dues o més expressions separades amb títols nous.</skos:definition>
-  <skos:scopeNote xml:lang="ca">Aquesta relació s’aplica generalment a les publicacions en sèrie.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="ca">continuació en part de (expressió)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Expressió d’una obra que es divideix en dues o més expressions separades amb títols nous.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">jatkaaOsittainEkspressiota</reg:name>
-  <rdfs:label xml:lang="fi">jatkaa osittain ekspressiota</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/jatkaaOsittainEkspressiota.fi" />
-  <skos:definition xml:lang="fi">Liittää ekspression teoksen ekspressioon, joka on jakaantunut kahdeksi tai useammaksi uudelleen nimetyiksi ekspressioiksi Käytetään yleensä sarja-aineistossa.</skos:definition>
-  <skos:scopeNote xml:lang="fi">Tätä suhdetta käytetään yleensä sarja-aineistoissa.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="fi">jatkaa osittain ekspressiota</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Teoksen ekspressio, joka on jakaantunut kahdeksi tai useammaksi uudelleen nimetyiksi ekspressioiksi. Käytetään yleensä sarja-aineistossa.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">delvis fortsettelse av (uttrykk)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">Et uttrykk av et verk som ble delt opp i to eller flere adskilte uttrykk med nye titler.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fr">continuationPartielleDeExpression</reg:name>
-  <skos:scopeNote xml:lang="fr">Cette relation s’applique généralement aux publications en série.</skos:scopeNote>
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:name xml:lang="hu">Kifejezésiformarészlegesfolytatása</reg:name>
-  <rdfs:label xml:lang="hu">részleges folytatása (kifejezési forma)</rdfs:label>
-  <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy mű kifejezési formájához, amely két vagy több, új címekkel rendelkező, különálló kifejezési formává oszlott. </skos:definition>
-  <skos:scopeNote xml:lang="hu">Ez a kapcsolat általában időszaki kiadványokra (folyóiratokra vagy folytatódó dokumentumokra) érvényes.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="hu">részbeni folytatása (kifejezési forma)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amely két vagy több elkülönülő kifejezési formára bomlott új címekkel.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: is abridgement of expression -->
@@ -10607,14 +10544,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">separatedFromExpression</reg:name>
   <rdfs:label xml:lang="en">is separated from expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that spun off a part of its content to form a new expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is a diachronic work whose partial content is continued by an expression of another diachronic work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/separatedFromExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60277" />
   <rdakit:toolkitLabel xml:lang="en">separated from expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that spun off a part of its content to form a new expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is a diachronic work whose partial content is continued by an expression of another diachronic work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">scission de (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre dont une partie du contenu a été détachée pour former une nouvelle expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">separada de (expresión)</rdakit:toolkitLabel>
@@ -10663,6 +10600,7 @@
   <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy mű kifejezési formájához, amely tartalmának egy részét rendelkezésre bocsájtotta egy új kifejezési forma kialakítására. </skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">elválasztva (kifejezési forma)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amely tartalmának egy részét kipörgette és használatba adta egy új kifejezési forma létrehozása céljából.</rdakit:toolkitDefinition>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a successive work.</skos:scopeNote>
 </rdf:Description>
 
 <!-- Property: is remake of expression -->
@@ -13151,7 +13089,7 @@
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20309">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20071" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20217" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">noteOnCapture</reg:name>
   <rdfs:label xml:lang="en">has note on capture</rdfs:label>
@@ -13215,7 +13153,6 @@
   <skos:scopeNote xml:lang="hu">A felvételrögzítésről szóló megjegyzésbe olyan körülmények tartoznak, mint az élő adás vagy stúdiófelvétel, a használt eszközök stb. </skos:scopeNote>
   <rdakit:toolkitLabel xml:lang="hu">megjegyzés rögzítésről</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy megjegyzés, amely egy kifejezési forma tartalmának rögzítéséhez, filmezéséhez stb. kötődő információkat szolgáltat.</rdakit:toolkitDefinition>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20217" />
 </rdf:Description>
 
 <!-- Property: has note on changes in content characteristics -->
@@ -13223,7 +13160,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">noteOnChangesInContentCharacteristics</reg:name>
-  <skos:definition xml:lang="en">Relates an expression to a note on changes in content characteristics that occur in subsequent issues or parts of an expression issued in successive parts or between iterations of an integrating resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to a note on variations in the content characteristics of expressions of parts, issues, or iterations of a diachronic work.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20071" />
@@ -13231,7 +13168,7 @@
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60123" />
   <rdakit:instructionNumber xml:lang="">7.29.2</rdakit:instructionNumber>
   <rdakit:toolkitLabel xml:lang="en">note on changes in content characteristics</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A note on changes in content characteristics that occur in subsequent issues or parts of an expression issued in successive parts or between iterations of an integrating resource.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A note on variations in the content characteristics of expressions of parts, issues, or iterations of a diachronic work.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">note sur les changements dans les caractéristiques du contenu</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Note sur les changements dans les caractéristiques du contenu survenant dans les livraisons ou parties ultérieures d’une expression publiée en parties successives ou bien entre les différentes itérations d’une ressource intégratrice.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">nota sobre cambios en las características del contenido</rdakit:toolkitLabel>
@@ -14132,14 +14069,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">partExpression</reg:name>
   <rdfs:label xml:lang="en">has part expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is a discrete component of a larger expression.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression that is a discrete component of another expression.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20205" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/partExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60249" />
   <rdakit:toolkitLabel xml:lang="en">part expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is part of another worki.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression that is a discrete component of another expression.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">conteneur de (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui est une composante distincte d’une expression plus vaste.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">contiene (expresión)</rdakit:toolkitLabel>
@@ -14197,14 +14134,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">partOfExpression</reg:name>
   <rdfs:label xml:lang="en">is part of expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a larger work of which the expression is a discrete component.</skos:definition>
+  <skos:definition xml:lang="en">Relates an expression to an expression that has another expression as a discrete component.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20205" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/partOfExpression.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60101" />
   <rdakit:toolkitLabel xml:lang="en">part of expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that has another expression of a work as a discrete component</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An expression that has another expression as a discrete component.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="fr">contenu dans (expression)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre plus vaste dont l’expression est une composante distincte.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">contenida en (expresión)</rdakit:toolkitLabel>
@@ -14280,6 +14217,24 @@
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60588" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20315" />
+</rdf:Description>
+
+<!-- Property: has prequel expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20334">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has prequel expression</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/prequelExpression.en" />
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that extends the narrative of an expression of another work backwards in time.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">prequel expression</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that extends the narrative of an expression of another work backwards in time.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">prequelExpression</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20334" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20334" />
 </rdf:Description>
 
 <!-- Property: has prime meridian -->
@@ -14619,11 +14574,27 @@
   <rdakit:toolkitDefinition xml:lang="hu">Egy ágens (személy, család vagy testület), aki/amely egy mű kifejezési formájához hozzájárul azzal, hogy építészként, feltalálóként stb. részletes terveket vagy rajzokat készít épületekről, hajókról, repülőgépekről, gépekről, tárgyakról stb.</rdakit:toolkitDefinition>
 </rdf:Description>
 
+<!-- Property: has related entity of expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20333">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of expression</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/relatedEntityOfExpression" />
+  <skos:definition xml:lang="en">Relates an expression to an entity that is associated with an expression.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of expression</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with an expression.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfExpression</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00028" />
+</rdf:Description>
+
 <!-- Property: has related RDA entity of expression -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20297">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20333" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">relatedRDAEntityOfExpression</reg:name>
   <rdfs:label xml:lang="en">has related RDA entity of expression</rdfs:label>
@@ -14659,6 +14630,7 @@
   <rdfs:label xml:lang="hu">van kötődő entitása (kifejezési forma)</rdfs:label>
   <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy entitáshoz, amely egy leírt kifejezési formához  kötődik.</skos:definition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20301" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
 </rdf:Description>
 
 <!-- Property: has relief type -->
@@ -14755,79 +14727,6 @@
   <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy ágenshez (személyhez, családhoz vagy testülethez), aki/amely egy mű kifejezési formájához hozzájárul azzal, hogy a korábbi kifejezési formákat, amelyek sérültek vagy töredékesek lehetnek, helyreállítja és/vagy kombinálja egy új kifejezési forma létrehozásához.</skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">restaurátor (kifejezési forma)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy ágens (személy, család vagy testület), aki/amely egy mű kifejezési formájához hozzájárul azzal, hogy korábbi kifejezési formákat, amelyek sérültek vagy tördékesek lehetnek, helyreállít és/vagy kombinál új kifejezési forma létrehozása céljából. </rdakit:toolkitDefinition>
-</rdf:Description>
-
-<!-- Property: is continued in part by expression -->
-<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20101">
-  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <reg:name xml:lang="en">continuedInPartByExpression</reg:name>
-  <rdfs:label xml:lang="en">is continued in part by expression</rdfs:label>
-  <skos:definition xml:lang="en">Relates an expression to an expression of a work part of whose content separated from an earlier expression to form a new expression.</skos:definition>
-  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/continuedInPartByExpression.en" />
-  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60199" />
-  <rdakit:toolkitLabel xml:lang="en">continued in part by expression</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An expression of a work part of whose content separated from an earlier expression to form a new expression.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="fr">continué en partie par (expression)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre dont une partie du contenu a été détachée d’une expression antérieure pour former une nouvelle expression.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="es">continuada en parte por (expresión)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra parte de cuyo contenido se separó de una expresión anterior para formar una nueva expresión.</rdakit:toolkitDefinition>
-  <skos:scopeNote xml:lang="en">This relationship applies generally to serials.</skos:scopeNote>
-  <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
-  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20101" />
-  <rdfs:label xml:lang="fr">est continué en partie par (expression)</rdfs:label>
-  <skos:definition xml:lang="fr">Met une expression en relation avec une expression d’une œuvre dont une partie du contenu a été détachée d’une expression antérieure pour former une nouvelle expression.</skos:definition>
-  <reg:name xml:lang="vi">đượcTiếpTụcTheoPhầnBằngBiểuHiện</reg:name>
-  <rdfs:label xml:lang="vi">được tiếp tục theo phần bằng (biểu hiện)</rdfs:label>
-  <skos:definition xml:lang="vi">Liên kết một biểu hiện với biểu hiện của tác phẩm mà phần của nội dung được phân tách từ biểu hiện trước đây để hình thành biểu hiện mới.</skos:definition>
-  <skos:scopeNote xml:lang="vi">Mối quan hệ này áp dụng nói chung cho ấn phẩm nhiều kỳ.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="vi">được tiếp tục theo phần bằng (biểu hiện)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="vi">Biểu hiện của tác phẩm mà phần của nội dung được phân tách từ biểu hiện trước đây để hình thành biểu hiện mới.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="da">delvisFortsatIUdtryk</reg:name>
-  <rdfs:label xml:lang="da">er delvis fortsat i (udtryk)</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/delvisFortsatIUdtryk.da" />
-  <skos:definition xml:lang="da">Relaterer et udtryk til et udtryk af et værk, hvoraf en del af indholdet er udskilt fra et tidligere udtryk, så et nyt udtryk er dannet.</skos:definition>
-  <skos:scopeNote xml:lang="da">Denne relation anvendes generelt for periodika.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="da">delvis fortsat i (udtryk)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="da">Udtryk af et værk, hvoraf en del af indholdet er udskilt fra et tidligere udtryk, så et nyt udtryk er dannet.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="el">συνεχίζεταιΜερικώςΑπόΈκφραση</reg:name>
-  <rdfs:label xml:lang="el">συνεχίζεται μερικώς από (έκφραση)</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/συνεχίζεταιΜερικώςΑπόΈκφραση.el" />
-  <skos:definition xml:lang="el">Συνδέει μια έκφραση με μια έκφραση ενός έργου μέρος του περιεχομένου του οποίου διαχωρίστηκε από μια προηγούμενη έκφραση για να σχηματίσει μια νέα έκφραση.</skos:definition>
-  <skos:scopeNote xml:lang="el">Αυτή η σχέση βρίσκει εφαρμογή γενικά στα περιοδικά.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="el">συνεχίζεται μερικώς από (έκφραση)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="el">Μια έκφραση ενός έργου μέρος του περιεχομένου του οποίου διαχωρίστηκε από μια προηγούμενη έκφραση για να σχηματίσει μια νέα έκφραση.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="de">ist teilweise fortgesetzt von (Expression)</rdfs:label>
-  <skos:definition xml:lang="de">Setzt eine Expression mit einer Expression eines Werks, deren Inhalt teilweise aus einer früheren Expression abgetrennt wurde, um eine neue Expression zu bilden, in Beziehung.</skos:definition>
-  <skos:scopeNote xml:lang="de">Wird im Allgemeinen bei fortlaufenden Ressourcen angewendet.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="de">Teilweise fortgesetzt von (Expression)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="de">Eine Expression eines Werks, deren Inhalt teilweise aus einer früheren Expression abgetrennt wurde, um eine neue Expression zu bilden.</rdakit:toolkitDefinition>
-  <rdfs:label xml:lang="ca">és continuat en part per (expressió)</rdfs:label>
-  <skos:definition xml:lang="ca">Relaciona una expressió amb una expressió d’una part d’una obra el contingut de la qual s’ha separat d’una expressió anterior per formar una expressió nova.</skos:definition>
-  <skos:scopeNote xml:lang="ca">Aquesta relació s’aplica generalment a publicacions en sèrie.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="ca">continuat en part per (expressió)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="ca">Expressió d’una part d’una obra el contingut de la qual s’ha separat d’una expressió anterior per formar una expressió nova.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fi">jatkuuOsittainEkspressiossa</reg:name>
-  <rdfs:label xml:lang="fi">jatkuu osittain ekspressiossa</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/jatkuuOsittainEkspressiossa.fi" />
-  <skos:definition xml:lang="fi">Liittää ekspression  teoksen ekspressioon, joka on erotettu aiemmasta ekspressiosta uuden ekspression muodostamiseksi.</skos:definition>
-  <skos:scopeNote xml:lang="fi">Tätä suhdetta käytetään yleensä sarja-aineistoissa.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="fi">jatkuu osittain ekspressiossa</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="fi">Teoksen ekspressio, joka on erotettu aiemmasta ekspressiosta uuden ekspression muodostamiseksi.</rdakit:toolkitDefinition>
-  <rdakit:toolkitLabel xml:lang="no">fortsettes delvis i (uttrykk)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="no">Et uttrykk av et verk der en del av innholdet er skilt fra et tidligere uttrykk for å danne et nytt uttrykk.</rdakit:toolkitDefinition>
-  <reg:name xml:lang="fr">continuéEnPartieParExpression</reg:name>
-  <skos:scopeNote xml:lang="fr">Cette relation s’applique généralement aux publications en série.</skos:scopeNote>
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
-  <reg:name xml:lang="hu">részbenfolytatvaKifejezésiformaáltal</reg:name>
-  <rdfs:label xml:lang="hu">részben folytatva (kifejezési forma)</rdfs:label>
-  <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy mű kifejezési formájához, amelynek tartalmát elválasztották egy korábbi kifejezési formától egy új kifejezési forma kialakítása végett. </skos:definition>
-  <skos:scopeNote xml:lang="hu">Ez a kapcsolat általában időszaki kiadványokra (folyóiratokra vagy folytatódó dokumentumokra) érvényes.</skos:scopeNote>
-  <rdakit:toolkitLabel xml:lang="hu">részben folytatva (kifejezési forma)</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amelynek részbeni tartalmát egy korábbi kifejezési formától elválasztottak egy új kifejezési forma létrehozása céljából.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has on-screen participant -->
@@ -15080,6 +14979,98 @@
   <rdakit:toolkitDefinition xml:lang="hu">Egy ágens (személy, család vagy testület), aki/amely egy mű kifejezési formájához hozzájárul azzal, hogy egy eredeti művet lerövidít vagy tömörít, de a sajátosságokat és a tartalmat lényegében változatlanul hagyja. </rdakit:toolkitDefinition>
 </rdf:Description>
 
+<!-- Property: is separated into expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20101">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">separatedIntoExpression</reg:name>
+  <rdfs:label xml:lang="en">is separated into expression</rdfs:label>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a  work that is a diachronic work that continues the partial content of another diachronic work that is continuing.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/separatedIntoExpression.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60199" />
+  <rdakit:toolkitLabel xml:lang="en">separated into expression</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is a diachronic work that continues the partial content of another diachronic work that is continuing.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="fr">continué en partie par (expression)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre dont une partie du contenu a été détachée d’une expression antérieure pour former une nouvelle expression.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">continuada en parte por (expresión)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra parte de cuyo contenido se separó de una expresión anterior para formar una nueva expresión.</rdakit:toolkitDefinition>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a successive work.</skos:scopeNote>
+  <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20101" />
+  <rdfs:label xml:lang="fr">est continué en partie par (expression)</rdfs:label>
+  <skos:definition xml:lang="fr">Met une expression en relation avec une expression d’une œuvre dont une partie du contenu a été détachée d’une expression antérieure pour former une nouvelle expression.</skos:definition>
+  <reg:name xml:lang="vi">đượcTiếpTụcTheoPhầnBằngBiểuHiện</reg:name>
+  <rdfs:label xml:lang="vi">được tiếp tục theo phần bằng (biểu hiện)</rdfs:label>
+  <skos:definition xml:lang="vi">Liên kết một biểu hiện với biểu hiện của tác phẩm mà phần của nội dung được phân tách từ biểu hiện trước đây để hình thành biểu hiện mới.</skos:definition>
+  <skos:scopeNote xml:lang="vi">Mối quan hệ này áp dụng nói chung cho ấn phẩm nhiều kỳ.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="vi">được tiếp tục theo phần bằng (biểu hiện)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="vi">Biểu hiện của tác phẩm mà phần của nội dung được phân tách từ biểu hiện trước đây để hình thành biểu hiện mới.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">delvisFortsatIUdtryk</reg:name>
+  <rdfs:label xml:lang="da">er delvis fortsat i (udtryk)</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/delvisFortsatIUdtryk.da" />
+  <skos:definition xml:lang="da">Relaterer et udtryk til et udtryk af et værk, hvoraf en del af indholdet er udskilt fra et tidligere udtryk, så et nyt udtryk er dannet.</skos:definition>
+  <skos:scopeNote xml:lang="da">Denne relation anvendes generelt for periodika.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="da">delvis fortsat i (udtryk)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Udtryk af et værk, hvoraf en del af indholdet er udskilt fra et tidligere udtryk, så et nyt udtryk er dannet.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="el">συνεχίζεταιΜερικώςΑπόΈκφραση</reg:name>
+  <rdfs:label xml:lang="el">συνεχίζεται μερικώς από (έκφραση)</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/συνεχίζεταιΜερικώςΑπόΈκφραση.el" />
+  <skos:definition xml:lang="el">Συνδέει μια έκφραση με μια έκφραση ενός έργου μέρος του περιεχομένου του οποίου διαχωρίστηκε από μια προηγούμενη έκφραση για να σχηματίσει μια νέα έκφραση.</skos:definition>
+  <skos:scopeNote xml:lang="el">Αυτή η σχέση βρίσκει εφαρμογή γενικά στα περιοδικά.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="el">συνεχίζεται μερικώς από (έκφραση)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Μια έκφραση ενός έργου μέρος του περιεχομένου του οποίου διαχωρίστηκε από μια προηγούμενη έκφραση για να σχηματίσει μια νέα έκφραση.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">ist teilweise fortgesetzt von (Expression)</rdfs:label>
+  <skos:definition xml:lang="de">Setzt eine Expression mit einer Expression eines Werks, deren Inhalt teilweise aus einer früheren Expression abgetrennt wurde, um eine neue Expression zu bilden, in Beziehung.</skos:definition>
+  <skos:scopeNote xml:lang="de">Wird im Allgemeinen bei fortlaufenden Ressourcen angewendet.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="de">Teilweise fortgesetzt von (Expression)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Eine Expression eines Werks, deren Inhalt teilweise aus einer früheren Expression abgetrennt wurde, um eine neue Expression zu bilden.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">és continuat en part per (expressió)</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una expressió amb una expressió d’una part d’una obra el contingut de la qual s’ha separat d’una expressió anterior per formar una expressió nova.</skos:definition>
+  <skos:scopeNote xml:lang="ca">Aquesta relació s’aplica generalment a publicacions en sèrie.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="ca">continuat en part per (expressió)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Expressió d’una part d’una obra el contingut de la qual s’ha separat d’una expressió anterior per formar una expressió nova.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">jatkuuOsittainEkspressiossa</reg:name>
+  <rdfs:label xml:lang="fi">jatkuu osittain ekspressiossa</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/jatkuuOsittainEkspressiossa.fi" />
+  <skos:definition xml:lang="fi">Liittää ekspression  teoksen ekspressioon, joka on erotettu aiemmasta ekspressiosta uuden ekspression muodostamiseksi.</skos:definition>
+  <skos:scopeNote xml:lang="fi">Tätä suhdetta käytetään yleensä sarja-aineistoissa.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="fi">jatkuu osittain ekspressiossa</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Teoksen ekspressio, joka on erotettu aiemmasta ekspressiosta uuden ekspression muodostamiseksi.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">fortsettes delvis i (uttrykk)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">Et uttrykk av et verk der en del av innholdet er skilt fra et tidligere uttrykk for å danne et nytt uttrykk.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fr">continuéEnPartieParExpression</reg:name>
+  <skos:scopeNote xml:lang="fr">Cette relation s’applique généralement aux publications en série.</skos:scopeNote>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:name xml:lang="hu">részbenfolytatvaKifejezésiformaáltal</reg:name>
+  <rdfs:label xml:lang="hu">részben folytatva (kifejezési forma)</rdfs:label>
+  <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy mű kifejezési formájához, amelynek tartalmát elválasztották egy korábbi kifejezési formától egy új kifejezési forma kialakítása végett. </skos:definition>
+  <skos:scopeNote xml:lang="hu">Ez a kapcsolat általában időszaki kiadványokra (folyóiratokra vagy folytatódó dokumentumokra) érvényes.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="hu">részben folytatva (kifejezési forma)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amelynek részbeni tartalmát egy korábbi kifejezési formától elválasztottak egy új kifejezési forma létrehozása céljából.</rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">continued in part by expression</skos:altLabel>
+</rdf:Description>
+
+<!-- Property: has sequel expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20335">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has sequel expression</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/sequelExpression.en" />
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that extends the narrative of an expression of another work forwards in time.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">sequel expression</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that extends the narrative of an expression of another work forwards in time.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">sequelExpression</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20169" />
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20335" />
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20335" />
+</rdf:Description>
+
 <!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20235">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
@@ -15197,6 +15188,80 @@
   <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy ágenshez (személyhez, családhoz vagy testülethez), aki/amely hozzájárul egy mozgóképi mű vagy hangzómű kifejezési formájához azzal, hogy megtervezi és megalkotja az olyan helyszíni speciális effektusokat, mint például a helyszíni mechanikai hatások és kamerán belüli optikai effektusok.</skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">speciális effektusok szolgáltatója</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy ágens (személy, család vagy testület), aki egy mozgóképi vagy hangmű kifejezési formájához hozzájárul azzal, hogy megtervezi és megalkotja a helyszíni speciális effektusokat, mint például a forgatási helyszin mechanikai effektusait és a felvevőgép optikai effektusait. </rdakit:toolkitDefinition>
+</rdf:Description>
+
+<!-- Property: is split from expression -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/P20167">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <reg:name xml:lang="en">splitFromExpression</reg:name>
+  <rdfs:label xml:lang="en">is split from expression</rdfs:label>
+  <skos:definition xml:lang="en">Relates an expression to an expression of a work that is a diachronic work that is completed whose partial content is continued by an expression of another diachronic work.</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20154" />
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/splitFromExpression.en" />
+  <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60276" />
+  <rdakit:toolkitLabel xml:lang="en">split from expression</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An expression of a work that is a diachronic work that is completed whose partial content is continued by an expression of another diachronic work.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="fr">continuation partielle de (expression)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fr">Expression d’une œuvre qui s’est scindée en deux ou plusieurs expressions distinctes avec de nouveaux titres.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="es">continúa en parte (expresión)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="es">Una expresión de una obra que se divide en dos o más entidades separadas con nuevos títulos.</rdakit:toolkitDefinition>
+  <skos:scopeNote xml:lang="en">This element applies in general to an expression of a successive work.</skos:scopeNote>
+  <rdakit:instructionNumber xml:lang="">24.5</rdakit:instructionNumber>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20167" />
+  <rdfs:label xml:lang="fr">est une continuation partielle de (expression)</rdfs:label>
+  <skos:definition xml:lang="fr">Met une expression en relation avec une expression d’une œuvre qui s’est scindée en deux ou plusieurs expressions distinctes avec de nouveaux titres.</skos:definition>
+  <reg:name xml:lang="vi">tiếpTụcMộtPhầnCủaBiểuHiện</reg:name>
+  <rdfs:label xml:lang="vi">là tiếp tục một phần của (biểu hiện)</rdfs:label>
+  <skos:definition xml:lang="vi">Liên kết một biểu hiện với biểu hiện của tác phẩm phân chia thành hai hoặc nhiều hơn biểu hiện riêng rẽ với các nhan đề mới.</skos:definition>
+  <skos:scopeNote xml:lang="vi">Mối quan hệ này áp dụng nói chung cho ấn phẩm nhiều kỳ.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="vi">tiếp tục một phần của (biểu hiện)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="vi">Biểu hiện của tác phẩm phân chia thành hai hoặc nhiều hơn biểu hiện riêng rẽ với các nhan đề mới.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="da">delvisFortsættelseAfUdtryk</reg:name>
+  <rdfs:label xml:lang="da">er delvis fortsættelse af (udtryk)</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/delvisFortsættelseAfUdtryk.da" />
+  <skos:definition xml:lang="da">Relaterer et udtryk til et udtryk af et værk, der er delt i to eller flere separate udtryk med nye titler.</skos:definition>
+  <skos:scopeNote xml:lang="da">Denne relation anvendes generelt for periodika.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="da">delvis fortsættelse af (udtryk)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="da">Udtryk af et værk, der er delt i to eller flere separate udtryk med nye titler.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="el">συνέχειαΣεΜέρηΤηςΈκφρασης</reg:name>
+  <rdfs:label xml:lang="el">είναι συνέχεια σε μέρη της (έκφραση)</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/συνέχειαΣεΜέρηΤηςΈκφρασης.el" />
+  <skos:definition xml:lang="el">Συνδέει μια έκφραση με μια έκφραση ενός έργου το οποίο χωρίζεται σε δύο ή περισσότερες διακριτές εκφράσεις με νέους τίτλους.</skos:definition>
+  <skos:scopeNote xml:lang="el">Αυτή η σχέση βρίσκει εφαρμογή γενικά στα περιοδικά.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="el">συνέχεια σε μέρη της (έκφραση)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="el">Μια έκφραση ενός έργου το οποίο χωρίζεται σε δύο ή περισσότερες διακριτές εκφράσεις με νέους τίτλους.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="de">ist teilweise Fortsetzung von (Expression)</rdfs:label>
+  <skos:definition xml:lang="de">Setzt eine Expression mit einer Expression eines Werks, die sich in mehrere separate Expressionen mit neuen Titeln gesplittet hat, in Beziehung.</skos:definition>
+  <skos:scopeNote xml:lang="de">Wird im Allgemeinen bei fortlaufenden Ressourcen angewendet.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="de">Teilweise Fortsetzung von (Expression)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="de">Eine Expression eines Werks, die sich in mehrere separate Expressionen mit neuen Titeln gesplittet hat.</rdakit:toolkitDefinition>
+  <rdfs:label xml:lang="ca">és continuació en part de (expressió)</rdfs:label>
+  <skos:definition xml:lang="ca">Relaciona una expressió amb una expressió d’una obra que es divideix en dues o més expressions separades amb títols nous.</skos:definition>
+  <skos:scopeNote xml:lang="ca">Aquesta relació s’aplica generalment a les publicacions en sèrie.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="ca">continuació en part de (expressió)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="ca">Expressió d’una obra que es divideix en dues o més expressions separades amb títols nous.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fi">jatkaaOsittainEkspressiota</reg:name>
+  <rdfs:label xml:lang="fi">jatkaa osittain ekspressiota</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/jatkaaOsittainEkspressiota.fi" />
+  <skos:definition xml:lang="fi">Liittää ekspression teoksen ekspressioon, joka on jakaantunut kahdeksi tai useammaksi uudelleen nimetyiksi ekspressioiksi Käytetään yleensä sarja-aineistossa.</skos:definition>
+  <skos:scopeNote xml:lang="fi">Tätä suhdetta käytetään yleensä sarja-aineistoissa.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="fi">jatkaa osittain ekspressiota</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="fi">Teoksen ekspressio, joka on jakaantunut kahdeksi tai useammaksi uudelleen nimetyiksi ekspressioiksi. Käytetään yleensä sarja-aineistossa.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="no">delvis fortsettelse av (uttrykk)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="no">Et uttrykk av et verk som ble delt opp i to eller flere adskilte uttrykk med nye titler.</rdakit:toolkitDefinition>
+  <reg:name xml:lang="fr">continuationPartielleDeExpression</reg:name>
+  <skos:scopeNote xml:lang="fr">Cette relation s’applique généralement aux publications en série.</skos:scopeNote>
+  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <reg:name xml:lang="hu">Kifejezésiformarészlegesfolytatása</reg:name>
+  <rdfs:label xml:lang="hu">részleges folytatása (kifejezési forma)</rdfs:label>
+  <skos:definition xml:lang="hu">Egy kifejezési formát hozzákapcsol egy mű kifejezési formájához, amely két vagy több, új címekkel rendelkező, különálló kifejezési formává oszlott. </skos:definition>
+  <skos:scopeNote xml:lang="hu">Ez a kapcsolat általában időszaki kiadványokra (folyóiratokra vagy folytatódó dokumentumokra) érvényes.</skos:scopeNote>
+  <rdakit:toolkitLabel xml:lang="hu">részbeni folytatása (kifejezési forma)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="hu">Egy mű kifejezési formája, amely két vagy több elkülönülő kifejezési formára bomlott új címekkel.</rdakit:toolkitDefinition>
+  <skos:altLabel xml:lang="en">continuation in part of expression</skos:altLabel>
 </rdf:Description>
 
 <!-- Property: is subject expression of -->
@@ -16601,6 +16666,7 @@
   <rdakit:toolkitLabel xml:lang="hu">tartalomtípus</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Kategorizáció, amely a kommunikáció alapvető formáját tükrözi, amelyben kifejeződik a tartalom valamint az emberi érzékelés, amelyen keresztül azt szándék szerint felfogják.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20001" />
+  <skos:altLabel xml:lang="en">type of content</skos:altLabel>
 </rdf:Description>
 
 <!-- Property: is adapted as television program expression -->

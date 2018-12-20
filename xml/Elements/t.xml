@@ -95,6 +95,23 @@
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60998" />
 </rdf:Description>
 
+<!-- Property: has category of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70059">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has category of timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/categoryOfTimespan.en" />
+  <skos:definition xml:lang="en">Relates a timespan to a type to which a timespan belongs.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">category of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which a timespan belongs.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">categoryOfTimespan</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00029" />
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70059" />
+</rdf:Description>
+
 <!-- Property: is copyright date of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70019">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
@@ -220,14 +237,14 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70054" />
 </rdf:Description>
 
-<!-- Property: is date of conference, etc. of -->
+<!-- Property: is date of conference of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70031">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-  <reg:name xml:lang="en">dateOfConferenceEtcOf</reg:name>
-  <rdfs:label xml:lang="en">is date of conference, etc. of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfConferenceEtcOf.en" />
+  <reg:name xml:lang="en">dateOfConferenceOf</reg:name>
+  <rdfs:label xml:lang="en">is date of conference of</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/dateOfConferenceOf.en" />
   <skos:definition xml:lang="en">Relates a timespan to a conference, exhibition, or other event that gives rise to a work that is held during a timespan.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <rdakit:toolkitLabel xml:lang="en">date of conference, etc. of</rdakit:toolkitLabel>
@@ -620,6 +637,7 @@
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60936" />
   <rdakit:hasElementType xml:lang="">6</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/datatype/P70045" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00015" />
 </rdf:Description>
 
 <!-- Property: is part of timespan -->
@@ -630,10 +648,10 @@
   <reg:name xml:lang="en">partOfTimespan</reg:name>
   <rdfs:label xml:lang="en">is part of timespan</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/partOfTimespan.en" />
-  <skos:definition xml:lang="en">Relates a timespan to a timespan that is a component of another timespan.</skos:definition>
+  <skos:definition xml:lang="en">Relates a timespan to a timespan that has another timespan as a discrete component.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <rdakit:toolkitLabel xml:lang="en">part of timespan</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A timespan that is a component of another timespan.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A timespan that has another timespan as a discrete component.</rdakit:toolkitDefinition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70008" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70034" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
@@ -649,10 +667,10 @@
   <reg:name xml:lang="en">partTimespan</reg:name>
   <rdfs:label xml:lang="en">has part timespan</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/partTimespan.en" />
-  <skos:definition xml:lang="en">Relates a timespan to a timespan that has another timespan as a component.</skos:definition>
+  <skos:definition xml:lang="en">Relates a timespan to a timespan that is a discrete component of another timespan.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
   <rdakit:toolkitLabel xml:lang="en">part timespan</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A timespan that has another timespan as a component.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A timespan that is a discrete component of another timespan.</rdakit:toolkitDefinition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70008" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70035" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
@@ -848,6 +866,22 @@
   <skos:altLabel xml:lang="en">date associated with corporate body of</skos:altLabel>
 </rdf:Description>
 
+<!-- Property: has related entity of timespan -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70058">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of timespan</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/relatedEntityOfTimespan" />
+  <skos:definition xml:lang="en">Relates a timespan to an entity that is associated with a timespan.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of timespan</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with a timespan.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfTimespan</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00028" />
+</rdf:Description>
+
 <!-- Property: has related expression of timespan -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/P70002">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/" />
@@ -1021,6 +1055,7 @@
   <rdakit:toolkitDefinition xml:lang="en">An RDA entity that is associated with a timespan.</rdakit:toolkitDefinition>
   <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61035" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70058" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
 </rdf:Description>
 

@@ -360,6 +360,24 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
 </rdf:Description>
 
+<!-- Property: has category of item -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40096">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has category of item</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/categoryOfItem.en" />
+  <skos:definition xml:lang="en">Relates an item to a type to which an item belongs.</skos:definition>
+  <skos:altLabel xml:lang="en">type of item</skos:altLabel>
+  <rdakit:toolkitLabel xml:lang="en">category of item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A type to which an item belongs.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">categoryOfItem</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00029" />
+  <rdakit:hasElementType xml:lang="">5</rdakit:hasElementType>
+  <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40096" />
+</rdf:Description>
+
 <!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40043">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
@@ -1104,14 +1122,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
   <reg:name xml:lang="en">collectionRegistrar</reg:name>
   <rdfs:label xml:lang="en">has collection registrar</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to a curator who lists or inventories items in an aggregate work such as a collection of items or works.</skos:definition>
+  <skos:definition xml:lang="en">Relates an item to a curator who lists or inventories items in a collection aggregate.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40017" />
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectionRegistrar.en" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60067" />
   <rdakit:toolkitLabel xml:lang="en">collection registrar</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A curator who lists or inventories items in an aggregate work such as a collection of items or works.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A curator who lists or inventories items in a collection aggregate.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour conservateur de collection</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec un conservateur qui dresse une liste ou un inventaire des items faisant partie d’une œuvre agrégative telle qu’une collection d’items ou d’œuvres.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">conservateur de collection</rdakit:toolkitLabel>
@@ -3043,7 +3061,7 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P60219" />
   <rdakit:toolkitLabel xml:lang="en">item analysed in</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that examines a source item to identify its components and their relations.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that describes the structure of an item.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est analysé dans (item)</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec une œuvre qui examine un item source pour identifier ses composantes et leurs relations.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">analysé dans (item)</rdakit:toolkitLabel>
@@ -4022,11 +4040,27 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40044" />
 </rdf:Description>
 
+<!-- Property: has related entity of item -->
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40095">
+  <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+  <rdfs:label xml:lang="en">has related entity of item</rdfs:label>
+  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/relatedEntityOfItem" />
+  <skos:definition xml:lang="en">Relates an item to an entity that is associated with an item.</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">related entity of item</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An entity that is associated with an item.</rdakit:toolkitDefinition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:name xml:lang="">relatedEntityOfItem</reg:name>
+  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003" />
+  <rdakit:hasElementType xml:lang="">1</rdakit:hasElementType>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00028" />
+</rdf:Description>
+
 <!-- Property: has related RDA entity of item -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40068">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/" />
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40095" />
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
   <reg:name xml:lang="en">relatedRDAEntityOfItem</reg:name>
   <rdfs:label xml:lang="en">has related RDA entity of item</rdfs:label>
@@ -4070,6 +4104,7 @@
   <rdfs:label xml:lang="hu">van kapcsolódó entitása (példány)</rdfs:label>
   <skos:definition xml:lang="hu">Egy példányt hozzákapcsol egy entitáshoz, amely egy éppen leírt példányhoz kötődik.</skos:definition>
   <reg:hasUnconstrained rdf:resource="http://rdaregistry.info/Elements/u/P61034" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00001" />
 </rdf:Description>
 
 <!-- Property: is reprinted as item -->
