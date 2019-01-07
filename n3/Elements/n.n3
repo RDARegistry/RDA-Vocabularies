@@ -8,24 +8,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://rdaregistry.info/Elements/n/P80014> a rdf:Property ;
-    rdfs:label "is subject nomen of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that is about a nomen."@en ;
-    rdakit:toolkitLabel "subject nomen of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80014>,
-        <http://rdaregistry.info/Elements/n/object/P80014> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60806> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/subjectNomenOf.en> ;
-    reg:name "subjectNomenOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80001>,
-        <http://rdaregistry.info/Elements/x/P00014> ;
-    skos:altLabel "subject of (nomen)"@en ;
-    skos:definition "Relates a nomen to a work that is about a nomen."@en .
-
 <http://rdaregistry.info/Elements/n/P80065> a rdf:Property ;
     rdfs:label "has intended audience of nomen"@en ;
     rdakit:hasElementType "5" ;
@@ -193,6 +175,25 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
     skos:definition "Relates a nomen to a categorization indicating that a nomen is insufficient to differentiate between two or more entities."@en .
+
+<http://rdaregistry.info/Elements/n/P80014> a rdf:Property ;
+    rdfs:label "is subject nomen of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that is about a nomen."@en ;
+    rdakit:toolkitLabel "subject nomen of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80178>,
+        <http://rdaregistry.info/Elements/n/datatype/P80014>,
+        <http://rdaregistry.info/Elements/n/object/P80014> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60806> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/subjectNomenOf.en> ;
+    reg:name "subjectNomenOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80001>,
+        <http://rdaregistry.info/Elements/x/P00014> ;
+    skos:altLabel "subject of (nomen)"@en ;
+    skos:definition "Relates a nomen to a work that is about a nomen."@en .
 
 <http://rdaregistry.info/Elements/n/P80042> a rdf:Property ;
     rdfs:label "is identifier for place of"@en ;
@@ -1072,7 +1073,7 @@
     rdakit:hasElementType "1" ;
     rdakit:toolkitDefinition "An entity that is associated with a nomen."@en ;
     rdakit:toolkitLabel "related entity of nomen"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/relatedEntityOfNomen> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/relatedEntityOfNomen.en> ;
     reg:name "relatedEntityOfNomen" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
@@ -1121,6 +1122,21 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80056> ;
     skos:definition "Relates a nomen to a person who has a fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form."@en .
+
+<http://rdaregistry.info/Elements/n/P80178> a rdf:Property ;
+    rdfs:label "is nomen described in"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that describes a nomen."@en ;
+    rdakit:toolkitLabel "nomen described in"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80178>,
+        <http://rdaregistry.info/Elements/n/object/P80178> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/nomenDescribedIn.en> ;
+    reg:name "nomenDescribedIn" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80014> ;
+    skos:definition "Relates a nomen to a work that describes a nomen."@en .
 
 <http://rdaregistry.info/Elements/n/P80002> a rdf:Property ;
     rdfs:label "has related expression of nomen"@en ;

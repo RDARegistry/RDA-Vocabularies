@@ -8,19 +8,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://rdaregistry.info/Elements/n/object/P80014> a rdf:Property ;
-    rdfs:label "is subject nomen of"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/object/subjectNomenOf.en> ;
-    reg:name "subjectNomenOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/object/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80014>,
-        <http://rdaregistry.info/Elements/n/object/P80001>,
-        <http://rdaregistry.info/Elements/x/object/P00014> ;
-    owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10323> .
-
 <http://rdaregistry.info/Elements/n/object/P80071> a rdf:Property ;
     rdfs:label "is key title of"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/object/keyTitleOf.en> ;
@@ -32,6 +19,20 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80071>,
         <http://rdaregistry.info/Elements/n/object/P80064> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10367> .
+
+<http://rdaregistry.info/Elements/n/object/P80014> a rdf:Property ;
+    rdfs:label "is subject nomen of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/object/P80178> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/object/subjectNomenOf.en> ;
+    reg:name "subjectNomenOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/object/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80014>,
+        <http://rdaregistry.info/Elements/n/object/P80001>,
+        <http://rdaregistry.info/Elements/x/object/P00014> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10323> .
 
 <http://rdaregistry.info/Elements/n/object/P80035> a rdf:Property ;
     rdfs:label "is identifier for corporate body of"@en ;
@@ -567,6 +568,18 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80177>,
         <http://rdaregistry.info/Elements/n/object/P80056> ;
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50115> .
+
+<http://rdaregistry.info/Elements/n/object/P80178> a rdf:Property ;
+    rdfs:label "is nomen described in"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/object/nomenDescribedIn.en> ;
+    reg:name "nomenDescribedIn" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/object/> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80178>,
+        <http://rdaregistry.info/Elements/n/object/P80014> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10600> .
 
 <http://rdaregistry.info/Elements/n/object/P80002> a rdf:Property ;
     rdfs:label "has related expression of nomen"@en ;
@@ -1326,7 +1339,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/object/> ;
-    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10007> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80111>,
         <http://rdaregistry.info/Elements/n/object/P80062>,
         <http://rdaregistry.info/Elements/n/object/P80164> ;

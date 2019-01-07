@@ -18,7 +18,7 @@
             },
             "omr_api": "http://api.metadataregistry.org/elementsets/156",
             "omr_home": "http://metadataregistry.org/elementsets/156",
-            "count": 59,
+            "count": 60,
             "languages": [
                 {
                     "code": "ar",
@@ -48,7 +48,7 @@
                 {
                     "code": "en",
                     "lang": "English",
-                    "version": "v3.0.12"
+                    "version": "v3.0.13"
                 },
                 {
                     "code": "es",
@@ -126,7 +126,7 @@
                     "version": "WIP"
                 }
             ],
-            "dateOfPublication": "December 20, 2018"
+            "dateOfPublication": "January 7, 2019"
         },
         {
             "@id": "http://rdaregistry.info/Elements/t/P70001",
@@ -1297,6 +1297,12 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/t/datatype/subjectTimespanOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/25664.html",
                     "label": "is subject timespan of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/t/P70060",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/t/timespanDescribedIn.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/39004.html",
+                    "label": "is timespan described in"
                 }
             ],
             "isDefinedBy": {
@@ -4287,7 +4293,7 @@
                 "en": "has related entity of timespan"
             },
             "lexicalAlias": {
-                "@id": "http://rdaregistry.info/Elements/t/relatedEntityOfTimespan"
+                "@id": "http://rdaregistry.info/Elements/t/relatedEntityOfTimespan.en"
             },
             "name": "relatedEntityOfTimespan",
             "status": {
@@ -4330,7 +4336,7 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/t/datatype/P70059",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/t/categoryOfTimespan.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/t/datatype/categoryOfTimespan.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/35537.html",
                     "label": "has category of timespan"
                 }
@@ -4368,6 +4374,69 @@
                 "en": "category of timespan"
             },
             "url": "http://metadataregistry.org/schemaprop/show/id/35536.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/t/P70060",
+            "@type": "Property",
+            "description": {
+                "en": [
+                    "Relates a timespan to a work that describes a timespan."
+                ]
+            },
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10010",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Timespan.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/25151.html",
+                "label": "timespan"
+            },
+            "has element type": "2",
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/t/datatype/P70060",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/t/datatype/timespanDescribedIn.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/39005.html",
+                    "label": "is timespan described in"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/t/object/P70060",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/t/object/timespanDescribedIn.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/39006.html",
+                    "label": "is timespan described in"
+                }
+            ],
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/t/",
+                "url": "http://metadataregistry.org/schema/show/id/156.html",
+                "label": "RDA Timespan properties"
+            },
+            "label": {
+                "en": "is timespan described in"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/t/timespanDescribedIn.en"
+            },
+            "name": "timespanDescribedIn",
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/t/P70014",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/t/subjectTimespanOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/25662.html",
+                    "label": "is subject timespan of"
+                }
+            ],
+            "ToolkitDefinition": {
+                "en": "A work that describes a timespan."
+            },
+            "ToolkitLabel": {
+                "en": "timespan described in"
+            },
+            "url": "http://metadataregistry.org/schemaprop/show/id/39004.html"
         }
     ]
 }

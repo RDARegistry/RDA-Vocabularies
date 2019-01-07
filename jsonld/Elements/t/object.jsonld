@@ -18,15 +18,15 @@
             },
             "omr_api": "http://api.metadataregistry.org/elementsets/159",
             "omr_home": "http://metadataregistry.org/elementsets/159",
-            "count": 54,
+            "count": 55,
             "languages": [
                 {
                     "code": "en",
                     "lang": "English",
-                    "version": "v3.0.12"
+                    "version": "v3.0.13"
                 }
             ],
-            "dateOfPublication": "December 20, 2018"
+            "dateOfPublication": "January 7, 2019"
         },
         {
             "@id": "http://rdaregistry.info/Elements/t/object/P70001",
@@ -751,7 +751,7 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/t/object/relatedRDAEntityOfTimespan.en",
             "name": "relatedRDAEntityOfTimespan",
             "range": {
-                "@id": "An RDA entity includes an agent, collective agent, corporate body, expression, family, item, manifestation, nomen, person, place, timespan, and work.",
+                "@id": "http://rdaregistry.info/Elements/c/C10013",
                 "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/25154.html",
                 "label": "RDA entity"
@@ -994,6 +994,14 @@
                 "url": "http://metadataregistry.org/schemaprop/show/id/25151.html",
                 "label": "timespan"
             },
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/t/object/P70060",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/t/object/timespanDescribedIn.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/39006.html",
+                    "label": "is timespan described in"
+                }
+            ],
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/w/object/P10322",
                 "lexicalAlias": "http://rdaregistry.info/Elements/w/object/subjectTimespan.en",
@@ -2285,10 +2293,10 @@
                 "label": "corporate body"
             },
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -2337,10 +2345,10 @@
                 "label": "family"
             },
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -2389,10 +2397,10 @@
                 "label": "person"
             },
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -3307,6 +3315,61 @@
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/35325.html"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/t/object/P70060",
+            "@type": "Property",
+            "domain": {
+                "@id": "http://rdaregistry.info/Elements/c/C10010",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Timespan.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/25151.html",
+                "label": "timespan"
+            },
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/w/object/P10602",
+                "lexicalAlias": "http://rdaregistry.info/Elements/w/object/descriptionOfTimespan.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39202.html",
+                "label": "is description of timespan"
+            },
+            "isDefinedBy": {
+                "@id": "http://rdaregistry.info/Elements/t/object/",
+                "url": "http://metadataregistry.org/schema/show/id/159.html",
+                "label": "RDA Timespan object properties"
+            },
+            "label": {
+                "en": "is timespan described in"
+            },
+            "lexicalAlias": {
+                "@id": "http://rdaregistry.info/Elements/t/object/timespanDescribedIn.en"
+            },
+            "name": "timespanDescribedIn",
+            "range": {
+                "@id": "http://rdaregistry.info/Elements/c/C10001",
+                "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
+                "label": "work"
+            },
+            "status": {
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
+            },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/t/P70060",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/t/timespanDescribedIn.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/39004.html",
+                    "label": "is timespan described in"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/t/object/P70014",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/t/object/subjectTimespanOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/25663.html",
+                    "label": "is subject timespan of"
+                }
+            ],
+            "url": "http://metadataregistry.org/schemaprop/show/id/39006.html"
         }
     ]
 }

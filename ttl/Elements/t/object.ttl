@@ -10,6 +10,10 @@
     a skos:Concept ;
     skos:prefLabel "Published"@en .
 
+<http://metadataregistry.org/uri/RegStatus/1008>
+    a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
+
 <http://rdaregistry.info/Elements/t/object/>
     dc:title "RDA Timespan object properties"@en ;
     skos:note "Object properties derived from RDA elements and relationship designators with the domain of RDA Timespan. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry."@en .
@@ -182,6 +186,7 @@
     owl:inverseOf <http://rdaregistry.info/Elements/a/object/P50351> .
 
 <http://rdaregistry.info/Elements/t/object/P70014>
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/object/P70060> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/object/subjectTimespanOf.en> ;
     reg:name "subjectTimespanOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -454,7 +459,7 @@
 <http://rdaregistry.info/Elements/t/object/P70036>
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/object/dateAssociatedWithCorporateBodyOf.en> ;
     reg:name "dateAssociatedWithCorporateBodyOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/object/> ;
@@ -466,7 +471,7 @@
 <http://rdaregistry.info/Elements/t/object/P70037>
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/object/dateAssociatedWithFamilyOf.en> ;
     reg:name "dateAssociatedWithFamilyOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/object/> ;
@@ -478,7 +483,7 @@
 <http://rdaregistry.info/Elements/t/object/P70038>
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/object/dateAssociatedWithPersonOf.en> ;
     reg:name "dateAssociatedWithPersonOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     a rdf:Property ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/object/> ;
@@ -680,4 +685,16 @@
     rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70057>, <http://rdaregistry.info/Elements/t/object/P70001> ;
     owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10398> .
+
+<http://rdaregistry.info/Elements/t/object/P70060>
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/object/timespanDescribedIn.en> ;
+    reg:name "timespanDescribedIn" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    a rdf:Property ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/object/> ;
+    rdfs:label "is timespan described in"@en ;
+    rdfs:range <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70060>, <http://rdaregistry.info/Elements/t/object/P70014> ;
+    owl:inverseOf <http://rdaregistry.info/Elements/w/object/P10602> .
 

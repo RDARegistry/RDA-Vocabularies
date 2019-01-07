@@ -29,17 +29,6 @@
         <http://rdaregistry.info/Elements/t/datatype/P70010>,
         <http://rdaregistry.info/Elements/x/datatype/P00010> .
 
-<http://rdaregistry.info/Elements/t/datatype/P70014> a rdf:Property ;
-    rdfs:label "is subject timespan of"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/subjectTimespanOf.en> ;
-    reg:name "subjectTimespanOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70014>,
-        <http://rdaregistry.info/Elements/t/datatype/P70001>,
-        <http://rdaregistry.info/Elements/x/datatype/P00014> .
-
 <http://rdaregistry.info/Elements/t/datatype/P70019> a rdf:Property ;
     rdfs:label "is copyright date of"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/copyrightDateOf.en> ;
@@ -170,7 +159,7 @@
 
 <http://rdaregistry.info/Elements/t/datatype/P70059> a rdf:Property ;
     rdfs:label "has category of timespan"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/t/categoryOfTimespan.en> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/categoryOfTimespan.en> ;
     reg:name "categoryOfTimespan" ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
@@ -189,6 +178,18 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70003>,
         <http://rdaregistry.info/Elements/t/datatype/P70010>,
         <http://rdaregistry.info/Elements/x/datatype/P00004> .
+
+<http://rdaregistry.info/Elements/t/datatype/P70014> a rdf:Property ;
+    rdfs:label "is subject timespan of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/t/datatype/P70060> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/subjectTimespanOf.en> ;
+    reg:name "subjectTimespanOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70014>,
+        <http://rdaregistry.info/Elements/t/datatype/P70001>,
+        <http://rdaregistry.info/Elements/x/datatype/P00014> .
 
 <http://rdaregistry.info/Elements/t/datatype/P70018> a rdf:Property ;
     rdfs:label "has identifier for timespan"@en ;
@@ -429,6 +430,16 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70057>,
         <http://rdaregistry.info/Elements/t/datatype/P70001> .
+
+<http://rdaregistry.info/Elements/t/datatype/P70060> a rdf:Property ;
+    rdfs:label "is timespan described in"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/t/datatype/timespanDescribedIn.en> ;
+    reg:name "timespanDescribedIn" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10010> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/t/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/t/P70060>,
+        <http://rdaregistry.info/Elements/t/datatype/P70014> .
 
 <http://rdaregistry.info/Elements/t/datatype/P70002> a rdf:Property ;
     rdfs:label "has related expression of timespan"@en ;
