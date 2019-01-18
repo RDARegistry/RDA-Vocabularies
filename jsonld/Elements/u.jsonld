@@ -29,7 +29,7 @@
                 {
                     "code": "da",
                     "lang": "Danish",
-                    "version": "v3.0.14"
+                    "version": "v3.0.15"
                 },
                 {
                     "code": "de",
@@ -39,7 +39,7 @@
                 {
                     "code": "en",
                     "lang": "English",
-                    "version": "v3.0.14"
+                    "version": "v3.0.15"
                 },
                 {
                     "code": "es",
@@ -72,7 +72,7 @@
                     "version": "WIP"
                 }
             ],
-            "dateOfPublication": "January 14, 2019"
+            "dateOfPublication": "January 18, 2019"
         },
         {
             "@id": "http://rdaregistry.info/Elements/u/P60001",
@@ -2365,12 +2365,6 @@
                     "Relaterer en pseudonym eller anden identitet antaget af en person til en agent."
                 ]
             },
-            "inverseOf": {
-                "@id": "http://rdaregistry.info/Elements/u/P61112",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/alternateIdentityOf.en",
-                "url": "http://metadataregistry.org/schemaprop/show/id/39220.html",
-                "label": "is alternate identity of"
-            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -2400,12 +2394,6 @@
                 "da": [
                     "Relaterer en virkelig agent der antager en alternativ identitet til en agent."
                 ]
-            },
-            "inverseOf": {
-                "@id": "http://rdaregistry.info/Elements/u/P61113",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/realIdentityOf.en",
-                "url": "http://metadataregistry.org/schemaprop/show/id/39221.html",
-                "label": "is real identity of"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -4020,7 +4008,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a designation of a sequencing of a part or parts within a subseries."
+                    "Relates a resource to a designation of a sequencing of a part or parts within a subseries. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en sekvensbetegnelse for en del eller flere dele i en underserie."
@@ -4032,24 +4020,24 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has numbering within subseries",
+                "en": "has numbering within subseries (Deprecated",
                 "da": "har nummerering indenfor underserie"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingWithinSubseries.en",
             "name": "nummereringIndenforUnderserie",
             "note": {
                 "en": [
-                    "Numbering may consist of a numeral, a letter, any other character, or the combination of these with or without an accompanying caption and/or a chronological designation."
+                    "Numbering may consist of a numeral, a letter, any other character, or the combination of these with or without an accompanying caption and/or a chronological designation. (Deprecated)"
                 ],
                 "da": [
                     "Nummerering omfatter et tal, et bogstav, ethvert andet tegn eller en kombination af disse med eller uden tilhørende tekst og/eller en kronologisk betegnelse."
                 ]
             },
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "url": "http://metadataregistry.org/schemaprop/show/id/14678.html"
         },
@@ -4818,9 +4806,9 @@
             },
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60300",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimileContainerOf.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimilePart.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14896.html",
-                "label": "is facsimile container of"
+                "label": "has facsimile part"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -4828,10 +4816,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is facsimile contained in",
+                "en": "is facsimile part of",
                 "da": "er faksimile indeholdt i"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimileContainedIn.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimilePartOf.en",
             "name": "faksimileIndeholdtI",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -4868,9 +4856,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60100",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimileContainedIn.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimilePartOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14696.html",
-                    "label": "is facsimile contained in"
+                    "label": "is facsimile part of"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60192",
@@ -6329,7 +6317,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a note providing information on the numbering of the first or last issue or part, on complex or irregular numbering including numbering errors, on a period covered by a volume, issue, part, etc., or on other information relating to numbering of serials."
+                    "Relates a resource to a note providing information on the range of designators that is used to indicate a sequence of the individual parts or iterations of a resource."
                 ],
                 "da": [
                     "Relaterer en ressource til en note, der giver oplysninger om nummereringen af første og/eller sidste nummer eller del, om kompleks eller uregelmæssig nummerering (inkl. nummereringsfejl), om den periode, der dækkes af et bind, et nummer, en del etc., eller om andre oplysninger relateret til nummerering af periodika."
@@ -6341,10 +6329,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has note on numbering of serials",
+                "en": "has note on sequence of numbering",
                 "da": "har note om periodikanummerering"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnNumberingOfSerials.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnSequenceOfNumbering.en",
             "name": "noteOmPeriodikanummerering",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -12637,9 +12625,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60300",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimileContainerOf.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimilePart.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14896.html",
-                    "label": "is facsimile container of"
+                    "label": "has facsimile part"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60316",
@@ -15442,9 +15430,9 @@
             },
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60100",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimileContainedIn.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimilePartOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14696.html",
-                "label": "is facsimile contained in"
+                "label": "is facsimile part of"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -15452,10 +15440,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is facsimile container of",
+                "en": "has facsimile part",
                 "da": "er faksimile der indeholder"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimileContainerOf.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/facsimilePart.en",
             "name": "faksimileDerIndeholder",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -16869,9 +16857,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60526",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceEtc.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConference.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15116.html",
-                    "label": "has date of conference, etc."
+                    "label": "has date of conference"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60598",
@@ -16993,9 +16981,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60360",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceEtc.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14956.html",
-                    "label": "has place of residence, etc."
+                    "label": "has place of residence"
                 }
             ],
             "inverseOf": {
@@ -17370,7 +17358,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a statement of responsibility relating to subseries in a language or script that differs from that recorded in a statement of responsibility relating to subseries element."
+                    "Relates a resource to a statement of responsibility relating to subseries in a language or script that differs from that recorded in a statement of responsibility relating to subseries element. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en ophavsangivelse relateret til en underserie på et andet sprog og/eller i et andet alfabet end det som er anvendt ved angivelsen af en ophavsangivelse til en underserie."
@@ -17382,16 +17370,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has parallel statement of responsibility relating to subseries",
+                "en": "has parallel statement of responsibility relating to subseries (Deprecated)",
                 "da": "har parallel ophavsangivelse relateret til underserie"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToSubseries.en",
             "name": "parallelOphavsangivelseRelateretTilUnderserie",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "url": "http://metadataregistry.org/schemaprop/show/id/14932.html"
         },
@@ -17578,7 +17566,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a statement relating to an identification of agents responsible for a subseries."
+                    "Relates a resource to a statement relating to an identification of agents responsible for a subseries. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til oplysninger relateret til identificering af en hvilken som helst agent eller agenter, der er ansvarlige for en underserie."
@@ -17590,16 +17578,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has statement of responsibility relating to subseries",
+                "en": "has statement of responsibility relating to subseries (Deprecated)",
                 "da": "har ophavsangivelse relateret til underserie"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToSubseries.en",
             "name": "ophavsangivelseRelateretTilUnderserie",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "url": "http://metadataregistry.org/schemaprop/show/id/14938.html"
         },
@@ -18242,7 +18230,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a title proper appearing on a later issue or part of a multipart monograph or serial that differs from that on the first or earliest issue or part."
+                    "Relates a resource to a title proper appearing on a later issue or part of a multipart monograph or serial that differs from that on the first or earliest issue or part. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en hovedtitel, der optræder på et senere nummer eller en senere del af et flerbindsværk eller et periodikum, og som afviger fra den titel, der fremgår af første eller tidligste nummer eller del.."
@@ -18254,16 +18242,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has later title proper",
+                "en": "has later title proper (Deprecated)",
                 "da": "har senere hovedtitel"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/laterTitleProper.en",
             "name": "senereHovedtitel",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -18280,7 +18268,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a title proper appearing on an earlier iteration of an integrating resource that differs from that on a current iteration."
+                    "Relates a resource to a title proper appearing on an earlier iteration of an integrating resource that differs from that on a current iteration. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en hovedtitel, der forekommer på en tidligere iteration af en integrerende ressource, der afviger fra hovedtitlen på den aktuelle iteration."
@@ -18292,16 +18280,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has earlier title proper",
+                "en": "has earlier title proper (Deprecated)",
                 "da": "har tidligere hovedtitel"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/earlierTitleProper.en",
             "name": "tidligereHovedtitel",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -18370,9 +18358,9 @@
             },
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60973",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceEtcOf.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/34419.html",
-                "label": "is place of residence, etc. of"
+                "label": "is place of residence of"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -18380,10 +18368,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has place of residence, etc.",
+                "en": "has place of residence",
                 "da": "har opholdssted etc."
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceEtc.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidence.en",
             "name": "opholdsstedEtc",
             "note": {
                 "en": [
@@ -18793,13 +18781,13 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60357",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/laterTitleProper.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14953.html",
-                    "label": "has later title proper"
+                    "label": "has later title proper (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60358",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/earlierTitleProper.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14954.html",
-                    "label": "has earlier title proper"
+                    "label": "has earlier title proper (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60359",
@@ -18912,7 +18900,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a writer of words added to a musical resource."
+                    "Relates a resource to a writer of words added to a musical resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en forfatter af ord, der er tilføjet en musikressource."
@@ -18922,7 +18910,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60600",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyricsOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15190.html",
-                "label": "is writer of added lyrics of"
+                "label": "is writer of added lyrics of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -18930,7 +18918,7 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of added lyrics",
+                "en": "has writer of added lyrics (Deprecated)",
                 "da": "har forfatter af tilføjede sangtekster"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyrics.en",
@@ -18952,17 +18940,17 @@
                 }
             ],
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60380",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedText.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14976.html",
-                    "label": "has writer of added text"
+                    "label": "has writer of added text (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/14967.html"
@@ -19700,7 +19688,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an agent who contributes to a primarily non-textual resource by providing text, such as writing captions for photographs or descriptions of maps."
+                    "Relates a resource to an agent who contributes to a primarily non-textual resource by providing text, such as writing captions for photographs or descriptions of maps. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en agent, der har bidraget til en ressource af et fortrinsvist ikke-tekstmæssigt værk ved at tilvejebringe tekst til den ikke-tekstmæssige ressource, fx ved at skrive billedtekster til fotos, beskrivelser af kort."
@@ -19711,7 +19699,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60371",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyrics.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14967.html",
-                    "label": "has writer of added lyrics"
+                    "label": "has writer of added lyrics (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/e/P20030",
@@ -19724,7 +19712,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60608",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedTextOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15198.html",
-                "label": "is writer of added text of"
+                "label": "is writer of added text of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -19732,23 +19720,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of added text",
+                "en": "has writer of added text (Deprecated)",
                 "da": "har forfatter af tilføjet tekst"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedText.en",
             "name": "forfatterAfTilføjetTekst",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60392",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14988.html",
-                    "label": "has writer of supplementary textual content"
+                    "label": "has writer of supplementary textual content (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/14976.html"
@@ -20438,7 +20426,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an agent who contributes to a resource by providing a preface to an original resource."
+                    "Relates a resource to an agent who contributes to a resource by providing a preface to an original resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en agent, der har bidraget til en ressource ved at tilvejebringe et forord til en original ressource."
@@ -20448,7 +20436,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60617",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPrefaceOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15207.html",
-                "label": "is writer of introduction of"
+                "label": "is writer of introduction of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -20456,23 +20444,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of preface",
+                "en": "has writer of preface (Deprecated)",
                 "da": "har forfatter til forord"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPreface.en",
             "name": "forfatterTilForord",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60392",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14988.html",
-                    "label": "has writer of supplementary textual content"
+                    "label": "has writer of supplementary textual content (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/14985.html"
@@ -20482,7 +20470,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an agent who contributes to a resource by providing an interpretation or critical explanation of an original resource."
+                    "Relates a resource to an agent who contributes to a resource by providing an interpretation or critical explanation of an original resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en agent, der har bidraget til en ressource ved at tilvejebringe en fortolkning eller kritik af en original ressource."
@@ -20492,7 +20480,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60618",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedCommentaryOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15208.html",
-                "label": "is writer of added commentary of"
+                "label": "is writer of added commentary of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -20500,23 +20488,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of added commentary",
+                "en": "has writer of added commentary (Deprecated)",
                 "da": "har forfatter til tilføjet kommentar"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedCommentary.en",
             "name": "forfatterTilTilføjetKommentar",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60392",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14988.html",
-                    "label": "has writer of supplementary textual content"
+                    "label": "has writer of supplementary textual content (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/14986.html"
@@ -20526,7 +20514,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an agent who contributes to a resource by providing an introduction to an original resource."
+                    "Relates a resource to an agent who contributes to a resource by providing an introduction to an original resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en agent, der har bidraget til en ressource ved at tilvejebringe en introduktion til en original ressource."
@@ -20536,7 +20524,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60619",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfIntroductionOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15209.html",
-                "label": "is writer of afterword of"
+                "label": "is writer of afterword of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -20544,23 +20532,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of introduction",
+                "en": "has writer of introduction (Deprecated)",
                 "da": "har forfatter til introduktion"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfIntroduction.en",
             "name": "forfatterTilIntroduktion",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60392",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14988.html",
-                    "label": "has writer of supplementary textual content"
+                    "label": "has writer of supplementary textual content (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/14987.html"
@@ -20570,7 +20558,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an agent who contributes to a resource by providing supplementary textual content (e.g., an appendix, an introduction, a preface) to an original resource."
+                    "Relates a resource to an agent who contributes to a resource by providing supplementary textual content (e.g., an appendix, an introduction, a preface) to an original resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en agent, der har bidraget til en ressource ved at tilvejebringe supplerende tekstindhold, fx en indledning eller et forord til en original ressource."
@@ -20581,25 +20569,25 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60380",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedText.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14976.html",
-                    "label": "has writer of added text"
+                    "label": "has writer of added text (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60389",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPreface.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14985.html",
-                    "label": "has writer of preface"
+                    "label": "has writer of preface (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60390",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedCommentary.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14986.html",
-                    "label": "has writer of added commentary"
+                    "label": "has writer of added commentary (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60391",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfIntroduction.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14987.html",
-                    "label": "has writer of introduction"
+                    "label": "has writer of introduction (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/e/P20046",
@@ -20611,20 +20599,20 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60715",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAfterword.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15644.html",
-                    "label": "has writer of afterword"
+                    "label": "has writer of afterword (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60716",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostface.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15645.html",
-                    "label": "has writer of postface"
+                    "label": "has writer of postface (Deprecated)"
                 }
             ],
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60620",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
-                "label": "is writer of supplementary conent of"
+                "label": "is writer of supplementary content of  (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -20632,16 +20620,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of supplementary textual content",
+                "en": "has writer of supplementary textual content (Deprecated)",
                 "da": "har forfatter til supplerende tekstindhold"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
             "name": "forfatterTilSupplerendeTekstindhold",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -20899,9 +20887,9 @@
             ],
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60624",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/illustratorOf.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOfStillImageOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15214.html",
-                "label": "is illustrator of"
+                "label": "is contributor of still image of"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -20909,10 +20897,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has illustrator",
+                "en": "has contributor of still image",
                 "da": "har illustrator"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/illustrator.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOfStillImage.en",
             "name": "illustrator",
             "note": {
                 "en": [
@@ -21090,7 +21078,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60392",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14988.html",
-                    "label": "has writer of supplementary textual content"
+                    "label": "has writer of supplementary textual content (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60393",
@@ -21112,9 +21100,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60396",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/illustrator.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOfStillImage.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14992.html",
-                    "label": "has illustrator"
+                    "label": "has contributor of still image"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60397",
@@ -21174,7 +21162,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60809",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForeword.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/16308.html",
-                    "label": "has writer of foreword"
+                    "label": "has writer of foreword (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60811",
@@ -24431,6 +24419,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60909",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33655.html",
+                    "label": "has appellation of entity"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15036.html"
         },
         {
@@ -26175,9 +26171,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60135",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnNumberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnSequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14731.html",
-                    "label": "has note on numbering of serials"
+                    "label": "has note on sequence of numbering"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60136",
@@ -27305,7 +27301,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a word, character, or group of words or characters that appears in conjunction with, and is subordinate to, a title proper of a subseries."
+                    "Relates a resource to a word, character, or group of words or characters that appears in conjunction with, and is subordinate to, a title proper of a subseries. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til et ord, tegn eller en gruppe af ord og/eller tegn, der optræder i forbindelse med, og er underordnet, en underseries hovedtitel."
@@ -27317,16 +27313,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has other title information of subseries",
+                "en": "has other title information of subseries (Deprecated)",
                 "da": "har anden titelinformation for underserie"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/otherTitleInformationOfSubseries.en",
             "name": "andenTitelinformationForUnderserie",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "url": "http://metadataregistry.org/schemaprop/show/id/15085.html"
         },
@@ -27437,10 +27433,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has numeric and/or alphabetic designation of first issue or part of sequence",
+                "en": "has first alphanumeric designation of sequence",
                 "da": "har numerisk og/eller alfabetisk betegnelse for første nummer eller del af sekvens"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/numericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfSequence.en",
             "name": "numeriskOgEllerAlfabetiskBetegnelseForFørsteNummerEllerDelafSekvens",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -27451,9 +27447,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60533",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15123.html",
-                    "label": "has numbering of serials"
+                    "label": "has sequence of numbering"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15089.html"
@@ -27475,10 +27471,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has numeric and/or alphabetic designation of last issue or part of sequence",
+                "en": "has last alphanumeric designation of sequence",
                 "da": "har numerisk og/eller alfabetisk betegnelse for sidste nummer eller del af sekvens"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/numericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfSequence.en",
             "name": "numeriskOgEllerAlfabetiskBetegnelseForSidsteNummerEllerDelafSekvens",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -27489,9 +27485,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60533",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15123.html",
-                    "label": "has numbering of serials"
+                    "label": "has sequence of numbering"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15090.html"
@@ -27513,10 +27509,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has chronological designation of first issue or part of sequence",
+                "en": "has first chronological designation of sequence",
                 "da": "har kronologisk betegnelse for første nummer eller del af sekvens"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/chronologicalDesignationOfFirstIssueOrPartOfSequence.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfSequence.en",
             "name": "KronologiskBetegnelseForFørsteNummerEllerDelAfSekvens",
             "note": {
                 "en": [
@@ -27535,9 +27531,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60533",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15123.html",
-                    "label": "has numbering of serials"
+                    "label": "has sequence of numbering"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15091.html"
@@ -27559,10 +27555,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has chronological designation of last issue or part of sequence",
+                "en": "has last chronological designation of sequence",
                 "da": "har kronologisk betegnelse for sidste nummer eller del af sekvens"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/chronologicalDesignationOfLastIssueOrPartOfSequence.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfSequence.en",
             "name": "KronologiskBetegnelseForSidsteNummerEllerDelAfSekvens",
             "note": {
                 "en": [
@@ -27581,9 +27577,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60533",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15123.html",
-                    "label": "has numbering of serials"
+                    "label": "has sequence of numbering"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15092.html"
@@ -27830,7 +27826,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60509",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/parallelOtherTitleInformationOfSubseries.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15099.html",
-                    "label": "has parallel other title information of subseries"
+                    "label": "has parallel other title information of subseries (Deprecated)"
                 }
             ],
             "isDefinedBy": {
@@ -27865,7 +27861,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an other title information of a subseries in a language or script that differs from that recorded in an other title information of subseries element."
+                    "Relates a resource to an other title information of a subseries in a language or script that differs from that recorded in an other title information of subseries element. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til andre titeloplysninger for en serie på et andet sprog og/eller i et andet alfabet end det som er anvendt ved angivelsen af andre titeloplysninger for en underserie."
@@ -27877,16 +27873,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has parallel other title information of subseries",
+                "en": "has parallel other title information of subseries (Deprecated)",
                 "da": "har parallel anden titelinformation for underserie"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/parallelOtherTitleInformationOfSubseries.en",
             "name": "parallelAndenTitelinformationForUnderserie",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -28185,7 +28181,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60517",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOfSubseries.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15107.html",
-                    "label": "has title proper of subseries"
+                    "label": "has title proper of subseries (Deprecated)"
                 }
             ],
             "inverseOf": {
@@ -28226,7 +28222,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a name of a series appearing on a resource of a part of a subseries."
+                    "Relates a resource to a name of a series appearing on a resource of a part of a subseries. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til et navn på en ressource, der optræder på en ressource af en del af en underserie."
@@ -28236,7 +28232,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60959",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOfSubseriesOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/34400.html",
-                "label": "is title proper of subseries of"
+                "label": "is title proper of subseries of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -28244,16 +28240,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has title proper of subseries",
+                "en": "has title proper of subseries (Deprecated)",
                 "da": "har hovedtitel for underserie"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOfSubseries.en",
             "name": "hovedtitelForUnderserie",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -28584,9 +28580,9 @@
             },
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60977",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceEtcOf.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/34423.html",
-                "label": "is date of conference, etc. of"
+                "label": "is date of conference of"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -28594,10 +28590,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has date of conference, etc.",
+                "en": "has date of conference",
                 "da": "har datering af konference etc."
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceEtc.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConference.en",
             "name": "dateringAfKonferenceEtc",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -28864,7 +28860,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a designation for each of the issues or parts of a serial."
+                    "Relates a resource to the first and last designations of a sequence of the individual parts or iterations of a resource."
                 ],
                 "da": [
                     "Relaterer en ressource til en betegnelse for hvert nummer eller hver del af et periodikum."
@@ -28873,57 +28869,57 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60499",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfSequence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15089.html",
-                    "label": "has numeric and/or alphabetic designation of first issue or part of sequence"
+                    "label": "has first alphanumeric designation of sequence"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60500",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfSequence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15090.html",
-                    "label": "has numeric and/or alphabetic designation of last issue or part of sequence"
+                    "label": "has last alphanumeric designation of sequence"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60501",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/chronologicalDesignationOfFirstIssueOrPartOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfSequence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15091.html",
-                    "label": "has chronological designation of first issue or part of sequence"
+                    "label": "has first chronological designation of sequence"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60502",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/chronologicalDesignationOfLastIssueOrPartOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfSequence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15092.html",
-                    "label": "has chronological designation of last issue or part of sequence"
+                    "label": "has last chronological designation of sequence"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/m/P30165",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/m/designationOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/m/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14554.html",
-                    "label": "has designation of sequence"
+                    "label": "has sequence of numbering"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60818",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/alternativeChronologicalDesignationOfFirstIssueOrPartOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfAlternativeSequence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/16227.html",
-                    "label": "has alternative chronological designation of first issue or part of sequence"
+                    "label": "has first chronological designation of alternative sequence"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60819",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/alternativeChronologicalDesignationOfLastIssueOrPartOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfAlternativeSequence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/16228.html",
-                    "label": "has alternative chronological designation of last issue or part of sequence"
+                    "label": "has last chronological designation of alternative sequence"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60820",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfAlternativeSequence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/16229.html",
-                    "label": "has alternative numeric and/or alphabetic designation of first issue or part of sequence"
+                    "label": "has first alphanumeric designation of alternative sequence"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60821",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfAlternativeSequence.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/16230.html",
-                    "label": "has alternative numeric and/or alphabetic designation of last issue or part of sequence"
+                    "label": "has last alphanumeric designation of alternative sequence"
                 }
             ],
             "isDefinedBy": {
@@ -28932,15 +28928,12 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has numbering of serials",
+                "en": "has sequence of numbering",
                 "da": "har nummerering af periodika"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
             "name": "nummereringAfPeriodika",
             "note": {
-                "en": [
-                    "Numbering may consist of a numeral, a letter, any other character, or the combination of these with or without an accompanying caption and/or a chronological designation."
-                ],
                 "da": [
                     "Nummerering af omfatter et tal, et bogstav, ethvert andet tegn eller en kombination af disse med eller uden tilhørende tekst og/eller en kronologisk betegnelse."
                 ]
@@ -29123,9 +29116,9 @@
             "hasSubproperty": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60540",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/dimensionsOfMapEtc.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/dimensionsOfCartographicImage.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15130.html",
-                    "label": "has dimensions of map, etc."
+                    "label": "has dimensions of cartographic image"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60541",
@@ -29176,10 +29169,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has dimensions of map, etc.",
+                "en": "has dimensions of cartographic image",
                 "da": "har størrelse på kort etc. - kartografi"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/dimensionsOfMapEtc.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/dimensionsOfCartographicImage.en",
             "name": "størrelsePåKortEtcKartografi",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -29345,6 +29338,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60909",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33655.html",
+                    "label": "has appellation of entity"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15134.html"
         },
         {
@@ -29381,6 +29382,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60909",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33655.html",
+                    "label": "has appellation of entity"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15135.html"
         },
         {
@@ -29417,6 +29426,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60909",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33655.html",
+                    "label": "has appellation of entity"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15136.html"
         },
         {
@@ -29453,6 +29470,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60909",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntity.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33655.html",
+                    "label": "has appellation of entity"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15137.html"
         },
         {
@@ -31157,7 +31182,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60591",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/parallelTitleProperOfSubseries.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15181.html",
-                    "label": "has parallel title proper of subseries"
+                    "label": "has parallel title proper of subseries (Deprecated)"
                 }
             ],
             "isDefinedBy": {
@@ -31192,7 +31217,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to a title proper of a subseries in another language or script."
+                    "Relates a resource to a title proper of a subseries in another language or script. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en hovedtitel for en underserie på et andet sprog og/eller i et andet alfabet."
@@ -31204,16 +31229,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has parallel title proper of subseries",
+                "en": "has parallel title proper of subseries (Deprecated)",
                 "da": "har parallel hovedtitel for underserie"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/parallelTitleProperOfSubseries.en",
             "name": "parallelHovedtitelForUnderserie",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -31552,7 +31577,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent to a resource that includes a contribution of adding written words to music."
+                    "Relates an agent to a resource that includes a contribution of adding written words to music. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en forfatter af ord, der er tilføjet til en musikressource til en ressource."
@@ -31562,7 +31587,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60371",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyrics.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14967.html",
-                "label": "has writer of added lyrics"
+                "label": "has writer of added lyrics (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -31570,7 +31595,7 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of added lyrics of",
+                "en": "is writer of added lyrics of (Deprecated)",
                 "da": "er forfatter af tilføjede sangtekster til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyricsOf.en",
@@ -31592,17 +31617,17 @@
                 }
             ],
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60608",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedTextOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15198.html",
-                    "label": "is writer of added text of"
+                    "label": "is writer of added text of (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15190.html"
@@ -32293,7 +32318,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent to a resource that includes a contribution of adding text, such as captions for photographs or descriptions of maps."
+                    "Relates an agent to a resource that includes a contribution of adding text, such as captions for photographs or descriptions of maps. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en agent der har bidraget til et udtryk af en fortrinsvisikke-tekstlig ressource ved at sørge for tekst til den ikke-tekstlige ressource til en ressource."
@@ -32304,7 +32329,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60600",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyricsOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15190.html",
-                    "label": "is writer of added lyrics of"
+                    "label": "is writer of added lyrics of (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/a/P50138",
@@ -32317,7 +32342,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60380",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedText.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14976.html",
-                "label": "has writer of added text"
+                "label": "has writer of added text (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -32325,23 +32350,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of added text of",
+                "en": "is writer of added text of (Deprecated)",
                 "da": "er forfatter til tilføjet tekst til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedTextOf.en",
             "name": "forfatterTilTilføjetTekstTil",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60620",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
-                    "label": "is writer of supplementary conent of"
+                    "label": "is writer of supplementary content of  (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15198.html"
@@ -33031,7 +33056,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent who contributes to a resource by providing an introduction to an original resource to a resource."
+                    "Relates an agent who contributes to a resource by providing an introduction to an original resource to a resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en agent, der har bidraget til en ressource ved at sørge for et forord til den originale ressource til en ressource."
@@ -33041,7 +33066,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60389",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPreface.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14985.html",
-                "label": "has writer of preface"
+                "label": "has writer of preface (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -33049,23 +33074,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of introduction of",
+                "en": "is writer of introduction of (Deprecated)",
                 "da": "er forfatter til forord til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPrefaceOf.en",
             "name": "forfatterTilForordTil",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60620",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
-                    "label": "is writer of supplementary conent of"
+                    "label": "is writer of supplementary content of  (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15207.html"
@@ -33075,7 +33100,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent to a resource that includes a contribution of providing an interpretation or critical explanation."
+                    "Relates an agent to a resource that includes a contribution of providing an interpretation or critical explanation. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en agent, der har bidraget til en ressource ved at sørge for en fortolkning eller kritisk forklaring af en oprindelig ressource til en ressource."
@@ -33085,7 +33110,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60390",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedCommentary.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14986.html",
-                "label": "has writer of added commentary"
+                "label": "has writer of added commentary (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -33093,23 +33118,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of added commentary of",
+                "en": "is writer of added commentary of (Deprecated)",
                 "da": "er forfatter til tilføjet kommentar til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedCommentaryOf.en",
             "name": "forfatterTilTilføjetKommentarTil",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60620",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
-                    "label": "is writer of supplementary conent of"
+                    "label": "is writer of supplementary content of  (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15208.html"
@@ -33119,7 +33144,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent to a resource that includes a contribution of providing an introduction."
+                    "Relates an agent to a resource that includes a contribution of providing an introduction. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en agent, der har bidraget til en ressource ved at sørge for en indledning til en oprindelig ressource til en ressource."
@@ -33129,7 +33154,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60391",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfIntroduction.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14987.html",
-                "label": "has writer of introduction"
+                "label": "has writer of introduction (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -33137,23 +33162,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of afterword of",
+                "en": "is writer of afterword of (Deprecated)",
                 "da": "er forfatter til introduktion til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfIntroductionOf.en",
             "name": "forfatterTilIntroduktionTil",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60620",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
-                    "label": "is writer of supplementary conent of"
+                    "label": "is writer of supplementary content of  (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15209.html"
@@ -33163,7 +33188,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent to a resource that includes a contribution of providing supplementary textual content such as an introduction or a preface."
+                    "Relates an agent to a resource that includes a contribution of providing supplementary textual content such as an introduction or a preface. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en agent, der har bidraget til en ressource ved at sørge for supplerende tekstindhold, som fx en indledning eller et forord til en oprindeligg ressource til en ressource."
@@ -33174,25 +33199,25 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60608",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedTextOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15198.html",
-                    "label": "is writer of added text of"
+                    "label": "is writer of added text of (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60617",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPrefaceOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15207.html",
-                    "label": "is writer of introduction of"
+                    "label": "is writer of introduction of (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60618",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedCommentaryOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15208.html",
-                    "label": "is writer of added commentary of"
+                    "label": "is writer of added commentary of (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60619",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfIntroductionOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15209.html",
-                    "label": "is writer of afterword of"
+                    "label": "is writer of afterword of (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/a/P50154",
@@ -33204,20 +33229,20 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60717",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAfterwordOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15646.html",
-                    "label": "is writer of preface of"
+                    "label": "is writer of preface of (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60718",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostfaceOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15647.html",
-                    "label": "is writer of postface of"
+                    "label": "is writer of postface of (Deprecated)"
                 }
             ],
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60392",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14988.html",
-                "label": "has writer of supplementary textual content"
+                "label": "has writer of supplementary textual content (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -33225,16 +33250,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of supplementary conent of",
+                "en": "is writer of supplementary content of  (Deprecated)",
                 "da": "er forfatter til supplerende tekstindhold til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
             "name": "forfatterTilSupplerendeTekstindholdTil",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -33471,9 +33496,9 @@
             ],
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60396",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/illustrator.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOfStillImage.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14992.html",
-                "label": "has illustrator"
+                "label": "has contributor of still image"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -33481,10 +33506,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is illustrator of",
+                "en": "is contributor of still image of",
                 "da": "er illustrator til"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/illustratorOf.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOfStillImageOf.en",
             "name": "illustratorTil",
             "note": {
                 "en": [
@@ -33667,7 +33692,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60620",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
-                    "label": "is writer of supplementary conent of"
+                    "label": "is writer of supplementary content of  (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60621",
@@ -33689,9 +33714,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60624",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/illustratorOf.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOfStillImageOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15214.html",
-                    "label": "is illustrator of"
+                    "label": "is contributor of still image of"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60625",
@@ -33751,7 +33776,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60810",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForewordOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/16309.html",
-                    "label": "is writer of foreword of"
+                    "label": "is writer of foreword of (Deprecated)"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60812",
@@ -37024,6 +37049,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60911",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntityOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33657.html",
+                    "label": "is appellation of entity of"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15259.html"
         },
         {
@@ -39652,7 +39685,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an agent who contributes to a resource by providing an afterword to an original resource."
+                    "Relates a resource to an agent who contributes to a resource by providing an afterword to an original resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en agent, der har bidraget til en ressource ved at tilvejebringe et efterskrift til en originalressource."
@@ -39662,7 +39695,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60717",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAfterwordOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15646.html",
-                "label": "is writer of preface of"
+                "label": "is writer of preface of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -39670,23 +39703,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of afterword",
+                "en": "has writer of afterword (Deprecated)",
                 "da": "har forfatter af efterord"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAfterword.en",
             "name": "forfatterAfEfterord",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60392",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14988.html",
-                    "label": "has writer of supplementary textual content"
+                    "label": "has writer of supplementary textual content (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15644.html"
@@ -39696,7 +39729,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an agent who contributes to a resource by providing a postface to an original resource."
+                    "Relates a resource to an agent who contributes to a resource by providing a postface to an original resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en agent, der har bidraget til en ressource ved at tilvejebringe et efterskrift til en originalressource."
@@ -39706,7 +39739,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60718",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostfaceOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15647.html",
-                "label": "is writer of postface of"
+                "label": "is writer of postface of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -39714,23 +39747,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of postface",
+                "en": "has writer of postface (Deprecated)",
                 "da": "har forfatter af efterskrift"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostface.en",
             "name": "forfatterAfEfterskrift",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60392",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14988.html",
-                    "label": "has writer of supplementary textual content"
+                    "label": "has writer of supplementary textual content (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15645.html"
@@ -39740,7 +39773,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent to a resource that includes a contribution of providing an afterword."
+                    "Relates an agent to a resource that includes a contribution of providing an afterword. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en agent der har bidraget til en ressource ved at sørge for et efterord til en oprindelig ressource til en ressource."
@@ -39750,7 +39783,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60715",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAfterword.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15644.html",
-                "label": "has writer of afterword"
+                "label": "has writer of afterword (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -39758,23 +39791,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of preface of",
+                "en": "is writer of preface of (Deprecated)",
                 "da": "er forfatter til efterord til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAfterwordOf.en",
             "name": "forfatterTilEfterordTil",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60620",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
-                    "label": "is writer of supplementary conent of"
+                    "label": "is writer of supplementary content of  (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15646.html"
@@ -39784,7 +39817,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent to a resource that includes a contribution of providing a postface."
+                    "Relates an agent to a resource that includes a contribution of providing a postface. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en agent, der har bidraget til een ressource ved at sørge for en efterskrift til en oprindelig ressource til en ressource."
@@ -39794,7 +39827,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60716",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostface.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15645.html",
-                "label": "has writer of postface"
+                "label": "has writer of postface (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -39802,23 +39835,23 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of postface of",
+                "en": "is writer of postface of (Deprecated)",
                 "da": "er forfatter til efterskrift til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostfaceOf.en",
             "name": "forfatterTilEfterskriftTil",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60620",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
-                    "label": "is writer of supplementary conent of"
+                    "label": "is writer of supplementary content of  (Deprecated)"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/15647.html"
@@ -41330,9 +41363,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60396",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/illustrator.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOfStillImage.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/14992.html",
-                    "label": "has illustrator"
+                    "label": "has contributor of still image"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/16288.html"
@@ -41766,9 +41799,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60624",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/illustratorOf.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOfStillImageOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15214.html",
-                    "label": "is illustrator of"
+                    "label": "is contributor of still image of"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/16289.html"
@@ -43801,7 +43834,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates a resource to an agent who contributes to a resource by providing a foreword to an original resource."
+                    "Relates a resource to an agent who contributes to a resource by providing a foreword to an original resource. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en ressource til en agent, der har bidraget til en ressource ved at tilvejebringe en indledning til den originale ressource."
@@ -43811,7 +43844,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60810",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForewordOf.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/16309.html",
-                "label": "is writer of foreword of"
+                "label": "is writer of foreword of (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -43819,16 +43852,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has writer of foreword",
+                "en": "has writer of foreword (Deprecated)",
                 "da": "har forfatter til indledning"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForeword.en",
             "name": "forfatterTilIndledning",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -43845,7 +43878,7 @@
             "@type": "Property",
             "description": {
                 "en": [
-                    "Relates an agent to a resource that includes a contribution of providing a foreword."
+                    "Relates an agent to a resource that includes a contribution of providing a foreword. (Deprecated)"
                 ],
                 "da": [
                     "Relaterer en agent, der bidrager til en ressource ved at skrive en indledning til en oprindelig ressource til en ressource."
@@ -43855,7 +43888,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60809",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForeword.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/16308.html",
-                "label": "has writer of foreword"
+                "label": "has writer of foreword (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -43863,16 +43896,16 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is writer of foreword of",
+                "en": "is writer of foreword of (Deprecated)",
                 "da": "er forfatter til indledning til"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForewordOf.en",
             "name": "forfatterTilIndledningTil",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -44331,10 +44364,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has alternative chronological designation of first issue or part of sequence",
+                "en": "has first chronological designation of alternative sequence",
                 "da": "alternativ kronologisk betegnelse for første nummer eller del af en sekvens"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/alternativeChronologicalDesignationOfFirstIssueOrPartOfSequence.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfAlternativeSequence.en",
             "name": "alternativKronologiskBetegnelseForFørsteNummerEllerDelAfEnSekvens",
             "note": {
                 "en": [
@@ -44353,9 +44386,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60533",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15123.html",
-                    "label": "has numbering of serials"
+                    "label": "has sequence of numbering"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/16227.html"
@@ -44377,10 +44410,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has alternative chronological designation of last issue or part of sequence",
+                "en": "has last chronological designation of alternative sequence",
                 "da": "alternativ kronologisk betegnelse for sidste nummer eller del af en sekvens"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/alternativeChronologicalDesignationOfLastIssueOrPartOfSequence.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfAlternativeSequence.en",
             "name": "alternativKronologiskBetegnelseForSidsteNummerEllerDelAfEnSekvens",
             "note": {
                 "en": [
@@ -44399,9 +44432,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60533",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15123.html",
-                    "label": "has numbering of serials"
+                    "label": "has sequence of numbering"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/16228.html"
@@ -44423,10 +44456,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has alternative numeric and/or alphabetic designation of first issue or part of sequence",
+                "en": "has first alphanumeric designation of alternative sequence",
                 "da": "har alternativ numerisk og/eller alfabetisk betegnelse for første nummer eller del af en sekvens"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/alternativeNumericAndOrAlphabeticDesignationOfFirstIssueOrPartOfSequence.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfAlternativeSequence.en",
             "name": "alternativNumeriskOgEllerAlfabetiskBetegnelseForFørsteNummerEllerDelAfEnSekvens",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -44437,9 +44470,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60533",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15123.html",
-                    "label": "has numbering of serials"
+                    "label": "has sequence of numbering"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/16229.html"
@@ -44461,10 +44494,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "has alternative numeric and/or alphabetic designation of last issue or part of sequence",
+                "en": "has last alphanumeric designation of alternative sequence",
                 "da": "har alternativ numerisk og/eller alfabetisk betegnelse for sidste nummer eller del af en sekvens"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/alternativeNumericAndOrAlphabeticDesignationOfLastIssueOrPartOfSequence.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfAlternativeSequence.en",
             "name": "alternativNumeriskOgEllerAlfabetiskBetegnelseForSidsteNummerEllerDelAfEnSekvens",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -44475,9 +44508,9 @@
             "subPropertyOf": [
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60533",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSerials.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/sequenceOfNumbering.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/15123.html",
-                    "label": "has numbering of serials"
+                    "label": "has sequence of numbering"
                 }
             ],
             "url": "http://metadataregistry.org/schemaprop/show/id/16230.html"
@@ -49412,6 +49445,36 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/w/appellationOfWorkGroup.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/35396.html",
                     "label": "has appellation of work group"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60443",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/manufacturer.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15036.html",
+                    "label": "has manufacturer"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60544",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfDistributor.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15134.html",
+                    "label": "has name of distributor"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60546",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfManufacturer.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15136.html",
+                    "label": "has name of manufacturer"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60545",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfProducer.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15135.html",
+                    "label": "has name of producer"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60547",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfPublisher.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15137.html",
+                    "label": "has name of publisher"
                 }
             ],
             "inverseOf": {
@@ -49692,6 +49755,36 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/n/appellationOfWorkGroupOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/35387.html",
                     "label": "is appellation of work group of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60669",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/manufacturerOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/15259.html",
+                    "label": "is manufacturer of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60946",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfDistributorOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34254.html",
+                    "label": "is name of distributor of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60948",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfManufacturerOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34256.html",
+                    "label": "is name of manufacturer of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60949",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfProducerOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34257.html",
+                    "label": "is name of producer of"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60950",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfPublisherOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34258.html",
+                    "label": "is name of publisher of"
                 }
             ],
             "inverseOf": {
@@ -51257,6 +51350,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60911",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntityOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33657.html",
+                    "label": "is appellation of entity of"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/34254.html"
         },
         {
@@ -51349,6 +51450,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60911",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntityOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33657.html",
+                    "label": "is appellation of entity of"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/34256.html"
         },
         {
@@ -51381,6 +51490,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60911",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntityOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33657.html",
+                    "label": "is appellation of entity of"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/34257.html"
         },
         {
@@ -51413,6 +51530,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60911",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntityOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/33657.html",
+                    "label": "is appellation of entity of"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/34258.html"
         },
         {
@@ -51710,7 +51835,7 @@
                     "@id": "http://rdaregistry.info/Elements/u/P60959",
                     "lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOfSubseriesOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/34400.html",
-                    "label": "is title proper of subseries of"
+                    "label": "is title proper of subseries of (Deprecated)"
                 }
             ],
             "inverseOf": {
@@ -51752,7 +51877,7 @@
                 "@id": "http://rdaregistry.info/Elements/u/P60517",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOfSubseries.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15107.html",
-                "label": "has title proper of subseries"
+                "label": "has title proper of subseries (Deprecated)"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -51760,15 +51885,15 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is title proper of subseries of"
+                "en": "is title proper of subseries of (Deprecated)"
             },
             "lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOfSubseriesOf.en",
             "name": "titleProperOfSubseriesOf",
             "status": {
-                "@id": "http://metadataregistry.org/uri/RegStatus/1001",
-                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
-                "url": "http://metadataregistry.org/concept/show/id/412.html",
-                "label": "Published"
+                "@id": null,
+                "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/.en",
+                "url": "http://metadataregistry.org/concept/show/id/.html",
+                "label": null
             },
             "subPropertyOf": [
                 {
@@ -52289,9 +52414,9 @@
             },
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60360",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceEtc.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidence.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/14956.html",
-                "label": "has place of residence, etc."
+                "label": "has place of residence"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -52299,10 +52424,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is place of residence, etc. of"
+                "en": "is place of residence of"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceEtcOf.en",
-            "name": "placeOfResidenceEtcOf",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceOf.en",
+            "name": "placeOfResidenceOf",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
                 "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -52342,9 +52467,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60977",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceEtcOf.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/34423.html",
-                    "label": "is date of conference, etc. of"
+                    "label": "is date of conference of"
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60978",
@@ -52493,9 +52618,9 @@
             },
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P60526",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceEtc.en",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConference.en",
                 "url": "http://metadataregistry.org/schemaprop/show/id/15116.html",
-                "label": "has date of conference, etc."
+                "label": "has date of conference"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -52503,10 +52628,10 @@
                 "label": "RDA Unconstrained properties"
             },
             "label": {
-                "en": "is date of conference, etc. of"
+                "en": "is date of conference of"
             },
-            "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceEtcOf.en",
-            "name": "dateOfConferenceEtcOf",
+            "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceOf.en",
+            "name": "dateOfConferenceOf",
             "status": {
                 "@id": "http://metadataregistry.org/uri/RegStatus/1001",
                 "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -53133,9 +53258,9 @@
                 },
                 {
                     "@id": "http://rdaregistry.info/Elements/u/P60973",
-                    "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceEtcOf.en",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceOf.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/34419.html",
-                    "label": "is place of residence, etc. of"
+                    "label": "is place of residence of"
                 }
             ],
             "inverseOf": {
@@ -53326,6 +53451,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/412.html",
                 "label": "Published"
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P61011",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/relatedAgentOfPlace.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34720.html",
+                    "label": "has related agent of place"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/34531.html"
         },
         {
@@ -54154,6 +54287,12 @@
                     "lexicalAlias": "http://rdaregistry.info/Elements/p/relatedCorporateBodyOfPlace.en",
                     "url": "http://metadataregistry.org/schemaprop/show/id/25634.html",
                     "label": "has related corporate body of place"
+                },
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P60997",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfConferenceOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34531.html",
+                    "label": "is place of conference of"
                 }
             ],
             "inverseOf": {
@@ -55322,6 +55461,14 @@
                     "Relates a nomen to resource that is associated with a nomen."
                 ]
             },
+            "hasSubproperty": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P61118",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/keyTitleOf.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/39226.html",
+                    "label": "is key title of"
+                }
+            ],
             "inverseOf": {
                 "@id": "http://rdaregistry.info/Elements/u/P61023",
                 "lexicalAlias": "http://rdaregistry.info/Elements/u/relatedNomenOfResource.en",
@@ -59200,6 +59347,12 @@
                     "label": "has research supervisor"
                 }
             ],
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/u/P61103",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/researchSupervisorOf.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39211.html",
+                "label": "is research supervisor of"
+            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59308,6 +59461,12 @@
                     "label": "has source consulted"
                 }
             ],
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/u/P61107",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/sourceConsultedOf.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39215.html",
+                "label": "is source consulted of"
+            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59344,6 +59503,12 @@
                     "label": "has project supervisor"
                 }
             ],
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/u/P61104",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/projectSupervisorOf.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39212.html",
+                "label": "is project supervisor of"
+            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59372,6 +59537,12 @@
                     "Relates an agent to a resource that involves a responsibility as an academic supervisor of research that results in a resource."
                 ]
             },
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/u/P61098",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/researchSupervisor.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39206.html",
+                "label": "has research supervisor"
+            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59399,6 +59570,12 @@
                 "en": [
                     "Relates an agent to a resource that involves a responsibility as an academic supervisor of a project undertaken by a student that results in a resource."
                 ]
+            },
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/u/P61102",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/projectSupervisor.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39210.html",
+                "label": "has project supervisor"
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
@@ -59524,6 +59701,12 @@
                     "label": "is source consulted of"
                 }
             ],
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/u/P61101",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/sourceConsulted.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39209.html",
+                "label": "has source consulted"
+            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59734,12 +59917,6 @@
                     "label": "is alternate identity of person of"
                 }
             ],
-            "inverseOf": {
-                "@id": "http://rdaregistry.info/Elements/u/P60036",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/alternateIdentity.en",
-                "url": "http://metadataregistry.org/schemaprop/show/id/14638.html",
-                "label": "has alternate identity"
-            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59776,12 +59953,6 @@
                     "label": "is real identity of person of"
                 }
             ],
-            "inverseOf": {
-                "@id": "http://rdaregistry.info/Elements/u/P60037",
-                "lexicalAlias": "http://rdaregistry.info/Elements/u/realIdentity.en",
-                "url": "http://metadataregistry.org/schemaprop/show/id/14639.html",
-                "label": "has real identity"
-            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59818,6 +59989,12 @@
                     "label": "has part nomen"
                 }
             ],
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/u/P61115",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/partOfNomen.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39223.html",
+                "label": "is part of nomen"
+            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59854,6 +60031,12 @@
                     "label": "is part of nomen"
                 }
             ],
+            "inverseOf": {
+                "@id": "http://rdaregistry.info/Elements/u/P61114",
+                "lexicalAlias": "http://rdaregistry.info/Elements/u/partNomen.en",
+                "url": "http://metadataregistry.org/schemaprop/show/id/39222.html",
+                "label": "has part nomen"
+            },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/u/",
                 "url": "http://metadataregistry.org/schema/show/id/82.html",
@@ -59998,6 +60181,14 @@
                 "url": "http://metadataregistry.org/concept/show/id/.html",
                 "label": null
             },
+            "subPropertyOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/u/P61030",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/u/relatedResourceOfNomen.en",
+                    "url": "http://metadataregistry.org/schemaprop/show/id/34739.html",
+                    "label": "has related resource of nomen"
+                }
+            ],
             "url": "http://metadataregistry.org/schemaprop/show/id/39226.html"
         },
         {
