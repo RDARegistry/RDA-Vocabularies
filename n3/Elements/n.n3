@@ -46,6 +46,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    skos:altLabel "scope of usage"@en ;
     skos:definition "Relates a nomen to the circumstances or situation in which an appellation of an RDA entity is used."@en .
 
 <http://rdaregistry.info/Elements/n/P80068> a rdf:Property ;
@@ -69,6 +70,7 @@
     rdakit:toolkitDefinition "A scheme in which an appellation is established."@en ;
     rdakit:toolkitLabel "scheme of nomen"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80069> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61156> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/schemeOfNomen.en> ;
     reg:name "schemeOfNomen"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -83,6 +85,7 @@
     rdakit:toolkitDefinition "A set of characters or symbols with which an appellation is formed."@en ;
     rdakit:toolkitLabel "script of nomen"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80070> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61157> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/scriptOfNomen.en> ;
     reg:name "scriptOfNomen"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -128,6 +131,7 @@
     rdakit:toolkitDefinition "A source in which there is evidence for the use of a nomen."@en ;
     rdakit:toolkitLabel "reference source"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80139> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61159> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/referenceSource.en> ;
     reg:name "referenceSource"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -137,7 +141,7 @@
     skos:definition "Relates a nomen to a source in which there is evidence for the use of a nomen."@en .
 
 <http://rdaregistry.info/Elements/n/P80167> a rdf:Property ;
-    rdfs:label "has scope of usage"@en ;
+    rdfs:label "has scope of usage (Deprecated)"@en ;
     rdakit:hasElementType "3" ;
     rdakit:toolkitDefinition "A type or form of work associated with the usage of a name of agent."@en ;
     rdakit:toolkitLabel "scope of usage"@en ;
@@ -145,7 +149,7 @@
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60822> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/scopeOfUsage.en> ;
     reg:name "scopeOfUsage"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1008> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
     skos:definition "Relates a nomen to a type or form of work associated with the usage of a name of agent."@en .
@@ -156,6 +160,7 @@
     rdakit:toolkitDefinition "An indication of a level of authentication of the nomen of an entity."@en ;
     rdakit:toolkitLabel "status of identification"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80168> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61160> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/statusOfIdentification.en> ;
     reg:name "statusOfIdentification"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -359,39 +364,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80064> ;
     skos:definition "Relates a nomen to a work that has a title of work that is assigned by an ISSN registration agency."@en .
 
-<http://rdaregistry.info/Elements/n/P80079> a rdf:Property ;
-    rdfs:label "is authorized access point for work of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that has an access point for work that is selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "authorized access point for work of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80079>,
-        <http://rdaregistry.info/Elements/n/object/P80079> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60918> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/authorizedAccessPointForWorkOf.en> ;
-    reg:name "authorizedAccessPointForWorkOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80027>,
-        <http://rdaregistry.info/Elements/n/P80162> ;
-    skos:definition "Relates a nomen to a work that has an access point for work that is selected for preference in a specific vocabulary encoding scheme."@en .
-
-<http://rdaregistry.info/Elements/n/P80080> a rdf:Property ;
-    rdfs:label "is variant access point for work of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that has an access point for work that is not selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "variant access point for work of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80080>,
-        <http://rdaregistry.info/Elements/n/object/P80080> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForWorkOf.en> ;
-    reg:name "variantAccessPointForWorkOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80027> ;
-    skos:definition "Relates a nomen to a work that has an access point for work that is not selected for preference in a specific vocabulary encoding scheme."@en .
-
 <http://rdaregistry.info/Elements/n/P80081> a rdf:Property ;
     rdfs:label "is authorized access point for timespan of"@en ;
     rdakit:hasElementType "2" ;
@@ -408,38 +380,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80026>,
         <http://rdaregistry.info/Elements/n/P80162> ;
     skos:definition "Relates a nomen to a timespan that has an access point for timespan that is selected for preference in a specific vocabulary encoding scheme."@en .
-
-<http://rdaregistry.info/Elements/n/P80082> a rdf:Property ;
-    rdfs:label "is variant access point for timespan of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A timespan that has an access point for timespan that is not selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "variant access point for timespan of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80082>,
-        <http://rdaregistry.info/Elements/n/object/P80082> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForTimespanOf.en> ;
-    reg:name "variantAccessPointForTimespanOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80026> ;
-    skos:definition "Relates a nomen to a timespan that has an access point for timespan that is not selected for preference in a specific vocabulary encoding scheme."@en .
-
-<http://rdaregistry.info/Elements/n/P80083> a rdf:Property ;
-    rdfs:label "is preferred name of timespan of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A timespan that has a name of timespan that is selected for preference in a specific application or context."@en ;
-    rdakit:toolkitLabel "preferred name of timespan of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80083>,
-        <http://rdaregistry.info/Elements/n/object/P80083> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60924> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredNameOfTimespanOf.en> ;
-    reg:name "preferredNameOfTimespanOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80044> ;
-    skos:definition "Relates a nomen to a timespan that has a name of timespan that is selected for preference in a specific application or context."@en .
 
 <http://rdaregistry.info/Elements/n/P80084> a rdf:Property ;
     rdfs:label "is variant name of timespan of"@en ;
@@ -475,38 +415,6 @@
         <http://rdaregistry.info/Elements/n/P80162> ;
     skos:definition "Relates a nomen to a place that has an access point for place that is selected for preference in a specific vocabulary encoding scheme."@en .
 
-<http://rdaregistry.info/Elements/n/P80086> a rdf:Property ;
-    rdfs:label "is variant access point for place of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A place that has an access point for place that is not selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "variant access point for place of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80086>,
-        <http://rdaregistry.info/Elements/n/object/P80086> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForPlaceOf.en> ;
-    reg:name "variantAccessPointForPlaceOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80025> ;
-    skos:definition "Relates a nomen to a place that has an access point for place that is not selected for preference in a specific vocabulary encoding scheme."@en .
-
-<http://rdaregistry.info/Elements/n/P80087> a rdf:Property ;
-    rdfs:label "is preferred name of place of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A place that has a name of place that is selected for preference in a specific application or context."@en ;
-    rdakit:toolkitLabel "preferred name of place of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80087>,
-        <http://rdaregistry.info/Elements/n/object/P80087> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60923> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredNameOfPlaceOf.en> ;
-    reg:name "preferredNameOfPlaceOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80051> ;
-    skos:definition "Relates a nomen to a place that has a name of place that is selected for preference in a specific application or context."@en .
-
 <http://rdaregistry.info/Elements/n/P80088> a rdf:Property ;
     rdfs:label "is variant name of place of"@en ;
     rdakit:hasElementType "2" ;
@@ -541,22 +449,6 @@
         <http://rdaregistry.info/Elements/n/P80162> ;
     skos:definition "Relates a nomen to a manifestation that has an access point for manifestation that is selected for preference in a specific vocabulary encoding scheme."@en .
 
-<http://rdaregistry.info/Elements/n/P80090> a rdf:Property ;
-    rdfs:label "is variant access point for manifestation of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that has an access point for manifestation that is not selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "variant access point for manifestation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80090>,
-        <http://rdaregistry.info/Elements/n/object/P80090> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForManifestationOf.en> ;
-    reg:name "variantAccessPointForManifestationOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80024> ;
-    skos:definition "Relates a nomen to a manifestation that has an access point for manifestation that is not selected for preference in a specific vocabulary encoding scheme."@en .
-
 <http://rdaregistry.info/Elements/n/P80091> a rdf:Property ;
     rdfs:label "is authorized access point for item of"@en ;
     rdakit:hasElementType "2" ;
@@ -573,38 +465,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80015>,
         <http://rdaregistry.info/Elements/n/P80162> ;
     skos:definition "Relates a nomen to an item that has an access point for item that is selected for preference in a specific vocabulary encoding scheme."@en .
-
-<http://rdaregistry.info/Elements/n/P80092> a rdf:Property ;
-    rdfs:label "is variant access point for item of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An item that has an access point for item that is not selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "variant access point for item of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80092>,
-        <http://rdaregistry.info/Elements/n/object/P80092> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForItemOf.en> ;
-    reg:name "variantAccessPointForItemOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80015> ;
-    skos:definition "Relates a nomen to an item that has an access point for item that is not selected for preference in a specific vocabulary encoding scheme."@en .
-
-<http://rdaregistry.info/Elements/n/P80093> a rdf:Property ;
-    rdfs:label "is preferred title of item of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An item that has a title of item that is selected for preference in a specific application or context."@en ;
-    rdakit:toolkitLabel "preferred title of item of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80093>,
-        <http://rdaregistry.info/Elements/n/object/P80093> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60933> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredTitleOfItemOf.en> ;
-    reg:name "preferredTitleOfItemOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80017> ;
-    skos:definition "Relates a nomen to an item that has a title of item that is selected for preference in a specific application or context."@en .
 
 <http://rdaregistry.info/Elements/n/P80094> a rdf:Property ;
     rdfs:label "is variant title of item of"@en ;
@@ -640,38 +500,6 @@
         <http://rdaregistry.info/Elements/n/P80162> ;
     skos:definition "Relates a nomen to an expression that has an access point for expression that is selected for preference in a specific vocabulary encoding scheme."@en .
 
-<http://rdaregistry.info/Elements/n/P80096> a rdf:Property ;
-    rdfs:label "is variant access point for expression of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An expression that has an access point for expression that is not selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "variant access point for expression of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80096>,
-        <http://rdaregistry.info/Elements/n/object/P80096> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForExpressionOf.en> ;
-    reg:name "variantAccessPointForExpressionOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80023> ;
-    skos:definition "Relates a nomen to an expression that has an access point for expression that is not selected for preference in a specific vocabulary encoding scheme."@en .
-
-<http://rdaregistry.info/Elements/n/P80097> a rdf:Property ;
-    rdfs:label "is preferred title of expression of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An expression that has a title of expression that is selected for preference in a specific application or context."@en ;
-    rdakit:toolkitLabel "preferred title of expression of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80097>,
-        <http://rdaregistry.info/Elements/n/object/P80097> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60933> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredTitleOfExpressionOf.en> ;
-    reg:name "preferredTitleOfExpressionOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80039> ;
-    skos:definition "Relates a nomen to an expression that has a title of expression that is selected for preference in a specific application or context."@en .
-
 <http://rdaregistry.info/Elements/n/P80098> a rdf:Property ;
     rdfs:label "is variant title of expression of"@en ;
     rdakit:hasElementType "2" ;
@@ -688,22 +516,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80039>,
         <http://rdaregistry.info/Elements/n/P80164> ;
     skos:definition "Relates a nomen to an expression that has a title of expression that is not selected for preference in a specific application or context."@en .
-
-<http://rdaregistry.info/Elements/n/P80109> a rdf:Property ;
-    rdfs:label "is preferred title of work of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that has a title of work that is selected for preference in a specific application or context."@en ;
-    rdakit:toolkitLabel "preferred title of work of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80109>,
-        <http://rdaregistry.info/Elements/n/object/P80109> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60933> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredTitleOfWorkOf.en> ;
-    reg:name "preferredTitleOfWorkOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80064> ;
-    skos:definition "Relates a nomen to a work that has a title of work that is selected for preference in a specific application or context."@en .
 
 <http://rdaregistry.info/Elements/n/P80110> a rdf:Property ;
     rdfs:label "is variant title of work of"@en ;
@@ -742,7 +554,7 @@
 <http://rdaregistry.info/Elements/n/P80120> a rdf:Property ;
     rdfs:label "is opus number of"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A musical work that has an identifer for work that is a numeric designation assigned from a list of works of a composer indicating chronological order of composition."@en ;
+    rdakit:toolkitDefinition "A musical work that has an identifier for work that is a numeric designation assigned from a list of works of a composer indicating chronological order of composition."@en ;
     rdakit:toolkitLabel "opus number of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80120> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60962> ;
@@ -752,7 +564,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80119> ;
-    skos:definition "Relates a nomen to a musical work that has an identifer for work that is a numeric designation assigned from a list of works of a composer indicating chronological order of composition."@en .
+    skos:definition "Relates a nomen to a musical work that has an identifier for work that is a numeric designation assigned from a list of works of a composer indicating chronological order of composition."@en .
 
 <http://rdaregistry.info/Elements/n/P80121> a rdf:Property ;
     rdfs:label "is serial number of musical work of"@en ;
@@ -772,7 +584,7 @@
 <http://rdaregistry.info/Elements/n/P80122> a rdf:Property ;
     rdfs:label "is thematic index number of"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A musical work that has an identifer for work that is a numeric designation assigned from a list of works of a composer, usually arranged in chronological order or by categories, with the theme given for each composition or for each section of large compositions."@en ;
+    rdakit:toolkitDefinition "A musical work that has an identifier for work that is a numeric designation assigned from a list of works of a composer, usually arranged in chronological order or by categories, with the theme given for each composition or for each section of large compositions."@en ;
     rdakit:toolkitLabel "thematic index number of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80122>,
         <http://rdaregistry.info/Elements/n/object/P80113>,
@@ -784,7 +596,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80119> ;
-    skos:definition "Relates a nomen to a musical work that has an identifer for work that is a numeric designation assigned from a list of works of a composer, usually arranged in chronological order or by categories, with the theme given for each composition or for each section of large compositions."@en .
+    skos:definition "Relates a nomen to a musical work that has an identifier for work that is a numeric designation assigned from a list of works of a composer, usually arranged in chronological order or by categories, with the theme given for each composition or for each section of large compositions."@en .
 
 <http://rdaregistry.info/Elements/n/P80123> a rdf:Property ;
     rdfs:label "is earlier title proper of"@en ;
@@ -885,6 +697,7 @@
     rdakit:toolkitLabel "fingerprint of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80138>,
         <http://rdaregistry.info/Elements/n/object/P80138> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61158> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/n/fingerprintOf.en> ;
     reg:name "fingerprintOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
@@ -931,7 +744,7 @@
 <http://rdaregistry.info/Elements/n/P80155> a rdf:Property ;
     rdfs:label "is plate number for notated music of"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestaion of a notated music expression that has an identifier for manifestation other than a publisher number for notated music, assigned by a publisher to indicate the prinitng plate used in the printing process."@en ;
+    rdakit:toolkitDefinition "A manifestation of a notated music expression that has an identifier for manifestation other than a publisher number for notated music, assigned by a publisher to indicate the printing plate used in the printing process."@en ;
     rdakit:toolkitLabel "plate number for notated music of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80155> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60988> ;
@@ -941,7 +754,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80048> ;
-    skos:definition "Relates a nomen to a manifestaion of a notated music expression that has an identifier for manifestation other than a publisher number for notated music, assigned by a publisher to indicate the prinitng plate used in the printing process."@en .
+    skos:definition "Relates a nomen to a manifestation of a notated music expression that has an identifier for manifestation other than a publisher number for notated music, assigned by a publisher to indicate the printing plate used in the printing process."@en ;
+    skos:scopeNote "The number normally appears at the bottom of each page, and sometimes on the title page. The number may include initials, abbreviations, or words identifying the publisher, or followed by a number corresponding to the number of pages or plates or a number corresponding to an individual page or plate."@en .
 
 <http://rdaregistry.info/Elements/n/P80156> a rdf:Property ;
     rdfs:label "is publisher number for notated music of"@en ;
@@ -988,36 +802,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80032> ;
     skos:definition "Relates a nomen to a person that has an appellation of person that is a real identity."@en .
 
-<http://rdaregistry.info/Elements/n/P80163> a rdf:Property ;
-    rdfs:label "is preferred name of RDA entity of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An RDA entity that has a name of RDA entity that is selected for preference in a specific application or context."@en ;
-    rdakit:toolkitLabel "preferred name of RDA entity of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80163> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60951> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredNameOfRDAEntityOf.en> ;
-    reg:name "preferredNameOfRDAEntityOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80161> ;
-    skos:definition "Relates a nomen to an RDA entity that has a name of RDA entity that is selected for preference in a specific application or context."@en .
-
-<http://rdaregistry.info/Elements/n/P80165> a rdf:Property ;
-    rdfs:label "is variant access point for RDA entity of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An RDA entity that has an access point for RDA entity that is not selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "variant access point for RDA entity of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80165> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60952> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForRDAEntityOf.en> ;
-    reg:name "variantAccessPointForRDAEntityOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80159> ;
-    skos:definition "Relates a nomen to an RDA entity that has an access point for entity that is not selected for preference in a specific vocabulary encoding scheme."@en .
-
 <http://rdaregistry.info/Elements/n/P80166> a rdf:Property ;
     rdfs:label "has date of usage"@en ;
     rdakit:hasElementType "3" ;
@@ -1050,38 +834,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80049> ;
     skos:altLabel "International Standard Serial Number of"@en ;
     skos:definition "Relates a nomen to a work that has an identifier assigned by an ISSN registration agency."@en .
-
-<http://rdaregistry.info/Elements/n/P80172> a rdf:Property ;
-    rdfs:label "is identifier for work group of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that has an appellation of work that is a reference code taken from a vocabulary encoding scheme used to identify a work group."@en ;
-    rdakit:toolkitLabel "identifier for work group of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80172>,
-        <http://rdaregistry.info/Elements/n/object/P80172> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60938> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/identifierForWorkGroupOf.en> ;
-    reg:name "identifierForWorkGroupOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80171> ;
-    skos:definition "Relates a nomen to a work that has an appellation of work that is a reference code taken from a vocabulary encoding scheme used to identify a work group."@en .
-
-<http://rdaregistry.info/Elements/n/P80173> a rdf:Property ;
-    rdfs:label "is authorized access point for work group of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that has an access point for work that is selected for preference in a specific vocabulary encoding scheme used to identify a work group."@en ;
-    rdakit:toolkitLabel "authorized access point for work group of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80173>,
-        <http://rdaregistry.info/Elements/n/object/P80173> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60918> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/authorizedAccessPointForWorkGroupOf.en> ;
-    reg:name "authorizedAccessPointForWorkGroupOf" ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80171> ;
-    skos:definition "Relates a nomen to a work that has an access point for work that is selected for preference in a specific vocabulary encoding scheme used to identify a work group."@en .
 
 <http://rdaregistry.info/Elements/n/P80174> a rdf:Property ;
     rdfs:label "has related entity of nomen"@en ;
@@ -1260,6 +1012,26 @@
         <http://rdaregistry.info/Elements/n/P80033> ;
     skos:definition "Relates a nomen to a person who has an appellation of person that is a reference code taken from a vocabulary encoding scheme."@en .
 
+<http://rdaregistry.info/Elements/n/P80063> a rdf:Property ;
+    rdfs:label "is title proper of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that has a title of manifestation that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "title proper of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80123>,
+        <http://rdaregistry.info/Elements/n/P80124>,
+        <http://rdaregistry.info/Elements/n/P80125>,
+        <http://rdaregistry.info/Elements/n/P80135>,
+        <http://rdaregistry.info/Elements/n/datatype/P80063>,
+        <http://rdaregistry.info/Elements/n/object/P80063> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60957> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/titleProperOf.en> ;
+    reg:name "titleProperOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80062> ;
+    skos:definition "Relates a nomen to a manifestation that has a title of manifestation that is selected for preference in a specific application or context."@en .
+
 <http://rdaregistry.info/Elements/n/P80075> a rdf:Property ;
     rdfs:label "is assigned by corporate body"@en ;
     rdakit:hasElementType "2" ;
@@ -1310,6 +1082,194 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80011>,
         <http://rdaregistry.info/Elements/n/P80073> ;
     skos:definition "Relates a nomen to a person who assigns a nomen to an entity."@en .
+
+<http://rdaregistry.info/Elements/n/P80079> a rdf:Property ;
+    rdfs:label "is authorized access point for work of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that has an access point for work that is selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "authorized access point for work of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80173>,
+        <http://rdaregistry.info/Elements/n/datatype/P80079>,
+        <http://rdaregistry.info/Elements/n/object/P80079> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60918> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/authorizedAccessPointForWorkOf.en> ;
+    reg:name "authorizedAccessPointForWorkOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80027>,
+        <http://rdaregistry.info/Elements/n/P80162> ;
+    skos:definition "Relates a nomen to a work that has an access point for work that is selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/n/P80080> a rdf:Property ;
+    rdfs:label "is variant access point for work of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that has an access point for work that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for work of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80080>,
+        <http://rdaregistry.info/Elements/n/object/P80080> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForWorkOf.en> ;
+    reg:name "variantAccessPointForWorkOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80027>,
+        <http://rdaregistry.info/Elements/n/P80165> ;
+    skos:definition "Relates a nomen to a work that has an access point for work that is not selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/n/P80082> a rdf:Property ;
+    rdfs:label "is variant access point for timespan of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A timespan that has an access point for timespan that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for timespan of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80082>,
+        <http://rdaregistry.info/Elements/n/object/P80082> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForTimespanOf.en> ;
+    reg:name "variantAccessPointForTimespanOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80026>,
+        <http://rdaregistry.info/Elements/n/P80165> ;
+    skos:definition "Relates a nomen to a timespan that has an access point for timespan that is not selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/n/P80083> a rdf:Property ;
+    rdfs:label "is preferred name of timespan of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A timespan that has a name of timespan that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "preferred name of timespan of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80083>,
+        <http://rdaregistry.info/Elements/n/object/P80083> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60924> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredNameOfTimespanOf.en> ;
+    reg:name "preferredNameOfTimespanOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80044>,
+        <http://rdaregistry.info/Elements/n/P80163> ;
+    skos:definition "Relates a nomen to a timespan that has a name of timespan that is selected for preference in a specific application or context."@en .
+
+<http://rdaregistry.info/Elements/n/P80086> a rdf:Property ;
+    rdfs:label "is variant access point for place of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A place that has an access point for place that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for place of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80086>,
+        <http://rdaregistry.info/Elements/n/object/P80086> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForPlaceOf.en> ;
+    reg:name "variantAccessPointForPlaceOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80025>,
+        <http://rdaregistry.info/Elements/n/P80165> ;
+    skos:definition "Relates a nomen to a place that has an access point for place that is not selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/n/P80087> a rdf:Property ;
+    rdfs:label "is preferred name of place of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A place that has a name of place that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "preferred name of place of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80087>,
+        <http://rdaregistry.info/Elements/n/object/P80087> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60923> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredNameOfPlaceOf.en> ;
+    reg:name "preferredNameOfPlaceOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80051>,
+        <http://rdaregistry.info/Elements/n/P80163> ;
+    skos:definition "Relates a nomen to a place that has a name of place that is selected for preference in a specific application or context."@en .
+
+<http://rdaregistry.info/Elements/n/P80090> a rdf:Property ;
+    rdfs:label "is variant access point for manifestation of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that has an access point for manifestation that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for manifestation of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80090>,
+        <http://rdaregistry.info/Elements/n/object/P80090> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForManifestationOf.en> ;
+    reg:name "variantAccessPointForManifestationOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80024>,
+        <http://rdaregistry.info/Elements/n/P80165> ;
+    skos:definition "Relates a nomen to a manifestation that has an access point for manifestation that is not selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/n/P80092> a rdf:Property ;
+    rdfs:label "is variant access point for item of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An item that has an access point for item that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for item of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80092>,
+        <http://rdaregistry.info/Elements/n/object/P80092> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForItemOf.en> ;
+    reg:name "variantAccessPointForItemOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80015>,
+        <http://rdaregistry.info/Elements/n/P80165> ;
+    skos:definition "Relates a nomen to an item that has an access point for item that is not selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/n/P80093> a rdf:Property ;
+    rdfs:label "is preferred title of item of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An item that has a title of item that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "preferred title of item of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80093>,
+        <http://rdaregistry.info/Elements/n/object/P80093> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60933> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredTitleOfItemOf.en> ;
+    reg:name "preferredTitleOfItemOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80017>,
+        <http://rdaregistry.info/Elements/n/P80163> ;
+    skos:definition "Relates a nomen to an item that has a title of item that is selected for preference in a specific application or context."@en .
+
+<http://rdaregistry.info/Elements/n/P80096> a rdf:Property ;
+    rdfs:label "is variant access point for expression of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An expression that has an access point for expression that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for expression of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80096>,
+        <http://rdaregistry.info/Elements/n/object/P80096> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForExpressionOf.en> ;
+    reg:name "variantAccessPointForExpressionOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80023>,
+        <http://rdaregistry.info/Elements/n/P80165> ;
+    skos:definition "Relates a nomen to an expression that has an access point for expression that is not selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/n/P80097> a rdf:Property ;
+    rdfs:label "is preferred title of expression of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An expression that has a title of expression that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "preferred title of expression of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80097>,
+        <http://rdaregistry.info/Elements/n/object/P80097> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60933> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredTitleOfExpressionOf.en> ;
+    reg:name "preferredTitleOfExpressionOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80039>,
+        <http://rdaregistry.info/Elements/n/P80163> ;
+    skos:definition "Relates a nomen to an expression that has a title of expression that is selected for preference in a specific application or context."@en .
 
 <http://rdaregistry.info/Elements/n/P80103> a rdf:Property ;
     rdfs:label "is authorized access point for corporate body of"@en ;
@@ -1412,6 +1372,23 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80022>,
         <http://rdaregistry.info/Elements/n/P80100> ;
     skos:definition "Relates a nomen to a person who has an access point for person that is not selected for preference in a specific vocabulary encoding scheme."@en .
+
+<http://rdaregistry.info/Elements/n/P80109> a rdf:Property ;
+    rdfs:label "is preferred title of work of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that has a title of work that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "preferred title of work of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80109>,
+        <http://rdaregistry.info/Elements/n/object/P80109> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60933> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredTitleOfWorkOf.en> ;
+    reg:name "preferredTitleOfWorkOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80064>,
+        <http://rdaregistry.info/Elements/n/P80163> ;
+    skos:definition "Relates a nomen to a work that has a title of work that is selected for preference in a specific application or context."@en .
 
 <http://rdaregistry.info/Elements/n/P80111> a rdf:Property ;
     rdfs:label "is variant title of manifestation of"@en ;
@@ -1528,20 +1505,20 @@
     skos:definition "Relates a nomen to a manifestation that has a title proper in another language or script."@en .
 
 <http://rdaregistry.info/Elements/n/P80136> a rdf:Property ;
-    rdfs:label "is parallel title proper of series of"@en ;
+    rdfs:label "is parallel title of series of"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that has a title proper of series in another language or script."@en ;
-    rdakit:toolkitLabel "parallel title proper of series of"@en ;
+    rdakit:toolkitDefinition "A manifestation that has a title of series in another language or script."@en ;
+    rdakit:toolkitLabel "parallel title of series of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80137>,
         <http://rdaregistry.info/Elements/n/datatype/P80136> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/parallelTitleProperOfSeriesOf.en> ;
-    reg:name "parallelTitleProperOfSeriesOf"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/parallelTitleOfSeriesOf.en> ;
+    reg:name "parallelTitleOfSeriesOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80125>,
         <http://rdaregistry.info/Elements/n/P80135> ;
-    skos:definition "Relates a nomen to a manifestation that has a title proper of series in another language or script."@en .
+    skos:definition "Relates a nomen to a manifestation that has a title of series in another language or script."@en .
 
 <http://rdaregistry.info/Elements/n/P80144> a rdf:Property ;
     rdfs:label "is preferred name of corporate body of"@en ;
@@ -1638,6 +1615,40 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80056>,
         <http://rdaregistry.info/Elements/n/P80142> ;
     skos:definition "Relates a nomen to a person who has a name of person that is not selected for preference in a specific application or context."@en .
+
+<http://rdaregistry.info/Elements/n/P80172> a rdf:Property ;
+    rdfs:label "is identifier for work group of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that has an appellation of work that is a reference code taken from a vocabulary encoding scheme used to identify a work group."@en ;
+    rdakit:toolkitLabel "identifier for work group of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80172>,
+        <http://rdaregistry.info/Elements/n/object/P80172> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60938> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/identifierForWorkGroupOf.en> ;
+    reg:name "identifierForWorkGroupOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80049>,
+        <http://rdaregistry.info/Elements/n/P80171> ;
+    skos:definition "Relates a nomen to a work that has an appellation of work that is a reference code taken from a vocabulary encoding scheme used to identify a work group."@en .
+
+<http://rdaregistry.info/Elements/n/P80173> a rdf:Property ;
+    rdfs:label "is authorized access point for work group of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that has an access point for work that is selected for preference in a specific vocabulary encoding scheme used to identify a work group."@en ;
+    rdakit:toolkitLabel "authorized access point for work group of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/datatype/P80173>,
+        <http://rdaregistry.info/Elements/n/object/P80173> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60918> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/authorizedAccessPointForWorkGroupOf.en> ;
+    reg:name "authorizedAccessPointForWorkGroupOf" ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80079>,
+        <http://rdaregistry.info/Elements/n/P80171> ;
+    skos:definition "Relates a nomen to a work that has an access point for work that is selected for preference in a specific vocabulary encoding scheme used to identify a work group."@en .
 
 <http://rdaregistry.info/Elements/n/P80001> a rdf:Property ;
     rdfs:label "has related work of nomen"@en ;
@@ -1938,25 +1949,6 @@
         <http://rdaregistry.info/Elements/n/P80161> ;
     skos:definition "Relates a nomen to a timespan that has an appellation of timespan in natural language and phrasing used in common discourse."@en .
 
-<http://rdaregistry.info/Elements/n/P80049> a rdf:Property ;
-    rdfs:label "is identifier for work of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A work that has an appellation of work that is a reference code taken from a vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "identifier for work of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80119>,
-        <http://rdaregistry.info/Elements/n/P80170>,
-        <http://rdaregistry.info/Elements/n/datatype/P80049>,
-        <http://rdaregistry.info/Elements/n/object/P80049> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60938> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/identifierForWorkOf.en> ;
-    reg:name "identifierForWorkOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80045>,
-        <http://rdaregistry.info/Elements/n/P80160> ;
-    skos:definition "Relates a nomen to a work that has an appellation of work that is a reference code taken from a vocabulary encoding scheme."@en .
-
 <http://rdaregistry.info/Elements/n/P80051> a rdf:Property ;
     rdfs:label "is name of place of"@en ;
     rdakit:hasElementType "2" ;
@@ -1974,44 +1966,6 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80041>,
         <http://rdaregistry.info/Elements/n/P80161> ;
     skos:definition "Relates a nomen to a place that has an appellation of place in natural language and phrasing used in common discourse."@en .
-
-<http://rdaregistry.info/Elements/n/P80062> a rdf:Property ;
-    rdfs:label "is title of manifestation of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that has an appellation of manifestation in natural language and phrasing used in common discourse."@en ;
-    rdakit:toolkitLabel "title of manifestation of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80063>,
-        <http://rdaregistry.info/Elements/n/datatype/P80062>,
-        <http://rdaregistry.info/Elements/n/object/P80062> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60912> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/titleOfManifestationOf.en> ;
-    reg:name "titleOfManifestationOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80040>,
-        <http://rdaregistry.info/Elements/n/P80161> ;
-    skos:definition "Relates a nomen to a manifestation that has an appellation of manifestation in natural language and phrasing used in common discourse."@en .
-
-<http://rdaregistry.info/Elements/n/P80063> a rdf:Property ;
-    rdfs:label "is title proper of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation that has a chief name in natural language and phrasing used in common discourse, normally used when naming a manifestation."@en ;
-    rdakit:toolkitLabel "title proper of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80123>,
-        <http://rdaregistry.info/Elements/n/P80124>,
-        <http://rdaregistry.info/Elements/n/P80125>,
-        <http://rdaregistry.info/Elements/n/P80135>,
-        <http://rdaregistry.info/Elements/n/datatype/P80063>,
-        <http://rdaregistry.info/Elements/n/object/P80063> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60957> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/titleProperOf.en> ;
-    reg:name "titleProperOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80062> ;
-    skos:definition "Relates a nomen to a manifestation that has a chief name in natural language and phrasing used in common discourse, normally used when naming a manifestation."@en .
 
 <http://rdaregistry.info/Elements/n/P80073> a rdf:Property ;
     rdfs:label "is assigned by agent"@en ;
@@ -2050,56 +2004,21 @@
         <http://rdaregistry.info/Elements/n/P80162> ;
     skos:definition "Relates a nomen to an agent who has an access point for agent that is selected for preference in a specific vocabulary encoding scheme."@en .
 
-<http://rdaregistry.info/Elements/n/P80100> a rdf:Property ;
-    rdfs:label "is variant access point for agent of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An agent who has an access point for agent that is not selected for preference in a specific vocabulary encoding scheme."@en ;
-    rdakit:toolkitLabel "variant access point for agent of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80102>,
-        <http://rdaregistry.info/Elements/n/P80108>,
-        <http://rdaregistry.info/Elements/n/datatype/P80100>,
-        <http://rdaregistry.info/Elements/n/object/P80100> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForAgentOf.en> ;
-    reg:name "variantAccessPointForAgentOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80018> ;
-    skos:definition "Relates a nomen to an agent who has an access point for agent that is not selected for preference in a specific vocabulary encoding scheme."@en .
-
 <http://rdaregistry.info/Elements/n/P80125> a rdf:Property ;
-    rdfs:label "is title proper of series of"@en ;
+    rdfs:label "is title of series of"@en ;
     rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "A manifestation of an issue of a series that has a name of series appearing on it."@en ;
-    rdakit:toolkitLabel "title proper of series of"@en ;
+    rdakit:toolkitDefinition "A manifestation that has a title that identifies a series to which a manifestation belongs."@en ;
+    rdakit:toolkitLabel "title of series of"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80126>,
         <http://rdaregistry.info/Elements/n/datatype/P80125> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60958> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/titleProperOfSeriesOf.en> ;
-    reg:name "titleProperOfSeriesOf"@en ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/titleOfSeriesOf.en> ;
+    reg:name "titleOfSeriesOf"@en ;
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80063> ;
-    skos:definition "Relates a nomen to a manifestation of an issue of a series that has a name of series appearing on it."@en .
-
-<http://rdaregistry.info/Elements/n/P80140> a rdf:Property ;
-    rdfs:label "is preferred name of agent of"@en ;
-    rdakit:hasElementType "2" ;
-    rdakit:toolkitDefinition "An agent who has a name of agent that is selected for preference in a specific application or context."@en ;
-    rdakit:toolkitLabel "preferred name of agent of"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80141>,
-        <http://rdaregistry.info/Elements/n/P80146>,
-        <http://rdaregistry.info/Elements/n/datatype/P80140> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60927> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredNameOfAgentOf.en> ;
-    reg:name "preferredNameOfAgentOf"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80052> ;
-    skos:definition "Relates a nomen to an agent who has a name of agent that is selected for preference in a specific application or context."@en .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80062> ;
+    skos:definition "Relates a nomen to a manifestation that has a title that identifies a series to which a manifestation belongs."@en .
 
 <http://rdaregistry.info/Elements/n/P80142> a rdf:Property ;
     rdfs:label "is variant name of agent of"@en ;
@@ -2231,6 +2150,26 @@
         <http://rdaregistry.info/Elements/n/P80160> ;
     skos:definition "Relates a nomen to a manifestation that has an appellation of manifestation that is a reference code taken from a vocabulary encoding scheme."@en .
 
+<http://rdaregistry.info/Elements/n/P80049> a rdf:Property ;
+    rdfs:label "is identifier for work of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A work that has an appellation of work that is a reference code taken from a vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "identifier for work of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80119>,
+        <http://rdaregistry.info/Elements/n/P80170>,
+        <http://rdaregistry.info/Elements/n/P80172>,
+        <http://rdaregistry.info/Elements/n/datatype/P80049>,
+        <http://rdaregistry.info/Elements/n/object/P80049> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60938> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/identifierForWorkOf.en> ;
+    reg:name "identifierForWorkOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80045>,
+        <http://rdaregistry.info/Elements/n/P80160> ;
+    skos:definition "Relates a nomen to a work that has an appellation of work that is a reference code taken from a vocabulary encoding scheme."@en .
+
 <http://rdaregistry.info/Elements/n/P80054> a rdf:Property ;
     rdfs:label "is name of corporate body of"@en ;
     rdakit:hasElementType "2" ;
@@ -2269,6 +2208,24 @@
         <http://rdaregistry.info/Elements/n/P80053> ;
     skos:definition "Relates a nomen to a family who has an appellation of family in natural language and phrasing used in common discourse."@en .
 
+<http://rdaregistry.info/Elements/n/P80062> a rdf:Property ;
+    rdfs:label "is title of manifestation of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "A manifestation that has an appellation of manifestation in natural language and phrasing used in common discourse."@en ;
+    rdakit:toolkitLabel "title of manifestation of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80063>,
+        <http://rdaregistry.info/Elements/n/datatype/P80062>,
+        <http://rdaregistry.info/Elements/n/object/P80062> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60912> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/titleOfManifestationOf.en> ;
+    reg:name "titleOfManifestationOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80040>,
+        <http://rdaregistry.info/Elements/n/P80161> ;
+    skos:definition "Relates a nomen to a manifestation that has an appellation of manifestation in natural language and phrasing used in common discourse."@en .
+
 <http://rdaregistry.info/Elements/n/P80064> a rdf:Property ;
     rdfs:label "is title of work of"@en ;
     rdakit:hasElementType "2" ;
@@ -2306,6 +2263,25 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80006>,
         <http://rdaregistry.info/Elements/n/P80073> ;
     skos:definition "Relates a nomen to a collective agent who assigns a nomen to an entity."@en .
+
+<http://rdaregistry.info/Elements/n/P80100> a rdf:Property ;
+    rdfs:label "is variant access point for agent of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An agent who has an access point for agent that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for agent of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80102>,
+        <http://rdaregistry.info/Elements/n/P80108>,
+        <http://rdaregistry.info/Elements/n/datatype/P80100>,
+        <http://rdaregistry.info/Elements/n/object/P80100> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60934> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForAgentOf.en> ;
+    reg:name "variantAccessPointForAgentOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80018>,
+        <http://rdaregistry.info/Elements/n/P80165> ;
+    skos:definition "Relates a nomen to an agent who has an access point for agent that is not selected for preference in a specific vocabulary encoding scheme."@en .
 
 <http://rdaregistry.info/Elements/n/P80101> a rdf:Property ;
     rdfs:label "is authorized access point for collective agent of"@en ;
@@ -2362,6 +2338,24 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80049> ;
     skos:definition "Relates a nomen to a musical work that has an identifier for work that is a serial number, opus number, or thematic index number assigned to a musical work by a composer, publisher, or a musicologist. "@en .
+
+<http://rdaregistry.info/Elements/n/P80140> a rdf:Property ;
+    rdfs:label "is preferred name of agent of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An agent who has a name of agent that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "preferred name of agent of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80141>,
+        <http://rdaregistry.info/Elements/n/P80146>,
+        <http://rdaregistry.info/Elements/n/datatype/P80140> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60927> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredNameOfAgentOf.en> ;
+    reg:name "preferredNameOfAgentOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80052>,
+        <http://rdaregistry.info/Elements/n/P80163> ;
+    skos:definition "Relates a nomen to an agent who has a name of agent that is selected for preference in a specific application or context."@en .
 
 <http://rdaregistry.info/Elements/n/P80141> a rdf:Property ;
     rdfs:label "is preferred name of collective agent of"@en ;
@@ -2796,6 +2790,27 @@
         <http://rdaregistry.info/Elements/n/P80052> ;
     skos:definition "Relates a nomen to a person who has an appellation of person in natural language and phrasing used in common discourse."@en .
 
+<http://rdaregistry.info/Elements/n/P80163> a rdf:Property ;
+    rdfs:label "is preferred name of RDA entity of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An RDA entity that has a name of RDA entity that is selected for preference in a specific application or context."@en ;
+    rdakit:toolkitLabel "preferred name of RDA entity of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80083>,
+        <http://rdaregistry.info/Elements/n/P80087>,
+        <http://rdaregistry.info/Elements/n/P80093>,
+        <http://rdaregistry.info/Elements/n/P80097>,
+        <http://rdaregistry.info/Elements/n/P80109>,
+        <http://rdaregistry.info/Elements/n/P80140>,
+        <http://rdaregistry.info/Elements/n/datatype/P80163> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60951> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/preferredNameOfRDAEntityOf.en> ;
+    reg:name "preferredNameOfRDAEntityOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80161> ;
+    skos:definition "Relates a nomen to an RDA entity that has a name of RDA entity that is selected for preference in a specific application or context."@en .
+
 <http://rdaregistry.info/Elements/n/P80160> a rdf:Property ;
     rdfs:label "is identifier for RDA entity of"@en ;
     rdakit:hasElementType "2" ;
@@ -2862,8 +2877,27 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80161> ;
     skos:definition "Relates a nomen to an RDA entity that has a name of RDA entity that is not selected for preference in a specific application or context."@en .
 
-<http://metadataregistry.org/uri/RegStatus/1008> a skos:Concept ;
-    skos:prefLabel "Deprecated"@en .
+<http://rdaregistry.info/Elements/n/P80165> a rdf:Property ;
+    rdfs:label "is variant access point for RDA entity of"@en ;
+    rdakit:hasElementType "2" ;
+    rdakit:toolkitDefinition "An RDA entity that has an access point for RDA entity that is not selected for preference in a specific vocabulary encoding scheme."@en ;
+    rdakit:toolkitLabel "variant access point for RDA entity of"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/n/P80080>,
+        <http://rdaregistry.info/Elements/n/P80082>,
+        <http://rdaregistry.info/Elements/n/P80086>,
+        <http://rdaregistry.info/Elements/n/P80090>,
+        <http://rdaregistry.info/Elements/n/P80092>,
+        <http://rdaregistry.info/Elements/n/P80096>,
+        <http://rdaregistry.info/Elements/n/P80100>,
+        <http://rdaregistry.info/Elements/n/datatype/P80165> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60952> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/n/variantAccessPointForRDAEntityOf.en> ;
+    reg:name "variantAccessPointForRDAEntityOf"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10012> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/n/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80159> ;
+    skos:definition "Relates a nomen to an RDA entity that has an access point for entity that is not selected for preference in a specific vocabulary encoding scheme."@en .
 
 <http://rdaregistry.info/Elements/n/P80010> a rdf:Property ;
     rdfs:label "has related RDA entity of nomen"@en ;
@@ -2890,6 +2924,9 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/n/P80174>,
         <http://rdaregistry.info/Elements/x/P00001> ;
     skos:definition "Relates a nomen to an RDA entity that is associated with a nomen."@en .
+
+<http://metadataregistry.org/uri/RegStatus/1008> a skos:Concept ;
+    skos:prefLabel "Deprecated"@en .
 
 <http://rdaregistry.info/Elements/n/P80159> a rdf:Property ;
     rdfs:label "is access point for RDA entity of"@en ;
