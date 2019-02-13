@@ -4,37 +4,69 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body to a field of business in which a corporate body is engaged and/or the body's area of competence, responsibility, jurisdiction, etc."
+            "Relates a corporate body to a field of business in which a corporate body is engaged or an area of competence, responsibility, jurisdiction, etc. of a corporate body."
         ],
         "fr": [
-            "Met une collectivité en relation avec un champ d’activité dans lequel s’investit la collectivité, sa zone de compétence, de responsabilité, de juridiction, etc."
+            "Met une collectivité en relation avec un champ d’activité dans lequel évolue une collectivité ou une zone de compétence, de responsabilité, de juridiction d’une collectivité, etc."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με έναν επιχειρηματικό τομέα στον οποίο το συλλογικό όργανο δραστηριοποιείται ή έναν τομέα αρμοδιότητας, ευθύνης, δικαιοδοσίας κ.λπ. με ένα συλλογικό όργανο."
+        ],
+        "de": [
+            "Setzt eine Körperschaft mit einem Geschäftsfeld, in dem eine Körperschaft tätig ist und/oder ihrem Kompetenzbereich, ihrer Verantwortlichkeit, ihrer Zuständigkeit usw., in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation til et område en korporation beskæftiger sig med eller korporationens kompetence-, ansvars-, jurisdiktion etc."
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa amb un camp d’activitat al qual es dedica una entitat corporativa o una àrea de competència, de responsabilitat, de jurisdicció, etc., d’una entitat."
+        ],
+        "fi": [
+            "Liittää yhteisön yhteisön toimialaan, asiantuntijuus- tai vastuualueeseen, hallinnonalaan tms."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50022",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/fieldOfActivityOfCorporateBody.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24811.html",
+            "label": "has field of activity of corporate body"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60089",
-        "lexicalAlias": "http://rdaregistry.info/Elements/u/fieldOfActivity.en",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/fieldOfActivityOfAgent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14685.html",
-        "label": "has field of activity of the agent"
+        "label": "has field of activity of agent"
     },
-    "instructionNumber": "11/01/2016",
+    "instructionNumber": "11.1",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
         "label": "RDA Agent properties"
     },
     "label": {
-        "en": "has field of activity of the corporate body",
-        "fr": "a pour domaine d’activité de la collectivité"
+        "en": "has field of activity of corporate body",
+        "fr": "a pour domaine d’activité d’une collectivité",
+        "el": "έχει πεδίο της δραστηριοποίησης του συλλογικού οργάνου",
+        "da": "har korporationens virkefelt",
+        "ca": "té com a camp d’activitat d’una entitat corporativa",
+        "fi": "yhteisön toiminta-ala",
+        "de": "hat Betätigungsfeld der Körperschaft"
     },
-    "lexicalAlias": "http://rdaregistry.info/Elements/a/fieldOfActivityOfTheCorporateBody.en",
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/fieldOfActivityOfCorporateBody.en",
     "name": {
-        "en": "fieldOfActivityOfTheCorporateBody"
+        "en": "fieldOfActivityOfCorporateBody",
+        "el": "πεδίοΔραστηριοποίησηςΤουΣυλλογικούΟργάνου",
+        "da": "korporationensVirkefelt",
+        "fi": "yhteisonToimintaAla",
+        "fr": "domaineDactivitéDuneCollectivité"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -43,14 +75,26 @@
         "label": "Published"
     },
     "ToolkitDefinition": {
-        "en": "A field of business in which a corporate body is engaged and/or the body's area of competence, responsibility, jurisdiction, etc.",
-        "fr": "Champ d’activité dans lequel s’investit la collectivité, sa zone de compétence, de responsabilité, de juridiction, etc.",
-        "es": "Un campo de negocios al que la entidad corporativa está dedicada y/o su área de competencia, responsabilidad, jurisdicción, etc."
+        "en": "A field of business in which a corporate body is engaged or an area of competence, responsibility, jurisdiction, etc. of a corporate body.",
+        "fr": "Champ d’activité dans lequel évolue une collectivité ou zone de compétence, de responsabilité, de juridiction d’une collectivité, etc.",
+        "es": "Un campo de negocios al que la entidad corporativa está dedicada y/o su área de competencia, responsabilidad, jurisdicción, etc.",
+        "el": "Ένας επιχειρηματικός τομέας στον οποίο το συλλογικό όργανο δραστηριοποιείται ή ένας τομέας αρμοδιότητας, ευθύνης, δικαιοδοσίας κ.λπ. ενός συλλογικού οργάνου.",
+        "de": "Ein Geschäftsfeld, in dem eine Körperschaft tätig ist, und/oder ihr Kompetenzbereich, ihre Verantwortlichkeit, ihre Zuständigkeit usw.",
+        "da": "Område en korporation beskæftiger sig med eller korporationens kompetence-, ansvars-, jurisdiktion etc.",
+        "ca": "Camp d’activitat al qual es dedica una entitat corporativa o una àrea de competència, de responsabilitat, de jurisdicció, etc., d’una entitat.",
+        "fi": "Yhteisön toimiala, asiantuntijuus- tai vastuualue, hallinnonala tms.",
+        "no": "Et arbeidsfelt som en korporasjon er engasjert i eller som er korporasjonens kompetanseområde, ansvarsområde eller juridiske felt etc."
     },
     "ToolkitLabel": {
-        "en": "field of activity of the corporate body",
-        "fr": "domaine d’activité de la collectivité",
-        "es": "campo de actividad de la entidad corporativa"
+        "en": "field of activity of corporate body",
+        "fr": "domaine d’activité d’une collectivité",
+        "es": "campo de actividad de la entidad corporativa",
+        "el": "πεδίο της δραστηριοποίησης του συλλογικού οργάνου",
+        "de": "Betätigungsfeld einer Körperschaft",
+        "da": "korporationens virkefelt",
+        "ca": "camp d’activitat d’una entitat corporativa",
+        "fi": "yhteisön toiminta-ala",
+        "no": "virksomhetsområde for korporasjon"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15557.html"
 }

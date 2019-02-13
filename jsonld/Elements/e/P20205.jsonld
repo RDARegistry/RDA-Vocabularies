@@ -4,23 +4,31 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an expression to an expression, represented by an identifier, an authorized access point, or a description, that is related to the expression being described (e.g., a revised version, a translation)."
+            "Relates an expression to an expression associated with an expression being described."
+        ],
+        "fr": [
+            "Met une expression en relation avec une expression en relation avec une expression associée à la ressource décrite."
+        ],
+        "da": [
+            "Relaterer et udtryk til et udtryk, der er relateret til et udtryk, der beskrives."
+        ],
+        "el": [
+            "Συνδέει μια έκφραση με μια έκφραση που συνδέεται με μια περιγραφόμενη έκφραση."
+        ],
+        "ca": [
+            "Relaciona una expressió amb una expressió associada amb una expressió que es descriu."
+        ],
+        "fi": [
+            "Liittää ekspression ekspressioon, johon kuvailun kohteena oleva ekspressio liittyy."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10006",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "label": "expression"
     },
     "hasSubproperty": [
-        {
-            "@id": "http://rdaregistry.info/Elements/e/P20233",
-            "lexicalAlias": "http://rdaregistry.info/Elements/e/derivativeExpressionRelationship.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/14324.html",
-            "label": "has derivative expression relationship with"
-        },
-        [],
         {
             "@id": "http://rdaregistry.info/Elements/e/P20232",
             "lexicalAlias": "http://rdaregistry.info/Elements/e/accompanyingExpressionRelationship.en",
@@ -28,16 +36,22 @@
             "label": "has accompanying expression relationship with"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/e/P20235",
-            "lexicalAlias": "http://rdaregistry.info/Elements/e/sequentialExpressionRelationship.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/14326.html",
-            "label": "has sequential expression relationship with"
+            "@id": "http://rdaregistry.info/Elements/e/P20234",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/descriptiveExpressionRelationship.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14325.html",
+            "label": "has descriptive expression relationship with (Deprecated)"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/e/P20236",
-            "lexicalAlias": "http://rdaregistry.info/Elements/e/wholePartExpressionRelationship.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/14327.html",
-            "label": "has whole-part expression relationship with"
+            "@id": "http://rdaregistry.info/Elements/e/datatype/P20205",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/datatype/relatedExpressionExpression.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23296.html",
+            "label": "has related expression (expression)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/e/object/P20205",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/object/relatedExpression.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24460.html",
+            "label": "has related expression"
         }
     ],
     "hasUnconstrained": {
@@ -46,30 +60,29 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/14909.html",
         "label": "has related resource"
     },
-    "instructionNumber": "26/01/2016",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20205",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/relatedExpression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14296.html",
-        "label": "has related expression"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/e/",
         "url": "http://metadataregistry.org/schema/show/id/78.html",
         "label": "RDA Expression properties"
     },
     "label": {
-        "en": "has related expression"
+        "en": "has related expression (expression)",
+        "sv": "har relaterat uttryck",
+        "fr": "a pour expression en relation (expression)",
+        "vi": "có biểu hiện liên quan (biểu hiện)",
+        "da": "har relateret udtryk (udtryk)",
+        "el": "έχει σχετική έκφραση (έκφραση)",
+        "ca": "té com a expressió relacionada (expressió)",
+        "fi": "ekspressioon liittyvä ekspressio"
     },
-    "lexicalAlias": "http://rdaregistry.info/Elements/e/relatedExpression.en",
+    "lexicalAlias": "http://rdaregistry.info/Elements/e/relatedExpressionExpression.en",
     "name": {
-        "en": "relatedExpression"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "relatedExpressionExpression",
+        "vi": "biểuHiệnLiênQuanTớiBiểuHiện",
+        "da": "relateretUdtrykUdtryk",
+        "el": "σχετικήΈκφρασηΈκφρασης",
+        "fi": "ekspressioonLiittyvaEkspressio",
+        "fr": "expressionEnRelationExpression"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -77,15 +90,20 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/e/P20297",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/relatedEntityExpression.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25196.html",
+            "label": "has related entity (expression)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "An expression, represented by an identifier, an authorized access point, or a description, that is related to the expression being described (e.g., a revised version, a translation).",
-        "fr": "Expression associée à la ressource décrite (par exemple, version révisée, traduction).",
-        "es": "Una expresión, representada por un identificador, un punto de acceso autorizado o una descripción, que está relacionada con la expresión que está siendo descrita (p.ej., una versión revisada, una traducción)."
+        "da": "Udtryk, der er relateret til et udtryk, der beskrives."
     },
     "ToolkitLabel": {
-        "en": "related expression",
-        "fr": "expression en relation",
-        "es": "expresión relacionada"
+        "sv": "relaterat uttryck",
+        "da": "relateret udtryk (udtryk)"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14296.html"
 }

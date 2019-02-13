@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a moving image work or computer program by giving apparent movement to inanimate objects or drawings to the expression."
+            "Relates an agent contributing to an expression of a moving image work or computer program by giving apparent movement to inanimate objects or drawings to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre d’images animées ou d’un programme informatique en donnant l’illusion du mouvement à des objets inanimés ou à des dessins en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre d’images animées ou d’un programme informatique en donnant l’illusion du mouvement à des objets inanimés ou à des dessins en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου κινητής εικόνας ή προγράμματος υπολογιστή δίνοντας φαινομενική κίνηση σε άψυχα αντικείμενα ή σχέδια, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der zu einer Expression eines Filmwerks oder eines Computerprogramms dadurch beiträgt, dass er unbelebte Objekte oder Zeichnungen in scheinbare Bewegung versetzt, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent der der har bidraget til et udtryk af et levende billedværk eller et computerprogram ved at give en illusion af bevægelse til livløse genstande eller tegninger til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix a una expressió d’una obra d’imatges en moviment o d’un programa d’ordinador, donant l’aparença de moviment a objectes o dibuixos inanimats, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan elokuvan tai tietokoneohjelman ekspressioon, joka sisältää animoituja esineitä tai piirroksia."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50136",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/animatorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24631.html",
+            "label": "is animator of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50136",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/animatorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24925.html",
+            "label": "is animator of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60606",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/animatorOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15196.html",
         "label": "is animator of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20028",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/animator.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14119.html",
-        "label": "has animator"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,18 +59,29 @@
     },
     "label": {
         "en": "is animator of",
-        "fr": "est l’animateur de"
+        "fr": "est un animateur de",
+        "el": "είναι δημιουργός κινουμένων σχεδίων του",
+        "da": "er animator til",
+        "ca": "és animador de",
+        "fi": "animaatio",
+        "de": "ist Trickfilmzeichner von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/animatorOf.en",
     "name": {
-        "en": "animatorOf"
+        "en": "animatorOf",
+        "el": "δημιουργόςκινουμένωνσχεδίωνΤου",
+        "da": "animatorTil",
+        "fi": "animaatio",
+        "fr": "animateurDe"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
-    },
+    "See Also": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50192",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/artistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14057.html",
+            "label": "is artist of"
+        }
+    ],
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -62,10 +97,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre d’images animées ou d’un programme informatique en donnant l’illusion du mouvement à des objets inanimés ou à des dessins."
+        "fr": "Expression d’une œuvre d’images animées ou d’un programme informatique qui intègre une contribution consistant à donner l’illusion du mouvement à des objets inanimés ou à des dessins.",
+        "en": "An expression of a moving image work or computer program that incorporates a contribution of giving apparent movement to inanimate objects or drawings.",
+        "el": "Μια έκφραση ενός έργου κινητής εικόνας ή προγράμματος υπολογιστή που ενσωματώνει τη συνεισφορά της παροχής φαινομενικής κίνησης σε άψυχα αντικείμενα ή σχέδια.",
+        "de": "Eine Expression eines Filmwerks oder eines Computerprogramms, bei der ein Akteur unbelebte Objekte oder Zeichnungen in scheinbare Bewegung versetzt. Schaffung der Zeichnungen, die animiert werden, sind hiervon ausgenommen.",
+        "da": "Udtryk af et filmværk eller et computerprogram der inkorporerer et bidrag der giver en illusion af bevægelse til livløse objekter eller tegninger.",
+        "ca": "Expressió d’una obra d’imatges en moviment o d’un programa d’ordinador que incorpora una contribució que dóna l’aparença de moviment a objectes o dibuixos inanimats.",
+        "fi": "Elokuvan tai tietokoneohjelman ekspressio, joka sisältää animoituja esineitä tai piirroksia.",
+        "no": "Et uttrykk av et verk i form av levende bilder eller et dataprogram som omfatter et bidrag i form av å gi tilsynelatende bevegelse til tegninger eller figurer."
     },
     "ToolkitLabel": {
-        "fr": "animateur de"
+        "fr": "animateur de",
+        "en": "animator of",
+        "el": "δημιουργός κινουμένων σχεδίων του",
+        "de": "Trickfilmzeichner von",
+        "da": "animator til",
+        "ca": "animador de",
+        "fi": "animaatio",
+        "no": "animatør av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14001.html"
 }

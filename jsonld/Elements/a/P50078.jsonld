@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a performer contributing to an expression of a work by participating in a program (often broadcast) where topics are discussed, usually with participation of experts in fields related to the discussion to the expression."
+            "Relates a performer contributing to an expression of a work by participating in a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion to an expression."
         ],
         "fr": [
-            "Met un interprète contribuant à une expression d’une œuvre en participant à une émission (souvent diffusée) où des sujets sont discutés, habituellement avec la participation d’experts dans les domaines reliés à la discussion en relation avec l’expression."
+            "Met un interprète qui contribue à une expression d’une œuvre en participant à une activité, souvent diffusée à la radio, à la télévision, etc., où des sujets sont discutés, habituellement avec la participation d’experts dans les domaines reliés à la discussion, en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν εκτελεστή, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου μέσω της συμμετοχής του σε ένα πρόγραμμα, συχνά εκπομπή, όπου συζητώνται θέματα, συχνά με τη συμμετοχή ειδικών στον τομέα που είναι συναφείς με τη συζήτηση, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Ausführenden, der bei einer Veranstaltung auftritt, meist in einer Sendung, in der Themen üblicherweise mit Experten diskutiert werden, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en udøver der bidrager til et udtryk af et værk ved at deltage i et program, ofte transmitteret, hvor emner diskuteres, normat med deltagelse af fagfolk indenfor felter, der er relateret til diskussionen til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un intèrpret, que contribueix a una expressió d’una obra participant en un programa, sovint emès, on es discuteixen temes, habitualment amb la participació d’experts en els camps relacionats amb la discussió, amb una expressió."
+        ],
+        "fi": [
+            "Liittää panelistin teoksen ekspressioon, joka sisältää esiintymisen esiintyjänä ohjelmassa, usein lähetetyssä, jossa keskustellaan eri aiheista ja johon yleensä osallistuu näiden aiheiden asiantuntijoita."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50078",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/panelistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24596.html",
+            "label": "is panelist of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50078",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/panelistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24867.html",
+            "label": "is panelist of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60024",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/panelistOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14626.html",
         "label": "is panelist of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20019",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/panelist.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14110.html",
-        "label": "has panelist"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is panelist of",
-        "fr": "est le panéliste de"
+        "fr": "est un panéliste de",
+        "el": "είναι πανελίστας του",
+        "da": "er paneldeltager i",
+        "ca": "és panelista de",
+        "fi": "paneeliohjelma",
+        "de": "ist Diskussionsteilnehmer von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/panelistOf.en",
     "name": {
-        "en": "panelistOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "panelistOf",
+        "el": "πανελίσταςΤου",
+        "da": "paneldeltagerI",
+        "fi": "paneeliohjelma",
+        "fr": "panélisteDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Interprète contribuant à une expression d’une œuvre en participant à une émission (souvent diffusée) où des sujets sont discutés, habituellement avec la participation d’experts dans les domaines reliés à la discussion."
+        "fr": "Expression d’une œuvre qui intègre une prestation consistant à participer à une activité, souvent diffusée à la radio, à la télévision, etc., où des sujets sont discutés, habituellement avec la participation d’experts dans les domaines reliés à la discussion.",
+        "en": "An expression of a work that incorporates a performance of participating in a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά της συμμετοχής σε ένα πρόγραμμα, συνήθως σε μια εκπομπή, όπου συζητώνται θέματα, συνήθως με τη συμμετοχή των ειδικών στους τομείς που συνδέονται με το θέμα συζήτησης.",
+        "de": "Eine Expression eines Werks, bei der ein Akteur bei einer Veranstaltung auftritt, meist in einer Sendung, in der Themen üblicherweise mit Experten diskutiert werden.",
+        "da": "Udtryk af et værk der inkorporerer en optræden ved at deltage i et program, ofte transmitteret, hvor emner diskuteres, normalt med deltagelse af fagfolk indenfor felter, der er relateret til diskussionen.",
+        "ca": "Expressió d’una obra que incorpora una interpretació que participa en un programa, sovint emès, on es discuteixen temes, habitualment amb la participació d’experts en els camps relacionats amb la discussió.",
+        "fi": "Teoksen ekspressio, joka sisältää esiintymisen esiintyjänä ohjelmassa, usein lähetetyssä, jossa keskustellaan eri aiheista ja johon yleensä osallistuu näiden aiheiden asiantuntijoita.",
+        "no": "Et uttrykk av et verk som omfatter det å delta i et program, gjerne kringkastet, der emner diskuteres, som regel med eksperter innen områder knyttet til diskusjonen, som deltakere."
     },
     "ToolkitLabel": {
-        "fr": "panéliste de"
+        "fr": "panéliste de",
+        "en": "panelist of",
+        "el": "πανελίστας του",
+        "de": "Diskussionsteilnehmer von",
+        "da": "paneldeltager i",
+        "ca": "panelista de",
+        "fi": "paneeliohjelma",
+        "no": "paneldeltaker i"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13943.html"
 }

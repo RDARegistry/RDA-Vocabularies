@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body to a person employed by the corporate body."
+            "Relates a corporate body to a person employed by a corporate body."
         ],
         "fr": [
-            "Met une collectivité en relation avec une personne employée par la collectivité."
+            "Met une collectivité en relation avec une personne employée par une collectivité."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με ένα φυσικό πρόσωπο το οποίο απασχολείται από το συλλογικό όργανο."
+        ],
+        "de": [
+            "Setzt eine Körperschaft mit einer Person, die bei einer Körperschaft beschäftigt ist, in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation til en person der er ansat af en korporation"
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa amb una persona empleada per una entitat corporativa."
+        ],
+        "fi": [
+            "Liittää yhteisön henkilöön, joka on työntekijänä yhteisössä."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50026",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/employee.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24565.html",
+            "label": "has employee"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50026",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/employee.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24815.html",
+            "label": "has employee"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60629",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/employee.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15219.html",
         "label": "has employee"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50096",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/employer.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/13961.html",
-        "label": "has employer"
-    },
+    "instructionNumber": "29.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "has employee",
-        "fr": "a pour employé"
+        "fr": "a pour employé",
+        "el": "έχει εργαζόμενο",
+        "da": "har ansat",
+        "ca": "té com a empleat",
+        "fi": "työntekijä",
+        "de": "hat Arbeitnehmer"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/employee.en",
     "name": {
-        "en": "employee"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10004",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
-        "label": "Person"
+        "en": "employee",
+        "el": "εργαζόμενος",
+        "da": "ansat",
+        "fi": "tyontekija",
+        "fr": "employé"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -54,14 +81,26 @@
         "label": "Published"
     },
     "ToolkitDefinition": {
-        "en": "A person employed by the corporate body.",
-        "fr": "Personne employée par la collectivité.",
-        "es": "Una persona empleada por la entidad corporativa."
+        "en": "A person employed by a corporate body.",
+        "fr": "Personne employée par une collectivité.",
+        "es": "Una persona empleada por la entidad corporativa.",
+        "el": "Ένα φυσικό πρόσωπο που απασχολείται από ένα συλλογικό όργανο.",
+        "de": "Eine Person, die bei einer Körperschaft beschäftigt ist.",
+        "da": "Person der er ansat af en korporation.",
+        "ca": "Persona empleada per una entitat corporativa.",
+        "fi": "Henkilö, joka on työntekijänä yhteisössä.",
+        "no": "En person som er ansatt i en korporasjon."
     },
     "ToolkitLabel": {
         "en": "employee",
         "fr": "employé",
-        "es": "empleado"
+        "es": "empleado",
+        "el": "εργαζόμενος",
+        "de": "Arbeitnehmer",
+        "da": "ansat",
+        "ca": "empleat",
+        "fi": "työntekijä",
+        "no": "ansatt"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13891.html"
 }

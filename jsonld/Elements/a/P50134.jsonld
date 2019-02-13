@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression by adding music to a work that originally lacked it, by composing new music to substitute for the original music, or by composing new music to supplement the existing music to the expression."
+            "Relates an agent contributing to an expression by adding music to a work that originally lacked it, by composing new music to substitute for the original music, or by composing new music to supplement the existing music, to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression en ajoutant de la musique à une œuvre qui n’en avait pas à l’origine, en composant une nouvelle musique pour remplacer la musique originale ou en composant une nouvelle musique pour compléter la musique existante en relation avec l’expression."
+            "Met un agent qui contribue à une expression en ajoutant de la musique à une œuvre qui n’en avait pas à l’origine, en composant une nouvelle musique pour remplacer la musique originale ou en composant une nouvelle musique pour compléter la musique existante en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση μέσω της προσθήκης μουσικής σε ένα έργο που αρχικά δεν διέθετε [μουσική], μέσω της σύνθεσης νέας μουσικής προς αντικατάσταση της πρωτότυπης μουσικής ή μέσω της σύνθεσης νέας μουσικής ως συμπλήρωμα της ήδη υπάρχουσας μουσικής, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der zu einer Expression eines Werks beiträgt, indem er Musik zu einem Werk hinzufügt, das im Original keine hatte, neue Musik als Ersatz für die Originalmusik komponiert oder neue Musik komponiert, die eine existierende Musik ergänzt, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har bidraget til et udtryk ved at tilføje musik til et værk, der oprindeligt manglede det, ved at komponere ny musik som erstatning for den oprindelige musik, eller ved at komponere ny musik som supplement til eksisterende musik til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix a una expressió afegint música a una obra que originalment no en tenia, composant música nova per substituir la música original, o composant música nova per complementar la música existent, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan ekspressioon, johon on lisätty musiikkia, joka ei aikaisemmin sisältynyt teokseen, tai johon on sävelletty uutta musiikkia korvaamaan teoksen aikaisemman musiikin tai täydentämään olemassa olevaa musiikkia."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50134",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/composerExpressionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24629.html",
+            "label": "is composer (expression) of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50134",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/composerExpressionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24923.html",
+            "label": "is composer (expression) of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60655",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/composerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15245.html",
         "label": "is composer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20026",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/composerExpression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14117.html",
-        "label": "has composer (expression)"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is composer (expression) of",
-        "fr": "est le compositeur (expression) de"
+        "fr": "est un compositeur (expression) de",
+        "el": "είναι συνθέτης (έκφραση) του",
+        "da": "er komponist (udtryk) til",
+        "ca": "és compositor (expressió) de",
+        "fi": "sävellys (ekspressio)",
+        "de": "ist Komponist (Expression) von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/composerExpressionOf.en",
     "name": {
-        "en": "composerExpressionOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "composerExpressionOf",
+        "el": "συνθέτηςΈκφρασηςΤου",
+        "da": "komponistUdtrykTil",
+        "fi": "savellysEkspressio",
+        "fr": "compositeurExpressionDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression en ajoutant de la musique à une œuvre qui n’en avait pas à l’origine, en composant une nouvelle musique pour remplacer la musique originale ou en composant une nouvelle musique pour compléter la musique existante."
+        "fr": "Expression qui intègre une contribution consistant à ajouter de la musique à une œuvre qui n’en avait pas à l’origine, en composant une nouvelle musique pour remplacer une musique originale ou en composant une nouvelle musique pour compléter une musique existante.",
+        "en": "An expression that incorporates a contribution of adding music to a work that originally lacked it, by composing new music to substitute for original music, or by composing new music to supplement existing music.",
+        "el": "Μια έκφραση που ενσωματώνει τη συνεισφορά της προσθήκης μουσικής σε ένα έργο που αρχικά δεν διέθετε [μουσική], μέσω της σύνθεσης νέας μουσικής προς αντικατάσταση της πρωτότυπης μουσικής ή μέσω της σύνθεσης νέας μουσικής ως συμπλήρωμα της ήδη υπάρχουσας μουσικής.",
+        "de": "Eine Expression, bei der ein Akteur Musik zu einem Werk hinzufügt, das im Original keine hatte, neue Musik als Ersatz für die Originalmusik komponiert oder neue Musik komponiert, die eine existierende Musik ergänzt.",
+        "da": "Udtryk, der inkorporerer et bidrag ved at tilføje musik til et værk der oprindelig manglede musik, ved at komponere ny musik, som erstatning for den oprindelige musik eller ved at komponere ny musik som supplement til den eksisterende musik.",
+        "ca": "Expressió d’una obra que incorpora una contribució que afegeix música a una obra que originalment no en tenia, composant música nova per substituir la música original, o composant música nova per complementar la música existent.",
+        "fi": "Ekspressio, johon on lisätty musiikkia, joka ei aikaisemmin sisältynyt teokseen, tai johon on sävelletty uutta musiikkia korvaamaan teoksen aikaisemman musiikin tai täydentämään olemassa olevaa musiikkia.",
+        "no": "Et uttrykk som omfatter et bidrag i form av å sette musikk til et verk som opprinnelig var uten musikk, ved å komponere musikk som erstatning for originalmusikken, eller ved å komponere ny musikk i tillegg til den eksisterende musikken."
     },
     "ToolkitLabel": {
-        "fr": "compositeur (expression) de"
+        "fr": "compositeur (expression) de",
+        "en": "composer (expression) of",
+        "el": "συνθέτης (έκφραση) του",
+        "de": "Komponist (Expression) von",
+        "da": "komponist (udtryk) til",
+        "ca": "compositor (expressió) de",
+        "fi": "sävellys (ekspressio)",
+        "no": "komponist (uttrykk) av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13999.html"
 }

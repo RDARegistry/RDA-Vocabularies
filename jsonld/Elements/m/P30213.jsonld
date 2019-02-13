@@ -4,17 +4,35 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a manifestation that is contained in or contains the manifestation."
+            "Relates a manifestation to a manifestation that is contained in or contains another manifestation."
         ],
         "fr": [
-            "Met une manifestation en relation avec une manifestation qui est contenue dans la manifestation ou la contient."
+            "Met une manifestation en relation avec une manifestation qui contient ou est contenue dans une autre manifestation."
+        ],
+        "vi": [
+            "Liên kết biểu thị với biểu thị chứa hoặc được chứa trong biểu thị khác."
+        ],
+        "da": [
+            "Relaterer en manifestation til en manifestation der er indeholdt i eller indeholder en manifestation."
+        ],
+        "de": [
+            "Setzt eine Manifestation mit einer Manifestation, die in einer anderen Manifestation enthalten ist oder eine andere Manifestation enthält, in Beziehung."
+        ],
+        "ca": [
+            "Relaciona una manifestació amb una manifestació anifestació que és continguda o conté una altra manifestació."
+        ],
+        "fi": [
+            "Liittää manifestaation manifestaatioon, joka sisältyy toiseen manifestaatioon tai sisältää toisen manifestaation."
+        ],
+        "el": [
+            "Συνδέει μια εκδήλωση με μια εκδήλωση που περιέχεται σε ή περιέχει μια άλλη εκδήλωση."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10007",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "label": "manifestation"
     },
     "hasSubproperty": [
         {
@@ -28,6 +46,12 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/m/containerOfManifestation.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14422.html",
             "label": "is container of (manifestation)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/m/object/P30213",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/object/wholePartManifestationRelationship.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24245.html",
+            "label": "has whole-part manifestation relationship with"
         }
     ],
     "hasUnconstrained": {
@@ -36,6 +60,7 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15303.html",
         "label": "has whole-part resource relationship with"
     },
+    "instructionNumber": "24.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -43,17 +68,22 @@
     },
     "label": {
         "en": "has whole-part manifestation relationship with",
-        "fr": "a pour relation de manifestation tout-partie"
+        "fr": "a pour relation de manifestation tout-partie",
+        "vi": "có mối quan hệ biểu thị toàn bộ phần",
+        "da": "har helheds-del manifestationsrelation",
+        "de": "hat Teil-Ganzes-Beziehung auf Manifestationsebene",
+        "ca": "té com a relació de manifestació tot-part",
+        "fi": "manifestaation osa-kokonaisuussuhde",
+        "el": "έχει σχέση συνόλου-τμήματος εκδήλωσης με"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/wholePartManifestationRelationship.en",
     "name": {
-        "en": "wholePartManifestationRelationship"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "en": "wholePartManifestationRelationship",
+        "vi": "mốiQuanHệBiểuThịToànBộPhần",
+        "da": "helhedsdelManifestationsrelation",
+        "fi": "manifestaationOsaKokonaisuussuhde",
+        "el": "σχέσηΣυνόλουΤμήματοςΕκδήλωσης",
+        "fr": "relationDeManifestationToutpartie"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -64,20 +94,36 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/m/P30048",
-            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedManifestation.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedManifestationManifestation.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14437.html",
-            "label": "has related manifestation"
+            "label": "has related manifestation (manifestation)"
         }
     ],
     "ToolkitDefinition": {
-        "en": "A manifestation that is contained in or contains the manifestation.",
-        "fr": "Manifestation qui est contenue dans la manifestation ou la contient.",
-        "es": "Una manifestación que está incluida en, o contiene la manifestación."
+        "en": "A manifestation that is contained in or contains another manifestation.",
+        "fr": "Manifestation qui contient ou est contenue dans une autre manifestation.",
+        "es": "Una manifestación que está incluida en, o contiene la manifestación.",
+        "nl": "Een manifestatie die in de manifestatie is opgenomen of die deze bevat.",
+        "vi": "Biểu thị chứa hoặc được chứa trong biểu thị khác.",
+        "da": "Manifestation der er indeholdt i eller indeholder en manifestation.",
+        "de": "Eine Manifestation, die in einer anderen Manifestation enthalten ist oder eine andere Manifestation enthält.",
+        "ca": "Manifestació que és continguda o conté una altra manifestació.",
+        "fi": "Manifestaatio, joka sisältyy toiseen manifestaatioon tai sisältää toisen manifestaation.",
+        "no": "En manifestasjon som omfattes av eller selv omfatter en annen manifestasjon.",
+        "el": "Μια εκδήλωση που περιέχεται σε ή περιέχει μια άλλη εκδήλωση."
     },
     "ToolkitLabel": {
         "en": "whole-part manifestation relationship",
         "fr": "relation de manifestation tout-partie",
-        "es": "relación de la manifestación todo-parte"
+        "es": "relación de la manifestación todo-parte",
+        "nl": "geheel-deel manifestatie relatie",
+        "vi": "mối quan hệ biểu thị toàn bộ-phần",
+        "da": "helheds-del manifestationsrelation",
+        "de": "Teil-Ganzes-Beziehung auf Manifestationsebene",
+        "ca": "relació de manifestació tot-part",
+        "fi": "manifestaation osa-kokonaisuussuhde",
+        "no": "relasjonstypen hel/del av manifestasjon",
+        "el": "σχέση συνόλου-τμήματος εκδήλωσης"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14602.html"
 }

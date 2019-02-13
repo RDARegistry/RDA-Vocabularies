@@ -4,30 +4,51 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an item to an item that is contained on the same disc with the item being described."
+            "Relates an item to an item that is contained on the same disc with an item being described."
         ],
         "fr": [
-            "Met un item en relation avec un item qui est contenu sur le même disque que l’item décrit."
+            "Met un item en relation avec un item qui est contenu sur le même disque qu’un item décrit."
+        ],
+        "vi": [
+            "Liên kết bản với bản được chứa trên cùng đĩa với bản đang được mô tả"
+        ],
+        "da": [
+            "Relaterer et eksemplar til et eksemplar, der er indeholdt på den samme disc som det eksemplar, der beskrives."
+        ],
+        "de": [
+            "Setzt ein Exemplar mit einem Exemplar, das auf derselben Disk enthalten ist, wie ein Exemplar, das beschrieben wird, in Beziehung."
+        ],
+        "el": [
+            "Συνδέει ένα αντίτυπο με ένα αντίτυπο το οποίο περιέχεται στον ίδιο δίσκο με ένα περιγραφόμενο αντίτυπο."
+        ],
+        "ca": [
+            "Relaciona un item amb un ítem inclòs en el mateix disc amb un ítem que es descriu."
+        ],
+        "fi": [
+            "Liittää kappaleen kappaleeseen, joka on samalla levyllä kuin kuvailun kohde."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10003",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "label": "item"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/i/object/P40035",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/object/onDiscWithItem.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24519.html",
+            "label": "is on disc with (item)"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60257",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/onDiscWith.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14853.html",
         "label": "is on disc with"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/i/P40035",
-        "lexicalAlias": "http://rdaregistry.info/Elements/i/onDiscWithItem.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14370.html",
-        "label": "is on disc with (item)"
-    },
+    "instructionNumber": "24.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/i/",
         "url": "http://metadataregistry.org/schema/show/id/80.html",
@@ -35,17 +56,22 @@
     },
     "label": {
         "en": "is on disc with (item)",
-        "fr": "est sur le disque avec (item)"
+        "fr": "est sur le disque avec (item)",
+        "vi": "là trên đĩa với (bản)",
+        "da": "er på disc sammen med (eksemplar)",
+        "de": "ist auf Disk mit (Exemplar)",
+        "el": "είναι στον δίσκο μαζί με (αντίτυπο)",
+        "ca": "és en un disc amb (ítem)",
+        "fi": "levyllä myös (kappale)"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/i/onDiscWithItem.en",
     "name": {
-        "en": "onDiscWithItem"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10003",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "en": "onDiscWithItem",
+        "vi": "trênĐĩaVớiBản",
+        "da": "påDiscSammenMedEksemplar",
+        "el": "στονΔίσκοΜαζίΜεΑντίτυπο",
+        "fi": "levyllaMyosKappale",
+        "fr": "surLeDisqueAvecItem"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,14 +88,28 @@
         }
     ],
     "ToolkitDefinition": {
-        "en": "An item that is contained on the same disc with the item being described.",
-        "fr": "Item qui est contenu sur le même disque que l’item décrit.",
-        "es": "Un ítem que se incluye en el mismo disco que el ítem descrito."
+        "en": "An item that is contained on the same disc with an item being described.",
+        "fr": "Item qui est contenu sur le même disque qu’un item décrit.",
+        "es": "Un ítem que se incluye en el mismo disco que el ítem descrito.",
+        "vi": "Bản được chứa trên cùng đĩa với bản đang được mô tả",
+        "da": "Eksemplar, der er indeholdt på den samme disc som det eksemplar, der beskrives.",
+        "de": "Ein Exemplar, das auf derselben Disk enthalten ist, wie ein Exemplar, das beschrieben wird.",
+        "el": "Ένα αντίτυπο το οποίο περιέχεται στον ίδιο δίσκο με ένα περιγραφόμενο αντίτυπο.",
+        "ca": "Ítem inclòs en el mateix disc amb un ítem que es descriu.",
+        "fi": "Kappale, joka on samalla levyllä kuin kuvailtava kappale.",
+        "no": "Et eksemplar som befinner seg på samme plate som eksemplaret som beskrives."
     },
     "ToolkitLabel": {
         "en": "on disc with (item)",
         "fr": "sur le disque avec (item)",
-        "es": "en disco con (ítem)"
+        "es": "en disco con (ítem)",
+        "vi": "trên đĩa với (bản)",
+        "da": "på disc sammen med (eksemplar)",
+        "de": "Auf Disk mit (Exemplar)",
+        "el": "στον δίσκο μαζί με (αντίτυπο)",
+        "ca": "en un disc amb (ítem)",
+        "fi": "levyllä myös (kappale)",
+        "no": "på plate med (eksemplar)"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14370.html"
 }

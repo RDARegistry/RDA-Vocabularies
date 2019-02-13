@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a work by writing down or notating previously unwritten or unnotated content, or by changing it from one system of notation to another to the expression."
+            "Relates an agent contributing to an expression of a work by writing down or notating previously unwritten or unnotated content, or by changing it from one system of notation to another to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en écrivant ou en notant un contenu auparavant non écrit ou non noté, ou bien en le transposant d’un système de notation à un autre en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre en écrivant ou en notant un contenu auparavant non écrit ou non noté, ou bien en le transposant d’un système de notation à un autre en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου μέσα από τη δημιουργία σχολίων/σημειώσεων για περιεχόμενο μη σχολιασμένο προηγούμενα ή μέσω της αλλαγής συστήματος σημειογραφίας, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der zu einer Expression eines Werks dadurch beiträgt, dass er ungeschriebenen und nicht notierten Inhalt niederschreibt oder ihn von einem Notationssystem in ein anderes überträgt, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har bidraget til et udtryk af et værk ved at nedskrive eller notere uskrevet eller ikke-noteret indhold, eller ved at ændre det fra et notationssystem til et andet. til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix a una expressió d’una obra escrivint o notant un contingut que no estava escrit o notat, o canviant-lo d’un sistema de notació a un altre, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan teoksen ekspressioon, joka sisältää  aiemmin kirjoittamattomien tai nuotintamattomien sisältöjen kirjoittamisen tai nuotintamisen, tai sisältöjen muuntamisen toiseen merkintäjärjestelmään."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50142",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/transcriberOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24637.html",
+            "label": "is transcriber of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50142",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/transcriberOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24931.html",
+            "label": "is transcriber of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60610",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/transcriberOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15200.html",
         "label": "is transcriber of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20034",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/transcriber.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14125.html",
-        "label": "has transcriber"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,18 +59,29 @@
     },
     "label": {
         "en": "is transcriber of",
-        "fr": "est le transcripteur de"
+        "fr": "est un transcripteur de",
+        "el": "είναι αντιγραφέας του",
+        "da": "er afskriver af",
+        "ca": "és transcriptor de",
+        "fi": "transkriboitu nuotinnos",
+        "de": "ist Transkribierer von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/transcriberOf.en",
     "name": {
-        "en": "transcriberOf"
+        "en": "transcriberOf",
+        "el": "αντιγραφέαςΤου",
+        "da": "afskriverAf",
+        "fi": "transkriboituNuotinnos",
+        "fr": "transcripteurDe"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
-    },
+    "See Also": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50137",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/arrangerOfMusicOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14002.html",
+            "label": "is arranger of music of"
+        }
+    ],
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -62,10 +97,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en écrivant ou en notant un contenu auparavant non écrit ou non noté, ou bien en le transposant d’un système de notation à un autre."
+        "fr": "Expression d’une œuvre qui intègre une contribution consistant à écrire ou à noter un contenu auparavant non écrit ou non noté, ou bien à le transposer d’un système de notation à un autre.",
+        "en": "An expression of a work that incorporates a contribution of writing down or notating previously unwritten or unnotated content, or by changing it from one system of notation to another.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά της δημιουργίας σχολίων/σημειώσεων για περιεχόμενο μη σχολιασμένο προηγούμενα ή [που ενσωματώνει τη συνεισφορά της δημιουργίας] μέσω της αλλαγής σημειογραφίας από ένα σύστημα σε ένα άλλο.",
+        "de": "Eine Expression eines Werks, bei der ein Akteur ungeschriebenen und nicht notierten Inhalt niederschreibt oder ihn von einem Notationssystem in ein anderes überträgt.",
+        "da": "Udtryk af et værk, der inkorporerer et bidrag ved at nedskrive eller notere tidligere uskrevet eller ikke noteret indhold, eller ved at ændre det fra et notationssystem til et andet.",
+        "ca": "Expressió d’una obra que incorpora una contribució que escriu o nota un contingut que no estava escrit o notat, o canviant-lo d’un sistema de notació a un altre.",
+        "fi": "Teoksen ekspressio, joka sisältää  aiemmin kirjoittamattomien tai nuotintamattomien sisältöjen kirjoittamisen tai nuotintamisen, tai sisältöjen muuntamisen toiseen merkintäjärjestelmään.",
+        "no": "Et uttrykk av et verk som omfatter et bidrag i form av å skrive ned eller notere tidligere uskrevet eller unotert innhold, eller i form av omskrivning fra ett system til et annet."
     },
     "ToolkitLabel": {
-        "fr": "transcripteur de"
+        "fr": "transcripteur de",
+        "en": "transcriber of",
+        "el": "αντιγραφέας του",
+        "de": "Transkribierer von",
+        "da": "afskriver af",
+        "ca": "transcriptor de",
+        "fi": "transkriboitu nuotinnos",
+        "no": "avskriver for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14007.html"
 }

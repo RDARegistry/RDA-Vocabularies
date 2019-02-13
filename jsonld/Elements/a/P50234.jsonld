@@ -4,30 +4,57 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person to a corporate body that the person commands or in which the person holds an office."
+            "Relates a person to a corporate body that a person commands or in which a person holds an office."
         ],
         "fr": [
-            "Met une personne en relation avec une collectivité dans laquelle la personne exerce une fonction administrative ou officielle."
+            "Met une personne en relation avec une collectivité qu’une personne dirige ou au sein de laquelle une personne exerce une fonction de responsabilité."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο με ένα συλλογικό όργανο, του οποίου ηγείται ή στο οποίο το φυσικό πρόσωπο κατέχει μια θέση."
+        ],
+        "de": [
+            "Setzt eine Person mit einer Körperschaft, die eine Person leitet oder in der eine Person ein Amt innehat, in Beziehung."
+        ],
+        "da": [
+            "Relaterer en person til en korporation, som en person leder eller hvor en person har et embede."
+        ],
+        "ca": [
+            "Relaciona una persona amb una entitat corporativa que una persona dirigeix o en la qual una persona té un càrrec."
+        ],
+        "fi": [
+            "Liittää henkilön yhteisöön, jota henkilö johtaa tai jossa hän on viranhaltijana."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10004",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
-        "label": "Person"
+        "label": "person"
     },
     "hasSubproperty": [
         {
-            "@id": "http://rdaregistry.info/Elements/a/P50286",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/chiefExecutiveOf.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/22867.html",
+            "@id": "http://rdaregistry.info/Elements/a/object/P50286",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/chiefExecutiveOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24775.html",
             "label": "is chief executive of"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/a/P50287",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/trusteeOf.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/22868.html",
+            "@id": "http://rdaregistry.info/Elements/a/object/P50287",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/trusteeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24776.html",
             "label": "is trustee of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50234",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/officerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24729.html",
+            "label": "is officer of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50234",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/officerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25023.html",
+            "label": "is officer of"
         }
     ],
     "hasUnconstrained": {
@@ -36,12 +63,7 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15664.html",
         "label": "has officer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50027",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/officer.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/13892.html",
-        "label": "has officer"
-    },
+    "instructionNumber": "29.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -49,17 +71,20 @@
     },
     "label": {
         "en": "is officer of",
-        "fr": "a pour collectivité administrée"
+        "fr": "est un dirigeant de",
+        "el": "είναι υπάλληλος του",
+        "da": "er embedsmand i",
+        "ca": "és directiu de",
+        "fi": "virkamiehenä yhteisössä",
+        "de": "ist leitendender Angestellter von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/officerOf.en",
     "name": {
-        "en": "officerOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10005",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "en": "officerOf",
+        "el": "υπάλληλοςΤου",
+        "da": "embedsmandI",
+        "fi": "virkamiehenaYhteisossa",
+        "fr": "dirigeantDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -68,14 +93,26 @@
         "label": "Published"
     },
     "ToolkitDefinition": {
-        "en": "A corporate body that the person commands or in which the person holds an office.",
-        "fr": "Collectivité dans laquelle la personne exerce une fonction administrative ou officielle.",
-        "es": "Una entidad corporativa en la cual una persona tiene un cargo."
+        "en": "A corporate body that a person commands or in which a person holds an office.",
+        "fr": "Collectivité qu’une personne dirige ou au sein de laquelle une personne exerce une fonction de responsabilité.",
+        "es": "Una entidad corporativa en la cual una persona tiene un cargo.",
+        "el": "Ένα συλλογικό όργανο, του οποίου ηγείται ή στο οποίο το φυσικό πρόσωπο κατέχει μια θέση.",
+        "de": "Eine Körperschaft, die eine Person leitet, oder in der eine Person ein Amt innehat.",
+        "da": "Korporation, som en person leder eller hvor en person har et embede.",
+        "ca": "Entitat corporativa que una persona dirigeix o en la qual una persona té un càrrec.",
+        "fi": "Yhteisö, jota henkilö johtaa tai jossa hän on viranhaltijana.",
+        "no": "En korporasjon der en person har en ledende stilling."
     },
     "ToolkitLabel": {
         "en": "officer of",
-        "fr": "collectivité administrée",
-        "es": "entidad corporativa sede"
+        "fr": "dirigeant de",
+        "es": "entidad corporativa sede",
+        "el": "υπάλληλος του",
+        "de": "Leitender Angestellter von",
+        "da": "embedsmand i",
+        "ca": "directiu de",
+        "fi": "virkamiehenä yhteisössä",
+        "no": "leder for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15666.html"
 }

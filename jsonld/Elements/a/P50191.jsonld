@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body responsible for creating a work by acting as an interviewer, reporter, pollster, or some other information gathering agent to the work."
+            "Relates an agent responsible for creating a work by acting as an interviewer, reporter, pollster, or some other information gathering agent to a work."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité responsable de la création d’une œuvre en agissant à titre d’intervieweur, de journaliste, de sondeur ou d’autre agent recueillant de l’information en relation avec l’œuvre."
+            "Met un agent responsable de la création d’une œuvre en agissant à titre d’intervieweur, de journaliste, de sondeur ou d’autre agent recueillant de l’information en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα υπεύθυνο για τη δημιουργία ενός έργου ενεργώντας ως συνεντευξιαστής, δημοσιογράφος, δημοσκόπος ή ως κάποιος άλλος φορέας συγκέντρωσης πληροφοριών, με ένα έργο."
+        ],
+        "de": [
+            "Setzt einen Akteur, der für die Schaffung eines Werks verantwortlich ist, indem er als Interviewer, Reporter, Meinungsforscher oder anderer Informationssammler tätig ist, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der er ansvarlig for at have skabt et værk ved at optræde som interviewer, journalist, medarbejder ved et meningsmålingsinstitut eller en anden informationsindsamler til et værk."
+        ],
+        "ca": [
+            "Relaciona un agent, responsable de la creació d’una obra actuant com un entrevistador, un periodista, un enquestador o un altre agent que recull la informació, amb una obra."
+        ],
+        "fi": [
+            "Liittää toimijan teokseen, joka sisältää haastattelijan, toimittajan, mielipidetutkijan tms. luovan toiminnan."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50191",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/interviewerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24686.html",
+            "label": "is interviewer of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50191",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/interviewerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24980.html",
+            "label": "is interviewer of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60659",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/interviewerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15249.html",
         "label": "is interviewer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10057",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/interviewer.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15360.html",
-        "label": "has interviewer"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is interviewer of",
-        "fr": "est l’intervieweur de"
+        "fr": "est un intervieweur de",
+        "el": "είναι ο λαμβάνων συνέντευξη του",
+        "da": "er interviewer i",
+        "ca": "és entrevistador de",
+        "fi": "haastattelijana haastattelussa",
+        "de": "ist Interviewer von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/interviewerOf.en",
     "name": {
-        "en": "interviewerOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "interviewerOf",
+        "el": "λαμβάνωνΣυνέντευξηΤου",
+        "da": "interviewerI",
+        "fi": "haastattelijanHaaastattelussa",
+        "fr": "intervieweurDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité responsable de la création d’une œuvre en agissant à titre d’intervieweur, de journaliste, de sondeur ou d’autre agent recueillant de l’information."
+        "fr": "Œuvre qui comporte une responsabilité de création à titre d’intervieweur, de journaliste, de sondeur ou d’autre agent recueillant de l’information.",
+        "en": "A work that involves a creation responsibility for acting as an interviewer, reporter, pollster, or some other information gathering agent.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη της δημιουργίας ενεργώντας ως συνεντευξιαστής, δημοσιογράφος, δημοσκόπος ή ως κάποιος άλλος φορέας συγκέντρωσης πληροφοριών.",
+        "de": "Ein Werk, bei dem ein Akteur für die Schaffung eines Werks verantwortlich ist, indem er als Interviewer, Reporter, Meinungsforscher oder anderer Informationssammler tätig ist.",
+        "da": "Værk, der involverer et skabelsesansvar ved at agere som interviewer, journalist, medarbejder ved et meningsmålingsinstitut eller en anden informationsindsamler.",
+        "ca": "Obra que involucra una responsabilitat de creació d’actuar com un entrevistador, un periodista, un enquestador o un altre agent que recull la informació.",
+        "fi": "Teos, joka sisältää haastattelijan, toimittajan, mielipidetutkijan tms. luovan toiminnan.",
+        "no": "Et verk som involverer ansvar for å fungere som intervjuer, reporter eller en annen agent som samler inn informasjon."
     },
     "ToolkitLabel": {
-        "fr": "intervieweur de"
+        "fr": "intervieweur de",
+        "en": "interviewer of",
+        "el": "λαμβάνων συνέντευξη του",
+        "de": "Interviewer von",
+        "da": "interviewer i",
+        "ca": "entrevistador de",
+        "fi": "haastattelijana haastattelussa",
+        "no": "intervjuer av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14056.html"
 }

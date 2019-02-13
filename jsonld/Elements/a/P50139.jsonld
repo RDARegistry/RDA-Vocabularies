@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a stage work through the general management and supervision of a performance to the expression."
+            "Relates an agent contributing to an expression of a stage work through the general management and supervision of a performance to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre scénique par la gestion et la supervision générales d’une prestation en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre scénique en assurant la gestion et la supervision générales d’une prestation en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός θεατρικού έργου μέσω της γενικής οργάνωσης και εποπτείας μιας παράστασης, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der an der Expression eines Bühnenwerks durch die allgemeine Betreuung und Leitung einer Darbietung mitwirkt, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har bidraget til et udtryk af et sceneværk gennem den generelle ledelse af og tilsyn med en forestilling til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix a una expressió d’una obra escènica mitjançant la gestió i la supervisió general d’una representació, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan näyttämöteoksen ekspressioon, johon sisältyy yleisjohtaminen tai esityksen valvominen."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50139",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/stageDirectorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24634.html",
+            "label": "is stage director of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50139",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/stageDirectorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24928.html",
+            "label": "is stage director of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60627",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/stageDirectorOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15217.html",
         "label": "is stage director of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20031",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/stageDirector.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14122.html",
-        "label": "has stage director"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is stage director of",
-        "fr": "est le metteur en scène de"
+        "fr": "est un metteur en scène de",
+        "el": "είναι σκηνοθέτης του",
+        "da": "er sceneinstruktør af",
+        "ca": "és director d’escena de",
+        "fi": "näyttämöohjaus",
+        "de": "ist Bühnenregisseur von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/stageDirectorOf.en",
     "name": {
-        "en": "stageDirectorOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "stageDirectorOf",
+        "el": "σκηνοθέτηςΤου",
+        "da": "sceneinstruktørAf",
+        "fi": "nayttamoohjaus",
+        "fr": "metteurEnScèneDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre scénique par la gestion et la supervision générales d’une prestation."
+        "fr": "Expression d’une œuvre scénique qui intègre une contribution consistant à assurer la gestion et la supervision générales d’une prestation.",
+        "en": "An expression of a stage work that incorporates a contribution of the general management and supervision of a performance.",
+        "el": "Μια έκφραση ενός θεατρικού έργου που ενσωματώνει τη συνεισφορά της γενικής οργάνωσης και εποπτείας μιας παράστασης.",
+        "de": "Eine Expression eines Bühnenwerks, bei der ein Akteur durch die allgemeine Betreuung und Leitung einer Darbietung mitwirkt.",
+        "da": "Udtryk af et sceneværk der inkorporerer et bidrag ved generel ledelse og tilsyn med en forestilling.",
+        "ca": "Expressió d’una obra escènica que incorpora una contribució de la gestió i la supervisió general d’una representació.",
+        "fi": "Näyttämöteoksen ekspressio, johon sisältyy yleisjohtaminen tai esityksen valvominen.",
+        "no": "Et uttrykk av et verk for scenen som omfatter et bidrag i form av generell ledelse av en forestilling."
     },
     "ToolkitLabel": {
-        "fr": "metteur en scène de"
+        "fr": "metteur en scène de",
+        "en": "stage director of",
+        "el": "σκηνοθέτης του",
+        "de": "Bühnenregisseur von",
+        "da": "sceneinstruktør af",
+        "ca": "director d’escena de",
+        "fi": "näyttämöohjaus",
+        "no": "sceneregissør for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14004.html"
 }

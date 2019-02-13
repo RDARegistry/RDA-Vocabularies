@@ -4,30 +4,51 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an item to a work that contains a brief evaluation of the described item."
+            "Relates an item to a work that contains a brief evaluation of a described item."
         ],
         "fr": [
-            "Met un item en relation avec une œuvre qui contient une brève évaluation de l’item décrit."
+            "Met un item en relation avec une œuvre qui contient une brève évaluation d’un item décrit."
+        ],
+        "vi": [
+            "Liên kết bản với tác phẩm có chứa đánh giá vắn tắt về bản đang được mô tả."
+        ],
+        "da": [
+            "Relaterer et eksemplar til et værk, der indeholder en kort kritik af et beskrevete eksemplar."
+        ],
+        "de": [
+            "Setzt ein Exemplar mit einem Werk, das eine kurze Untersuchung eines beschriebenen Exemplars enthält, in Beziehung."
+        ],
+        "el": [
+            "Συνδέει ένα αντίτυπο με ένα έργο που περιέχει μια σύντομη αξιολόγηση ενός περιγραφόμενου αντιτύπου."
+        ],
+        "ca": [
+            "Relaciona un item amb una obra que inclou una avaluació breu d’un ítem descrit."
+        ],
+        "fi": [
+            "Liittää kappaleen teokseen, joka sisältää lyhyen arvostelun kuvailun kohteena olevasta kappalesta"
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10003",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "label": "item"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/i/object/P40067",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/object/reviewedInItem.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24546.html",
+            "label": "is reviewed in (item)"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60211",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/reviewedIn.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14807.html",
         "label": "is reviewed in"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10268",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/reviewOfItem.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/16206.html",
-        "label": "is review of (item)"
-    },
+    "instructionNumber": "23.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/i/",
         "url": "http://metadataregistry.org/schema/show/id/80.html",
@@ -35,17 +56,22 @@
     },
     "label": {
         "en": "is reviewed in (item)",
-        "fr": "est recensé dans (item)"
+        "fr": "est recensé dans (item)",
+        "vi": "được tổng quan trong (bản)",
+        "da": "er anmeldt i (eksemplar)",
+        "de": "ist rezensiert in (Exemplar)",
+        "el": "εξετάζεται στο (αντίτυπο)",
+        "ca": "és revisat en (ítem)",
+        "fi": "kappaleen arvostelu"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/i/reviewedInItem.en",
     "name": {
-        "en": "reviewedInItem"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "reviewedInItem",
+        "vi": "đượcTổngQuanTrongBản",
+        "da": "anmeldtIEksemplar",
+        "el": "εξετάζεταιΣτοΑντίτυπο",
+        "fi": "kappaleenArvostelu",
+        "fr": "recenséDansItem"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,14 +88,28 @@
         }
     ],
     "ToolkitDefinition": {
-        "en": "A work that contains a brief evaluation of the described item.",
-        "fr": "Œuvre qui contient une brève évaluation de l’item décrit.",
-        "es": "Una obra que contiene una evaluación breve del ítem descrito."
+        "en": "A work that contains a brief evaluation of a described item.",
+        "fr": "Œuvre qui contient une brève évaluation d’un item décrit.",
+        "es": "Una obra que contiene una evaluación breve del ítem descrito.",
+        "vi": "Tác phẩm có chứa đánh giá vắn tắt về bản đang được mô tả.",
+        "da": "Værk der indeholder en kort kritik af et beskrevet eksemplar.",
+        "de": "Ein Werk, das eine kurze Untersuchung eines beschriebenen Exemplars enthält.",
+        "el": "Ένα έργο που περιέχει μια σύντομη αξιολόγηση ενός περιγραφόμενου αντιτύπου.",
+        "ca": "Obra que inclou una avaluació breu d’un ítem descrit.",
+        "fi": "Teos, joka sisältää lyhyen arvostelun kuvailun kohteena olevasta kappaleesta.",
+        "no": "Et verk som inneholder en kortfattet evaluering av et eksemplar som beskrives."
     },
     "ToolkitLabel": {
         "en": "reviewed in (item)",
         "fr": "recensé dans (item)",
-        "es": "reseñada en (ítem)"
+        "es": "reseñada en (ítem)",
+        "vi": "được tổng quan trong (bản)",
+        "da": "anmeldt i (eksemplar)",
+        "de": "Rezensiert in (Exemplar)",
+        "el": "εξετάζεται στο (αντίτυπο)",
+        "ca": "revisat en (ítem)",
+        "fi": "kappaleen arvostelu",
+        "no": "anmeldt i (eksemplar)"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/16139.html"
 }

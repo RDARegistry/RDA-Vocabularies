@@ -4,17 +4,35 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a person, family, or corporate body responsible for printing, duplicating, casting, etc., a resource in a published form."
+            "Relates a manifestation to an agent responsible for printing, duplicating, casting, etc., a manifestation in a published form."
         ],
         "fr": [
-            "Met une manifestation en relation avec une personne, famille ou collectivité responsable de l’impression, de la reproduction, du moulage, etc. d’une ressource sous une forme publiée."
+            "Met une manifestation en relation avec un agent responsable de l’impression, de la reproduction, du moulage, etc. d’une manifestation sous une forme publiée."
+        ],
+        "vi": [
+            "Liên kết biểu thị với tác nhân có trách nhiệm in, nhân bản, đúc, v.v..., biểu thị dưới hình thái xuất bản."
+        ],
+        "da": [
+            "Relaterer en manifestation til en agent, der er ansvarlig for trykning, duplikering, støbning etc. af en manifestation i publiceret form."
+        ],
+        "de": [
+            "Setzt eine Manifestation mit einem Akteur, der für den Druck, die Vervielfältigung, den Guss usw. einer Manifestation in veröffentlichter Form verantwortlich ist, in Beziehung."
+        ],
+        "ca": [
+            "Relaciona una manifestació amb un agent responsable de la impressió, la reproducció, el modelat, etc., d’una manifestació en una forma publicada."
+        ],
+        "fi": [
+            "Liittää manifestaation toimijaan,joka on vastuussa julkaistun manifestaation painamisesta, monistamisesta, kirjasinten valamisesta jne."
+        ],
+        "el": [
+            "Συνδέει μια εκδήλωση με έναν φορέα υπεύθυνο για την εκτύπωση, την αντιγραφή, τη χύτευση κ.λπ. μιας εκδήλωσης σε μια δημοσιευμένη μορφή."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10007",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "label": "manifestation"
     },
     "hasSubproperty": [
         {
@@ -82,6 +100,12 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/m/papermaker.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/16140.html",
             "label": "has papermaker"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/m/object/P30082",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/object/manufacturer.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24234.html",
+            "label": "has manufacturer"
         }
     ],
     "hasUnconstrained": {
@@ -90,13 +114,7 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15036.html",
         "label": "has manufacturer"
     },
-    "instructionNumber": "21/05/2016",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50202",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/manufacturerOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14067.html",
-        "label": "is manufacturer of"
-    },
+    "instructionNumber": "21.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -104,17 +122,23 @@
     },
     "label": {
         "en": "has manufacturer",
-        "fr": "a pour fabricant"
+        "fr": "a pour fabricant",
+        "sv": "har tillverkare",
+        "vi": "có nhà chế tạo",
+        "da": "har producent",
+        "de": "hat Hersteller",
+        "ca": "té com a fabricant",
+        "fi": "valmistaja",
+        "el": "έχει κατασκευαστή"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/manufacturer.en",
     "name": {
-        "en": "manufacturer"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "en": "manufacturer",
+        "vi": "nhàChếTạo",
+        "da": "producent",
+        "fi": "valmistaja",
+        "el": "κατασκευαστής",
+        "fr": "fabricant"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -122,15 +146,40 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/m/P30267",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedAgentManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25247.html",
+            "label": "has related agent (manifestation)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body responsible for printing, duplicating, casting, etc., a resource in a published form.",
-        "fr": "Personne, famille ou collectivité responsable de l’impression, de la reproduction, du moulage, etc. d’une ressource sous une forme publiée.",
-        "es": "Una persona, familia o entidad corporativa responsable de la impresión, duplicación, prensado, etc., de un recurso publicado."
+        "en": "An agent responsible for printing, duplicating, casting, etc., a manifestation in a published form.",
+        "fr": "Agent responsable de l’impression, de la reproduction, du moulage, etc. d’une manifestation sous une forme publiée.",
+        "es": "Una persona, familia o entidad corporativa responsable de la impresión, duplicación, prensado, etc., de un recurso publicado.",
+        "nl": "Een persoon, familie of corporatie die verantwoordelijk is voor het drukken, vermeerderen, gieten etc. van een gepubliceerde resource.",
+        "vi": "Tác nhân có trách nhiệm in, nhân bản, đúc, v.v..., biểu thị dưới hình thái xuất bản.",
+        "da": "Agent, der er ansvarlig for trykning, duplikering, støbning etc. af en manifestation i publiceret form.",
+        "de": "Ein Akteur, der für den Druck, die Vervielfältigung, den Guss usw. einer Manifestation in veröffentlichter Form verantwortlich ist.",
+        "ca": "Agent responsable de la impressió, la reproducció, el modelat, etc., d’una manifestació en una forma publicada.",
+        "fi": "Toimija, joka on vastuussa julkaistun manifestaation painamisesta, monistamisesta, kirjasinten valamisesta jne.",
+        "no": "En agent med ansvar for å trykke, mangfoldiggjøre, etc. en manifestasjon i en utgitt form.",
+        "el": "Ένας φορέας υπεύθυνος για την εκτύπωση, την αντιγραφή, τη χύτευση κ.λπ. μιας εκδήλωσης σε μια δημοσιευμένη μορφή."
     },
     "ToolkitLabel": {
         "en": "manufacturer",
         "fr": "fabricant",
-        "es": "fabricante"
+        "es": "fabricante",
+        "sv": "tillverkare",
+        "nl": "vervaardiger",
+        "vi": "nhà chế tạo",
+        "da": "producent",
+        "de": "Hersteller",
+        "ca": "fabricant",
+        "fi": "valmistaja",
+        "no": "tilvirker",
+        "el": "κατασκευαστής"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14471.html"
 }

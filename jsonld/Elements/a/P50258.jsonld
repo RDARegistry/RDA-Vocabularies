@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body who is accused in a criminal proceeding or sued in a civil proceeding to the work."
+            "Relates a corporate body who is accused in a criminal proceeding or sued in a civil proceeding to a work."
         ],
         "fr": [
-            "Met une collectivité qui est accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée en relation avec l’œuvre."
+            "Met une collectivité qui est accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο, το οποίο ασκεί αγωγή στο πλαίσιο αστικής διαδικασίας, με ένα έργο."
+        ],
+        "de": [
+            "Setzt eine Körperschaft, die in einem Strafverfahren angeklagt oder in einem Zivilprozess verklagt ist, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation, der er anklaget i en straffesag eller sagsøgt i en civilsag til et værk."
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa, que és acusada en un procés penal o demandada en un procés civil, amb una obra."
+        ],
+        "fi": [
+            "Liittää yhteisön teokseen, joka sisältää yhteisöön kohdistuvan syytteen rikosoikeudenkäynnissä tai haasteen siviilioikeudenkäynnissä."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50258",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/defendantCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24748.html",
+            "label": "is defendant corporate body of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50258",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/defendantCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25047.html",
+            "label": "is defendant corporate body of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60698",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/defendantOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15287.html",
         "label": "is defendant of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10285",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/defendantCorporateBody.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/16223.html",
-        "label": "has defendant corporate body"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is defendant corporate body of",
-        "fr": "est la collectivité défenderesse de"
+        "fr": "est une collectivité défenderesse de",
+        "el": "είναι εναγόμενο συλλογικό όργανο του",
+        "da": "er sagsøgt korporation af",
+        "ca": "és entitat corporativa acusada de",
+        "fi": "yhteisö kohteena kanteessa",
+        "de": "ist angeklagte/beklagte Körperschaft von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/defendantCorporateBodyOf.en",
     "name": {
-        "en": "defendantCorporateBodyOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "defendantCorporateBodyOf",
+        "el": "εναγόμενοΣυλλογικόΌργανοΤου",
+        "da": "sagsøgtKorporationAf",
+        "fi": "yhteisoKohteenaKanteessa",
+        "fr": "collectivitéDéfenderesseDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Collectivité qui est accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée."
+        "fr": "Œuvre qui comporte une responsabilité consistant à être une collectivité accusée dans une poursuite criminelle ou contre laquelle une poursuite civile est intentée.",
+        "en": "A work that involves a responsibility for being a corporate body accused in a criminal proceeding or sued in a civil proceeding.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη για ένα συλλογικό όργανο, εναντίον του οποίου ασκείται αγωγή στο πλαίσιο αστικής διαδικασίας.",
+        "de": "Ein Werk, bei der eine Körperschaft in einem Strafverfahren angeklagt oder in einem Zivilprozess verklagt ist.",
+        "da": "Værk, der involverer et ansvar for at være en korporation, der er  anklaget i en straffesag eller sagsøgt i en civilsag.",
+        "ca": "Obra que involucra una responsabilitat de ser una entitat corporativa acusada en un procés penal o demandada en un procés civil.",
+        "fi": "Teos, joka sisältää yhteisöön kohdistuvan syytteen rikosoikeudenkäynnissä tai haasteen siviilioikeudenkäynnissä.",
+        "no": "Et verk som involverer et ansvar for å være en korporasjon som er tiltalt i en straffesak eller saksøkt i en sivilrettslig sak."
     },
     "ToolkitLabel": {
-        "fr": "collectivité défenderesse de"
+        "fr": "collectivité défenderesse de",
+        "en": "defendant corporate body of",
+        "el": "εναγόμενο συλλογικό όργανο του",
+        "de": "Angeklagte/Beklagte Körperschaft von",
+        "da": "sagsøgt korporation af",
+        "ca": "entitat corporativa acusada de",
+        "fi": "yhteisö kohteena kanteessa",
+        "no": "saksøkt korporasjon for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/16098.html"
 }

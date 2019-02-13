@@ -4,17 +4,35 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a manifestation that accompanies or is accompanied by the manifestation."
+            "Relates a manifestation to a manifestation that accompanies or is accompanied by another manifestation."
         ],
         "fr": [
-            "Met une manifestation en relation avec une manifestation qui accompagne la manifestation ou est accompagnée par elle."
+            "Met une manifestation en relation avec une manifestation qui accompagne ou est accompagnée par une autre manifestation."
+        ],
+        "vi": [
+            "Liên kết biểu thị với biểu thị kèm theo hoặc được kèm theo bởi biểu thị khác."
+        ],
+        "da": [
+            "Relaterer en manifestation til en manifestation der ledsager eller er ledsaget af en manifestation."
+        ],
+        "de": [
+            "Setzt eine Manifestation mit einer Manifestation, die eine andere Manifestation begleitet oder von einer begleitet wird, in Beziehung."
+        ],
+        "ca": [
+            "Relaciona una manifestació amb una manifestació que acompanya o és acompanyada per una altra manifestació."
+        ],
+        "fi": [
+            "Liittää manifestaation manifestaatioon, joka on ilmestynyt yhdessä toisen manifestaation kanssa."
+        ],
+        "el": [
+            "Συνδέει μια εκδήλωση με μια εκδήλωση που συνοδεύει ή συνοδεύεται από μια άλλη εκδήλωση."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10007",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "label": "manifestation"
     },
     "hasSubproperty": [
         {
@@ -22,6 +40,12 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/m/accompaniedByManifestation.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14416.html",
             "label": "is accompanied by (manifestation)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/m/object/P30210",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/object/accompanyingManifestationRelationship.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24243.html",
+            "label": "has accompanying manifestation relationship with"
         }
     ],
     "hasUnconstrained": {
@@ -30,12 +54,7 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15298.html",
         "label": "has accompanying resource relationship with"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/m/P30210",
-        "lexicalAlias": "http://rdaregistry.info/Elements/m/accompanyingManifestationRelationship.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14599.html",
-        "label": "has accompanying manifestation relationship with"
-    },
+    "instructionNumber": "24.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -43,17 +62,22 @@
     },
     "label": {
         "en": "has accompanying manifestation relationship with",
-        "fr": "a pour relation de manifestation d’accompagnement"
+        "fr": "a pour relation de manifestation d’accompagnement",
+        "vi": "có mối quan hệ biểu thị kèm theo",
+        "da": "har ledsagende manifestationsrelation med",
+        "de": "hat Begleitende Beziehungen auf Manifestationsebene",
+        "ca": "té com a relació de manifestació d’acompanyament",
+        "fi": "yhdessä ilmestyneiden manifestaatioiden suhde",
+        "el": "έχει συνοδευτική σχέση εκδήλωσης με"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/accompanyingManifestationRelationship.en",
     "name": {
-        "en": "accompanyingManifestationRelationship"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "en": "accompanyingManifestationRelationship",
+        "vi": "mốiQuanHệBiểuThịKèmTheo",
+        "da": "ledsagendeManifestatiosrelation",
+        "fi": "yhdessaIlmestyneidenManifestaatioidenSuhde",
+        "el": "συνοδευτικήΣχέσηΕκδήλωσης",
+        "fr": "relationDeManifestationDaccompagnement"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -64,20 +88,36 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/m/P30048",
-            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedManifestation.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedManifestationManifestation.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14437.html",
-            "label": "has related manifestation"
+            "label": "has related manifestation (manifestation)"
         }
     ],
     "ToolkitDefinition": {
-        "en": "A manifestation that accompanies or is accompanied by the manifestation.",
-        "fr": "Manifestation qui accompagne la manifestation ou est accompagnée par elle.",
-        "es": "Una manifestación que acompaña o está acompañado por la manifestación."
+        "en": "A manifestation that accompanies or is accompanied by another manifestation.",
+        "fr": "Manifestation qui accompagne ou est accompagnée par une autre manifestation.",
+        "es": "Una manifestación que acompaña o está acompañado por la manifestación.",
+        "nl": "Een manifestatie die de manifestatie begeleidt of door deze wordt begeleid.",
+        "vi": "Biểu thị kèm theo hoặc được kèm theo bởi biểu thị khác.",
+        "da": "Manifestation der ledsager eller ledsages af en manifestation.",
+        "de": "Eine Manifestation, die eine andere Manifestation begleitet oder von einer begleitet wird.",
+        "ca": "Manifestació que acompanya o és acompanyada per una altra manifestació.",
+        "fi": "Manifestaatio, joka on ilmestynyt yhdessä toisen manifestaation kanssa.",
+        "no": "En manifestasjon som ledsager eller ledsages av en annen manifestasjon.",
+        "el": "Μια εκδήλωση που συνοδεύει ή συνοδεύεται από μια άλλη εκδήλωση."
     },
     "ToolkitLabel": {
         "en": "accompanying manifestation relationship",
         "fr": "relation de manifestation d’accompagnement",
-        "es": "relaciones de manifestación acompañante"
+        "es": "relaciones de manifestación acompañante",
+        "nl": "relatie begeleidende manifestatie",
+        "vi": "mối quan hệ biểu thị kèm theo",
+        "da": "ledsagende manifestationsrelation",
+        "de": "Begleitende Beziehungen auf Manifestationsebene",
+        "ca": "relació de manifestació d’acompanyament",
+        "fi": "yhdessä ilmestyneiden manifestaatioiden suhde",
+        "no": "ledsagende manifestasjon: relasjonstype",
+        "el": "συνοδευτική σχέση εκδήλωσης"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14599.html"
 }

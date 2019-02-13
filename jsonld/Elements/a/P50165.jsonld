@@ -4,17 +4,32 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body having legal possession of an item to the item."
+            "Relates an agent having legal possession of an item to an item."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité possédant légalement un item en relation avec l’item."
+            "Met un agent qui possède légalement un item en relation avec un item."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος έχει τη νόμιμη κατοχή ενός αντιτύπου, με ένα αντίτυπο."
+        ],
+        "de": [
+            "Setzt einen Akteur, der im rechtmäßigen Besitz eines Exemplars ist, mit einem Exemplar in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der er i lovlig besiddelse af et eksemplar til et eksemplar."
+        ],
+        "ca": [
+            "Relaciona un agent, que posseeix legalment un ítem, amb un ítem."
+        ],
+        "fi": [
+            "Liittää toimijan kappaleeseen, joka on laillisesti toimijan omistuksessa."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
     "hasSubproperty": [
         {
@@ -28,6 +43,18 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/a/formerOwnerOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14028.html",
             "label": "is former owner of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50165",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/ownerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24660.html",
+            "label": "is owner of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50165",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/ownerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24954.html",
+            "label": "is owner of"
         }
     ],
     "hasUnconstrained": {
@@ -36,12 +63,6 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15222.html",
         "label": "is owner of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/i/P40021",
-        "lexicalAlias": "http://rdaregistry.info/Elements/i/owner.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14356.html",
-        "label": "has owner"
-    },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -49,17 +70,20 @@
     },
     "label": {
         "en": "is owner of",
-        "fr": "est le propriétaire de"
+        "fr": "est un propriétaire de",
+        "el": "είναι ιδιοκτήτης του",
+        "da": "er ejer af",
+        "ca": "és propietari de",
+        "fi": "omistajana kappaleelle",
+        "de": "ist Eigentümer von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/ownerOf.en",
     "name": {
-        "en": "ownerOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10003",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "en": "ownerOf",
+        "el": "ιδιοκτήτηςΤου",
+        "da": "ejerAf",
+        "fi": "omistajanaKappaleelle",
+        "fr": "propriétaireDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -67,11 +91,33 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50308",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedItemAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25294.html",
+            "label": "has related item (agent)"
+        }
+    ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité possédant légalement un item."
+        "fr": "Item possédé légalement par un agent.",
+        "en": "An item in the legal possession of an agent.",
+        "el": "Ένα αντίτυπο υπό τη νόμιμη κατοχή ενός φορέα.",
+        "de": "Ein Exemplar, das im rechtmäßigen Besitz eines Akteurs ist.",
+        "da": "Eksemplar der er i lovlig besiddelse af en agent.",
+        "ca": "Ítem en possessió legal d’un agent.",
+        "fi": "Kappale, joka on laillisesti toimijan omistuksessa.",
+        "no": "Et eksemplar som er en agents rettmessige eiendom."
     },
     "ToolkitLabel": {
-        "fr": "propriétaire de"
+        "fr": "propriétaire de",
+        "en": "owner of",
+        "el": "ιδιοκτήτης του",
+        "de": "Eigentümer von",
+        "da": "ejer af",
+        "ca": "propietari de",
+        "fi": "omistajana kappaleelle",
+        "no": "eier av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14030.html"
 }

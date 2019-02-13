@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a work by acting as an interviewer, reporter, pollster, or some other information gathering agent to the expression."
+            "Relates an agent contributing to an expression of a work by acting as an interviewer, reporter, pollster, or some other information gathering agent to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en agissant à titre d’intervieweur, de journaliste, de sondeur ou d’autre agent recueillant de l’information en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre en agissant à titre d’intervieweur, de journaliste, de sondeur ou d’autre agent recueillant de l’information en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου ως λαμβάνων συνέντευξη, δημοσιογράφος, δημοσκόπος ή άλλος φορέας συλλογής πληροφοριών, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der an einer Expression eines Werks mitwirkt, indem er als Interviewer, Reporter, Meinungsforscher oder anderer Informationssammler tätig ist, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har bidraget til et udtryk af et værk ved at fungere som interviewer, journalist, medarbejder ved et meningsmålingsinstitut eller en anden informationsindsamler til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix a una expressió d’una obra actuant com un entrevistador, un periodista, un enquestador o qualsevol altre agent que recull la informació, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan teoksen ekspressioon, joka sisältää haastattelijan, toimittajan, mielipidetutkijan tms. toiminnan."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50140",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/interviewerExpressionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24635.html",
+            "label": "is interviewer (expression) of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50140",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/interviewerExpressionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24929.html",
+            "label": "is interviewer (expression) of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60659",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/interviewerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15249.html",
         "label": "is interviewer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20032",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/interviewerExpression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14123.html",
-        "label": "has interviewer (expression)"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is interviewer (expression) of",
-        "fr": "est l’intervieweur (expression) de"
+        "fr": "est un intervieweur (expression) de",
+        "el": "είναι λαμβάνων συνέντευξης (έκφραση) του",
+        "da": "er interviewer (udtryk) i",
+        "ca": "és entrevistador (expressió) de",
+        "fi": "haastattelijana haastattelussa (ekspressio)",
+        "de": "ist Interviewer (Expression) von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/interviewerExpressionOf.en",
     "name": {
-        "en": "interviewerExpressionOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "interviewerExpressionOf",
+        "el": "λαμβάνωνΣυνέντευξηΈκφρασηςΤου",
+        "da": "interviewerUdtrykI",
+        "fi": "haastattelijanaHaastattelussaEkspressio",
+        "fr": "intervieweurExpressionDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en agissant à titre d’intervieweur, de journaliste, de sondeur ou d’autre agent recueillant de l’information."
+        "fr": "Expression d’une œuvre qui intègre une contribution à titre d’intervieweur, de journaliste, de sondeur ou d’autre agent recueillant de l’information.",
+        "en": "An expression of a work that incorporates a contribution of acting as an interviewer, reporter, pollster, or some other information gathering agent.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά ενός φορέα που ενεργεί ως ο λαμβάνων μια συνέντευξη, ως δημοσιογράφος, δημοσκόπος ή κάποιος άλλος φορέας συλλογής πληροφοριών.",
+        "de": "Eine Expression eines Werks, bei der ein Akteur als Interviewer, Reporter, Meinungsforscher oder anderer Informationssammler tätig ist.",
+        "da": "Udtryk af et værk, der inkorporerer et bidrag ved at fungere som interviewer, journalist, medarbejder ved et meningsmålingsinstitut eller en anden informationsindsamlende agent.",
+        "ca": "Expressió d’una obra que incorpora una contribució que actua com un entrevistador, un periodista, un enquestador o qualsevol altre agent que recull la informació.",
+        "fi": "Teoksen ekspressio, joka sisältää haastattelijan, toimittajan, mielipidetutkijan tms. toiminnan.",
+        "no": "Et uttrykk av et verk som omfatter et bidrag i form av å fungere som intervjuer, reporter eller en annen agent som samler inn informasjon."
     },
     "ToolkitLabel": {
-        "fr": "intervieweur (expression) de"
+        "fr": "intervieweur (expression) de",
+        "en": "interviewer (expression) of",
+        "el": "λαμβάνων συνέντευξη (έκφραση) του",
+        "de": "Interviewer (Expression) von",
+        "da": "interviewer (udtryk) i",
+        "ca": "entrevistador (expressió) de",
+        "fi": "haastattelijana haastattelussa (ekspressio)",
+        "no": "intervjuer (uttrykk) av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14005.html"
 }

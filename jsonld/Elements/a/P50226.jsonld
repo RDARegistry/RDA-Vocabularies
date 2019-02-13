@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body sponsoring some aspect of a work, e.g., funding research, sponsoring an event, to the work."
+            "Relates an agent sponsoring some aspect of a work, e.g., funding research, sponsoring an event, to a work."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité commanditant certains aspects d’une œuvre, par exemple, le financement de la recherche, le parrainage d’un événement, en relation avec l’œuvre."
+            "Met un agent qui commandite certains aspects d’une œuvre tels que le financement de la recherche ou le parrainage d’un événement en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα που χρηματοδοτεί κάποια πτυχή ενός έργου, π.χ, επιδοτούμενη έρευνα, χρηματοδότηση συμβάντος, με ένα έργο."
+        ],
+        "de": [
+            "Setzt einen Akteur, der einzelne Aspekte eines Werks finanziell unterstützt z. B. Forschungsförderung, finanzielle Unterstützung einer Veranstaltung, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har sponsoreret et aspekt af et værk, fx forskningsfinansiering, sponsorering af en event til et værk."
+        ],
+        "ca": [
+            "Relaciona un agent, que patrocina algun aspecte d’una obra, per exemple, el finançament de la recerca, el patrocini d’un esdeveniment, etc., amb una obra."
+        ],
+        "fi": [
+            "Liittää sponsoroivan toimijan teokseen, jota on sponsoroitu esim. rahoittamalla tutkimusta tai tukemalla tapahtumaa."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50226",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/sponsoringBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25015.html",
+            "label": "is sponsoring body of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50226",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/sponsoringBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24721.html",
+            "label": "is sponsoring body of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60675",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/sponsoringBodyOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15265.html",
         "label": "is sponsoring body of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10067",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/sponsoringBody.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15370.html",
-        "label": "has sponsoring body"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is sponsoring body of",
-        "fr": "est le commanditaire de"
+        "fr": "est un parraineur de",
+        "el": "είναι φορέας επιχορήγησης του",
+        "da": "er sponsorerende institution for",
+        "ca": "és entitat patrocinadora de",
+        "fi": "sponsoroitu",
+        "de": "ist Träger von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/sponsoringBodyOf.en",
     "name": {
-        "en": "sponsoringBodyOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "sponsoringBodyOf",
+        "el": "φορέαςΕπιχορήγησηςΤου",
+        "da": "sponsorerendeInstitutionFor",
+        "fi": "sponsoroitu",
+        "fr": "parraineurDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -56,16 +83,30 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/a/P50131",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherPFCWorkOf.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
-            "label": "is other person, family, or corporate body associated with a work of"
+            "label": "is other agent associated with work of"
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité commanditant certains aspects d’une œuvre, par exemple, le financement de la recherche, le parrainage d’un événement."
+        "fr": "Œuvre qui comporte une responsabilité consistant à commanditer certains aspects d’une œuvre tels que le financement de la recherche ou le parrainage d’un événement.",
+        "en": "A work that involves a responsibility for sponsoring some aspect of a work, e.g., funding research, sponsoring an event.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη της χρηματοδότησης κάποιας πτυχής ενός έργου, π.χ., επιδοτούμενη έρευνα, χρηματοδότηση συμβάντος.",
+        "de": "Ein Werk, bei dem ein Akteur einzelne Aspekte eines Werks finanziell unterstützt z. B. Forschungsförderung, finanzielle Unterstützung einer Veranstaltung.",
+        "da": "Værk der involverer et ansvar for at have sponsoreret et aspekt af et værk, fx forskningsfinansiering, sponsorering af en event.",
+        "ca": "Obra que involucra una responsabilitat de patrocinar algun aspecte d’una obra, per exemple, el finançament de la recerca, el patrocini d’un esdeveniment, etc.",
+        "fi": "Teos, jota on sponsoroitu, esim. rahoittamalla tutkimusta tai tukemalla tapahtumaa.",
+        "no": "Et verk som involverer ansvar for å være sponsor for et aspekt ved et verk, for eksempel ved å finansiere forskning eller gi økonomisk støtte til et arrangement."
     },
     "ToolkitLabel": {
-        "fr": "commanditaire de"
+        "fr": "parraineur de",
+        "en": "sponsoring body of",
+        "el": "φορέας επιχορήγησης του",
+        "de": "Träger von",
+        "da": "sponsorerende institution for",
+        "ca": "entitat patrocinadora de",
+        "fi": "sponsoroitu",
+        "no": "sponsororgan for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14091.html"
 }

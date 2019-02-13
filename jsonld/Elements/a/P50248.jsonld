@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an author who is appointed by an organization to report on the proceedings of its meetings to the work."
+            "Relates an author who is appointed by an organization to report on the proceedings of its meetings to a work."
         ],
         "fr": [
-            "Met un auteur nommé par une organisation pour rédiger les comptes rendus de ses réunions en relation avec l’œuvre."
+            "Met un auteur nommé par une organisation pour rédiger les comptes rendus de ses réunions en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν συγγραφέα, στον οποίο έχει ανατεθεί από έναν οργανισμό η αναφορά των πρακτικών των συναντήσεων, με ένα έργο."
+        ],
+        "de": [
+            "Setzt einen Verfasser, der von einer Organisation eingestellt ist, um über den Fortschritt ihrer Sitzungen zu berichten, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en forfatter, der er udpeget af en organisation til at rapportere om udviklingen af dens møder til et værk."
+        ],
+        "ca": [
+            "Relaciona un autor, nomenat per una organització per redactar les actes de les seves reunions, amb una obra."
+        ],
+        "fi": [
+            "Liittää tekijän teokseen, johon kuuluu raportointi organisaation kokouksista."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50248",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/rapporteurOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24738.html",
+            "label": "is rapporteur of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50248",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/rapporteurOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25037.html",
+            "label": "is rapporteur of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60757",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/rapporteurOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/16297.html",
         "label": "is rapporteur of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10255",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/rapporteur.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/16193.html",
-        "label": "has rapporteur"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,18 +59,29 @@
     },
     "label": {
         "en": "is rapporteur of",
-        "fr": "est le rapporteur de"
+        "fr": "est un rapporteur de",
+        "el": "είναι εισηγητής του",
+        "da": "er rapportør i",
+        "ca": "és relator de",
+        "fi": "raportoijana kokouksessa",
+        "de": "ist Berichterstatter von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/rapporteurOf.en",
     "name": {
-        "en": "rapporteurOf"
+        "en": "rapporteurOf",
+        "el": "εισηγητήςΤου",
+        "da": "rapportørI",
+        "fi": "raportoijanaKokouksessa",
+        "fr": "rapporteurDe"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
-    },
+    "See Also": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50212",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/minuteTakerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14077.html",
+            "label": "is minute taker of"
+        }
+    ],
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -62,10 +97,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Auteur nommé par une organisation pour rédiger les comptes rendus de ses réunions."
+        "fr": "Œuvre qui comporte une responsabilité consistant à rédiger les comptes rendus des réunions d’une organisation.",
+        "en": "A work that involves a responsibility for reporting on the proceedings of the meetings of an organization.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη της σύνταξης των πρακτικών των συναντήσεων ενός οργανισμού.",
+        "de": "Ein Werk, bei dem ein Akteur von einer Organisation eingestellt ist, um über den Fortschritt ihrer Sitzungen zu berichten. Verantwortlichkeit, die sich auf das Protokollschreiben beschränkt, ist ausgeschlossen.",
+        "da": "Værk, der involverer et ansvar for at rapportere om udviklingen på en organisations møder.",
+        "ca": "Obra que involucra una responsabilitat de redactar les actes de les reunions d’una organització.",
+        "fi": "Teos, johon kuuluu raportointi organisaation kokouksista.",
+        "no": "Et verk som involverer ansvar for å rapportere fra organisasjonens møter."
     },
     "ToolkitLabel": {
-        "fr": "rapporteur de"
+        "fr": "rapporteur de",
+        "en": "rapporteur of",
+        "el": "εισηγητής του",
+        "de": "Berichterstatter von",
+        "da": "rapportør i",
+        "ca": "relator de",
+        "fi": "raportoijana kokouksessa",
+        "no": "rapportør for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/16088.html"
 }

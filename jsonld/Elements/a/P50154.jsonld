@@ -4,17 +4,32 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a work by providing supplementary textual content (e.g., an appendix, an introduction, a preface) to the original work to the expression."
+            "Relates an agent contributing to an expression of a work by providing supplementary textual content, such as an introduction or a preface, to an original work to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant du contenu textuel supplémentaire (par exemple, une introduction, une préface) à l’œuvre originale en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre en fournissant du contenu textuel supplémentaire tel qu’une introduction ou une préface à une œuvre originale en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου παρέχοντας συνοδευτικό κειμενικό περιεχόμενο, όπως εισαγωγή ή πρόλογο στο πρωτότυπο έργο, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der an einer Expression eines Werks mitwirkt, indem er ergänzenden Text zum Originalwerk liefert, z. B. eine Einführung, ein Vorwort, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har bidraget til et udtryk af et værk ved at sørge for supplerende tekstindhold, som fx en indledning eller et forord til et oprindeligt værk til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix amb una expressió d’una obra proporcionant un contingut textual suplementari, com ara una introducció o un prefaci a una obra original, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan teoksen ekspressioon, joka sisältää alkuperäistä teosta täydentävää tekstiä, esim. johdannon tai esipuheen."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
     "hasSubproperty": [
         {
@@ -42,10 +57,22 @@
             "label": "is writer of introduction of"
         },
         {
-            "@id": "http://rdaregistry.info/Elements/a/P50254",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/writerOfForewordOf.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/16094.html",
+            "@id": "http://rdaregistry.info/Elements/a/object/P50254",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/writerOfForewordOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24744.html",
             "label": "is writer of foreword of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50154",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/writerOfSupplementaryTextualContentOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24649.html",
+            "label": "is writer of supplementary textual content of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50154",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/writerOfSupplementaryTextualContentOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24943.html",
+            "label": "is writer of supplementary textual content of"
         }
     ],
     "hasUnconstrained": {
@@ -54,12 +81,7 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15210.html",
         "label": "is writer of postface of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20046",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/writerOfSupplementaryTextualContent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14137.html",
-        "label": "has writer of supplementary textual content"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -67,17 +89,20 @@
     },
     "label": {
         "en": "is writer of supplementary textual content of",
-        "fr": "est l’auteur de contenu textuel supplémentaire de"
+        "fr": "est un auteur de contenu textuel supplémentaire de",
+        "el": "είναι συγγραφέας του συμπληρωματικού κειμενικού περιεχομένου του",
+        "da": "er forfatter til supplerende tekstindhold til",
+        "ca": "és escriptor de contingut textual suplementari de",
+        "fi": "oheisteksti",
+        "de": "ist Verfasser von ergänzendem Text von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/writerOfSupplementaryTextualContentOf.en",
     "name": {
-        "en": "writerOfSupplementaryTextualContentOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "writerOfSupplementaryTextualContentOf",
+        "el": "συγγραφέαςΤουΣυμπληρωματικούΚειμενικούΠεριεχομένουΤου",
+        "da": "forfatterTilSupplerendeTekstindholdTil",
+        "fi": "oheisteksti",
+        "fr": "auteurDeContenuTextuelSupplémentaireDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -94,10 +119,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant du contenu textuel supplémentaire (par exemple, une introduction, une préface) à l’œuvre originale."
+        "fr": "Expression d’une œuvre qui intègre une contribution consistant à fournir du contenu textuel supplémentaire tel qu’une introduction ou une préface à une œuvre originale.",
+        "en": "An expression of a work that incorporates a contribution of providing supplementary textual content, such as an introduction or a preface, to an original work.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά ενός συνοδευτικού κειμενικού περιεχομένου, όπως εισαγωγής ή προλόγου σε ένα πρωτότυπο έργο.",
+        "de": "Eine Expression eines Werks, bei der ein Akteur ergänzenden Text zum Originalwerk liefert, z. B. eine Einführung, ein Vorwort.",
+        "da": "Udtryk af et værk der inkorporerer et bidrag ved at skrive supplerende tekstindhold, som fx en indledning eller et forord, til et oprindeligt værk.",
+        "ca": "Expressió d’una obra que incorpora una contribució que proporciona un contingut textual suplementari, com ara una introducció o un prefaci, a una obra original.",
+        "fi": "Teoksen ekspressio, joka sisältää alkuperäistä teosta täydentävää tekstiä, esim. johdannon tai esipuheen.",
+        "no": "Et uttrykk av et verk som omfatter et bidrag i form av å tilføre supplerende tekstinnhold til originalverket, for eksempel et forord eller en innledning."
     },
     "ToolkitLabel": {
-        "fr": "auteur de contenu textuel supplémentaire de"
+        "fr": "auteur de contenu textuel supplémentaire de",
+        "en": "writer of supplementary textual content of",
+        "el": "συγγραφέας του συμπληρωματικού κειμενικού περιεχομένου του",
+        "de": "Verfasser von ergänzendem Text von",
+        "da": "forfatter til supplerende tekstindhold til",
+        "ca": "escriptor de contingut textual suplementari de",
+        "fi": "oheisteksti",
+        "no": "forfatter av supplerende tekstinnhold i"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14019.html"
 }

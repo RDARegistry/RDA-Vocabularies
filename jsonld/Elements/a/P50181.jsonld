@@ -4,29 +4,52 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body other than a producer, publisher, distributor or manufacturer associated with a manifestation to the manifestation."
+            "Relates an agent other than a producer, publisher, distributor, or manufacturer associated with a manifestation to a manifestation."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité, autre qu’un producteur, un éditeur, un diffuseur ou distributeur ou bien un fabricant, associée à une manifestation en relation avec la manifestation."
+            "Met un agent, autre qu’un producteur, un éditeur, un diffuseur ou distributeur ou bien un fabricant, associé à une manifestation en relation avec une manifestation."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, άλλον από τον παραγωγό, τον εκδότη, τον διαθέτη ή τον κατασκευαστή που συνδέεται με την εκδήλωση, με μια εκδήλωση."
+        ],
+        "de": [
+            "Setzt einen Akteur, außer einen Erzeuger, Verleger, Vertrieb oder Hersteller, der mit einer Manifestation in Verbindung steht, mit einer Manifestation in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, bortset fra en producer, udgiver, distributør, eller producent, der er knyttet til en manifestation til en manifestation."
+        ],
+        "ca": [
+            "Relaciona un agent, diferent d’un productor, un editor, un distribuïdor o un fabricant associat amb una manifestació, amb una manifestació."
+        ],
+        "fi": [
+            "Liittää toimijan manifestaatioon, johon liittyvä toimija on muussa kuin kustantajan, jakajan tai valmistajan roolissa."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50181",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/otherAgentManifestationOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24676.html",
+            "label": "is other agent associated with manifestation of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50181",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/otherAgentManifestationOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24970.html",
+            "label": "is other agent associated with manifestation of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60602",
-        "lexicalAlias": "http://rdaregistry.info/Elements/u/otherAgentAssociatedWithAResourceOf.en",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/otherAgentAssociatedWithResourceOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15192.html",
-        "label": "is other agent associated with a resource of"
-    },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/m/P30079",
-        "lexicalAlias": "http://rdaregistry.info/Elements/m/otherPFCManifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14468.html",
-        "label": "has other person, family, or corporate body associated with a manifestation"
+        "label": "is other agent associated with resource of"
     },
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
@@ -34,26 +57,41 @@
         "label": "RDA Agent properties"
     },
     "label": {
-        "en": "is other person, family, or corporate body associated with a manifestation of",
-        "fr": "est l’autre personne, famille ou collectivité associée à une manifestation de"
+        "en": "is other agent associated with manifestation of",
+        "fr": "est un autre agent associé à une manifestation de",
+        "el": "είναι άλλο φυσικό πρόσωπο, οικογένεια ή συλλογικό όργανο συνδεδεμένο με την εκδήλωσή του",
+        "da": "er anden agent, der er knyttet til manifestation af",
+        "ca": "és altre agent associat amb una manifestació de",
+        "fi": "muuna toimijana manifestaatiossa",
+        "de": "ist sonstiger Akteur, der mit einer Manifestation in Verbindung steht von"
     },
-    "lexicalAlias": "http://rdaregistry.info/Elements/a/otherPFCManifestationOf.en",
+    "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentManifestationOf.en",
     "name": {
-        "en": "otherPFCManifestationOf"
+        "en": "otherAgentManifestationOf",
+        "el": "άλληΕκδήλωσηΤουΠΟΣ",
+        "da": "andenAgentManifestationAf",
+        "fi": "muunaToimijanaManifestaatiossa",
+        "fr": "autreAgentAssociéÀUneManifestationDe"
     },
     "note": {
         "en": [
-            "Includes book designers, platemakers, etc."
+            "Book designers, platemakers, etc., are included."
         ],
         "fr": [
-            "Comprend les graphistes, les graveurs de planches, etc."
+            "Sont inclus les graphistes, les graveurs de planches, etc."
+        ],
+        "el": [
+            "Περιλαμβάνονται σχεδιαστές βιβλίου, κατασκευαστές μήτρας κ.λπ."
+        ],
+        "de": [
+            "Dazu gehören Buchgestalter, Druckformenhersteller usw."
+        ],
+        "da": [
+            "Bogdesignere, plademagere, etc. er omfattet."
+        ],
+        "fi": [
+            "Muita manifestaatioon liittyviä toimijoita ovat kirjan ulkoasun suunnittelijat, painolaattojen valmistajat tms."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -61,11 +99,33 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50307",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/relatedManifestationAgent.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25293.html",
+            "label": "has related manifestation (agent)"
+        }
+    ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité, autre qu’un producteur, un éditeur, un diffuseur ou distributeur ou bien un fabricant, associée à une manifestation."
+        "fr": "Manifestation associée à un agent autre qu’un producteur, un éditeur, un diffuseur ou distributeur ou bien un fabricant.",
+        "en": "A manifestation associated with an agent other than a producer, publisher, distributor, or manufacturer.",
+        "el": "Μια εκδήλωση που συνδέεται με έναν φορέα άλλον από τον παραγωγό, εκδότη, διαθέτη ή κατασκευαστή.",
+        "de": "Eine Manifestation, bei der ein Akteur, außer ein Erzeuger, ein Verleger, ein Vertrieb oder ein Hersteller, mit einer Manifestation in Verbindung steht.",
+        "da": "Manifestation, der er knyttet til en agent, bortset fra producer, udgiver, distributør, eller producent.",
+        "ca": "Manifestació associada amb un agent diferent d’un productor, un editor, un distribuïdor o un fabricant.",
+        "fi": "Manifestaatio, johon liittyvä toimija on muussa kuin kustantajan, jakajan tai valmistajan roolissa.",
+        "no": "En manifestasjon som forbindes med en agent som ikke er produsent, utgiver, distributør eller tilvirker."
     },
     "ToolkitLabel": {
-        "fr": "autre personne, famille ou collectivité associée à une manifestation de"
+        "fr": "autre agent associé à une manifestation de",
+        "en": "other agent associated with manifestation of",
+        "el": "άλλο φυσικό πρόσωπο, οικογένεια ή συλλογικό όργανο συνδεδεμένο με μία εκδήλωση του",
+        "de": "Sonstiger Akteur, der mit einer Manifestation in Verbindung steht von",
+        "da": "anden agent, der er knyttet til manifestation af",
+        "ca": "altre agent associat amb una manifestació de",
+        "fi": "muuna toimijana manifestaatiossa",
+        "no": "annen agent som forbindes med manifestasjon av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14046.html"
 }

@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body to a corporate body that is subordinate to the other corporate body."
+            "Relates a corporate body to a corporate body that is subordinate to another corporate body."
         ],
         "fr": [
-            "Met une collectivité en relation avec une collectivité qui est subordonnée à l’autre collectivité."
+            "Met une collectivité en relation avec une collectivité qui est subordonnée à une autre collectivité."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με ένα συλλογικό όργανο το οποίο είναι κατώτερο/υπάγεται σε κάποιο άλλο συλλογικό όργανο."
+        ],
+        "de": [
+            "Setzt eine Körperschaft mit einer Körperschaft, die einer anderen Körperschaft untergeordnet ist, in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation til en korporation der er underordnet en anden korporation."
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa amb una entitat corporativa que se subordina a una altra entitat corporativa."
+        ],
+        "fi": [
+            "Liittää yhteisön yhteisöön, joka on hierarkkisesti toisen yhteisön alainen."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50010",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/hierarchicalSubordinate.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24555.html",
+            "label": "has hierarchical subordinate"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50010",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/hierarchicalSubordinate.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24800.html",
+            "label": "has hierarchical subordinate"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60681",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/hierarchicalSubordinate.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15270.html",
         "label": "has hierarchical subordinate"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50008",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/hierarchicalSuperior.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15543.html",
-        "label": "has hierarchical superior"
-    },
+    "instructionNumber": "29.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "has hierarchical subordinate",
-        "fr": "a pour subordonné hiérarchique"
+        "fr": "a pour subordonné hiérarchique",
+        "el": "έχει ιεραρχικά κατώτερο",
+        "da": "har hierarkisk underordnet",
+        "ca": "té com a subordinat jeràrquic",
+        "fi": "alayhteisö",
+        "de": "hat untergeordnete Körperschaft"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/hierarchicalSubordinate.en",
     "name": {
-        "en": "hierarchicalSubordinate"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10005",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "en": "hierarchicalSubordinate",
+        "el": "ιεραρχικάΚατώτερος",
+        "da": "hierarkiskUnderordnet",
+        "fi": "alayhteiso",
+        "fr": "subordonnéHiérarchique"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -54,14 +81,26 @@
         "label": "Published"
     },
     "ToolkitDefinition": {
-        "en": "A corporate body that is subordinate to the other corporate body.",
-        "fr": "Collectivité qui est subordonnée à l’autre collectivité.",
-        "es": "Una entidad corporativa que es subordinada a otra entidad corporativa."
+        "en": "A corporate body that is subordinate to another corporate body.",
+        "fr": "Collectivité qui est subordonnée à une autre collectivité.",
+        "es": "Una entidad corporativa que es subordinada a otra entidad corporativa.",
+        "el": "Ένα συλλογικό όργανο το οποίο είναι κατώτερο από/υπάγεται σε κάποιο άλλο συλλογικό όργανο.",
+        "de": "Eine Körperschaft, die einer anderen Körperschaft untergeordnet ist.",
+        "da": "Korporation der er underordnet en anden korporation.",
+        "ca": "Entitat corporativa que se subordina a una altra entitat corporativa.",
+        "fi": "Yhteisö, joka on hierarkkisesti toisen yhteisön alainen.",
+        "no": "En korporasjon som er underordnet en annen korporasjon."
     },
     "ToolkitLabel": {
         "en": "hierarchical subordinate",
         "fr": "subordonné hiérarchique",
-        "es": "subordinada jerárquica"
+        "es": "subordinada jerárquica",
+        "el": "ιεραρχικά κατώτερος",
+        "de": "Untergeordnete Körperschaft",
+        "da": "hierarkisk underordnet",
+        "ca": "subordinat jeràrquic",
+        "fi": "alayhteisö",
+        "no": "hierarkisk underordnet"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15545.html"
 }

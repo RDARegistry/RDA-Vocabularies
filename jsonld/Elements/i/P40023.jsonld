@@ -4,17 +4,35 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an item to a person, family, or corporate body other than an owner or custodian associated with an item."
+            "Relates an item to an agent other than an owner or custodian associated with an item."
         ],
         "fr": [
-            "Met un item en relation avec une personne, famille ou collectivité, autre qu’un propriétaire ou un dépositaire, associée à un item. Comprend les conservateurs, les relieurs, les restaurateurs, etc."
+            "Met un item en relation avec un agent, autre qu’un propriétaire ou un dépositaire, associé à un item."
+        ],
+        "vi": [
+            "Liên kết bản với tác nhân liên quan tới bản, khác với người chủ hoặc người giám hộ."
+        ],
+        "da": [
+            "Relaterer et eksemplar til en agent bortset fra en ejer eller forvalter, der er knyttet til et eksemplar."
+        ],
+        "de": [
+            "Setzt ein Exemplar mit einem Akteur, der mit einem Exemplar in Verbindung steht, aber nicht der Eigentümer oder der Verwahrer ist, in Beziehung."
+        ],
+        "el": [
+            "Συνδέει ένα αντίτυπο με έναν φορέα άλλον από τον ιδιοκτήτη ή τον θεματοφύλακα ο οποίος συνδέεται με ένα αντίτυπο."
+        ],
+        "ca": [
+            "Relaciona un item amb un agent diferent d’un propietari o un dipositari associat amb un ítem."
+        ],
+        "fi": [
+            "Liittää kappaleen muuhun toimijaan, joka ei ole kappaleen omistaja tai säilyttäjä."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10003",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "label": "item"
     },
     "hasSubproperty": [
         {
@@ -70,47 +88,71 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/i/dedicateeOfItem.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14360.html",
             "label": "has dedicatee (item)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/i/object/P40023",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/object/otherAgentItem.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24509.html",
+            "label": "has other agent associated with item"
         }
     ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60374",
-        "lexicalAlias": "http://rdaregistry.info/Elements/u/otherAgentAssociatedWithAResource.en",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/otherAgentAssociatedWithResource.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14970.html",
-        "label": "has other agent associated with a resource"
+        "label": "has other agent associated with resource"
     },
-    "instructionNumber": "22/04/2016",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50182",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/otherPFCItemOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14047.html",
-        "label": "is other person, family, or corporate body associated with an item of"
-    },
+    "instructionNumber": "22.4",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/i/",
         "url": "http://metadataregistry.org/schema/show/id/80.html",
         "label": "RDA Item properties"
     },
     "label": {
-        "en": "has other person, family, or corporate body associated with an item",
-        "fr": "a pour autre personne, famille ou collectivité associée à un item"
+        "en": "has other agent associated with item",
+        "fr": "a pour autre agent associé à un item",
+        "sv": "har övrig person, familj/släkt eller institution knuten till ett exemplar",
+        "vi": "có tác nhân khác của bản",
+        "da": "har anden person, familie eller korporation knyttet til et eksemplar",
+        "de": "hat sonstigen Akteur, der mit einem Exemplar in Verbindung steht",
+        "el": "έχει άλλον φορέα συνδεδεμένο με το αντίτυπο",
+        "ca": "té com a altre agent associat amb un ítem",
+        "fi": "kappaleeseen liittyvä muu toimija"
     },
-    "lexicalAlias": "http://rdaregistry.info/Elements/i/otherPFCItem.en",
+    "lexicalAlias": "http://rdaregistry.info/Elements/i/otherAgentItem.en",
     "name": {
-        "en": "otherPFCItem"
+        "en": "otherAgentItem",
+        "vi": "tácNhânKhácCủaBản",
+        "da": "andenPFCEksemplar",
+        "el": "άλλοςΦορέαςΑντιτύπου",
+        "fi": "kappaleeseenLiittyvaMuuToimija",
+        "fr": "autreAgentAssociéÀUnItem"
     },
     "note": {
-        "en": [
-            "Includes curators, binders, restorationists, etc."
-        ],
         "fr": [
-            "Comprend les conservateurs, les relieurs, les restaurateurs, etc."
+            "Sont inclus les conservateurs, les relieurs, les restaurateurs, etc."
+        ],
+        "en": [
+            "Curators, binders, restorationists, etc., are included."
+        ],
+        "vi": [
+            "Người trông nom, người đóng sách, người phục chế, v.v..., được bao gồm."
+        ],
+        "da": [
+            "Kuratorer, bogbindere, konservatorer etc, er omfattet."
+        ],
+        "de": [
+            "Dazu gehören Kuratoren, Buchbinder, Restauratoren usw."
+        ],
+        "el": [
+            "Περιλαμβάνονται επιμελητές έκθεσης, βιβλιοδέτες, συντηρητές κ.λπ."
+        ],
+        "ca": [
+            "Inclou els conservadors, els enquadernadors, els restauradors, etc."
+        ],
+        "fi": [
+            "Kappaleeseen liittyviin muihin toimijoihin kuuluvat kuraattorit, kirjansitojat, restauroijat jne."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -118,15 +160,38 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/i/P40072",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/relatedAgentItem.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25270.html",
+            "label": "has related agent (item)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body other than an owner or custodian associated with an item. Includes curators, binders, restorationists, etc.",
-        "fr": "Personne, famille ou collectivité, autre qu’un propriétaire ou un dépositaire, associée à un item. Comprend les conservateurs, les relieurs, les restaurateurs, etc.",
-        "es": "Una persona, familia o entidad corporativa (diferente a un propietario o custodio), asociada con un ítem."
+        "en": "An agent other than an owner or custodian associated with an item.",
+        "fr": "Agent, autre qu’un propriétaire ou un dépositaire, associé à un item.",
+        "es": "Una persona, familia o entidad corporativa (diferente a un propietario o custodio), asociada con un ítem.",
+        "vi": "Tác nhân liên quan tới bản, khác với người chủ hoặc người giám hộ.",
+        "da": "Agent bortset fra en ejer eller forvalter, der er knyttet til et eksemplar.",
+        "de": "Ein Akteur, der mit einem Exemplar in Verbindung steht, aber nicht der Eigentümer oder der Verwahrer ist.",
+        "el": "Ένας φορέας άλλος από τον ιδιοκτήτη ή τον θεματοφύλακα ο οποίος συνδέεται με ένα αντίτυπο.",
+        "ca": "Agent diferent d’un propietari o un dipositari associat amb un ítem.",
+        "fi": "Kappaleeseen liittyvä muu toimija, joka ei ole kappaleen omistaja tai säilyttäjä.",
+        "no": "En agent som forbindes med et eksemplar og som ikke er en eier eller oppbevarer."
     },
     "ToolkitLabel": {
-        "en": "other person, family, or corporate body associated with an item",
-        "fr": "autre personne, famille ou collectivité associée à un item",
-        "es": "otra persona, familia o entidad corporativa asociada con un ítem"
+        "en": "other agent associated with item",
+        "fr": "autre agent associé à un item",
+        "es": "otra persona, familia o entidad corporativa asociada con un ítem",
+        "sv": "övrig person, familj/släkt eller institution knuten till ett exemplar",
+        "vi": "tác nhân khác của bản",
+        "da": "anden agent knyttet til et eksemplar",
+        "de": "Sonstiger Akteur der mit einem Exemplar in Verbindung steht",
+        "el": "άλλος φορέας συνδεδεμένος με το αντίτυπο",
+        "ca": "altre agent associat amb un ítem",
+        "fi": "kappaleeseen liittyvä muu toimija",
+        "no": "annen agent som forbindes med eksemplar"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14358.html"
 }

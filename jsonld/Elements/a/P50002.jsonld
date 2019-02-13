@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body against whom an appeal is taken on the decision of a lower court recorded in a legal work of a higher court to the work."
+            "Relates a corporate body against whom an appeal is taken on a decision of a lower court recorded in a legal work of a higher court to a work."
         ],
         "fr": [
-            "Met une collectivité contre laquelle un appel a été formé en relation avec l’œuvre."
+            "Met une collectivité contre laquelle a été formé un appel d’une décision d’un tribunal inférieur enregistrée dans une œuvre juridique d’un tribunal supérieur en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο εναντίον του οποίου ασκείται έφεση εναντίον απόφασης κατώτερου δικαστηρίου, που καταχωρίστηκε στα πρακτικά ενός ανωτέρου δικαστηρίου, με ένα έργο."
+        ],
+        "de": [
+            "Setzt eine Körperschaft, gegen die Rechtsmittel (Berufung/Revision) gegen ein Gerichtsurteil einer unteren Instanz, das in einem juristischen Werk einer höheren Instanz erfasst ist, eingelegt werden, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation mod hvilken der er gjort indsigelse over en underrets beslutning, der er registreret i et juridisk værk fra en højere retsinstans til et værk."
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa, contra la qual es recorre en un tribunal superior perquè esmeni la sentència d’un tribunal inferior, amb una obra."
+        ],
+        "fi": [
+            "Liittää muutoshakemuksen kohteena olevan yhteisön hakemukseen, jolla haetaan muutosta alemman oikeusasteen päätökseen."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50002",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/appelleeCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24548.html",
+            "label": "is appellee corporate body of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50002",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/appelleeCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24792.html",
+            "label": "is appellee corporate body of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60601",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/appelleeOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15191.html",
         "label": "is appellee of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10005",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/appelleeCorporateBody.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15308.html",
-        "label": "has appellee corporate body"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is appellee corporate body of",
-        "fr": "est la collectivité intimée de"
+        "fr": "est une collectivité intimée de",
+        "el": "είναι εφεσίβλητο/αναιρεσίβλητο συλλογικό όργανο του",
+        "da": "er indstævnt korporation af",
+        "ca": "és entitat corporativa apel·lada de",
+        "fi": "yhteisöön kohdistuva muutoshakemus",
+        "de": "ist Berufungsbeklagte/Revisionsbeklagte Körperschaft von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/appelleeCorporateBodyOf.en",
     "name": {
-        "en": "appelleeCorporateBodyOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "appelleeCorporateBodyOf",
+        "el": "εφεσίβλητο/αναιρεσίβλητοΣυλλογικόΌργανοΤου",
+        "da": "erIndstævntKorporationAf",
+        "fi": "yhteisoonKohdistuvaMuutoshakemus",
+        "fr": "collectivitéIntiméeDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Collectivité contre laquelle un appel a été formé."
+        "fr": "Œuvre juridique d’un tribunal supérieur qui enregistre une décision d’un tribunal inférieur portant un appel contre une collectivité.",
+        "en": "A legal work of a higher court recording a decision of a lower court that appeals against a corporate body.",
+        "el": "Ένα νομικό έργο ενός ανώτερου δικαστηρίου, το οποίο καταγράφει στα πρακτικά (του) μία απόφαση ενός κατώτερου δικαστηρίου, ενώπιον του οποίου (κατώτερου δικαστηρίου) δικάστηκε έφεση εναντίον ενός συλλογικού οργάνου.",
+        "de": "Ein juristisches Werk einer höheren Instanz, bei dem gegen eine Körperschaft Rechtsmittel gegen ein Gerichtsurteil der unteren Instanz eingelegt werden.",
+        "da": "Juridisk værk fra en højere retsinstans, der registrerer en beslutning fra en underret, der har gjort indsigelse mod en korporation.",
+        "ca": "Obra jurídica d’un tribunal superior perquè esmeni una sentència d’un tribunal inferior que apel·la contra una entitat corporativa.",
+        "fi": "Hakemus, jolla haetaan muutosta alemman oikeusasteen päätökseen ja joka kohdistuu yhteisöön.",
+        "no": "Et juridisk verk fra en høyere rettsinstans som registrerer en avgjørelse fra en lavere rettsinstans som anker mot en korporasjon."
     },
     "ToolkitLabel": {
-        "fr": "collectivité intimée de"
+        "fr": "collectivité intimée de",
+        "en": "appellee corporate body of",
+        "el": "εφεσίβλητο/αναιρεσίβλητο συλλογικό όργανο του",
+        "de": "Berufungsbeklagte/Revisionsbeklagte Körperschaft von",
+        "da": "indstævnt korporation af",
+        "ca": "entitat corporativa apel·lada de",
+        "fi": "yhteisöön kohdistuva muutoshakemus",
+        "no": "appellee - korporasjon for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15537.html"
 }

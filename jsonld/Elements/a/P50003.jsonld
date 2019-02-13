@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body granting an academic degree to the work."
+            "Relates a corporate body granting an academic degree to a work."
         ],
         "fr": [
-            "Met une collectivité conférant un diplôme universitaire en relation avec l’œuvre."
+            "Met une collectivité qui confère un diplôme universitaire en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο που χρηματοδοτεί ένα ανώτερου επιπέδου ακαδημαϊκό πτυχίο, με ένα έργο."
+        ],
+        "de": [
+            "Setzt eine Körperschaft, die einen akademischen Grad verleiht, z. T. basierend auf der Einreichung einer Hochschulschrift o. ä., mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation der tildeler en akademisk grad til et værk."
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa, que concedeix un títol acadèmic, amb una obra."
+        ],
+        "fi": [
+            "Liittää akateemisen oppiarvon myöntävän yhteisön teokseen."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50003",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/degreeGrantingInstitutionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24549.html",
+            "label": "is degree granting institution of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50003",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/degreeGrantingInstitutionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24793.html",
+            "label": "is degree granting institution of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60002",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/degreeGrantingInstitutionOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14604.html",
         "label": "is degree granting institution of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/degreeGrantingInstitution.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15309.html",
-        "label": "has degree granting institution"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is degree granting institution of",
-        "fr": "est l’institution conférant des diplômes universitaires de"
+        "fr": "est une institution conférant un diplôme universitaire de",
+        "el": "είναι ίδρυμα χορήγησης πτυχίου του",
+        "da": "er tildelende institution for",
+        "ca": "és institució que concedeix un títol acadèmic de",
+        "fi": "yhteisön myöntämä oppiarvo",
+        "de": "ist grad-verleihende Institution von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/degreeGrantingInstitutionOf.en",
     "name": {
-        "en": "degreeGrantingInstitutionOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "degreeGrantingInstitutionOf",
+        "el": "ίδρυμαΧορήγησηςΠτυχίουΤου",
+        "da": "tildelendeInstitutionFor",
+        "fi": "yhteisonMyontamaOppiarvo",
+        "fr": "institutionConférantUnDiplômeUniversitaireDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -56,16 +83,30 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/a/P50131",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherPFCWorkOf.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
-            "label": "is other person, family, or corporate body associated with a work of"
+            "label": "is other agent associated with work of"
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Collectivité conférant un diplôme universitaire."
+        "fr": "Diplôme universitaire conféré par une collectivité.",
+        "en": "An academic degree that is granted by a corporate body.",
+        "el": "Ένα ανώτερου επιπέδου ακαδημαϊκό πτυχίο το οποίο χρηματοδοτείται από ένα συλλογικό όργανο.",
+        "de": "Ein akademischer Grad, der von einer Körperschaft verliehen wird.",
+        "da": "Akademisk grad, der er tildelt af en korporation.",
+        "ca": "Títol acadèmic que es concedeix per una entitat corporativa.",
+        "fi": "Yhteisölle myönnetty akateeminen oppiarvo.",
+        "no": "En akademisk grad som tildeles en korporasjon."
     },
     "ToolkitLabel": {
-        "fr": "institution conférant des diplômes universitaires de"
+        "fr": "institution conférant un diplôme universitaire de",
+        "en": "degree granting institution of",
+        "el": "ίδρυμα χορήγησης πτυχίου του",
+        "de": "Grad-verleihende Institution von",
+        "da": "tildelende institution for",
+        "ca": "institució que concedeix un títol acadèmic de",
+        "fi": "yhteisön myöntämä oppiarvo",
+        "no": "tildelende institusjon for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15538.html"
 }

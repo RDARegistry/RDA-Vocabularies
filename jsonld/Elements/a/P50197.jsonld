@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body responsible for creating an independent or personal film to the work."
+            "Relates an agent responsible for creating an independent or personal film to a work."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité responsable de la création d’un film indépendant ou personnel en relation avec l’œuvre."
+            "Met un agent responsable de la création d’un film indépendant ou personnel en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα υπεύθυνο για τη δημιουργία ενός ανεξάρτητου ή προσωπικού φιλμ, με ένα έργο."
+        ],
+        "de": [
+            "Setzt einen Akteur, der für die Erstellung eines unabhängigen oder privaten Films verantwortlich ist, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent der er ansvarlig for at have skabt en uafhængig eller personlig film til et værk."
+        ],
+        "ca": [
+            "Relaciona un agent, responsable de la creació d’una pel·lícula cinematogràfica independent o personal, amb una obra."
+        ],
+        "fi": [
+            "Liittää toimijan teokseen, joka sisältää elokuvan luomisen."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50197",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/filmmakerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24692.html",
+            "label": "is filmmaker of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50197",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/filmmakerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24986.html",
+            "label": "is filmmaker of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60665",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/filmmakerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15255.html",
         "label": "is filmmaker of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10063",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/filmmaker.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15366.html",
-        "label": "has filmmaker"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,11 +59,20 @@
     },
     "label": {
         "en": "is filmmaker of",
-        "fr": "est le cinéaste de"
+        "fr": "est un cinéaste de",
+        "el": "είναι σκηνοθέτης του",
+        "da": "er filmskaber til",
+        "ca": "és cineasta de",
+        "fi": "elokuvan tekijänä teoksessa",
+        "de": "ist Filmemacher von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/filmmakerOf.en",
     "name": {
-        "en": "filmmakerOf"
+        "en": "filmmakerOf",
+        "el": "σκηνοθέτηςΤου",
+        "da": "filmskaberTil",
+        "fi": "elokuvanTekijanaTeoksessa",
+        "fr": "cinéasteDe"
     },
     "note": {
         "en": [
@@ -47,13 +80,19 @@
         ],
         "fr": [
             "Un cinéaste est responsable à titre individuel de la conception et de l’exécution de tous les aspects du film."
+        ],
+        "el": [
+            "Ένας σκηνοθέτης είναι ατομικά υπεύθυνος για τη σύλληψη και την εκτέλεση όλων των πτυχών μιας ταινίας."
+        ],
+        "de": [
+            "Ein Filmemacher ist individuell verantwortlich für das Konzept und die Ausführung aller Aspekte des Films."
+        ],
+        "da": [
+            "En filmskaber er individuelt ansvarlig for udtænkning og udførelse af alle filmens aspekter."
+        ],
+        "fi": [
+            "Tekijä vastaa itse kaikilta osin elokuvan ideoinnista ja tuottamisesta."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -70,10 +109,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité responsable de la création d’un film indépendant ou personnel."
+        "fr": "Œuvre qui comporte une responsabilité de création à l’égard d’un film indépendant ou personnel.",
+        "en": "A work that involves a creation responsibility for an independent or personal film.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη της δημιουργίας ενός ανεξάρτητου ή προσωπικού φιλμ.",
+        "de": "Ein Werk, bei dem ein Akteur für die Erstellung eines unabhängigen oder privaten Films verantwortlich ist.",
+        "da": "Værk, der involverer et ansvar for at have skabt en uafhængig eller personlig film.",
+        "ca": "Obra el contingut de la qual és principalment textual, independentment del tipus de suport o del gènere, que involucra una responsabilitat de creació.",
+        "fi": "Teos, joka sisältää elokuvan luomisen.",
+        "no": "Et verk som involverer ansvar for å skape en uavhengig eller personlig film."
     },
     "ToolkitLabel": {
-        "fr": "cinéaste de"
+        "fr": "cinéaste de",
+        "en": "filmmaker of",
+        "el": "σκηνοθέτης του",
+        "de": "Filmemacher von",
+        "da": "filmskaber til",
+        "ca": "cineasta de",
+        "fi": "elokuvan tekijänä teoksessa",
+        "no": "filmskaper av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14062.html"
 }

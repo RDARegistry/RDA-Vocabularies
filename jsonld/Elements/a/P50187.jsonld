@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body responsible for creating a musical work to the work."
+            "Relates an agent responsible for creating a musical work to a work."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité responsable de la création d’une œuvre musicale en relation avec l’œuvre."
+            "Met un agent responsable de la création d’une œuvre musicale en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα υπεύθυνο για τη δημιουργία ενός μουσικού έργου, με ένα έργο."
+        ],
+        "de": [
+            "Setzt einen Akteur, der für ein Musikwerk verantwortlich ist, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent der er ansvarlig for at have skabt et musikværk til et værk."
+        ],
+        "ca": [
+            "Relaciona un agent, responsable de la creació d’una obra musical, amb una obra."
+        ],
+        "fi": [
+            "Liittää toimijan musiikkiteokseen, joka sisältää luovaa työtä."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50187",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/composerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24682.html",
+            "label": "is composer of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50187",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/composerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24976.html",
+            "label": "is composer of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60655",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/composerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15245.html",
         "label": "is composer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10053",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/composer.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15356.html",
-        "label": "has composer"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is composer of",
-        "fr": "est le compositeur de"
+        "fr": "est un compositeur de",
+        "el": "είναι συνθέτης του",
+        "da": "er komponist til",
+        "ca": "és compositor de",
+        "fi": "sävellys",
+        "de": "ist Komponist von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/composerOf.en",
     "name": {
-        "en": "composerOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "composerOf",
+        "el": "συνθέτηςΤου",
+        "da": "komponistTil",
+        "fi": "savellys",
+        "fr": "compositeurDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité responsable de la création d’une œuvre musicale."
+        "fr": "Œuvre musicale qui comporte une responsabilité de création.",
+        "en": "A musical work that involves a creation responsibility.",
+        "el": "Ένα μουσικό έργο που περιλαμβάνει την ευθύνη της δημιουργίας του.",
+        "de": "Ein Musikwerk, bei dem ein Akteur für ein Musikwerk verantwortlich ist.",
+        "da": "Musikværk, der involverer et skabelsesansvar.",
+        "ca": "Obra musical que involucra una responsabilitat de creació.",
+        "fi": "Musiikkiteos, joka sisältää luovaa työtä.",
+        "no": "Et musikalsk verk som noen har ansvar for å skape."
     },
     "ToolkitLabel": {
-        "fr": "compositeur de"
+        "fr": "compositeur de",
+        "en": "composer of",
+        "el": "συνθέτης του",
+        "de": "Komponist von",
+        "da": "komponist til",
+        "ca": "compositor de",
+        "fi": "sävellys",
+        "no": "komponist av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14052.html"
 }

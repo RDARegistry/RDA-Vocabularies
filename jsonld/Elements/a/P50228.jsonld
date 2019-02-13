@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a work by providing a postface to the original work to the expression."
+            "Relates an agent contributing to an expression of a work by providing a postface to an original work to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant une postface à l’œuvre originale en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre en fournissant une postface à une œuvre originale en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου παρέχοντας έναν επίλογο σε ένα πρωτότυπο έργο, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur mit einer Expression, bei der ein Akteur ein Postscriptum zum Originalwerk liefert, in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der bidrager til et udtryk af et værk ved at sørge for en efterskrift til et oprindeligt værk til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix amb una expressió d’una obra proporcionant un postfaci a una obra original, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan ekspressioon, johon sisältyy alkuperäiseen teokseen kirjoitettu jälkipuhe."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50228",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/writerOfPostfaceOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24723.html",
+            "label": "is writer of postface of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50228",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/writerOfPostfaceOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25017.html",
+            "label": "is writer of postface of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60718",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostfaceOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15647.html",
         "label": "is writer of supplementary textual content of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20238",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/writerOfPostface.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15623.html",
-        "label": "has writer of postface"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is writer of postface of",
-        "fr": "est le postfacier de"
+        "fr": "est un postfacier de",
+        "el": "είναι συγγραφέας του επιλόγου του",
+        "da": "er forfatter til efterskrift til",
+        "ca": "és escriptor d’un postfaci de",
+        "fi": "jälkipuheen kirjoittajana ekspressiossa",
+        "de": "ist Verfasser eines Postscriptums von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/writerOfPostfaceOf.en",
     "name": {
-        "en": "writerOfPostfaceOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "writerOfPostfaceOf",
+        "el": "συγγραφέαςΕπιλόγουΤου",
+        "da": "forfatterTilEfterskriftTil",
+        "fi": "jalkipuheenKirjoittajanaEkspressiossa",
+        "fr": "postfacierDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant une postface à l’œuvre originale."
+        "fr": "Expression d’une œuvre qui intègre une contribution consistant à fournir une postface à une œuvre originale.",
+        "en": "An expression that incorporates a contribution of providing a postface to an original work.",
+        "el": "Μια έκφραση που ενσωματώνει τη συνεισφορά ενός επιλόγου στο πρωτότυπο έργο.",
+        "de": "Eine Expression, bei der ein Akteur ein Postscriptum zum Originalwerk liefert.",
+        "da": "Udtryk, der inkorporerer et bidrag ved at sørge for en efterskrift til et oprindeligt værk.",
+        "ca": "Expressió que incorpora una contribució que proporciona un postfaci a una obra original.",
+        "fi": "Ekspressio, johon sisältyy alkuperäiseen teokseen kirjoitettu jälkipuhe.",
+        "no": "Et uttrykk som omfatter et bidrag i form av å tilføre et etterord til originalverket."
     },
     "ToolkitLabel": {
-        "fr": "postfacier de"
+        "fr": "postfacier de",
+        "en": "writer of postface of",
+        "el": "συγγραφέας του επιλόγου του",
+        "de": "Verfasser eines Postscriptums von",
+        "da": "forfatter til efterskrift til",
+        "ca": "escriptor d’un postfaci de",
+        "fi": "jälkipuheen kirjoittajana ekspressiossa",
+        "no": "forfatter av etterord til"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15639.html"
 }

@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an artist responsible for creating a three-dimensional work by modeling, carving, or similar technique to the work."
+            "Relates an artist responsible for creating a three-dimensional work by modeling, carving, or similar technique to a work."
         ],
         "fr": [
-            "Met un artiste responsable de la création d’une œuvre tridimensionnelle par le modelage, la taille ou une technique similaire en relation avec l’œuvre."
+            "Met un artiste responsable de la création d’une œuvre tridimensionnelle par le modelage, la taille ou une technique similaire en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν καλλιτέχνη υπεύθυνο για τη δημιουργία ενός τρισδιάστατου έργου μέσω του μοντελισμού, της γλυπτικής ή μιας παρόμοιας τεχνικής, με ένα έργο."
+        ],
+        "de": [
+            "Setzt einen Künstler, der für die Schaffung eines dreidimensionalen Werks durch Modellieren, Schnitzen oder ähnliche Techniken verantwortlich ist, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en kunstner, der er ansvarlig for at have skabt et tredimensionelt værk vha. modellering, billedhuggerkunst eller lignende teknik til et værk."
+        ],
+        "ca": [
+            "Relaciona un artista, responsable de la creació d’una obra tridimensional a partir del modelatge, la talla o una tècnica similar, amb una obra."
+        ],
+        "fi": [
+            "Liittää taiteilijan kolmiulotteiseen teokseen, joka sisältää veistämällä, muovaamalla tai muulla vastaavalla tekniikalla tehtyä taidetta."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50222",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/sculptorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25011.html",
+            "label": "is sculptor of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50222",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/sculptorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24717.html",
+            "label": "is sculptor of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60705",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/sculptorOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15294.html",
         "label": "is sculptor of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10202",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/sculptor.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15505.html",
-        "label": "has sculptor"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is sculptor of",
-        "fr": "est le sculpteur de"
+        "fr": "est un sculpteur de",
+        "el": "είναι γλύπτης του",
+        "da": "er skulptør til",
+        "ca": "és escultor de",
+        "fi": "kuvanveistäjänä teoksessa",
+        "de": "ist Bildhauer von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/sculptorOf.en",
     "name": {
-        "en": "sculptorOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "sculptorOf",
+        "el": "γλύπτηςΤου",
+        "da": "skulptørTil",
+        "fi": "kuvanveistajanaTeoksessa",
+        "fr": "sculpteurDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Artiste responsable de la création d’une œuvre tridimensionnelle par le modelage, la taille ou une technique similaire."
+        "fr": "Œuvre tridimensionnelle qui comporte une responsabilité artistique consistant à utiliser le modelage, la taille ou une technique similaire.",
+        "en": "A three-dimensional work that involves an artistic responsibility for modeling, carving, or similar technique.",
+        "el": "Ένα τρισδιάστατο έργο που περιλαμβάνει την καλλιτεχνική ευθύνη του μοντελισμού, της γλυπτικής ή μιας παρόμοιας τεχνικής.",
+        "de": "Ein dreidimensionales Werk, bei der ein Akteur durch Modellieren, Schnitzen oder ähnliche Techniken verantwortlich ist.",
+        "da": "Tredimensionelt værk der involverer et kunstnerisk ansvar for at modellere, udskære eller anvende lignende teknikker.",
+        "ca": "Obra tridimensional que involucra una responsabilitat artística a partir del modelatge, la talla o una tècnica similar.",
+        "fi": "Kolmiulotteinen teos, joka sisältää veistämällä, muovaamalla tai muulla vastaavalla tekniikalla tehtyä taidetta.",
+        "no": "En tredimensjonalt verk som involverer et kunstnerisk ansvar for modellering, utskjæring eller lignende teknikker."
     },
     "ToolkitLabel": {
-        "fr": "sculpteur de"
+        "fr": "sculpteur de",
+        "en": "sculptor of",
+        "el": "γλύπτης του",
+        "de": "Bildhauer von",
+        "da": "skulptør til",
+        "ca": "escultor de",
+        "fi": "kuvanveistäjänä teoksessa",
+        "no": "skulptør av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14087.html"
 }

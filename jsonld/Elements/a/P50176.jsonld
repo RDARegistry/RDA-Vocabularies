@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body involved in manufacturing a manifestation by preparing plates used in the production of printed images and/or text to the manifestation."
+            "Relates an agent involved in manufacturing a manifestation by preparing plates used in the production of printed images or text to a manifestation."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité prenant part à la fabrication d’une manifestation en préparant les planches utilisées dans la production d’images et/ou de textes imprimés en relation avec la manifestation."
+            "Met un agent qui prend part à la fabrication d’une manifestation en préparant les planches utilisées dans la production d’images ou de textes imprimés en relation avec une manifestation."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα,ο οποίος εμπλέκεται στην κατασκευή μιας εκδήλωσης μέσω της προετοιμασίας των πλακών που χρησιμοποιούνται για την παραγωγή έντυπων εικόνων ή κειμένων, με μια εκδήλωση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der an der Herstellung einer Manifestation beteiligt ist, indem er Druckformen für die Produktion von gedruckten Bildern und/oder Text anfertigt, mit einer Manifestation in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har været involveret i fremstillingen af en manifestation ved at forberede plader, der anvendes til fremstilling af trykte billeder og/eller tekst til en manifestation."
+        ],
+        "ca": [
+            "Relaciona un agent, involucrat en la fabricació d’una manifestació amb la preparació de les planxes usades en la producció d’imatges o de text imprès, amb una manifestació."
+        ],
+        "fi": [
+            "Liittää toimijan manifestaatioon, jonka valmistamiseen toimija on osallistunut valmistamalla painettujen kuvien ja/tai tekstin valmistuksessa käytettäviä painolaattoja."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50176",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/platemakerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24671.html",
+            "label": "is platemaker of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50176",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/platemakerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24965.html",
+            "label": "is platemaker of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60643",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/platemakerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15233.html",
         "label": "is platemaker of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/m/P30075",
-        "lexicalAlias": "http://rdaregistry.info/Elements/m/platemaker.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14464.html",
-        "label": "has platemaker"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is platemaker of",
-        "fr": "est le graveur de planches de"
+        "fr": "est un graveur de planches de",
+        "el": "είναι κατασκευαστής εκτυπωτικής πλάκας του",
+        "da": "er plademager af",
+        "ca": "és gravador de planxes de",
+        "fi": "valmistajana painolaatassa",
+        "de": "ist Druckformhersteller von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/platemakerOf.en",
     "name": {
-        "en": "platemakerOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "en": "platemakerOf",
+        "el": "κατασκευαστήςΕκτυπωτικήςΠλάκαςΤου",
+        "da": "plademagerAf",
+        "fi": "valmistajanaPainolaatassa",
+        "fr": "graveurDePlanchesDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité prenant part à la fabrication d’une manifestation en préparant les planches utilisées dans la production d’images et/ou de textes imprimés."
+        "fr": "Manifestation fabriquée par un agent responsable de préparer les planches utilisées dans la production d’images ou de textes imprimés.",
+        "en": "A manifestation manufactured by an agent responsible for preparing plates used in the production of printed images or text.",
+        "el": "Μια εκδήλωση που κατασκευάζεται από έναν φορέα υπεύθυνο για την προετοιμασία των πλακών που χρησιμοποιούνται για την παραγωγή έντυπων εικόνων ή κειμένων.",
+        "de": "Eine Manifestation, bei der ein Akteur an der Herstellung beteiligt ist, indem er Druckformen für die Produktion von gedruckten Bildern und/oder Text anfertigt.",
+        "da": "Manifestation, der er fremstillet af en agent, der er ansvarlig for at lave plader, der anvendes i fremstilling af trykte billeder og/eller tekst.",
+        "ca": "Manifestació fabricada per un agent responsable de preparar les planxes usades en la producció d’imatges o de text imprès.",
+        "fi": "Manifestaatio, jonka valmistamiseen toimija on osallistunut valmistamalla painettujen kuvien ja/tai tekstin valmistuksessa käytettäviä painolaattoja.",
+        "no": "En manifestasjon fremstilt av en agent med ansvar for å klargjøre trykkplater som brukes ved produksjon av trykte bilder og/eller tekst."
     },
     "ToolkitLabel": {
-        "fr": "graveur de planches de"
+        "fr": "graveur de planches de",
+        "en": "platemaker of",
+        "el": "κατασκευαστής εκτυπωτικής πλάκας του",
+        "de": "Druckformhersteller von",
+        "da": "plademager af",
+        "ca": "gravador de planxes de",
+        "fi": "valmistajana painolaatassa",
+        "no": "trykkplatemaker for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14041.html"
 }

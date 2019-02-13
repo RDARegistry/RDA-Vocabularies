@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a performer contributing to an expression of a work by using his/her/their voice, with or without instrumental accompaniment, to produce music to the expression."
+            "Relates a performer contributing to an expression of a work by using his/her/their voice, with or without instrumental accompaniment, to produce music to an expression."
         ],
         "fr": [
-            "Met un interprète contribuant à une expression d’une œuvre en utilisant sa voix, avec ou sans accompagnement instrumental, pour produire de la musique en relation avec l’expression."
+            "Met un interprète qui contribue à une expression d’une œuvre en utilisant sa voix, avec ou sans accompagnement instrumental, pour produire de la musique en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν εκτελεστή, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου χρησιμοποιώντας τη φωνή του/της/των με ή χωρίς συνοδεία, για την παραγωγή μουσικής, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Ausführenden, der an einer Expression eines Werks mitwirkt, indem er durch seine Singstimme mit oder ohne instrumentale Begleitung Musik erzeugt, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en udøver der bidrager til et udtryk af et værk ved at bruge sin stemme, med eller uden instrumentalledsagelse, til at skabe musik til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un intèrpret, que contribueix a una expressió d’una obra usant la seva veu, amb o sense acompanyament instrumental, per produir música, amb una expressió."
+        ],
+        "fi": [
+            "Liittää laulajan teoksen ekspressioon, joka sisältää lauluesityksen, joko soitinsäestyksellä tai ilman."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50084",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/singerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24873.html",
+            "label": "is singer of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50084",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/singerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24602.html",
+            "label": "is singer of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60031",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/singerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14633.html",
         "label": "is singer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20025",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/singer.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14116.html",
-        "label": "has singer"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,25 +59,40 @@
     },
     "label": {
         "en": "is singer of",
-        "fr": "est le chanteur de"
+        "fr": "est un chanteur de",
+        "el": "είναι τραγουδιστής του",
+        "da": "er sanger i",
+        "ca": "és cantant de",
+        "fi": "laulu",
+        "de": "ist Sänger von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/singerOf.en",
     "name": {
-        "en": "singerOf"
+        "en": "singerOf",
+        "el": "τραγουδιστήςΤου",
+        "da": "sangerI",
+        "fi": "laulu",
+        "fr": "chanteurDe"
     },
     "note": {
         "en": [
             "A singer's performance may or may not include actual words."
         ],
         "fr": [
-            "La prestation d’un chanteur peut inclure ou non des paroles."
+            "Une prestation d’un chanteur peut inclure ou non des paroles."
+        ],
+        "el": [
+            "Η ερμηνεία ενός τραγουδιστή μπορεί να περιλαμβάνει ή όχι, πραγματικές λέξεις."
+        ],
+        "de": [
+            "Die Darbietung eines Sängers kann richtige Worte enthalten oder nicht."
+        ],
+        "da": [
+            "En sangers optræden kan omfatte egentlige ord, men gør det ikke nødvendigvis."
+        ],
+        "fi": [
+            "Laulajan esitys voi olla myös sanaton."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -70,10 +109,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Interprète contribuant à une expression d’une œuvre en utilisant sa voix, avec ou sans accompagnement instrumental, pour produire de la musique."
+        "fr": "Expression d’une œuvre qui intègre une prestation consistant à utiliser sa voix, avec ou sans accompagnement instrumental, pour produire de la musique.",
+        "en": "An expression of a work that incorporates a performance of using his/her/their voice, with or without instrumental accompaniment, to produce music.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά της χρήσης της φωνής του/της/των, με ή χωρίς συνοδεία μουσικών οργάνων για την παραγωγή μουσικής.",
+        "de": "Eine Expression eines Werks, bei der jemand durch seine Singstimme mit oder ohne instrumentale Begleitung Musik erzeugt.",
+        "da": "Udtryk af et værk der inkorporerer en optræden ved at bruge sin stemme, med eller uden instrumentalledsagelse, til at skabe musik.",
+        "ca": "Expressió d’una obra que incorpora una interpretació que usa la seva veu, amb o sense acompanyament instrumental, per produir música.",
+        "fi": "Teoksen ekspressio, joka sisältää lauluesityksen, joko soitinsäestyksellä tai ilman.",
+        "no": "Et uttrykk av et verk som omfatter et bidrag der en sanger bruker stemmen sin, med eller uten akkompagnement fra instrumenter, til å lage musikk."
     },
     "ToolkitLabel": {
-        "fr": "chanteur de"
+        "fr": "chanteur de",
+        "en": "singer of",
+        "el": "τραγουδιστής του",
+        "de": "Sänger von",
+        "da": "sanger i",
+        "ca": "cantant de",
+        "fi": "laulu",
+        "no": "sanger av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13949.html"
 }

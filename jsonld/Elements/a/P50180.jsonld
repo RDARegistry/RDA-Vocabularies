@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body mentioned in an &quot;X presents&quot; credit for moving image materials and who is probably associated with production, finance, or distribution in some way to the expression."
+            "Relates an agent mentioned in an &quot;X presents:&quot; credit for moving image materials and who is probably associated with production, finance, or distribution in some way to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité mentionnée dans un générique d’images animées sous la forme « X présente » et qui est probablement associée d’une façon quelconque à la production, au financement ou à la distribution en relation avec l’expression."
+            "Met un agent mentionné dans un générique d’images animées sous la forme « X présente » et qui est probablement associé d’une façon quelconque à la production, au financement ou à la distribution en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος αναφέρεται σε ένα &quot;X presents:&quot; παρέχει αναγνώριση για υλικό κινητής εικόνας και για το ποιος πιθανόν συνδέεται με κάποιον τρόπο με την παραγωγή, τη χρηματοδότηση ή τη διανομή, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der in einem \"X präsentiert\"-Vorspann für Filmmaterialien erwähnt wird und der wahrscheinlich mit Produktion, Finanzierung oder Vertrieb in Verbindung steht, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der er nævnt i en fortekst i levende billedmaterialer som ”præsenterer”-tekst, og som sandsynligvis er knyttet til produktion, finansiering eller distribution på en eller anden måde til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, mencionat en els crèdits de materials d’imatges en moviment en una forma \"X presenta\" i que probablement està associat d’alguna manera amb la producció, el finançament o la distribució, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan ekspressioon, jonka toteuttamiseen osallistunut toimija mainitaan elokuvan tms. alku- tai lopputeksteissä. Toimija todennäköisesti on vastuussa tuotannosta, rahoituksesta tai jakelusta."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50180",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/presenterOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24675.html",
+            "label": "is presenter of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50180",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/presenterOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24969.html",
+            "label": "is presenter of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60647",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/presenterOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15237.html",
         "label": "is presenter of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20054",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/presenter.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14145.html",
-        "label": "has presenter"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is presenter of",
-        "fr": "est le présentateur de"
+        "fr": "est un présentateur de",
+        "el": "είναι παρουσιαστής του",
+        "da": "er præsentator i",
+        "ca": "és presentador de",
+        "fi": "esittämisestä vastaavana elokuvassaproduktiossa",
+        "de": "ist Präsentator von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/presenterOf.en",
     "name": {
-        "en": "presenterOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "presenterOf",
+        "el": "παρουσιαστήςΤου",
+        "da": "præsentatorI",
+        "fi": "esittamisestaVastaavanaElokuvassaproduktiossa",
+        "fr": "présentateurDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité mentionnée dans un générique d’images animées sous la forme « X présente » et qui est probablement associée d’une façon quelconque à la production, au financement ou à la distribution."
+        "fr": "Expression d’une manifestation d’images animées dont le générique mentionne, sous la forme « X présente », un agent qui est probablement associé d’une façon quelconque à la production, au financement ou à la distribution.",
+        "en": "A manifestation for moving image materials with an &quot;X presents:&quot; credit for an agent who is probably associated with production, finance, or distribution in some way.",
+        "el": "Μια εκδήλωση για υλικό κινητής εικόνας που αναφέρεται σε ένα &quot;X presents:&quot; παρέχει αναγνώριση για έναν φορέα, ο οποίος πιθανόν να συνδέεται με κάποιον τρόπο με την παραγωγή, τη χρηματοδότηση ή τη διανομή.",
+        "de": "Eine Manifestation, bei der ein Akteur in einem \"X präsentiert\"-Vorspann für Filmmaterialien erwähnt wird und der wahrscheinlich mit Produktion, Finanzierung oder Vertrieb in Verbindung steht.",
+        "da": "Manifestation for levende billedmaterialer med en \"præsenterer\"-tekst for en agent, der sandsynligvis er knyttet til produktion, finansiering eller distribution på en eller anden måde.",
+        "ca": "Manifestació de materials d’imatges en moviment en una forma \"X presenta\"; els crèdits d’un agent que probablement està associat d’alguna manera amb la producció, el finançament o la distribució.",
+        "fi": "Ekspressio, jonka toteuttamiseen osallistunut toimija mainitaan elokuvan tms. alku- tai lopputeksteissä. Toimija todennäköisesti on vastuussa tuotannosta, rahoituksesta tai jakelusta.",
+        "no": "En manifestasjon for materiale i form av levende bilder der en agent er nevnt i rollen \"X presenterer\" og sannsynligvis er involvert i produksjon, finansiering eller distribusjon av materialet."
     },
     "ToolkitLabel": {
-        "fr": "présentateur de"
+        "fr": "présentateur de",
+        "en": "presenter of",
+        "el": "παρουσιαστής του",
+        "de": "Präsentator von",
+        "da": "præsenterer i",
+        "ca": "presentador de",
+        "fi": "esittämisestä vastaavana elokuvassaproduktiossa",
+        "no": "programleder for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14045.html"
 }

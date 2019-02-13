@@ -4,17 +4,35 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a person, family, or corporate body responsible for publishing, releasing, or issuing a resource."
+            "Relates a manifestation to an agent responsible for publishing, releasing, or issuing a manifestation."
         ],
         "fr": [
-            "Met une manifestation en relation avec une personne, famille ou collectivité responsable de la publication, de la mise à disposition ou de l’édition d’une ressource."
+            "Met une manifestation en relation avec un agent responsable de la publication, de la mise à disposition ou de l’édition d’une manifestation."
+        ],
+        "vi": [
+            "Liên kết biểu thị với tác nhân có trách nhiệm xuất bản, đăng tải, hoặc công bố biểu thị."
+        ],
+        "da": [
+            "Relaterer en manifestation til en agent, der er ansvarlig for at publicere, offentliggøre eller udgive en manifestation."
+        ],
+        "de": [
+            "Setzt eine Manifestation mit einem Akteur, der für das Veröffentlichen, die Freigabe oder die Herausgabe einer Manifestation verantwortlich ist, in Beziehung."
+        ],
+        "ca": [
+            "Relaciona una manifestació amb un agent responsable de la publicació, la posada en circulació o l’emissió d’una manifestació."
+        ],
+        "fi": [
+            "Liittää manifestaation toimijaan, joka on vastuussa aineiston kustantamisesta, julkaisemisesta tai ilmestymisestä."
+        ],
+        "el": [
+            "Συνδέει μια εκδήλωση με έναν φορέα υπεύθυνο για τη δημοσίευση, την κυκλοφορία ή την έκδοση μιας εκδήλωσης."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10007",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "label": "manifestation"
     },
     "hasSubproperty": [
         {
@@ -22,6 +40,12 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/m/broadcaster.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14456.html",
             "label": "has broadcaster"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/m/object/P30083",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/object/publisher.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24235.html",
+            "label": "has publisher"
         }
     ],
     "hasUnconstrained": {
@@ -30,13 +54,7 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15037.html",
         "label": "has publisher"
     },
-    "instructionNumber": "21/03/2016",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50203",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/publisherOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14068.html",
-        "label": "is publisher of"
-    },
+    "instructionNumber": "21.3",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -44,17 +62,23 @@
     },
     "label": {
         "en": "has publisher",
-        "fr": "a pour éditeur"
+        "fr": "a pour éditeur",
+        "sv": "har utgivare",
+        "vi": "có nhà xuất bản",
+        "da": "har udgiver",
+        "de": "hat Verlag",
+        "ca": "té com a editor",
+        "fi": "kustantaja",
+        "el": "έχει εκδότη"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/publisher.en",
     "name": {
-        "en": "publisher"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "en": "publisher",
+        "vi": "nhàXuấtBản",
+        "da": "udgiver",
+        "fi": "kustantaja",
+        "el": "εκδότης",
+        "fr": "éditeur"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,15 +86,40 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/m/P30267",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/relatedAgentManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25247.html",
+            "label": "has related agent (manifestation)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body responsible for publishing, releasing, or issuing a resource.",
-        "fr": "Personne, famille ou collectivité responsable de la publication, de la mise à disposition ou de l’édition d’une ressource.",
-        "es": "Una persona, familia o entidad corporativa responsable de la publicación, lanzamiento o publicación de un recurso."
+        "en": "An agent responsible for publishing, releasing, or issuing a manifestation.",
+        "fr": "Agent responsable de la publication, de la mise à disposition ou de l’édition d’une manifestation.",
+        "es": "Una persona, familia o entidad corporativa responsable de la publicación, lanzamiento o publicación de un recurso.",
+        "nl": "Een persoon, familie of corporatie die verantwoordelijk is voor het uitgeven, uitbrengen of uitvaardigen van een resource.",
+        "vi": "Tác nhân có trách nhiệm xuất bản, đăng tải, hoặc công bố biểu thị.",
+        "da": "Agent, der er ansvarlig for at publicere, offentliggøre eller udgive en manifestation.",
+        "de": "Ein Akteur, der für das Veröffentlichen, die Freigabe oder die Herausgabe einer Manifestation verantwortlich ist.",
+        "ca": "Agent responsable de la publicació, la posada en circulació o l’emissió d’una manifestació.",
+        "fi": "Toimija, joka on vastuussa aineiston kustantamisesta, julkaisemisesta tai ilmestymisestä.",
+        "no": "En agent med ansvar for å publisere, tilgjengeliggjøre eller utgi en manifestasjon.",
+        "el": "Ένας φορέας υπεύθυνος για τη δημοσίευση, την κυκλοφορία ή την έκδοση μιας εκδήλωσης."
     },
     "ToolkitLabel": {
         "en": "publisher",
         "fr": "éditeur",
-        "es": "editor"
+        "es": "editor",
+        "sv": "utgivare",
+        "nl": "uitgever",
+        "vi": "nhà xuất bản",
+        "da": "udgiver",
+        "de": "Verlag",
+        "ca": "editor",
+        "fi": "kustantaja",
+        "no": "utgiver",
+        "el": "εκδότης"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14472.html"
 }

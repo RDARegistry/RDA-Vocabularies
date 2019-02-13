@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a director responsible for the general management and supervision of a radio program to the work."
+            "Relates a director responsible for the general management and supervision of a radio program to a work."
         ],
         "fr": [
-            "Met un réalisateur responsable de la gestion et de la supervision générales d’une émission de radio en relation avec l’œuvre."
+            "Met un réalisateur responsable de la gestion et de la supervision générales d’une émission de radio en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν διευθυντή υπεύθυνο για τη γενική διεύθυνση και εποπτεία ενός ραδιοφωνικού προγράμματος, με ένα έργο."
+        ],
+        "de": [
+            "Setzt einen Regisseur, der für das allgemeine Management und die Leitung einer Radiosendung verantwortlich ist, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en instruktør der er ansvarlig for ledelse og tilsyn med et radioprogram til et værk."
+        ],
+        "ca": [
+            "Relaciona un realitzador, responsable de la gestió general i la supervisió d’un programa radiofònic, amb una obra."
+        ],
+        "fi": [
+            "Liittää ohjaajan radio-ohjelmaan, johon sisältyy vastuu radio-ohjelman yleisestä johtamisesta ja valvonnasta."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50049",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/radioDirectorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24577.html",
+            "label": "is radio director of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50049",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/radioDirectorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24838.html",
+            "label": "is radio director of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60010",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/radioDirectorOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14612.html",
         "label": "is radio director of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10014",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/radioDirector.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15317.html",
-        "label": "has radio director"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is radio director of",
-        "fr": "est le réalisateur d’émissions de radio de"
+        "fr": "est un réalisateur de radio de",
+        "el": "είναι διευθυντής ραδιοφωνικού προγράμματος",
+        "da": "er radioinstruktør af",
+        "ca": "és realitzador radiofònic de",
+        "fi": "radio-ohjelma",
+        "de": "ist Hörfunkregisseur von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/radioDirectorOf.en",
     "name": {
-        "en": "radioDirectorOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "radioDirectorOf",
+        "el": "διευθυντήςΡαδιοφωνικούΠρογράμματος",
+        "da": "radioinstruktørAf",
+        "fi": "radioOhjelma",
+        "fr": "réalisateurDeRadioDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Réalisateur responsable de la gestion et de la supervision générales d’une émission de radio."
+        "fr": "Œuvre qui comporte une responsabilité consistant à assurer la gestion et la supervision générales d’une émission de radio.",
+        "en": "A work that involves a responsibility for the general management and supervision of a radio program.",
+        "el": "Ένα έργο το οποίο περιλαμβάνει την ευθύνη για τη γενική διαχείριση και εποπτεία ενός ραδιοφωνικού προγράμματος.",
+        "de": "Ein Werk, bei dem ein Akteur für das allgemeine Management und die Leitung einer Radiosendung verantwortlich ist.",
+        "da": "Værk der involverer et ansvar for ledelse og tilsyn med et radioprogram.",
+        "ca": "Obra que involucra una responsabilitat de la gestió general i la supervisió d’un programa radiofònic.",
+        "fi": "Teos, johon sisältyy vastuu radio-ohjelman yleisestä johtamisesta ja valvonnasta.",
+        "no": "Et verk som involverer ansvar for generell ledelse av et radioprogram."
     },
     "ToolkitLabel": {
-        "fr": "réalisateur d’émissions de radio de"
+        "fr": "réalisateur de radio de",
+        "en": "radio director of",
+        "el": "διευθυντής ραδιοφωνικού προγράμματος του",
+        "de": "Hörfunkregisseur von",
+        "da": "radioinstruktør af",
+        "ca": "realitzador radiofònic de",
+        "fi": "radio-ohjelma",
+        "no": "radioregissør for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13914.html"
 }

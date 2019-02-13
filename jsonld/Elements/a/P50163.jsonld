@@ -4,17 +4,32 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body formerly having legal possession of an item to the item."
+            "Relates an agent formerly having legal possession of an item to an item."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité ayant auparavant possédé légalement un item en relation avec l’item."
+            "Met un agent qui a auparavant possédé légalement un item en relation avec un item."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος είχε προηγούμενα τη νόμιμη κατοχή ενός αντιτύπου, με ένα αντίτυπο."
+        ],
+        "de": [
+            "Setzt einen Akteur, der früher rechtmäßiger Besitzer eines Exemplars war, mit einem Exemplar in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der tidligere har været i lovligbesiddelse af et eksemplar til et eksemplar."
+        ],
+        "ca": [
+            "Relaciona un agent, que anteriorment posseïa legalment un ítem, amb un ítem."
+        ],
+        "fi": [
+            "Liittää toimijan kappaleeseen, joka aiemmin on laillisesti ollut toimijan omistuksessa."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
     "hasSubproperty": [
         {
@@ -28,6 +43,18 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/a/sellerOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/13932.html",
             "label": "is seller of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50163",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/formerOwnerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24658.html",
+            "label": "is former owner of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50163",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/formerOwnerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24952.html",
+            "label": "is former owner of"
         }
     ],
     "hasUnconstrained": {
@@ -36,12 +63,7 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15220.html",
         "label": "is former owner of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/i/P40019",
-        "lexicalAlias": "http://rdaregistry.info/Elements/i/formerOwner.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14354.html",
-        "label": "has former owner"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -49,17 +71,20 @@
     },
     "label": {
         "en": "is former owner of",
-        "fr": "est l’ancien propriétaire de"
+        "fr": "est un ancien propriétaire de",
+        "el": "είναι προηγούμενος ιδιοκτήτης του",
+        "da": "er tidligere ejer af",
+        "ca": "és propietari anterior de",
+        "fi": "aiempana omistajana kappaleelle",
+        "de": "ist früherer Eigentümer von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/formerOwnerOf.en",
     "name": {
-        "en": "formerOwnerOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10003",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "en": "formerOwnerOf",
+        "el": "προηγούμενοςΙδιοκτήτηςΤου",
+        "da": "tidligereEjerAf",
+        "fi": "aiempanaOmistajanaKappaleelle",
+        "fr": "ancienPropriétaireDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -76,10 +101,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité ayant auparavant possédé légalement un item."
+        "fr": "Item auparavant possédé légalement par un agent.",
+        "en": "An item formerly in the legal possession of an agent.",
+        "el": "Ένα αντίτυπο το οποίο προηγούμενα βρισκόταν υπό τη νόμιμη κατοχή ενός φορέα.",
+        "de": "Ein Exemplar, das früher im rechtmäßigen Besitz eines Akteurs war.",
+        "da": "Eksemplar, der tidligere var i lovlig besiddelse af en agent.",
+        "ca": "Ítem que anteriorment posseïa legalment un agent.",
+        "fi": "Kappale, joka aiemmin on laillisesti ollut toimijan omistuksessa.",
+        "no": "Et eksemplar som tidligere var en agents rettmessige eiendom."
     },
     "ToolkitLabel": {
-        "fr": "ancien propriétaire de"
+        "fr": "ancien propriétaire de",
+        "en": "former owner of",
+        "el": "προηγούμενος ιδιοκτήτης του",
+        "de": "Früherer Eigentümer von",
+        "da": "tidligere ejer af",
+        "ca": "propietari anterior de",
+        "fi": "aiempana omistajana kappaleelle",
+        "no": "tidligere eier av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14028.html"
 }

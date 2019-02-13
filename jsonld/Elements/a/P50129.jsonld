@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person whose manuscript signature appears on an item to the item."
+            "Relates a person whose manuscript signature appears on an item to an item."
         ],
         "fr": [
-            "Met une personne dont la signature manuscrite figure sur un item en relation avec l’item."
+            "Met une personne dont la signature manuscrite figure sur un item en relation avec un item."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο, του οποίου η χειρόγραφη υπογραφή υπάρχει σε ένα αντίτυπο, με ένα αντίτυπο."
+        ],
+        "de": [
+            "Setzt eine Person, deren handschriftliche Unterschrift auf einem Exemplar steht, mit einem Exemplar in Beziehung."
+        ],
+        "da": [
+            "Relaterer en person hvis håndskrivne signatur forekommer på et eksemplar til et eksemplar"
+        ],
+        "ca": [
+            "Relaciona una persona, la signatura autògrafa de la qual figura en un ítem, amb un ítem."
+        ],
+        "fi": [
+            "Liittää henkilön kappaleeseen, jossa on käsinkirjoitettu nimikirjoitus."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10004",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
-        "label": "Person"
+        "label": "person"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50129",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/autographerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24624.html",
+            "label": "is autographer of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50129",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/autographerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24918.html",
+            "label": "is autographer of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60702",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/autographerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15291.html",
         "label": "is autographer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/i/P40016",
-        "lexicalAlias": "http://rdaregistry.info/Elements/i/autographer.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14351.html",
-        "label": "has autographer"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is autographer of",
-        "fr": "est le signataire autographe de"
+        "fr": "est un signataire autographe de",
+        "el": "είναι χειρόγραφη υπογραφή του",
+        "da": "er autografskriver i",
+        "ca": "és signatari d’un autògraf de",
+        "fi": "nimikirjoituksen kirjoittajana kappaleessa",
+        "de": "ist Unterzeichner von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/autographerOf.en",
     "name": {
-        "en": "autographerOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10003",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "en": "autographerOf",
+        "el": "χειρόγραφηΥπογραφήΤου",
+        "da": "autografskriverI",
+        "fi": "nimikirjoituksenKirjoittajanaKappaleessa",
+        "fr": "signataireAutographeDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -56,16 +83,30 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/a/P50182",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherPFCItemOf.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentItemOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14047.html",
-            "label": "is other person, family, or corporate body associated with an item of"
+            "label": "is other agent associated with item of"
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne dont la signature manuscrite figure sur un item."
+        "fr": "Item sur lequel figure une signature manuscrite.",
+        "en": "An item with a manuscript signature appearing on it.",
+        "el": "Ένα αντίτυπο στο οποίο εμφανίζεται μια χειρόγραφη υπογραφή.",
+        "de": "Ein Exemplar mit einer handschriftlichen Unterschrift.",
+        "da": "Eksemplar med en håndskreven signatur.",
+        "ca": "Ítem amb una signatura manuscrita que figura en ell.",
+        "fi": "Kappale, jossa on käsinkirjoitettu nimikirjoitus.",
+        "no": "Et eksemplar som har en håndskrevet signatur."
     },
     "ToolkitLabel": {
-        "fr": "signataire autographe de"
+        "fr": "signataire autographe de",
+        "en": "autographer of",
+        "el": "χειρόγραφη υπογραφή του",
+        "de": "Unterzeichner von",
+        "da": "autografskriver i",
+        "ca": "signatari d’un autògraf de",
+        "fi": "nimikirjoituksen kirjoittajana kappaleessa",
+        "no": "person som har skrevet autograf i/på"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13994.html"
 }

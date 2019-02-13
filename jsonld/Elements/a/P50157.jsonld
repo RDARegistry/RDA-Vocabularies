@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a work by shortening or condensing the original work but leaving the nature and content of the original work substantially unchanged to the expression."
+            "Relates an agent contributing to an expression of a work by shortening or condensing the original work but leaving the nature and content substantially unchanged to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en abrégeant ou en condensant l’œuvre originale tout en conservant la nature et le contenu de l’œuvre originale sensiblement inchangés en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre en abrégeant ou en condensant l’œuvre originale tout en conservant la nature et le contenu sensiblement inchangés en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου μέσω της σύντμησης ή συρρίκνωσης του πρωτότυπου έργου, αφήνοντας ωστόσο ουσιαστικά αμετάβλητα τη φύση και το περιεχόμενό του, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der zu einer Expression eines Werks dadurch beiträgt, dass er das Originalwerk kürzt oder zusammenfasst, dabei aber die Art und den Inhalt des Originalwerks im Wesentlichen unverändert lässt, mit einem Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har bidraget til et udtryk af et værk ved at forkorte eller komprimere det oprindelige værk, men som i alt væsentligt har ladt det oprindelige værks karakter og indhold være uændret til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix amb una expressió d’una obra escurçant o condensant l’obra original, però deixant la natura i el contingut sense canvis substancials, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan teoksen ekspressioon, joka on syntynyt lyhentämällä tai tiivistämällä alkuperäistä teosta niin, että teoksen sisältö ja luonne eivät olennaisesti muutu."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50157",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/abridgerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24652.html",
+            "label": "is abridger of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50157",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/abridgerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24946.html",
+            "label": "is abridger of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60622",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/abridgerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15212.html",
         "label": "is abridger of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20049",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/abridger.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14140.html",
-        "label": "has abridger"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,18 +59,29 @@
     },
     "label": {
         "en": "is abridger of",
-        "fr": "est l’abréviateur de"
+        "fr": "est un abréviateur de",
+        "el": "είναι συντμητής του",
+        "da": "er forkorter af",
+        "ca": "és abreujador de",
+        "fi": "lyhentäjänä aineistossa (ekspressio)",
+        "de": "ist Kürzender von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/abridgerOf.en",
     "name": {
-        "en": "abridgerOf"
+        "en": "abridgerOf",
+        "el": "συντμητήςΤου",
+        "da": "forkorterAf",
+        "fi": "lyhentajanaAineistossaEkspressio",
+        "fr": "abréviateurDe"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
-    },
+    "See Also": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/P50195",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/authorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/14060.html",
+            "label": "is author of"
+        }
+    ],
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
         "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
@@ -62,10 +97,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en abrégeant ou en condensant l’œuvre originale tout en conservant la nature et le contenu de l’œuvre originale sensiblement inchangés."
+        "fr": "Expression d’une œuvre qui intègre une contribution consistant à abréger ou à condenser l’œuvre originale tout en conservant la nature et le contenu sensiblement inchangés.",
+        "en": "An expression of a work that incorporates a contribution of shortening or condensing the original work but leaving the nature and content substantially unchanged.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά της σύντμησης ή της συρρίκνωσης του πρωτότυπου έργου, αφήνοντας ωστόσο αμετάβλητα τη φύση και το περιεχόμενό του.",
+        "de": "Eine Expression eines Werks, bei der ein Akteur das Originalwerk kürzt oder zusammenfasst, dabei aber die Art und den Inhalt des Originalwerks im Wesentlichen unverändert lässt.",
+        "da": "Udtryk af et værk der inkorporerer et bidrag ved at forkorte eller komprimere det oprindelige værk, men som i alt væsentligt har ladt det oprindelige værks karakter og indhold være uændret.",
+        "ca": "Expressió d’una obra que incorpora una contribució que escurça o condensa l’obra original, però deixant la natura i el contingut sense canvis substancials.",
+        "fi": "Teoksen ekspressio, joka on syntynyt lyhentämällä tai tiivistämällä alkuperäistä teosta niin, että teoksen sisältö ja luonne eivät olennaisesti muutu.",
+        "no": "Et uttrykk av et verk som omfatter et bidrag i form av forkortelse av originalverket som lar særpreg og innhold forbli hovedsakelig uendret."
     },
     "ToolkitLabel": {
-        "fr": "abréviateur de"
+        "fr": "abréviateur de",
+        "en": "abridger of",
+        "el": "συντμητής του",
+        "de": "Kürzender von",
+        "da": "forkorter af",
+        "ca": "abreujador de",
+        "fi": "lyhentäjänä aineistossa (ekspressio)",
+        "no": "forkorter av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14022.html"
 }

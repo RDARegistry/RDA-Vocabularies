@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body who brings a suit in a civil proceeding to the work."
+            "Relates a corporate body who brings a suit in a civil proceeding to a work."
         ],
         "fr": [
-            "Met une collectivité qui intente une poursuite civile en relation avec l’œuvre."
+            "Met une collectivité qui intente une poursuite civile en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο, το οποίο ασκεί αγωγή στο πλαίσιο αστικής διαδικασίας, με ένα έργο."
+        ],
+        "de": [
+            "Setzt eine Körperschaft, die eine Klage in ein Zivilverfahren einbringt, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation der anlægger en civil sag til et værk."
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa, que interposa una demanda civil, amb una obra."
+        ],
+        "fi": [
+            "Liittää yhteisön kanteeseen, jonka yhteisö on tuonut siviilioikeuteen."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50043",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/plaintiffCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24571.html",
+            "label": "is plaintiff corporate body of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50043",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/plaintiffCorporateBodyOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24832.html",
+            "label": "is plaintiff corporate body of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60693",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/plaintiffOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15282.html",
         "label": "is plaintiff of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10010",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/plaintiffCorporateBody.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15313.html",
-        "label": "has plaintiff corporate body"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is plaintiff corporate body of",
-        "fr": "est la collectivité demanderesse de"
+        "fr": "est une collectivité demanderesse de",
+        "el": "είναι ενάγον συλλογικό όργανο του",
+        "da": "er sagsøgende korporation af",
+        "ca": "és entitat corporativa demandant de",
+        "fi": "yhteisön antama haaste",
+        "de": "ist Zivilklagende Körperschaft von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/plaintiffCorporateBodyOf.en",
     "name": {
-        "en": "plaintiffCorporateBodyOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "plaintiffCorporateBodyOf",
+        "el": "ενάγονΣυλλογικόΌργανοΤου",
+        "da": "sagsøgendeKorporationAf",
+        "fi": "yhteisonAntamaHaaste",
+        "fr": "collectivitéDemanderesseDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Collectivité qui intente une poursuite civile."
+        "fr": "Œuvre qui comporte une responsabilité consistant à être une collectivité qui intente une poursuite civile.",
+        "en": "A work that involves a responsibility for bringing a suit in a civil proceeding by a corporate body.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη για την άσκηση αγωγής αστικού δικαίου από ένα συλλογικό όργανο.",
+        "de": "Ein Werk, bei der eine Körperschaft eine Klage in ein Zivilverfahren einbringt.",
+        "da": "Værk der involverer et ansvar for at anlægge en civil sag hos en korporation.",
+        "ca": "Obra que involucra una responsabilitat d’interposar una demanda civil per una entitat corporativa.",
+        "fi": "Kanne, jonka yhteisö on tuonut siviilioikeuteen.",
+        "no": "Et verk som involverer ansvar for å være en korporasjon som er saksøker i en sivilrettslig sak."
     },
     "ToolkitLabel": {
-        "fr": "collectivité demanderesse de"
+        "fr": "collectivité demanderesse de",
+        "en": "plaintiff corporate body of",
+        "el": "ενάγον συλλογικό όργανο του",
+        "de": "Zivilklagende Körperschaft von",
+        "da": "sagsøgende korporation af",
+        "ca": "entitat corporativa demandant de",
+        "fi": "yhteisön tekemä kanne",
+        "no": "saksøker - korporasjon for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13908.html"
 }

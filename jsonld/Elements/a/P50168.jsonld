@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body involved in broadcasting a manifestation to an audience via radio, television, webcast, etc to the manifestation."
+            "Relates an agent involved in broadcasting a manifestation to an audience via radio, television, webcast, etc. to a manifestation."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité prenant part à la diffusion d’une manifestation à un public par la radio, la télévision, la webdiffusion, etc. en relation avec la manifestation."
+            "Met un agent qui prend part à la diffusion d’une manifestation à un public par la radio, la télévision, la webdiffusion, etc. en relation avec une manifestation."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος εμπλέκεται στην εκπομπή μιας εκδήλωσης προς ένα ακροατήριο μέσω ραδιοφώνου, τηλεόρασης, web εκπομπής κ.λπ., με μια εκδήλωση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der für die Ausstrahlung einer Manifestation über Hörfunk, Fernsehen oder Webcast usw. verantwortlich ist, mit einer Manifestation in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har været involveret i transmission af en manifestation til et publikum via radio, tv, webcast etc til en manifestation."
+        ],
+        "ca": [
+            "Relaciona un agent, involucrat en la difusió d’una manifestació a uns destinataris mitjançant la ràdio, la televisió o la difusió per mitjà del web, etc., amb una manifestació."
+        ],
+        "fi": [
+            "Liittää toimijan manifestaatio, joka lähetetään yleisölle radiossa, televisiossa, suoratoistolähetyksenä tms."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50168",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/broadcasterOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24663.html",
+            "label": "is broadcaster of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50168",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/broadcasterOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24957.html",
+            "label": "is broadcaster of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60635",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/broadcasterOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15225.html",
         "label": "is broadcaster of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/m/P30067",
-        "lexicalAlias": "http://rdaregistry.info/Elements/m/broadcaster.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14456.html",
-        "label": "has broadcaster"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is broadcaster of",
-        "fr": "est le diffuseur de"
+        "fr": "est un diffuseur audiovisuel de",
+        "el": "είναι εκφωνητής του",
+        "da": "er broadcaster af",
+        "ca": "és entitat de difusió de",
+        "fi": "vastaavana lähetyksessä",
+        "de": "ist Sender von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/broadcasterOf.en",
     "name": {
-        "en": "broadcasterOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "en": "broadcasterOf",
+        "el": "εκφωνητήςΤου",
+        "da": "broadcasterAf",
+        "fi": "vastaavanaLahetyksessa",
+        "fr": "diffuseurAudiovisuelDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité prenant part à la diffusion d’une manifestation à un public par la radio, la télévision, la webdiffusion, etc."
+        "fr": "Manifestation diffusée à un public par la radio, la télévision, la webdiffusion, etc.",
+        "en": "A manifestation that is broadcast to an audience via radio, television, webcast, etc.",
+        "el": "Μια εκδήλωση που εκπέμπεται προς ένα ακροατήριο μέσω ραδιοφώνου, τηλεόρασης, web εκπομπής κ.λπ. .",
+        "de": "Eine Manifestation, die über Hörfunk, Fernsehen oder Webcast usw. ausgestrahlt wird.",
+        "da": "Manifestation der transmitteres til et publikum via radio, tv, webcast, etc.",
+        "ca": "Manifestació que es difon a una audiència mitjançant la ràdio, la televisió o la difusió per mitjà del web, etc.",
+        "fi": "Manifestaatio, joka lähetetään yleisölle radiossa, televisiossa, suoratoistolähetyksenä tms.",
+        "no": "En manifestasjon som kringkastes til et publikum via radio, fjernsyn, webcast, etc."
     },
     "ToolkitLabel": {
-        "fr": "diffuseur de"
+        "fr": "diffuseur audiovisuel de",
+        "en": "broadcaster of",
+        "el": "εκφωνητής του",
+        "de": "Sender von",
+        "da": "broadcaster af",
+        "ca": "entitat de difusió de",
+        "fi": "vastaavana lähetyksessä",
+        "no": "kringkaster av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14033.html"
 }

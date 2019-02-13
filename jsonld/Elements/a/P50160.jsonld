@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a work by using a recording device to capture sound and/or video during a recording session, including field recordings of natural sounds, folkloric events, music, etc to the expression."
+            "Relates an agent contributing to an expression of a work by using a recording device to capture sound and/or video during a recording session, including field recordings of natural sounds, folkloric events, music, etc. to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en utilisant un appareil d’enregistrement pour capter le son et/ou la vidéo durant une séance d’enregistrement, y compris les enregistrements de terrain de sons naturels, de prestations folkloriques, de musique, etc., en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre en utilisant un appareil d’enregistrement pour capter le son et/ou la vidéo durant une séance d’enregistrement, y compris les enregistrements de terrain de sons naturels, de prestations folkloriques, de musique, etc., en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου χρησιμοποιώντας μηχανήματα ηχογράφησης για να καταγράψει ήχους ή/και βίντεο κατά τη διάρκεια ηχογράφησης, περιλαμβανομένων ηχογραφήσεων φυσικών ήχων, λαογραφικών συμβάντων, μουσικής κ.λπ., με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der an einer Expression eines Werks mitwirkt, indem er mit einem Aufzeichnungsgerät Ton und/oder Bild aufnimmt, einschließlich Field Recording natürlicher Geräusche, folkloristische Veranstaltungen, Musik o. ä., mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har bidraget til et udtryk af et værk ved at anvende et optageudstyr til at fange lyd og/eller video under en optagelsessession, inkl. feltoptagelser af naturlige lyde, folkloristiske begivenheder, musik etc. til et udtryk."
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix amb una expressió d’una obra usant un dispositiu d’enregistrament per capturar so i/o vídeo durant una sessió d’enregistrament, inclosos els enregistraments de camp de sons naturals, d’esdeveniments folklòrics, de música, etc., amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan teoksen ekspressioon, joka sisältää tallennuslaitetta käyttäen taltioitua ääntä ja/tai videokuvaa, mukaan lukien luonnonäänten, folklorististen tapahtumien, musiikin tms. kenttätallennukset."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50160",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/recordistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24655.html",
+            "label": "is recordist of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50160",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/recordistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24949.html",
+            "label": "is recordist of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60625",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/recordistOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15215.html",
         "label": "is recordist of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20052",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/recordist.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14143.html",
-        "label": "has recordist"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is recordist of",
-        "fr": "est l’opérateur d’enregistrement de"
+        "fr": "est un opérateur d’enregistrement de",
+        "el": "είναι ηχολήπτης του",
+        "da": "er tonemester for",
+        "ca": "és operador d’enregistrament de",
+        "fi": "äänittäjänä tai kameraoperaattorina taltioinnissa",
+        "de": "ist Tonmeister von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/recordistOf.en",
     "name": {
-        "en": "recordistOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "recordistOf",
+        "el": "ηχολήπτηςΤου",
+        "da": "tonemesterFor",
+        "fi": "aanittajanaTaiKameraoperaattorinaTaltioinnissa",
+        "fr": "opérateurDenregistrementDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en utilisant un appareil d’enregistrement pour capter le son et/ou la vidéo durant une séance d’enregistrement, y compris les enregistrements de terrain de sons naturels, de prestations folkloriques, de musique, etc."
+        "fr": "Expression d’une œuvre qui intègre une contribution consistant à utiliser un appareil d’enregistrement pour capter le son et/ou la vidéo durant une séance d’enregistrement, y compris les enregistrements de terrain de sons naturels, de prestations folkloriques, de musique, etc.",
+        "en": "An expression of a work that incorporates a contribution of using a recording device to capture sound and/or video during a recording session, including field recordings of natural sounds, folkloric events, music, etc.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά της χρήσης μηχανημάτων ηχογράφησης για την καταγραφή ήχου ή/και βίντεο κατά τη διάρκεια ηχογράφησης, περιλαμβανομένων ηχογραφήσεων φυσικών ήχων, λαογραφικών συμβάντων, μουσικής κ.λπ.",
+        "de": "Eine Expression eines Werks, bei der ein Akteur mit einem Aufzeichnungsgerät Ton und/oder Bild aufnimmt, einschließlich Field Recording natürlicher Geräusche, folkloristische Veranstaltungen, Musik o. ä.",
+        "da": "Udtryk af et værk der inkorporerer et bidrag ved at bruge et optageudstyr til at fange lyd og/eller video under en optagelsessession, inkl. feltoptagelser af naturlige lyde, folkloristiske begivenheder, musik, etc.",
+        "ca": "Expressió d’una obra que incorpora una contribució que usa un dispositiu d’enregistrament per capturar so i/o vídeo durant una sessió d’enregistrament, inclosos els enregistraments de camp de sons naturals, d’esdeveniments folklòrics, de música, etc.",
+        "fi": "Teoksen ekspressio, joka sisältää tallennuslaitetta käyttäen taltioitua ääntä ja/tai videokuvaa, mukaan lukien luonnonäänten, folklorististen tapahtumien, musiikin tms. kenttätallennukset.",
+        "no": "Et uttrykk av et verk som omfatter et bidrag i form av å bruke en opptaksenhet til å ta opp lyd og/eller video under en opptaksøkt, inkludert feltopptak av naturlyder, arrangementer knyttet til folkeminne, musikk, etc."
     },
     "ToolkitLabel": {
-        "fr": "opérateur d’enregistrement de"
+        "fr": "opérateur d’enregistrement de",
+        "en": "recordist of",
+        "el": "ηχολήπτης του",
+        "de": "Tonmeister von",
+        "da": "tonemester af",
+        "ca": "operador d’enregistrament de",
+        "fi": "äänittäjänä tai kameraoperaattorina taltioinnissa",
+        "no": "person som gjør opptak av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14025.html"
 }

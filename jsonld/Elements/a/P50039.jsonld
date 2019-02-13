@@ -4,25 +4,48 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body to the date or range of dates on which a conference, congress, meeting, exhibition, fair, festival, etc., was held."
+            "Relates a corporate body to a date or range of dates on which a conference, congress, meeting, exhibition, fair, festival, etc., was held."
         ],
         "fr": [
-            "Met une collectivité en relation avec la date ou la fourchette de dates à laquelle un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu."
+            "Met une collectivité en relation avec une date ou une fourchette de dates à laquelle un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με μια χρονολογία ή ένα εύρος από ημερομηνίες κατά τις οποίες ένα συνέδριο, συνάντηση, έκθεση, εορτή, φεστιβάλ κ.λπ. έλαβε χώρα."
+        ],
+        "de": [
+            "Setzt eine Körperschaft mit einem Datum oder einer Zeitspanne an dem eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat, in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation til et år eller en dato eller en række heraf, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt."
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa amb una data o rang de dates en el qual s’ha celebrat un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc."
+        ],
+        "fi": [
+            "Liittää yhteisön ajankohtaan, jolloin konferenssi, kongressi, kokous, näyttely, messut, festivaalit tms. järjestettiin."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50039",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/dateOfConferenceEtc.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24828.html",
+            "label": "has date of conference, etc."
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60526",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceEtc.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15116.html",
         "label": "has date of conference, etc."
     },
-    "instructionNumber": "11/04/2002",
+    "instructionNumber": "11.4.2",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -30,11 +53,21 @@
     },
     "label": {
         "en": "has date of conference, etc.",
-        "fr": "a pour date du congrès, etc."
+        "fr": "a pour date de congrès, etc.",
+        "sv": "har tid för konferens",
+        "el": "έχει χρονολογία συνεδρίου κ.λπ.",
+        "da": "har datering af konference etc.",
+        "ca": "té com a data de congrés",
+        "fi": "konferenssin tms. ajankohta",
+        "de": "hat Datum einer Konferenz usw."
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/dateOfConferenceEtc.en",
     "name": {
-        "en": "dateOfConferenceEtc"
+        "en": "dateOfConferenceEtc",
+        "el": "χρονολογίαΤουΣυνεδρίουΚλπ",
+        "da": "dateringAfKonferenceEtc",
+        "fi": "konferenssinTmsAjankohta",
+        "fr": "dateDeCongrèsEtc"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -45,20 +78,33 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/a/P50040",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/dateAssociatedWithTheCorporateBody.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/dateAssociatedWithCorporateBody.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/13905.html",
-            "label": "has date associated with the corporate body"
+            "label": "has date associated with corporate body"
         }
     ],
     "ToolkitDefinition": {
-        "en": "The date or range of dates on which a conference, congress, meeting, exhibition, fair, festival, etc., was held.",
-        "fr": "La date ou la fourchette de dates à laquelle un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.",
-        "es": "La fecha o rango de fechas en las que se realizó una conferencia, congreso, reunión, exposición, feria, festival, etc."
+        "en": "A date or range of dates on which a conference, congress, meeting, exhibition, fair, festival, etc., was held.",
+        "fr": "Date ou fourchette de dates à laquelle un congrès, une conférence, une réunion, une exposition, une foire, un festival, etc. s’est tenu.",
+        "es": "La fecha o rango de fechas en las que se realizó una conferencia, congreso, reunión, exposición, feria, festival, etc.",
+        "el": "Μια χρονολογία ή εύρος χρονολογιών κατά τις οποίες ένα συνέδριο, συνάντηση, εορτή, φεστιβάλ κ.λπ. έλαβε χώρα.",
+        "de": "Ein Datum oder eine Zeitspanne an dem eine Konferenz, ein Kongress, eine Tagung, eine Ausstellung, eine Messe, ein Festival usw. stattgefunden hat.",
+        "da": "År eller dato eller en række heraf, hvor en konference, en kongres, et møde, en udstilling, en messe, en festival etc. blev afholdt.",
+        "ca": "Data o rang de dates en el qual s’ha celebrat un congrés, unes jornades, una reunió, una exposició, una fira, un festival, etc.",
+        "fi": "Ajankohta, jolloin konferenssi, kongressi, kokous, näyttely, messut, festivaalit tms. järjestettiin.",
+        "no": "Ett eller flere tidspunkter da en konferanse, en kongress, et møte, en utstilling, en messe, en festival etc. ble holdt."
     },
     "ToolkitLabel": {
         "en": "date of conference, etc.",
-        "fr": "date du congrès, etc.",
-        "es": "fecha de la conferencia, etc."
+        "fr": "date de congrès, etc.",
+        "es": "fecha de la conferencia, etc.",
+        "sv": "tid för konferens",
+        "el": "χρονολογία του συνεδρίου κ.λπ.",
+        "de": "Datum einer Konferenz usw.",
+        "da": "datering af konference etc.",
+        "ca": "data de congrés, etc.",
+        "fi": "konferenssin tms. ajankohta",
+        "no": "tidspunkt for konferanse etc."
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13904.html"
 }

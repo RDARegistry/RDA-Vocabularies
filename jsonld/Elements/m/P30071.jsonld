@@ -4,30 +4,51 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a person, family, or corporate body involved in manufacturing a manifestation by embossing braille cells using a stylus, special embossing printer, or other device."
+            "Relates a manifestation to an agent involved in manufacturing a manifestation by embossing braille cells using a stylus, special embossing printer, or other device."
         ],
         "fr": [
-            "Met une manifestation en relation avec une personne, famille ou collectivité prenant part à la fabrication d’une manifestation par l’embossage de cellules braille au moyen d’un poinçon, d’une imprimante spéciale ou d’un autre appareil."
+            "Met une manifestation en relation avec un agent qui prend part à la fabrication d’une manifestation par l’embossage de cellules braille au moyen d’un poinçon, d’une imprimante spéciale ou d’un autre appareil."
+        ],
+        "vi": [
+            "Liên kết biểu thị với tác nhân có liên quan tới chế tạo biểu thị theo trách nhiệm dập nổi các ô chữ braille sử dụng bút trâm, máy tin nổi đặc biệt, hoặc thiết bị khác."
+        ],
+        "da": [
+            "Relaterer en manifestation til en agent, der har været involveret i fremstillingen af en manifestation ved at præge brailleceller vha. en stift, særlig prægeprinter eller andet apparatur."
+        ],
+        "de": [
+            "Setzt eine Manifestation mit einem Akteur, der an der Herstellung einer Manifestation in Form von Braillezeichen beteiligt ist, indem er einen Griffel, einen speziellen Brailledrucker oder ein anderes Gerät zum Prägen verwendet, in Beziehung."
+        ],
+        "ca": [
+            "Relaciona una manifestació amb un agent involucrat en la fabricació d’una manifestació amb el repujat de punts braille amb un punxó, una impressora especial o un altre mecanisme."
+        ],
+        "fi": [
+            "Liittää manifestaation toimijaan, joka osallistuu manifestaation valmistamiseen tuottamalla pistekirjoitusmerkkejä piirtimen, tulostimen tai muun laitteen avulla."
+        ],
+        "el": [
+            "Συνδέει μια εκδήλωση με έναν φορέα που εμπλέκεται στην κατασκευή μιας εκδήλωσης κατασκευάζοντας μια ανάγλυφη εκτύπωση μπράιγ χρησιμοποιώντας έναν ειδικό εκτυπωτή ανάγλυφης εκτύπωσης ή άλλη συσκευή."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10007",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "label": "manifestation"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/m/object/P30071",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/object/brailleEmbosser.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24223.html",
+            "label": "has braille embosser"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60411",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/brailleEmbosser.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15005.html",
         "label": "has braille embosser"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50172",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/brailleEmbosserOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14037.html",
-        "label": "is braille embosser of"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -35,17 +56,22 @@
     },
     "label": {
         "en": "has braille embosser",
-        "fr": "a pour producteur braille"
+        "fr": "a pour producteur braille",
+        "vi": "có người chạm nổi chữ braille",
+        "da": "har braillepræger",
+        "de": "hat Brailleschriftpräger",
+        "ca": "té com a estampador braille",
+        "fi": "pistekirjoituksen valmistaja",
+        "el": "έχει τυπογράφο Μπράιγ"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/brailleEmbosser.en",
     "name": {
-        "en": "brailleEmbosser"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "en": "brailleEmbosser",
+        "vi": "ngườiChạmNổiChữBraille",
+        "da": "braillepræger",
+        "fi": "pistekirjoituksenValmistaja",
+        "el": "τυπογράφοςΜπράιγ",
+        "fr": "producteurBraille"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,14 +88,30 @@
         }
     ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body involved in manufacturing a manifestation by embossing Braille cells using a stylus, special embossing printer, or other device.",
-        "fr": "Personne, famille ou collectivité prenant part à la fabrication d’une manifestation par l’embossage de cellules braille au moyen d’un poinçon, d’une imprimante spéciale ou d’un autre appareil.",
-        "es": "Una persona, familia o entidad corporativa que interviene en la fabricación de una manifestación grabando celdas Braille mediante el uso de un punzón, grabador de relieve especial u otro medio."
+        "en": "An agent involved in manufacturing a manifestation by embossing braille cells using a stylus, special embossing printer, or other device.",
+        "fr": "Agent qui prend part à la fabrication d’une manifestation par l’embossage de cellules braille au moyen d’un poinçon, d’une imprimante spéciale ou d’un autre appareil.",
+        "es": "Una persona, familia o entidad corporativa que interviene en la fabricación de una manifestación grabando celdas Braille mediante el uso de un punzón, grabador de relieve especial u otro medio.",
+        "nl": "Een persoon, familie of corporatie betrokken bij de vervaardiging van een manifestatie middels het brailleren met gebruik van een stylus, een speciale stansmachine of ander hulpmiddel.",
+        "vi": "Tác nhân có liên quan tới chế tạo biểu thị theo trách nhiệm dập nổi các ô chữ braille sử dụng bút trâm, máy tin nổi đặc biệt, hoặc thiết bị khác.",
+        "da": "Agent, der har været involveret i fremstillingen af en manifestation ved at præge brailleceller vha. en stift, særlig prægeprinter eller andet apparatur.",
+        "de": "Ein Akteur, der an der Herstellung einer Manifestation in Form von Braillezeichen beteiligt ist, indem er einen Griffel, einen speziellen Brailledrucker oder ein anderes Gerät zum Prägen verwendet.",
+        "ca": "Agent involucrat en la fabricació d’una manifestació amb el repujat de punts braille amb un punxó, una impressora especial o un altre mecanisme.",
+        "fi": "Toimija, joka osallistuu manifestaation valmistamiseen tuottamalla pistekirjoitusmerkkejä piirtimen, tulostimen tai muun laitteen avulla.",
+        "no": "En agent involvert i fremstillingen av en manifestasjon ved å prege brailleceller ved hjelp av pren, punktskriftmaskin eller annen innretning.",
+        "el": "Ένας φορέας που εμπλέκεται στην κατασκευή μιας εκδήλωσης κατασκευάζοντας μια ανάγλυφη εκτύπωση μπράιγ χρησιμοποιώντας έναν ειδικό εκτυπωτή ανάγλυφης εκτύπωσης ή άλλη συσκευή."
     },
     "ToolkitLabel": {
         "en": "braille embosser",
         "fr": "producteur braille",
-        "es": "grabador de braille"
+        "es": "grabador de braille",
+        "nl": "brailleerder",
+        "vi": "người chạm nổi chữ braille",
+        "da": "braillepræger",
+        "de": "Brailleschriftpräger",
+        "ca": "estampador braille",
+        "fi": "pistekirjoituksen valmistaja",
+        "no": "punktskriftpreger",
+        "el": "τυπογράφος μπράιγ"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14460.html"
 }

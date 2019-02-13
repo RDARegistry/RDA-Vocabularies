@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a corporate body to a corporate body that formed the other corporate body by merging with one or more other corporate bodies."
+            "Relates a corporate body to a corporate body that formed another corporate body by merging with one or more other corporate bodies."
         ],
         "fr": [
-            "Met une collectivité en relation avec une collectivité qui a formé l’autre collectivité en fusionnant avec une ou plusieurs autres collectivités."
+            "Met une collectivité en relation avec une collectivité qui a formé une autre collectivité en fusionnant avec une ou plusieurs autres collectivités."
+        ],
+        "el": [
+            "Συνδέει ένα συλλογικό όργανο με ένα συλλογικό όργανο το οποίο δημιούργησε κάποιο άλλο συλλογικό όργανο μέσω της συγχώνευσής του με ένα ή περισσότερα συλλογικά όργανα."
+        ],
+        "de": [
+            "Setzt eine Körperschaft mit einer Körperschaft, die mit einer oder mehreren anderen Körperschaften durch eine Fusion eine Körperschaft gebildet hat, in Beziehung."
+        ],
+        "da": [
+            "Relaterer en korporation til en korporation, der har dannet en anden korporation gennem sammenlægning med en eller flere andre korporationer."
+        ],
+        "ca": [
+            "Relaciona una entitat corporativa amb una entitat corporativa que ha format una altra entitat corporativa en fusionar-se amb una o més entitats corporatives."
+        ],
+        "fi": [
+            "Liittää yhteisön yhteisöön, joka muodosti uuden yhteisön yhdistymällä yhden tai useamman muun yhteisön kanssa."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10005",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "label": "corporate body"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50232",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/componentOfMerger.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24727.html",
+            "label": "has component of merger"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50232",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/componentOfMerger.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25021.html",
+            "label": "has component of merger"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60736",
-        "lexicalAlias": "http://rdaregistry.info/Elements/u/componentOfAMerger.en",
+        "lexicalAlias": "http://rdaregistry.info/Elements/u/componentOfMerger.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15663.html",
-        "label": "has component of a merger"
+        "label": "has component of merger"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50013",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/productOfAMerger.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15548.html",
-        "label": "has product of merger"
-    },
+    "instructionNumber": "29.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "has component of merger",
-        "fr": "a pour composante d’une fusion"
+        "fr": "a pour composante d’une fusion",
+        "el": "έχει συστατικό συγχώνευσης",
+        "da": "har del af sammenlægning",
+        "ca": "té com a component de fusió",
+        "fi": "yhdistynyt yhteisöön",
+        "de": "hat Beteiligten an einer Fusion"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/componentOfMerger.en",
     "name": {
-        "en": "componentOfAMerger"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10005",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14332.html",
-        "label": "Corporate body"
+        "en": "componentOfAMerger",
+        "el": "συστατικόΜιαςΣυγχώνευσης",
+        "da": "delAfSammenlægning",
+        "fi": "yhdistynytYhteisoon",
+        "fr": "composanteDuneFusion"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -54,14 +81,26 @@
         "label": "Published"
     },
     "ToolkitDefinition": {
-        "en": "A corporate body that formed the other corporate body by merging with one or more other corporate bodies.",
-        "fr": "Collectivité qui a formé l’autre collectivité en fusionnant avec une ou plusieurs autres collectivités.",
-        "es": "Una entidad corporativa que forma otra entidad corporativa mediante la fusión con otra u otras entidades corporativas."
+        "en": "A corporate body that formed another corporate body by merging with one or more other corporate bodies.",
+        "fr": "Collectivité qui a formé une autre collectivité en fusionnant avec une ou plusieurs autres collectivités.",
+        "es": "Una entidad corporativa que forma otra entidad corporativa mediante la fusión con otra u otras entidades corporativas.",
+        "el": "Ένα συλλογικό όργανο το οποίο δημιούργησε κάποιο άλλο συλλογικό όργανο μέσω της συγχώνευσής του με ένα ή περισσότερα συλλογικά όργανα.",
+        "de": "Eine Körperschaft, die mit einer oder mehreren anderen Körperschaften durch eine Fusion eine Körperschaft gebildet hat.",
+        "da": "Korporation, der har dannet en anden korporation gennem sammenlægning med en eller flere andre korporationer.",
+        "ca": "Entitat corporativa que ha format una altra entitat corporativa en fusionar-se amb una o més entitats corporatives.",
+        "fi": "Yhteisö, joka muodosti uuden yhteisön yhdistymällä yhden tai useamman muun yhteisön kanssa.",
+        "no": "En korporasjon som skapte en annen korporasjonen ved å slås sammen med én eller flere andre korporasjoner."
     },
     "ToolkitLabel": {
         "en": "component of merger",
         "fr": "composante d’une fusion",
-        "es": "componente de una fusión"
+        "es": "componente de una fusión",
+        "el": "συστατικό μιας συγχώνευσης",
+        "de": "Beteiligter an einer Fusion",
+        "da": "del af sammenlægning",
+        "ca": "component de fusió",
+        "fi": "yhdistynyt yhteisöön",
+        "no": "element i sammenslåing"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15643.html"
 }

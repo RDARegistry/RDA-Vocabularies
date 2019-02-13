@@ -4,31 +4,51 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an item to a person, family, or corporate body having legal custody of an item."
+            "Relates an item to an agent having legal custody of an item."
         ],
         "fr": [
-            "Met un item en relation avec une personne, famille ou collectivité à qui est confiée la garde légale d’un item."
+            "Met un item en relation avec un agent à qui est confiée la garde légale d’un item."
+        ],
+        "vi": [
+            "Liên kết bản với tác nhân giám hộ theo pháp luật một bản."
+        ],
+        "da": [
+            "Relaterer et eksemplar til en agent, der lovligt har et eksemplar i forvaring."
+        ],
+        "de": [
+            "Setzt ein Exemplar mit einem Akteur, dem die rechtmäßige Verwahrung eines Exemplars obliegt, in Beziehung."
+        ],
+        "el": [
+            "Συνδέει ένα αντίτυπο με έναν φορέα που έχει τη νόμιμη επιμέλεια φύλαξης ενός αντιτύπου."
+        ],
+        "ca": [
+            "Relaciona un item amb un agent que té la custodia legal d’un ítem."
+        ],
+        "fi": [
+            "Liittää kappaleen toimijaan, jolla on kappaleen laillinen säilyttämisoikeus."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10003",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "label": "item"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/i/object/P40020",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/object/custodian.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24506.html",
+            "label": "has custodian"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60402",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/custodian.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14998.html",
         "label": "has custodian"
     },
-    "instructionNumber": "22/03/2016",
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50164",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/custodianOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14029.html",
-        "label": "is custodian of"
-    },
+    "instructionNumber": "22.3",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/i/",
         "url": "http://metadataregistry.org/schema/show/id/80.html",
@@ -36,17 +56,23 @@
     },
     "label": {
         "en": "has custodian",
-        "fr": "a pour dépositaire"
+        "fr": "a pour dépositaire",
+        "sv": "har förvaltare",
+        "vi": "có người giám hộ",
+        "da": "har forvalter",
+        "de": "hat Verwahrer",
+        "el": "έχει θεματοφύλακα",
+        "ca": "té com a dipositari",
+        "fi": "säilyttäjä"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/i/custodian.en",
     "name": {
-        "en": "custodian"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "en": "custodian",
+        "vi": "ngườiGiámHộ",
+        "da": "forvalter",
+        "el": "θεματοφύλακας",
+        "fi": "sailyttaja",
+        "fr": "dépositaire"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -54,15 +80,38 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/i/P40072",
+            "lexicalAlias": "http://rdaregistry.info/Elements/i/relatedAgentItem.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25270.html",
+            "label": "has related agent (item)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body having legal custody of an item.",
-        "fr": "Personne, famille ou collectivité à qui est confiée la garde légale d’un item.",
-        "es": "Una persona, familia o entidad corporativa que tiene la custodia legal de un ítem."
+        "en": "An agent having legal custody of an item.",
+        "fr": "Agent à qui est confiée la garde légale d’un item.",
+        "es": "Una persona, familia o entidad corporativa que tiene la custodia legal de un ítem.",
+        "vi": "Tác nhân giám hộ theo pháp luật một bản.",
+        "da": "Agent, der lovligt har et eksemplar i forvaring.",
+        "de": "Ein Akteur, dem die rechtmäßige Verwahrung eines Exemplars obliegt.",
+        "el": "Ένας φορέας ο οποίος έχει τη νόμιμη επιμέλεια φύλαξης ενός αντιτύπου.",
+        "ca": "Agent que té la custodia legal d’un ítem.",
+        "fi": "Toimija, jolla on kappaleen laillinen säilyttämisoikeus.",
+        "no": "En agent som har et eksemplar i lovlig forvaring."
     },
     "ToolkitLabel": {
         "en": "custodian",
         "fr": "dépositaire",
-        "es": "custodio"
+        "es": "custodio",
+        "sv": "förvaltare",
+        "vi": "người giám hộ",
+        "da": "forvalter",
+        "de": "Verwahrer",
+        "el": "θεματοφύλακας",
+        "ca": "dipositari",
+        "fi": "säilyttäjä",
+        "no": "oppbevarer"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14355.html"
 }

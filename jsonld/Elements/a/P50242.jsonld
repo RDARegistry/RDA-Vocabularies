@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body responsible for the production of paper used to manufacture a manifestation to the manifestation."
+            "Relates an agent responsible for the production of paper used to manufacture a manifestation to a manifestation."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité responsable de la production du papier utilisé pour fabriquer une manifestation en relation avec la manifestation."
+            "Met un agent responsable de la production du papier utilisé pour fabriquer une manifestation en relation avec une manifestation."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα υπεύθυνο για την παραγωγή χάρτου που χρησιμοποιείται για την κατασκευή μιας εκδήλωσης, με μια εκδήλωση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der für die Entstehung von Papier verantwortlich ist, das für die Herstellung einer Manifestation verwendet wird, mit einer Manifestation in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der er ansvarlig for at producere papir der bruges til at fremstille en manifestation til en manifestation."
+        ],
+        "ca": [
+            "Relaciona un agent, responsable de la producció del paper usat per fabricar una manifestació, amb una manifestació."
+        ],
+        "fi": [
+            "Liittää toimijan manifestaatioon, jossa käytetään manifestaation valmistamiseksi tuotettua paperia."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50242",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/papermakerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24732.html",
+            "label": "is papermaker of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50242",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/papermakerOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/25031.html",
+            "label": "is papermaker of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60747",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/papermakerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/16294.html",
         "label": "is papermaker of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/m/P30215",
-        "lexicalAlias": "http://rdaregistry.info/Elements/m/papermaker.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/16140.html",
-        "label": "has papermaker"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is papermaker of",
-        "fr": "est le papetier de"
+        "fr": "est un papetier de",
+        "el": "είναι χαρτοποιός του",
+        "da": "er papirproducent af",
+        "ca": "és paperer de",
+        "fi": "paperinvalmistajana manifestaatiossa",
+        "de": "ist Papiermacher von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/papermakerOf.en",
     "name": {
-        "en": "papermakerOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "en": "papermakerOf",
+        "el": "χαρτοποιόςΤου",
+        "da": "papirproducentAf",
+        "fi": "paperinvalmistajanaManifestaatiossa",
+        "fr": "papetierDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité responsable de la production du papier utilisé pour fabriquer une manifestation."
+        "fr": "Manifestation qui utilise du papier produit pour fabriquer une manifestation.",
+        "en": "A manifestation using paper produced to manufacture a manifestation.",
+        "el": "Μια εκδήλωση που χρησιμοποιεί χαρτί, το οποίο παράγεται για την κατασκευή μιας εκδήλωσης.",
+        "de": "Eine Manifestation, die aus Papier entstanden ist.",
+        "da": "Manifestation, der bruger papir produceret til at fremstille en manifestation.",
+        "ca": "Manifestació que usa paper produït per fabricar una manifestació.",
+        "fi": "Manifestaatio, jossa käytetään manifestaation valmistamiseksi tuotettua paperia.",
+        "no": "En manifestasjon som bruker papir produsert for å produsere en manifestasjon."
     },
     "ToolkitLabel": {
-        "fr": "papetier de"
+        "fr": "papetier de",
+        "en": "papermaker of",
+        "el": "χαρτοποιός του",
+        "de": "Papiermacher von",
+        "da": "papirproducent af",
+        "ca": "paperer de",
+        "fi": "paperinvalmistajana manifestaatiossa",
+        "no": "papirprodusent for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/16082.html"
 }

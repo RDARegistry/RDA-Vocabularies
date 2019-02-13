@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of an item by bringing it back to a state as close as possible to its original condition to the item."
+            "Relates an agent responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of an item by bringing it back to a state as close as possible to its original condition to an item."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité responsable de l’ensemble des procédures techniques, éditoriales et intellectuelles destinées à compenser la dégradation d’un item en le ramenant à un état aussi près que possible de sa condition originelle en relation avec l’item."
+            "Met un agent responsable de l’ensemble des procédures techniques, éditoriales et intellectuelles destinées à compenser la dégradation d’un item en le ramenant à un état aussi près que possible de sa condition originelle en relation avec un item."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα υπεύθυνο για το σύνολο των τεχνικών, συντακτικών και διανοητικών διαδικασιών που στοχεύουν στην αποκατάσταση της αποδόμησης ενός αντιτύπου επαναφέροντάς το όσο το δυνατόν κοντύτερα στην αρχική του κατάσταση, με ένα αντίτυπο."
+        ],
+        "de": [
+            "Setzt einen Akteur, der für die technischen, redaktionellen und intellektuellen Verfahren verantwortlich ist, die darauf abzielen, die Zersetzung eines Exemplars auszugleichen, indem es in einen Zustand zurückversetzt wird, der seiner ursprünglichen Beschaffenheit möglichst nahe kommt, mit einem Exemplar in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der er ansvarlig for rækken af tekniske, redaktionsmæssige og intellektuelle procedurer, der sigter mod at kompensere for forringelsen af et eksemplar ved at føre det tilbage til en tilstand, der er så tæt som muligt på dets oprindelige tilstand til et eksemplar."
+        ],
+        "ca": [
+            "Relaciona un agent, responsable del conjunt de procediments tècnics, editorials i intel·lectuals destinats a compensar la degradació d’un ítem retornant-lo a un estat que s’aproximi al màxim a la seva condició original, amb un ítem."
+        ],
+        "fi": [
+            "Liittää toimijan kappaleeseen, johon kohdistetaan teknisiä, toimituksellisia ja tiedollisia toimenpiteitä, joiden tarkoitus on palauttaa kappale mahdollisimman lähelle sen alkuperäistä tilaa tai kuntoa."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50206",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/restorationistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24995.html",
+            "label": "is restorationist of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50206",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/restorationistOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24701.html",
+            "label": "is restorationist of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60674",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/restorationistOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15264.html",
         "label": "is restorationist of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/i/P40024",
-        "lexicalAlias": "http://rdaregistry.info/Elements/i/restorationistItem.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14359.html",
-        "label": "has restorationist (item)"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is restorationist of",
-        "fr": "est le restaurateur de"
+        "fr": "est un restaurateur (item) de",
+        "el": "είναι συντηρητής έργων τέχνης του",
+        "da": "er konservator af",
+        "ca": "és restaurador de",
+        "fi": "entisöijänä kappaleessa",
+        "de": "ist Restaurator von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/restorationistOf.en",
     "name": {
-        "en": "restorationistOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10003",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14330.html",
-        "label": "Item"
+        "en": "restorationistOf",
+        "el": "συντηρητήςΈργωνΤέχνηςΤου",
+        "da": "konservatorAf",
+        "fi": "entisoijanaKappaleessa",
+        "fr": "restaurateurItemDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -56,16 +83,30 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/a/P50182",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherPFCItemOf.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentItemOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14047.html",
-            "label": "is other person, family, or corporate body associated with an item of"
+            "label": "is other agent associated with item of"
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité responsable de l’ensemble des procédures techniques, éditoriales et intellectuelles destinées à compenser la dégradation d’un item en le ramenant à un état aussi près que possible de sa condition originelle."
+        "fr": "Item dont la dégradation a été compensée en le ramenant à un état aussi près que possible de sa condition originelle au moyen d’un ensemble de procédures techniques, éditoriales et intellectuelles.",
+        "en": "An item compensated for degradation by bringing it back to a state as close as possible to its original condition using a set of technical, editorial, and intellectual procedures.",
+        "el": "Ένα αντίτυπο που υποβάλλεται σε ένα σύνολο τεχνικών, συντακτικών και διανοητικών διαδικασιών που στοχεύουν στην αποκατάσταση της αποδόμησής του επαναφέροντάς το όσο το δυνατόν εγγύτερα στην αρχική του κατάσταση.",
+        "de": "Ein Exemplar, bei der ein Akteur für die technischen, redaktionellen und intellektuellen Verfahren verantwortlich ist, die darauf abzielen, die Zersetzung eines Exemplars auszugleichen, indem es in einen Zustand zurückversetzt wird, der seiner ursprünglichen Beschaffenheit möglichst nahe kommt.",
+        "da": "Eksemplar der er kompenseret for nedbrydelse ved at blive bratgt tilbage til en tilstand så tæt som muligt til dets oprindelige tilstand ved at bruge et sæt af tekniske, redaktionsmæssige og intellektuelle procedurer.",
+        "ca": "Ítem compensat de la degradació retornant-lo a un estat que s’aproximi al màxim a la seva condició original usant un conjunt de procediments tècnics, editorials i intel·lectuals.",
+        "fi": "Kappale, johon kohdistetaan teknisiä, toimituksellisia ja tiedollisia toimenpiteitä, joiden tarkoitus on palauttaa kappale mahdollisimman lähelle sen alkuperäistä tilaa tai kuntoa.",
+        "no": "Et eksemplar som er restaurert til en tilstand som er så lik originaltilstanden som mulig ved å kompensere for nedbrytningen av et eksemplar ved hjelp av tekniske og intellektuelle metoder."
     },
     "ToolkitLabel": {
-        "fr": "restaurateur de"
+        "fr": "restaurateur (item) de",
+        "en": "restorationist of",
+        "el": "συντηρητής έργων τέχνης του",
+        "de": "Restaurator von",
+        "da": "konservator af",
+        "ca": "restaurador de",
+        "fi": "entisöijänä kappaleessa",
+        "no": "konservator av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14071.html"
 }

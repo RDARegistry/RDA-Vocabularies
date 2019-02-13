@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body contributing to an expression of a work by providing additional cartography, or by modifying the previous cartography to the expression."
+            "Relates an agent contributing to an expression of a work by providing additional cartography, or by modifying previous cartography to an expression."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant une cartographie additionnelle ou en modifiant la cartographie antérieure en relation avec l’expression."
+            "Met un agent qui contribue à une expression d’une œuvre en fournissant une cartographie additionnelle ou en modifiant une cartographie antérieure en relation avec une expression."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος συνεισφέρει σε μια έκφραση ενός έργου παρέχοντας πρόσθετη χαρτογράφηση ή τροποποιώντας την προηγούμενη χαρτογράφηση, με μια έκφραση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der zu einer Expression eines Werks beiträgt, indem er zusätzliche Kartografie liefert oder vorhandene Kartografie modifiziert, mit einer Expression in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har bidraget til et udtryk af et værk ved at sørge for ekstra kartografi eller ved at modificere tidligere kartografi til et udtryk"
+        ],
+        "ca": [
+            "Relaciona un agent, que contribueix a una expressió d’una obra o bé proporcionant una cartografia addicional o bé modificant la cartografia anterior, amb una expressió."
+        ],
+        "fi": [
+            "Liittää toimijan teoksen ekspressioen, joka sisältää täydennettyä kartta-aineistoa tai joka on syntynyt muokkaamalla aiempaa karttateosta."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50150",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/cartographerExpressionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24645.html",
+            "label": "is cartographer (expression) of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50150",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/cartographerExpressionOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24939.html",
+            "label": "is cartographer (expression) of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60654",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/cartographerOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15244.html",
         "label": "is cartographer of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/e/P20042",
-        "lexicalAlias": "http://rdaregistry.info/Elements/e/cartographerExpression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14133.html",
-        "label": "has cartographer (expression)"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is cartographer (expression) of",
-        "fr": "est le cartographe (expression) de"
+        "fr": "est un cartographe (expression) de",
+        "el": "είναι χαρτογράφος (έκφραση) του",
+        "da": "er kartograf (udtryk) til",
+        "ca": "és cartògraf (expressió) de",
+        "fi": "kartantekijänä kartassa (ekspressio)",
+        "de": "ist Kartograf (Expression) von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/cartographerExpressionOf.en",
     "name": {
-        "en": "cartographerExpressionOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "cartographerExpressionOf",
+        "el": "χαρτογράφοςΈκφρασηςΤου",
+        "da": "kartografUdtrykTil",
+        "fi": "kartantekijanaKartassaEkspressio)",
+        "fr": "cartographeExpressionDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité contribuant à une expression d’une œuvre en fournissant une cartographie additionnelle ou en modifiant la cartographie antérieure."
+        "fr": "Expression d’une œuvre qui intègre une contribution consistant à fournir une cartographie additionnelle ou à modifier une cartographie antérieure.",
+        "en": "An expression of a work that incorporates a contribution of providing additional cartography, or by modifying previous cartography.",
+        "el": "Μια έκφραση ενός έργου που ενσωματώνει τη συνεισφορά μέσω της παροχής πρόσθετης χαρτογράφησης ή τροποποίησης της προηγούμενης χαρτογράφησης.",
+        "de": "Eine Expression eines Werks, bei der ein Akteur zusätzliche Kartografie liefert oder vorhandene Kartografie modifiziert.",
+        "da": "Udtryk af et værk der inkorporerer et bidrag ved at tilføje ekstra kartografi, eller ved at modificere tidligere kartografi.",
+        "ca": "Expressió d’una obra que incorpora una contribució que proporciona o bé una cartografia addicional o bé modificant la cartografia anterior.",
+        "fi": "Teoksen ekspressio, joka sisältää täydennettyä kartta-aineistoa tai joka on syntynyt muokkaamalla aiempaa karttateosta.",
+        "no": "Et uttrykk av et verk som omfatter et bidrag i form av å tilføre ytterligere kartografi eller ved å endre tidligere kartografi."
     },
     "ToolkitLabel": {
-        "fr": "cartographe (expression) de"
+        "fr": "cartographe (expression) de",
+        "en": "cartographer (expression) of",
+        "el": "χαρτογράφος (έκφραση) του",
+        "de": "Kartograf (Expression) von",
+        "da": "kartograf (udtryk) til",
+        "ca": "cartògraf (expressió) de",
+        "fi": "kartta (ekspressio)",
+        "no": "kartograf (uttrykk) for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14015.html"
 }

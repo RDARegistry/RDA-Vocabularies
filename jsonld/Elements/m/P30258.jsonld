@@ -4,30 +4,51 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a manifestation to a work that examines or judges the described manifestation."
+            "Relates a manifestation to a work that examines or judges a described manifestation."
         ],
         "fr": [
-            "Met une manifestation en relation avec une œuvre qui examine ou juge la manifestation décrite."
+            "Met une manifestation en relation avec une œuvre qui examine ou juge une manifestation décrite."
+        ],
+        "vi": [
+            "Liên kết biểu thị với tác phẩm kiểm tra hoặc đánh giá biểu thị đang được mô tả."
+        ],
+        "da": [
+            "Relaterer en manifestation til et værk der undersøger eller bedømmer en beskreven manifestation."
+        ],
+        "de": [
+            "Setzt eine Manifestation mit einem Werk, das die beschriebene Manifestation untersucht oder beurteilt, in Beziehung."
+        ],
+        "ca": [
+            "Relaciona una manifestació amb una obra que examina o jutja una manifestació descrita."
+        ],
+        "fi": [
+            "Liittää manifestaation teokseen, joka sisältää tutkivan arvioinnin kuvailun kohteena olevasta manifestaatiosta."
+        ],
+        "el": [
+            "Συνδέει μια εκδήλωση με ένα έργο που εξετάζει ή κρίνει μια περιγραφόμενη εκδήλωση."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10007",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "label": "manifestation"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/m/object/P30258",
+            "lexicalAlias": "http://rdaregistry.info/Elements/m/object/evaluatedInManifestation.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24252.html",
+            "label": "is evaluated in (manifestation)"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60218",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/evaluatedIn.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14814.html",
         "label": "is evaluated in"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10273",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/evaluationOfManifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/16211.html",
-        "label": "is evaluation of (manifestation)"
-    },
+    "instructionNumber": "23.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/m/",
         "url": "http://metadataregistry.org/schema/show/id/79.html",
@@ -35,17 +56,22 @@
     },
     "label": {
         "en": "is evaluated in (manifestation)",
-        "fr": "est évalué dans (manifestation)"
+        "fr": "est évalué dans (manifestation)",
+        "vi": "được đánh giá trong (biểu thị)",
+        "da": "er evalueret i (manifestation)",
+        "de": "ist evaluiert in (Manifestation)",
+        "ca": "és avaluat en (manifestació)",
+        "fi": "manifestaation arviointi",
+        "el": "αξιολογείται στην (εκδήλωση)"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/m/evaluatedInManifestation.en",
     "name": {
-        "en": "evaluatedInManifestation"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "evaluatedInManifestation",
+        "vi": "đượcĐánhGiáTrongBiểuThị",
+        "da": "evalueretIManifestation",
+        "fi": "manifestaationArviointi",
+        "el": "αξιολογείταιΣτηνΕκδήλωση",
+        "fr": "évaluéDansManifestation"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,14 +88,30 @@
         }
     ],
     "ToolkitDefinition": {
-        "en": "A work that examines or judges the described manifestation.",
-        "fr": "Œuvre qui examine ou juge la manifestation décrite.",
-        "es": "Una obra que examina o juzga la manifestación descrita."
+        "en": "A work that examines or judges a described manifestation.",
+        "fr": "Œuvre qui examine ou juge une manifestation décrite.",
+        "es": "Una obra que examina o juzga la manifestación descrita.",
+        "nl": "Een werk dat de beschreven manifestatie onderzoekt of beoordeelt.",
+        "vi": "Tác phẩm kiểm tra hoặc đánh giá biểu thị đang được mô tả.",
+        "da": "Værk der undersøger eller bedømmer en beskreven manifestation.",
+        "de": "Ein Werk, das die beschriebene Manifestation untersucht oder beurteilt.",
+        "ca": "Obra que examina o jutja una manifestació descrita.",
+        "fi": "Teos, joka sisältää tutkivan arvioinnin kuvailun kohteena olevasta manifestaatiosta.",
+        "no": "Et verk som utforsker eller vurderer en manifestasjon som beskrives.",
+        "el": "Ένα έργο που εξετάζει ή κρίνει μια περιγραφόμενη εκδήλωση."
     },
     "ToolkitLabel": {
         "en": "evaluated in (manifestation)",
         "fr": "évalué dans (manifestation)",
-        "es": "evaluada en (manifestación)"
+        "es": "evaluada en (manifestación)",
+        "nl": "beoordeeld in (manifestatie)",
+        "vi": "được đánh giá trong (biểu thị)",
+        "da": "evalueret i (manifestation)",
+        "de": "Evaluiert in (Manifestation)",
+        "ca": "avaluat en (manifestació)",
+        "fi": "manifestaation arviointi",
+        "no": "evaluert i (manifestasjon)",
+        "el": "αξιολογείται στην (εκδήλωση)"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/16183.html"
 }

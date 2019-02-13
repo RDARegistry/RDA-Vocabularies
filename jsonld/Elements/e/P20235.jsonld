@@ -4,14 +4,35 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates an expression to an expression of a work that is preceded by or succeeded by the expression."
+            "Relates an expression to an expression of a work that is preceded by or succeeded by another expression."
+        ],
+        "fr": [
+            "Met une expression en relation avec une expression d’une œuvre qui est précédée ou suivie par une autre expression."
+        ],
+        "vi": [
+            "Liên kết một biểu hiện với biểu hiện của tác phẩm được đi trước bởi hoặc tiếp sau bởi biểu hiện khác."
+        ],
+        "da": [
+            "Relaterer et udtryk til et udtryk af et værk der er gået forud for eller er blevet efterfulgt af et udtryk."
+        ],
+        "el": [
+            "Συνδέει μια έκφραση με μια έκφραση ενός έργου το οποίο προηγείται ή έπεται μιας έκφρασης."
+        ],
+        "de": [
+            "Setzt eine Expression mit einer Expression eines Werks, die einer anderen Expression voranging oder folgte, in Beziehung."
+        ],
+        "ca": [
+            "Relaciona una expressió amb una expressió d’una obra que és precedida o seguida per una altra expressió."
+        ],
+        "fi": [
+            "Liittää ekspression teoksen ekspressioon, jota edeltää tai seuraa toinen ekspressio."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10006",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "label": "expression"
     },
     "hasSubproperty": [
         {
@@ -25,6 +46,12 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/e/succeededByExpression.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/14260.html",
             "label": "is succeeded by (expression)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/e/object/P20235",
+            "lexicalAlias": "http://rdaregistry.info/Elements/e/object/sequentialExpressionRelationship.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24465.html",
+            "label": "has sequential expression relationship with"
         }
     ],
     "hasUnconstrained": {
@@ -39,17 +66,23 @@
         "label": "RDA Expression properties"
     },
     "label": {
-        "en": "has sequential expression relationship with"
+        "en": "has sequential expression relationship",
+        "fr": "a pour relation d’expression séquentielle",
+        "vi": "có mối quan hệ biểu hiện tiếp sau",
+        "da": "har fortløbende udtryksrelation med",
+        "el": "έχει ακολουθιακή σχέση έκφρασης με",
+        "de": "hat Nachfolge-Beziehungen auf Expressionsebene",
+        "ca": "té com a relació d’expressió seqüencial",
+        "fi": "ekspression jatkuvuussuhde"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/e/sequentialExpressionRelationship.en",
     "name": {
-        "en": "sequentialExpressionRelationship"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10006",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14333.html",
-        "label": "Expression"
+        "en": "sequentialExpressionRelationship",
+        "vi": "mốiQuanHệBiểuHiệnTiếpSau",
+        "da": "fortløbendeUdtryksrelation",
+        "el": "ακολουθιακήΣχέσηΈκφρασης",
+        "fi": "ekspressionJatkuvuussuhde",
+        "fr": "relationDexpressionSéquentielle"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -57,23 +90,29 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
-    "subPropertyOf": [
-        {
-            "@id": "http://rdaregistry.info/Elements/e/P20205",
-            "lexicalAlias": "http://rdaregistry.info/Elements/e/relatedExpression.en",
-            "url": "http://metadataregistry.org/schemaprop/show/id/14296.html",
-            "label": "has related expression"
-        }
-    ],
     "ToolkitDefinition": {
-        "en": "An expression of a work that is preceded by or succeeded by the expression.",
-        "fr": "Expression d’une œuvre qui est précédée ou suivie par l’expression.",
-        "es": "Una expresión de una obra que es precedida por o sucedida por la expresión."
+        "en": "An expression of a work that is preceded by or succeeded by another expression.",
+        "fr": "Expression d’une œuvre qui est précédée ou suivie par une autre expression.",
+        "es": "Una expresión de una obra que es precedida por o sucedida por la expresión.",
+        "vi": "Biểu hiện của tác phẩm được đi trước bởi hoặc tiếp sau bởi biểu hiện khác.",
+        "da": "Udtryk af et værk der er gået forud for eller er blevet efterfulgt af et udtryk.",
+        "el": "Μια έκφραση ενός έργου το οποίο προηγείται ή έπεται μιας έκφρασης.",
+        "de": "Eine Expression eines Werks, die einer anderen Expression voranging oder folgte.",
+        "ca": "Expressió d’una obra que és precedida o seguida per una altra expressió.",
+        "fi": "Teoksen ekspressio, jota edeltää tai seuraa toinen ekspressio.",
+        "no": "Et uttrykk av et verk som avløser eller avløses av et annet uttrykk."
     },
     "ToolkitLabel": {
         "en": "sequential expression relationship",
         "fr": "relation d’expression séquentielle",
-        "es": "relaciones de expresión secuencial"
+        "es": "relaciones de expresión secuencial",
+        "vi": "mối quan hệ biểu hiện tiếp sau",
+        "da": "fortløbende udtryksrelation",
+        "el": "ακολουθιακή σχέση έκφρασης με",
+        "de": "Nachfolge-Beziehung auf Expressionsebene",
+        "ca": "relació d’expressió seqüencial",
+        "fi": "ekspression jatkuvuussuhde",
+        "no": "relasjonstypen etterfølgende uttrykk"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14326.html"
 }

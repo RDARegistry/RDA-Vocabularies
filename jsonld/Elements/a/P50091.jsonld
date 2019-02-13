@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, such as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis to the work."
+            "Relates a person, such as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis to a work."
         ],
         "fr": [
-            "Met une personne supervisant un diplôme universitaire de niveau supérieur en relation avec l’œuvre."
+            "Met une personne telle qu’un conseiller ou un directeur de thèse ou de mémoire qui supervise un diplôme universitaire ou une thèse en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο, όπως σύμβουλο ή επόπτη μιας γραπτής εργασίας ή διατριβής ή διδακτορικής έρευνας, είτε για την απόκτηση ανώτερου εκπαιδευτικού επιπέδου πτυχίου είτε διδακτορικού, με ένα έργο."
+        ],
+        "de": [
+            "Setzt eine Person, zum Beispiel ein Berater oder Betreuer von Forschungen für eine Hochschulschrift, die die Arbeiten für einen akademischen Grad oder eine Hochschulschrift betreut, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en person, som fx en speciale- eller forskningsafhandlingsvejleder, der har ført tilsyn med enten en akademisk grad eller et speciale til et værk."
+        ],
+        "ca": [
+            "Relaciona una persona, com ara un tutor o un supervisor d’una tesi o una recerca acadèmica, que supervisa un grau acadèmic o una tesi, amb una obra."
+        ],
+        "fi": [
+            "Liittää henkilön teokseen, joka sisältää vastuun akateemisten opinnäytteen tai väitöskirjan ohjaamisesta."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10004",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
-        "label": "Person"
+        "label": "person"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50091",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/degreeSupervisorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24609.html",
+            "label": "is degree supervisor of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50091",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/degreeSupervisorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24880.html",
+            "label": "is degree supervisor of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60649",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/degreeSupervisorOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15239.html",
         "label": "is degree supervisor of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10041",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/degreeSupervisor.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15344.html",
-        "label": "has degree supervisor"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is degree supervisor of",
-        "fr": "est le superviseur académique de"
+        "fr": "est un superviseur académique de",
+        "el": "είναι επόπτης καθηγητής του",
+        "da": "er vejleder i",
+        "ca": "és supervisor acadèmic de",
+        "fi": "ohjaajana opinnäytteessä",
+        "de": "ist akademischer Betreuer von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/degreeSupervisorOf.en",
     "name": {
-        "en": "degreeSupervisorOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "degreeSupervisorOf",
+        "el": "επόπτηςΚαθηγητήςΤου",
+        "da": "vejlederI",
+        "fi": "ohjaajanaOpinnaytteessa",
+        "fr": "superviseurAcadémiqueDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -56,16 +83,30 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/a/P50131",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherPFCWorkOf.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
-            "label": "is other person, family, or corporate body associated with a work of"
+            "label": "is other agent associated with work of"
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne supervisant un diplôme universitaire de niveau supérieur."
+        "fr": "Œuvre qui comporte une responsabilité à titre de conseiller ou de directeur de thèse ou de mémoire qui supervise un diplôme universitaire ou une thèse.",
+        "en": "A work that involves a responsibility as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis.",
+        "el": "Ένα έργο που περιλαμβάνει την ευθύνη για την επίβλεψη μιας γραπτής εργασίας ή διατριβής ή διδακτορικής έρευνας για την απόκτηση είτε ενός ανώτερου εκπαιδευτικού επιπέδου πτυχίου είτε διδακτορικού.",
+        "de": "Ein Werk, bei der eine Person, zum Beispiel ein Berater oder Betreuer von Forschungen für eine Hochschulschrift, die die Arbeiten für einen akademischen Grad oder eine Hochschulschrift betreut.",
+        "da": "Værk der involverer et ansvar som speciale- eller forskningsafhandlingsvejleder der har ført tilsyn med enten en akademisk grad eller et speciale.",
+        "ca": "Obra que involucra una responsabilitat com un tutor o un supervisor d’una tesi o una recerca acadèmica, que supervisa un grau acadèmic o una tesi.",
+        "fi": "Teos, joka sisältää vastuun akateemisten opinnäytteen tai väitöskirjan ohjaamisesta.",
+        "no": "Et verk som involverer ansvar som veileder for forskning knyttet til avhandlinger eller masteroppgaver, og tilsyn med en akademisk grad eller avhandling."
     },
     "ToolkitLabel": {
-        "fr": "superviseur académique de"
+        "fr": "superviseur académique de",
+        "en": "degree supervisor of",
+        "el": "επόπτης καθηγητής του",
+        "de": "Akademischer Betreuer von",
+        "da": "vejleder i",
+        "ca": "supervisor acadèmic de",
+        "fi": "ohjaajana opinnäytteessä",
+        "no": "veileder for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13956.html"
 }

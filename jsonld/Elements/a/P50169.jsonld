@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body involved in distributing a moving image manifestation to theatres or other distribution channels to the manifestation."
+            "Relates an agent involved in distributing a moving image manifestation to theatres or other distribution channels to a manifestation."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité prenant part à la distribution d’une manifestation d’images animées aux salles de cinéma ou aux autres réseaux de distribution en relation avec la manifestation."
+            "Met un agent qui prend part à la distribution d’une manifestation d’images animées aux salles de cinéma ou aux autres réseaux de distribution en relation avec une manifestation."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, ο οποίος εμπλέκεται στη διανομή μιας εκδήλωσης κινητής εικόνας στα θέατρα ή σε άλλα κανάλια διανομής, με μια εκδήλωση."
+        ],
+        "de": [
+            "Setzt einen Akteur, der für den Vertrieb einer Filmmanifestation an Kinos oder andere Vertriebskanäle verantwortlich ist, mit einer Manifestation in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, der har været involveret i distribueringen af en levende billedmanifestation til biografer eller andre distributionskanaler til en manifestation."
+        ],
+        "ca": [
+            "Relaciona un agent, involucrat en la distribució d’una manifestació d’imatges en moviment a cinemes o a altres canals de distribució, amb una manifestació."
+        ],
+        "fi": [
+            "Liittää toimijan elokuvan manifestaatio, joka jaetaan elokuvateattereille tai muille jakelukanaville."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50169",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/filmDistributorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24664.html",
+            "label": "is film distributor of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50169",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/filmDistributorOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24958.html",
+            "label": "is film distributor of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60636",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/filmDistributorOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15226.html",
         "label": "is film distributor of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/m/P30068",
-        "lexicalAlias": "http://rdaregistry.info/Elements/m/filmDistributor.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14457.html",
-        "label": "has film distributor"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is film distributor of",
-        "fr": "est le distributeur de films de"
+        "fr": "est un distributeur de films de",
+        "el": "είναι διανομέας του",
+        "da": "er filmdistributør af",
+        "ca": "és distribuïdor de pel·lícules de",
+        "fi": "jakelijana elokuvassa",
+        "de": "ist Filmvertrieb von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/filmDistributorOf.en",
     "name": {
-        "en": "filmDistributorOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10007",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14334.html",
-        "label": "Manifestation"
+        "en": "filmDistributorOf",
+        "el": "διανομέαςΤου",
+        "da": "filmdistributørAf",
+        "fi": "jakelijanaElokuvassa",
+        "fr": "distributeurDeFilmsDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité prenant part à la distribution d’une manifestation d’images animées aux salles de cinéma ou aux autres réseaux de distribution."
+        "fr": "Manifestation d’images animées distribuée aux salles de cinéma ou aux autres réseaux de distribution.",
+        "en": "A moving image manifestation distributed to theatres or other distribution channels.",
+        "el": "Μια εκδήλωση κινητής εικόνας που διανέμεται στα θέατρα ή σε άλλα κανάλια διανομής.",
+        "de": "Eine Filmmanifestation, die an Kinos oder andere Vertriebskanäle vertrieben wird.",
+        "da": "Levende billedmanifestation distribueret til biografer eller andre distributionskanaler.",
+        "ca": "Manifestació d’imatges en moviment distribuïda a cinemes o a altres canals de distribució.",
+        "fi": "Elokuvan manifestaatio, joka jaetaan elokuvateattereille tai muille jakelukanaville.",
+        "no": "En manifestasjon av levende bilder distribuert til kinoer eller andre distribusjonskanaler."
     },
     "ToolkitLabel": {
-        "fr": "distributeur de films de"
+        "fr": "distributeur de films de",
+        "en": "film distributor of",
+        "el": "διανομέας του",
+        "de": "Filmvertrieb von",
+        "da": "filmdistributør af",
+        "ca": "distribuïdor de pel·lícules de",
+        "fi": "jakelijana elokuvassa",
+        "no": "filmdistributør av"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14034.html"
 }

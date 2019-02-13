@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person, family, or corporate body to whom a work or part of a work is addressed to the work."
+            "Relates an agent to whom a work or part of a work is addressed to a work."
         ],
         "fr": [
-            "Met une personne, famille ou collectivité à qui une œuvre ou une partie d’œuvre est adressée en relation avec l’œuvre."
+            "Met un agent à qui une œuvre ou une partie d’œuvre est adressée en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει έναν φορέα, στον οποίο ένα έργο ή μέρος ενός έργου απευθύνεται, με ένα έργο."
+        ],
+        "de": [
+            "Setzt einen Akteur, an den ein Werk oder ein Teil eines Werks adressiert ist, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en agent, som et værk eller en del af et værk er adresseret til til et værk."
+        ],
+        "ca": [
+            "Relaciona un agent, a qui s’adreça una obra o una part d’una obra, amb una obra."
+        ],
+        "fi": [
+            "Liittää toimijan teokseen tai teoksen osaan, joka on osoitettu toimijalle."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10002",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "label": "agent"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50209",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/addresseeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24704.html",
+            "label": "is addressee of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50209",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/addresseeOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24998.html",
+            "label": "is addressee of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60690",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/addresseeOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15279.html",
         "label": "is addressee of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10070",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/addressee.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15373.html",
-        "label": "has addressee"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is addressee of",
-        "fr": "est le destinataire de"
+        "fr": "est un destinataire de",
+        "el": "είναι αλληλογράφος του",
+        "da": "er adressat i",
+        "ca": "és destinatari de",
+        "fi": "vastaanottajana teoksessa",
+        "de": "ist Adressat von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/addresseeOf.en",
     "name": {
-        "en": "addresseeOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "addresseeOf",
+        "el": "αλληλογράφοςΤου",
+        "da": "adressatI",
+        "fi": "vastaanottajanaTeoksessa",
+        "fr": "destinataireDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -56,16 +83,30 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/a/P50131",
-            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherPFCWorkOf.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/otherAgentWorkOf.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/13996.html",
-            "label": "is other person, family, or corporate body associated with a work of"
+            "label": "is other agent associated with work of"
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne, famille ou collectivité à qui une œuvre ou une partie d’œuvre est adressée."
+        "fr": "Œuvre ou partie d’œuvre adressée à un agent.",
+        "en": "A work or part of a work that is addressed to an agent.",
+        "el": "Ένα έργο ή μέρος ενός έργου το οποίο απευθύνεται σε έναν φορέα.",
+        "de": "Ein Werk oder ein Teil eines Werks, das an einen Akteur adressiert ist.",
+        "da": "Værk eller en del af et værk, som er adresseret til en agent.",
+        "ca": "Obra o una part d’una obra que s’adreça a un agent.",
+        "fi": "Teos tai teoksen osa, joka on osoitettu toimijalle.",
+        "no": "Et verk eller en del av et verk som er adressert til en agent."
     },
     "ToolkitLabel": {
-        "fr": "destinataire de"
+        "fr": "destinataire de",
+        "en": "addressee of",
+        "el": "αλληλογράφος του",
+        "de": "Adressat von",
+        "da": "adressat i",
+        "ca": "destinatari de",
+        "fi": "vastaanottajana teoksessa",
+        "no": "adressat for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/14074.html"
 }

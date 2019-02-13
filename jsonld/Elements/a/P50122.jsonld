@@ -4,30 +4,54 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a person who appeals the decision of a lower court recorded in a legal work of a higher court to the work."
+            "Relates a person who appeals a decision of a lower court recorded in a legal work of a higher court to a work."
         ],
         "fr": [
-            "Met une personne qui en appelle de la décision d’un tribunal inférieur en relation avec l’œuvre."
+            "Met une personne qui en appelle d’une décision d’un tribunal inférieur enregistrée dans une œuvre juridique d’un tribunal supérieur en relation avec une œuvre."
+        ],
+        "el": [
+            "Συνδέει ένα φυσικό πρόσωπο, που ασκεί έφεση εναντίον απόφασης κατώτερου δικαστηρίου, που καταχωρίστηκε στα πρακτικά ενός ανωτέρου δικαστηρίου, με ένα έργο."
+        ],
+        "de": [
+            "Setzt eine Person, die gegen ein Gerichtsurteil einer unteren Instanz, das in einem juristischen Werk einer höheren Instanz erfasst ist, Rechtsmittel (Berufung/Revision) einlegt, mit einem Werk in Beziehung."
+        ],
+        "da": [
+            "Relaterer en person der laver indsigelse mod en underrets beslutning, der er registrereret i et juridisk værk fra en højerere retsinstans til et værk."
+        ],
+        "ca": [
+            "Relaciona una persona, que recorre a un tribunal superior perquè esmeni la sentència d’un tribunal inferior, amb una obra."
+        ],
+        "fi": [
+            "Liittää henkilön hakemukseen, jolla henkilö hakee muutosta alemman oikeusasteen päätökseen."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10004",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14331.html",
-        "label": "Person"
+        "label": "person"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/a/object/P50122",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/object/appellantPersonOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24617.html",
+            "label": "is appellant person of"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/a/datatype/P50122",
+            "lexicalAlias": "http://rdaregistry.info/Elements/a/datatype/appellantPersonOf.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24911.html",
+            "label": "is appellant person of"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60691",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/appellantOf.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/15280.html",
         "label": "is appellant of"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10042",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/appellantPerson.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15345.html",
-        "label": "has appellant person"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/a/",
         "url": "http://metadataregistry.org/schema/show/id/81.html",
@@ -35,17 +59,20 @@
     },
     "label": {
         "en": "is appellant person of",
-        "fr": "est la personne appelante de"
+        "fr": "est une personne appelante de",
+        "el": "είναι εκαλλούν/αναιρεσείον φυσικό πρόσωπο του",
+        "da": "er appellerende person af",
+        "ca": "és persona apel·lant de",
+        "fi": "henkilön muutoshakemus",
+        "de": "ist Berufungsklagende/Revisionsklagende Person von"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/a/appellantPersonOf.en",
     "name": {
-        "en": "appellantPersonOf"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "en": "appellantPersonOf",
+        "el": "εκκαλούν/αναιρεσείονΦυσικόΠρόσωποΤου",
+        "da": "appellerendePersonAf",
+        "fi": "henkilonMuutoshakemus",
+        "fr": "personneAppelanteDe"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,10 +89,24 @@
         }
     ],
     "ToolkitDefinition": {
-        "fr": "Personne qui en appelle de la décision d’un tribunal inférieur."
+        "fr": "Œuvre juridique d’un tribunal supérieur qui enregistre une décision d’un tribunal inférieur portée en appel par une personne.",
+        "en": "A legal work of a higher court recording a decision of a lower court that is appealed by a person.",
+        "el": "Ένα νομικό έργο, που καταχωρίστηκε στα πρακτικά ενός ανωτέρου δικαστηρίου, για φυσικό πρόσωπο που ασκεί έφεση εναντίον απόφασης κατώτερου δικαστηρίου.",
+        "de": "Ein juristisches Werk einer höheren Instanz, bei der eine Person gegen ein Gerichtsurteil einer unteren Instanz, das in einem juristischen Werk einer höheren Instanz erfasst ist, Rechtsmittel (Berufung/Revision) einlegt.",
+        "da": "Juridisk værk fra en højere retsinstans der registrerer en underrets beslutning, som en person har lavet indsigelse mod.",
+        "ca": "Obra jurídica d’un tribunal superior perquè esmeni una sentència d’un tribunal inferior apel·lada per una persona.",
+        "fi": "Hakemus, jolla henkilö hakee muutosta alemman oikeusasteen päätökseen.",
+        "no": "Et juridisk verk fra en høyere rettsinstans som registrerer en avgjørelse fra en lavere rettsinstans som ankes av en person."
     },
     "ToolkitLabel": {
-        "fr": "personne appelante de"
+        "fr": "personne appelante de",
+        "en": "appellant person of",
+        "el": "εκκαλούν/αναιρεσείον φυσικό πρόσωπο του",
+        "de": "Berufungsklagende/Revisionsbeklagende Person von",
+        "da": "appellerende person af",
+        "ca": "persona apel·lant de",
+        "fi": "henkilön muutoshakemus",
+        "no": "appellantperson for"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/13987.html"
 }
