@@ -4,14 +4,32 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a work to a work that is based on or is a derivative of the work."
+            "Relates a work to a work that is based on or is a derivative of another work."
+        ],
+        "da": [
+            "Relaterer et værk til et værk, der er baseret på eller er en afledning af et værk."
+        ],
+        "fr": [
+            "Met une œuvre en relation avec une œuvre qui est basée sur une autre œuvre ou en constitue un dérivé."
+        ],
+        "vi": [
+            "Liên kết tác phẩm với tác phẩm dựa trên hoặc là dẫn xuất của tác phẩm khác."
+        ],
+        "de": [
+            "Setzt ein Werk mit einem Werk, das auf einer Ableitung eines anderen Werks basiert oder eine Ableitung eines anderen Werks ist, in Beziehung."
+        ],
+        "fi": [
+            "Liittää teoksen teokseen, joka perustuu toiseen teokseen tai on johdettu toisesta teoksesta."
+        ],
+        "ca": [
+            "Relaciona una obra amb una obra que es basa o deriva d’una altra obra."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10001",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "label": "work"
     },
     "hasSubproperty": [
         {
@@ -19,6 +37,12 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/w/derivativeWork.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15451.html",
             "label": "is derivative (work)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10229",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/derivativeWorkRelationship.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24122.html",
+            "label": "has derivative work relationship with"
         }
     ],
     "hasUnconstrained": {
@@ -27,34 +51,48 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15299.html",
         "label": "has derivative resource relationship with"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10229",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/derivativeWorkRelationship.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15532.html",
-        "label": "has derivative work relationship with"
-    },
+    "instructionNumber": "24.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/w/",
         "url": "http://metadataregistry.org/schema/show/id/77.html",
         "label": "RDA Work properties"
     },
     "label": {
-        "en": "has derivative work relationship with"
+        "en": "has derivative work relationship with",
+        "da": "har afledt værkrelation med",
+        "vi": "có mối quan hệ tác phẩm dẫn xuất với",
+        "de": "hat abgeleitete Beziehung auf Werkebene",
+        "fr": "a pour relation d’œuvre dérivée",
+        "fi": "teoksen johdannaissuhde",
+        "ca": "té com a relació d’obra derivada"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/w/derivativeWorkRelationship.en",
     "name": {
-        "en": "derivativeWorkRelationship"
+        "en": "derivativeWorkRelationship",
+        "da": "afledtværkRelation",
+        "vi": "mốiQuanHệTácPhẩmDẫnXuất",
+        "fi": "teoksenJohdannaissuhde",
+        "fr": "relationDœuvreDérivée"
     },
     "note": {
         "en": [
             "Derivative works include summaries, abstracts, digests, adaptations, dramatizations, novelizations, screenplays, free translations, paraphrases, imitations, parodies, etc."
+        ],
+        "da": [
+            "Afledte værker inkluderer resumeer, abstracts, sammenfatninger, bearbejdelser, dramatiseringer, omskrivninger til roman, manuskripter, frie oversættelser, parafraser, imitationer, parodier etc."
+        ],
+        "vi": [
+            "Tác phẩm dẫn xuất bao gồm cả tóm lược, tóm tắt, vựng tập, phỏng theo, kịch hoá, tiểu thuyết hoá, kịch bản, bản dịch tự do, diễn giải, mô phỏng, nhại, v.v..."
+        ],
+        "de": [
+            "Zu abgeleiteten Werken gehören Zusammenfassungen, Abstracts, Digests, Bearbeitungen, Bühnenbearbeitungen, Romanbearbeitungen, freie Übersetzungen, Paraphrasen, Imitationen, Parodien usw."
+        ],
+        "ca": [
+            "Les obres derivades inclouen sumaris, resums, compendis, adaptacions, dramatitzacions, novel·litzacions, guions, traduccions lliures, paràfrasis, imitacions, paròdies, etc."
+        ],
+        "fr": [
+            "Les œuvres dérivées comprennent les résumés, y compris les résumés analytiques, les condensés, les adaptations, les novélisations, les scénarios, les traductions libres, les paraphrases, les imitations, les parodies, etc."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -65,20 +103,32 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/w/P10198",
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedWorkWork.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15501.html",
-            "label": "has related work"
+            "label": "has related work (work)"
         }
     ],
     "ToolkitDefinition": {
-        "en": "A work that is based on or is a derivative of the work.",
-        "fr": "Œuvre qui est basée sur l’œuvre ou en constitue un dérivé.",
-        "es": "Una obra que se basa en, o es un derivado de la obra."
+        "en": "A work that is based on or is a derivative of another work.",
+        "fr": "Œuvre qui est basée sur une autre œuvre ou en constitue un dérivé.",
+        "es": "Una obra que se basa en, o es un derivado de la obra.",
+        "da": "Værk, der er baseret på eller er en afledning af et værk.",
+        "vi": "Tác phẩm dựa trên hoặc là dẫn xuất của tác phẩm khác.",
+        "de": "Ein Werk, das auf einer Ableitung eines anderen Werks basiert oder eine Ableitung eines anderen Werks ist.",
+        "fi": "Teos, joka perustuu toiseen teokseen tai on johdettu toisesta teoksesta. Johdettuja teoksia ovat yhteenvedot, abtraktit, mukautetut lyhennelmät, mukaelmat, dramatisoinnit, romaanimukaelmat, käsikirjoitukset,  vapaamuotoiset käännökset, parafraasit, jäljitelmat, parodiat tms.",
+        "no": "Et verk som er basert på eller avledet fra et annet verk.",
+        "ca": "Obra que es basa o deriva d’una altra obra."
     },
     "ToolkitLabel": {
         "en": "derivative work relationship",
         "fr": "relation d’œuvre dérivée",
-        "es": "relaciones de obra derivada"
+        "es": "relaciones de obra derivada",
+        "da": "afledt værkrelation",
+        "vi": "mối quan hệ tác phẩm dẫn xuấti",
+        "de": "Abgeleitete Beziehung auf Werkebene",
+        "fi": "teoksen johdannaissuhde",
+        "no": "relasjonstypen avledet verk",
+        "ca": "relació d’obra derivada"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15532.html"
 }

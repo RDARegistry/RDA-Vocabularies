@@ -4,14 +4,32 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a work to a work that is an augmentation of, or is augmented by, or is complemented by the work."
+            "Relates a work to a work that is an augmentation of, or is augmented by, or is complemented by another work."
+        ],
+        "da": [
+            "Relaterer et værk til et værk der er en berigelse af, eller er beriget af, eller er komplementeret af et værk."
+        ],
+        "fr": [
+            "Met une œuvre en relation avec une œuvre qui constitue une augmentation d’une œuvre ou qui est augmentée ou complétée par une autre œuvre."
+        ],
+        "vi": [
+            "Liên kết tác phẩm với tác phẩm là gia tăng của, hoặc được gia tăng bởi, hoặc được bổ sung bởi tác phẩm khác."
+        ],
+        "de": [
+            "Setzt ein Werk mit einem Werk, das eine Erweiterung eines anderen Werks ist oder durch ein anderes Werk erweitert wurde oder von einem anderen Werk vervollständigt wurde, in Beziehung."
+        ],
+        "fi": [
+            "Liittää teoksen teokseen, joka on täydennys- tai lisäosa toiseen teokseen tai jota toinen teos täydentää."
+        ],
+        "ca": [
+            "Relaciona una obra amb una obra que és una augmentació o és augmentada o és complementada per una altra obra."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10001",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "label": "work"
     },
     "hasSubproperty": [
         {
@@ -31,6 +49,12 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/w/augmentationOfWork.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15495.html",
             "label": "is augmentation of (work)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10228",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/accompanyingWorkRelationship.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24121.html",
+            "label": "has accompanying work relationship with"
         }
     ],
     "hasUnconstrained": {
@@ -39,34 +63,48 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15298.html",
         "label": "has accompanying resource relationship with"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10228",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/accompanyingWorkRelationship.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15531.html",
-        "label": "has accompanying work relationship with"
-    },
+    "instructionNumber": "24.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/w/",
         "url": "http://metadataregistry.org/schema/show/id/77.html",
         "label": "RDA Work properties"
     },
     "label": {
-        "en": "has accompanying work relationship with"
+        "en": "has accompanying work relationship with",
+        "da": "har ledsaget værkrelation med",
+        "vi": "có mối quan hệ tác phẩm kèm theo với",
+        "de": "hat begleitende Beziehung auf Werkebene",
+        "fr": "a pour relation d’œuvre d’accompagnement",
+        "fi": "teoksen täydennyssuhde",
+        "ca": "té com a relació d’obra d’acompanyament"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/w/accompanyingWorkRelationship.en",
     "name": {
-        "en": "accompanyingWorkRelationship"
+        "en": "accompanyingWorkRelationship",
+        "da": "ledsagetværkRelation",
+        "vi": "mốiQuanHệTácPhẩmKèmTheo",
+        "fi": "teoksenTaydennysSuhde",
+        "fr": "relationDœuvreDaccompagnement"
     },
     "note": {
         "en": [
             "Accompanying works include supplements, concordances, indexes, catalogues, teacher’s guides, music for a motion picture, etc."
+        ],
+        "da": [
+            "Ledsagende værker inkluderer supplerende konkordanser, indekser, kataloger, lærervejledning, musik til en film, etc."
+        ],
+        "vi": [
+            "Tài liệu kèm theo bao gồm cả phụ lục, sách dẫn, chỉ mục, mục lục, chỉ dẫn giáo viên, âm nhạc cho phim điện ảnh, v.v..."
+        ],
+        "de": [
+            "Zu begleitenden Werken gehören Beilagen, Konkordanzen, Indices, Kataloge, Lehrerhandbücher, Filmmusik usw."
+        ],
+        "ca": [
+            "Les obres d’acompanyament inclouen suplements, concordances, índexs, catàlegs, guies del professor, música per a pel·lícules cinematogràfiques, etc."
+        ],
+        "fr": [
+            "Les œuvres d’accompagnement comprennent les suppléments, les concordances, les index, les catalogues, les guides de l’enseignant, la musique de film, etc."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -77,20 +115,32 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/w/P10198",
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedWorkWork.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15501.html",
-            "label": "has related work"
+            "label": "has related work (work)"
         }
     ],
     "ToolkitDefinition": {
-        "en": "A work that is an augmentation of, or is augmented by, or is complemented by the work.",
-        "fr": "Œuvre qui constitue une augmentation de l’œuvre ou qui est augmentée ou complétée par elle.",
-        "es": "Una obra que es un aumento de, o se ve aumentada por, o se complementa con la obra."
+        "en": "A work that is an augmentation of, or is augmented by, or is complemented by another work.",
+        "fr": "Œuvre qui constitue une augmentation d’une œuvre ou qui est augmentée ou complétée par une autre œuvre.",
+        "es": "Una obra que es un aumento de, o se ve aumentada por, o se complementa con la obra.",
+        "da": "Værk der er en berigelse af, eller er beriget af, eller er komplementeret af et værk.",
+        "vi": "Tác phẩm là gia tăng của, hoặc được gia tăng bởi, hoặc được bổ sung bởi tác phẩm khác.",
+        "de": "Ein Werk, das eine Erweiterung eines anderen Werks ist oder durch ein anderes Werk erweitert wurde oder von einem anderen Werk vervollständigt wurde.",
+        "fi": "Teos, joka on täydennys- tai lisäosa toiseen teokseen tai jota toinen teos täydentää. Täydentäviä teoksia ovat suplementit, konkordanssit, hakemistot, luettelot, opettajan oppaat, elokuvan musiikki tms.",
+        "no": "Et verk som er en utvidelse av, eller som utvides av, eller som utfylles av, et annet verk.",
+        "ca": "Obra que és una augmentació o és augmentada o és complementada per una altra obra."
     },
     "ToolkitLabel": {
         "en": "accompanying work relationship",
         "fr": "relation d’œuvre d’accompagnement",
-        "es": "relaciones de obra acompañante"
+        "es": "relaciones de obra acompañante",
+        "da": "ledsaget værkrelation",
+        "vi": "mối quan hệ tác phẩm kèm theo",
+        "de": "Begleitende Beziehung auf Werkebene",
+        "fi": "teoksen täydennyssuhde",
+        "no": "ledsagende verk: relasjonstype",
+        "ca": "relació d’obra d’acompanyament"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15531.html"
 }

@@ -4,14 +4,32 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a work to a person, family, or corporate body responsible for most of the business aspects of a production for screen, sound recording, television, webcast, etc."
+            "Relates a work to an agent responsible for most of the business aspects of a production for screen, sound recording, television, webcast, etc."
+        ],
+        "da": [
+            "Relaterer et værk til en agent, der er ansvarlig for størstedelen af de forretningsmæssige aspekter ved en produktion beregnet til lærred, lydoptagelse, tv, webcast etc."
+        ],
+        "fr": [
+            "Met une œuvre en relation avec un agent responsable de la majeure partie des aspects commerciaux de la production d’un film, d’un enregistrement audio, d’une émission de télévision, d’une webémission, etc."
+        ],
+        "vi": [
+            "Liên kết tác phẩm với tác nhân có trách nhiệm về phần lớn khía cạnh kinh doanh của sản phẩm màn ảnh, ghi âm, truyền hình, web, v.v..."
+        ],
+        "de": [
+            "Setzt ein Werk mit einem Akteur, der für die meisten geschäftlichen Aspekte einer Produktion für die Bühne, für die Leinwand, für eine Tonaufnahme, für das Fernsehen, für einen Webcast usw. verantwortlich ist, in Beziehung."
+        ],
+        "fi": [
+            "Liittää teoksen toimijaan, joka vastaa elokuvan, äänitallenteen, televisio-ohjelman, suoratoistolähetyksen tms. tuotannon liiketoiminnallisista tehtävistä."
+        ],
+        "ca": [
+            "Relaciona una obra amb un agent responsable de la majoria dels aspectes empresarials de la producció d’una pel·lícula, un enregistrament àudio, un programa de televisió, una emissió per al web, etc."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10001",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "label": "work"
     },
     "hasSubproperty": [
         {
@@ -31,6 +49,18 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/w/televisionProducer.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15378.html",
             "label": "has television producer"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10304",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/audioProducer.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23028.html",
+            "label": "has audio producer"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10064",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/producer.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23979.html",
+            "label": "has producer"
         }
     ],
     "hasUnconstrained": {
@@ -39,34 +69,48 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15034.html",
         "label": "has producer"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50201",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/producerOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14066.html",
-        "label": "is producer of"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/w/",
         "url": "http://metadataregistry.org/schema/show/id/77.html",
         "label": "RDA Work properties"
     },
     "label": {
-        "en": "has producer"
+        "en": "has producer",
+        "da": "har producer",
+        "vi": "có nhà sản xuất",
+        "de": "hat Produzent",
+        "fr": "a pour producteur",
+        "fi": "tuottaja",
+        "ca": "té com a productor"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/w/producer.en",
     "name": {
-        "en": "producer"
+        "en": "producer",
+        "da": "producer",
+        "vi": "nhàSảnXuất",
+        "fi": "tuottaja",
+        "fr": "producteur"
     },
     "note": {
         "en": [
             "The producer is generally responsible for fund raising, managing the production, hiring key personnel, arranging for distributors, etc."
+        ],
+        "da": [
+            "Produceren er almindeligvis ansvarlig for finansiering, produktionsledelse, ansættelse af nøglepersonale, at finde distributører etc."
+        ],
+        "vi": [
+            "Nhà sản xuất có trách nhiệm tổng quát về nguồn tài chính, quản lý sản xuất, thuê mướn nhân sự chủ yếu, dắp xếp về nhà phân phppos, v.v..."
+        ],
+        "de": [
+            "Der Produzent ist im Allgemeinen für die Geldbeschaffung, das Produktionsmanagement, das Einstellen von wichtigem Personal, die Organisation des Vertriebs usw. verantwortlich."
+        ],
+        "ca": [
+            "En general, el productor és responsable d’assegurar el finançament, de gestionar la producció, de contractar el personal clau, d’organitzar la distribució etc."
+        ],
+        "fr": [
+            "Le producteur est généralement responsable d’assurer le financement, de gérer la production, de recruter le personnel clé, d’organiser la distribution, etc."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -77,20 +121,32 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/w/P10047",
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/otherPFCWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/otherAgentWork.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15350.html",
-            "label": "has other person, family, or corporate body associated with a work"
+            "label": "has other agent associated with work"
         }
     ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body responsible for most of the business aspects of a production for screen, sound recording, television, webcast, etc.",
-        "fr": "Personne, famille ou collectivité responsable de la majeure partie des aspects financiers, techniques et artistiques de la production d’un film, d’un enregistrement audio, d’une émission de télévision, d’une webémission, etc.",
-        "es": "Una persona, familia o entidad corporativa responsable de la mayor parte de los aspectos empresariales de la producción cinematográfica, grabación sonora, televisión, emisión web, etc."
+        "en": "An agent responsible for most of the business aspects of a production for screen, sound recording, television, webcast, etc.",
+        "fr": "Agent responsable de la majeure partie des aspects commerciaux de la production d’un film, d’un enregistrement audio, d’une émission de télévision, d’une webémission, etc.",
+        "es": "Una persona, familia o entidad corporativa responsable de la mayor parte de los aspectos empresariales de la producción cinematográfica, grabación sonora, televisión, emisión web, etc.",
+        "da": "Agent, der er ansvarlig for størstedelen af de forretningsmæssige aspekter ved en produktion beregnet til lærred, lydoptagelse, tv, webcast etc.",
+        "vi": "Tác nhân có trách nhiệm về phần lớn khía cạnh kinh doanh của sản phẩm màn ảnh, ghi âm, truyền hình, web, v.v...",
+        "de": "Ein Akteur, der für die meisten geschäftlichen Aspekte einer Produktion für die Bühne, für die Leinwand, für eine Tonaufnahme, für das Fernsehen, für einen Webcast usw. verantwortlich ist.",
+        "fi": "Toimija, joka vastaa elokuvan, äänitallenteen, televisio-ohjelman, suoratoistolähetyksen tms. tuotannon liiketoiminnallisista tehtävistä. Tuottaja vastaa tyypillisesti rahoituksen hankkimisesta, tuotannon johdosta, avainhenkilöstön palkkaamisesta, jakelun järjestämisestä tms.",
+        "no": "En agent med ansvar for de fleste forretningsmessige aspektene ved en produksjon for film eller fjernsyn, lydinnspilling, webcast, etc.",
+        "ca": "Agent responsable de la majoria dels aspectes empresarials de la producció d’una pel·lícula, un enregistrament àudio, un programa de televisió, una emissió per al web, etc."
     },
     "ToolkitLabel": {
         "en": "producer",
         "fr": "producteur",
-        "es": "productor"
+        "es": "productor",
+        "da": "producer",
+        "vi": "nhà sản xuất",
+        "de": "Produzent",
+        "fi": "tuottaja",
+        "no": "produsent",
+        "ca": "productor"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15367.html"
 }

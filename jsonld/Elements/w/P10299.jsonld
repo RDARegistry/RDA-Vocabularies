@@ -4,44 +4,69 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a work to a person, family, or corporate body responsible for establishing a serial, integrating resource, or multipart monograph."
+            "Relates a work to an agent responsible for establishing a serial, integrating resource, or multipart monograph."
+        ],
+        "da": [
+            "Relaterer et værk til en agent, der er ansvarlig for at have etableret et periodikum, en integrerende ressource eller et flerbindsværk."
+        ],
+        "vi": [
+            "Liên kết tác phẩm với tác nhân có trách nhiệm tạo lập ấn phẩm nhiều kỳ, tài nguyên tích hợp, hoặc chuyên khảo nhiều phần."
+        ],
+        "de": [
+            "Setzt ein Werk mit einem Akteur, der für das Begründen einer fortlaufenden oder einer integrierenden Ressource oder einer mehrteiligen Monografie verantwortlich ist, in Beziehung."
+        ],
+        "fi": [
+            "Liittää teoksen toimijaan, joka on vastuussa sarja-aineiston, päivittyvän aineiston tai moniosaisen monografian perustamisesta."
+        ],
+        "ca": [
+            "Relaciona una obra amb un agent responsable de l’establiment d’una publicació en sèrie, un recurs integrant o una obra monogràfica en diverses parts."
+        ],
+        "fr": [
+            "Met une œuvre en relation avec un agent responsable de l’établissement d’une publication en série, d’une ressource intégratrice ou d’une monographie en plusieurs parties."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10001",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "label": "work"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10299",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/founderOfWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24190.html",
+            "label": "has founder of work"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60871",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/founderOfResource.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/22878.html",
         "label": "has founder of resource"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50290",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/founderOfWorkOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/22873.html",
-        "label": "is founder of work of"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/w/",
         "url": "http://metadataregistry.org/schema/show/id/77.html",
         "label": "RDA Work properties"
     },
     "label": {
-        "en": "has founder of work"
+        "en": "has founder of work",
+        "da": "har stifter af værk",
+        "vi": "có người tạo lập tác phẩm",
+        "de": "hat Begründer eines Werks",
+        "fi": "teoksen perustaja",
+        "ca": "té com a fundador d’una obra",
+        "fr": "a pour fondateur d’œuvre"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/w/founderOfWork.en",
     "name": {
-        "en": "founderOfWork"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "en": "founderOfWork",
+        "da": "stifterAfVærk",
+        "vi": "ngườiTạoLậpTácPhẩm",
+        "fi": "teoksenPerustaja",
+        "fr": "fondateurDœuvre"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -52,16 +77,30 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/w/P10047",
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/otherPFCWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/otherAgentWork.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15350.html",
-            "label": "has other person, family, or corporate body associated with a work"
+            "label": "has other agent associated with work"
         }
     ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body responsible for establishing a serial, integrating resource, or multipart monograph."
+        "en": "An agent responsible for establishing a serial, integrating resource, or multipart monograph.",
+        "da": "En agent, der er ansvarlig for at have etableret et periodikum, en integrerende ressource eller et flerbindsværk.",
+        "vi": "Tác nhân có trách nhiệm tạo lập ấn phẩm nhiều kỳ, tài nguyên tích hợp, hoặc chuyên khảo nhiều phần.",
+        "de": "Ein Akteur, der für das Begründen einer fortlaufenden oder einer integrierenden Ressource oder einer mehrteiligen Monografie verantwortlich ist.",
+        "fi": "Toimija, joka on vastuussa sarja-aineiston, päivittyvän aineiston tai moniosaisen monografian perustamisesta.",
+        "no": "En agent med ansvar for å etablere et periodikum, en integrerende ressurs eller en flerdelsmonografi.",
+        "ca": "Agent responsable de l’establiment d’una publicació en sèrie, un recurs integrant o una obra monogràfica en diverses parts.",
+        "fr": "Agent responsable de l’établissement d’une publication en série, d’une ressource intégratrice ou d’une monographie en plusieurs parties."
     },
     "ToolkitLabel": {
-        "en": "founder of work"
+        "en": "founder of work",
+        "da": "stifter af værk",
+        "vi": "người tạo lập tác phẩm",
+        "de": "Begründer eines Werks",
+        "fi": "teoksen perustaja",
+        "no": "grunnlegger av verk",
+        "ca": "fundador d’una obra",
+        "fr": "fondateur d’œuvre"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/22881.html"
 }

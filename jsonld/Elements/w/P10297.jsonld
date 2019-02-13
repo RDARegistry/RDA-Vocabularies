@@ -4,44 +4,69 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a work to a person, family, or corporate body organizing the exhibit, event, conference, course, program, etc., which gave rise to a work."
+            "Relates a work to an agent organizing the exhibit, event, conference, course, program, etc., which gave rise to a work."
+        ],
+        "da": [
+            "Relaterer et værk til en agent, der har arrangeret den udstilling, event eller konference eller det kursus eller program etc., der gav anledning til et værk."
+        ],
+        "fr": [
+            "Met une œuvre en relation avec un agent qui organise l’exposition, l’événement, le congrès, le cours, le programme, etc. ayant donné lieu à la création d’une œuvre."
+        ],
+        "vi": [
+            "Liên kết tác phẩm với tác nhân tổ chức triển lãm, sự kiện, hội nghị, khoá học, chương trình, v.v... bắt nguồn cho tác phẩm."
+        ],
+        "de": [
+            "Setzt ein Werk mit einem Akteur, der eine Ausstellung, ein Ereignis, eine Konferenz, einen Kurs, eine Sendung usw. organisiert, die/das ein Werk zur Folge hat, in Beziehung."
+        ],
+        "fi": [
+            "Liittää teoksen toimijaan, jonka järjestämän näyttelyn, tapahtuman, konferenssin, kurssin, ohjelman tms. seurauksena teos luotiin."
+        ],
+        "ca": [
+            "Relaciona una obra amb un agent responsable d’organitzar l’exposició, l’esdeveniment, el congrés, etc., que dóna lloc a una obra."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10001",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "label": "work"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10297",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/organizer.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24188.html",
+            "label": "has organizer"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60849",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/organizer.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/16574.html",
         "label": "has organizer"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/a/P50270",
-        "lexicalAlias": "http://rdaregistry.info/Elements/a/organizerOf.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/16576.html",
-        "label": "is organizer of"
-    },
+    "instructionNumber": "18.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/w/",
         "url": "http://metadataregistry.org/schema/show/id/77.html",
         "label": "RDA Work properties"
     },
     "label": {
-        "en": "has organizer"
+        "en": "has organizer",
+        "da": "har arrangør",
+        "vi": "có nhà tổ chức",
+        "de": "hat Veranstalter",
+        "fr": "a pour organisateur",
+        "fi": "järjestäjä",
+        "ca": "té com a organitzador"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/w/organizer.en",
     "name": {
-        "en": "organizer"
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10002",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14329.html",
-        "label": "Agent"
+        "en": "organizer",
+        "da": "arrangør",
+        "vi": "nhàTổChức",
+        "fi": "jarjestaja",
+        "fr": "organisateur"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -52,20 +77,32 @@
     "subPropertyOf": [
         {
             "@id": "http://rdaregistry.info/Elements/w/P10047",
-            "lexicalAlias": "http://rdaregistry.info/Elements/w/otherPFCWork.en",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/otherAgentWork.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15350.html",
-            "label": "has other person, family, or corporate body associated with a work"
+            "label": "has other agent associated with work"
         }
     ],
     "ToolkitDefinition": {
-        "en": "A person, family, or corporate body organizing the exhibit, event, conference, course, program, etc., which gave rise to a work.",
-        "fr": "Personne, famille ou collectivité organisant l’exposition, l’événement, le congrès, etc. qui a donné lieu à la création d’une œuvre.",
-        "es": "Una persona, familia o entidad corporativa que organiza una exhibición, evento, conferencia, etc., que da origen a una obra."
+        "en": "An agent organizing the exhibit, event, conference, course, program, etc., which gave rise to a work.",
+        "fr": "Agent qui organise l’exposition, l’événement, le congrès, le cours, le programme, etc. ayant donné lieu à la création d’une œuvre.",
+        "es": "Una persona, familia o entidad corporativa que organiza una exhibición, evento, conferencia, etc., que da origen a una obra.",
+        "da": "Agent, der har arrangeret den udstilling, event eller konference eller det kursus eller program etc., der gav anledning til et værk.",
+        "vi": "Tác nhân tổ chức triển lãm, sự kiện, hội nghị, khoá học, chương trình, v.v... bắt nguồn cho tác phẩm.",
+        "de": "Ein Akteur, der eine Ausstellung, ein Ereignis, eine Konferenz, einen Kurs, eine Sendung usw. organisiert, die/das ein Werk zur Folge hat.",
+        "fi": "Toimija, jonka järjestämän näyttelyn, tapahtuman, konferenssin, kurssin, ohjelman tms. seurauksena teos luotiin.",
+        "no": "En agent som organiserte utstillingen, arrangementet, konferansen, kurset, programmet etc. som ga opphav til et verk.",
+        "ca": "Agent responsable d’organitzar l’exposició, l’esdeveniment, el congrés, etc., que dóna lloc a una obra."
     },
     "ToolkitLabel": {
         "en": "organizer",
         "fr": "organisateur",
-        "es": "organizador"
+        "es": "organizador",
+        "da": "arrangør",
+        "vi": "nhà tổ chức",
+        "de": "Veranstalter",
+        "fi": "järjestäjä",
+        "no": "arrangør",
+        "ca": "organitzador"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/16577.html"
 }

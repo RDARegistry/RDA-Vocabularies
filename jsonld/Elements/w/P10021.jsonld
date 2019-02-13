@@ -5,43 +5,88 @@
     "description": {
         "en": [
             "Relates a work to a later work used in part in place of an earlier work, usually because the later work contains updated or new information that makes part of the earlier work obsolete."
+        ],
+        "da": [
+            "Relaterer et senere værk, der er anvendt delvist i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet."
+        ],
+        "fr": [
+            "Met une œuvre en relation avec une œuvre ultérieure utilisée en partie à la place d’une œuvre antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend une partie de l’œuvre antérieure obsolète."
+        ],
+        "vi": [
+            "Liên kết tác phẩm với tác phẩm sau này sử dụng một phần để thay thế tác phẩm trước đây, thường là vì tác phẩm sau này có chứa thông tin cập nhật hoặc mới làm cho phần của tác phẩm trước đây bị lỗi thời."
+        ],
+        "de": [
+            "Setzt ein Werk mit einem späteren Werk, das teilweise anstelle eines früheren Werks verwendet wird, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen, in Beziehung."
+        ],
+        "fi": [
+            "Liittää teoksen teokseen, joka osittain korvaa aiemman teoksen sisällön, josta osa on vanhentunut yleensä päivitetyn tai uuden tiedon myötä"
+        ],
+        "ca": [
+            "Relaciona una obra amb una obra posterior usada en part en lloc d’una obra anterior, normalment perquè l’obra posterior inclou informació actualitzada o nova que converteix l’obra anterior en obsoleta."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10001",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "label": "work"
     },
+    "hasSubproperty": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10021",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/replacedInPartByWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/23940.html",
+            "label": "is replaced in part by (work)"
+        }
+    ],
     "hasUnconstrained": {
         "@id": "http://rdaregistry.info/Elements/u/P60103",
         "lexicalAlias": "http://rdaregistry.info/Elements/u/replacedInPartBy.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14699.html",
         "label": "is replaced in part by"
     },
-    "inverseOf": {
-        "@id": "http://rdaregistry.info/Elements/w/P10206",
-        "lexicalAlias": "http://rdaregistry.info/Elements/w/replacementInPartOfWork.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/15509.html",
-        "label": "is replacement in part of (work)"
-    },
+    "instructionNumber": "24.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/w/",
         "url": "http://metadataregistry.org/schema/show/id/77.html",
         "label": "RDA Work properties"
     },
     "label": {
-        "en": "is replaced in part by (work)"
+        "en": "is replaced in part by (work)",
+        "da": "er delvis erstattet af (værk)",
+        "vi": "được thay thế một phần bởi (tác phẩm)",
+        "de": "ist teilweise ersetzt durch (Werk)",
+        "fr": "est remplacé en partie par (œuvre)",
+        "fi": "osittain korvattu teoksella",
+        "ca": "és reemplaçat en part per (obra)"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/w/replacedInPartByWork.en",
     "name": {
-        "en": "replacedInPartByWork"
+        "en": "replacedInPartByWork",
+        "da": "delvisErstattetAfVærk",
+        "vi": "đượcThayThếMộtPhầnBởiTácPhẩm",
+        "fi": "osittainKorvattuTeoksella",
+        "fr": "remplacéEnPartieParŒuvre"
     },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+    "note": {
+        "en": [
+            "This relationship applies generally to single-part units, multipart monographs, and integrating resources."
+        ],
+        "da": [
+            "Den her relation bruges generelt til enkeltstyksenheder, flerbindsværker og integrerende ressourcer."
+        ],
+        "vi": [
+            "Mối quan hệ này áp dụng tổng quá đối với đơn vị một phần, chuyên khảo nhiều phần, và tài nguyên tích hợp."
+        ],
+        "de": [
+            "Wird im Allgemeinen für Einzelbände, mehrteilige Monografien und integrierende Ressourcen angewendet."
+        ],
+        "ca": [
+            "Aquesta relació s’aplica generalment a les unitats en una sola part, a les monografies en diverses parts i als recursos integrants."
+        ],
+        "fr": [
+            "Cette relation s’applique généralement aux unités en une seule partie, aux monographies en plusieurs parties et aux ressources intégratrices."
+        ]
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -60,12 +105,24 @@
     "ToolkitDefinition": {
         "en": "A later work used in part in place of an earlier work, usually because the later work contains updated or new information that makes part of the earlier work obsolete.",
         "fr": "Œuvre ultérieure utilisée en partie à la place d’une œuvre antérieure, généralement parce que l’œuvre ultérieure contient de l’information nouvelle ou mise à jour qui rend une partie de l’œuvre antérieure obsolète.",
-        "es": "Una obra posterior usada en parte en lugar de una obra anterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta parte de la obra anterior."
+        "es": "Una obra posterior usada en parte en lugar de una obra anterior, generalmente porque la obra posterior contiene información actualizada o nueva que hace obsoleta parte de la obra anterior.",
+        "da": "Senere værk, der er anvendt delvist i stedet for et tidligere værk, normalt fordi det senere værk indeholder opdateret eller ny information, der betyder, at det tidligere værk er forældet.",
+        "vi": "Tác phẩm sau này sử dụng một phần để thay thế tác phẩm trước đây, thường là vì tác phẩm sau này có chứa thông tin cập nhật hoặc mới làm cho phần của tác phẩm trước đây bị lỗi thời.",
+        "de": "Ein späteres Werk, das teilweise anstelle eines früheren Werks verwendet wird, normalerweise weil das spätere Werk aktualisierte oder neue Informationen enthält, die das frühere Werk obsolet machen.",
+        "fi": "Teos, joka osittain korvaa aiemman teoksen sisällön, josta osa on vanhentunut yleensä päivitetyn tai uuden tiedon myötä. Sovelletaan tavallisesti yksiosaisiin aineistoihin, moniosaisiin monografioihin ja päivittyviin aineistoihin",
+        "no": "Et senere verk delvis brukt i stedet for et tidligere verk, som regel fordi det senere verket inneholder oppdatert eller ny informasjon som gjør del av det tidligere verket foreldet.",
+        "ca": "Obra posterior usada en part en lloc d’una obra anterior, normalment perquè l’obra posterior inclou informació actualitzada o nova que converteix l’obra anterior en obsoleta."
     },
     "ToolkitLabel": {
         "en": "replaced in part by (work)",
         "fr": "remplacé en partie par (œuvre)",
-        "es": "reemplazada en parte por (obra)"
+        "es": "reemplazada en parte por (obra)",
+        "da": "delvis erstattet af (værk)",
+        "vi": "được thay thế một phần của (tác phẩm)",
+        "de": "Teilweise ersetzt durch (Werk)",
+        "fi": "osittain korvattu teoksella",
+        "no": "delvis erstattet av (verk)",
+        "ca": "reemplaçat en part per (obra)"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15324.html"
 }

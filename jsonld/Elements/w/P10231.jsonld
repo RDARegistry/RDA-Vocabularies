@@ -4,14 +4,32 @@
     "@type": "Property",
     "description": {
         "en": [
-            "Relates a work to a work that is preceded by or succeeded by the work."
+            "Relates a work to a work that is preceded by or succeeded by another work."
+        ],
+        "da": [
+            "Relaterer et værk til et værk der er forudgået af eller efterfulgt af et værk."
+        ],
+        "fr": [
+            "Met une œuvre en relation avec une œuvre qui est précédée ou suivie par une autre œuvre."
+        ],
+        "vi": [
+            "Liên kết tác phẩm với tác phẩm được đi trước bởi hoặc tiếp theo bởi tác phẩm khác."
+        ],
+        "de": [
+            "Setzt ein Werk mit einem Werk, dem ein anderes Werk voranging oder folgte, in Beziehung."
+        ],
+        "fi": [
+            "Liittää teoksen teokseen, jota edeltää tai seuraa toinen teos."
+        ],
+        "ca": [
+            "Relaciona una obra amb una obra que és precedida o seguida per una altra obra."
         ]
     },
     "domain": {
         "@id": "http://rdaregistry.info/Elements/c/C10001",
         "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
         "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
+        "label": "work"
     },
     "hasSubproperty": [
         {
@@ -25,6 +43,12 @@
             "lexicalAlias": "http://rdaregistry.info/Elements/w/succeededByWork.en",
             "url": "http://metadataregistry.org/schemaprop/show/id/15473.html",
             "label": "is succeeded by (work)"
+        },
+        {
+            "@id": "http://rdaregistry.info/Elements/w/object/P10231",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/object/sequentialWorkRelationship.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/24123.html",
+            "label": "has sequential work relationship with"
         }
     ],
     "hasUnconstrained": {
@@ -33,28 +57,45 @@
         "url": "http://metadataregistry.org/schemaprop/show/id/15302.html",
         "label": "has sequential resource relationship with"
     },
+    "instructionNumber": "24.5",
     "isDefinedBy": {
         "@id": "http://rdaregistry.info/Elements/w/",
         "url": "http://metadataregistry.org/schema/show/id/77.html",
         "label": "RDA Work properties"
     },
     "label": {
-        "en": "has sequential work relationship with"
+        "en": "has sequential work relationship with",
+        "da": "har sekventiel værk-relation med",
+        "vi": "có mối quan hệ tác phẩm tiếp theo với",
+        "de": "hat Nachfolge-Beziehung auf Werkebene",
+        "fr": "a pour relation d’œuvre séquentielle",
+        "fi": "teoksen jatkuvuussuhde",
+        "ca": "té com a relació d’obra seqüencial"
     },
     "lexicalAlias": "http://rdaregistry.info/Elements/w/sequentialWorkRelationship.en",
     "name": {
-        "en": "sequentialWorkRelationship"
+        "en": "sequentialWorkRelationship",
+        "da": "sekventielVærkRelation",
+        "vi": "mốiQuanHệTácPhẩmTiếpTheo",
+        "fi": "teoksenJatkuvuusSuhde",
+        "fr": "relationDœuvreSéquentielle"
     },
     "note": {
         "en": [
             "Sequential works include sequels, prequels, continuations, superseding works, etc."
+        ],
+        "vi": [
+            "Tác phẩm tiếp theo bao gồm cả tác phẩm đoạn theo, mô tả trước, tiếp tục, thay thế, v.v..."
+        ],
+        "de": [
+            "Dazu gehören Sequels, Prequels, Fortsetzungen usw."
+        ],
+        "ca": [
+            "Les obres seqüencials inclouen seqüeles, preqüeles, continuacions, obres que es reemplacen, etc."
+        ],
+        "fr": [
+            "Les œuvres séquentielles comprennent les suites, les antépisodes, les continuations, les œuvres qui en remplacent d’autres, etc."
         ]
-    },
-    "range": {
-        "@id": "http://rdaregistry.info/Elements/c/C10001",
-        "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-        "url": "http://metadataregistry.org/schemaprop/show/id/14328.html",
-        "label": "Work"
     },
     "status": {
         "@id": "http://metadataregistry.org/uri/RegStatus/1001",
@@ -62,15 +103,35 @@
         "url": "http://metadataregistry.org/concept/show/id/412.html",
         "label": "Published"
     },
+    "subPropertyOf": [
+        {
+            "@id": "http://rdaregistry.info/Elements/w/P10198",
+            "lexicalAlias": "http://rdaregistry.info/Elements/w/relatedWorkWork.en",
+            "url": "http://metadataregistry.org/schemaprop/show/id/15501.html",
+            "label": "has related work (work)"
+        }
+    ],
     "ToolkitDefinition": {
-        "en": "A work that is preceded by or succeeded by the work.",
-        "fr": "Œuvre qui est précédée ou suivie par l’œuvre.",
-        "es": "Una obra que es precedido por o sucedida por la obra."
+        "en": "A work that is preceded by or succeeded by another work.",
+        "fr": "Œuvre qui est précédée ou suivie par une autre œuvre.",
+        "es": "Una obra que es precedido por o sucedida por la obra.",
+        "da": "Værk der er forudgået af eller efterfulgt af et værk.",
+        "vi": "Tác phẩm được đi trước bởi hoặc tiếp theo bởi tác phẩm khác.",
+        "de": "Ein Werk, dem ein anderes Werk voranging oder folgte.",
+        "fi": "Teos, jota edeltää tai seuraa toinen teos. Peräkkäisiä teoksia ovat jatko-osat, esiosat, seuraajat, edeltävät teokset tms",
+        "no": "Et verk som avløser eller avløses av et annet verk.",
+        "ca": "Obra que és precedida o seguida per una altra obra."
     },
     "ToolkitLabel": {
         "en": "sequential work relationship",
         "fr": "relation d’œuvre séquentielle",
-        "es": "relaciones de obra secuencial"
+        "es": "relaciones de obra secuencial",
+        "da": "sekventiel værkrelation",
+        "vi": "mối quan hệ tác phẩm tiếp theoi",
+        "de": "Nachfolge-Beziehung auf Werkebene",
+        "fi": "teoksen jatkuvuussuhde",
+        "no": "relasjonstypen etterfølgende verk",
+        "ca": "relació d’obra seqüencial"
     },
     "url": "http://metadataregistry.org/schemaprop/show/id/15534.html"
 }
