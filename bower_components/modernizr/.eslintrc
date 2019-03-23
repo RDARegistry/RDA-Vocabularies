@@ -1,0 +1,57 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true,
+    "amd": true
+  },
+  "globals": {
+    "DocumentTouch": true,
+    "Modernizr": true,
+    "requirejs": true,
+    "expect": true,
+    "$": true,
+    "_": true
+  },
+  "plugins": [
+    "jsdoc"
+  ],
+  "rules": {
+    "comma-dangle": "error",
+    "comma-style": ["error", "last"],
+    "curly": "error",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-caller": "error",
+    "no-cond-assign": ["error", "except-parens"],
+    "no-eq-null": "error",
+    "no-eval": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+    "no-undef": "error",
+    "no-unused-expressions": "error",
+    "no-unused-vars": "error",
+    "quotes": ["error", "single"],
+    "semi": "error",
+    "valid-jsdoc": "error",
+    "jsdoc/check-tag-names": 1,
+    "jsdoc/check-types": 1,
+    "jsdoc/newline-after-description": 1,
+    "jsdoc/require-hyphen-before-param-description": 1,
+    "jsdoc/require-param": 1,
+    "jsdoc/require-param-type": 1,
+    "jsdoc/require-returns-type": 1,
+    "no-restricted-syntax": [2,
+      {
+          "selector": "CallExpression[callee.name='getComputedStyle']",
+          "message": "Do not use `getComputedStyle`, import and use the `computedStyle` helper"
+      }
+    ]
+  },
+  "settings": {
+    "jsdoc": {
+      "additionalTagNames": {
+        "customTags": ["memberOf", "optionName", "optionProp"]
+      }
+    }
+  }
+}
