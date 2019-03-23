@@ -203,7 +203,7 @@ function setSearch(filter) {
 }
 
 function filterConcepts(obj) {
-    return obj["@type"] == "Concept";
+    return obj["@type"] === "Concept";
 }
 
 var initFilter = setFilter();
