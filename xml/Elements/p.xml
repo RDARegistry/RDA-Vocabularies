@@ -11,7 +11,7 @@
 <!-- Element Set: RDA Place properties -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/p/">
   <dc:title xml:lang="en">RDA Place properties</dc:title>
-  <skos:note  xml:lang="en">Properties derived from RDA elements and relationship designators with the domain of RDA Place. Warning! This element set is under development as part of the RDA Toolkit Restructure and Redesign Project. The last stable version can be found in release v2.7.3 of RDA Vocabularies in the RDA Registry.</skos:note>
+  <skos:note  xml:lang="en">Properties derived from RDA elements with the domain of RDA Place.</skos:note>
 </rdf:Description>
 
 <!-- Properties -->
@@ -35,6 +35,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/datatype/P70018" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70045" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70046" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00016" />
 </rdf:Description>
 
 <!-- Property: has appellation of place -->
@@ -57,6 +58,7 @@
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/datatype/P70019" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70018" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70020" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00017" />
 </rdf:Description>
 
 <!-- Property: has authorized access point for place -->
@@ -76,6 +78,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/p/P70018" />
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/datatype/P70045" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00020" />
 </rdf:Description>
 
 <!-- Property: has category of place -->
@@ -193,7 +196,7 @@
   <rdakit:toolkitDefinition xml:lang="el">Μια λέξη, ένας χαρακτήρας ή μια ομάδα λέξεων ή χαρακτήρων με τους οποίους είναι γνωστός ένας τόπος.</rdakit:toolkitDefinition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/p/P70019" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/object/P70001" />
-  <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
+  <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
   <reg:name xml:lang="hu">Helyneve</reg:name>
   <rdfs:label xml:lang="hu">van helyneve</rdfs:label>
   <skos:definition xml:lang="hu">Egy helyet hozzákapcsol egy szóhoz, karakterhez, vagy szavak és/vagy karakterek egy csoportjához, amely által egy helyet ismernek.</skos:definition>
@@ -201,6 +204,7 @@
   <rdakit:toolkitDefinition xml:lang="hu">Egy szó, karakter, vagy szavak vagy karakterek egy csoportja, amely által egy helyet ismernek.</rdakit:toolkitDefinition>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70002" />
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/P70003" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00019" />
 </rdf:Description>
 
 <!-- Property: has variant name of place -->
@@ -273,6 +277,7 @@
   <skos:scopeNote xml:lang="hu">A helynévváltozat magában foglal egy nevet vagy névformát, amely a referenszforrásokban található, vagy egy nevet, amely egy név stb. eltérő átírásából származik.</skos:scopeNote>
   <rdakit:toolkitLabel xml:lang="hu">helynévváltozat</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy név vagy névforma, amely által egy helyet ismernek, amely különbözik attól a névtől vagy névformától, amelyet preferált névként választottak.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00023" />
 </rdf:Description>
 
 <!-- Property: has preferred name of place -->
@@ -337,6 +342,7 @@
   <skos:definition xml:lang="hu">Egy helyet hozzákapcsol egy névhez vagy névformához, amelyet egy hely azonosítására és megnevezésére választottak.</skos:definition>
   <rdakit:toolkitLabel xml:lang="hu">preferált helynév</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="hu">Egy név vagy névforma, amelyet egy hely azonosítására választottak.</rdakit:toolkitDefinition>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00021" />
 </rdf:Description>
 
 <!-- Property: is subject place of -->
@@ -403,6 +409,7 @@
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/datatype/P70020" />
   <rdakit:instructionNumber xml:lang="">16.3</rdakit:instructionNumber>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00018" />
 </rdf:Description>
 
 <!-- Property: is jurisdiction governed of -->
@@ -1523,8 +1530,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/p/P70023" />
   <rdakit:hasElementType xml:lang="">2</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/datatype/P70037" />
-  <skos:definition xml:lang="en">Relates a place to a work that is cartographic locates a precise area using coordinates for each vertex of a polygon.</skos:definition>
-  <rdakit:toolkitDefinition xml:lang="en">A work that is cartographic locates a precise area using coordinates for each vertex of a polygon.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates a place to a work that is cartographic that identifies a precise area using coordinates for each vertex of a polygon.</skos:definition>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is cartographic that identifies a precise area using coordinates for each vertex of a polygon.</rdakit:toolkitDefinition>
 </rdf:Description>
 
 <!-- Property: has variant access point for place -->
@@ -1544,6 +1551,7 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/p/P70018" />
   <rdakit:hasElementType xml:lang="">3</rdakit:hasElementType>
   <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/datatype/P70046" />
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00022" />
 </rdf:Description>
 
 
