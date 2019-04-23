@@ -66,15 +66,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40027> .
 
-<http://rdaregistry.info/Elements/i/datatype/P40028> a rdf:Property ;
-    rdfs:label "has note on item"@en ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/i/datatype/noteOnItem.en> ;
-    reg:name "noteOnItem"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40028> .
-
 <http://rdaregistry.info/Elements/i/datatype/P40038> a rdf:Property ;
     rdfs:label "is reprint of (item) (Deprecated)"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/datatype/reprintOfItem.en> ;
@@ -298,6 +289,18 @@
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40096>,
         <http://rdaregistry.info/Elements/x/datatype/P00029> .
 
+<http://rdaregistry.info/Elements/i/datatype/P40003> a rdf:Property ;
+    rdfs:label "has modification of item"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40010>,
+        <http://rdaregistry.info/Elements/i/datatype/P40011> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/datatype/modificationOfItem.en> ;
+    reg:name "modificationOfItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003>,
+        <http://rdaregistry.info/Elements/i/datatype/P40028> .
+
 <http://rdaregistry.info/Elements/i/datatype/P40009> a rdf:Property ;
     rdfs:label "is contained in item"@en ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/i/datatype/containedInItem.en> ;
@@ -316,7 +319,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40010>,
-        <http://rdaregistry.info/Elements/i/datatype/P40003> .
+        <http://rdaregistry.info/Elements/i/datatype/P40028> .
 
 <http://rdaregistry.info/Elements/i/datatype/P40011> a rdf:Property ;
     rdfs:label "has note on extent of item"@en ;
@@ -326,7 +329,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40011>,
-        <http://rdaregistry.info/Elements/i/datatype/P40003> .
+        <http://rdaregistry.info/Elements/i/datatype/P40028> .
 
 <http://rdaregistry.info/Elements/i/datatype/P40023> a rdf:Property ;
     rdfs:label "has other agent associated with item (Deprecated)"@en ;
@@ -533,17 +536,6 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40094>,
         <http://rdaregistry.info/Elements/i/datatype/P40069> .
-
-<http://rdaregistry.info/Elements/i/datatype/P40003> a rdf:Property ;
-    rdfs:label "has modification of item"@en ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40010>,
-        <http://rdaregistry.info/Elements/i/datatype/P40011> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/i/datatype/modificationOfItem.en> ;
-    reg:name "modificationOfItem"@en ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40003> .
 
 <http://rdaregistry.info/Elements/i/datatype/P40012> a rdf:Property ;
     rdfs:label "has illuminator agent"@en ;
@@ -1066,6 +1058,16 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40020>,
         <http://rdaregistry.info/Elements/i/datatype/P40072> .
+
+<http://rdaregistry.info/Elements/i/datatype/P40028> a rdf:Property ;
+    rdfs:label "has note on item"@en ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/i/datatype/P40003> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/i/datatype/noteOnItem.en> ;
+    reg:name "noteOnItem"@en ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10003> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/i/datatype/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/i/P40028> .
 
 <http://rdaregistry.info/Elements/i/datatype/P40082> a rdf:Property ;
     rdfs:label "has title of item"@en ;
