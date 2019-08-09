@@ -560,6 +560,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    skos:altLabel "intended audience"@en ;
     skos:definition "Relaciona una obra amb una classe d’usuaris a la qual es destina el contingut d’una obra, o per a la qual el contingut es considera adequat."@ca,
         "Relaterer et værk til en brugerkategori, som et værks indhold er beregnet for, eller for hvilken indholdet anses passende."@da,
         "Setzt ein Werk mit einer Gruppe von Benutzern, für die der Inhalt eines Werks gedacht ist oder für die der Inhalt als passend angesehen wird, in Beziehung."@de,
@@ -990,7 +991,7 @@
 <http://rdaregistry.info/Elements/w/P10403> a rdf:Property ;
     rdfs:label "has scope of validity"@en ;
     rdakit:hasElementType "6" ;
-    rdakit:toolkitDefinition "An unstructured or structured description of a range of works for which the value of a metadata work is valid."@en ;
+    rdakit:toolkitDefinition "An unstructured or structured description of a set of entities for which the value of a metadata work is valid."@en ;
     rdakit:toolkitLabel "scope of validity"@en ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61099> ;
     reg:lexicalAlias <http://rdaregistry.info/Elements/w/scopeOfValidity.en> ;
@@ -998,12 +999,12 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    skos:definition "Relates a work to an unstructured or structured description of a range of works for which the value of a metadata work is valid."@en .
+    skos:definition "Relates a work to an unstructured or structured description of a set of entities for which the value of a metadata work is valid."@en .
 
 <http://rdaregistry.info/Elements/w/P10404> a rdf:Property ;
     rdfs:label "has recording source"@en ;
     rdakit:hasElementType "4" ;
-    rdakit:toolkitDefinition "A source of information for a metadata work that is an unstructured description transcribed from a manifestation being described."@en ;
+    rdakit:toolkitDefinition "A source of information for a metadata work that is an unstructured description transcribed from a manifestation that is being described."@en ;
     rdakit:toolkitLabel "recording source"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10404> ;
     reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P61100> ;
@@ -1012,7 +1013,7 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    skos:definition "Relates a work to a source of information for a metadata work that is an unstructured description transcribed from a manifestation being described."@en .
+    skos:definition "Relates a work to a source of information for a metadata work that is an unstructured description transcribed from a manifestation that is being described."@en .
 
 <http://rdaregistry.info/Elements/w/P10603> a rdf:Property ;
     rdfs:label "has medium of performance of choreographic content of representative expression"@en ;
@@ -1165,7 +1166,7 @@
         "Korporation der tildeler en akademisk grad."@da,
         "Eine Körperschaft, die einen akademischen Grad verleiht."@de,
         "Ένα συλλογικό όργανο που χορηγεί ένα ανώτερου εκπαιδευτικού επιπέδου πτυχίο."@el,
-        "A corporate body who approves a work that is a thesis for an academic degree."@en,
+        "A corporate body who approves a work that is a thesis associated with an academic degree."@en,
         "Una entidad corporativa que otorga un grado académico."@es,
         "Yhteisö, joka myöntää akateemisen oppiarvo"@fi,
         "Collectivité qui confère un diplôme universitaire."@fr,
@@ -1200,11 +1201,12 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10531> ;
+    skos:altLabel "granting institution or faculty"@en ;
     skos:definition "Relaciona una obra amb una entitat corporativa que concedeix un títol acadèmic."@ca,
         "Relaterer et værk til en korporation der tildeler en akademisk grad."@da,
         "Setzt ein Werk mit einer Körperschaft, die einen akademischen Grad verleiht, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα συλλογικό όργανο που χορηγεί ένα ανώτερου εκπαιδευτικού επιπέδου πτυχίο."@el,
-        "Relates a work to a corporate body who approves a work that is a thesis for an academic degree."@en,
+        "Relates a work to a corporate body who approves a work that is a thesis associated with an academic degree."@en,
         "Liittää teoksen yhteisöön, joka myöntää akateemisen oppiarvo"@fi,
         "Met une œuvre en relation avec une collectivité qui confère un diplôme universitaire."@fr,
         "Egy művet hozzákapcsol egy testülethez, amely tudományos fokozatot adományoz."@hu,
@@ -1740,7 +1742,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
-    skos:altLabel "contained in work"@en ;
+    skos:altLabel "contained in (work)"@en ;
     skos:definition "Relaciona una obra amb una obra més àmplia de la qual una obra és un component discret."@ca,
         "Relaterer et værk til et større værk, som værket udgør en separat del af."@da,
         "Setzt ein Werk mit einem größeren Werk, von dem ein Werk ein eigenständiger Bestandteil ist, in Beziehung."@de,
@@ -1801,8 +1803,8 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
-    skos:altLabel "prequel to"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
+    skos:altLabel "prequel"@en ;
     skos:definition "Relaciona una obra amb una obra posterior que continua el contingut narratiu d’una obra anterior."@ca,
         "Relaterer et værk til et senere værk, der fortsætter et tidligere værks fortælling."@da,
         "Setzt ein Werk mit einem späteren Werk, das an den Erzählstrang eines früheren Werks anknüpft, in Beziehung."@de,
@@ -3429,7 +3431,7 @@
         "System til identificering af det område, der dækkes af et værks kartografiske indhold; anvender længdegrader for de vestligste og østligste grænser samt breddegrader for de nordligste og sydligste grænser."@da,
         "Ein System zur Identifizierung des Gebiets, das vom kartografischen Inhalt eines Werks abgedeckt wird, indem der Längengrad der westlichsten und östlichsten Grenzen und der Breitengrad der nördlichsten und südlichsten Grenzen verwendet werden."@de,
         "Ένα σύστημα για την ταύτιση της περιοχής που καλύπτεται από το χαρτογραφικό περιεχόμενο ενός έργου που χρησιμοποιεί το γεωγραφικό μήκος για την ταύτιση της περιοχής των δυτικότερων και ανατολικότερων ορίων και το γεωγραφικό πλάτος για τα δυτικότερα και βορειότερα όρια."@el,
-        "A place that identifies the area covered by the cartographic content of a work using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries."@en,
+        "A place that is the area of coverage of a cartographic work that is identified using the longitude of the westernmost and easternmost boundaries and the latitude of the northernmost and southernmost boundaries."@en,
         "Un sistema para identificar el área cubierta por el contenido cartográfico de un recurso."@es,
         "Järjestelmä, jolla kartan kuvaama alue identifioidaan käyttämällä läntisintä ja itäisintä pituusulottuvuutta sekä pohjoisinta ja eteläisintä leveysulottuvuutta."@fi,
         "Système qui utilise la longitude des limites ouest et est et la latitude des limites nord et sud pour déterminer l’aire couverte par le contenu cartographique d’une œuvre."@fr,
@@ -3470,7 +3472,7 @@
         "Relaterer et værk til et system til identificering af det område, der dækkes af et værks kartografiske indhold; anvender længdegrader for de vestligste og østligste grænser samt breddegrader for de nordligste og sydligste grænser."@da,
         "Setzt ein Werk mit einem System zur Identifizierung des Gebiets, das vom kartografischen Inhalt eines Werks abgedeckt wird, indem der Längengrad der westlichsten und östlichsten Grenzen und der Breitengrad der nördlichsten und südlichsten Grenzen verwendet werden, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα σύστημα για την ταύτιση της περιοχής που καλύπτεται από το χαρτογραφικό περιεχόμενο ενός έργου που χρησιμοποιεί το γεωγραφικό μήκος για την ταύτιση της περιοχής των δυτικότερων και ανατολικότερων ορίων και το γεωγραφικό πλάτος για τα δυτικότερα και βορειότερα όρια."@el,
-        "Relates a work to a place that identifies the area covered by the cartographic content of a work using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries."@en,
+        "Relates a work to a place that is the area of coverage of a cartographic work that is identified using the longitude of the westernmost and easternmost boundaries and the latitude of the northernmost and southernmost boundaries."@en,
         "Liittää teoksen järjestelmään, jolla kartan kuvaama alue identifioidaan käyttämällä läntisintä ja itäisintä pituusulottuvuutta sekä pohjoisinta ja eteläisintä leveysulottuvuutta."@fi,
         "Met une œuvre en relation avec un système qui utilise la longitude des limites ouest et est et la latitude des limites nord et sud pour déterminer l’aire couverte par le contenu cartographique d’une œuvre."@fr,
         "Egy művet hozzákapcsol egy rendszerhez, amelynek célja egy mű térképészeti tartalma által lefedett terület azonosítása és meghatározása a legnyugatibb és legkeletibb határok hosszúságának és a legészakibb és legdélibb határok szélességének a használatával."@hu,
@@ -3493,7 +3495,7 @@
         "System til identificering af den placering af et himmellegeme på himlen, der dækkes af et værks kartografiske indhold, ved anvendelse af vinklerne for rektascension og deklination."@da,
         "Ein System zur Identifizierung der Position eines Himmelskörpers am Himmel, die vom kartografischen Inhalt eines Werks abgedeckt wird, unter Verwendung der Winkel der Rektaszension und der Deklination."@de,
         "Ένα σύστημα για την ταύτιση της τοποθεσίας του ουράνιου αντικειμένου στον ουρανό που καλύπτεται από το χαρτογραφικό περιεχόμενο ενός έργου χρησιμοποιώντας τις γωνίες της ορθής αναφοράς και απόκλισης."@el,
-        "A system for identifying the location of a celestial object in the sky covered by the cartographic content of a work using the angles of right ascension and declination."@en,
+        "A place that that is the location of a celestial body that is the coverage of a cartographic work and is identified using the angles of right ascension and declination."@en,
         "Un sistema para identificar la localización de un objeto celeste en el firmamento que está incluido en el contenido cartográfico de un recurso que utiliza los ángulos de ascensión directa y de declinación."@es,
         "Järjestelmä kartan kattaman alueen taivaankappaleiden sijainnin määrittelemiseksi käyttämällä rektaskension ja deklinaation kulmamittoja."@fi,
         "Système qui utilise les angles d’ascension droite et de déclinaison pour déterminer la localisation d’un objet céleste dans la zone du ciel couverte par le contenu cartographique d’une œuvre."@fr,
@@ -3534,7 +3536,7 @@
         "Relaterer et værk til et system til identificering af den placering af et himmellegeme på himlen, der dækkes af et værks kartografiske indhold, ved anvendelse af vinklerne for rektascension og deklination."@da,
         "Setzt ein Werk mit einem System zur Identifizierung der Position eines Himmelskörpers am Himmel, die vom kartografischen Inhalt eines Werks abgedeckt wird, unter Verwendung der Winkel der Rektaszension und der Deklination, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα σύστημα για την ταύτιση της τοποθεσίας ενός ουράνιου αντικειμένου στον ουρανό που καλύπτεται από το χαρτογραφικό περιεχόμενο ενός έργου χρησιμοποιώντας τις γωνίες της ορθής αναφοράς και απόκλισης."@el,
-        "Relates a work to a system for identifying the location of a celestial object in the sky covered by the cartographic content of a work using the angles of right ascension and declination."@en,
+        "Relates a work to a place that that is the location of a celestial body that is the coverage of a cartographic work and is identified using the angles of right ascension and declination."@en,
         "Liittää teoksen järjestelmään kartan kattaman alueen taivaankappaleiden sijainnin määrittelemiseksi käyttämällä rektaskension ja deklinaation kulmamittoja."@fi,
         "Met une œuvre en relation avec un système qui utilise les angles d’ascension droite et de déclinaison pour déterminer la localisation d’un objet céleste dans la zone du ciel couverte par le contenu cartographique d’une œuvre."@fr,
         "Egy művet hozzákapcsol egy rendszerhez, amelynek célja egy mű térképészeti tartalma által lefedett égitest helyének azonosítása és meghatározása a jobboldali emelkedés és elhajlás szögeinek használatával."@hu,
@@ -3556,7 +3558,7 @@
         "System til identificering af det præcise areal, der dækkes af et værks kartografiske indhold; anvender koordinater for hvert af en polygons toppunkter."@da,
         "Ein System zur Identifizierung des genauen Gebiets, das durch den kartografischen Inhalt eines Werks abgedeckt wird, indem Koordinaten für jeden Eckpunkt eines Vielecks verwendet werden."@de,
         "Ένα σύστημα για την ταύτιση της ακριβούς περιοχής που καλύπτεται από το χαρτογραφικό περιεχόμενο ενός έργου που χρησιμοποιεί συντεταγμένες για κάθε κορυφή ενός πολύγωνου."@el,
-        "A system for identifying the precise area covered by the cartographic content of a work using coordinates for each vertex of a polygon."@en,
+        "A place that is the area of coverage of a cartographic work that is identifiedy by a polygon using coordinates for each vertex."@en,
         "Un sistema para identificar el área precisa incluida en el contenido cartográfico de un recurso utilizando coordenadas para cada vértice de un polígono."@es,
         "Järjestelmä, jolla kartan kuvaama tarkka alue identifioidaan käyttämällä monikulmion jokaisen kärjen koordinaatteja."@fi,
         "Système qui utilise les coordonnées de chaque sommet d’un polygone pour déterminer la zone précise couverte par le contenu cartographique d’une œuvre."@fr,
@@ -3594,7 +3596,7 @@
         "Relaterer et værk til et system til identificering af det præcise areal, der dækkes af et værks kartografiske indhold; anvender koordinater for hvert af en polygons toppunkter."@da,
         "Setzt ein Werk mit einem System zur Identifizierung des genauen Gebiets, das durch den kartografischen Inhalt eines Werks abgedeckt wird, indem Koordinaten für jeden Eckpunkt eines Vielecks verwendet werden, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα σύστημα για την ταύτιση της ακριβούς περιοχής που καλύπτεται από το χαρτογραφικό περιεχόμενο ενός έργου που χρησιμοποιεί συντεταγμένες για κάθε κορυφή ενός πολύγωνου."@el,
-        "Relates a work to a system for identifying the precise area covered by the cartographic content of a work using coordinates for each vertex of a polygon."@en,
+        "Relates a work to a place that is the area of coverage of a cartographic work that is identifiedy by a polygon using coordinates for each vertex."@en,
         "Liittää teoksen järjestelmään, jolla kartan kuvaama tarkka alue identifioidaan käyttämällä monikulmion jokaisen kärjen koordinaatteja."@fi,
         "Met une œuvre en relation avec un système qui utilise les coordonnées de chaque sommet d’un polygone pour déterminer la zone précise couverte par le contenu cartographique d’une œuvre."@fr,
         "Egy művet hozzákapcsol egy rendszerhez, amelynek célja egy mű térképészeti tartalma által lefedett pontos terület azonosítása és meghatározása a poligoncsúcsok koordinátáinak használatával."@hu,
@@ -3713,6 +3715,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10088>,
         <http://rdaregistry.info/Elements/x/P00023> ;
+    skos:altLabel "variant title for work"@en ;
     skos:definition "Relaciona una obra amb un títol o forma de títol pel qual es coneix una obra que difereix d’un títol o una forma de títol triat com un títol preferit de l’obra."@ca,
         "Relaterer et værk til en titel eller titelform, hvorunder et værk er kendt, og som afviger fra den titel eller titelform, der er valgt som den foretrukne titel for værket."@da,
         "Setzt ein Werk mit einem Titel oder eine Titelform, unter dem/der ein Werk bekannt ist, der/die sich von einem Titel oder einerm Titelform unterscheidet, der/die als bevorzugter Titel des Werks gewählt wurde, in Beziehung."@de,
@@ -4500,7 +4503,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10170> ;
-    skos:altLabel "continued in part by work"@en ;
+    skos:altLabel "continued in part by (work)"@en ;
     skos:definition "Relaciona una obra amb una part d’una obra el contingut de la qual s’ha separat d’una obra anterior per formar una obra nova."@ca,
         "Relaterer et værk til et værk, hvoraf en del af indholdet er udskilt fra et tidligere værk, så et nyt værk er dannet."@da,
         "Setzt ein Werk mit einem Werk, dessen Inhalte teilweise aus einem früheren Werk abgetrennt wurden, um ein neues Werk zu bilden, in Beziehung."@de,
@@ -5353,8 +5356,8 @@
     reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
-    skos:altLabel "sequel to"@en ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
+    skos:altLabel "sequel"@en ;
     skos:definition "Relaciona una obra amb una obra que amplia la narrativa d’una obra anterior cap enrere en el temps."@ca,
         "Relaterer et værk til et værk, der udvider et tidligere værks fortælling bagud i tiden."@da,
         "Setzt ein Werk mit einem Werk, das den Erzählstrang eines früheren Werks zeitlich rückwärts erweitert, in Beziehung."@de,
@@ -6686,7 +6689,8 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10198> ;
-    skos:altLabel "container of work"@en ;
+    skos:altLabel "component part"@en,
+        "container of (work)"@en ;
     skos:definition "Relaciona una obra amb una obra que és un component discret d’una obra més àmplia."@ca,
         "Relaterer et værk til et værk, der udgør en separat del af et større værk."@da,
         "Setzt ein Werk mit einem Werk, das ein einzelner Bestandteil eines größeren Werks ist, in Beziehung."@de,
@@ -7716,7 +7720,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10156> ;
-    skos:altLabel "continuation in part of work"@en ;
+    skos:altLabel "continuation in part of (work)"@en ;
     skos:definition "Relaciona una obra amb una obra que es divideix en dues o més obres separades amb títols nous."@ca,
         "Relaterer et værk til et værk, der er delt i to eller flere separate værker med nye titler."@da,
         "Setzt ein Werk mit einem Werk, das in mehrere separate Werke mit neuen Titeln gesplittet wurde, in Beziehung"@de,
@@ -9984,6 +9988,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10088>,
         <http://rdaregistry.info/Elements/x/P00021> ;
+    skos:altLabel "preferred title for work"@en ;
     skos:definition "Relaciona una obra amb un títol o forma de títol triat per identificar una obra."@ca,
         "Relaterer et værk til en titel eller titelform, der er valgt til identifikation af værket."@da,
         "Setzt ein Werk mit einem Titel oder einer Form eines Titels, der/die gewählt wird, um ein Werk zu identifizieren, in Beziehung."@de,
@@ -12916,7 +12921,7 @@
         "Afstand fra et punkt på en planet eller satellit målt nord og syd fra ækvator."@da,
         "Eine Entfernung eines Punkts auf einem Planeten oder Satelliten, die nördlich oder südlich vom Äquator gemessen wird."@de,
         "Μια απόσταση ενός σημείου πάνω σε έναν πλανήτη ή δορυφόρο που μετράται βόρεια και νότια από τον ισημερινό."@el,
-        "A distance of a point on a planet or satellite measured north and south from the equator."@en,
+        "The distance of a place on a planet or satellite that is measured north and south from the equator."@en,
         "Etäisyys planeetan tai kuun pinnan kohdan sijainnin päiväntasaajan välillä pohjois- tai eteläsuunnassa."@fi,
         "Distance d’un point sur une planète ou un satellite mesurée au nord et au sud de l’équateur."@fr,
         "Egy az egyenlítőtől északra és délre mért pont távolsága egy bolygón vagy műholdon."@hu,
@@ -12951,7 +12956,7 @@
         "Relaterer et værk til en afstand fra et punkt på en planet eller satellit målt nord og syd fra ækvator."@da,
         "Setzt ein Werk mit einer Entfernung eines Punkts auf einem Planeten oder Satelliten, die nördlich oder südlich vom Äquator gemessen wird, in Beziehung."@de,
         "Συνδέει ένα έργο με μια απόσταση ενός σημείου πάνω σε έναν πλανήτη ή δορυφόρο που μετράται βόρεια και νότια από τον ισημερινό."@el,
-        "Relates a work to a distance of a point on a planet or satellite measured north and south from the equator."@en,
+        "Relates a work to the distance of a place on a planet or satellite that is measured north and south from the equator."@en,
         "Liittää teoksen etäisyyteen planeetan tai kuun pinnan kohdan sijainnin päiväntasaajan välillä pohjois- tai eteläsuunnassa."@fi,
         "Met une œuvre en relation avec une distance d’un point sur une planète ou un satellite mesurée au nord et au sud de l’équateur."@fr,
         "Egy művet hozzákapcsol egy bolygó vagy mesterséges hold egy pontjának a távolságához, amelyet az egyenlítőtől északra és délre mértek. "@hu,
@@ -12973,7 +12978,7 @@
         "Afstand fra et punkt på en planet eller satellit målt øst og vest fra referencemeridianen."@da,
         "Eine Entfernung eines Punkts auf einem Planeten oder Satelliten, die östlich und westlich von einem Bezugsmeridian gemessen wird."@de,
         "Μια απόσταση ενός σημείου πάνω σε έναν πλανήτη ή δορυφόρο που μετράται ανατολικά και δυτικά από τον μεσημβρινό αναφοράς."@el,
-        "A distance of a point on a planet or satellite measured east and west from a reference meridian."@en,
+        "The distance of a place on a planet or satellite that is measured east and west from a reference meridian."@en,
         "Etäisyys planeetan tai kuun pinnan kohdan sijainnin  ja annetun meridiaanin välillä itä-länsisuunnassa."@fi,
         "Distance d’un point sur une planète ou un satellite mesurée à l’est et à l’ouest d’un méridien de référence."@fr,
         "Egy referensz meridiántól keletre és nyugatra mért pont távolsága egy bolygón vagy műholdon."@hu,
@@ -13008,7 +13013,7 @@
         "Relaterer et værk til en afstand fra et punkt på en planet eller satellit målt øst og vest fra referencemeridianen."@da,
         "Setzt ein Werk mit einer Entfernung eines Punkts auf einem Planeten oder Satelliten, die östlich und westlich von einem Bezugsmeridian gemessen wird, in Beziehung."@de,
         "Συνδέει ένα έργο με μια απόσταση ενός σημείου πάνω σε έναν πλανήτη ή δορυφόρο που μετράται ανατολικά και δυτικά από τον μεσημβρινό αναφοράς."@el,
-        "Relates a work to a distance of a point on a planet or satellite measured east and west from a reference meridian."@en,
+        "Relates a work to he distance of a place on a planet or satellite that is measured east and west from a reference meridian."@en,
         "Liittää teoksen etäisyyteen planeetan tai kuun pinnan kohdan sijainnin  ja annetun meridiaanin välillä itä-länsisuunnassa."@fi,
         "Met une œuvre en relation avec une distance d’un point sur une planète ou un satellite mesurée à l’est et à l’ouest d’un méridien de référence."@fr,
         "Egy művet hozzákapcsol egy bolygó vagy mesterséges hold egy pontjának a távolságához, amelyet egy referencia-délkörtől (meridiántól) keletre és nyugatra mértek."@hu,
@@ -13030,7 +13035,7 @@
         "Vinkelafstand målt mod øst ved ækvator fra forårsjævndøgn til timekransen gennem et himmellegeme, fra 0 til 24 timer."@da,
         "Ein Winkelabstand zwischen dem Frühlingspunkt und dem Längenkreis, der auf der Äquatorebene gegen den Uhrzeigersinn gemessen und in einem Maß von 0 bis 24 Stunden angegeben wird."@de,
         "Μια γωνιακή απόσταση που μετριέται στο εαρινό σημείο πάνω στον ισημερινό από την εαρινή ισημερία μέχρι τον ωρικό κύκλο του ουράνιου σώματος, από 0 μέχρι 24 ώρες."@el,
-        "An angular distance measured eastward on the equator from the vernal equinox to the hour circle through a celestial body, from 0 to 24 hours."@en,
+        "The angular distance of a celestial body that is measured eastward on the equator from the vernal equinox to the hour circle through the body, from 0 to 24 hours."@en,
         "Kulmaetäisyys, joka on mitattu aikamitoissa taivaanekvaattoria pitkin kevättasauspisteestä vastapäivään."@fi,
         "Distance angulaire, mesurée de 0 h à 24 h, le long de l’équateur en direction de l’est, du point vernal de l’équinoxe au cercle horaire passant par un corps céleste."@fr,
         "Az egyenlítőtől keletre mért szögtávolság a tavaszi napéjegyenlőségtől az órakörig egy égitesten keresztül, 0-tól 24 óráig."@hu,
@@ -13065,7 +13070,7 @@
         "Relaterer et værk til en vinkelafstand målt mod øst ved ækvator fra forårsjævndøgn til timekransen gennem et himmellegeme, fra 0 til 24 timer."@da,
         "Setzt ein Werk mit einem Winkelabstand zwischen dem Frühlingspunkt und dem Längenkreis, der auf der Äquatorebene gegen den Uhrzeigersinn gemessen und in einem Maß von 0 bis 24 Stunden angegeben wird, in Beziehung."@de,
         "Συνδέει ένα έργο με μια γωνιακή απόσταση που μετριέται στο εαρινό σημείο πάνω στον ισημερινό από την εαρινή ισημερία μέχρι τον ωρικό κύκλο του ουράνιου σώματος, από 0 μέχρι 24 ώρες."@el,
-        "Relates a work to an angular distance measured eastward on the equator from the vernal equinox to the hour circle through a celestial body, from 0 to 24 hours."@en,
+        "Relates a work the the angular distance of a celestial body that is measured eastward on the equator from the vernal equinox to the hour circle through the body, from 0 to 24 hours."@en,
         "Liittää teoksen kulmaetäisyyteen, joka on mitattu aikamitoissa taivaanekvaattoria pitkin kevättasauspisteestä vastapäivään."@fi,
         "Met une œuvre en relation avec une distance angulaire, mesurée de 0 h à 24 h, le long de l’équateur en direction de l’est, du point vernal de l’équinoxe au cercle horaire passant par un corps céleste."@fr,
         "Egy művet hozzákapcsol az egyenlítőtől keletre mért szögtávolsághoz a tavaszi napéjegyenlőségtől az órakörig egy égitesten keresztül, 0-tól 24 óráig."@hu,
@@ -13087,7 +13092,7 @@
         "Vinkelafstand til et himmellegeme, målt nord eller syd gennem 90° fra himmelækvator langs himmellegemets timekrans."@da,
         "Ein Winkelabstand eines Himmelskörpers vom Himmelsäquator, der nördlich oder südlich durch 90° vom Himmelsäquator entlang des Stundenkreises des Körpers gemessen wird."@de,
         "Μια γωνιακή απόσταση προς ένα σώμα στην ουράνια σφαίρα η οποία μετριέται βόρεια ή νότια σε 90° από τον ουράνιο ισημερινό μέχρι τον ωρικό κύκλο του σώματος."@el,
-        "An angular distance to a body on the celestial sphere measured north or south through 90° from the celestial equator along the hour circle of the body."@en,
+        "The angular distance of a celestial body that is measured north or south through 90° from the celestial equator along the hour circle through the body."@en,
         "Taivaankappaleen kulmaetäisyys, joka on mitattu taivaanekvaattorista positiivisena pohjoiseen ja negatiivisena etelään. Taivaan pohjoisnavan deklinaatio on +90°."@fi,
         "Distance angulaire d’un corps sur la sphère céleste mesurée au nord ou au sud à 90° de l’équateur céleste le long du cercle horaire du corps."@fr,
         "Az égi egyenlítőtől az éggömbön levő égitesthez 90Â°-ban északra vagy délre mért szögtávolság az égitest óraköre mentén."@hu,
@@ -13122,7 +13127,7 @@
         "Relaterer et værk til en vinkelafstand til et himmellegeme, målt nord eller syd gennem 90° fra himmelækvator langs himmellegemets timekrans."@da,
         "Setzt ein Werk mit einem Winkelabstand eines Himmelskörpers vom Himmelsäquator, der nördlich oder südlich durch 90° vom Himmelsäquator entlang des Stundenkreises des Körpers gemessen wird, in Beziehung."@de,
         "Συνδέει ένα έργο με μια γωνιακή απόσταση προς ένα σώμα στην ουράνια σφαίρα, η οποία μετριέται βόρεια ή νότια σε 90° από τον ουράνιο ισημερινό μέχρι τον ωρικό κύκλο του σώματος."@el,
-        "Relates a work to an angular distance to a body on the celestial sphere measured north or south through 90° from the celestial equator along the hour circle of the body."@en,
+        "Relates a work to the angular distance of a celestial body that is measured north or south through 90° from the celestial equator along the hour circle through the body."@en,
         "Liittää teoksen taivaankappaleen kulmaetäisyyteen, joka on mitattu taivaanekvaattorista positiivisena pohjoiseen ja negatiivisena etelään. Taivaan pohjoisnavan deklinaatio on +90°."@fi,
         "Met une œuvre en relation avec une distance angulaire d’un corps sur la sphère céleste mesurée au nord ou au sud à 90° de l’équateur céleste le long du cercle horaire du corps."@fr,
         " Egy művet hozzákapcsol az égi egyenlítőtől az éggömbön levő égitesthez 90Â°-ban északra vagy délre mért szögtávolsághoz az égitest óraköre mentén."@hu,
@@ -13359,7 +13364,7 @@
     rdfs:label "has opus number"@en ;
     rdakit:hasElementType "3" ;
     rdakit:instructionNumber "6.16.1.3.2" ;
-    rdakit:toolkitDefinition "A numeric designation of musical work assigned from a list of works of a composer indicating the chronological order of composition."@en ;
+    rdakit:toolkitDefinition "A numeric designation of musical work that is assigned from a list of works of a composer indicating the chronological order of composition."@en ;
     rdakit:toolkitLabel "opus number"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10333>,
         <http://rdaregistry.info/Elements/w/object/P10333> ;
@@ -13370,13 +13375,13 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10079> ;
-    skos:definition "Relates a work to a numeric designation of musical work assigned from a list of works of a composer indicating the chronological order of composition."@en .
+    skos:definition "Relates a work to a numeric designation of musical work that is assigned from a list of works of a composer indicating the chronological order of composition."@en .
 
 <http://rdaregistry.info/Elements/w/P10334> a rdf:Property ;
     rdfs:label "has serial number of musical work"@en ;
     rdakit:hasElementType "3" ;
     rdakit:instructionNumber "6.16.1.3.1" ;
-    rdakit:toolkitDefinition "A numeric designation of musical work assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance."@en ;
+    rdakit:toolkitDefinition "A numeric designation of musical work that is assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance."@en ;
     rdakit:toolkitLabel "serial number of musical work"@en ;
     reg:hasSubproperty <http://rdaregistry.info/Elements/w/datatype/P10334>,
         <http://rdaregistry.info/Elements/w/object/P10334> ;
@@ -13387,7 +13392,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10079> ;
-    skos:definition "Relates a work to a numeric designation of musical work assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance."@en .
+    skos:definition "Relates a work to a numeric designation of musical work that is assigned by a composer or a reference source that indicates a sequence of musical works that share the same title or that share the same title and the same representative medium of performance."@en .
 
 <http://rdaregistry.info/Elements/w/P10335> a rdf:Property ;
     rdfs:label "has thematic index number"@en ;
@@ -13559,7 +13564,9 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10002> ;
-    skos:altLabel "International Standard Serial Number"@en ;
+    skos:altLabel "ISSN of series"@en,
+        "ISSN of subseries"@en,
+        "International Standard Serial Number"@en ;
     skos:definition "Relates a work to an identifier for work that is assigned by an ISSN registration agency."@en .
 
 <http://rdaregistry.info/Elements/w/P10367> a rdf:Property ;
@@ -14453,6 +14460,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10405> ;
+    skos:altLabel "subject relationship"@en ;
     skos:definition "Relaciona una obra amb una relació entre una obra i un identificador, un punt d’accés autoritzat o una descripció que indica de què tracta una obra."@ca,
         "Relaterer et værk til en relation mellem et værk og en identifikator, en autoriseret søgeindgang og/eller en beskrivelse, der angiver, hvad et værk handler om."@da,
         "Setzt ein Werk mit einer Beziehung zwischen einem Werk und einem Identifikator, einem normierten Sucheinstieg und/oder einer Beschreibung, der/die angibt, wovon ein Werk handelt, in Beziehung."@de,
@@ -17805,7 +17813,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10311> ;
     skos:altLabel "honoree agent of work"@en,
-        "honouree of work"@en ;
+        "honouree"@en ;
     skos:definition "Relaciona una obra amb un agent homenatjat en una obra."@ca,
         "Relaterer et værk til en agent der hædres af et værk."@da,
         "Setzt ein Werk mit einem Akteur, der durch ein Werk geehrt wird, in Beziehung."@de,
@@ -17988,7 +17996,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
-    skos:altLabel "cartographer of work"@en ;
+    skos:altLabel "cartographer"@en ;
     skos:definition "Relaciona una obra amb un agent responsable de la creació d’un mapa, un atlas, un globus o qualsevol altra obra cartogràfica."@ca,
         "Relaterer et værk til en agent, der er ansvarlig for at have skabt et kort, et atlas, en globus eller et andet kartografisk værk."@da,
         "Setzt ein Werk mit einem Akteur, der für die Schaffung einer Karte, eines Atlasses, eines Globusses oder eines anderen kartografischen Werks verantwortlich ist, in Beziehung."@de,
@@ -18049,7 +18057,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
-    skos:altLabel "composer of work"@en ;
+    skos:altLabel "composer"@en ;
     skos:definition "Relaciona una obra amb un agent responsable de la creació d’una obra musical."@ca,
         "Relaterer et værk til en agent, der er ansvarlig for at have skabt et musikværk."@da,
         "Setzt ein Werk mit einem Akteur, der für die Schaffung eines Musikwerks verantwortlich ist, in Beziehung."@de,
@@ -18249,7 +18257,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
-    skos:altLabel "photographer of work"@en ;
+    skos:altLabel "photographer"@en ;
     skos:definition "Relaciona una obra amb un agent responsable de la creació d’una obra fotogràfica."@ca,
         "Relaterer et værk til en agent, der er ansvarlig for at have skabt et fotografisk værk."@da,
         "Setzt ein Werk mit einem Akteur, der für die Schaffung eines fotografischen Werks verantwortlich ist, in Beziehung."@de,
@@ -18310,7 +18318,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
-    skos:altLabel "interviewer of work"@en ;
+    skos:altLabel "interviewer"@en ;
     skos:definition "Relaciona una obra amb un agent responsable de la creació d’una obra actuant com un entrevistador, un periodista, un enquestador o un altre agent que recull la informació."@ca,
         "Relaterer et værk til en agent, der er ansvarlig for at have skabt et værk ved at optræde som interviewer, journalist, medarbejder ved et meningsmålingsinstitut eller en anden informationsindsamler."@da,
         "Setzt ein Werk mit einem Akteur, der für die Schaffung eines Werks verantwortlich ist, indem er als Interviewer, Reporter, Meinungsforscher oder anderer Informationssammler tätig ist, in Beziehung."@de,
@@ -18371,7 +18379,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
-    skos:altLabel "interviewee of work"@en ;
+    skos:altLabel "interviewee"@en ;
     skos:definition "Relaciona una obra amb un agent responsable de la creació d’una obra mitjançant les seves respostes a un entrevistador, habitualment un periodista, un enquestador o un altre agent que recull la informació."@ca,
         "Relaterer et værk til en agent, der er ansvarlig for at have skabt et værk ved at besvare spørgsmål fra en interviewer, normalt en journalist, medarbejder ved et meningsmålingsinstitut eller en anden informationsindsamler."@da,
         "Setzt ein Werk mit einem Akteur, der für die Schaffung eines Werks verantwortlich ist, indem er einem Interviewer antwortet, normalerweise einem Reporter, einem Meinungsforscher oder einem anderen, der Informationen zusammenträgt, in Beziehung."@de,
@@ -18432,7 +18440,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10065> ;
-    skos:altLabel "choreographer of work"@en ;
+    skos:altLabel "choreographer"@en ;
     skos:definition "Relaciona una obra amb un agent responsable de la creació d’una obra de moviment."@ca,
         "Relaterer et værk til en agent, der er ansvarlig for at have skabt et værk bestående af bevægelser."@da,
         "Setzt ein Werk mit einem Akteur, der für die Schaffung eines aus Bewegung bestehenden Werks verantwortlich ist, in Beziehung."@de,
@@ -18698,7 +18706,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10311> ;
-    skos:altLabel "dedicatee of work"@en ;
+    skos:altLabel "dedicatee"@en ;
     skos:definition "Relaciona una obra amb un agent a qui es dedica una obra."@ca,
         "Relaterer et værk til en agent, som et værk er tilegnet."@da,
         "Setzt ein Werk mit einem Akteur, dem ein Werk gewidmet ist, in Beziehung."@de,
@@ -19216,7 +19224,7 @@
         "Tidligste dato knyttet til et værk."@da,
         "Das früheste Datum, das mit einem Werk in Verbindung steht."@de,
         "Μια προηγούμενη χρονολογία συνδεδεμένη με ένα έργο."@el,
-        "A timespan that is an earliest date associated with a work."@en,
+        "A timespan that is the earliest associated with a work."@en,
         "La fecha más antigua asociada con una obra."@es,
         "Varhaisin teokseen liittyvä ajankohta."@fi,
         "Date la plus ancienne associée à une œuvre."@fr,
@@ -19257,7 +19265,7 @@
         "Relaterer et værk til tidligste dato knyttet til et værk."@da,
         "Setzt ein Werk mit dem frühesten Datum, das mit einem Werk in Verbindung steht, in Beziehung."@de,
         "Συνδέει ένα έργο με μια προηγούμενη χρονολογία συνδεδεμένη με ένα έργο."@el,
-        "Relates a work to a timespan that is an earliest date associated with a work."@en,
+        "Relates a work to a timespan that is the earliest associated with a work."@en,
         "Liittää teoksen varhaisimpaan teokseen liittyvään ajankohtaan."@fi,
         "Met une œuvre en relation avec une date la plus ancienne associée à une œuvre."@fr,
         "Egy művet hozzákapcsol egy műhöz kötődő legkorábbi időponthoz."@hu,
@@ -20478,7 +20486,7 @@
         "Matematisk system til identificering af det område, der dækkes af et værks kartografiske indhold."@da,
         "Ein mathematisches System zur Identifizierung eines Gebiets, das durch den kartografischen Inhalt eines Werks abgedeckt wird."@de,
         "Ένα μαθηματικό σύστημα για την ταύτιση μιας περιοχής που καλύπτεται από το χαρτογραφικό περιεχόμενο ενός έργου."@el,
-        "A mathematical system for identifying a place covered by the cartographic content of a work."@en,
+        "A place that is the area of coverage of a cartographic work that is described using a mathematical system to identify its boundaries or location."@en,
         "Un sistema matemático para la identificación del área incluida en el contenido cartográfico de un recurso."@es,
         "Matemaattinen järjestelmä, jonka avulla teoksen kartografisessa sisällössä kuvattu alue identifioidaan. Koordinaatit voidaan ilmaista planeettojen pituus- ja leveysasteina tai tähtikartan rektaskension ja deklinaation kulmamittoina"@fi,
         "Système mathématique qui sert à identifier une aire couverte par le contenu cartographique d’une œuvre."@fr,
@@ -20520,7 +20528,7 @@
         "Relaterer et værk til et matematisk system til identificering af det område, der dækkes af et værks kartografiske indhold."@da,
         "Setzt ein Werk mit einem mathematischen System zur Identifizierung eines Gebiets, das durch den kartografischen Inhalt eines Werks abgedeckt wird, in Beziehung."@de,
         "Συνδέει ένα έργο με ένα μαθηματικό σύστημα για την ταύτιση μιας περιοχής που καλύπτεται από το χαρτογραφικό περιεχόμενο ενός έργου."@el,
-        "Relates a work to a mathematical system for identifying a place covered by the cartographic content of a work."@en,
+        "Relates a work to a place that is the area of coverage of a cartographic work that is described using a mathematical system to identify its boundaries or location."@en,
         "Liittää teoksen matemaattiseen järjestelmään, jonka avulla teoksen kartografisessa sisällössä kuvattu alue identifioidaan"@fi,
         "Met une œuvre en relation avec un système mathématique qui sert à identifier une aire couverte par le contenu cartographique d’une œuvre."@fr,
         "Egy művet hozzákapcsol egy matematikai rendszerhez, hogy azonosítsanak egy  mű térképészeti tartalma által lefedett területet."@hu,
@@ -23980,6 +23988,7 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10307>,
         <http://rdaregistry.info/Elements/x/P00006> ;
+    skos:altLabel "other agent associated with work"@en ;
     skos:definition "Relaciona una obra amb un agent associat amb una obra que es descriu."@ca,
         "Relaterer et værk til en agent, der er knyttet til et beskrevet værk."@da,
         "Συνδέει ένα έργο με έναν φορέα που συνδέεται με ένα περιγραφόμενο έργο."@el,
@@ -24012,6 +24021,148 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10324> ;
     skos:definition "Relates a work to an RDA entity that is described by a work."@en .
+
+<http://rdaregistry.info/Elements/w/P10156> a rdf:Property ;
+    rdfs:label "és precedit de (obra)"@ca,
+        "er forudgået af"@da,
+        "?"@de,
+        "προηγείται από (έργο)"@el,
+        "is preceded by work"@en,
+        "aiempi teos"@fi,
+        "est précédé de (œuvre)"@fr,
+        "előzmény (mű)"@hu,
+        "được đi trước bởi (tác phẩm)"@vi ;
+    rdakit:hasElementType "2" ;
+    rdakit:instructionNumber "24.5" ;
+    rdakit:toolkitDefinition "Obra que precedeix una obra que va a continuació, és a dir, és anterior en el temps o en una narració, etc."@ca,
+        "Værk, der går forud for det efterfølgende værk, fx på et tidligere tidspunkt eller før noget i en fortælling."@da,
+        "Ein Werk, das einem nachfolgenden Werk vorangegangen ist, zeitlich früher oder früher im Erzählstrang usw."@de,
+        "Ένα έργο το οποίο προηγείται, δηλαδή είναι προγενέστερο χρονικά ή αφηγηματικά κ.λπ. ενός έργου που ακολουθεί."@el,
+        "A work whose chronological coverage is before that of another work."@en,
+        "Una obra que precede (por ej., es anterior en el tiempo en una narración) a otra que la sigue."@es,
+        "Teos, joka edeltää joko juonellisesti tai ajallisesti sitä seuraavaa teosta."@fi,
+        "Œuvre qui précède une œuvre suivante, c’est-à-dire qui lui est antérieure dans le temps ou dans un récit."@fr,
+        "Egy mű, amelyet megelőz egy követő mű, azaz időben korábbi vagy narratívájában előtte van stb."@hu,
+        "Et verk som kommer før, enten i tid eller i historien, et påfølgende verk."@no,
+        "Tác phẩm đi trước, nghĩa là, là trước đây theo thời gian hoặc trước theo câu chuyện kể, v.v..., tác phẩm tiếp theo."@vi ;
+    rdakit:toolkitLabel "precedit de (obra)"@ca,
+        "forudgået af (værk)"@da,
+        "Vorangegangen ist (Werk)"@de,
+        "προηγείται από (έργο)"@el,
+        "preceded by work"@en,
+        "precedida por (obra)"@es,
+        "aiempi teos"@fi,
+        "précédé de (œuvre)"@fr,
+        "előzmény (mű)"@hu,
+        "følger (verk)"@no,
+        "được đi trước bởi (tác phẩm)"@vi ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10122>,
+        <http://rdaregistry.info/Elements/w/P10168>,
+        <http://rdaregistry.info/Elements/w/P10169>,
+        <http://rdaregistry.info/Elements/w/P10206>,
+        <http://rdaregistry.info/Elements/w/P10207>,
+        <http://rdaregistry.info/Elements/w/P10213>,
+        <http://rdaregistry.info/Elements/w/P10224>,
+        <http://rdaregistry.info/Elements/w/P10225>,
+        <http://rdaregistry.info/Elements/w/P10226>,
+        <http://rdaregistry.info/Elements/w/P10227>,
+        <http://rdaregistry.info/Elements/w/datatype/P10156>,
+        <http://rdaregistry.info/Elements/w/object/P10156> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60261> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/aiempiTeos.fi>,
+        <http://rdaregistry.info/Elements/w/forudgåetAf.da>,
+        <http://rdaregistry.info/Elements/w/precededByWork.en> ;
+    reg:name "forudgåetAf"@da,
+        "προηγείταιΑπόΈργο"@el,
+        "precededByWork"@en,
+        "aiempiTeos"@fi,
+        "précédéDeŒuvre"@fr,
+        "MűÁltalmegelőzve"@hu,
+        "đượcĐiTrướcBởiTácPhẩm"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10345> ;
+    skos:definition "Relaciona una obra amb una obra que precedeix una obra que va a continuació, és a dir, és anterior en el temps o en una narració, etc."@ca,
+        "Relaterer et værk til et værk, der går forud for det efterfølgende værk, fx på et tidligere tidspunkt eller før noget i en fortælling."@da,
+        "Setzt ein Werk mit einem Werk, das einem nachfolgenden Werk vorangegangen ist, zeitlich früher oder früher im Erzählstrang usw., in Beziehung."@de,
+        "Συνδέει ένα έργο με ένα έργο το οποίο προηγείται, δηλαδή είναι προγενέστερο χρονικά ή αφηγηματικά κ.λπ. ενός έργου που ακολουθεί."@el,
+        "Relates a work to a work whose chronological coverage is before that of another work."@en,
+        "Liittää teoksen teokseen, joka edeltää joko juonellisesti tai ajallisesti sitä seuraavaa teosta."@fi,
+        "Met une œuvre en relation avec une œuvre qui précède une œuvre suivante, c’est-à-dire qui lui est antérieure dans le temps ou dans un récit."@fr,
+        "Egy művet hozzákapcsol egy műhöz, amely narratívában megelőz egy rákövetkező művet, azaz időben korábbi vagy előbbi annál. "@hu,
+        "Liên kết tác phẩm với tác phẩm đi trước, nghĩa là, là trước đây theo thời gian hoặc trước theo câu chuyện kể, v.v..., tác phẩm tiếp theo."@vi .
+
+<http://rdaregistry.info/Elements/w/P10170> a rdf:Property ;
+    rdfs:label "és seguit de (obra)"@ca,
+        "er efterfulgt af (værk)"@da,
+        "ist gefolgt von (Werk)"@de,
+        "ακολουθείται από (έργο)"@el,
+        "is succeeded by work"@en,
+        "myöhempi teos"@fi,
+        "est suivi de (œuvre)"@fr,
+        "folytatás (mű)"@hu,
+        "được kế tiếp bởi (tác phẩm)"@vi ;
+    rdakit:hasElementType "2" ;
+    rdakit:instructionNumber "24.5" ;
+    rdakit:toolkitDefinition "Obra que segueix una obra precedent, és a dir, posteriorment en el temps o en una narració, etc."@ca,
+        "Værk, der følger efter det forudgående værk, dvs. på et senere tidspunkt eller efter noget i en fortælling."@da,
+        "Ein Werk, das einem vorangehenden Werk folgt, zeitlich später oder dem Erzählstrang nachgelagert usw."@de,
+        "Ένα έργο που έπεται, ακολουθεί δηλαδή χρονικά σε μια αφήγηση κ.λπ. ένα προηγούμενο έργο."@el,
+        "A work whose chronological coverage is after that of another work."@en,
+        "Una obra que reemplaza (por ej., más tarde en el tiempo o después en una narración) la obra anterior."@es,
+        "Teos, joka seuraa joko juonellisesti tai ajallisesti sitä edeltävää teosta."@fi,
+        "Œuvre qui succède à une œuvre précédente, c’est-à-dire qui lui est ultérieure dans le temps ou dans un récit."@fr,
+        "Egy mű, amely egy megelőző művet követ, azaz időben későbbi vagy narratívában stb. azt követi."@hu,
+        "Et verk som avløser, dvs. kommer senere i tid eller i historien enn, et forutgående verk."@no,
+        "Tác phẩm tiếp theo, nghĩa là, sau này theo thời gian hoặc sau theo câu chuyện kể, v.v... Tác phẩm đi trước."@vi ;
+    rdakit:toolkitLabel "seguit de (obra)"@ca,
+        "efterfulgt af (værk)"@da,
+        "Gefolgt von (Werk)"@de,
+        "ακολουθείται από (έργο)"@el,
+        "succeeded by work"@en,
+        "reemplazada por (obra)"@es,
+        "myöhempi teos"@fi,
+        "suivi de (œuvre)"@fr,
+        "folytatás (mű)"@hu,
+        "avløst av (verk)"@no,
+        "được kế tiếp bởi (tác phẩm)"@vi ;
+    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10020>,
+        <http://rdaregistry.info/Elements/w/P10021>,
+        <http://rdaregistry.info/Elements/w/P10022>,
+        <http://rdaregistry.info/Elements/w/P10104>,
+        <http://rdaregistry.info/Elements/w/P10145>,
+        <http://rdaregistry.info/Elements/w/P10146>,
+        <http://rdaregistry.info/Elements/w/P10191>,
+        <http://rdaregistry.info/Elements/w/P10195>,
+        <http://rdaregistry.info/Elements/w/P10211>,
+        <http://rdaregistry.info/Elements/w/P10212>,
+        <http://rdaregistry.info/Elements/w/datatype/P10170>,
+        <http://rdaregistry.info/Elements/w/object/P10170> ;
+    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60278> ;
+    reg:lexicalAlias <http://rdaregistry.info/Elements/w/efterfulgtAfVærk.da>,
+        <http://rdaregistry.info/Elements/w/myohempiTeos.fi>,
+        <http://rdaregistry.info/Elements/w/succeededByWork.en> ;
+    reg:name "efterfulgtAfVærk"@da,
+        "ακολουθείταιΑπόΈργο"@el,
+        "succeededByWork"@en,
+        "myohempiTeos"@fi,
+        "suiviDeŒuvre"@fr,
+        "MűÁltalfolytatva"@hu,
+        "đượcKếTiếpBởiTácPhẩm"@vi ;
+    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
+    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10344> ;
+    skos:definition "Relaciona una obra amb una obra que segueix una obra precedent, és a dir, posteriorment en el temps o en una narració, etc."@ca,
+        "Relaterer et værk til et værk, der følger efter det forudgående værk, dvs. på et senere tidspunkt eller efter noget i en fortælling."@da,
+        "Setzt ein Werk mit einem Werk, das einem vorangehenden Werk folgt, zeitlich später oder dem Erzählstrang nachgelagert usw. in Beziehung."@de,
+        "Συνδέει ένα έργο με ένα έργο που έπεται, ακολουθεί δηλαδή χρονικά σε μια αφήγηση κ.λπ. ένα προηγούμενο έργο."@el,
+        "Relates a work to a work whose chronological coverage is after that of another work."@en,
+        "Liittää teoksen teokseen, joka seuraa joko juonellisesti tai ajallisesti sitä edeltävää teosta."@fi,
+        "Met une œuvre en relation avec une œuvre qui succède à une œuvre précédente, c’est-à-dire qui lui est ultérieure dans le temps ou dans un récit."@fr,
+        "Egy művet hozzákapcsol egy műhöz, amely narratívában stb. egy megelőző művet követ, azaz időben későbbi vagy azutáni."@hu,
+        "Liên kết tác phẩm với tác phẩm tiếp theo, nghĩa là, sau này theo thời gian hoặc sau theo câu chuyện kể, v.v... tác phẩm đi trước."@vi .
 
 <http://rdaregistry.info/Elements/w/P10103> a rdf:Property ;
     rdfs:label "és complementat per (obra)"@ca,
@@ -24165,148 +24316,6 @@
         "Met une œuvre en relation avec une œuvre qui est une modification d’une œuvre source."@fr,
         "Egy művet hozzákapcsol egy műhöz, amely egy forrásmű módosítása."@hu,
         "Liên kết tác phẩm với tác phẩm là sửa đổi của tác phẩm nguồn."@vi .
-
-<http://rdaregistry.info/Elements/w/P10156> a rdf:Property ;
-    rdfs:label "és precedit de (obra)"@ca,
-        "er forudgået af"@da,
-        "?"@de,
-        "προηγείται από (έργο)"@el,
-        "is preceded by work"@en,
-        "aiempi teos"@fi,
-        "est précédé de (œuvre)"@fr,
-        "előzmény (mű)"@hu,
-        "được đi trước bởi (tác phẩm)"@vi ;
-    rdakit:hasElementType "2" ;
-    rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "Obra que precedeix una obra que va a continuació, és a dir, és anterior en el temps o en una narració, etc."@ca,
-        "Værk, der går forud for det efterfølgende værk, fx på et tidligere tidspunkt eller før noget i en fortælling."@da,
-        "Ein Werk, das einem nachfolgenden Werk vorangegangen ist, zeitlich früher oder früher im Erzählstrang usw."@de,
-        "Ένα έργο το οποίο προηγείται, δηλαδή είναι προγενέστερο χρονικά ή αφηγηματικά κ.λπ. ενός έργου που ακολουθεί."@el,
-        "A work whose chronological coverage is before that of another work."@en,
-        "Una obra que precede (por ej., es anterior en el tiempo en una narración) a otra que la sigue."@es,
-        "Teos, joka edeltää joko juonellisesti tai ajallisesti sitä seuraavaa teosta."@fi,
-        "Œuvre qui précède une œuvre suivante, c’est-à-dire qui lui est antérieure dans le temps ou dans un récit."@fr,
-        "Egy mű, amelyet megelőz egy követő mű, azaz időben korábbi vagy narratívájában előtte van stb."@hu,
-        "Et verk som kommer før, enten i tid eller i historien, et påfølgende verk."@no,
-        "Tác phẩm đi trước, nghĩa là, là trước đây theo thời gian hoặc trước theo câu chuyện kể, v.v..., tác phẩm tiếp theo."@vi ;
-    rdakit:toolkitLabel "precedit de (obra)"@ca,
-        "forudgået af (værk)"@da,
-        "Vorangegangen ist (Werk)"@de,
-        "προηγείται από (έργο)"@el,
-        "preceded by work"@en,
-        "precedida por (obra)"@es,
-        "aiempi teos"@fi,
-        "précédé de (œuvre)"@fr,
-        "előzmény (mű)"@hu,
-        "følger (verk)"@no,
-        "được đi trước bởi (tác phẩm)"@vi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10122>,
-        <http://rdaregistry.info/Elements/w/P10168>,
-        <http://rdaregistry.info/Elements/w/P10169>,
-        <http://rdaregistry.info/Elements/w/P10206>,
-        <http://rdaregistry.info/Elements/w/P10207>,
-        <http://rdaregistry.info/Elements/w/P10213>,
-        <http://rdaregistry.info/Elements/w/P10224>,
-        <http://rdaregistry.info/Elements/w/P10225>,
-        <http://rdaregistry.info/Elements/w/P10226>,
-        <http://rdaregistry.info/Elements/w/P10227>,
-        <http://rdaregistry.info/Elements/w/datatype/P10156>,
-        <http://rdaregistry.info/Elements/w/object/P10156> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60261> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/aiempiTeos.fi>,
-        <http://rdaregistry.info/Elements/w/forudgåetAf.da>,
-        <http://rdaregistry.info/Elements/w/precededByWork.en> ;
-    reg:name "forudgåetAf"@da,
-        "προηγείταιΑπόΈργο"@el,
-        "precededByWork"@en,
-        "aiempiTeos"@fi,
-        "précédéDeŒuvre"@fr,
-        "MűÁltalmegelőzve"@hu,
-        "đượcĐiTrướcBởiTácPhẩm"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10345> ;
-    skos:definition "Relaciona una obra amb una obra que precedeix una obra que va a continuació, és a dir, és anterior en el temps o en una narració, etc."@ca,
-        "Relaterer et værk til et værk, der går forud for det efterfølgende værk, fx på et tidligere tidspunkt eller før noget i en fortælling."@da,
-        "Setzt ein Werk mit einem Werk, das einem nachfolgenden Werk vorangegangen ist, zeitlich früher oder früher im Erzählstrang usw., in Beziehung."@de,
-        "Συνδέει ένα έργο με ένα έργο το οποίο προηγείται, δηλαδή είναι προγενέστερο χρονικά ή αφηγηματικά κ.λπ. ενός έργου που ακολουθεί."@el,
-        "Relates a work to a work whose chronological coverage is before that of another work."@en,
-        "Liittää teoksen teokseen, joka edeltää joko juonellisesti tai ajallisesti sitä seuraavaa teosta."@fi,
-        "Met une œuvre en relation avec une œuvre qui précède une œuvre suivante, c’est-à-dire qui lui est antérieure dans le temps ou dans un récit."@fr,
-        "Egy művet hozzákapcsol egy műhöz, amely narratívában megelőz egy rákövetkező művet, azaz időben korábbi vagy előbbi annál. "@hu,
-        "Liên kết tác phẩm với tác phẩm đi trước, nghĩa là, là trước đây theo thời gian hoặc trước theo câu chuyện kể, v.v..., tác phẩm tiếp theo."@vi .
-
-<http://rdaregistry.info/Elements/w/P10170> a rdf:Property ;
-    rdfs:label "és seguit de (obra)"@ca,
-        "er efterfulgt af (værk)"@da,
-        "ist gefolgt von (Werk)"@de,
-        "ακολουθείται από (έργο)"@el,
-        "is succeeded by work"@en,
-        "myöhempi teos"@fi,
-        "est suivi de (œuvre)"@fr,
-        "folytatás (mű)"@hu,
-        "được kế tiếp bởi (tác phẩm)"@vi ;
-    rdakit:hasElementType "2" ;
-    rdakit:instructionNumber "24.5" ;
-    rdakit:toolkitDefinition "Obra que segueix una obra precedent, és a dir, posteriorment en el temps o en una narració, etc."@ca,
-        "Værk, der følger efter det forudgående værk, dvs. på et senere tidspunkt eller efter noget i en fortælling."@da,
-        "Ein Werk, das einem vorangehenden Werk folgt, zeitlich später oder dem Erzählstrang nachgelagert usw."@de,
-        "Ένα έργο που έπεται, ακολουθεί δηλαδή χρονικά σε μια αφήγηση κ.λπ. ένα προηγούμενο έργο."@el,
-        "A work whose chronological coverage is after that of another work."@en,
-        "Una obra que reemplaza (por ej., más tarde en el tiempo o después en una narración) la obra anterior."@es,
-        "Teos, joka seuraa joko juonellisesti tai ajallisesti sitä edeltävää teosta."@fi,
-        "Œuvre qui succède à une œuvre précédente, c’est-à-dire qui lui est ultérieure dans le temps ou dans un récit."@fr,
-        "Egy mű, amely egy megelőző művet követ, azaz időben későbbi vagy narratívában stb. azt követi."@hu,
-        "Et verk som avløser, dvs. kommer senere i tid eller i historien enn, et forutgående verk."@no,
-        "Tác phẩm tiếp theo, nghĩa là, sau này theo thời gian hoặc sau theo câu chuyện kể, v.v... Tác phẩm đi trước."@vi ;
-    rdakit:toolkitLabel "seguit de (obra)"@ca,
-        "efterfulgt af (værk)"@da,
-        "Gefolgt von (Werk)"@de,
-        "ακολουθείται από (έργο)"@el,
-        "succeeded by work"@en,
-        "reemplazada por (obra)"@es,
-        "myöhempi teos"@fi,
-        "suivi de (œuvre)"@fr,
-        "folytatás (mű)"@hu,
-        "avløst av (verk)"@no,
-        "được kế tiếp bởi (tác phẩm)"@vi ;
-    reg:hasSubproperty <http://rdaregistry.info/Elements/w/P10020>,
-        <http://rdaregistry.info/Elements/w/P10021>,
-        <http://rdaregistry.info/Elements/w/P10022>,
-        <http://rdaregistry.info/Elements/w/P10104>,
-        <http://rdaregistry.info/Elements/w/P10145>,
-        <http://rdaregistry.info/Elements/w/P10146>,
-        <http://rdaregistry.info/Elements/w/P10191>,
-        <http://rdaregistry.info/Elements/w/P10195>,
-        <http://rdaregistry.info/Elements/w/P10211>,
-        <http://rdaregistry.info/Elements/w/P10212>,
-        <http://rdaregistry.info/Elements/w/datatype/P10170>,
-        <http://rdaregistry.info/Elements/w/object/P10170> ;
-    reg:hasUnconstrained <http://rdaregistry.info/Elements/u/P60278> ;
-    reg:lexicalAlias <http://rdaregistry.info/Elements/w/efterfulgtAfVærk.da>,
-        <http://rdaregistry.info/Elements/w/myohempiTeos.fi>,
-        <http://rdaregistry.info/Elements/w/succeededByWork.en> ;
-    reg:name "efterfulgtAfVærk"@da,
-        "ακολουθείταιΑπόΈργο"@el,
-        "succeededByWork"@en,
-        "myohempiTeos"@fi,
-        "suiviDeŒuvre"@fr,
-        "MűÁltalfolytatva"@hu,
-        "đượcKếTiếpBởiTácPhẩm"@vi ;
-    reg:status <http://metadataregistry.org/uri/RegStatus/1001> ;
-    rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
-    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10344> ;
-    skos:definition "Relaciona una obra amb una obra que segueix una obra precedent, és a dir, posteriorment en el temps o en una narració, etc."@ca,
-        "Relaterer et værk til et værk, der følger efter det forudgående værk, dvs. på et senere tidspunkt eller efter noget i en fortælling."@da,
-        "Setzt ein Werk mit einem Werk, das einem vorangehenden Werk folgt, zeitlich später oder dem Erzählstrang nachgelagert usw. in Beziehung."@de,
-        "Συνδέει ένα έργο με ένα έργο που έπεται, ακολουθεί δηλαδή χρονικά σε μια αφήγηση κ.λπ. ένα προηγούμενο έργο."@el,
-        "Relates a work to a work whose chronological coverage is after that of another work."@en,
-        "Liittää teoksen teokseen, joka seuraa joko juonellisesti tai ajallisesti sitä edeltävää teosta."@fi,
-        "Met une œuvre en relation avec une œuvre qui succède à une œuvre précédente, c’est-à-dire qui lui est ultérieure dans le temps ou dans un récit."@fr,
-        "Egy művet hozzákapcsol egy műhöz, amely narratívában stb. egy megelőző művet követ, azaz időben későbbi vagy azutáni."@hu,
-        "Liên kết tác phẩm với tác phẩm tiếp theo, nghĩa là, sau này theo thời gian hoặc sau theo câu chuyện kể, v.v... tác phẩm đi trước."@vi .
 
 <http://rdaregistry.info/Elements/w/P10108> a rdf:Property ;
     rdfs:label "és augmentat per (obra)"@ca,
@@ -24786,6 +24795,10 @@
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10307>,
         <http://rdaregistry.info/Elements/x/P00002> ;
+    skos:altLabel "derivative work relationship"@en,
+        "referential work relationship"@en,
+        "sequential work relationship"@en,
+        "whole-part work relationship"@en ;
     skos:definition "Relaciona una obra amb una obra associada amb una obra que es descriu."@ca,
         "Relaterer et værk til et værk der knytter sig til et beskrevet værk."@da,
         "Setzt ein Werk mit einem Werk, das mit einem Werk, das beschrieben wird, in Verbindung steht, in Beziehung."@de,
@@ -24933,7 +24946,7 @@
     rdfs:domain <http://rdaregistry.info/Elements/c/C10001> ;
     rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/w/P10311> ;
-    skos:altLabel "creator of work"@en ;
+    skos:altLabel "creator"@en ;
     skos:definition "Relaciona una obra amb un agent responsable de la creació d’una obra."@ca,
         "Relaterer et værk til en agent, der er ansvarlig for et værks tilblivelse."@da,
         "Setzt ein Werk mit einem Akteur, der für die Schaffung eines Werks verantwortlich ist, in Beziehung."@de,
