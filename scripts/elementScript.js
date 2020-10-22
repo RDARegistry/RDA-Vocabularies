@@ -274,13 +274,13 @@ if (typeof dataSource !== "undefined") {
                           return formatRefArray(data, "vsubPropertyOf");
                       }
                   },
-//                  {
-//                      "defaultContent": "",
-//                      "data": "hasUnconstrained",
-//                      "render": function (data, type, row) {
-//                          return formatRefArray(data, "vhasunconstrained");
-//                      }
-//                  }
+                  {
+                      "defaultContent": "",
+                      "data": "hasUnconstrained",
+                      "render": function (data, type, row) {
+                          return formatRefArray(data, "vhasunconstrained");
+                      }
+                  }
               ],
               "order": [
                   [2, 'asc']
