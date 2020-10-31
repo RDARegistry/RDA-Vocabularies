@@ -1,0 +1,5878 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/rdagitAlignsPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- Meta-->
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="This is the technical documentation for the RDA: Resource Description and Access published value vocabularies and element sets.">
+<meta name="keywords" content="RDA, vocabularies, documentation, registry">
+<meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
+<meta name="viewport" content="width=device-width">
+
+
+<title>RDA Registry | Alignments</title>
+
+<!-- Icons-->
+<link rel="shortcut icon" href="http://www.rdatoolkit.org/sites/default/files/garland_favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+<!--[if lt IE 9]>
+<script src="/bower_components/html5shiv/dist/html5shiv.js"></script><![endif]-->
+<!-- Styles -->
+<link rel="stylesheet" href="/bower_components/protip/protip.min.css">
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
+<link rel="stylesheet" href="/bower_components/datatables.net-dt/css/jquery.dataTables.css">>
+<link rel="stylesheet" href="/styles/style.css"/>
+<link rel="stylesheet" href="/styles/rdagit.css"/>
+</head>
+<body>
+<!-- Markup-->
+<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" data-toggle="collapse" data-target="#navbar-main" class="navbar-toggle"><span class="sr-only">Toggle navigation</span></button>
+   <a href="/" class="navbar-brand">RDA Registry</a>
+  </div>
+  <div id="navbar-main" class="collapse navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown"><a href="/Elements/" class="dropdown-toggle" data-toggle="dropdown">Elements <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+      <li><a href="/Elements/">Elements</a></li>
+      <li class="divider"></li>
+      <li><a href="/Elements/c/">Classes</a></li>
+      <li><a href="/Elements/a/">Agent properties</a></li>
+      <li><a href="/Elements/e/">Expression properties</a></li>
+      <li><a href="/Elements/i/">Item properties</a></li>
+      <li><a href="/Elements/m/">Manifestation properties</a></li>
+      <li><a href="/Elements/n/">Nomen properties</a></li>
+      <li><a href="/Elements/p/">Place properties</a></li>
+      <li><a href="/Elements/t/">Timespan properties</a></li>
+      <li><a href="/Elements/w/">Work properties</a></li>
+      <li><a href="/Elements/x/">RDA Entity properties</a></li>
+      <li><a href="/Elements/u/">Unconstrained properties</a></li>
+      <li><a href="/Elements/rof/">RDA/ONIX Framework elements</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a href="/termList/" class="dropdown-toggle" data-toggle="dropdown">Values <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+      <li><a href="/termList/">Values</a></li>
+      <li class="divider"></li>
+      <li><a href="/termList/">RDA values</a></li>
+      <li><a href="/termList/#rof">RDA/ONIX Framework values</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a href="/rgData/" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+      <li><a href="/rgData/">Data</a></li>
+      <li class="divider"></li>
+      <li><a href="/rgData/rdaCuries.html">Curie prefixes</a></li>
+      <li><a href="/Examples/">Examples</a></li>
+      <li><a href="http://rballs.info/">R-Balls</a></li>
+      <li><a href="/rgDatasets/">Datasets</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a href="/rgTools/" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+      <li><a href="/rgTools/">Tools</a></li>
+      <li class="divider"></li>
+      <li><a href="/Maps/">Maps</a></li>
+      <li><a href="/Aligns/">Alignments</a></li>
+      <li><a href="/Profiles/">Profiles</a></li>
+      <li><a href="/rimmf/">RIMMF</a></li>
+     </ul>
+    </li>
+    <li class="dropdown"><a href="https://github.com/RDARegistry/RDA-Vocabularies/releases" class="dropdown-toggle" data-toggle="dropdown">Releases <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+      <li><a href="https://github.com/RDARegistry/RDA-Vocabularies/releases">Releases</a></li>
+      <li class="divider"></li>
+     </ul>
+    </li>
+   </ul>
+   <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown"><a href="/rgAbout/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+      <li><a href="/rgAbout/">About</a></li>
+      <li class="divider"></li>
+      <li><a href="/rgAbout/issues.html">Issues</a></li>
+      <li><a href="/rgAbout/updates/">Updates</a></li>
+      <li><a href="/rgAbout/updates/versions.html">- Versions</a></li>
+      <li><a href="/rgAbout/updates/deprecation.html">- Deprecation</a></li>
+      <li><a href="/rgAbout/rdaref/">RDA Reference</a></li>
+      <li><a href="/rgAbout/rdaref/dataflow/">- Data flow</a></li>
+      <li><a href="/rgAbout/rdaref/translations/">- Translations</a></li>
+      <li><a href="/rgAbout/rdaont/">RDA ontology</a></li>
+      <li><a href="/rgAbout/rof.html">RDA/ONIX Framework</a></li>
+     </ul>
+    </li>
+    <li><a href="/rgFAQ">FAQ</a></li>
+    <li><a href="/rgGuide">Guide</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank">Project</a></li>
+    <li><a href="http://access.rdatoolkit.org" target="_blank">RDA Toolkit</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+<div class="container">
+ <section id="content" class="content">
+  <article id="page" class="page">
+   <div class="page-content">
+    <div class="rg-pagecontent">
+     <h1><a href="/Aligns/">RDA Alignments</a></h1>
+     
+     <h2><!-- InstanceBeginEditable name="AlignTitle" -->Alignment from RDA properties to Dublin Core Terms<!-- InstanceEndEditable --></h2>
+     <div class="row">
+      <div class="col-md-6">
+ <!-- InstanceBeginEditable name="AlignDescription" -->
+       <p>This alignment relates selected RDA properties to <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core metadata terms</a>.</p>
+       <!-- InstanceEndEditable -->
+<table class="table table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">RDA</th>
+<th title="Field #2">alignment</th>
+<th title="Field #3">DCT</th>
+</tr></thead>
+<tbody><tr>
+<td>abbreviated title</td>
+<td>has broader</td>
+<td>alternative</td>
+</tr>
+<tr>
+<td>abridged as expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>abridged as work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>abridgement of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>abridgement of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>abridger agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>abridger collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>abridger corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>abridger family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>abridger person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>absorbed by expression</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>absorbed by work</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>absorbed in part by expression</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>absorbed in part by work</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>absorption in part of expression</td>
+<td>has broader</td>
+<td>replaces</td>
+</tr>
+<tr>
+<td>absorption in part of work</td>
+<td>has broader</td>
+<td>replaces</td>
+</tr>
+<tr>
+<td>absorption of expression</td>
+<td>has broader</td>
+<td>replaces</td>
+</tr>
+<tr>
+<td>absorption of work</td>
+<td>has broader</td>
+<td>replaces</td>
+</tr>
+<tr>
+<td>abstracted as expression</td>
+<td>has broader</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>abstracted as work</td>
+<td>has broader</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>abstracted in expression</td>
+<td>has broader</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>abstracted in work</td>
+<td>has broader</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>academic supervisor</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>access point for expression</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>access point for item</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>access point for manifestation</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>access point for work</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>accessibility content</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>actor agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>actor collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>actor corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>actor family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>actor person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>adaptation of expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adaptation of work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as choreography expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as choreography work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as graphic novel expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as graphic novel work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as libretto expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as libretto work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as motion picture expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as motion picture screenplay expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as motion picture screenplay work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as motion picture work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as musical theatre expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as musical theatre work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as novel expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as novel work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as opera expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as opera work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as oratorio expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as oratorio work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as radio program expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as radio program work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as radio script expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as radio script work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as screenplay expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as screenplay work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as television program expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as television program work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as television screenplay expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as television screenplay work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as video expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as video game work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as video screenplay expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as video screenplay work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as video work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted as work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted in verse as expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>adapted in verse as work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>aggregator agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>aggregator collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>aggregator corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>aggregator family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>aggregator person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>animator agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>animator collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>animator corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>animator family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>animator person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>appellant corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>appellant person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>appellee corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>appellee person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>applied material</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>architect agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>architect collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>architect corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>architect family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>architect person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>arranged as</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>arrangement of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>arranger agent of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>arranger collective agent of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>arranger corporate body of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>arranger family of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>arranger person of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>art director agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>art director collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>art director corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>art director family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>art director person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>artist agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>artist collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>artist corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>artist family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>artist person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>aspect ratio</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>aspect ratio designation</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>aspect ratio of representative expression</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>audio engineer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>audio engineer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>audio engineer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>audio engineer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>audio engineer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>audio producer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>audio producer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>audio producer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>audio producer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>audio producer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>author agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>author collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>author corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>author family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>author person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>authorized access point for expression</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>authorized access point for item</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>authorized access point for manifestation</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>authorized access point for work</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>authorized access point for work group</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>base material</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>bibliographic format</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>book artist agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>book artist collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>book artist corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>book artist family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>book artist person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>book designer agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>book designer collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>book designer corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>book designer family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>book designer person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>braille embosser agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>braille embosser collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>braille embosser corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>braille embosser family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>braille embosser person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>broadcast standard</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>broadcaster agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>broadcaster collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>broadcaster corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>broadcaster family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>broadcaster person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>calligrapher agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>calligrapher collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>calligrapher corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>calligrapher family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>calligrapher person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>carrier type</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>cartographer agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>cartographer collective agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>cartographer corporate body of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>cartographer family of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>cartographer person of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>caster agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>caster collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>caster corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>caster family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>caster person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>casting director agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>casting director collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>casting director corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>casting director family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>casting director person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>category of expression</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>category of item</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>category of manifestation</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>category of work</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>censor agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>censor collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>censor corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>censor family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>censor person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>choral conductor agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>choral conductor collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>choral conductor corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>choral conductor family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>choral conductor person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>choreographer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>choreographer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>choreographer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>choreographer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>choreographer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>collotyper agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>collotyper collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>collotyper corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>collotyper family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>collotyper person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>colour</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>colour content</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>colourist agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>colourist collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>colourist corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>colourist family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>colourist person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>commentator agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>commentator collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>commentator corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>commentator family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>commentator person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>commissioning body agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>commissioning body collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>commissioning body corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>commissioning body family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>commissioning body person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>compiler agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>compiler collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>compiler corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>compiler family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>compiler person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>composer agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>composer collective agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>composer corporate body of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>composer family of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>composer person of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>conductor agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>conductor collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>conductor corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>conductor family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>conductor person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>consultant agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>consultant agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>consultant collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>consultant corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>consultant family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>consultant person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>content type</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>content type of representative expression</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>contributor agent of cartography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent of choreography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent of computer content</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent of moving image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent of object</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent of speech</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent of still image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent of text</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent to aggregate</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent to amalgamation</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor agent to performance</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of cartography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of choreography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of computer content</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of moving image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of object</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of speech</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of still image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent of text</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent to aggregate</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent to amalgamation</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor collective agent to performance</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of cartography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of choreography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of computer content</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of moving image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of object</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of speech</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of still image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body of text</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body to aggregate</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body to amalgamation</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor corporate body to performance</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of cartography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of choreography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of computer content</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of moving image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of object</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of speech</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of still image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family of text</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family to aggregate</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family to amalgamation</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor family to performance</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of cartography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of choreography</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of computer content</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of moving image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of music</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of object</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of speech</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of still image</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person of text</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person to aggregate</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person to amalgamation</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>contributor person to performance</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>coordinates of cartographic content</td>
+<td>has broader</td>
+<td>coverage</td>
+</tr>
+<tr>
+<td>copyright date</td>
+<td>has broader</td>
+<td>date copyrighted</td>
+</tr>
+<tr>
+<td>costume designer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>costume designer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>costume designer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>costume designer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>costume designer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>court reporter agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>court reporter collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>court reporter corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>court reporter family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>court reporter person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>coverage of content</td>
+<td>has broader</td>
+<td>coverage</td>
+</tr>
+<tr>
+<td>creator agent of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>creator agent of manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>creator agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>creator collective agent of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>creator collective agent of manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>creator collective agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>creator corporate body of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>creator corporate body of manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>creator corporate body of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>creator family of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>creator family of manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>creator family of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>creator person of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>creator person of manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>creator person of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>criminal defendant corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>criminal defendant person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>critique of expression</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>critique of item</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>critique of manifestation</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>critique of RDA entity</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>critique of work</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>custodial history of item</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>dancer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dancer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dancer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dancer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dancer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>date of capture</td>
+<td>has broader</td>
+<td>date</td>
+</tr>
+<tr>
+<td>date of capture of representative expression</td>
+<td>has broader</td>
+<td>date</td>
+</tr>
+<tr>
+<td>date of conference</td>
+<td>has broader</td>
+<td>date</td>
+</tr>
+<tr>
+<td>date of distribution</td>
+<td>has broader</td>
+<td>date issued</td>
+</tr>
+<tr>
+<td>date of expression</td>
+<td>has broader</td>
+<td>date</td>
+</tr>
+<tr>
+<td>date of manifestation</td>
+<td>has broader</td>
+<td>date</td>
+</tr>
+<tr>
+<td>date of manufacture</td>
+<td>has broader</td>
+<td>date issued</td>
+</tr>
+<tr>
+<td>date of production</td>
+<td>has broader</td>
+<td>date issued</td>
+</tr>
+<tr>
+<td>date of publication</td>
+<td>has broader</td>
+<td>date issued</td>
+</tr>
+<tr>
+<td>date of representative expression</td>
+<td>has broader</td>
+<td>date created</td>
+</tr>
+<tr>
+<td>date of work</td>
+<td>has broader</td>
+<td>date created</td>
+</tr>
+<tr>
+<td>defendant corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>defendant person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>derivative expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>derivative work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>description of agent</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of collective agent</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of corporate body</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of expression</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of family</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of item</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of manifestation</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of nomen</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of person</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of place</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of RDA entity</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of timespan</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>description of work</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>designer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>designer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>designer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>designer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>designer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>details of applied material</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>details of aspect ratio designation</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of base material</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>details of bibliographic format</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of broadcast standard</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of cartographic data type</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of configuration of playback channels</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of digital file characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of digital representation of cartographic content</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of emulsion on microfilm and microfiche</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>details of encoding format</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of file type</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of groove characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of layout</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of mount</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>details of playing speed</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of polarity</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of presentation format</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of projection characteristic of motion picture film</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of projection speed</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of reduction ratio designation</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of regional encoding</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of special playback characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of tape configuration</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of track configuration</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of type of recording</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of video characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>details of video format</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>digest of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>digest of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>digested as expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>digested as work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>digital file characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>digital representation of cartographic content</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>director agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director agent of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director agent of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director collective agent of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director collective agent of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director corporate body of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director corporate body of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director family of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director family of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director person of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>director person of photography</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>distribution statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>distributor agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>distributor collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>distributor corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>distributor family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>distributor person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>DJ agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>DJ collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>DJ corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>DJ family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>DJ person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>draftsman agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>draftsman collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>draftsman corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>draftsman family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>draftsman person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dramatization of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>dramatization of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>dramatized as expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>dramatized as work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>dubbed version</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>dubbed version of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>dubbing director agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dubbing director collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dubbing director corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dubbing director family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>dubbing director person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>has broader</td>
+<td>extent</td>
+</tr>
+<tr>
+<td>duration of representative expression</td>
+<td>has broader</td>
+<td>extent</td>
+</tr>
+<tr>
+<td>edition statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>editor agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor agent of moving image work</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor collective agent of moving image work</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor corporate body of moving image work</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor family of moving image work</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editor person of moving image work</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>editorial director agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>editorial director collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>editorial director corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>editorial director family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>editorial director person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>electronic reproduction of item</td>
+<td>has broader</td>
+<td>has format</td>
+</tr>
+<tr>
+<td>electronic reproduction of item of</td>
+<td>has broader</td>
+<td>is format of</td>
+</tr>
+<tr>
+<td>electronic reproduction of manifestation</td>
+<td>has broader</td>
+<td>has format</td>
+</tr>
+<tr>
+<td>electronic reproduction of manifestation of</td>
+<td>has broader</td>
+<td>is format of</td>
+</tr>
+<tr>
+<td>emulsion on microfilm and microfiche</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>encoded bitrate</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>encoding format</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>engraver agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>engraver collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>engraver corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>engraver family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>engraver person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>etcher agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>etcher collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>etcher corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>etcher family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>etcher person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>evaluation of expression</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>evaluation of item</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>evaluation of manifestation</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>evaluation of RDA entity</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>evaluation of work</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>extent of expression</td>
+<td>has broader</td>
+<td>extent</td>
+</tr>
+<tr>
+<td>extent of manifestation</td>
+<td>has broader</td>
+<td>extent</td>
+</tr>
+<tr>
+<td>extent of representative expression</td>
+<td>has broader</td>
+<td>extent</td>
+</tr>
+<tr>
+<td>film director agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film director collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film director corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film director family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film director person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film distributor agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>film distributor collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>film distributor corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>film distributor family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>film distributor person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>film producer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film producer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film producer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film producer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>film producer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>filmmaker agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>filmmaker collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>filmmaker corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>filmmaker family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>filmmaker person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>fingerprint</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>first alphanumeric designation of alternative sequence</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>first alphanumeric designation of sequence</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>first chronological designation of alternative sequence</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>first chronological designation of sequence</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>founder agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>founder collective agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>founder corporate body of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>founder family of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>founder person of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>free translation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>free translation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>freely translated as expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>freely translated as work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>graphic novelization of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>graphic novelization of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>groove characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>groove pitch</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>groove width</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>host agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>host collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>host corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>host family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>host person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>identifier for expression</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>identifier for item</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>identifier for manifestation</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>identifier for work</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>identifier for work group</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>illuminator agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>illuminator collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>illuminator corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>illuminator family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>illuminator person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>illustrative content</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>imitated as expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>imitated as work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>imitation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>imitation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>index expression</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>index work</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>inscriber</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instructor agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instructor collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instructor corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instructor family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instructor person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumental conductor agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumental conductor collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumental conductor corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumental conductor family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumental conductor person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumentalist agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumentalist collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumentalist corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumentalist family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>instrumentalist person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>intended audience of expression</td>
+<td>has broader</td>
+<td>audience</td>
+</tr>
+<tr>
+<td>intended audience of manifestation</td>
+<td>has broader</td>
+<td>audience</td>
+</tr>
+<tr>
+<td>intended audience of representative expression</td>
+<td>has broader</td>
+<td>audience</td>
+</tr>
+<tr>
+<td>interactivity mode</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>interviewee agent of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewee agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewee collective agent of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewee collective agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewee corporate body of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewee corporate body of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewee family of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewee family of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewee person of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewee person of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewer agent of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewer agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewer collective agent of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewer collective agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewer corporate body of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewer corporate body of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewer family of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewer family of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>interviewer person of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>interviewer person of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>inventor agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>inventor collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>inventor corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>inventor family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>inventor person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>ISSN</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>issuing body agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>issuing body collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>issuing body corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>issuing body family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>issuing body person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>key title</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>landscape architect agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>landscape architect collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>landscape architect corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>landscape architect family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>landscape architect person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>language of expression</td>
+<td>has broader</td>
+<td>language</td>
+</tr>
+<tr>
+<td>language of representative expression</td>
+<td>has broader</td>
+<td>language</td>
+</tr>
+<tr>
+<td>language version</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>language version of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>last alphanumeric designation of alternative sequence</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>last alphanumeric designation of sequence</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>last chronological designation of alternative sequence</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>last chronological designation of sequence</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>layout</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>letterer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>letterer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>letterer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>letterer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>letterer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>librettist agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>librettist collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>librettist corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>librettist family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>librettist person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>libretto based on expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>libretto based on work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>lighting designer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>lighting designer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>lighting designer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>lighting designer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>lighting designer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>lithographer agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>lithographer collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>lithographer corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>lithographer family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>lithographer person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>longitude and latitude</td>
+<td>has broader</td>
+<td>coverage</td>
+</tr>
+<tr>
+<td>lyricist agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>lyricist collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>lyricist corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>lyricist family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>lyricist person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>makeup artist agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>makeup artist collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>makeup artist corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>makeup artist family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>makeup artist person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>manifestation copyright statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation designation of sequence statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation dissertation statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation distribution statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation edition statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation frequency statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation identifier statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation manufacture statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation production statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation publication statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation regional encoding statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation series statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manifestation title and responsibility statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manufacture statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>manufacturer agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>manufacturer collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>manufacturer corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>manufacturer family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>manufacturer person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>material</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>media type</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>minute taker agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>minute taker collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>minute taker corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>minute taker family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>minute taker person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>mixing engineer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>mixing engineer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>mixing engineer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>mixing engineer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>mixing engineer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>mode of issuance</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>moderator agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>moderator collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>moderator corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>moderator family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>moderator person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>modified by variation as expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>modified by variation as work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>modifier agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>modifier collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>modifier corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>modifier family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>modifier person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>motion picture adaptation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>motion picture adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>motion picture screenplay based on expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>motion picture screenplay based on work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>mount</td>
+<td>has broader</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>music programmer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>music programmer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>music programmer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>music programmer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>music programmer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>musical director agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>musical director collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>musical director corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>musical director family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>musical director person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>musical setting of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>musical setting of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>musical theatre adaptation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>musical theatre adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>name of publisher</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>narrator agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>narrator collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>narrator corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>narrator family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>narrator person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>note on distribution statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on edition statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on expression</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on item</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on manifestation</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on manufacture statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on production statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on publication statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on series statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on statement of responsibility</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>note on work</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>novelization of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>novelization of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>numeric designation of musical work</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>onscreen participant agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen participant collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen participant corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen participant family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen participant person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen presenter agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen presenter collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen presenter corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen presenter family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>onscreen presenter person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>opera adaptation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>opera adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>opus number</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>oratorio adaptation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>oratorio adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>organizer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>organizer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>organizer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>organizer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>organizer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>panelist agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>panelist collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>panelist corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>panelist family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>panelist person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>papermaker agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>papermaker collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>papermaker corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>papermaker family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>papermaker person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>parallel statement of responsibility relating to edition</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>parallel statement of responsibility relating to named revision of edition</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>parallel statement of responsibility relating to series</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>parallel statement of responsibility relating to title proper</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>parallel title proper</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>parodied as expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>parodied as work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>parody of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>parody of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>part expression</td>
+<td>has broader</td>
+<td>has part</td>
+</tr>
+<tr>
+<td>part manifestation</td>
+<td>has broader</td>
+<td>has part</td>
+</tr>
+<tr>
+<td>part of expression</td>
+<td>has broader</td>
+<td>is part of</td>
+</tr>
+<tr>
+<td>part of manifestation</td>
+<td>has broader</td>
+<td>is part of</td>
+</tr>
+<tr>
+<td>part of work</td>
+<td>has broader</td>
+<td>is part of</td>
+</tr>
+<tr>
+<td>part work</td>
+<td>has broader</td>
+<td>has part</td>
+</tr>
+<tr>
+<td>participant in treaty</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>performer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>performer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>performer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>performer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>performer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>photographer agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>photographer collective agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>photographer corporate body of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>photographer family of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>photographer person of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>plaintiff corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>plaintiff person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>plate number for notated music</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>platemaker agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>platemaker collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>platemaker corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>platemaker family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>platemaker person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>playing speed</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>polarity</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>preferred title of expression</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>preferred title of item</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>preferred title of work</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>prequel work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>presenter agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>presenter collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>presenter corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>presenter family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>presenter person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>printer agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printer collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printer corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printer family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printer person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printmaker agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printmaker collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printmaker corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printmaker family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>printmaker person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>producer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>producer agent of unpublished manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>producer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>producer collective agent of unpublished manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>producer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>producer corporate body of unpublished manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>producer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>producer family of unpublished manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>producer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>producer person of unpublished manifestation</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>production company</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>production designer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>production designer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>production designer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>production designer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>production designer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>production statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>programmer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>programmer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>programmer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>programmer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>programmer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>projection characteristic of motion picture film</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>projection of cartographic content</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>projection of cartographic content of representative expression</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>projection speed</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>publication statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>publisher agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>publisher collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>publisher corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>publisher family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>publisher number for notated music</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>publisher person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>puppeteer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>puppeteer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>puppeteer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>puppeteer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>puppeteer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>radio adaptation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>radio adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>radio director agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio director collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio director corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio director family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio director person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio producer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio producer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio producer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio producer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio producer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>radio script based on expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>radio script based on work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>rapporteur agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>rapporteur collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>rapporteur corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>rapporteur family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>rapporteur person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>recording engineer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recording engineer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recording engineer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recording engineer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recording engineer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recordist agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recordist collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recordist corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recordist family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>recordist person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>reduction ratio</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>reduction ratio designation</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>regional encoding</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>related expression of expression</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related expression of item</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related expression of manifestation</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related item of expression</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related item of item</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related item of manifestation</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related item of work</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related manifestation of expression</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related manifestation of item</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related manifestation of manifestation</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related manifestation of work</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related work of expression</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related work of item</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related work of manifestation</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>related work of work</td>
+<td>has broader</td>
+<td>relation</td>
+</tr>
+<tr>
+<td>relief type</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>remix artist agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>remix artist collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>remix artist corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>remix artist family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>remix artist person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>replaced by expression</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>replaced by work</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>replaced in part by expression</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>replaced in part by work</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>replacement in part of expression</td>
+<td>has broader</td>
+<td>replaces</td>
+</tr>
+<tr>
+<td>replacement in part of work</td>
+<td>has broader</td>
+<td>replaces</td>
+</tr>
+<tr>
+<td>replacement of expression</td>
+<td>has broader</td>
+<td>replaces</td>
+</tr>
+<tr>
+<td>replacement of work</td>
+<td>has broader</td>
+<td>replaces</td>
+</tr>
+<tr>
+<td>reprint of item of</td>
+<td>has broader</td>
+<td>is format of</td>
+</tr>
+<tr>
+<td>reprint of manifestation of</td>
+<td>has broader</td>
+<td>is format of</td>
+</tr>
+<tr>
+<td>reprinted as item</td>
+<td>has broader</td>
+<td>has format</td>
+</tr>
+<tr>
+<td>reprinted as manifestation</td>
+<td>has broader</td>
+<td>has format</td>
+</tr>
+<tr>
+<td>reproduced as item</td>
+<td>has broader</td>
+<td>has format</td>
+</tr>
+<tr>
+<td>reproduced as manifestation</td>
+<td>has broader</td>
+<td>has format</td>
+</tr>
+<tr>
+<td>reproduction of item of</td>
+<td>has broader</td>
+<td>is format of</td>
+</tr>
+<tr>
+<td>reproduction of manifestation of</td>
+<td>has broader</td>
+<td>is format of</td>
+</tr>
+<tr>
+<td>researcher agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>researcher collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>researcher corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>researcher family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>researcher person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>resolution</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>restorationist agent of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist agent of item</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist collective agent of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist collective agent of item</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist corporate body of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist corporate body of item</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist family of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist family of item</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist person of expression</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restorationist person of item</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>restriction on access to item</td>
+<td>has broader</td>
+<td>access rights</td>
+</tr>
+<tr>
+<td>restriction on access to manifestation</td>
+<td>has broader</td>
+<td>access rights</td>
+</tr>
+<tr>
+<td>restriction on use of item</td>
+<td>has broader</td>
+<td>rights</td>
+</tr>
+<tr>
+<td>restriction on use of manifestation</td>
+<td>has broader</td>
+<td>rights</td>
+</tr>
+<tr>
+<td>review of expression</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>review of item</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>review of manifestation</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>review of RDA entity</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>review of work</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>revised as</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>reviser agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>reviser collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>reviser corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>reviser family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>reviser person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>revision of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>right ascension and declination</td>
+<td>has broader</td>
+<td>coverage</td>
+</tr>
+<tr>
+<td>screenplay based on expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>screenplay based on work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>screenwriter agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>screenwriter collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>screenwriter corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>screenwriter family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>screenwriter person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sculptor agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sculptor collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sculptor corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sculptor family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sculptor person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>separated from expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>separated from work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>separated into expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>separated into work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>sequel work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>serial number of musical work</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>serialized version</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>serialized version of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>series statement</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>set to music as expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>set to music as work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>singer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>singer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>singer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>singer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>singer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>software developer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>software developer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>software developer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>software developer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>software developer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>sound characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>sound content</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>sound designer agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>sound designer collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>sound designer corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>sound designer family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>sound designer person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>speaker agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>speaker collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>speaker corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>speaker family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>speaker person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>special effects provider agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>special effects provider collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>special effects provider corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>special effects provider family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>special effects provider person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>special playback characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>sponsoring agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sponsoring collective agent of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sponsoring corporate body of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sponsoring family of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>sponsoring person of work</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>stage director agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>stage director collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>stage director corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>stage director family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>stage director person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>statement of responsibility</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>statement of responsibility relating to edition</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>statement of responsibility relating to named revision of edition</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>statement of responsibility relating to series</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>statement of responsibility relating to title proper</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>storyteller agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>storyteller collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>storyteller corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>storyteller family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>storyteller person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>strings of coordinate pairs</td>
+<td>has broader</td>
+<td>coverage</td>
+</tr>
+<tr>
+<td>subject</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject agent</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject collective agent</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject corporate body</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject expression</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject family</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject item</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject manifestation</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject nomen</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject person</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject place</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject RDA entity</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject timespan</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>subject work</td>
+<td>has broader</td>
+<td>subject</td>
+</tr>
+<tr>
+<td>succeeded by expression</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>succeeded by work</td>
+<td>has broader</td>
+<td>is replaced by</td>
+</tr>
+<tr>
+<td>summarization of content</td>
+<td>has broader</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>summarization of content</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>summarized as expression</td>
+<td>has broader</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>summarized as expression</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>summarized as work</td>
+<td>has broader</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>summarized as work</td>
+<td>has broader</td>
+<td>description</td>
+</tr>
+<tr>
+<td>supplementary content</td>
+<td>has broader</td>
+<td>type</td>
+</tr>
+<tr>
+<td>surveyor agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>surveyor collective agent</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>surveyor corporate body</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>surveyor family</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>surveyor person</td>
+<td>has broader</td>
+<td>publisher</td>
+</tr>
+<tr>
+<td>television adaptation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>television adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>television director agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television director collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television director corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television director family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television director person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television producer agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television producer collective agent</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television producer corporate body</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television producer family</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television producer person</td>
+<td>has broader</td>
+<td>creator</td>
+</tr>
+<tr>
+<td>television screenplay based on expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>television screenplay based on work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>term of availability</td>
+<td>has broader</td>
+<td>access rights</td>
+</tr>
+<tr>
+<td>thematic index number</td>
+<td>has broader</td>
+<td>identifier</td>
+</tr>
+<tr>
+<td>title of expression</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>title of item</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>title of manifestation</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>title of series</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>title of work</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>title proper</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>track configuration</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>transcriber agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>transcriber collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>transcriber corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>transcriber family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>transcriber person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>transformation</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>transformation by audience</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>transformation by audience of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>transformation by extension plan</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>transformation by extension plan of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>transformation by genre</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>transformation by genre of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>transformation by policy</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>transformation by policy of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>transformation by style</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>transformation by style of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>transformation of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>translated as</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>translation of</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>translator agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>translator collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>translator corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>translator family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>translator person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>type of recording</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>variant access point for expression</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>variant access point for item</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>variant access point for manifestation</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>variant access point for work</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>variant title of expression</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>variant title of item</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>variant title of manifestation</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>variant title of work</td>
+<td>has broader</td>
+<td>title</td>
+</tr>
+<tr>
+<td>variations based on expression</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>variations based on work</td>
+<td>has broader</td>
+<td>has version</td>
+</tr>
+<tr>
+<td>verse adaptation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>verse adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>video adaptation of expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>video adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>video characteristic</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>video format</td>
+<td>has broader</td>
+<td>format</td>
+</tr>
+<tr>
+<td>video game adaptation of work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>video screenplay based on expression</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>video screenplay based on work</td>
+<td>has broader</td>
+<td>is version of</td>
+</tr>
+<tr>
+<td>visual effects provider agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>visual effects provider collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>visual effects provider corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>visual effects provider family</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>visual effects provider person</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>voice actor agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>voice actor collective agent</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+<tr>
+<td>voice actor corporate body</td>
+<td>has broader</td>
+<td>contributor</td>
+</tr>
+</tbody></table>      </div>
+      <div class="col-md-6">
+       <h3>Downloads</h3>
+       <!-- InstanceBeginEditable name="AlignDownload" -->
+       <ul>
+        <li><a href="http://www.rdaregistry.info/csv/Aligns/alignRDA2DCT.csv" target="_blank">Comma-separated variable (text/csv)</a></li>
+       </ul>
+       <!-- InstanceEndEditable -->
+       <h3>Maps</h3>
+       <ul>
+        <li><a href="../Maps/mapRDACO2ROF.html">Map from RDA properties to Dublin Core Terms</a></li>
+       </ul>
+      </div>
+     </div>
+     
+    </div>
+   </div>
+  </article>
+ </section>
+ <footer>
+  <div class="rg-footer">
+   <div class="row">
+    <div class="col-md-6">
+     <div class="rg-footer-part">
+      <strong><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA Vocabularies</span></strong> and <strong><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA Registry</span></strong> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.
+     </div>
+    </div>
+    <div class="col-md-2">
+     <div class="rg-footer-part">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png"></a>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="rg-footer-part">
+      <img src="../rgImages/RDAlogo.jpg" width="154" height="60" alt="RDA logo">
+     </div>
+    </div>
+   </div>
+   <div class="date-updated">
+    <p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->20 Oct 2020<!-- InstanceEndEditable -->.</p>
+   </div>
+  </div>
+ </footer>
+</div>
+<!-- Scripts--> 
+<!-- InstanceBeginEditable name="Scripts" --> 
+<script defer src="/bower_components/jquery/dist/jquery.js">
+</script> 
+<script defer src="/bower_components/bootstrap/dist/js/bootstrap.js">
+</script> 
+<script defer src="/bower_components/modernizr/modernizr.js">
+</script> 
+<script defer src="/scripts/script.js">
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
