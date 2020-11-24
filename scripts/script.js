@@ -53,10 +53,10 @@ if (typeof dataSource !== "undefined") {
                 '<td>Scope Notes:</td>' +
                 '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' +
                 '</tr>' +
-/*                '<tr>' +
-                '<td>URL:</td>' +
-                '<td>' + makeLink(d.url) + '</td>' +
-                '</tr>' + */
+//                '<tr>' +
+//                '<td>URL:</td>' +
+//                '<td>' + makeLink(d.url) + '</td>' +
+//                '</tr>' +
                 '<tr>' +
                 '<td>Status:</td>' +
                 '<td>' + formatRef(d.status, "vstatus") + '</td>' +
