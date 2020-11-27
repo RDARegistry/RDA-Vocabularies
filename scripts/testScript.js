@@ -30,7 +30,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">' +
                 '<tr>' +
-                '<td>Lexical Alias:</td>' +
+                '<td>Lexical alias:</td>' +
                 '<td>' + makeAliasLink(d.lexicalAlias) + '</td>' +
                 '</tr>' +
                 '<tr>' +
@@ -39,6 +39,10 @@ if (typeof dataSource !== "undefined") {
                 '</tr>';
 				if (d.range.length> 0) {
 					var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
+					detailTable += detailRow;
+				}
+				if (d.note.length> 0) {
+					var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
 					detailTable += detailRow;
 				}
 				detailTable += '</table>';
