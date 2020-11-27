@@ -36,8 +36,8 @@ if (typeof dataSource !== "undefined") {
                 '<tr>' +
                 '<td>Domain:</td>' +
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
-                '</tr>' +
-                '</table>';
+                '</tr>';
+				detailTable += '</table>';
 //                '<tr>' +
 //                '<td>Range:</td>' +
 //              '<td>' + formatRef(d.range, "vrange") + '</td>' +
