@@ -37,11 +37,15 @@ if (typeof dataSource !== "undefined") {
                 '<td>Domain:</td>' +
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
                 '</tr>' +
-                '<tr>' +
-                '<td>Range:</td>' +
-                '<td>' + formatRef(d.range, "vrange") + '</td>' +
-                '</tr>' +
-                '<tr>' +
+//                '<tr>' +
+//                '<td>Range:</td>' +
+//                '<td>' + formatRef(d.range, "vrange") + '</td>' +
+//                '</tr>' +
+                  if (d.range.length > 0) {'<tr>' +
+                   '<td>Range:</td>' +
+                   '<td>' + formatRef(d.range, "vrange") + '</td>' +
+                   '</tr>' +}
+ 			    '<tr>' +
                 '<td>inverseOf:</td>' +
                 '<td>' + formatRefArray(d.inverseOf, "vinverseOf") + '</td>' +
                 '</tr>' +
