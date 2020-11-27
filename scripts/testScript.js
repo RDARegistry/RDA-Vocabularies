@@ -29,8 +29,8 @@ if (typeof dataSource !== "undefined") {
         // `d` is the original data object for the row
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
-			detailTable += '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
-			if (typeof d.note != "undefined") {
+//			if (typeof d.note != "undefined") {
+			if (d.note != null) {
 				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
@@ -47,33 +47,9 @@ if (typeof dataSource !== "undefined") {
 				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
-//			detailTable += '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
+			detailTable += '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
 			detailTable += '</table>';
 			return detailTable;
-//                '<tr>' +
-//                '<td>Range:</td>' +
-//              '<td>' + formatRef(d.range, "vrange") + '</td>' +
-//              '</tr>' +
-//                '<tr>' +
-//                '<td>inverseOf:</td>' +
-//                '<td>' + formatRefArray(d.inverseOf, "vinverseOf") + '</td>' +
-//                '</tr>' +
-//                '<tr>' +
-//                '<td>SubProperties:</td>' +
-//                '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' +
-//                '</tr>' +
-//                '<tr>' +
-//                '<td>Scope Notes:</td>' +
-//                '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' +
-//                '</tr>' +
-//                '<tr>' +
-//                '<td>URL:</td>' +
-//                '<td>' + makeLink(d.url) + '</td>' +
-//                '</tr>' +
-//                '<tr>' +
-//                '<td>Status:</td>' +
-//                '<td>' + formatRef(d.status, "vstatus") + '</td>' +
-//                '</tr>' +
         }
     }
 
