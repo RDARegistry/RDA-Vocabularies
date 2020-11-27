@@ -39,6 +39,10 @@ if (typeof dataSource !== "undefined") {
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
                 '</tr>';
 				detailTable += '</table>';
+			if (typeof d.note != "undefined") {
+					var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
+					detailTable += detailRow;
+				}
 				return detailTable;
 //                '<tr>' +
 //                '<td>Count:</td>' +
