@@ -27,8 +27,9 @@ if (typeof dataSource !== "undefined") {
     /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
+		var detailTable = '';
         if (typeof d != "undefined") {
-            return '<table class="pindex_detail">' +
+            detailTable = '<table class="pindex_detail">' +
                 '<tr>' +
                 '<td>Lexical Alias:</td>' +
                 '<td>' + makeAliasLink(d.lexicalAlias) + '</td>' +
@@ -41,7 +42,7 @@ if (typeof dataSource !== "undefined") {
 //                '<td>Range:</td>' +
 //                '<td>' + formatRef(d.range, "vrange") + '</td>' +
 //                '</tr>' +
-                  if (d.range.length > 0) {return '<tr>' +
+                  if (d.range.length > 0) {'<tr>' +
                    '<td>Range:</td>' +
                    '<td>' + formatRef(d.range, "vrange") + '</td>' +
                    '</tr>' +}
@@ -67,6 +68,7 @@ if (typeof dataSource !== "undefined") {
                 '</tr>' +
                 '</table>';
         }
+		return detailTable;
     }
 
     function formatRef(data, classname) {
