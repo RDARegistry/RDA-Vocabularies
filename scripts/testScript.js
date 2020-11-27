@@ -28,7 +28,6 @@ if (typeof dataSource !== "undefined") {
     function format(d) {
         // `d` is the original data object for the row
         if (typeof d != "undefined") {
-			var testy = d.domain;
             var detailTable = '<table class="pindex_detail">' +
                 '<tr>' +
                 '<td>Lexical alias:</td>' +
@@ -38,11 +37,11 @@ if (typeof dataSource !== "undefined") {
                 '<td>Domain:</td>' +
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
                 '</tr>';
-				detailTable += '</table>';
 			if (typeof d.note != "undefined") {
 					var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
 					detailTable += detailRow;
 				}
+				detailTable += '</table>';
 				return detailTable;
 //                '<tr>' +
 //                '<td>Count:</td>' +
