@@ -28,7 +28,7 @@ if (typeof dataSource !== "undefined") {
     function format(d) {
         // `d` is the original data object for the row
         if (typeof d != "undefined") {
-            return '<table class="pindex_detail">' +
+            var detailTable = '<table class="pindex_detail">' +
                 '<tr>' +
                 '<td>Lexical Alias:</td>' +
                 '<td>' + makeAliasLink(d.lexicalAlias) + '</td>' +
@@ -62,6 +62,7 @@ if (typeof dataSource !== "undefined") {
                 '<td>' + formatRef(d.status, "vstatus") + '</td>' +
                 '</tr>' +
                 '</table>';
+				return detailTable;
         }
     }
 
