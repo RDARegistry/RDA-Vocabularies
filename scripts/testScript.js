@@ -28,6 +28,7 @@ if (typeof dataSource !== "undefined") {
     function format(d) {
         // `d` is the original data object for the row
         if (typeof d != "undefined") {
+			var testy = d.domain;
             var detailTable = '<table class="pindex_detail">' +
                 '<tr>' +
                 '<td>Lexical alias:</td>' +
@@ -39,7 +40,7 @@ if (typeof dataSource !== "undefined") {
                 '</tr' +
                 '<tr>' +
                 '<td>Count:</td>' +
-                '<td>' + d.domain.length + '</td>' +
+                '<td>' + testy.length + '</td>' +
                 '</tr>';
 //				if (d.range.length> 0) {
 //					var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
