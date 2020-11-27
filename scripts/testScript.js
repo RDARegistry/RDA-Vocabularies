@@ -38,6 +38,8 @@ if (typeof dataSource !== "undefined") {
                 '<td>Domain:</td>' +
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
                 '</tr>';
+				detailTable += '</table>';
+				return detailTable;
 //                '<tr>' +
 //                '<td>Count:</td>' +
 //                '<td>' + testy.length + '</td>' +
@@ -50,7 +52,6 @@ if (typeof dataSource !== "undefined") {
 //					var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
 //					detailTable += detailRow;
 //				}
-				detailTable += '</table>';
 //                '<tr>' +
 //                '<td>Range:</td>' +
 //              '<td>' + formatRef(d.range, "vrange") + '</td>' +
@@ -75,7 +76,6 @@ if (typeof dataSource !== "undefined") {
 //                '<td>Status:</td>' +
 //                '<td>' + formatRef(d.status, "vstatus") + '</td>' +
 //                '</tr>' +
-				return detailTable;
         }
     }
 
