@@ -37,31 +37,31 @@ if (typeof dataSource !== "undefined") {
                 '<td>Domain:</td>' +
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
                 '</tr>' +
+                '</table>';
 //                '<tr>' +
 //                '<td>Range:</td>' +
 //              '<td>' + formatRef(d.range, "vrange") + '</td>' +
 //              '</tr>' +
-                '<tr>' +
-                '<td>inverseOf:</td>' +
-                '<td>' + formatRefArray(d.inverseOf, "vinverseOf") + '</td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>SubProperties:</td>' +
-                '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>Scope Notes:</td>' +
-                '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' +
-                '</tr>' +
+//                '<tr>' +
+//                '<td>inverseOf:</td>' +
+//                '<td>' + formatRefArray(d.inverseOf, "vinverseOf") + '</td>' +
+//                '</tr>' +
+//                '<tr>' +
+//                '<td>SubProperties:</td>' +
+//                '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' +
+//                '</tr>' +
+//                '<tr>' +
+//                '<td>Scope Notes:</td>' +
+//                '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' +
+//                '</tr>' +
 //                '<tr>' +
 //                '<td>URL:</td>' +
 //                '<td>' + makeLink(d.url) + '</td>' +
 //                '</tr>' +
-                '<tr>' +
-                '<td>Status:</td>' +
-                '<td>' + formatRef(d.status, "vstatus") + '</td>' +
-                '</tr>' +
-                '</table>';
+//                '<tr>' +
+//                '<td>Status:</td>' +
+//                '<td>' + formatRef(d.status, "vstatus") + '</td>' +
+//                '</tr>' +
 				return detailTable;
         }
     }
