@@ -29,22 +29,27 @@ if (typeof dataSource !== "undefined") {
         // `d` is the original data object for the row
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
+			detailTable += '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
 			if (typeof d.note != "undefined") {
-					var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
-					detailTable += detailRow;
+				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
+				detailTable += detailRow;
 				}
-			detailTable += '<tr>' + '<td>Lexical alias:</td>' + '<td>' + makeAliasLink(d.lexicalAlias) + '</td>' + '</tr>';
 			detailTable += '<tr>' + '<td>Domain:</td>' + '<td>' + formatRef(d.domain, "vdomain") + '</td>' + '</tr>';
 			if (typeof d.range != "undefined") {
-					var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
-					detailTable += detailRow;
+				var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
+				detailTable += detailRow;
 				}
 			if (typeof d.inverseOf != "undefined") {
-					var detailRow = '<tr>' + '<td>Inverse:</td>' + '<td>' + formatRef(d.inverseOf, "vinverseOf") + '</td>' + '</tr>';
-					detailTable += detailRow;
+				var detailRow = '<tr>' + '<td>Inverse:</td>' + '<td>' + formatRef(d.inverseOf, "vinverseOf") + '</td>' + '</tr>';
+				detailTable += detailRow;
 				}
-				detailTable += '</table>';
-				return detailTable;
+			if (typeof d.hasSubproperty != "undefined") {
+				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
+//			detailTable += '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
+			detailTable += '</table>';
+			return detailTable;
 //                '<tr>' +
 //                '<td>Range:</td>' +
 //              '<td>' + formatRef(d.range, "vrange") + '</td>' +
