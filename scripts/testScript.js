@@ -37,6 +37,10 @@ if (typeof dataSource !== "undefined") {
                 '<td>Domain:</td>' +
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
                 '</tr>';
+				if (d.range.length> 0) {
+					var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
+					detailTable += detailRow;
+				}
 				detailTable += '</table>';
 //                '<tr>' +
 //                '<td>Range:</td>' +
