@@ -41,10 +41,10 @@ if (typeof dataSource !== "undefined") {
 					var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
 					detailTable += detailRow;
 				}
-				if (d.note.length> 0) {
-					var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
-					detailTable += detailRow;
-				}
+//				if (d.note.length> 0) {
+//					var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
+//					detailTable += detailRow;
+//				}
 				detailTable += '</table>';
 //                '<tr>' +
 //                '<td>Range:</td>' +
