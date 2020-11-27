@@ -38,14 +38,14 @@ if (typeof dataSource !== "undefined") {
                 '<td>Domain:</td>' +
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
                 '</tr>' +
-                '<tr>' +
-                '<td>Count:</td>' +
-                '<td>' + testy.length + '</td>' +
-                '</tr>';
-//				if (d.range.length> 0) {
-//					var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
-//					detailTable += detailRow;
-//				}
+//                '<tr>' +
+//                '<td>Count:</td>' +
+//                '<td>' + testy.length + '</td>' +
+//                '</tr>';
+				if (typeof d.range != "undefined") {
+					var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
+					detailTable += detailRow;
+				}
 //				if (d.note.length> 0) {
 //					var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
 //					detailTable += detailRow;
