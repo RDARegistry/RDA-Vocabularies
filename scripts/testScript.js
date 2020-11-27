@@ -37,7 +37,7 @@ if (typeof dataSource !== "undefined") {
                 '<tr>' +
                 '<td>Domain:</td>' +
                 '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
-                '</tr' +
+                '</tr>' +
                 '<tr>' +
                 '<td>Count:</td>' +
                 '<td>' + testy.length + '</td>' +
