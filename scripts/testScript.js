@@ -41,7 +41,7 @@ if (typeof dataSource !== "undefined") {
 //                '<td>Range:</td>' +
 //                '<td>' + formatRef(d.range, "vrange") + '</td>' +
 //                '</tr>' +
-                  if (d.range.length > 0) {'<tr>' +
+                  if (d.range.length > 0) {return '<tr>' +
                    '<td>Range:</td>' +
                    '<td>' + formatRef(d.range, "vrange") + '</td>' +
                    '</tr>' +}
