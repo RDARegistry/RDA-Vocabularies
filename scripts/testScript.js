@@ -29,8 +29,7 @@ if (typeof dataSource !== "undefined") {
         // `d` is the original data object for the row
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
-//			if (typeof d.note != "undefined") {
-			if (d.note != null) {
+			if (typeof d.note != "undefined") {
 				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
@@ -112,8 +111,6 @@ if (typeof dataSource !== "undefined") {
             else {
                 value = formatRef(data, classname)
             }
-        } else {
-            value = ""
         }
         return value;
     }
@@ -261,13 +258,13 @@ if (typeof dataSource !== "undefined") {
                       "render": function (data, type, row) {
                           return formatRefArray(data, "vsubPropertyOf");
                       }
-                  },
-                  {
-                      "defaultContent": "",
-                      "data": "hasUnconstrained",
-                      "render": function (data, type, row) {
-                          return formatRefArray(data, "vhasunconstrained");
-                      }
+//                  },
+//                  {
+//                      "defaultContent": "",
+//                      "data": "hasUnconstrained",
+//                      "render": function (data, type, row) {
+//                          return formatRefArray(data, "vhasunconstrained");
+//                      }
                   }
               ],
               "order": [
