@@ -7,7 +7,7 @@ function gup(name, url, theDefault) {
     return results == null ? theDefault : results[1];
 }
 var docLang = gup('language', Location.href, 'en');
-$("#lang_"+docLang).css({"padding": "5px", "border": "3px solid red", "border-radius": "5px"});
+$("#lang_"+docLang).css({"padding": "5px", "border": "3px solid #446e9b", "border-radius": "5px"});
 // $("#lang_"+docLang).css("border", "3px solid red");
 
 if (typeof dataSource !== "undefined") {
