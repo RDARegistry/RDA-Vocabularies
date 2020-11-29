@@ -33,7 +33,10 @@ if (typeof dataSource !== "undefined") {
 				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
-			detailTable += '<tr>' + '<td>Domain:</td>' + '<td>' + formatRef(d.domain, "vdomain") + '</td>' + '</tr>';
+			if (typeof d.domain != "undefined") {
+				var detailRow = '<tr>' + '<td>Domain:</td>' + '<td>' + formatRef(d.domain, "vdomain") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
 			if (typeof d.range != "undefined") {
 				var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
 				detailTable += detailRow;
@@ -46,7 +49,10 @@ if (typeof dataSource !== "undefined") {
 				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
-			detailTable += '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
+			if (typeof d.status != "undefined") {
+				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
 			detailTable += '</table>';
 			return detailTable;
         }
