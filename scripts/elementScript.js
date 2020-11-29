@@ -28,40 +28,27 @@ if (typeof dataSource !== "undefined") {
     function format(d) {
         // `d` is the original data object for the row
         if (typeof d != "undefined") {
-            return '<table class="pindex_detail">' +
-                '<tr>' +
-                '<td>Lexical Alias:</td>' +
-                '<td>' + makeAliasLink(d.lexicalAlias) + '</td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>Domain:</td>' +
-                '<td>' + formatRef(d.domain, "vdomain") + '</td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>Range:</td>' +
-                '<td>' + formatRef(d.range, "vrange") + '</td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>inverseOf:</td>' +
-                '<td>' + formatRefArray(d.inverseOf, "vinverseOf") + '</td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>SubProperties:</td>' +
-                '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' +
-                '</tr>' +
-                '<tr>' +
-                '<td>Scope Notes:</td>' +
-                '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' +
-                '</tr>' +
-//                '<tr>' +
-//                '<td>URL:</td>' +
-//                '<td>' + makeLink(d.url) + '</td>' +
-//                '</tr>' +
-                '<tr>' +
-                '<td>Status:</td>' +
-                '<td>' + formatRef(d.status, "vstatus") + '</td>' +
-                '</tr>' +
-                '</table>';
+            var detailTable = '<table class="pindex_detail">';
+			if (typeof d.note != "undefined") {
+				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
+			detailTable += '<tr>' + '<td>Domain:</td>' + '<td>' + formatRef(d.domain, "vdomain") + '</td>' + '</tr>';
+			if (typeof d.range != "undefined") {
+				var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
+			if (typeof d.inverseOf != "undefined") {
+				var detailRow = '<tr>' + '<td>Inverse:</td>' + '<td>' + formatRef(d.inverseOf, "vinverseOf") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
+			if (typeof d.hasSubproperty != "undefined") {
+				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
+			detailTable += '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
+			detailTable += '</table>';
+			return detailTable;
         }
     }
 
@@ -124,8 +111,6 @@ if (typeof dataSource !== "undefined") {
             else {
                 value = formatRef(data, classname)
             }
-        } else {
-            value = ""
         }
         return value;
     }
@@ -273,13 +258,13 @@ if (typeof dataSource !== "undefined") {
                       "render": function (data, type, row) {
                           return formatRefArray(data, "vsubPropertyOf");
                       }
-                  },
-                  {
-                      "defaultContent": "",
-                      "data": "hasUnconstrained",
-                      "render": function (data, type, row) {
-                          return formatRefArray(data, "vhasunconstrained");
-                      }
+//                  },
+//                  {
+//                      "defaultContent": "",
+//                      "data": "hasUnconstrained",
+//                      "render": function (data, type, row) {
+//                          return formatRefArray(data, "vhasunconstrained");
+//                      }
                   }
               ],
               "order": [
