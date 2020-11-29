@@ -30,23 +30,23 @@ if (typeof dataSource !== "undefined") {
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
 			if (typeof d.note != "undefined") {
-				var detailRow = '<tr>' + '<td>has scope note:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
-			detailTable += '<tr>' + '<td>has domain:</td>' + '<td>' + formatRef(d.domain, "vdomain") + '</td>' + '</tr>';
+			detailTable += '<tr>' + '<td>Domain:</td>' + '<td>' + formatRef(d.domain, "vdomain") + '</td>' + '</tr>';
 			if (typeof d.range != "undefined") {
-				var detailRow = '<tr>' + '<td>has range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			if (typeof d.inverseOf != "undefined") {
-				var detailRow = '<tr>' + '<td>has inverse:</td>' + '<td>' + formatRef(d.inverseOf, "vinverseOf") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Inverse:</td>' + '<td>' + formatRef(d.inverseOf, "vinverseOf") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			if (typeof d.hasSubproperty != "undefined") {
-				var detailRow = '<tr>' + '<td>has subproperty:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
-			detailTable += '<tr>' + '<td>has status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
+			detailTable += '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
 			detailTable += '</table>';
 			return detailTable;
         }
