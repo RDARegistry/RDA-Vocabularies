@@ -98,9 +98,9 @@ if (typeof dataSource !== "undefined") {
                 '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(lexicalAlias) + '">' + makeLiteral(data.label) + '</a>' +
                 '</div>';
         }
-        if (data.label != null) {
+        if (data.prefLabel != null) {
             return '<div class="vurllabel">' +
-              '<a href="' + url + '">' + makeLiteral(data.label) + '</a>' +
+              '<a href="' + url + '">' + makeLiteral(data.prefLabel) + '</a>' +
               '</div>';
         }
         return "";
