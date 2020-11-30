@@ -124,7 +124,7 @@ if (typeof dataSource !== "undefined") {
 
     function makeCurie(uri) {
         if (uri !== null && typeof uri.replace === "function") {
-            return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "rda$2:$3");
+            return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "$2:$3");
         }
         return "";
     }
