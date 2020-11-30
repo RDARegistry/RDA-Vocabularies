@@ -51,7 +51,7 @@ if (typeof dataSource !== "undefined") {
 				detailTable += detailRow;
 				}
 			if (typeof d.status != "undefined") {
-				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			detailTable += '</table>';
