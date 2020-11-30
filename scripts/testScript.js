@@ -21,8 +21,8 @@ if (typeof dataSource !== "undefined") {
 
     }).call(this);
 
-    function filterElements(obj) {
-        return obj["@type"] !== "ElementSet";
+    function filterConcepts(obj) {
+        return obj["@type"] !== "ConceptScheme";
     }
 
     /* Formatting function for row details - modify as you need */
@@ -222,7 +222,7 @@ if (typeof dataSource !== "undefined") {
                   cache: true,
                   crossDomain: true,
                   "dataSrc": function (json) {
-                      json.data = json["@graph"].filter(filterElements);
+                      json.data = json["@graph"].filter(filterConcepts);
                       return json.data;
                   }
               },
@@ -256,23 +256,23 @@ if (typeof dataSource !== "undefined") {
                   {
                       "class": "definition",
                       "render": function (data, type, row) {
-                          return formatRefArray(makeLiteral(row.description), "description");
+                          return formatRefArray(makeLiteral(row.ToolkitDescription), "description");
                       }
                   },
                   {
                       "defaultContent": "",
-                      "data": "subPropertyOf",
-                      "render": function (data, type, row) {
-                          return formatRefArray(data, "vsubPropertyOf");
+                      "data": "note",
+                        "render": function (data, type, row) {
+                          return formatRefArray(data, "vnote");
                       }
-//                  },
+//              },
 //                  {
 //                      "defaultContent": "",
 //                      "data": "hasUnconstrained",
 //                      "render": function (data, type, row) {
 //                          return formatRefArray(data, "vhasunconstrained");
 //                      }
-                  }
+                 }
               ],
               "order": [
                   [2, 'asc']
