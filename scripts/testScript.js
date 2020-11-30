@@ -262,9 +262,9 @@ if (typeof dataSource !== "undefined") {
                   },
                   {
                       "defaultContent": "",
-                      "data": "note",
+                      "data": "altLabel",
                       "render": function (data, type, row) {
-                          return formatRefArray(data, "vnote");
+                          return formatRefArray(data, "valtLabel");
                       }
 //              },
 //                  {
