@@ -262,7 +262,7 @@ if (typeof dataSource !== "undefined") {
                   {
                       "defaultContent": "",
                       "data": "note",
-                        "render": function (data, type, row) {
+                      "render": function (data, type, row) {
                           return formatRefArray(data, "vnote");
                       }
 //              },
