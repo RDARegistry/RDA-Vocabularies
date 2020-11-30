@@ -7,8 +7,8 @@ function gup(name, url, theDefault) {
     return results == null ? theDefault : results[1];
 }
 var docLang = gup('language', Location.href, 'en');
+// set language indicator style; border colour indicates on/selected
 $("#lang_"+docLang).css({"padding": "5px", "border": "3px solid #446e9b", "border-radius": "5px"});
-// $("#lang_"+docLang).css("border", "3px solid red");
 
 if (typeof dataSource !== "undefined") {
 
@@ -51,7 +51,7 @@ if (typeof dataSource !== "undefined") {
 				detailTable += detailRow;
 				}
 			if (typeof d.status != "undefined") {
-				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			detailTable += '</table>';
