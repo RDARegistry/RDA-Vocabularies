@@ -124,7 +124,7 @@ if (typeof dataSource !== "undefined") {
 
     function makeCurie(uri) {
         if (uri !== null && typeof uri.replace === "function") {
-            return uri.replace(/^(http:\/\/rdaregistry\.info\/Elements\/)(.*)\/(.*)$/ig, "rda$2:$3");
+            return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "rda$2:$3");
         }
         return "";
     }
@@ -135,6 +135,7 @@ if (typeof dataSource !== "undefined") {
         }
         return "";
     }
+
     function makeUri(uri) {
         if (uri !== null && typeof uri.replace === "function") {
             return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1$2/$3");
