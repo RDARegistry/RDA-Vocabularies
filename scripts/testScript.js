@@ -122,7 +122,19 @@ if (typeof dataSource !== "undefined") {
         return value;
     }
 
-    function makeCurie(uri) {
+ function getLanguageCallout(data) {
+    if (typeof data != "undefined") {
+        if (typeof data[docLang] != "undefined") {
+            return "@" + docLang;
+        }
+        if (typeof data['en'] != "undefined") {
+            return "@en";
+        }
+    }
+    return "@en *";
+}
+
+function makeCurie(uri) {
         if (uri !== null && typeof uri.replace === "function") {
             return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "$2:$3");
         }
@@ -254,12 +266,13 @@ if (typeof dataSource !== "undefined") {
                           return formatLabel(row);
                       }
                   },
-                  {
-                      "class": "definition",
-                      "render": function (data, type, row) {
-                          return formatRefArray(makeLiteral(row.ToolkitDescription), "description");
-                      }
-                  },
+                {
+                    "class": "definition",
+                    "render": function (data, type, row) {
+                        var definition = makeLiteral(row.definition) + ' ' + getLanguageCallout(row.definition);
+                        return formatRefArray( definition, "definition");
+                    }
+                },
                   {
                       "defaultContent": "",
                       "data": "altLabel",
