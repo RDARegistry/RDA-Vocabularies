@@ -269,7 +269,7 @@ function makeCurie(uri) {
                 {
                     "class": "definition",
                     "render": function (data, type, row) {
-                        var definition = makeLiteral(row.definition) + ' ' + getLanguageCallout(row.definition);
+                        var definition = makeLiteral(row.ToolkitDefinition) + ' ' + getLanguageCallout(row.ToolkitDefinition);
                         return formatRefArray( definition, "definition");
                     }
                 },
