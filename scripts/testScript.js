@@ -6,6 +6,7 @@ function gup(name, url, theDefault) {
     var results = regex.exec(url);
     return results == null ? theDefault : results[1];
 }
+// set language to display; default English
 var docLang = gup('language', Location.href, 'en');
 // set language indicator style; border colour indicates on/selected
 $("#lang_"+docLang).css({"padding": "5px", "border": "3px solid #446e9b", "border-radius": "5px"});
@@ -39,11 +40,11 @@ if (typeof dataSource !== "undefined") {
 				detailTable += detailRow;
 				}
 			if (typeof d.altLabel != "undefined") {
-				var detailRow = '<tr>' + '<td>Use for:</td>' + '<td>' + formatRefArray(d.altLabel, "valtLabel") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Use for:</td>' + '<td>' + formatRefArray(makeLiteral(d.altLabel), "valtLabel") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			if (typeof d.notation != "undefined") {
-				var detailRow = '<tr>' + '<td>Notation:</td>' + '<td>' + formatRef(d.notation, "vnotation") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Notation:</td>' + '<td>' + formatRef(makeLiteral(d.notation), "vnotation") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			if (typeof d.domain != "undefined") {
@@ -116,9 +117,7 @@ if (typeof dataSource !== "undefined") {
               '</div>';
         }
         if (data.altLabel != null) {
-            return '<div class="vurllabel">' +
-              '<a href="' + url + '">' + makeLiteral(data.altLabel) + '</a>' +
-              '</div>';
+            return makeLiteral(data.altLabel);
         }
         return "";
     }
