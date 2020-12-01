@@ -115,6 +115,11 @@ if (typeof dataSource !== "undefined") {
               '<a href="' + url + '">' + makeLiteral(data.prefLabel) + '</a>' +
               '</div>';
         }
+        if (data.altLabel != null) {
+            return '<div class="vurllabel">' +
+              '<a href="' + url + '">' + makeLiteral(data.altLabel) + '</a>' +
+              '</div>';
+        }
         return "";
     }
 
