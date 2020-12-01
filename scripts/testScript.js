@@ -272,13 +272,13 @@ function makeCurie(uri) {
                         var definition = makeLiteral(row.ToolkitDefinition) + ' ' + getLanguageCallout(row.ToolkitDefinition);
                         return formatRefArray( definition, "definition");
                     }
-                },
-                  {
-                      "defaultContent": "",
-                      "data": "altLabel",
-                      "render": function (data, type, row) {
-                          return formatRefArray(data, "valtLabel");
-                      }
+//                },
+//                  {
+//                      "defaultContent": "",
+//                      "data": "altLabel",
+//                      "render": function (data, type, row) {
+//                          return formatRefArray(data, "valtLabel");
+//                      }
 //              },
 //                  {
 //                      "defaultContent": "",
