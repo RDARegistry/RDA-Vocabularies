@@ -151,7 +151,7 @@ if (typeof dataSource !== "undefined") {
     return "@en *";
 }
 
-function makeCurie(uri) {
+    function makeCurie(uri) {
         if (uri !== null && typeof uri.replace === "function") {
             return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "$2:$3");
         }
@@ -251,7 +251,6 @@ function makeCurie(uri) {
                   dataType: 'json',
                   cache: true,
                   crossDomain: true,
-//                  "prefix": getPrefix (json["@graph"]),
                   "dataSrc": function (json) {
                       json.data = json["@graph"].filter(filterConcepts);
                       return json.data;
