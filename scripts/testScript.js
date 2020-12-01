@@ -25,13 +25,25 @@ if (typeof dataSource !== "undefined") {
         return obj["@type"] !== "ConceptScheme";
     }
 
-    /* Formatting function for row details - modify as you need */
+    function getPrefix(obj) {
+        return obj["prefix"];
+    }
+
+/* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
 			if (typeof d.note != "undefined") {
 				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
+			if (typeof d.altLabel != "undefined") {
+				var detailRow = '<tr>' + '<td>Use for:</td>' + '<td>' + formatRefArray(d.altLabel, "valtLabel") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
+			if (typeof d.notation != "undefined") {
+				var detailRow = '<tr>' + '<td>Notation:</td>' + '<td>' + formatRef(d.notation, "vnotation") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			if (typeof d.domain != "undefined") {
@@ -269,23 +281,10 @@ function makeCurie(uri) {
                 {
                     "class": "definition",
                     "render": function (data, type, row) {
-                        var definition = makeLiteral(row.ToolkitDefinition) + ' ' + getLanguageCallout(row.ToolkitDefinition);
+                        var definition = makeLiteral(row.ToolkitDefinition);
+                        // + ' ' + getLanguageCallout(row.ToolkitDefinition);
                         return formatRefArray( definition, "definition");
                     }
-//                },
-//                  {
-//                      "defaultContent": "",
-//                      "data": "altLabel",
-//                      "render": function (data, type, row) {
-//                          return formatRefArray(data, "valtLabel");
-//                      }
-//              },
-//                  {
-//                      "defaultContent": "",
-//                      "data": "hasUnconstrained",
-//                      "render": function (data, type, row) {
-//                          return formatRefArray(data, "vhasunconstrained");
-//                      }
                  }
               ],
               "order": [
