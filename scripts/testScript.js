@@ -251,6 +251,7 @@ function makeCurie(uri) {
                   dataType: 'json',
                   cache: true,
                   crossDomain: true,
+                  "prefix": getPrefix (json["@graph"]),
                   "dataSrc": function (json) {
                       json.data = json["@graph"].filter(filterConcepts);
                       return json.data;
