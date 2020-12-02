@@ -252,6 +252,7 @@ if (typeof dataSource !== "undefined") {
                   crossDomain: true,
                   "dataSrc": function (json) {
                       json.data = json["@graph"].filter(filterConcepts);
+                      rdaPrefix = getPrefix(json["@graph"]);
                       return json.data;
                   }
               },
@@ -300,8 +301,6 @@ if (typeof dataSource !== "undefined") {
               ],
               "deferRender": true
           });
-
-    rdaPrefix = getPrefix(json["@graph"]);
 
 // Add event listener for truncate on draw
           dtable.on('draw.dt', function () {
