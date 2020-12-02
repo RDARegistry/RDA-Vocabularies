@@ -116,10 +116,10 @@ if (typeof dataSource !== "undefined") {
               '<a href="' + url + '">' + makeLiteral(data.prefLabel) + '</a>' +
               '</div>';
         }
-        if (data.altLabel != null) {
-            return makeLiteral(data.altLabel);
-        }
-        return "";
+//        if (data.altLabel != null) {
+//            return makeLiteral(data.altLabel);
+//        }
+//        return "";
     }
 
 
@@ -207,7 +207,6 @@ if (typeof dataSource !== "undefined") {
             return "";
         }
     }
-
 
     function setFilter() {
 
