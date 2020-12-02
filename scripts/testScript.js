@@ -153,7 +153,7 @@ if (typeof dataSource !== "undefined") {
 
     function makeCurie(uri) {
         if (uri !== null && typeof uri.replace === "function") {
-            return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "rdaPrefix:$3");
+            return rdaPrefix+":"+uri.substr(1+uri.lastIndexOf("/"));
 //            return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "$2:$3");
         }
         return "";
