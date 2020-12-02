@@ -6,6 +6,7 @@ function gup(name, url, theDefault) {
     var results = regex.exec(url);
     return results == null ? theDefault : results[1];
 }
+var rdaPrefix = "";
 // set language to display; default English
 var docLang = gup('language', Location.href, 'en');
 // set language indicator style; border colour indicates on/selected
@@ -29,7 +30,7 @@ if (typeof dataSource !== "undefined") {
     function getPrefix(obj) {
         return obj["prefix"];
     }
-
+    
 /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
@@ -299,6 +300,8 @@ if (typeof dataSource !== "undefined") {
               ],
               "deferRender": true
           });
+
+    rdaPrefix = getPrefix(json["@graph"]);
 
 // Add event listener for truncate on draw
           dtable.on('draw.dt', function () {
