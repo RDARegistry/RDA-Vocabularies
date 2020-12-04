@@ -28,7 +28,10 @@ if (typeof dataSource !== "undefined") {
     }
 
     function getPrefix(obj) {
+      if (typeof obj[0[.prefix != "undefined") {
         return obj[0].prefix;
+      }
+      return "[prefix]"
     }
     
 /* Formatting function for row details - modify as you need */
