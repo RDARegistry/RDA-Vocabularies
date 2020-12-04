@@ -290,9 +290,14 @@ if (typeof dataSource !== "undefined") {
                 {
                     "class": "definition",
                     "render": function (data, type, row) {
-                        var definition = makeLiteral(row.ToolkitDefinition);
-                        // + ' ' + getLanguageCallout(row.ToolkitDefinition);
-                        return formatRefArray( definition, "definition");
+                        var definition = "";
+                        if (typeof row.description !== "undefined") {
+                            definition = row.description;
+                            } else {
+                            definition = row.ToolkitDefinition;    
+                            }
+                        definition = makeLiteral(definition);
+                        return formatRefArray(definition, "definition");
                     }
                  }
               ],
