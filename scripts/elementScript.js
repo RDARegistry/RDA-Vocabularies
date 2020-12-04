@@ -50,6 +50,14 @@ if (typeof dataSource !== "undefined") {
 				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
+			if (typeof d.ToolkitLabel != "undefined") {
+				var detailRow = '<tr>' + '<td>Toolkit label:</td>' + '<td>' + formatRef(d.ToolkitLabel, "vToolkitLabel") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
+			if (typeof d.ToolkitDefinition != "undefined") {
+				var detailRow = '<tr>' + '<td>Toolkit definition:</td>' + '<td>' + formatRef(d.ToolkitDefinition, "vToolkitDefinition") + '</td>' + '</tr>';
+				detailTable += detailRow;
+				}
 			if (typeof d.status != "undefined") {
 				var detailRow = '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
 				detailTable += detailRow;
