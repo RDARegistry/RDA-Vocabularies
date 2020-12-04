@@ -37,6 +37,7 @@ if (typeof dataSource !== "undefined") {
 /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
+        // format note (scope note), alLabel, notation status
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
 			if (typeof d.note != "undefined") {

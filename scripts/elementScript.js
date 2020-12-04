@@ -28,6 +28,7 @@ if (typeof dataSource !== "undefined") {
     /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
+        // format note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
 			if (typeof d.note != "undefined") {
@@ -273,13 +274,6 @@ if (typeof dataSource !== "undefined") {
                       "render": function (data, type, row) {
                           return formatRefArray(data, "vsubPropertyOf");
                       }
-//                  },
-//                  {
-//                      "defaultContent": "",
-//                      "data": "hasUnconstrained",
-//                      "render": function (data, type, row) {
-//                          return formatRefArray(data, "vhasunconstrained");
-//                      }
                   }
               ],
               "order": [
