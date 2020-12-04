@@ -31,7 +31,7 @@ if (typeof dataSource !== "undefined") {
       if (typeof obj[0].prefix != "undefined") {
         return obj[0].prefix;
       }
-      return "|prefix|";
+      return "[prefix]";
     }
     
 /* Formatting function for row details - modify as you need */
