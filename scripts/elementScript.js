@@ -51,11 +51,11 @@ if (typeof dataSource !== "undefined") {
 				detailTable += detailRow;
 				}
 			if (typeof d.ToolkitLabel != "undefined") {
-				var detailRow = '<tr>' + '<td>Toolkit label:</td>' + '<td>' + formatRef(d.ToolkitLabel, "vToolkitLabel") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Toolkit label:</td>' + '<td>' + formatRef(makeLiteral(d.ToolkitLabel), "vToolkitLabel") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			if (typeof d.ToolkitDefinition != "undefined") {
-				var detailRow = '<tr>' + '<td>Toolkit definition:</td>' + '<td>' + formatRef(d.ToolkitDefinition, "vToolkitDefinition") + '</td>' + '</tr>';
+				var detailRow = '<tr>' + '<td>Toolkit definition:</td>' + '<td>' + formatRef(makeLiteral(d.ToolkitDefinition), "vToolkitDefinition") + '</td>' + '</tr>';
 				detailTable += detailRow;
 				}
 			if (typeof d.status != "undefined") {
