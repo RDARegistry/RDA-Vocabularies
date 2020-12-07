@@ -50,8 +50,8 @@ if (typeof dataSource !== "undefined") {
 				detailTable += detailRow;
 				}
 			if (typeof d.notation != "undefined") {
-				var detailRow = '<tr>' + '<td>Notation:</td>' + '<td>' + formatRef(makeLiteral(d.notation), "vnotation") + '</td>' + '</tr>';
-//				var detailRow = makeDetailRow(getStringByLanguage(d.notation), "Notation");
+//				var detailRow = '<tr>' + '<td>Notation:</td>' + '<td>' + formatRef(makeLiteral(d.notation), "vnotation") + '</td>' + '</tr>';
+				var detailRow = makeDetailRow(getStringByLanguage(d.notation), "Notation");
 				detailTable += detailRow;
 				}
 			if (typeof d.status != "undefined") {
@@ -73,7 +73,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof rowLabel == "undefined") {
          rowLabel = "";            
         }
-        detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + rowValue + ':' + '</td>' + '</tr>';
+        detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + '<div>' + rowValue + ':' + '</div>' + '</td>' + '</tr>';
         return detailrow;
     }
 
