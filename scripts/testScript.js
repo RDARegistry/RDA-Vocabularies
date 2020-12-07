@@ -97,7 +97,8 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof data != "undefined" && data != null) {
             if (typeof data[docLang] != "undefined") {
-                return '"' + data[docLang] + '"';
+//                return '"' + data[docLang] + '"';
+                return data[docLang];
             }
             if (typeof data[defaultLangCode] != "undefined") {
                 return '"' + data[defaultLangCode] + '"' + " [no '" + docLang + "']";
