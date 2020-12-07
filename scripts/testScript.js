@@ -73,7 +73,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof rowLabel == "undefined") {
          rowLabel = "";            
         }
-        detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + '<div>' + rowValue + ':' + '</div>' + '</td>' + '</tr>';
+        detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + '<div>' + rowValue + '</div>' + '</td>' + '</tr>';
         return detailrow;
     }
 
