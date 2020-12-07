@@ -104,10 +104,10 @@ if (typeof dataSource !== "undefined") {
                 langString = data[defaultLangCode] + " [no '" + docLang + "']";
             }
             else if (data instanceof Object) { //it's only available in a language that's not English'
+                langString = "[not available]";
             }
-            langString = data;
          }
-        return '"' + langString + '"';
+        return langString;
     }
 
     function formatRef(data, classname) {
