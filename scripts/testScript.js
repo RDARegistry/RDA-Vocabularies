@@ -23,17 +23,22 @@ if (typeof dataSource !== "undefined") {
 
     }).call(this);
 
+    // set flag for VES
     function filterConcepts(obj) {
         return obj["@type"] !== "ConceptScheme";
     }
 
     function getPrefix(obj) {
+      if (typeof obj[0].prefix != "undefined") {
         return obj[0].prefix;
+      }
+      return "[prefix]";
     }
     
 /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
+        // format note (scope note), alLabel, notation, status
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
 			if (typeof d.note != "undefined") {
@@ -45,23 +50,8 @@ if (typeof dataSource !== "undefined") {
 				detailTable += detailRow;
 				}
 			if (typeof d.notation != "undefined") {
-				var detailRow = '<tr>' + '<td>Notation:</td>' + '<td>' + formatRef(makeLiteral(d.notation), "vnotation") + '</td>' + '</tr>';
-				detailTable += detailRow;
-				}
-			if (typeof d.domain != "undefined") {
-				var detailRow = '<tr>' + '<td>Domain:</td>' + '<td>' + formatRef(d.domain, "vdomain") + '</td>' + '</tr>';
-				detailTable += detailRow;
-				}
-			if (typeof d.range != "undefined") {
-				var detailRow = '<tr>' + '<td>Range:</td>' + '<td>' + formatRef(d.range, "vrange") + '</td>' + '</tr>';
-				detailTable += detailRow;
-				}
-			if (typeof d.inverseOf != "undefined") {
-				var detailRow = '<tr>' + '<td>Inverse:</td>' + '<td>' + formatRef(d.inverseOf, "vinverseOf") + '</td>' + '</tr>';
-				detailTable += detailRow;
-				}
-			if (typeof d.hasSubproperty != "undefined") {
-				var detailRow = '<tr>' + '<td>Subproperties:</td>' + '<td>' + formatRefArray(d.hasSubproperty, "vhasSubproperty") + '</td>' + '</tr>';
+//				var detailRow = '<tr>' + '<td>Notation:</td>' + '<td>' + formatRef(makeLiteral(d.notation), "vnotation") + '</td>' + '</tr>';
+				var detailRow = makeDetailRow(getStringByLanguage(d.notation), "Notation");
 				detailTable += detailRow;
 				}
 			if (typeof d.status != "undefined") {
@@ -71,6 +61,56 @@ if (typeof dataSource !== "undefined") {
 			detailTable += '</table>';
 			return detailTable;
         }
+    }
+    
+    
+    
+    function makeDetailRow(rowValue, rowLabel) {
+        var detailRow = "";
+        if (typeof rowValue == "undefined") {
+         rowValue = "";            
+        }
+        if (typeof rowLabel == "undefined") {
+         rowLabel = "";            
+        }
+        detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + rowValue + ':' + '</td>' + '</tr>';
+        return detailrow;
+    }
+
+    function makeURLFromURI(uri) {
+        var url = "";
+        if (typeof uri !== "undefined") {
+         url = uri;
+         url.replace("rdaregistry.info", "www.rdaregistry.info/jsonld");            
+        }
+        return url;
+    }
+    
+    function formatLink(label, url) {
+        var linkedLabel = '<a href="' + url +'">' + label + '</a>';
+        return '<div class="vurllabel">' + linkedLabel + '</div>';
+    }
+    
+    function getStringByLanguage(data, defaultLangCode) {
+        if (typeof defaultLangCode == "undefined") {
+           defaultLangCode = "en"; 
+        }
+        if (typeof data != "undefined" && data != null) {
+            if (typeof data[docLang] != "undefined") {
+                return '"' + data[docLang] + '"';
+            }
+            if (typeof data[defaultLangCode] != "undefined") {
+                return '"' + data[defaultLangCode] + '"' + " [no '" + docLang + "']";
+            }
+            if (data instanceof Object) { //it's only available in a language that's not English'
+                return "";
+        }
+            return '"' + data + '"';
+         }
+        else {
+            return "";
+        }
+        
     }
 
     function formatRef(data, classname) {
@@ -98,7 +138,7 @@ if (typeof dataSource !== "undefined") {
         }
         return "";
     }
-
+    
     function formatLabel(data) {
         var url = data["@id"];
         if (data.lexicalAlias != null) {
@@ -153,8 +193,8 @@ if (typeof dataSource !== "undefined") {
 
     function makeCurie(uri) {
         if (uri !== null && typeof uri.replace === "function") {
+            // replace everything up to last sub-folder slash with prefix and colon
             return rdaPrefix+":"+uri.substr(1+uri.lastIndexOf("/"));
-//            return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "$2:$3");
         }
         return "";
     }
@@ -287,9 +327,14 @@ if (typeof dataSource !== "undefined") {
                 {
                     "class": "definition",
                     "render": function (data, type, row) {
-                        var definition = makeLiteral(row.ToolkitDefinition);
-                        // + ' ' + getLanguageCallout(row.ToolkitDefinition);
-                        return formatRefArray( definition, "definition");
+                        var definition = "";
+                        if (typeof row.description !== "undefined") {
+                            definition = row.description;
+                            } else {
+                            definition = row.ToolkitDefinition;    
+                            }
+                        definition = makeLiteral(definition);
+                        return formatRefArray(definition, "definition");
                     }
                  }
               ],

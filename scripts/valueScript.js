@@ -23,6 +23,7 @@ if (typeof dataSource !== "undefined") {
 
     }).call(this);
 
+    // set flag for VES
     function filterConcepts(obj) {
         return obj["@type"] !== "ConceptScheme";
     }
@@ -37,7 +38,7 @@ if (typeof dataSource !== "undefined") {
 /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
-        // format note (scope note), alLabel, notation status
+        // format note (scope note), alLabel, notation, status
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
 			if (typeof d.note != "undefined") {
@@ -141,8 +142,8 @@ if (typeof dataSource !== "undefined") {
 
     function makeCurie(uri) {
         if (uri !== null && typeof uri.replace === "function") {
+            // replace everything up to last sub-folder slash with prefix and colon
             return rdaPrefix+":"+uri.substr(1+uri.lastIndexOf("/"));
-//            return uri.replace(/^(http:\/\/rdaregistry\.info\/termList\/)(.*)\/(.*)$/ig, "$2:$3");
         }
         return "";
     }

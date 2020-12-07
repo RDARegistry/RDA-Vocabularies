@@ -21,6 +21,7 @@ if (typeof dataSource !== "undefined") {
 
     }).call(this);
 
+    // set flag for element set
     function filterElements(obj) {
         return obj["@type"] !== "ElementSet";
     }
