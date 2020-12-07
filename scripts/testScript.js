@@ -74,7 +74,7 @@ if (typeof dataSource !== "undefined") {
          rowLabel = "";            
         }
         detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + '<div>' + rowValue + '</div>' + '</td>' + '</tr>';
-        return detailrow;
+        return detailRow;
     }
 
     function makeURLFromURI(uri) {
