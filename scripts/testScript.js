@@ -99,16 +99,16 @@ if (typeof dataSource !== "undefined") {
         if (typeof data != "undefined" && data != null) {
             if (typeof data[docLang] != "undefined") {
 //                return '"' + data[docLang] + '"';
-                langString = '"' + data[docLang] + '"';
+                langString = data[docLang];
             }
             if (typeof data[defaultLangCode] != "undefined") {
-                langString = '"' + data[defaultLangCode] + '"' + " [no '" + docLang + "']";
+                langString = data[defaultLangCode] + " [no '" + docLang + "']";
             }
             if (data instanceof Object) { //it's only available in a language that's not English'
             }
-            langString = '"' + data + '"';
+            langString = data;
          }
-        return langString;
+        return '"' + langString + '"';
     }
 
     function formatRef(data, classname) {
