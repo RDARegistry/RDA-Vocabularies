@@ -92,26 +92,23 @@ if (typeof dataSource !== "undefined") {
     }
     
     function getStringByLanguage(data, defaultLangCode) {
+        var langString = "";
         if (typeof defaultLangCode == "undefined") {
            defaultLangCode = "en"; 
         }
         if (typeof data != "undefined" && data != null) {
             if (typeof data[docLang] != "undefined") {
 //                return '"' + data[docLang] + '"';
-                return data[docLang];
+                langString = '"' + data[docLang] + '"';
             }
             if (typeof data[defaultLangCode] != "undefined") {
-                return '"' + data[defaultLangCode] + '"' + " [no '" + docLang + "']";
+                langString = '"' + data[defaultLangCode] + '"' + " [no '" + docLang + "']";
             }
             if (data instanceof Object) { //it's only available in a language that's not English'
-                return "";
-        }
-            return '"' + data + '"';
+            }
+            langString = '"' + data + '"';
          }
-        else {
-            return "";
-        }
-        
+        return langString;
     }
 
     function formatRef(data, classname) {
