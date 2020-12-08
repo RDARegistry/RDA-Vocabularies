@@ -107,7 +107,7 @@ if (typeof dataSource !== "undefined") {
                 langString = "[not available]";
             }
          }
-        return langString;
+        return '"' + langString + '"';
     }
 
     function formatRef(data, classname) {
