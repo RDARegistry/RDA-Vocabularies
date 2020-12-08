@@ -117,8 +117,9 @@ if (typeof dataSource !== "undefined") {
         var url = "";
         if (typeof uri !== "undefined") {
             url = uri;
-            if (url !== null && typeof url.replace === "function") {
-                url = url.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+            if (uri !== null && typeof uri.replace === "function") {
+                // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
+                url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
             }
         }
         return url;
@@ -140,11 +141,11 @@ if (typeof dataSource !== "undefined") {
             if (typeof theData[docLang] != "undefined") {
                 langString = quotify(theData[docLang]);
             }
-            // available in default language
+            // available in default language; add qualifier to indicate not available in selected language
             else if (typeof theData[defaultLangCode] != "undefined") {
-                langString = quotify(theData[defaultLangCode]) + " [no '" + docLang + "']";
+                langString = quotify(theData[defaultLangCode]) + " ['" + defaultLangCode + "'; no '" + docLang + "']";
             }
-            // not available in selected or default language
+            // not available in selected or default language; default indicates languages
             else if (theData instanceof Object) {
                 langString = "[no '" + docLang + "' or '" + defaultLangCode + "']";
             }
