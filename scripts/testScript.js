@@ -125,14 +125,18 @@ if (typeof dataSource !== "undefined") {
         if (typeof theData["label"] != "undefined") {
            label = theData["label"];
         }
-        return linkify(label, link);
+        return linkifyOut(label, link);
     }
     
-    function linkify(theString, theURI) {
+    function linkifyIn(theString, theURI) {
         return '<a href="' + theURI + '">' + theString + '</a>'; 
     }
 
-    function quotify(theString) {
+    function linkifyOut(theString, theURI) {
+        return '<a href="' + theURI + '" target="_blank">' + theString + '</a>'; 
+    }
+
+function quotify(theString) {
         return '"' + theString + '"'; 
     }
     
