@@ -117,7 +117,9 @@ if (typeof dataSource !== "undefined") {
         var url = "";
         if (typeof uri !== "undefined") {
             url = uri;
-            url.replace("rdaregistry.info", "www.rdaregistry.info/jsonld");
+            if (url !== null && typeof url.replace === "function") {
+                url.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+            }
         }
         return url;
     }
@@ -150,19 +152,18 @@ if (typeof dataSource !== "undefined") {
         return langString;
     }
     
-function getLinkedStringIn(theData, uri)
-{
-var url = "";
-url = makeURLFromURI(uri);
-return linkifyIn(getStringByLanguage(theData), url);
-   }
-function getURI(row) {
-var uri = "";
-if (typeof row[ "@id"] != "undefined") {
-   uri = row[ "@id"];
-}
-return uri;
-}
+    function getLinkedStringIn(theData, uri) {
+        var url = "";
+        url = makeURLFromURI(uri);
+        return linkifyIn(getStringByLanguage(theData), url);
+    }
+    function getURI(row) {
+        var uri = "";
+        if (typeof row[ "@id"] != "undefined") {
+            uri = row[ "@id"];
+        }
+        return uri;
+    }
     function getStatus(theData) {
         var label = "";
         var link = "";
@@ -361,8 +362,8 @@ return uri;
                 }
             }, {
                 "render": function (data, type, row) {
-//                    return formatLabel(row);
-                return makeColumn(getLinkedStringIn(row.prefLabel, getURI(row)));
+                    //                    return formatLabel(row);
+                    return makeColumn(getLinkedStringIn(row.prefLabel, getURI(row)));
                 }
             }, {
                 "class": "Definition",
