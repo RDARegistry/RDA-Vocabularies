@@ -118,7 +118,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof uri !== "undefined") {
             url = uri;
             if (url !== null && typeof url.replace === "function") {
-                url.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+                url = url.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
             }
         }
         return url;
