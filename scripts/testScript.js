@@ -39,35 +39,33 @@ if (typeof dataSource !== "undefined") {
     function format(d) {
         // `d` is the original data object for the row
         // format note (scope note), alLabel, notation, status
+        var detailRow = makeDetailRow();
+        var detailTable = '<table class="pindex_detail">';
         if (typeof d != "undefined") {
-            var detailTable = '<table class="pindex_detail">';
-			if (typeof d.note != "undefined") {
-//				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
-				var detailRow = makeDetailRow(getStringByLanguage(d.note), "Scope notes");
+ 			if (typeof d.note != "undefined") {
+				detailRow = makeDetailRow(getStringByLanguage(d.note), "Scope notes");
 				detailTable += detailRow;
 				}
 			if (typeof d.altLabel != "undefined") {
-//				var detailRow = '<tr>' + '<td>Use for:</td>' + '<td>' + formatRefArray(makeLiteral(d.altLabel), "valtLabel") + '</td>' + '</tr>';
-				var detailRow = makeDetailRow(getStringByLanguage(d.altLabel), "Alternate labels");
+				detailRow = makeDetailRow(getStringByLanguage(d.altLabel), "Alternate labels");
 				detailTable += detailRow;
 				}
 			if (typeof d.notation != "undefined") {
-//				var detailRow = '<tr>' + '<td>Notation:</td>' + '<td>' + formatRef(makeLiteral(d.notation), "vnotation") + '</td>' + '</tr>';
-				var detailRow = makeDetailRow(getStringByLanguage(d.notation), "Notation");
+				detailRow = makeDetailRow(getStringByLanguage(d.notation), "Notation");
 				detailTable += detailRow;
 				}
 			if (typeof d.status != "undefined") {
-//				var detailRow = '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
-				var detailRow = makeDetailRow(getStatus(d.status), "Status");
+				detailRow = makeDetailRow(getStatus(d.status), "Status");
 				detailTable += detailRow;
 				}
-			detailTable += '</table>';
-			return detailTable;
         }
+        else {
+            detailTable += detailRow;
+        }
+		detailTable += '</table>';
+		return detailTable;
     }
-    
-    
-    
+   
     function makeDetailRow(rowValue, rowLabel) {
         var detailRow = "";
         if (typeof rowValue == "undefined") {
@@ -76,6 +74,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof rowLabel == "undefined") {
          rowLabel = "";            
         }
+        // two columns
         detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + divify(rowValue) + '</td>' + '</tr>';
         return detailRow;
     }
@@ -96,6 +95,7 @@ if (typeof dataSource !== "undefined") {
     
     function getStringByLanguage(theData, defaultLangCode) {
         var langString = "";
+        // default default is English
         if (typeof defaultLangCode == "undefined") {
            defaultLangCode = "en"; 
         }
@@ -136,7 +136,7 @@ if (typeof dataSource !== "undefined") {
         return '<a href="' + theURI + '" target="_blank">' + theString + '</a>'; 
     }
 
-function quotify(theString) {
+    function quotify(theString) {
         return '"' + theString + '"'; 
     }
     
