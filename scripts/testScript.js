@@ -57,7 +57,8 @@ if (typeof dataSource !== "undefined") {
 				detailTable += detailRow;
 				}
 			if (typeof d.status != "undefined") {
-				var detailRow = '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
+//				var detailRow = '<tr>' + '<td>Status:</td>' + '<td>' + formatRef(d.status, "vstatus") + '</td>' + '</tr>';
+				var detailRow = makeDetailRow(getStatus(d.status), "Status");
 				detailTable += detailRow;
 				}
 			detailTable += '</table>';
@@ -93,28 +94,44 @@ if (typeof dataSource !== "undefined") {
         return '<div class="vurllabel">' + linkedLabel + '</div>';
     }
     
-    function getStringByLanguage(data, defaultLangCode) {
+    function getStringByLanguage(theData, defaultLangCode) {
         var langString = "";
         if (typeof defaultLangCode == "undefined") {
            defaultLangCode = "en"; 
         }
-        if (typeof data != "undefined" && data != null) {
+        if (typeof theData != "undefined" && theData != null) {
             // available in selected language
-            if (typeof data[docLang] != "undefined") {
-                langString = quotify(data[docLang]);
+            if (typeof theData[docLang] != "undefined") {
+                langString = quotify(theData[docLang]);
             }
             // available in default language
-            else if (typeof data[defaultLangCode] != "undefined") {
-                langString = quotify(data[defaultLangCode]) + " [no '" + docLang + "']";
+            else if (typeof theData[defaultLangCode] != "undefined") {
+                langString = quotify(theData[defaultLangCode]) + " [no '" + docLang + "']";
             }
             // not available in selected or default language
-            else if (data instanceof Object) {
+            else if (theData instanceof Object) {
                 langString = "[no '" + docLang + "' or '" + defaultLangCode + "']";
             }
          }
         return langString;
     }
     
+    function getStatus(theData) {
+        var label = "";
+        var link = "";
+        if (typeof theData["@id"] != "undefined") {
+           link = theData["@id"];
+        }
+        if (typeof theData["label"] != "undefined") {
+           label = theData["label"];
+        }
+        return linkify(label, link);
+    }
+    
+    function linkify(theString, theURI) {
+        return '<a href="' + theURI + '">' + theString + '</a>'; 
+    }
+
     function quotify(theString) {
         return '"' + theString + '"'; 
     }
