@@ -153,7 +153,7 @@ if (typeof dataSource !== "undefined") {
 function getLinkedStringIn(theData, uri)
 {
 var url = "";
-url = makeUrlFromURI(uri);
+url = makeURLFromURI(uri);
 return linkifyIn(getStringByLanguage(theData), url);
    }
 function getURI(row) {
