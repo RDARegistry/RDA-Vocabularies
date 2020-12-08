@@ -73,7 +73,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof rowLabel == "undefined") {
          rowLabel = "";            
         }
-        detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + '<div>' + rowValue + '</div>' + '</td>' + '</tr>';
+        detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + divify(rowValue) + '</td>' + '</tr>';
         return detailRow;
     }
 
@@ -97,17 +97,43 @@ if (typeof dataSource !== "undefined") {
            defaultLangCode = "en"; 
         }
         if (typeof data != "undefined" && data != null) {
+            // available in selected language
             if (typeof data[docLang] != "undefined") {
-                langString = data[docLang];
+                langString = quotify(data[docLang]);
             }
+            // available in default language
             else if (typeof data[defaultLangCode] != "undefined") {
-                langString = data[defaultLangCode] + " [no '" + docLang + "']";
+                langString = quotify(data[defaultLangCode]) + " [no '" + docLang + "']";
             }
-            else if (data instanceof Object) { //it's only available in a language that's not English'
-                langString = "[not available]";
+            // not available in selected or default language
+            else if (data instanceof Object) {
+                langString = "[no '" + docLang + "' or '" + defaultLangCode + "']";
             }
          }
-        return '"' + langString + '"';
+        return langString;
+    }
+    
+    function quotify(theString) {
+        return '"' + theString + '"'; 
+    }
+    
+    function divify(theString) {
+        return "<div>" + theString + "</div>";
+    }
+
+    function formatRefArray(data, classname) {
+        var value = "";
+        if (typeof data != "undefined") {
+            if (data instanceof Array) {
+                for (i = 0; i < data.length; ++i) {
+                    value += formatRef(data[i], classname)
+                }
+            }
+            else {
+                value = formatRef(data, classname)
+            }
+        }
+        return value;
     }
 
     function formatRef(data, classname) {
@@ -161,20 +187,6 @@ if (typeof dataSource !== "undefined") {
     }
 
 
-    function formatRefArray(data, classname) {
-        var value = "";
-        if (typeof data != "undefined") {
-            if (data instanceof Array) {
-                for (i = 0; i < data.length; ++i) {
-                    value += formatRef(data[i], classname)
-                }
-            }
-            else {
-                value = formatRef(data, classname)
-            }
-        }
-        return value;
-    }
 
  function getLanguageCallout(data) {
     if (typeof data != "undefined") {
