@@ -65,7 +65,44 @@ if (typeof dataSource !== "undefined") {
 		detailTable += '</table>';
 		return detailTable;
     }
-   
+    
+    function makeColumn(colValue) {
+        var col = "";
+        col = divify(colValue);
+        return col;
+    }
+m   
+    function formatRefArray(data, classname) {
+        var value = "";
+        if (typeof data != "undefined") {
+            if (data instanceof Array) {
+                for (i = 0; i < data.length; ++i) {
+                    value += formatRef(data[i], classname)
+                }
+            }
+            else {
+                value = formatRef(data, classname)
+            }
+        }
+        return value;
+    }
+
+    function formatRef(data, classname) {
+        if (typeof data != "undefined") {
+            if (typeof data.lexicalAlias != "undefined") {
+                return '<div class="' + classname + '">' +
+                    formatCanon(data) + formatLabel(data) +
+                    '</div>';
+            }
+            else {
+                return '<div class="' + classname + '">' + data + '</div>';
+            }
+        }
+        else {
+            return "";
+        }
+    }
+
     function makeDetailRow(rowValue, rowLabel) {
         var detailRow = "";
         if (typeof rowValue == "undefined") {
@@ -74,7 +111,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof rowLabel == "undefined") {
          rowLabel = "";            
         }
-        // two columns
+        // two columns; value column must have div wrapper
         detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + divify(rowValue) + '</td>' + '</tr>';
         return detailRow;
     }
@@ -142,37 +179,6 @@ if (typeof dataSource !== "undefined") {
     
     function divify(theString) {
         return "<div>" + theString + "</div>";
-    }
-
-    function formatRefArray(data, classname) {
-        var value = "";
-        if (typeof data != "undefined") {
-            if (data instanceof Array) {
-                for (i = 0; i < data.length; ++i) {
-                    value += formatRef(data[i], classname)
-                }
-            }
-            else {
-                value = formatRef(data, classname)
-            }
-        }
-        return value;
-    }
-
-    function formatRef(data, classname) {
-        if (typeof data != "undefined") {
-            if (typeof data.lexicalAlias != "undefined") {
-                return '<div class="' + classname + '">' +
-                    formatCanon(data) + formatLabel(data) +
-                    '</div>';
-            }
-            else {
-                return '<div class="' + classname + '">' + data + '</div>';
-            }
-        }
-        else {
-            return "";
-        }
     }
 
     function formatCanon(data) {
@@ -357,16 +363,19 @@ if (typeof dataSource !== "undefined") {
                       }
                   },
                 {
-                    "class": "definition",
+                    "class": "Definition",
                     "render": function (data, type, row) {
                         var definition = "";
                         if (typeof row.description !== "undefined") {
                             definition = row.description;
-                            } else {
+                            }
+                        else {
                             definition = row.ToolkitDefinition;    
                             }
-                        definition = makeLiteral(definition);
-                        return formatRefArray(definition, "definition");
+//                        definition = makeLiteral(definition);
+                        definition = getStringByLanguage(definition)
+//                        return formatRefArray(definition, "definition");
+                        return makeColumn(definition);
                     }
                  }
               ],
