@@ -42,11 +42,13 @@ if (typeof dataSource !== "undefined") {
         if (typeof d != "undefined") {
             var detailTable = '<table class="pindex_detail">';
 			if (typeof d.note != "undefined") {
-				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
+//				var detailRow = '<tr>' + '<td>Scope notes:</td>' + '<td>' + formatRefArray(makeLiteral(d.note), "vnote") + '</td>' + '</tr>';
+				var detailRow = makeDetailRow(getStringByLanguage(d.note), "Scope notes");
 				detailTable += detailRow;
 				}
 			if (typeof d.altLabel != "undefined") {
-				var detailRow = '<tr>' + '<td>Use for:</td>' + '<td>' + formatRefArray(makeLiteral(d.altLabel), "valtLabel") + '</td>' + '</tr>';
+//				var detailRow = '<tr>' + '<td>Use for:</td>' + '<td>' + formatRefArray(makeLiteral(d.altLabel), "valtLabel") + '</td>' + '</tr>';
+				var detailRow = makeDetailRow(getStringByLanguage(d.altLabel), "Alternate labels");
 				detailTable += detailRow;
 				}
 			if (typeof d.notation != "undefined") {
