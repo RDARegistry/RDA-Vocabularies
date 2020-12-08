@@ -150,13 +150,11 @@ if (typeof dataSource !== "undefined") {
         return langString;
     }
     
-function getLinkedStringIn(row)
+function getLinkedStringIn(theData, uri)
 {
-var uri = "";
 var url = "";
-uri = getURI(row);
 url = makeUrlFromURI(uri);
-return linkifyIn(getStringByLanguage(row), url);
+return linkifyIn(getStringByLanguage(theData), url);
    }
 function getURI(row) {
 var uri = "";
@@ -165,18 +163,6 @@ if (typeof row[ "@id"] != "undefined") {
 }
 return uri;
 }
-    function getStatus(theData) {
-        var label = "";
-        var link = "";
-        if (typeof theData[ "@id"] != "undefined") {
-            link = theData[ "@id"];
-        }
-        if (typeof theData[ "label"] != "undefined") {
-            label = theData[ "label"];
-        }
-        return linkifyOut(label, link);
-    }
-    
     function getStatus(theData) {
         var label = "";
         var link = "";
@@ -376,7 +362,7 @@ return uri;
             }, {
                 "render": function (data, type, row) {
 //                    return formatLabel(row);
-                return makeColumn(getLinkedStringIn(row));
+                return makeColumn(getLinkedStringIn(row.prefLabel, getURI(row)));
                 }
             }, {
                 "class": "Definition",
