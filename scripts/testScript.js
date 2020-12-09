@@ -120,6 +120,8 @@ if (typeof dataSource !== "undefined") {
             if (uri !== null && typeof uri.replace === "function") {
                 // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
                 url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+                // Add language code parameter before hash
+                url = uri.replace("#", "?language=" + docLang + "#");
             }
         }
         return url;
@@ -158,6 +160,7 @@ if (typeof dataSource !== "undefined") {
         url = makeURLFromURI(uri);
         return linkifyIn(getStringByLanguage(theData), url);
     }
+
     function getURI(row) {
         var uri = "";
         if (typeof row[ "@id"] != "undefined") {
@@ -165,6 +168,7 @@ if (typeof dataSource !== "undefined") {
         }
         return uri;
     }
+
     function getStatus(theData) {
         var label = "";
         var link = "";
