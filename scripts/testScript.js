@@ -113,15 +113,18 @@ if (typeof dataSource !== "undefined") {
         return detailRow;
     }
     
-    function makeURLFromURI(uri) {
+    function makeURLFromURI(uri, langCode) {
         var url = "";
         if (typeof uri !== "undefined") {
             url = uri;
             if (uri !== null && typeof uri.replace === "function") {
                 // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
                 url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
-                // Add language code parameter before hash
-                url = url.replace("#", "?language=" + docLang + "#");
+                // no specified language gives the permalink (display default is English)
+                if (typeof langCode != "undefined") {
+                    // Insert language code parameter before hash
+                    url = url.replace("#", "?language=" + langCode + "#");
+                }
             }
         }
         return url;
@@ -162,11 +165,11 @@ if (typeof dataSource !== "undefined") {
             theLabel = label;
         }
         if (typeof uri != "undefined") {
-            url = makeURLFromURI(uri);
+            url = makeURLFromURI(uri, docLang);
         }
         return linkifyIn(theLabel, url);
     }
-
+    
     function getLinkedThing(uri, prefix) {
         var label = "";
         var theUri = "";
@@ -175,13 +178,12 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof prefix != "undefined") {
             label = makeCurieFromURI(theUri, prefix);
-        }
-        else {
+        } else {
             label = theUri;
         }
         return linkifyOut(label, theUri);
     }
-
+    
     function makeCurieFromURI(uri, thePrefix) {
         var curie = "";
         var prefix = "";
@@ -194,7 +196,7 @@ if (typeof dataSource !== "undefined") {
         }
         return curie;
     }
-
+    
     function getURI(row) {
         var uri = "";
         if (typeof row[ "@id"] != "undefined") {
@@ -202,7 +204,7 @@ if (typeof dataSource !== "undefined") {
         }
         return uri;
     }
-
+    
     function getStatus(theData) {
         var label = "";
         var link = "";
@@ -397,7 +399,7 @@ if (typeof dataSource !== "undefined") {
                 "defaultContent": ''
             }, {
                 "render": function (data, type, row) {
-//                    return formatCanon(row);
+                    //                    return formatCanon(row);
                     return makeColumn(getLinkedThing(getURI(row), rdaPrefix));
                 }
             }, {
