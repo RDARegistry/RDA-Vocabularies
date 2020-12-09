@@ -44,15 +44,15 @@ if (typeof dataSource !== "undefined") {
         var detailTable = '<table class="pindex_detail">';
         if (typeof d != "undefined") {
             if (typeof d.note != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.note), "Scope notes");
+                detailRow = makeDetailRow(getStringByLanguage(d.note, docLang), "Scope notes");
                 detailTable += detailRow;
             }
             if (typeof d.altLabel != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.altLabel), "Alternate labels");
+                detailRow = makeDetailRow(getStringByLanguage(d.altLabel, docLang), "Alternate labels");
                 detailTable += detailRow;
             }
             if (typeof d.notation != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.notation), "Notation");
+                detailRow = makeDetailRow(getStringByLanguage(d.notation, docLang), "Notation");
                 detailTable += detailRow;
             }
             if (typeof d.status != "undefined") {
@@ -135,37 +135,50 @@ if (typeof dataSource !== "undefined") {
         return '<div class="vurllabel">' + linkedLabel + '</div>';
     }
     
-    function getStringByLanguage(theData, defaultLangCode) {
+    function getStringByLanguage(theData, langCode, defaultLangCode) {
         var langString = "";
-        // default default is English
-        if (typeof defaultLangCode == "undefined") {
-            defaultLangCode = "en";
+        // default language is English
+        var theLangCode = "en";
+        // default default language is English
+        // [not enabled for other languages until translation processes in place]
+        var theDefaultLangCode = "en";
+        if (typeof defaultLangCode != "undefined") {
+            theDefaultLangCode = defaultLangCode;
+        }
+        if (typeof langCode != "undefined") {
+            theLangCode = langcode;
         }
         if (typeof theData != "undefined" && theData != null) {
             // available in selected language
-            if (typeof theData[docLang] != "undefined") {
-                langString = quotify(theData[docLang]);
+            if (typeof theData[theLangCode] != "undefined") {
+                langString = quotify(theData[theLangCode]);
             }
             // available in default language; add qualifier to indicate not available in selected language
-            else if (typeof theData[defaultLangCode] != "undefined") {
-                langString = quotify(theData[defaultLangCode]) + " ['" + defaultLangCode + "'; no '" + docLang + "']";
+            else if (typeof theData[theDefaultLangCode] != "undefined") {
+                langString = quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']";
             }
-            // not available in selected or default language; default indicates languages
+            // not available in selected or default language; output indicates the languages
             else if (theData instanceof Object) {
-                langString = "[no '" + docLang + "' or '" + defaultLangCode + "']";
+                langString = "[no '" + theLangCod + "' or '" + theDefaultLangCode + "']";
             }
         }
         return langString;
     }
     
-    function getLinkedStringIn(uri, label) {
+    function getLinkedStringIn(uri, label, langCode) {
+        // returns link for string label and Registry URL with parameter for selected language
         var theLabel = "";
+        // language code is omitted to get permalink
+        var theLangCode = "";
         var url = "";
         if (typeof label != "undefined") {
             theLabel = label;
         }
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+        }
         if (typeof uri != "undefined") {
-            url = makeURLFromURI(uri, docLang);
+            url = makeURLFromURI(uri, theLangCode);
         }
         return linkifyIn(theLabel, url);
     }
@@ -386,11 +399,12 @@ if (typeof dataSource !== "undefined") {
                 "orderable": false,
                 "class": 'permalink',
                 "render": function (data, type, row) {
-                    if (typeof row[ "@id"] != "undefined") {
-                        var url = makeUrl(row[ "@id"]);
-                        var id = row[ "@id"].replace(/^.*\/(.*)$/ig, "$1");
-                        return '<a id="' + id + '" href="' + url + '" title="permalink: ' + url + '">#</a>';
-                    }
+                    //                    if (typeof row[ "@id"] != "undefined") {
+                    //                        var url = makeUrl(row[ "@id"]);
+                    //                        var id = row[ "@id"].replace(/^.*\/(.*)$/ig, "$1");
+                    //                        return '<a id="' + id + '" href="' + url + '" title="permalink: ' + url + '">#</a>';
+                    //                    }
+                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang)));
                 }
             }, {
                 "class": 'details-control',
@@ -405,7 +419,7 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "render": function (data, type, row) {
                     //                    return formatLabel(row);
-                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel)));
+                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
                 }
             }, {
                 "class": "Definition",
@@ -418,7 +432,7 @@ if (typeof dataSource !== "undefined") {
                     }
                     //                        definition = makeLiteral(definition);
                     //                        return formatRefArray(definition, "definition");
-                    return makeColumn(getStringByLanguage(definition));
+                    return makeColumn(getStringByLanguage(definition, docLang));
                 }
             }],
             "order":[[2, 'asc']],
