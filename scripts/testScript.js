@@ -121,7 +121,7 @@ if (typeof dataSource !== "undefined") {
                 // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
                 url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
                 // Add language code parameter before hash
-                url = uri.replace("#", "?language=" + docLang + "#");
+                url = url.replace("#", "?language=" + docLang + "#");
             }
         }
         return url;
