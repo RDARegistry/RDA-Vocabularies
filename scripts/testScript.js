@@ -155,10 +155,44 @@ if (typeof dataSource !== "undefined") {
         return langString;
     }
     
-    function getLinkedStringIn(theData, uri) {
+    function getLinkedStringIn(uri, label) {
+        var theLabel = "";
         var url = "";
-        url = makeURLFromURI(uri);
-        return linkifyIn(getStringByLanguage(theData), url);
+        if (typeof label != "undefined") {
+            theLabel = label;
+        }
+        if (typeof uri != "undefined") {
+            url = makeURLFromURI(uri);
+        }
+        return linkifyIn(theLabel, url);
+    }
+
+    function getLinkedThing(uri, prefix) {
+        var label = "";
+        var theUri = "";
+        if (typeof uri != "undefined") {
+            theUri = uri;
+        }
+        if (typeof prefix != "undefined") {
+            label = makeCurieFromURI(theUri, prefix);
+        }
+        else {
+            label = theUri;
+        }
+        return linkifyOut(label, theUri);
+    }
+
+    function makeCurieFromURI(uri, thePrefix) {
+        var curie = "";
+        var prefix = "";
+        if (typeof thePrefix != "undefined") {
+            prefix = thePrefix;
+        }
+        if (uri !== null && typeof uri.replace === "function") {
+            // replace everything up to last sub-folder slash with prefix and colon
+            curie = prefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
+        }
+        return curie;
     }
 
     function getURI(row) {
@@ -363,12 +397,13 @@ if (typeof dataSource !== "undefined") {
                 "defaultContent": ''
             }, {
                 "render": function (data, type, row) {
-                    return formatCanon(row);
+//                    return formatCanon(row);
+                    return makeColumn(getLinkedThing(getURI(row), rdaPrefix));
                 }
             }, {
                 "render": function (data, type, row) {
                     //                    return formatLabel(row);
-                    return makeColumn(getLinkedStringIn(row.prefLabel, getURI(row)));
+                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel)));
                 }
             }, {
                 "class": "Definition",
@@ -380,9 +415,8 @@ if (typeof dataSource !== "undefined") {
                         definition = row.ToolkitDefinition;
                     }
                     //                        definition = makeLiteral(definition);
-                    definition = getStringByLanguage(definition)
                     //                        return formatRefArray(definition, "definition");
-                    return makeColumn(definition);
+                    return makeColumn(getStringByLanguage(definition));
                 }
             }],
             "order":[[2, 'asc']],
