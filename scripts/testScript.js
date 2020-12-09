@@ -29,13 +29,6 @@ if (typeof dataSource !== "undefined") {
         return obj[ "@type"] !== "ConceptScheme";
     }
     
-    function getPrefix(obj) {
-        if (typeof obj[0].prefix != "undefined") {
-            return obj[0].prefix;
-        }
-        return "[prefix]";
-    }
-    
     /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
@@ -66,39 +59,127 @@ if (typeof dataSource !== "undefined") {
         return detailTable;
     }
     
+    function divify(theString) {
+        return "<div>" + theString + "</div>";
+    }
+    
+    function getLinkedStringIn(uri, label, langCode) {
+        // returns link for string label and Registry URL with parameter for selected language
+        var theLabel = "";
+        // language code is omitted to get permalink
+        var theLangCode = "";
+        var url = "";
+        if (typeof label != "undefined") {
+            theLabel = label;
+        }
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+        }
+        if (typeof uri != "undefined") {
+            url = makeURLFromURI(uri, theLangCode);
+        }
+        return linkifyIn(theLabel, url);
+    }
+    
+    function getLinkedThing(uri, prefix) {
+        var label = "";
+        var theUri = "";
+        if (typeof uri != "undefined") {
+            theUri = uri;
+        }
+        if (typeof prefix != "undefined") {
+            label = makeCurieFromURI(theUri, prefix);
+        } else {
+            label = theUri;
+        }
+        return linkifyOut(label, theUri);
+    }
+    
+    function getPrefix(theData) {
+    // returns the vocabulary prefix
+    var prefix = "[prefix]";
+        if (typeof theData[0].prefix != "undefined") {
+            prefix = theData[0].prefix;
+        }
+        return prefix;
+    }
+    
+    function getStringByLanguage(theData, langCode, defaultLangCode) {
+        var langString = "";
+        // default language is English
+        var theLangCode = "en";
+        // default default language is English
+        // [not enabled for other languages until translation processes in place]
+        var theDefaultLangCode = "en";
+        if (typeof defaultLangCode != "undefined") {
+            theDefaultLangCode = defaultLangCode;
+        }
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+        }
+        if (typeof theData != "undefined" && theData != null) {
+            // available in selected language
+            if (typeof theData[theLangCode] != "undefined") {
+                langString = quotify(theData[theLangCode]);
+            }
+            // available in default language; add qualifier to indicate not available in selected language
+            else if (typeof theData[theDefaultLangCode] != "undefined") {
+                langString = quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']";
+            }
+            // not available in selected or default language; output indicates the languages
+            else if (theData instanceof Object) {
+                langString = "[no '" + theLangCod + "' or '" + theDefaultLangCode + "']";
+            }
+        }
+        return langString;
+    }
+    
+    function getURI(row) {
+        var uri = "";
+        if (typeof row[ "@id"] != "undefined") {
+            uri = row[ "@id"];
+        }
+        return uri;
+    }
+    
+    function getStatus(theData) {
+        var label = "";
+        var link = "";
+        if (typeof theData[ "@id"] != "undefined") {
+            link = theData[ "@id"];
+        }
+        if (typeof theData[ "label"] != "undefined") {
+            label = theData[ "label"];
+        }
+        return linkifyOut(label, link);
+    }
+    
+    function linkifyIn(theString, theURI) {
+        return '<a href="' + theURI + '">' + theString + '</a>';
+    }
+    
+    function linkifyOut(theString, theURI) {
+        return '<a href="' + theURI + '" target="_blank">' + theString + '</a>';
+    }
+    
     function makeColumn(colValue) {
         var col = "";
         col = divify(colValue);
         return col;
     }
     
-    //    function formatRefArray(data, classname) {
-    //        var value = "";
-    //        if (typeof data != "undefined") {
-    //            if (data instanceof Array) {
-    //                for (i = 0; i < data.length;++ i) {
-    //                    value += formatRef(data[i], classname)
-    //                }
-    //            } else {
-    //                value = formatRef(data, classname)
-    //            }
-    //        }
-    //        return value;
-    //    }
-    //
-    //    function formatRef(data, classname) {
-    //        if (typeof data != "undefined") {
-    //            if (typeof data.lexicalAlias != "undefined") {
-    //                return '<div class="' + classname + '">' +
-    //                formatCanon(data) + formatLabel(data) +
-    //                '</div>';
-    //            } else {
-    //                return '<div class="' + classname + '">' + data + '</div>';
-    //            }
-    //        } else {
-    //            return "";
-    //        }
-    //    }
+    function makeCurieFromURI(uri, thePrefix) {
+        var curie = "";
+        var prefix = "";
+        if (typeof thePrefix != "undefined") {
+            prefix = thePrefix;
+        }
+        if (uri !== null && typeof uri.replace === "function") {
+            // replace everything up to last sub-folder slash with prefix and colon
+            curie = prefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
+        }
+        return curie;
+    }
     
     function makeDetailRow(rowValue, rowLabel) {
         var detailRow = "";
@@ -134,157 +215,13 @@ if (typeof dataSource !== "undefined") {
         }
         return url;
     }
-    
-    //    function formatLink(label, url) {
-    //        var linkedLabel = '<a href="' + url + '">' + label + '</a>';
-    //        return '<div class="vurllabel">' + linkedLabel + '</div>';
-    //    }
-    
-    function getStringByLanguage(theData, langCode, defaultLangCode) {
-        var langString = "";
-        // default language is English
-        var theLangCode = "en";
-        // default default language is English
-        // [not enabled for other languages until translation processes in place]
-        var theDefaultLangCode = "en";
-        if (typeof defaultLangCode != "undefined") {
-            theDefaultLangCode = defaultLangCode;
-        }
-        if (typeof langCode != "undefined") {
-            theLangCode = langCode;
-        }
-        if (typeof theData != "undefined" && theData != null) {
-            // available in selected language
-            if (typeof theData[theLangCode] != "undefined") {
-                langString = quotify(theData[theLangCode]);
-            }
-            // available in default language; add qualifier to indicate not available in selected language
-            else if (typeof theData[theDefaultLangCode] != "undefined") {
-                langString = quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']";
-            }
-            // not available in selected or default language; output indicates the languages
-            else if (theData instanceof Object) {
-                langString = "[no '" + theLangCod + "' or '" + theDefaultLangCode + "']";
-            }
-        }
-        return langString;
-    }
-    
-    function getLinkedStringIn(uri, label, langCode) {
-        // returns link for string label and Registry URL with parameter for selected language
-        var theLabel = "";
-        // language code is omitted to get permalink
-        var theLangCode = "";
-        var url = "";
-        if (typeof label != "undefined") {
-            theLabel = label;
-        }
-        if (typeof langCode != "undefined") {
-            theLangCode = langCode;
-        }
-        if (typeof uri != "undefined") {
-            url = makeURLFromURI(uri, theLangCode);
-        }
-        return linkifyIn(theLabel, url);
-    }
-    
-    function getLinkedThing(uri, prefix) {
-        var label = "";
-        var theUri = "";
-        if (typeof uri != "undefined") {
-            theUri = uri;
-        }
-        if (typeof prefix != "undefined") {
-            label = makeCurieFromURI(theUri, prefix);
-        } else {
-            label = theUri;
-        }
-        return linkifyOut(label, theUri);
-    }
-    
-    function makeCurieFromURI(uri, thePrefix) {
-        var curie = "";
-        var prefix = "";
-        if (typeof thePrefix != "undefined") {
-            prefix = thePrefix;
-        }
-        if (uri !== null && typeof uri.replace === "function") {
-            // replace everything up to last sub-folder slash with prefix and colon
-            curie = prefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
-        }
-        return curie;
-    }
-    
-    function getURI(row) {
-        var uri = "";
-        if (typeof row[ "@id"] != "undefined") {
-            uri = row[ "@id"];
-        }
-        return uri;
-    }
-    
-    function getStatus(theData) {
-        var label = "";
-        var link = "";
-        if (typeof theData[ "@id"] != "undefined") {
-            link = theData[ "@id"];
-        }
-        if (typeof theData[ "label"] != "undefined") {
-            label = theData[ "label"];
-        }
-        return linkifyOut(label, link);
-    }
-    
-    function linkifyIn(theString, theURI) {
-        return '<a href="' + theURI + '">' + theString + '</a>';
-    }
-    
-    function linkifyOut(theString, theURI) {
-        return '<a href="' + theURI + '" target="_blank">' + theString + '</a>';
-    }
-    
+
     function quotify(theString) {
         return '"' + theString + '"';
     }
     
-    function divify(theString) {
-        return "<div>" + theString + "</div>";
-    }
-    
-    //    function formatCanon(data) {
-    //        if (typeof data[ "@id"] != "undefined") {
-    //            var url = data[ "@id"];
-    //            return '<div class="vcanon">' +
-    //            '<a href="' + url + '" title="Canonical URI: ' + url + '">' + makeCurie(url) + '</a>' +
-    //            '</div>';
-    //        }
-    //        return "";
-    //    }
-    //
-    //    function formatLabel(data) {
-    //        var url = data[ "@id"];
-    //        if (data.lexicalAlias != null) {
-    //            if (typeof data.lexicalAlias[ "@id"] !== "undefined" && data.lexicalAlias[ "@id"] !== null) {
-    //                var lexicalAlias = data.lexicalAlias[ "@id"]
-    //            } else {
-    //                var lexicalAlias = data.lexicalAlias
-    //            }
-    //            return '<div class="vurllabel">' +
-    //            '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(lexicalAlias) + '">' + makeLiteral(data.label) + '</a>' +
-    //            '</div>';
-    //        }
-    //        if (data.prefLabel != null) {
-    //            return '<div class="vurllabel">' +
-    //            '<a href="' + url + '">' + makeLiteral(data.prefLabel) + '</a>' +
-    //            '</div>';
-    //        }
-    //        if (data.altLabel != null) {
-    //            return makeLiteral(data.altLabel);
-    //        }
-    //        return "";
-    //    }
-    
     function getLanguageCallout(data) {
+    // not currently used: returns the xml language string
         if (typeof data != "undefined") {
             if (typeof data[docLang] != "undefined") {
                 return "@" + docLang;
@@ -295,65 +232,6 @@ if (typeof dataSource !== "undefined") {
         }
         return "@en *";
     }
-    
-    //    function makeCurie(uri) {
-    //        if (uri !== null && typeof uri.replace === "function") {
-    //            // replace everything up to last sub-folder slash with prefix and colon
-    //            return rdaPrefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
-    //        }
-    //        return "";
-    //    }
-    //
-    //    function makeUrl(uri) {
-    //        if (uri !== null && typeof uri.replace === "function") {
-    //            return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
-    //        }
-    //        return "";
-    //   }
-    //
-    //    function makeUri(uri) {
-    //        if (uri !== null && typeof uri.replace === "function") {
-    //            return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1$2/$3");
-    //        }
-    //        return "";
-    //    }
-    //
-    //    function makeLink(uri) {
-    //        if (typeof uri !== "undefined" && uri !== null) {
-    //            return '<a href="' + uri + '">' + uri + '</a>';
-    //        }
-    //        return "";
-    //    }
-    //
-    //    function makeAliasLink(uri) {
-    //        if (typeof uri !== "undefined" && uri !== null) {
-    //            if (typeof uri[ "@id"] !== "undefined" && uri[ "@id"] !== null) {
-    //                var lexicalAlias = uri[ "@id"]
-    //            } else {
-    //                var lexicalAlias = uri
-    //            }
-    //            return '<a href="' + lexicalAlias + '">' + lexicalAlias + '</a>';
-    //        }
-    //        return "";
-    //    }
-    //
-    //    function makeLiteral(data) {
-    //        if (typeof data != "undefined" && data != null) {
-    //            if (typeof data[docLang] != "undefined") {
-    //                return '"' + data[docLang] + '"';
-    //            }
-    //            if (typeof data[ 'en'] != "undefined") {
-    //                return '"' + data[ 'en'] + '"' + " [no '" + docLang + "']";
-    //            }
-    //            if (data instanceof Object) {
-    //                //it's only available in a language that's not English'
-    //                return "";
-    //            }
-    //           return '"' + data + '"';
-    //        } else {
-    //           return "";
-    //        }
-    //    }
     
     function setFilter() {
         
