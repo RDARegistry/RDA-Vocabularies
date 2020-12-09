@@ -417,17 +417,19 @@ if (typeof dataSource !== "undefined") {
                 "data": null,
                 "defaultContent": ''
             }, {
+                "class": "curie",
                 "render": function (data, type, row) {
                     //                    return formatCanon(row);
                     return makeColumn(getLinkedThing(getURI(row), rdaPrefix));
                 }
             }, {
+                "class": "prefLabel",
                 "render": function (data, type, row) {
                     //                    return formatLabel(row);
                     return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
                 }
             }, {
-                "class": "Definition",
+                "class": "definition",
                 "render": function (data, type, row) {
                     var definition = "";
                     if (typeof row.description !== "undefined") {
