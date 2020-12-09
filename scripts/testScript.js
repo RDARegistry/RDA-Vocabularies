@@ -114,16 +114,21 @@ if (typeof dataSource !== "undefined") {
     }
     
     function makeURLFromURI(uri, langCode) {
+        // returns Registry URL with language parameter
         var url = "";
+        var theLangCode = "";
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+        }
         if (typeof uri !== "undefined") {
             url = uri;
             if (uri !== null && typeof uri.replace === "function") {
                 // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
                 url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
                 // no specified language gives the permalink (display default is English)
-                if (typeof langCode != "undefined") {
+                if (theLangCode.length != 0) {
                     // Insert language code parameter before hash
-                    url = url.replace("#", "?language=" + langCode + "#");
+                    url = url.replace("#", "?language=" + theLangCode + "#");
                 }
             }
         }
@@ -404,7 +409,7 @@ if (typeof dataSource !== "undefined") {
                     //                        var id = row[ "@id"].replace(/^.*\/(.*)$/ig, "$1");
                     //                        return '<a id="' + id + '" href="' + url + '" title="permalink: ' + url + '">#</a>';
                     //                    }
-                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang)));
+                    return makeColumn(getLinkedStringIn(getURI(row), "#"));
                 }
             }, {
                 "class": 'details-control',
