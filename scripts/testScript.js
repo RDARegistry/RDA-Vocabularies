@@ -72,33 +72,33 @@ if (typeof dataSource !== "undefined") {
         return col;
     }
     
-    function formatRefArray(data, classname) {
-        var value = "";
-        if (typeof data != "undefined") {
-            if (data instanceof Array) {
-                for (i = 0; i < data.length;++ i) {
-                    value += formatRef(data[i], classname)
-                }
-            } else {
-                value = formatRef(data, classname)
-            }
-        }
-        return value;
-    }
-    
-    function formatRef(data, classname) {
-        if (typeof data != "undefined") {
-            if (typeof data.lexicalAlias != "undefined") {
-                return '<div class="' + classname + '">' +
-                formatCanon(data) + formatLabel(data) +
-                '</div>';
-            } else {
-                return '<div class="' + classname + '">' + data + '</div>';
-            }
-        } else {
-            return "";
-        }
-    }
+    //    function formatRefArray(data, classname) {
+    //        var value = "";
+    //        if (typeof data != "undefined") {
+    //            if (data instanceof Array) {
+    //                for (i = 0; i < data.length;++ i) {
+    //                    value += formatRef(data[i], classname)
+    //                }
+    //            } else {
+    //                value = formatRef(data, classname)
+    //            }
+    //        }
+    //        return value;
+    //    }
+    //
+    //    function formatRef(data, classname) {
+    //        if (typeof data != "undefined") {
+    //            if (typeof data.lexicalAlias != "undefined") {
+    //                return '<div class="' + classname + '">' +
+    //                formatCanon(data) + formatLabel(data) +
+    //                '</div>';
+    //            } else {
+    //                return '<div class="' + classname + '">' + data + '</div>';
+    //            }
+    //        } else {
+    //            return "";
+    //        }
+    //    }
     
     function makeDetailRow(rowValue, rowLabel) {
         var detailRow = "";
@@ -135,10 +135,10 @@ if (typeof dataSource !== "undefined") {
         return url;
     }
     
-    function formatLink(label, url) {
-        var linkedLabel = '<a href="' + url + '">' + label + '</a>';
-        return '<div class="vurllabel">' + linkedLabel + '</div>';
-    }
+    //    function formatLink(label, url) {
+    //        var linkedLabel = '<a href="' + url + '">' + label + '</a>';
+    //        return '<div class="vurllabel">' + linkedLabel + '</div>';
+    //    }
     
     function getStringByLanguage(theData, langCode, defaultLangCode) {
         var langString = "";
@@ -251,40 +251,38 @@ if (typeof dataSource !== "undefined") {
         return "<div>" + theString + "</div>";
     }
     
-    function formatCanon(data) {
-        if (typeof data[ "@id"] != "undefined") {
-            var url = data[ "@id"];
-            return '<div class="vcanon">' +
-            '<a href="' + url + '" title="Canonical URI: ' + url + '">' + makeCurie(url) + '</a>' +
-            '</div>';
-        }
-        return "";
-    }
-    
-    function formatLabel(data) {
-        var url = data[ "@id"];
-        if (data.lexicalAlias != null) {
-            if (typeof data.lexicalAlias[ "@id"] !== "undefined" && data.lexicalAlias[ "@id"] !== null) {
-                var lexicalAlias = data.lexicalAlias[ "@id"]
-            } else {
-                var lexicalAlias = data.lexicalAlias
-            }
-            return '<div class="vurllabel">' +
-            '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(lexicalAlias) + '">' + makeLiteral(data.label) + '</a>' +
-            '</div>';
-        }
-        if (data.prefLabel != null) {
-            return '<div class="vurllabel">' +
-            '<a href="' + url + '">' + makeLiteral(data.prefLabel) + '</a>' +
-            '</div>';
-        }
-        //        if (data.altLabel != null) {
-        //            return makeLiteral(data.altLabel);
-        //        }
-        //        return "";
-    }
-    
-    
+    //    function formatCanon(data) {
+    //        if (typeof data[ "@id"] != "undefined") {
+    //            var url = data[ "@id"];
+    //            return '<div class="vcanon">' +
+    //            '<a href="' + url + '" title="Canonical URI: ' + url + '">' + makeCurie(url) + '</a>' +
+    //            '</div>';
+    //        }
+    //        return "";
+    //    }
+    //
+    //    function formatLabel(data) {
+    //        var url = data[ "@id"];
+    //        if (data.lexicalAlias != null) {
+    //            if (typeof data.lexicalAlias[ "@id"] !== "undefined" && data.lexicalAlias[ "@id"] !== null) {
+    //                var lexicalAlias = data.lexicalAlias[ "@id"]
+    //            } else {
+    //                var lexicalAlias = data.lexicalAlias
+    //            }
+    //            return '<div class="vurllabel">' +
+    //            '<a href="' + url + '" title="Lexical Alias: ' + makeCurie(lexicalAlias) + '">' + makeLiteral(data.label) + '</a>' +
+    //            '</div>';
+    //        }
+    //        if (data.prefLabel != null) {
+    //            return '<div class="vurllabel">' +
+    //            '<a href="' + url + '">' + makeLiteral(data.prefLabel) + '</a>' +
+    //            '</div>';
+    //        }
+    //        if (data.altLabel != null) {
+    //            return makeLiteral(data.altLabel);
+    //        }
+    //        return "";
+    //    }
     
     function getLanguageCallout(data) {
         if (typeof data != "undefined") {
@@ -298,64 +296,64 @@ if (typeof dataSource !== "undefined") {
         return "@en *";
     }
     
-    function makeCurie(uri) {
-        if (uri !== null && typeof uri.replace === "function") {
-            // replace everything up to last sub-folder slash with prefix and colon
-            return rdaPrefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
-        }
-        return "";
-    }
-    
-    function makeUrl(uri) {
-        if (uri !== null && typeof uri.replace === "function") {
-            return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
-        }
-        return "";
-    }
-    
-    function makeUri(uri) {
-        if (uri !== null && typeof uri.replace === "function") {
-            return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1$2/$3");
-        }
-        return "";
-    }
-    
-    function makeLink(uri) {
-        if (typeof uri !== "undefined" && uri !== null) {
-            return '<a href="' + uri + '">' + uri + '</a>';
-        }
-        return "";
-    }
-    
-    function makeAliasLink(uri) {
-        if (typeof uri !== "undefined" && uri !== null) {
-            if (typeof uri[ "@id"] !== "undefined" && uri[ "@id"] !== null) {
-                var lexicalAlias = uri[ "@id"]
-            } else {
-                var lexicalAlias = uri
-            }
-            return '<a href="' + lexicalAlias + '">' + lexicalAlias + '</a>';
-        }
-        return "";
-    }
-    
-    function makeLiteral(data) {
-        if (typeof data != "undefined" && data != null) {
-            if (typeof data[docLang] != "undefined") {
-                return '"' + data[docLang] + '"';
-            }
-            if (typeof data[ 'en'] != "undefined") {
-                return '"' + data[ 'en'] + '"' + " [no '" + docLang + "']";
-            }
-            if (data instanceof Object) {
-                //it's only available in a language that's not English'
-                return "";
-            }
-            return '"' + data + '"';
-        } else {
-            return "";
-        }
-    }
+    //    function makeCurie(uri) {
+    //        if (uri !== null && typeof uri.replace === "function") {
+    //            // replace everything up to last sub-folder slash with prefix and colon
+    //            return rdaPrefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
+    //        }
+    //        return "";
+    //    }
+    //
+    //    function makeUrl(uri) {
+    //        if (uri !== null && typeof uri.replace === "function") {
+    //            return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
+    //        }
+    //        return "";
+    //   }
+    //
+    //    function makeUri(uri) {
+    //        if (uri !== null && typeof uri.replace === "function") {
+    //            return uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1$2/$3");
+    //        }
+    //        return "";
+    //    }
+    //
+    //    function makeLink(uri) {
+    //        if (typeof uri !== "undefined" && uri !== null) {
+    //            return '<a href="' + uri + '">' + uri + '</a>';
+    //        }
+    //        return "";
+    //    }
+    //
+    //    function makeAliasLink(uri) {
+    //        if (typeof uri !== "undefined" && uri !== null) {
+    //            if (typeof uri[ "@id"] !== "undefined" && uri[ "@id"] !== null) {
+    //                var lexicalAlias = uri[ "@id"]
+    //            } else {
+    //                var lexicalAlias = uri
+    //            }
+    //            return '<a href="' + lexicalAlias + '">' + lexicalAlias + '</a>';
+    //        }
+    //        return "";
+    //    }
+    //
+    //    function makeLiteral(data) {
+    //        if (typeof data != "undefined" && data != null) {
+    //            if (typeof data[docLang] != "undefined") {
+    //                return '"' + data[docLang] + '"';
+    //            }
+    //            if (typeof data[ 'en'] != "undefined") {
+    //                return '"' + data[ 'en'] + '"' + " [no '" + docLang + "']";
+    //            }
+    //            if (data instanceof Object) {
+    //                //it's only available in a language that's not English'
+    //                return "";
+    //            }
+    //           return '"' + data + '"';
+    //        } else {
+    //           return "";
+    //        }
+    //    }
     
     function setFilter() {
         
@@ -404,11 +402,6 @@ if (typeof dataSource !== "undefined") {
                 "orderable": false,
                 "class": 'permalink',
                 "render": function (data, type, row) {
-                    //                    if (typeof row[ "@id"] != "undefined") {
-                    //                        var url = makeUrl(row[ "@id"]);
-                    //                        var id = row[ "@id"].replace(/^.*\/(.*)$/ig, "$1");
-                    //                        return '<a id="' + id + '" href="' + url + '" title="permalink: ' + url + '">#</a>';
-                    //                    }
                     return makeColumn(getLinkedStringIn(getURI(row), "#"));
                 }
             }, {
@@ -419,13 +412,11 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "curie",
                 "render": function (data, type, row) {
-                    //                    return formatCanon(row);
                     return makeColumn(getLinkedThing(getURI(row), rdaPrefix));
                 }
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-                    //                    return formatLabel(row);
                     return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
                 }
             }, {
@@ -437,8 +428,6 @@ if (typeof dataSource !== "undefined") {
                     } else {
                         definition = row.ToolkitDefinition;
                     }
-                    //                        definition = makeLiteral(definition);
-                    //                        return formatRefArray(definition, "definition");
                     return makeColumn(getStringByLanguage(definition, docLang));
                 }
             }],
