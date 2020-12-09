@@ -146,7 +146,7 @@ if (typeof dataSource !== "undefined") {
             theDefaultLangCode = defaultLangCode;
         }
         if (typeof langCode != "undefined") {
-            theLangCode = langcode;
+            theLangCode = langCode;
         }
         if (typeof theData != "undefined" && theData != null) {
             // available in selected language
