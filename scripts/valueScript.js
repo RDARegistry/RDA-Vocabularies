@@ -194,7 +194,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof rowValue != "undefined") {
             theRowValue = rowValue;
         }
-        if (typeof rowLabel == "undefined") {
+        if (typeof rowLabel != "undefined") {
             theRowLabel = rowLabel;
         }
         // two columns; value column must have div wrapper
@@ -224,9 +224,9 @@ if (typeof dataSource !== "undefined") {
         return url;
     }
     
-    function quotify(theString) {
+    function quotify(string) {
         // returns a string delimited with quotes
-        return '"' + theString + '"';
+        return '"' + string + '"';
     }
     
     function getLanguageCallout(data) {
