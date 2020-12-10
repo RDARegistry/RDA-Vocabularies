@@ -215,10 +215,10 @@ if (typeof dataSource !== "undefined") {
                 // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
                 url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
                 // no specified language gives the permalink (display default is English)
-                if (theLangCode.length != 0) {
+//                if (theLangCode.length != 0) {
                     // Insert language code parameter before hash
-                    url = url.replace("#", "?language=" + theLangCode + "#");
-                }
+//                    url = url.replace("#", "?language=" + theLangCode + "#");
+//                }
             }
         }
         return url;
