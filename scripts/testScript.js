@@ -6,13 +6,14 @@ function gup(name, url, theDefault) {
     var results = regex.exec(url);
     return results == null ? theDefault: results[1];
 }
-var rdaPrefix = "";
 // set language to display; default English
 var docLang = gup('language', Location.href, 'en');
 // set language indicator style; border colour indicates on/selected
 $("#lang_" + docLang).css({
     "padding": "5px", "border": "3px solid #446e9b", "border-radius": "5px"
 });
+// initialize wide scope variable for prefix
+var rdaPrefix = "";
 
 if (typeof dataSource !== "undefined") {
     
@@ -59,8 +60,9 @@ if (typeof dataSource !== "undefined") {
         return detailTable;
     }
     
-    function divify(theString) {
-        return "<div>" + theString + "</div>";
+    function divify(string) {
+        // returns a string wrapped in a div
+        return "<div>" + string + "</div>";
     }
     
     function getLinkedStringIn(uri, label, langCode) {
@@ -96,8 +98,8 @@ if (typeof dataSource !== "undefined") {
     }
     
     function getPrefix(theData) {
-    // returns the vocabulary prefix
-    var prefix = "[prefix]";
+        // returns the vocabulary prefix
+        var prefix = "[prefix]";
         if (typeof theData[0].prefix != "undefined") {
             prefix = theData[0].prefix;
         }
@@ -135,6 +137,7 @@ if (typeof dataSource !== "undefined") {
     }
     
     function getURI(row) {
+        // returns a URI from the jsonld
         var uri = "";
         if (typeof row[ "@id"] != "undefined") {
             uri = row[ "@id"];
@@ -154,43 +157,48 @@ if (typeof dataSource !== "undefined") {
         return linkifyOut(label, link);
     }
     
-    function linkifyIn(theString, theURI) {
-        return '<a href="' + theURI + '">' + theString + '</a>';
+    function linkifyIn(string, uri) {
+        return '<a href="' + uri + '">' + string + '</a>';
     }
     
-    function linkifyOut(theString, theURI) {
-        return '<a href="' + theURI + '" target="_blank">' + theString + '</a>';
+    function linkifyOut(string, uri) {
+        return '<a href="' + uri + '" target="_blank">' + string + '</a>';
     }
     
     function makeColumn(colValue) {
+        // returns column content in a wrapper div
         var col = "";
         col = divify(colValue);
         return col;
     }
     
-    function makeCurieFromURI(uri, thePrefix) {
+    function makeCurieFromURI(uri, prefix) {
+        // returns a curie
         var curie = "";
-        var prefix = "";
-        if (typeof thePrefix != "undefined") {
-            prefix = thePrefix;
+        var thePrefix = "";
+        if (typeof prefix != "undefined") {
+            thePrefix = prefix;
         }
         if (uri !== null && typeof uri.replace === "function") {
             // replace everything up to last sub-folder slash with prefix and colon
-            curie = prefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
+            curie = thePrefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
         }
         return curie;
     }
     
     function makeDetailRow(rowValue, rowLabel) {
+        // returns a two-column row for the detail display
         var detailRow = "";
-        if (typeof rowValue == "undefined") {
-            rowValue = "";
+        var theRowValue = "";
+        var theRowLabel = "";
+        if (typeof rowValue != "undefined") {
+            theRowValue = rowValue;
         }
         if (typeof rowLabel == "undefined") {
-            rowLabel = "";
+            theRowLabel = rowLabel;
         }
         // two columns; value column must have div wrapper
-        detailRow = '<tr>' + '<td>' + rowLabel + ':' + '</td>' + '<td>' + divify(rowValue) + '</td>' + '</tr>';
+        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
         return detailRow;
     }
     
@@ -215,13 +223,14 @@ if (typeof dataSource !== "undefined") {
         }
         return url;
     }
-
+    
     function quotify(theString) {
+        // returns a string delimited with quotes
         return '"' + theString + '"';
     }
     
     function getLanguageCallout(data) {
-    // not currently used: returns the xml language string
+        // not currently used: returns the xml language string
         if (typeof data != "undefined") {
             if (typeof data[docLang] != "undefined") {
                 return "@" + docLang;
