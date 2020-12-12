@@ -62,6 +62,7 @@ if (typeof dataSource !== "undefined") {
     
     function divify(string, langCode) {
         // returns a string wrapped in a div with right-to-left attribute for specified languages
+        rtlIndex = -1;
         theLangCode = "";
         theString = "";
         if (typeof string != "undefined") {
@@ -69,7 +70,8 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof langCode != "undefined") {
             theLangCode = langCode;
-            if (theLangCode.indexOf("ar, he") > -1) {
+            rtlIndex = theLangCode.indexOf("ar, he");
+            if (rtlIndex >= -1) {
                 theString = '<div dir="rtl">' + theString + '</div>';
             } else {
                 theString = "<div>" + theString + "</div>";
