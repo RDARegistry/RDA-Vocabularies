@@ -297,12 +297,12 @@ if (typeof dataSource !== "undefined") {
                 "data": null,
                 "defaultContent": ''
             }, {
-//                "class": "curie",
+                "class": "curie",
                 "render": function (data, type, row) {
                     return makeColumn(getLinkedThing(getURI(row), rdaPrefix));
                 }
             }, {
-//                "class": "prefLabel",
+                "class": "prefLabel",
                 "render": function (data, type, row) {
                     return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
                 }
