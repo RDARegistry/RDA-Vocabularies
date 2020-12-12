@@ -69,13 +69,12 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof langCode != "undefined") {
             theLangCode = langCode;
-            if (theLangCode.indexOf("ar, he")>0) {
+            if (theLangCode.indexOf("ar, he") > 0) {
                 theString = '<div dir="rtl">' + theString + '</div>';
-            }
-            else {
+            } else {
                 theString = "<div>" + theString + "</div>";
             }
-        } 
+        }
         return theString;
     }
     
@@ -179,10 +178,14 @@ if (typeof dataSource !== "undefined") {
         return '<a href="' + uri + '" target="_blank">' + string + '</a>';
     }
     
-    function makeColumn(colValue) {
+    function makeColumn(colValue, langCode) {
         // returns column content in a wrapper div
         var col = "";
-        col = divify(colValue);
+        var theLangCode = "";
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+        }
+        col = divify(colValue, theLangCode);
         return col;
     }
     
@@ -229,10 +232,10 @@ if (typeof dataSource !== "undefined") {
                 // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
                 url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
                 // no specified language gives the permalink (display default is English)
-//                if (theLangCode.length != 0) {
-                    // Insert language code parameter before hash
-//                    url = url.replace("#", "?language=" + theLangCode + "#");
-//                }
+                //                if (theLangCode.length != 0) {
+                // Insert language code parameter before hash
+                //                    url = url.replace("#", "?language=" + theLangCode + "#");
+                //                }
             }
         }
         return url;
@@ -323,7 +326,7 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-//                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
+                    //                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
                     return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)));
                 }
             }, {
