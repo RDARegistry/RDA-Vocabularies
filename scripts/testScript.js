@@ -327,7 +327,7 @@ if (typeof dataSource !== "undefined") {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
                     //                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
-                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)));
+                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)), docLang);
                 }
             }, {
                 "class": "definition",
@@ -338,7 +338,7 @@ if (typeof dataSource !== "undefined") {
                     } else {
                         definition = row.ToolkitDefinition;
                     }
-                    return makeColumn(getStringByLanguage(definition, docLang));
+                    return makeColumn(getStringByLanguage(definition, docLang), docLang);
                 }
             }],
             "order":[[2, 'asc']],
