@@ -62,6 +62,7 @@ if (typeof dataSource !== "undefined") {
     
     function divify(string, langCode) {
         // returns a string wrapped in a div with right-to-left attribute for specified languages
+        rtlLangList = "ar, he";
         rtlIndex = -1;
         theLangCode = "";
         theString = "";
@@ -70,7 +71,7 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof langCode != "undefined") {
             theLangCode = langCode;
-            rtlIndex = theLangCode.indexOf("ar, he");
+            rtlIndex = rtlLangList.indexOf(theLangCode);
             if (rtlIndex > -1) {
                 theString = '<div dir="rtl">' + theString + '</div>';
             } else {
@@ -313,7 +314,7 @@ if (typeof dataSource !== "undefined") {
                 "orderable": false,
                 "class": 'permalink',
                 "render": function (data, type, row) {
-                    return makeColumn(getLinkedStringIn(getURI(row), "#"));
+                    return makeColumn(getLinkedStringIn(getURI(row), " # "));
                 }
             }, {
                 "class": 'details-control',
