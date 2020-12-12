@@ -60,9 +60,23 @@ if (typeof dataSource !== "undefined") {
         return detailTable;
     }
     
-    function divify(string) {
-        // returns a string wrapped in a div
-        return "<div>" + string + "</div>";
+    function divify(string, langCode) {
+        // returns a string wrapped in a div with right-to-left attribute for specified languages
+        theLangCode = "";
+        theString = "";
+        if (typeof string != "undefined") {
+            theString = string;
+        }
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+            if (theLangCode.indexOf("ar, he")>0) {
+                theString = '<div dir="rtl">' + theString + '</div>';
+            }
+            else {
+                theString = "<div>" + theString + "</div>";
+            }
+        } 
+        return theString;
     }
     
     function getLinkedStringIn(uri, label, langCode) {
