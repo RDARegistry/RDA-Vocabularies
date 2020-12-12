@@ -70,7 +70,7 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof langCode != "undefined") {
             theLangCode = langCode;
-            rtlIndex = theLangCode.indexOf("ar, he");
+            rtlIndex = theLangCode.indexOf("xx, ar, he");
             if (rtlIndex >= -1) {
                 theString = '<div dir="rtl">' + theString + '</div>';
             } else {
