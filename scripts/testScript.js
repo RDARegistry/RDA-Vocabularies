@@ -38,11 +38,11 @@ if (typeof dataSource !== "undefined") {
         var detailTable = '<table class="pindex_detail">';
         if (typeof d != "undefined") {
             if (typeof d.note != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.note, docLang), "Scope notes");
+                detailRow = makeDetailRow(getStringByLanguage(d.note, docLang), "Scope notes", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.altLabel != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.altLabel, docLang), "Alternate labels");
+                detailRow = makeDetailRow(getStringByLanguage(d.altLabel, docLang), "Alternate labels", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.notation != "undefined") {
@@ -225,7 +225,7 @@ if (typeof dataSource !== "undefined") {
             theLangCode = langCode;
         }
         // two columns; value column must have div wrapper
-        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue theLangCode) + '</td>' + '</tr>';
+        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue, theLangCode) + '</td>' + '</tr>';
         return detailRow;
     }
     
