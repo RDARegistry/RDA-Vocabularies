@@ -71,7 +71,9 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof langCode != "undefined") {
             theLangCode = langCode;
-            rtlIndex = rtlLangList.indexOf(theLangCode);
+            if (theLangCode.length > 0) {
+             rtlIndex = rtlLangList.indexOf(theLangCode);
+            }
             if (rtlIndex > -1) {
                 theString = '<div dir="rtl">' + theString + '</div>';
             } else {
