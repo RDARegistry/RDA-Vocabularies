@@ -229,6 +229,11 @@ if (typeof dataSource !== "undefined") {
         return '"' + string + '"';
     }
     
+    function strongify(string) {
+        // returns a string marked as strong
+        return '<strong>' + string + '</strong>';
+    }
+    
     function getLanguageCallout(data) {
         // not currently used: returns the xml language string
         if (typeof data != "undefined") {
@@ -304,7 +309,8 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
+//                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
+                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)));
                 }
             }, {
                 "class": "definition",
