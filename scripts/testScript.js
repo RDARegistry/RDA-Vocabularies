@@ -72,7 +72,7 @@ if (typeof dataSource !== "undefined") {
         if (typeof langCode != "undefined") {
             theLangCode = langCode;
             if (theLangCode.length > 0) {
-             rtlIndex = rtlLangList.indexOf(theLangCode);
+                rtlIndex = rtlLangList.indexOf(theLangCode);
             }
             if (rtlIndex > -1) {
                 theString = '<div dir="rtl">' + theString + '</div>';
@@ -125,6 +125,7 @@ if (typeof dataSource !== "undefined") {
     }
     
     function getStringByLanguage(theData, langCode, defaultLangCode) {
+        // returns string corresponding to language, or defaults
         var langString = "";
         // default language is English
         var theLangCode = "en";

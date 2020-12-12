@@ -60,9 +60,27 @@ if (typeof dataSource !== "undefined") {
         return detailTable;
     }
     
-    function divify(string) {
-        // returns a string wrapped in a div
-        return "<div>" + string + "</div>";
+    function divify(string, langCode) {
+        // returns a string wrapped in a div with right-to-left attribute for specified languages
+        rtlLangList = "ar, he";
+        rtlIndex = -1;
+        theLangCode = "";
+        theString = "";
+        if (typeof string != "undefined") {
+            theString = string;
+        }
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+            if (theLangCode.length > 0) {
+                rtlIndex = rtlLangList.indexOf(theLangCode);
+            }
+            if (rtlIndex > -1) {
+                theString = '<div dir="rtl">' + theString + '</div>';
+            } else {
+                theString = "<div>" + theString + "</div>";
+            }
+        }
+        return theString;
     }
     
     function getLinkedStringIn(uri, label, langCode) {
@@ -107,6 +125,7 @@ if (typeof dataSource !== "undefined") {
     }
     
     function getStringByLanguage(theData, langCode, defaultLangCode) {
+        // returns string corresponding to language, or defaults
         var langString = "";
         // default language is English
         var theLangCode = "en";
@@ -165,10 +184,14 @@ if (typeof dataSource !== "undefined") {
         return '<a href="' + uri + '" target="_blank">' + string + '</a>';
     }
     
-    function makeColumn(colValue) {
+    function makeColumn(colValue, langCode) {
         // returns column content in a wrapper div
         var col = "";
-        col = divify(colValue);
+        var theLangCode = "";
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+        }
+        col = divify(colValue, theLangCode);
         return col;
     }
     
@@ -215,10 +238,10 @@ if (typeof dataSource !== "undefined") {
                 // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
                 url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
                 // no specified language gives the permalink (display default is English)
-                if (theLangCode.length != 0) {
-                    // Insert language code parameter before hash
-                    url = url.replace("#", "?language=" + theLangCode + "#");
-                }
+                //                if (theLangCode.length != 0) {
+                // Insert language code parameter before hash
+                //                    url = url.replace("#", "?language=" + theLangCode + "#");
+                //                }
             }
         }
         return url;
@@ -233,8 +256,8 @@ if (typeof dataSource !== "undefined") {
         // returns a string marked as strong
         return '<strong>' + string + '</strong>';
     }
-
-function getLanguageCallout(data) {
+    
+    function getLanguageCallout(data) {
         // not currently used: returns the xml language string
         if (typeof data != "undefined") {
             if (typeof data[docLang] != "undefined") {
@@ -294,7 +317,7 @@ function getLanguageCallout(data) {
                 "orderable": false,
                 "class": 'permalink',
                 "render": function (data, type, row) {
-                    return makeColumn(getLinkedStringIn(getURI(row), "#"));
+                    return makeColumn(getLinkedStringIn(getURI(row), " # "));
                 }
             }, {
                 "class": 'details-control',
@@ -309,7 +332,8 @@ function getLanguageCallout(data) {
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)));
+                    //                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
+                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)), docLang);
                 }
             }, {
                 "class": "definition",
@@ -320,7 +344,7 @@ function getLanguageCallout(data) {
                     } else {
                         definition = row.ToolkitDefinition;
                     }
-                    return makeColumn(getStringByLanguage(definition, docLang));
+                    return makeColumn(getStringByLanguage(definition, docLang), docLang);
                 }
             }],
             "order":[[2, 'asc']],
