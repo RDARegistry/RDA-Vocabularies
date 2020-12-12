@@ -209,9 +209,10 @@ if (typeof dataSource !== "undefined") {
         return curie;
     }
     
-    function makeDetailRow(rowValue, rowLabel) {
+    function makeDetailRow(rowValue, rowLabel, langCode) {
         // returns a two-column row for the detail display
         var detailRow = "";
+        var theLangCode = "";
         var theRowValue = "";
         var theRowLabel = "";
         if (typeof rowValue != "undefined") {
@@ -220,8 +221,11 @@ if (typeof dataSource !== "undefined") {
         if (typeof rowLabel != "undefined") {
             theRowLabel = rowLabel;
         }
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+        }
         // two columns; value column must have div wrapper
-        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
+        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue theLangCode) + '</td>' + '</tr>';
         return detailRow;
     }
     
