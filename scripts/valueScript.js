@@ -199,7 +199,7 @@ if (typeof dataSource !== "undefined") {
          if (typeof content != "undefined") {
             theContent = content;
         }
-        col = divify(colValue);
+        col = divify(theContent);
         return col;
     }
     
