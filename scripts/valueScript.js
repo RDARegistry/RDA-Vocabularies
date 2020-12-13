@@ -60,7 +60,7 @@ if (typeof dataSource !== "undefined") {
         return detailTable;
     }
     
-    function divify(string, langCode) {
+    function directify(string, langCode) {
         // returns a string wrapped in a div with right-to-left attribute for specified languages
         rtlLangList = "ar, he";
         rtlIndex = -1;
@@ -71,15 +71,23 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof langCode != "undefined") {
             theLangCode = langCode;
-            if (theLangCode.length > 0) {
-                rtlIndex = rtlLangList.indexOf(theLangCode);
-            }
-            if (rtlIndex > -1) {
-                theString = '<div dir="rtl">' + theString + '</div>';
-            } else {
-                theString = "<div>" + theString + "</div>";
-            }
         }
+        if (theLangCode.length > 0) {
+            rtlIndex = rtlLangList.indexOf(theLangCode);
+        }
+        if (rtlIndex > -1) {
+            theString = '<div dir="rtl">' + theString + '</div>';
+        } else {
+            theString = "<div>" + theString + "</div>";
+        }
+    }
+    
+    function divify(string) {
+        // returns a string wrapped in a div
+        if (typeof string != "undefined") {
+            theString = string;
+        }
+        theString = "<div>" + theString + "</div>";
         return theString;
     }
     
@@ -124,6 +132,18 @@ if (typeof dataSource !== "undefined") {
         return prefix;
     }
     
+    function getStatus(theData) {
+        var label = "";
+        var link = "";
+        if (typeof theData[ "@id"] != "undefined") {
+            link = theData[ "@id"];
+        }
+        if (typeof theData[ "label"] != "undefined") {
+            label = theData[ "label"];
+        }
+        return linkifyOut(label, link);
+    }
+    
     function getStringByLanguage(theData, langCode, defaultLangCode) {
         // returns string corresponding to language, or defaults
         var langString = "";
@@ -141,15 +161,15 @@ if (typeof dataSource !== "undefined") {
         if (typeof theData != "undefined" && theData != null) {
             // available in selected language
             if (typeof theData[theLangCode] != "undefined") {
-                langString = quotify(theData[theLangCode]);
+                langString = directify(quotify(theData[theLangCode]), theLangCode);
             }
             // available in default language; add qualifier to indicate not available in selected language
             else if (typeof theData[theDefaultLangCode] != "undefined") {
-                langString = quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']";
+                langString = directify(quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
             }
             // not available in selected or default language; output indicates the languages
             else if (theData instanceof Object) {
-                langString = "[no '" + theLangCod + "' or '" + theDefaultLangCode + "']";
+                langString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
             }
         }
         return langString;
@@ -164,18 +184,6 @@ if (typeof dataSource !== "undefined") {
         return uri;
     }
     
-    function getStatus(theData) {
-        var label = "";
-        var link = "";
-        if (typeof theData[ "@id"] != "undefined") {
-            link = theData[ "@id"];
-        }
-        if (typeof theData[ "label"] != "undefined") {
-            label = theData[ "label"];
-        }
-        return linkifyOut(label, link);
-    }
-    
     function linkifyIn(string, uri) {
         return '<a href="' + uri + '">' + string + '</a>';
     }
@@ -184,14 +192,14 @@ if (typeof dataSource !== "undefined") {
         return '<a href="' + uri + '" target="_blank">' + string + '</a>';
     }
     
-    function makeColumn(colValue, langCode) {
-        // returns column content in a wrapper div
+    function makeColumn(content) {
+        // returns column content in a wrapper div with direction parameter
         var col = "";
-        var theLangCode = "";
-        if (typeof langCode != "undefined") {
-            theLangCode = langCode;
+        var theContent = "";
+         if (typeof content != "undefined") {
+            theContent = content;
         }
-        col = divify(colValue, theLangCode);
+        col = divify(colValue);
         return col;
     }
     
@@ -225,7 +233,7 @@ if (typeof dataSource !== "undefined") {
             theLangCode = langCode;
         }
         // two columns; value column must have div wrapper
-        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue, theLangCode) + '</td>' + '</tr>';
+        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
         return detailRow;
     }
     
@@ -337,7 +345,7 @@ if (typeof dataSource !== "undefined") {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
                     //                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
-                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)), docLang);
+                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)));
                 }
             }, {
                 "class": "definition",
@@ -348,7 +356,7 @@ if (typeof dataSource !== "undefined") {
                     } else {
                         definition = row.ToolkitDefinition;
                     }
-                    return makeColumn(getStringByLanguage(definition, docLang), docLang);
+                    return makeColumn(getStringByLanguage(definition, docLang));
                 }
             }],
             "order":[[2, 'asc']],
