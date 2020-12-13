@@ -50,7 +50,7 @@ if (typeof dataSource !== "undefined") {
                 detailTable += detailRow;
             }
             if (typeof d.status != "undefined") {
-                detailRow = makeDetailRow(getStatus(d.status), "Status");
+                detailRow = makeDetailRow(getLinkOut(d.status), "Status");
                 detailTable += detailRow;
             }
         } else {
@@ -93,7 +93,7 @@ if (typeof dataSource !== "undefined") {
     }
     
     function getLinkedStringIn(uri, label, langCode) {
-        // returns link for string label and Registry URL with parameter for selected language
+        // returns internal link for string label and Registry URL with parameter for selected language
         var theLabel = "";
         // language code is omitted to get permalink
         var theLangCode = "";
@@ -110,7 +110,8 @@ if (typeof dataSource !== "undefined") {
         return linkifyIn(theLabel, url);
     }
     
-    function getLinkedThing(uri, prefix) {
+    function getLinkedCurie(uri, prefix) {
+        // returns external link with Curie label
         var label = "";
         var theUri = "";
         if (typeof uri != "undefined") {
@@ -133,7 +134,7 @@ if (typeof dataSource !== "undefined") {
         return prefix;
     }
     
-    function getStatus(theData) {
+    function getLinkOut(theData) {
         var label = "";
         var link = "";
         if (typeof theData[ "@id"] != "undefined") {
@@ -186,10 +187,12 @@ if (typeof dataSource !== "undefined") {
     }
     
     function linkifyIn(string, uri) {
+        // returns internal link
         return '<a href="' + uri + '">' + string + '</a>';
     }
     
     function linkifyOut(string, uri) {
+        // returns external link
         return '<a href="' + uri + '" target="_blank">' + string + '</a>';
     }
     
@@ -197,7 +200,7 @@ if (typeof dataSource !== "undefined") {
         // returns column content in a wrapper div with direction parameter
         var col = "";
         var theContent = "";
-         if (typeof content != "undefined") {
+        if (typeof content != "undefined") {
             theContent = content;
         }
         col = divify(theContent);
@@ -340,7 +343,7 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "curie",
                 "render": function (data, type, row) {
-                    return makeColumn(getLinkedThing(getURI(row), rdaPrefix));
+                    return makeColumn(getLinkedCurie(getURI(row), rdaPrefix));
                 }
             }, {
                 "class": "prefLabel",
