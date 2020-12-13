@@ -80,6 +80,7 @@ if (typeof dataSource !== "undefined") {
         } else {
             theString = "<div>" + theString + "</div>";
         }
+        return theString;
     }
     
     function divify(string) {
