@@ -378,8 +378,8 @@ if (typeof dataSource !== "undefined") {
                 "class": "definition",
                 "render": function (data, type, row) {
                     var definition = "";
-                    if (typeof row.description !== "undefined") {
-                        definition = row.description;
+                    if (typeof row.definition !== "undefined") {
+                        definition = row.definition;
                     } else {
                         definition = row.ToolkitDefinition;
                     }
