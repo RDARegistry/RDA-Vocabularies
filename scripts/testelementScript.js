@@ -42,15 +42,27 @@ if (typeof dataSource !== "undefined") {
                 detailTable += detailRow;
             }
             if (typeof d.domain != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.altLabel, docLang), "Alternate labels", docLang);
+                detailRow = makeDetailRow(getLinkIn(d.domain), "Domain");
                 detailTable += detailRow;
             }
-            if (typeof d.notation != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.notation, docLang), "Notation");
+            if (typeof d.range != "undefined") {
+                detailRow = makeDetailRow(getLinkIn(d.range), "Range");
+                detailTable += detailRow;
+            }
+            if (typeof d.inverseOf != "undefined") {
+                detailRow = makeDetailRow(getLinkIn(d.inverseOf), "Inverse");
+                detailTable += detailRow;
+            }
+            if (typeof d.ToolkitLabel != "undefined") {
+                detailRow = makeDetailRow(getStringByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
+                detailTable += detailRow;
+            }
+            if (typeof d.ToolkitDefinition != "undefined") {
+                detailRow = makeDetailRow(getStringByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.status != "undefined") {
-                detailRow = makeDetailRow(getStatus(d.status), "Status");
+                detailRow = makeDetailRow(getLinkOut(d.status), "Status");
                 detailTable += detailRow;
             }
         } else {
@@ -60,7 +72,7 @@ if (typeof dataSource !== "undefined") {
         return detailTable;
     }
     
-    function divify(string, langCode) {
+    function directify(string, langCode) {
         // returns a string wrapped in a div with right-to-left attribute for specified languages
         rtlLangList = "ar, he";
         rtlIndex = -1;
@@ -71,20 +83,44 @@ if (typeof dataSource !== "undefined") {
         }
         if (typeof langCode != "undefined") {
             theLangCode = langCode;
-            if (theLangCode.length > 0) {
-                rtlIndex = rtlLangList.indexOf(theLangCode);
-            }
-            if (rtlIndex > -1) {
-                theString = '<div dir="rtl">' + theString + '</div>';
-            } else {
-                theString = "<div>" + theString + "</div>";
-            }
+        }
+        if (theLangCode.length > 0) {
+            rtlIndex = rtlLangList.indexOf(theLangCode);
+        }
+        if (rtlIndex > -1) {
+            theString = '<div dir="rtl">' + theString + '</div>';
+        } else {
+            theString = "<div>" + theString + "</div>";
         }
         return theString;
     }
     
+    function divify(string) {
+        // returns a string wrapped in a div
+        if (typeof string != "undefined") {
+            theString = string;
+        }
+        theString = "<div>" + theString + "</div>";
+        return theString;
+    }
+    
+    function getLinkedCurie(uri, prefix) {
+        // returns external link with Curie label
+        var label = "";
+        var theUri = "";
+        if (typeof uri != "undefined") {
+            theUri = uri;
+        }
+        if (typeof prefix != "undefined") {
+            label = makeCurieFromURI(theUri, prefix);
+        } else {
+            label = theUri;
+        }
+        return linkifyOut(label, theUri);
+    }
+    
     function getLinkedStringIn(uri, label, langCode) {
-        // returns link for string label and Registry URL with parameter for selected language
+        // returns internal link for string label and Registry URL with parameter for selected language
         var theLabel = "";
         // language code is omitted to get permalink
         var theLangCode = "";
@@ -101,18 +137,28 @@ if (typeof dataSource !== "undefined") {
         return linkifyIn(theLabel, url);
     }
     
-    function getLinkedThing(uri, prefix) {
+     function getLinkIn(theData) {
         var label = "";
-        var theUri = "";
-        if (typeof uri != "undefined") {
-            theUri = uri;
+        var link = "";
+        if (typeof theData[ "@id"] != "undefined") {
+            link = theData[ "@id"];
         }
-        if (typeof prefix != "undefined") {
-            label = makeCurieFromURI(theUri, prefix);
-        } else {
-            label = theUri;
+        if (typeof theData[ "label"] != "undefined") {
+            label = theData[ "label"];
         }
-        return linkifyOut(label, theUri);
+        return linkifyIn(label, link);
+    }
+    
+    function getLinkOut(theData) {
+        var label = "";
+        var link = "";
+        if (typeof theData[ "@id"] != "undefined") {
+            link = theData[ "@id"];
+        }
+        if (typeof theData[ "label"] != "undefined") {
+            label = theData[ "label"];
+        }
+        return linkifyOut(label, link);
     }
     
     function getPrefix(theData) {
@@ -141,15 +187,15 @@ if (typeof dataSource !== "undefined") {
         if (typeof theData != "undefined" && theData != null) {
             // available in selected language
             if (typeof theData[theLangCode] != "undefined") {
-                langString = quotify(theData[theLangCode]);
+                langString = directify(quotify(theData[theLangCode]), theLangCode);
             }
             // available in default language; add qualifier to indicate not available in selected language
             else if (typeof theData[theDefaultLangCode] != "undefined") {
-                langString = quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']";
+                langString = directify(quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
             }
             // not available in selected or default language; output indicates the languages
             else if (theData instanceof Object) {
-                langString = "[no '" + theLangCod + "' or '" + theDefaultLangCode + "']";
+                langString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
             }
         }
         return langString;
@@ -164,34 +210,24 @@ if (typeof dataSource !== "undefined") {
         return uri;
     }
     
-    function getStatus(theData) {
-        var label = "";
-        var link = "";
-        if (typeof theData[ "@id"] != "undefined") {
-            link = theData[ "@id"];
-        }
-        if (typeof theData[ "label"] != "undefined") {
-            label = theData[ "label"];
-        }
-        return linkifyOut(label, link);
-    }
-    
     function linkifyIn(string, uri) {
+        // returns internal link
         return '<a href="' + uri + '">' + string + '</a>';
     }
     
     function linkifyOut(string, uri) {
+        // returns external link
         return '<a href="' + uri + '" target="_blank">' + string + '</a>';
     }
     
-    function makeColumn(colValue, langCode) {
-        // returns column content in a wrapper div
+    function makeColumn(content) {
+        // returns column content in a wrapper div with direction parameter
         var col = "";
-        var theLangCode = "";
-        if (typeof langCode != "undefined") {
-            theLangCode = langCode;
+        var theContent = "";
+        if (typeof content != "undefined") {
+            theContent = content;
         }
-        col = divify(colValue, theLangCode);
+        col = divify(theContent);
         return col;
     }
     
@@ -225,7 +261,7 @@ if (typeof dataSource !== "undefined") {
             theLangCode = langCode;
         }
         // two columns; value column must have div wrapper
-        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue, theLangCode) + '</td>' + '</tr>';
+        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
         return detailRow;
     }
     
@@ -331,13 +367,12 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "curie",
                 "render": function (data, type, row) {
-                    return makeColumn(getLinkedThing(getURI(row), rdaPrefix));
+                    return makeColumn(getLinkedCurie(getURI(row), rdaPrefix));
                 }
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-                    //                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
-                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)), docLang);
+                    return makeColumn(strongify(getStringByLanguage(row.label, docLang)));
                 }
             }, {
                 "class": "definition",
@@ -348,7 +383,7 @@ if (typeof dataSource !== "undefined") {
                     } else {
                         definition = row.ToolkitDefinition;
                     }
-                    return makeColumn(getStringByLanguage(definition, docLang), docLang);
+                    return makeColumn(getStringByLanguage(definition, docLang));
                 }
             }],
             "order":[[2, 'asc']],

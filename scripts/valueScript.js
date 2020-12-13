@@ -92,6 +92,21 @@ if (typeof dataSource !== "undefined") {
         return theString;
     }
     
+    function getLinkedCurie(uri, prefix) {
+        // returns external link with Curie label
+        var label = "";
+        var theUri = "";
+        if (typeof uri != "undefined") {
+            theUri = uri;
+        }
+        if (typeof prefix != "undefined") {
+            label = makeCurieFromURI(theUri, prefix);
+        } else {
+            label = theUri;
+        }
+        return linkifyOut(label, theUri);
+    }
+    
     function getLinkedStringIn(uri, label, langCode) {
         // returns internal link for string label and Registry URL with parameter for selected language
         var theLabel = "";
@@ -110,31 +125,19 @@ if (typeof dataSource !== "undefined") {
         return linkifyIn(theLabel, url);
     }
     
-    function getLinkedCurie(uri, prefix) {
-        // returns external link with Curie label
+     function getLinkIn(theData) {
         var label = "";
-        var theUri = "";
-        if (typeof uri != "undefined") {
-            theUri = uri;
+        var link = "";
+        if (typeof theData[ "@id"] != "undefined") {
+            link = theData[ "@id"];
         }
-        if (typeof prefix != "undefined") {
-            label = makeCurieFromURI(theUri, prefix);
-        } else {
-            label = theUri;
+        if (typeof theData[ "label"] != "undefined") {
+            label = theData[ "label"];
         }
-        return linkifyOut(label, theUri);
+        return linkifyIn(label, link);
     }
     
-    function getPrefix(theData) {
-        // returns the vocabulary prefix
-        var prefix = "[prefix]";
-        if (typeof theData[0].prefix != "undefined") {
-            prefix = theData[0].prefix;
-        }
-        return prefix;
-    }
-    
-    function getLinkOut(theData) {
+   function getLinkOut(theData) {
         var label = "";
         var link = "";
         if (typeof theData[ "@id"] != "undefined") {
@@ -144,6 +147,15 @@ if (typeof dataSource !== "undefined") {
             label = theData[ "label"];
         }
         return linkifyOut(label, link);
+    }
+    
+    function getPrefix(theData) {
+        // returns the vocabulary prefix
+        var prefix = "[prefix]";
+        if (typeof theData[0].prefix != "undefined") {
+            prefix = theData[0].prefix;
+        }
+        return prefix;
     }
     
     function getStringByLanguage(theData, langCode, defaultLangCode) {
@@ -348,7 +360,6 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-                    //                    return makeColumn(getLinkedStringIn(getURI(row), getStringByLanguage(row.prefLabel, docLang), docLang));
                     return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)));
                 }
             }, {
