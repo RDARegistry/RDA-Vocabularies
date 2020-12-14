@@ -206,7 +206,7 @@ if (typeof dataSource !== "undefined") {
         var label = "";
         var link = "";
         if (typeof theData[ "@id"] != "undefined") {
-            link = makeURLFromURI(theData[ "@id"], langCode);
+            link = makeURLFromURI(theData[ "@id"]);
         }
         if (typeof theData[ "label"] != "undefined") {
             label = theData[ "label"];
