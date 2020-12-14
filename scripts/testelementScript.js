@@ -34,6 +34,7 @@ if (typeof dataSource !== "undefined") {
     function format(d) {
         // `d` is the original data object for the row
         // format note (scope note), alLabel, notation, status
+        var prefix = RDAPrefix;
         var detailRow = makeDetailRow();
         var detailTable = '<table class="pindex_detail">';
         if (typeof d != "undefined") {
@@ -55,9 +56,8 @@ if (typeof dataSource !== "undefined") {
             }
             if (typeof d.hasSubproperty != "undefined") {
                 // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
-//                detailRow = getDetailFromArray(d.hasSubproperty);
-prefix = getPrefix(d);
-                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, prefix), "Subproperties");
+                //                detailRow = getDetailFromArray(d.hasSubproperty);
+                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, RDAPrefix), "Subproperties");
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
@@ -150,7 +150,7 @@ prefix = getPrefix(d);
     }
     
     function getDetailFromArray(row, prefix) {
-    var arrayDetail = "";
+        var arrayDetail = "";
         var thePrefix = "";
         if (typeof prefix != "undefined") {
             thePrefix = prefix;
