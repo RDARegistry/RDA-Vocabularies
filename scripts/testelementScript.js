@@ -165,7 +165,7 @@ if (typeof dataSource !== "undefined") {
         } else {
             arrayDetail = divify(curieLink + "[" + labelLink + "]");
         }
-        return arryaDetail;
+        return arrayDetail;
     }
     
     function getLinkInLabelFromArray(row, langCode) {
