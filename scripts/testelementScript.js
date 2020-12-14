@@ -28,7 +28,7 @@ if (typeof dataSource !== "undefined") {
     
     // set flag for VES
     function filterConcepts(obj) {
-        return obj[ "@type"] !== "ConceptScheme";
+        return obj[ "@type"] !== "ElementSet";
     }
     
     
@@ -433,12 +433,12 @@ if (typeof dataSource !== "undefined") {
                 "data": null,
                 "defaultContent": ''
             }, {
-//                "class": "curie",
+                "class": "curie",
                 "render": function (data, type, row) {
                     return makeColumn(getLinkOutCurie(getURI(row), window.rdaPrefix));
                 }
             }, {
-//                "class": "prefLabel",
+                "class": "prefLabel",
                 "render": function (data, type, row) {
                     return makeColumn(strongify(getLabelByLanguage(getLabel(row), docLang)));
                 }
