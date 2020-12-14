@@ -13,6 +13,9 @@ $("#lang_" + docLang).css({
     "padding": "5px", "border": "3px solid #446e9b", "border-radius": "5px"
 });
 
+// initialize wide scope variable for prefix
+var rdaPrefix = "";
+
 if (typeof dataSource !== "undefined") {
     
     //noinspection ThisExpressionReferencesGlobalObjectJS
@@ -28,8 +31,6 @@ if (typeof dataSource !== "undefined") {
         return obj[ "@type"] !== "ConceptScheme";
     }
     
-    // initialize wide scope variable for prefix
-    var rdaPrefix = "";
     
     /* Formatting function for row details - modify as you need */
     function format(d) {
@@ -57,7 +58,7 @@ if (typeof dataSource !== "undefined") {
             if (typeof d.hasSubproperty != "undefined") {
                 // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
                 //                detailRow = getDetailFromArray(d.hasSubproperty);
-                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, RDAPrefix), "Subproperties");
+                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, window.RDAPrefix), "Subproperties");
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
@@ -140,10 +141,10 @@ if (typeof dataSource !== "undefined") {
         if (typeof row != "undefined") {
             if (row instanceof Array) {
                 for (i = 0; i < row.length;++ i) {
-                    string += getLinkOutCurie(getURI(row[i]), rdaPrefix);
+                    string += getLinkOutCurie(getURI(row[i]), window.rdaPrefix);
                 }
             } else {
-                string = divify(getLinkOutCurie(getURI(row), rdaPrefix));
+                string = divify(getLinkOutCurie(getURI(row), window.rdaPrefix));
             }
         }
         return string;
@@ -418,7 +419,7 @@ if (typeof dataSource !== "undefined") {
                 crossDomain: true,
                 "dataSrc": function (json) {
                     json.data = json[ "@graph"].filter(filterConcepts);
-                    rdaPrefix = getPrefix(json[ "@graph"]);
+                    window.rdaPrefix = getPrefix(json[ "@graph"]);
                     return json.data;
                 }
             },
@@ -436,7 +437,7 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "curie",
                 "render": function (data, type, row) {
-                    return makeColumn(getLinkOutCurie(getURI(row), rdaPrefix));
+                    return makeColumn(getLinkOutCurie(getURI(row), window.rdaPrefix));
                 }
             }, {
                 "class": "prefLabel",
