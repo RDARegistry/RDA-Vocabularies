@@ -58,7 +58,7 @@ if (typeof dataSource !== "undefined") {
             if (typeof d.hasSubproperty != "undefined") {
                 // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
                 //                detailRow = getDetailFromArray(d.hasSubproperty);
-                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty), "Subproperties");
+                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, "h"), "Subproperties");
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
@@ -150,41 +150,35 @@ if (typeof dataSource !== "undefined") {
         return string;
     }
     
-    function getDetailFromArray(row) {
+    function getDetailFromArray(row, vh) {
         var arrayDetail = "";
         var label = "";
         var labelLink = "";
         var uri = "";
         var uriLink = "";
+        var theVh = "";
+        if (typeof vh != "undefined") {
+            theVh = vh;
+        }
         if (row instanceof Array) {
             for (i = 0; i < row.length;++ i) {
                 label = getLabel(row[i]);
                 uri = getURI(row[i]);
                 labelLink = quotify(getLinkInLabel(uri, label));
                 uriLink = linkifyOut(uri, uri);
-                arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
+                switch (theVh) {
+                    case "h":
+                    arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
+                    break;
+                    case "v":
+                    arrayDetail += divify(uriLink)+ divify(" [" + labelLink + " (en)]"));
+                    break;
+                    default:
+                    arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
+                }
             }
         }
         return arrayDetail;
-    }
-    
-    function getLinkInLabelFromArray(row, langCode) {
-        var label = "";
-        var string = "";
-        var theLangCode = "";
-        if (typeof langCode != "undefined") {
-            theLangCode = langCode;
-        }
-        if (typeof row != "undefined") {
-            if (row instanceof Array) {
-                for (i = 0; i < row.length;++ i) {
-                    string += getLinkInLabel(getURI(row[i]), getLabel(row[i]), theLangCode);
-                }
-            } else {
-                string = getLinkInLabel(getURI(row), getLabel(row[i]), theLangCode);
-            }
-        }
-        return string;
     }
     
     function getLinkInLabel(uri, label, langCode) {
@@ -457,7 +451,7 @@ if (typeof dataSource !== "undefined") {
                 "defaultContent": "",
                 "data": "subPropertyOf",
                 "render": function (data, type, row) {
-                    return makeColumn(getDetailFromArray(data));
+                    return makeColumn(getDetailFromArray(data, "v"));
                 }
             }],
             "order":[[2, 'asc']],
