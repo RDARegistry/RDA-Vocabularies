@@ -150,19 +150,15 @@ if (typeof dataSource !== "undefined") {
         return string;
     }
     
-    function getDetailFromArray(row, prefix) {
+    function getDetailFromArray(row) {
         var arrayDetail = "";
-        var thePrefix = "";
-        if (typeof prefix != "undefined") {
-            thePrefix = prefix;
-        }
         if (row instanceof Array) {
             for (i = 0; i < row.length;++ i) {
                 uri = getURI(row[i]);
                 label = getLabel(row[i]);
-                curieLink = getLinkOutCurie(uri, thePrefix);
+                uriLink = linkifyOut(uri, uri);
                 labelLink = getLinkInLabel(uri, label);
-                arrayDetail += divify(curieLink + " [" + labelLink + "]");
+                arrayDetail += divify(uriLink + " [" + labelLink + "]");
             }
         } else {
             arrayDetail = divify(curieLink + "[" + labelLink + "]");
