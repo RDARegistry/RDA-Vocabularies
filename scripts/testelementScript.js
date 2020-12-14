@@ -53,10 +53,10 @@ if (typeof dataSource !== "undefined") {
                 detailRow = makeDetailRow(getLinkIn(d.inverseOf), "Inverse");
                 detailTable += detailRow;
             }
-			if (typeof d.hasSubproperty != "undefined") {
-				detailRow = makeDetailRow(getLinkedCurieFromArray(d.hasSubproperty), "Subproperties");
-				detailTable += detailRow;
-				}
+            if (typeof d.hasSubproperty != "undefined") {
+                detailRow = makeDetailRow(getLinkedCurieFromArray(d.hasSubproperty), "Subproperties");
+                detailTable += detailRow;
+            }
             if (typeof d.ToolkitLabel != "undefined") {
                 detailRow = makeDetailRow(getStringByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
                 detailTable += detailRow;
@@ -120,25 +120,24 @@ if (typeof dataSource !== "undefined") {
         } else {
             label = theUri;
         }
-        return linkifyOut(label, theUri);
+        return divify(linkifyOut(label, theUri));
     }
     
     function getLinkedCurieFromArray(row) {
         var string = "";
         if (typeof row != "undefined") {
             if (row instanceof Array) {
-                for (i = 0; i < row.length; ++i) {
+                for (i = 0; i < row.length;++ i) {
                     string += getLinkedCurie(getURI(row[i]), rdaPrefix);
                 }
-            }
-            else {
+            } else {
                 string = getLinkedCurie(getURI(row), rdaPrefix);
             }
         }
         return string;
     }
-
-function getLinkedStringIn(uri, label, langCode) {
+    
+    function getLinkedStringIn(uri, label, langCode) {
         // returns internal link for string label and Registry URL with parameter for selected language
         var theLabel = "";
         // language code is omitted to get permalink
@@ -156,7 +155,7 @@ function getLinkedStringIn(uri, label, langCode) {
         return linkifyIn(theLabel, url);
     }
     
-     function getLinkIn(theData) {
+    function getLinkIn(theData) {
         var label = "";
         var link = "";
         if (typeof theData[ "@id"] != "undefined") {
