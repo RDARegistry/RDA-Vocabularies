@@ -457,7 +457,7 @@ if (typeof dataSource !== "undefined") {
                 "defaultContent": "",
                 "data": "subPropertyOf",
                 "render": function (data, type, row) {
-                    return makeColumn(getDetailFromArray(row));
+                    return makeColumn(getDetailFromArray(data));
                 }
             }],
             "order":[[2, 'asc']],
