@@ -417,7 +417,7 @@ if (typeof dataSource !== "undefined") {
                 crossDomain: true,
                 "dataSrc": function (json) {
                     json.data = json[ "@graph"].filter(filterConcepts);
-                    window.rdaPrefix = getPrefix(json[ "@graph"]);
+//                    window.rdaPrefix = getPrefix(json[ "@graph"]);
                     return json.data;
                 }
             },
