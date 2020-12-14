@@ -152,16 +152,18 @@ if (typeof dataSource !== "undefined") {
     
     function getDetailFromArray(row) {
         var arrayDetail = "";
+        var label = "";
+        var labelLink = "";
+        var uri = "";
+        var uriLink = "";
         if (row instanceof Array) {
             for (i = 0; i < row.length;++ i) {
-                uri = getURI(row[i]);
                 label = getLabel(row[i]);
-                uriLink = linkifyOut(uri, uri);
+                uri = getURI(row[i]);
                 labelLink = quotify(getLinkInLabel(uri, label));
+                uriLink = linkifyOut(uri, uri);
                 arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
             }
-        } else {
-            arrayDetail = divify(uriLink + "[" + labelLink + " (en)]");
         }
         return arrayDetail;
     }
