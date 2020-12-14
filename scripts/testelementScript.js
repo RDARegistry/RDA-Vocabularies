@@ -425,12 +425,7 @@ if (typeof dataSource !== "undefined") {
                 "orderable": false,
                 "class": 'permalink',
                 "render": function (data, type, row) {
-//                    return makeColumn(getLinkInLabel(getURI(row), " # "));
-                    if (typeof row[ "@id"] != "undefined") {
-                        var url = makeURLFromURI(row[ "@id"]);
-                        var id = row[ "@id"].replace(/^.*\/(.*)$/ig, "$1");
-                        return '<a id="' + id + '" href="' + url + '" title="permalink: ' + url + '">#</a>';
-                    }
+                    return makeColumn(getLinkInLabel(getURI(row), "#"));
                 }
             }, {
                 "class": 'details-control',
