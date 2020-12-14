@@ -56,7 +56,8 @@ if (typeof dataSource !== "undefined") {
             if (typeof d.hasSubproperty != "undefined") {
                 // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
 //                detailRow = getDetailFromArray(d.hasSubproperty);
-                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, RDAPrefix), "Subproperties");
+prefix = getPrefix(d);
+                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, prefix), "Subproperties");
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
@@ -160,7 +161,7 @@ if (typeof dataSource !== "undefined") {
                 label = getLabel(row[i]);
                 curieLink = getLinkOutCurie(uri, thePrefix);
                 labelLink = getLinkInLabel(uri, label);
-                arrayDetail += divify(curieLink + "[" + labelLink + "]");
+                arrayDetail += divify(curieLink + " [" + labelLink + "]");
             }
         } else {
             arrayDetail = divify(curieLink + "[" + labelLink + "]");
