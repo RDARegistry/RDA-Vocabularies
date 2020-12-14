@@ -38,7 +38,7 @@ if (typeof dataSource !== "undefined") {
         var detailTable = '<table class="pindex_detail">';
         if (typeof d != "undefined") {
             if (typeof d.note != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.note, docLang), "Scope notes", docLang);
+                detailRow = makeDetailRow(getLabelByLanguage(d.note, docLang), "Scope notes", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.domain != "undefined") {
@@ -54,15 +54,15 @@ if (typeof dataSource !== "undefined") {
                 detailTable += detailRow;
             }
             if (typeof d.hasSubproperty != "undefined") {
-                detailRow = makeDetailRow(getLinkedCurieFromArray(d.hasSubproperty), "Subproperties");
+                detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
+                detailRow = makeDetailRow(getLabelByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitDefinition != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
+                detailRow = makeDetailRow(getLabelByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.status != "undefined") {
@@ -108,7 +108,16 @@ if (typeof dataSource !== "undefined") {
         return theString;
     }
     
-    function getLinkedCurie(uri, prefix) {
+    function getLabel(row) {
+        // returns a label from the jsonld
+        var label = "";
+        if (typeof row[ "label"] != "undefined") {
+            label = row[ "label"];
+        }
+        return label;
+    }
+    
+    function getLinkOutCurie(uri, prefix) {
         // returns external link with Curie label
         var label = "";
         var theUri = "";
@@ -123,21 +132,40 @@ if (typeof dataSource !== "undefined") {
         return divify(linkifyOut(label, theUri));
     }
     
-    function getLinkedCurieFromArray(row) {
+    function getLinkOutCurieFromArray(row) {
         var string = "";
         if (typeof row != "undefined") {
             if (row instanceof Array) {
                 for (i = 0; i < row.length;++ i) {
-                    string += getLinkedCurie(getURI(row[i]), rdaPrefix);
+                    string += getLinkOutCurie(getURI(row[i]), rdaPrefix);
                 }
             } else {
-                string = getLinkedCurie(getURI(row), rdaPrefix);
+                string = getLinkOutCurie(getURI(row), rdaPrefix);
             }
         }
         return string;
     }
     
-    function getLinkedStringIn(uri, label, langCode) {
+    function getLinkInLabelFromArray(row, langCode) {
+        var label = "";
+        var string = "";
+        var theLangCode = "";
+        if (typeof langCode != "undefined") {
+            theLangCode = langCode;
+        }
+        if (typeof row != "undefined") {
+            if (row instanceof Array) {
+                for (i = 0; i < row.length;++ i) {
+                    string += getLinkInLabel(getURI(row[i]), getLabel(row[i]), theLangCode);
+                }
+            } else {
+                string = getLinkInLabel(getURI(row), getLabel(row[i]), theLangCode);
+            }
+        }
+        return string;
+    }
+    
+    function getLinkInLabel(uri, label, langCode) {
         // returns internal link for string label and Registry URL with parameter for selected language
         var theLabel = "";
         // language code is omitted to get permalink
@@ -188,7 +216,7 @@ if (typeof dataSource !== "undefined") {
         return prefix;
     }
     
-    function getStringByLanguage(theData, langCode, defaultLangCode) {
+    function getLabelByLanguage(theData, langCode, defaultLangCode) {
         // returns string corresponding to language, or defaults
         var langString = "";
         // default language is English
@@ -375,7 +403,7 @@ if (typeof dataSource !== "undefined") {
                 "orderable": false,
                 "class": 'permalink',
                 "render": function (data, type, row) {
-                    return makeColumn(getLinkedStringIn(getURI(row), " # "));
+                    return makeColumn(getLinkInLabel(getURI(row), " # "));
                 }
             }, {
                 "class": 'details-control',
@@ -385,12 +413,12 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "curie",
                 "render": function (data, type, row) {
-                    return makeColumn(getLinkedCurie(getURI(row), rdaPrefix));
+                    return makeColumn(getLinkOutCurie(getURI(row), rdaPrefix));
                 }
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-                    return makeColumn(strongify(getStringByLanguage(row.label, docLang)));
+                    return makeColumn(strongify(getLabelByLanguage(getLabel(row), docLang)));
                 }
             }, {
                 "class": "definition",
@@ -401,7 +429,7 @@ if (typeof dataSource !== "undefined") {
                     } else {
                         definition = row.ToolkitDefinition;
                     }
-                    return makeColumn(getStringByLanguage(definition, docLang));
+                    return makeColumn(getLabelByLanguage(definition, docLang));
                 }
             }],
             "order":[[2, 'asc']],
