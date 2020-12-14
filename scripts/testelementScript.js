@@ -55,7 +55,7 @@ if (typeof dataSource !== "undefined") {
             }
             if (typeof d.hasSubproperty != "undefined") {
                 // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
-                detailRow = getDetailFromArray(d.hasSubproperty);
+//                detailRow = getDetailFromArray(d.hasSubproperty);
                 detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, RDAPrefix), "Subproperties");
                 detailTable += detailRow;
             }
@@ -149,6 +149,7 @@ if (typeof dataSource !== "undefined") {
     }
     
     function getDetailFromArray(row, prefix) {
+    var arrayDetail = "";
         var thePrefix = "";
         if (typeof prefix != "undefined") {
             thePrefix = prefix;
@@ -159,11 +160,12 @@ if (typeof dataSource !== "undefined") {
                 label = getLabel(row[i]);
                 curieLink = getLinkOutCurie(uri, thePrefix);
                 labelLink = getLinkInLabel(uri, label);
-                string += divify(curieLink + "[" + labelLink + "]");
+                arrayDetail += divify(curieLink + "[" + labelLink + "]");
             }
         } else {
-            string = divify(curieLink + "[" + labelLink + "]");
+            arrayDetail = divify(curieLink + "[" + labelLink + "]");
         }
+        return arryaDetail;
     }
     
     function getLinkInLabelFromArray(row, langCode) {
