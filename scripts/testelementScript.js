@@ -55,6 +55,7 @@ if (typeof dataSource !== "undefined") {
             }
             if (typeof d.hasSubproperty != "undefined") {
                 // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
+                detailRow = getDetailFromArray(d.hasSubproperty);
                 detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, RDAPrefix), "Subproperties");
                 detailTable += detailRow;
             }
