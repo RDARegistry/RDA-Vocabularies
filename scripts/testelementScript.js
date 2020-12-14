@@ -12,8 +12,6 @@ var docLang = gup('language', Location.href, 'en');
 $("#lang_" + docLang).css({
     "padding": "5px", "border": "3px solid #446e9b", "border-radius": "5px"
 });
-// initialize wide scope variable for prefix
-var rdaPrefix = "";
 
 if (typeof dataSource !== "undefined") {
     
@@ -30,11 +28,13 @@ if (typeof dataSource !== "undefined") {
         return obj[ "@type"] !== "ConceptScheme";
     }
     
+    // initialize wide scope variable for prefix
+    var rdaPrefix = "";
+    
     /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
         // format note (scope note), alLabel, notation, status
-        var prefix = RDAPrefix;
         var detailRow = makeDetailRow();
         var detailTable = '<table class="pindex_detail">';
         if (typeof d != "undefined") {
