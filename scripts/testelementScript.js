@@ -55,7 +55,7 @@ if (typeof dataSource !== "undefined") {
             }
             if (typeof d.hasSubproperty != "undefined") {
                 // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
-                detailRow = makeDetailRow(breakout(d.hasSubproperty, RDAPrefix), "Subproperties");
+                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, RDAPrefix), "Subproperties");
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
@@ -147,7 +147,7 @@ if (typeof dataSource !== "undefined") {
         return string;
     }
     
-    function breakout(row, prefix) {
+    function getDetailFromArray(row, prefix) {
         var thePrefix;
         if (typeof prefix != "undefined") {
             thePrefix = prefix;
