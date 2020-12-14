@@ -53,6 +53,10 @@ if (typeof dataSource !== "undefined") {
                 detailRow = makeDetailRow(getLinkIn(d.inverseOf), "Inverse");
                 detailTable += detailRow;
             }
+			if (typeof d.hasSubproperty != "undefined") {
+				detailRow = makeDetailRow(getLinkedCurieFromArray(d.hasSubproperty), "Subproperties");
+				detailTable += detailRow;
+				}
             if (typeof d.ToolkitLabel != "undefined") {
                 detailRow = makeDetailRow(getStringByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
                 detailTable += detailRow;
@@ -119,7 +123,22 @@ if (typeof dataSource !== "undefined") {
         return linkifyOut(label, theUri);
     }
     
-    function getLinkedStringIn(uri, label, langCode) {
+    function getLinkedCurieFromArray(row) {
+        var string = "";
+        if (typeof row != "undefined") {
+            if (row instanceof Array) {
+                for (i = 0; i < row.length; ++i) {
+                    string += getLinkedCurie(getURI(row[i]), rdaPrefix);
+                }
+            }
+            else {
+                string = getLinkedCurie(getURI(row), rdaPrefix);
+            }
+        }
+        return string;
+    }
+
+function getLinkedStringIn(uri, label, langCode) {
         // returns internal link for string label and Registry URL with parameter for selected language
         var theLabel = "";
         // language code is omitted to get permalink
