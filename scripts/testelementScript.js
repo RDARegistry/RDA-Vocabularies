@@ -58,7 +58,7 @@ if (typeof dataSource !== "undefined") {
             if (typeof d.hasSubproperty != "undefined") {
                 // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
                 //                detailRow = getDetailFromArray(d.hasSubproperty);
-                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, window.RDAPrefix), "Subproperties");
+                detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty), "Subproperties");
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
@@ -158,7 +158,7 @@ if (typeof dataSource !== "undefined") {
                 label = getLabel(row[i]);
                 uriLink = linkifyOut(uri, uri);
                 labelLink = quotify(getLinkInLabel(uri, label));
-                arrayDetail += divify(uriLink + " [" + labelLink + "]");
+                arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
             }
         } else {
             arrayDetail = divify(uriLink + "[" + labelLink + " (en)]");
@@ -450,6 +450,12 @@ if (typeof dataSource !== "undefined") {
                         definition = row.ToolkitDefinition;
                     }
                     return makeColumn(getLabelByLanguage(definition, docLang));
+                }
+            }, {
+                "defaultContent": "",
+                "data": "subPropertyOf",
+                "render": function (data, type, row) {
+                    return makeColumn(getDetailFromArray(d.subPropertyOf));
                 }
             }],
             "order":[[2, 'asc']],
