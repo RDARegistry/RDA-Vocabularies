@@ -148,7 +148,7 @@ if (typeof dataSource !== "undefined") {
     }
     
     function getDetailFromArray(row, prefix) {
-        var thePrefix;
+        var thePrefix = "";
         if (typeof prefix != "undefined") {
             thePrefix = prefix;
         }
