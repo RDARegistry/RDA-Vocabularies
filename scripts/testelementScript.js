@@ -156,12 +156,12 @@ if (typeof dataSource !== "undefined") {
             for (i = 0; i < row.length;++ i) {
                 uri = getURI(row[i]);
                 label = getLabel(row[i]);
-                uriLink = linkifyOut(uri, uri);
+                uriLink = quotify(linkifyOut(uri, uri));
                 labelLink = getLinkInLabel(uri, label);
                 arrayDetail += divify(uriLink + " [" + labelLink + "]");
             }
         } else {
-            arrayDetail = divify(curieLink + "[" + labelLink + "]");
+            arrayDetail = divify(uriLink + "[" + labelLink + "]");
         }
         return arrayDetail;
     }
