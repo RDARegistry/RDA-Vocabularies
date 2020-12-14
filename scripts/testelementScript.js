@@ -156,6 +156,7 @@ if (typeof dataSource !== "undefined") {
         var labelLink = "";
         var uri = "";
         var uriLink = "";
+        // indicator for vertical or horizontal uri/label list
         var theVh = "";
         if (typeof vh != "undefined") {
             theVh = vh;
@@ -171,7 +172,7 @@ if (typeof dataSource !== "undefined") {
                     arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
                     break;
                     case "v":
-                    arrayDetail += divify(uriLink)+ divify(" [" + labelLink + " (en)]"));
+                    arrayDetail += divify(uriLink) + divify(" [" + labelLink + " (en)]");
                     break;
                     default:
                     arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
