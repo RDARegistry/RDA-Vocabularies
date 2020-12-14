@@ -54,7 +54,8 @@ if (typeof dataSource !== "undefined") {
                 detailTable += detailRow;
             }
             if (typeof d.hasSubproperty != "undefined") {
-                detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
+                // detailRow = makeDetailRow(getLinkOutCurieFromArray(d.hasSubproperty), "Subproperties");
+                makeDetailRow(breakout(d.hasSubproperty, RDAPrefix), "Subproperties");
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
@@ -129,7 +130,7 @@ if (typeof dataSource !== "undefined") {
         } else {
             label = theUri;
         }
-        return divify(linkifyOut(label, theUri));
+        return linkifyOut(label, theUri);
     }
     
     function getLinkOutCurieFromArray(row) {
@@ -140,10 +141,28 @@ if (typeof dataSource !== "undefined") {
                     string += getLinkOutCurie(getURI(row[i]), rdaPrefix);
                 }
             } else {
-                string = getLinkOutCurie(getURI(row), rdaPrefix);
+                string = divify(getLinkOutCurie(getURI(row), rdaPrefix));
             }
         }
         return string;
+    }
+    
+    function breakout(row, prefix) {
+        var thePrefix;
+        if (typeof prefix != "undefined") {
+            thePrefix = prefix;
+        }
+        if (row instanceof Array) {
+            for (i = 0; i < row.length;++ i) {
+                uri = getURI(row[i]);
+                label = getLabel(row[i]);
+                curieLink = getLinkOutCurie(uri, thePrefix);
+                labelLink = getLinkInLabel(uri, label);
+                string += divify(curieLink + "[" + labelLink + "]");
+            }
+        } else {
+            string = divify(curieLink + "[" + labelLink + "]");
+        }
     }
     
     function getLinkInLabelFromArray(row, langCode) {
