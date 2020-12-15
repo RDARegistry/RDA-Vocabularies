@@ -46,7 +46,7 @@ if (typeof dataSource !== "undefined") {
                 detailTable += detailRow;
             }
             if (typeof d.notation != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.notation), "Notation");
+                detailRow = makeDetailRow(getStringByLanguage(d.notation, "en"), "Notation");
                 detailTable += detailRow;
             }
             if (typeof d.status != "undefined") {
