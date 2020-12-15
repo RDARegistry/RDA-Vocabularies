@@ -186,7 +186,7 @@ if (typeof dataSource !== "undefined") {
             // not available in selected or default language; output indicates the languages
 //            else if (theData instanceof Object) {
 //                langString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
-            }
+//            }
         }
         return langString;
     }
