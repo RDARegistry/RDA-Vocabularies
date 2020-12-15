@@ -46,7 +46,7 @@ if (typeof dataSource !== "undefined") {
                 detailTable += detailRow;
             }
             if (typeof d.notation != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.notation, docLang), "Notation");
+                detailRow = makeDetailRow(getStringByLanguage(d.notation, "en"), "Notation");
                 detailTable += detailRow;
             }
             if (typeof d.status != "undefined") {
@@ -125,7 +125,7 @@ if (typeof dataSource !== "undefined") {
         return linkifyIn(theLabel, url);
     }
     
-     function getLinkIn(theData) {
+    function getLinkIn(theData) {
         var label = "";
         var link = "";
         if (typeof theData[ "@id"] != "undefined") {
@@ -137,7 +137,7 @@ if (typeof dataSource !== "undefined") {
         return linkifyIn(label, link);
     }
     
-   function getLinkOut(theData) {
+    function getLinkOut(theData) {
         var label = "";
         var link = "";
         if (typeof theData[ "@id"] != "undefined") {
@@ -163,9 +163,9 @@ if (typeof dataSource !== "undefined") {
         var langString = "";
         // default language is English
         var theLangCode = "en";
-        // default default language is English
-        // [not enabled for other languages until translation processes in place]
-        var theDefaultLangCode = "en";
+        // default default language can only be English
+        // [not enabled until translation processes in place]
+        var theDefaultLangCode = "";
         if (typeof defaultLangCode != "undefined") {
             theDefaultLangCode = defaultLangCode;
         }
@@ -178,13 +178,15 @@ if (typeof dataSource !== "undefined") {
                 langString = directify(quotify(theData[theLangCode]), theLangCode);
             }
             // available in default language; add qualifier to indicate not available in selected language
-            else if (typeof theData[theDefaultLangCode] != "undefined") {
-                langString = directify(quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
+            else if (theDefaultLangCode.length > 0) {
+                if (typeof theData[theDefaultLangCode] != "undefined") {
+                    langString = directify(quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
+                }
             }
             // not available in selected or default language; output indicates the languages
-            else if (theData instanceof Object) {
-                langString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
-            }
+            //            else if (theData instanceof Object) {
+            //                langString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
+            //            }
         }
         return langString;
     }
@@ -249,7 +251,9 @@ if (typeof dataSource !== "undefined") {
             theLangCode = langCode;
         }
         // two columns; value column must have div wrapper
-        detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
+        if (theRowValue.length > 0) {
+            detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
+        }
         return detailRow;
     }
     
