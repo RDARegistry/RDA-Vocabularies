@@ -375,7 +375,7 @@ if (typeof dataSource !== "undefined") {
                     } else {
                         definition = row.ToolkitDefinition;
                     }
-                    return makeColumn(getStringByLanguage(definition, docLang));
+                    return makeColumn(getStringByLanguage(definition, docLang, "en"));
                 }
             }],
             "order":[[2, 'asc']],
