@@ -40,7 +40,7 @@ if (typeof dataSource !== "undefined") {
         var detailTable = '<table class="pindex_detail">';
         if (typeof d != "undefined") {
             if (typeof d.note != "undefined") {
-                detailRow = makeDetailRow(getLabelByLanguage(d.note, docLang), "Scope notes", docLang);
+                detailRow = makeDetailRow(getStringByLanguage(d.note, docLang), "Scope notes", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.domain != "undefined") {
@@ -60,11 +60,11 @@ if (typeof dataSource !== "undefined") {
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitLabel != "undefined") {
-                detailRow = makeDetailRow(getLabelByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
+                detailRow = makeDetailRow(getStringByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.ToolkitDefinition != "undefined") {
-                detailRow = makeDetailRow(getLabelByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
+                detailRow = makeDetailRow(getStringByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.status != "undefined") {
@@ -231,7 +231,7 @@ if (typeof dataSource !== "undefined") {
         return prefix;
     }
     
-    function getLabelByLanguage(theData, langCode, defaultLangCode) {
+    function getStringByLanguage(theData, langCode, defaultLangCode) {
         // returns string corresponding to language, or defaults
         var langString = "";
         // default language is English
@@ -437,7 +437,7 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-                    return makeColumn(strongify(getLabelByLanguage(getLabel(row), docLang)));
+                    return makeColumn(strongify(getStringByLanguage(getLabel(row), docLang)));
                 }
             }, {
                 "class": "definition",
@@ -448,7 +448,7 @@ if (typeof dataSource !== "undefined") {
                     } else {
                         definition = row.ToolkitDefinition;
                     }
-                    return makeColumn(getLabelByLanguage(definition, docLang, "en"));
+                    return makeColumn(getStringByLanguage(definition, docLang, "en"));
                 }
             }, {
                 "defaultContent": "",
