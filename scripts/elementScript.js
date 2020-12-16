@@ -231,7 +231,7 @@ if (typeof dataSource !== "undefined") {
         return prefix;
     }
     
-    function getStringByLanguage(theData, langCode, defaultLangCode) {
+    function getLabelByLanguage(theData, langCode, defaultLangCode) {
         // returns string corresponding to language, or defaults
         var langString = "";
         // default language is English
