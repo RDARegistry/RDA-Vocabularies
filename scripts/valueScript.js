@@ -364,7 +364,7 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": "prefLabel",
                 "render": function (data, type, row) {
-                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang)));
+                    return makeColumn(strongify(getStringByLanguage(row.prefLabel, docLang, "en")));
                 }
             }, {
                 "class": "definition",
