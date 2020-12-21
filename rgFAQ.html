@@ -23,7 +23,7 @@
 <!-- Styles -->
 <link rel="stylesheet" href="/bower_components/protip/protip.min.css">
 <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
-<link rel="stylesheet" href="/bower_components/datatables.net-dt/css/jquery.dataTables.css">>
+<link rel="stylesheet" href="/bower_components/datatables.net-dt/css/jquery.dataTables.css">
 <link rel="stylesheet" href="/styles/style.css"/>
 <link rel="stylesheet" href="/styles/rdagit.css"/>
 </head>
@@ -124,15 +124,15 @@
      <!-- InstanceBeginEditable name="PageContent" -->
      <ul>
       <li><a href="#faq4">Is the published set of RDA vocabularies complete and stable?</a></li>
-      <li><a href="#faq3">Why are the URIs unreadable?</a></li>
+      <li><a href="#faq3">Why are the IRIs unreadable?</a></li>
       <li><a href="#faq7">Why do some of the published elements have weird labels and definitions, like &quot;is contains (item)&quot; and &quot;Relates a resource to a resource embodying the resource&quot;?</a></li>
-      <li><a href="#faq11">Do the element sets and value vocabularies match the vocabularies in RDA?</a></li>
+      <!-- <li><a href="#faq11">Do the element sets and value vocabularies match the vocabularies in RDA?</a></li> -->
       <li><a href="#faq13">What is the procedure for developing and publishing translations of RDA?</a></li>
       <li><a href="#faq10">Why are the translations of the RDA element sets and value vocabularies incomplete?</a></li>
       <li><a href="#faq12">What is RDA Reference?</a></li>
-      <li><a href="#faq13">What is the &quot;4-fold path&quot;?</a></li>
+      <li><a href="#faq13">What are recording methods?</a></li>
       <li><a href="#faq1">Why was a new namespace, http://rdaregistry.info, used for the RDA element sets instead of the original http://rdvocab.info?</a></li>
-      <li><a href="#faq2">Did this change in the namespace break things for applications using the old URIs and elements that have not made the transition?</a></li>
+      <li><a href="#faq2">Did this change in the namespace break things for applications using the old IRIs and elements that have not made the transition?</a></li>
       <li><a href="#faq5">Are there any plans to move the RDA value vocabularies that are still in the original rdvocab.info namespace?</a></li>
       <li><a href="#faq8">Where do I direct questions I have about the RDA Vocabularies that aren’t answered here?</a></li>
       <li><a href="#faq9">Where can I find more information about the processes used to develop and maintain the published RDA vocabularies?</a></li>
@@ -144,10 +144,10 @@
       <p>Yes and no. Further development of the RDA vocabularies is incorporated in the tasks of the <a href="http://rda-rsc.org/node/615">RSC Technical Working Group</a> as well as the RDA Development Team. The RSC expects to add, update, and deprecate elements and concepts as the need arises. Version control is applied to <a href="rgAbout/updates/versions.html">versions and releases</a> of the RDA Vocabularies in GitHub and the RDA Registry. The RDA vocabularies are stable in that the canonical URIs will not be changed, and usual good practice will be used when amending or removing classes and properties. For example, if a property is deleted from RDA itelf, it will be deprecated in the RDA Registry but not deleted, according to the <a href="rgAbout/updates/deprecation.html">Deprecation</a> policy.</p>
      </div>
      <div class="faq-q">
-      <p><a id="faq3">Q.</a> Why are the URIs unreadable?</p>
+      <p><a id="faq3">Q.</a> Why are the IRIs unreadable?</p>
      </div>
      <div class="faq-a">
-      <p>After a great deal of discussion, the JSC (predecessor of the RDA Steering Committee) decided to use opaque URIs for the element sets. This follows the practice established for the value vocabularies, and reflects the international environment of RDA and its translations. The RSC is also aware of the problems associated with using transparent, human-readable URIs as a mnemonic device, especially when the properties and values of bibliographic display labels may be further developed. However, English-readable URIs have been declared <em>owl:sameAs</em> to their canonical, opaque counterparts to alleviate any inconvenience this might cause for English-based linked data applications. The same facility may be developed for other languages, based on translations of RDA, in the future. The mnemonic accuracy of these URIs is not guaranteed.</p>
+      <p>After a great deal of discussion, the JSC (predecessor of the RDA Steering Committee) decided to use opaque IRIs for the element sets. This follows the practice established for the value vocabularies, and reflects the international environment of RDA and its translations. The RSC is also aware of the problems associated with using transparent, human-readable URIs as a mnemonic device, especially when the properties and values of bibliographic display labels may be further developed. However, English-readable IRIs have been declared <em>owl:sameAs</em> to their canonical, opaque counterparts to alleviate any inconvenience this might cause for English-based linked data applications. The same facility may be developed for other languages, based on translations of RDA, in the future. The mnemonic accuracy of these IRIs is not guaranteed.</p>
      </div>
      <div class="faq-q">
       <p><a id="faq7">Q.</a> Why do some of the published elements have weird labels and definitions?</p>
@@ -155,12 +155,12 @@
      <div class="faq-a">
       <p>This is the result of applying a mechanical device to verbalize RDA labels and definitions to clarify their semantics, specifically the direction of a relationship property, and to create labels and definitions for versions of the properties unconstrained by the RDA domain model based on <a href="https://www.ifla.org/publications/node/11412">IFLA Library Reference Model</a> (LRM). The methodology, as applied to relationship elements, was discussed in <a href="http://www.rda-jsc.org/docs/6JSC-CILIP-rep-3.pdf">RDF representation of RDA relationship designators: a follow-up discussion paper</a> and its appendices.</p>
      </div>
-     <div class="faq-q">
+     <!-- <div class="faq-q">
       <p><a id="faq11">Q.</a> Do the element sets and value vocabularies match the vocabularies in RDA?</p>
      </div>
      <div class="faq-a">
-      <p>Yes and no. The published elements and value vocabularies are the same as those used in the beta version delivered by the <a href="http://http://www.rda-rsc.org/node/551">RDA Toolkit Restructure and Redesign (3R) Project</a>. The current operational version of the Toolkit was frozen at the start of the Project and will not be updated. There may be a few variations due to time-lag between updates in a new beta release of RDA, but every effort is made to keep the elements and value vocabularies up to date. In most cases, the Toolkit lags behind the Registry.</p>
-     </div>
+      <p>Yes and no. The published elements and value vocabularies are the same as those used in the version delivered by the <a href="http://http://www.rda-rsc.org/node/551">RDA Toolkit Restructure and Redesign (3R) Project</a>. The current operational version of the Toolkit was frozen at the start of the Project and will not be updated. There may be a few variations due to time-lag between updates in a new beta release of RDA, but every effort is made to keep the elements and value vocabularies up to date. In most cases, the Toolkit lags behind the Registry.</p>
+    </div> -->
      <div class="faq-q">
       <p><a id="faq13">Q.</a> What is the procedure for developing and publishing translations of RDA?</p>
      </div>
@@ -180,11 +180,11 @@
       <p><a href="rgAbout/rdaref/">RDA Reference</a> comprises the RDA element sets and value vocabularies and their translations, and associated maps and alignments.</p>
      </div>
      <div class="faq-q">
-      <p><a id="faq13">Q.</a> What is the &quot;4-fold path&quot;?</p>
+      <p><a id="faq13">Q.</a> What are recording methods?</p>
      </div>
      <div class="faq-a">
-      <p>The &quot;4-fold path&quot; is a reference to the methods given in the instructions for recording the relationship between an entity being described and a related entity.</p>
-      <p>The related entity may be described using three general methods:</p>
+      <!-- <p>The &quot;4-fold path&quot; is a reference to the methods given in the instructions for recording the relationship between an entity being described and a related entity.</p> -->
+      <p>A value of an RDA element may be recorded using four methods:</p>
       <ul>
        <li>An <strong>unstructured description</strong> that is a string. An example is a free text note.</li>
        <li>A <strong>structured description</strong> that is a string that aggregates string values from other elements using a form of syntax encoding scheme. An example is a name/title access point.</li>
@@ -195,7 +195,7 @@
       <ul>
        <li>An <strong>IRI</strong> for the entity as a real-world object; that is, a &quot;thing&quot;.</li>
       </ul>
-	  <p>The beta Toolkit refers to &quot;recording methods&quot; instead of &quot;paths&quot;.</p>
+	  <!-- <p>The beta Toolkit refers to &quot;recording methods&quot; instead of &quot;paths&quot;.</p> -->
      </div>
      <div class="faq-q">
       <p><a id="faq1">Q.</a> Why was a new namespace, <a href="http://rdaregistry.info">http://rdaregistry.info</a>, used for the published RDA vocabularies instead of the original <a href="http://rdvocab.info">http://rdvocab.info</a>?</p>
@@ -219,7 +219,7 @@
       <p><a id="faq8">Q.</a> Where do I direct questions I have about the RDA Vocabularies that aren’t answered here?</p>
      </div>
      <div class="faq-a">
-      <p>Please email questions about the content of the RDA Vocabularies to the Chair of the RDA Steering Ccmmittee (<a href="mailto:rscchair@rdatoolkit.org">rscchair@rdatoolkit.org</a>). Questions about technical issues can be emailed to the RDA Technical Team Liaison Officer (techo@rdatoolkit.org)</p>
+      <p>Please email questions about the content of the RDA Vocabularies to the Chair of the RDA Steering Committee (<a href="mailto:rscchair@rdatoolkit.org">rscchair@rdatoolkit.org</a>). Questions about technical issues can be emailed to the <a href="mailto: damian@rdatoolkit.org">RDA Technical Team Liaison Officer</a></p>
      </div>
      <div class="faq-q">
       <p><a id="faq9">Q.</a> Where can I find more information about the processes used to develop and maintain the published RDA vocabularies?</p>
@@ -257,16 +257,16 @@
   </div>
  </footer>
 </div>
-<!-- Scripts--> 
-<!-- InstanceBeginEditable name="Scripts" --> 
+<!-- Scripts-->
+<!-- InstanceBeginEditable name="Scripts" -->
 <script defer src="/bower_components/jquery/dist/jquery.js">
-</script> 
+</script>
 <script defer src="/bower_components/bootstrap/dist/js/bootstrap.js">
-</script> 
+</script>
 <script defer src="/bower_components/modernizr/modernizr.js">
-</script> 
+</script>
 <script defer src="/scripts/script.js">
-</script> 
+</script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
