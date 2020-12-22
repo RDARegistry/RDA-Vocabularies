@@ -141,19 +141,19 @@
       <p><a id="faq4">Q.</a> Is the published set of RDA vocabularies complete and stable?</p>
      </div>
      <div class="faq-a">
-      <p>Yes and no. Further development of the RDA vocabularies is incorporated in the tasks of the <a href="http://rda-rsc.org/node/615">RSC Technical Working Group</a> as well as the RDA Development Team. The RSC expects to add, update, and deprecate elements and concepts as the need arises. Version control is applied to <a href="rgAbout/updates/versions.html">versions and releases</a> of the RDA Vocabularies in GitHub and the RDA Registry. The RDA vocabularies are stable in that the canonical URIs will not be changed, and usual good practice will be used when amending or removing classes and properties. For example, if a property is deleted from RDA itelf, it will be deprecated in the RDA Registry but not deleted, according to the <a href="rgAbout/updates/deprecation.html">Deprecation</a> policy.</p>
+      <p>Yes and no. Further development of the RDA vocabularies is incorporated in the tasks of the <a href="http://rda-rsc.org/node/615">RSC Technical Working Group</a> as well as the RDA Development Team. The RSC expects to add, update, and deprecate elements and concepts as the need arises. Version control is applied to <a href="rgAbout/updates/versions.html">versions and releases</a> of the RDA Vocabularies in GitHub and the RDA Registry. The RDA vocabularies are stable in that the canonical IRIs will not be changed, and usual good practice will be used when amending or removing classes and properties. For example, if a property is deleted from RDA itelf, it will be deprecated in the RDA Registry but not deleted, according to the <a href="rgAbout/updates/deprecation.html">Deprecation</a> policy.</p>
      </div>
      <div class="faq-q">
       <p><a id="faq3">Q.</a> Why are the IRIs unreadable?</p>
      </div>
      <div class="faq-a">
-      <p>After a great deal of discussion, the JSC (predecessor of the RDA Steering Committee) decided to use opaque IRIs for the element sets. This follows the practice established for the value vocabularies, and reflects the international environment of RDA and its translations. The RSC is also aware of the problems associated with using transparent, human-readable URIs as a mnemonic device, especially when the properties and values of bibliographic display labels may be further developed. However, English-readable IRIs have been declared <em>owl:sameAs</em> to their canonical, opaque counterparts to alleviate any inconvenience this might cause for English-based linked data applications. The same facility may be developed for other languages, based on translations of RDA, in the future. The mnemonic accuracy of these IRIs is not guaranteed.</p>
+      <p>After a great deal of discussion, the JSC (predecessor of the RDA Steering Committee) decided to use opaque IRIs for the element sets. This follows the practice established for the value vocabularies, and reflects the international environment of RDA and its translations. The RSC is also aware of the problems associated with using transparent, human-readable IRIs as a mnemonic device, especially when the properties and values of bibliographic display labels may be further developed. However, English-readable IRIs have been declared <em>owl:sameAs</em> to their canonical, opaque counterparts to alleviate any inconvenience this might cause for English-based linked data applications. The same facility may be developed for other languages, based on translations of RDA, in the future. The mnemonic accuracy of these IRIs is not guaranteed.</p>
      </div>
      <div class="faq-q">
       <p><a id="faq7">Q.</a> Why do some of the published elements have weird labels and definitions?</p>
      </div>
      <div class="faq-a">
-      <p>This is the result of applying a mechanical device to verbalize RDA labels and definitions to clarify their semantics, specifically the direction of a relationship property, and to create labels and definitions for versions of the properties unconstrained by the RDA domain model based on <a href="https://www.ifla.org/publications/node/11412">IFLA Library Reference Model</a> (LRM). The methodology, as applied to relationship elements, was discussed in <a href="http://www.rda-jsc.org/docs/6JSC-CILIP-rep-3.pdf">RDF representation of RDA relationship designators: a follow-up discussion paper</a> and its appendices.</p>
+      <p>This is the result of applying a mechanical device to verbalize RDA labels and definitions to clarify their semantics, specifically the direction of a relationship property, and to create labels and definitions for versions of the properties unconstrained by the RDA domain model based on <a href="https://www.ifla.org/publications/node/11412">IFLA Library Reference Model</a> (LRM). <!-- The methodology, as applied to relationship elements, was discussed in <a href="http://www.rda-jsc.org/docs/6JSC-CILIP-rep-3.pdf">RDF representation of RDA relationship designators: a follow-up discussion paper</a> and its appendices.< --></p>
      </div>
      <!-- <div class="faq-q">
       <p><a id="faq11">Q.</a> Do the element sets and value vocabularies match the vocabularies in RDA?</p>
@@ -184,14 +184,14 @@
      </div>
      <div class="faq-a">
       <!-- <p>The &quot;4-fold path&quot; is a reference to the methods given in the instructions for recording the relationship between an entity being described and a related entity.</p> -->
-      <p>A value of an RDA element may be recorded using four methods:</p>
+      <p>A value of an RDA element may be recorded as a string using three methods:</p>
       <ul>
-       <li>An <strong>unstructured description</strong> that is a string. An example is a free text note.</li>
-       <li>A <strong>structured description</strong> that is a string that aggregates string values from other elements using a form of syntax encoding scheme. An example is a name/title access point.</li>
-       <li>An <strong>identifier</strong> that is a string. An example is an ISBN or local identifier.</li>
+       <li>An <strong>unstructured description</strong>. An example is a free text note or a name of an agent.</li>
+       <li>A <strong>structured description</strong> is a string that aggregates string values from other elements using a string encoding scheme. An example is an access point for agent that may include a string for a name of person and a string for a date of birth.</li>
+       <li>An <strong>identifier</strong>. An example is an ISBN or local identifier.</li>
       </ul>
       <p>In this context, a &quot;string&quot; is a sequence of alphanumeric symbols and punctuation marks intended primarily for human consumption.</p>
-      <p>The RDA guidance and instructions were developed during the <a href="http://http://www.rda-rsc.org/node/551">RDA Toolkit Restructure and Redesign (3R) Project</a> to further generalize these methods of identifying a related entity, and to accommodate an explicit &quot;fourth path&quot; method for linked data applications:</p>
+      <p>The RDA guidance and instructions were developed during the <a href="http://http://www.rda-rsc.org/node/551">RDA Toolkit Restructure and Redesign (3R) Project</a> to further generalize these methods of identifying a related entity, and to accommodate an explicit fourth method for linked data applications:</p>
       <ul>
        <li>An <strong>IRI</strong> for the entity as a real-world object; that is, a &quot;thing&quot;.</li>
       </ul>
@@ -207,7 +207,7 @@
       <p><a id="faq2">Q.</a> Did this change in the namespace break things for applications using the old URIs and elements that have not made the transition?</p>
      </div>
      <div class="faq-a">
-      <p>Yes, but every effort was made to bridge the gap between the old and the new. These include redirection from the old element sets to the new namespace, the development of <a href="http://www.rdaregistry.info/Maps/#deprecated">maps between the old and new URIs</a>, and the provision of <a href="Maps/#lexical-en">alternate URIs using the English label</a> of the element as the local part, similar to the construction of the old URIs. A map from the old URIs known to be in use is available. The old element sets had the status of &quot;New-Proposed&quot; and were never officially published.</p>
+      <p>Yes, but every effort was made to bridge the gap between the old and the new. These include redirection from the old element sets to the new namespace, the development of <a href="http://www.rdaregistry.info/rgArch">maps between the old and new URIs</a>, and the provision of <a href="Maps/#lexical-en">alternate URIs using the English label</a> of the element as the local part, similar to the construction of the old URIs. A map from the old URIs known to be in use is available. The old element sets had the status of &quot;New-Proposed&quot; and were never officially published.</p>
      </div>
      <div class="faq-q">
       <p><a id="faq5">Q.</a> What about the RDA value vocabularies in the original rdvocab.info namespace?</p>
