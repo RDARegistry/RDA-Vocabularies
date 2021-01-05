@@ -1,19 +1,11 @@
 # RDA Vocabularies
 
-These are the [RDA](http://www.rdatoolkit.org/) (Resource Description and Access) [RDF vocabularies](http://en.wikipedia.org/wiki/Resource_Description_Framework#RDF_Vocabulary) maintained by the [RDA Steering Committee](http://www.rda-rsc.org/) at the [Open Metadata Registry](http://metadataregistry.org).
+These are the pages for the [RDA Registry](http://www.rdaregistry.info/). The Registry provides labels, definitions, and other metadata for derefernced HTTP IRIs of [RDA](http://www.rdatoolkit.org/) (Resource Description and Access) classes, properties, and value vocabularies. The Registry also provides mappings and alignments to other element sets and vocabularies, along with other content. The Registry is maintained by the [RDA Steering Committee](http://www.rda-rsc.org/).
 
-Further information about this project can be found in the [RDA Registry](http://www.rdaregistry.info/) 
-and the project [wiki - just a stub at the moment](https://github.com/RDVocab/RDA-Vocabularies/wiki).
+Dereferencable content, maps, and alignemnts are generated from the most recent release of RDA Vocabularies. A complete [ZIP](https://github.com/RDVocab/RDA-Vocabularies/zipball/master) or [TARBALL](https://github.com/RDVocab/RDA-Vocabularies/tarball/master) release of RDA Vocabularies may be downloaded at any time. 
 
 If you have an issue, please visit the project [issues](https://github.com/RDVocab/RDA-Vocabularies/issues) 
 and post it there.
 
-You may also download a complete [ZIP](https://github.com/RDVocab/RDA-Vocabularies/zipball/master) or
-[TARBALL](https://github.com/RDVocab/RDA-Vocabularies/tarball/master) of the entire repository at any time.
-
-Have fun!
-
-Jon Phipps   
-Diane Hillmann   
-Gordon Dunsire   
+  
 
