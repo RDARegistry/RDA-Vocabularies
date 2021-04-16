@@ -452,7 +452,7 @@ if (typeof dataSource !== "undefined") {
                 }
             }, {
                 "defaultContent": "",
-                "data": "subPropertyOf",
+                "data": "subClassOf",
                 "render": function (data, type, row) {
                     return makeColumn(getDetailFromArray(data, "v"));
                 }
