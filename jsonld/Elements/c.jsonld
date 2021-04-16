@@ -25,7 +25,6 @@
                 "no": "agent",
                 "vi": "tác nhân"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10013"}],
             "definition": {
                 "ca": ["Persona, família o entitat corporativa."],
                 "da": ["Person, familie eller korporation"],
@@ -33,7 +32,7 @@
                 "el": ["Ένα φυσικό πρόσωπο, οικογένεια ή συλλογικό όργανο."],
                 "en": ["An entity who is capable of deliberate actions, of being granted rights, and of being held accountable for its actions."],
                 "es": ["Una persona, familia, o entidad corporativa."],
-                "fi": ["Henkilö, suku tai yhteisö."],
+                "fi": ["Entiteetti, joka kykenee tarkoituksellisiin toimintoihin, jolle voidaan myöntää oikeuksia ja joka on vastuussa toimistaan."],
                 "fr": ["Personne, famille ou collectivité."],
                 "hu": ["Egy személy, család vagy testület."],
                 "it": ["Una persona, famiglia o ente."],
@@ -56,7 +55,6 @@
                 "no": "Agent",
                 "vi": "tác nhân"
             },
-            
             "ToolkitDefinition": {
                 "ca": "Persona, família o entitat corporativa.",
                 "da": "Person, familie eller korporation",
@@ -64,7 +62,7 @@
                 "el": "Ένα φυσικό πρόσωπο, οικογένεια ή συλλογικό όργανο.",
                 "en": "An entity who is capable of deliberate actions, of being granted rights, and of being held accountable for its actions.",
                 "es": "Una persona, familia, o entidad corporativa.",
-                "fi": "Henkilö, suku tai yhteisö.",
+                "fi": "Entiteetti, joka kykenee tarkoituksellisiin toimintoihin, jolle voidaan myöntää oikeuksia ja joka on vastuussa toimistaan.",
                 "fr": "Personne, famille ou collectivité.",
                 "hu": "Egy személy, család vagy testület.",
                 "it": "Una persona, famiglia o ente.",
@@ -73,7 +71,8 @@
                 "vi": "Một cá nhân, gia đình, hoặc tập thể."
             },
             "note": {
-                "en": ["An agent includes a collective agent and a person."]
+                "en": ["An agent includes a collective agent and a person."],
+                "fi": ["Toimija kattaa yhteistoimijan ja henkilön."]
             },
             "isDefinedBy": {
                 "@id": "http://rdaregistry.info/Elements/c/",
@@ -85,7 +84,14 @@
                 "label": "Published"
             },
             "@type": "Class",
-            "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en"
+            "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10013",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+                    "label": "RDA entity"
+                }
+            ]
         },
         {
             "@id": "http://rdaregistry.info/Elements/c/C10011",
@@ -102,14 +108,13 @@
                 "no": "kollektiv agent",
                 "vi": "tác nhân tập thể"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10002"}],
             "definition": {
                 "ca": ["Reunió o organització de persones que porten un nom concret i capaç d\u2019actuar com una unitat."],
                 "da": ["Forsamling eller organisation med et bestemt navn der kan agere som en enhed."],
                 "de": ["Eine Zusammenkunft oder eine Organisation von Personen, die einen bestimmten Namen trägt und imstande ist, als Einheit zu handeln."],
                 "el": ["Μια συνένωση ή οργανισμός φυσικών προσώπων που φέρουν ένα συγκεκριμένο όνομα και δύνανται να δρουν ως ομάδα."],
                 "en": ["An agent who is a gathering or organization of two or more persons that bears a particular name and that is capable of acting as a unit."],
-                "fi": ["Tietyllä nimellä toimiva henkilöiden ryhmittymä tai organisaatio, joka pystyy toimimaan yhtenä yksikkönä."],
+                "fi": ["Toimija, joka on useamman kuin yhden henkilön kokoontuminen tai organisaatio, jolla on tietty nimi ja joka on kykenevä toimimaan yksikkönä."],
                 "fr": ["Ensemble ou organisation de personnes portant un nom particulier et capable d\u2019agir comme une unité."],
                 "hu": ["Személyek összejövetele vagy szervezete, amely egy adott nevet visel és képes egységként cselekedni."],
                 "nl": ["Een bijeenkomst of organisatie van personen onder een bepaalde naam en in staat om op te treden als een eenheid."],
@@ -121,7 +126,7 @@
                 "de": ["Unter Gemeinschaftlicher Akteur fallen Körperschaften und Familien."],
                 "el": ["Ένας συλλογικός φορέας περιλαμβάνει ένα συλλογικό όργανο και μια οικογένεια."],
                 "en": ["A collective agent includes a corporate body and a family."],
-                "fi": ["Yhteisötoimija sisältää yhteisön ja suvun."],
+                "fi": ["Yhteisötoimija kattaa yhteisön ja suvun."],
                 "fr": ["Un agent collectif comprend une collectivité et une famille."],
                 "hu": ["Egy kollektív ágens magába foglal egy testületet és egy családot."],
                 "nl": ["Een collectieve actor omvat onder meer een corporatie en een familie."],
@@ -146,7 +151,7 @@
                 "de": "Eine Zusammenkunft oder eine Organisation von Personen, die einen bestimmten Namen trägt und imstande ist, als Einheit zu handeln.",
                 "el": "Μια συνένωση ή οργανισμός φυσικών προσώπων που φέρουν ένα συγκεκριμένο όνομα και δύνανται να δρουν ως ομάδα.",
                 "en": "An agent who is a gathering or organization of two or more persons that bears a particular name and that is capable of acting as a unit.",
-                "fi": "Tietyllä nimellä toimiva henkilöiden ryhmittymä tai organisaatio, joka pystyy toimimaan yhtenä yksikkönä.",
+                "fi": "Toimija, joka on useamman kuin yhden henkilön kokoontuminen tai organisaatio, jolla on tietty nimi ja joka on kykenevä toimimaan yksikkönä.",
                 "fr": "Ensemble ou organisation de personnes portant un nom particulier et capable d\u2019agir comme une unité.",
                 "hu": "Személyek összejövetele vagy szervezete, amely egy adott nevet visel és képes egységként cselekedni.",
                 "nl": "Een bijeenkomst of organisatie van personen onder een bepaalde naam en in staat om op te treden als een eenheid.",
@@ -162,6 +167,13 @@
                 "lexicalAlias": "http://metadataregistry.org/uri/RegStatus/Published.en",
                 "label": "Published"
             },
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10002",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+                    "label": "agent"
+                }
+            ],
             "@type": "Class",
             "lexicalAlias": "http://rdaregistry.info/Elements/c/CollectiveAgent.en"
         },
@@ -183,7 +195,6 @@
                 "sv": "Institution",
                 "vi": "tập thể"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10011"}],
             "definition": {
                 "ca": ["Organització o grup de persones i/o d\u2019organitzacions que s\u2019identifica amb un nom concret i que actua, o pot actuar, com una unitat."],
                 "da": ["Organisation eller gruppe af personer og/eller organisationer, der identificeres ved et bestemt navn, og som optræder, eller kan optræde, som en enhed."],
@@ -191,7 +202,7 @@
                 "el": ["Ένας οργανισμός ή ομάδα προσώπων ή/και οργανισμών, η οποία ταυτίζεται από ένα συγκεκριμένο όνομα, το οποίο δρα ή μπορεί να δρα ως ομάδα."],
                 "en": ["A collective agent who is composed of persons who are organized for a common purpose or activity."],
                 "es": ["Una organización o grupo de personas y/o organizaciones que se identifica mediante un nombre particular y que actúa o puede actuar, como una unidad."],
-                "fi": ["Organisaatio tai ryhmä henkilöitä ja/tai organisaatioita, joka tunnetaan tietyllä nimellä ja joka toimii tai voi toimia yhtenä yksikkönä."],
+                "fi": ["Yhteistoimija, joka muodostuu henkilöistä, jotka ovat järjestäytyneet yhteistä päämäärää tai toimintaa varten."],
                 "fr": ["Organisation, ou groupe de personnes ou d\u2019organisations, qui est identifiée par un nom particulier et qui agit ou peut agir comme une unité."],
                 "hu": ["Egy szervezet vagy személyek és/vagy szervezetek csoportja, amelyet egy adott névvel azonosítanak és amely egységként cselekszik vagy cselekedhet."],
                 "it": ["Organizzazione o gruppo di persone e/o organizzazioni identificato da un particolare nome, che agisce, o può agire, come un'unità."],
@@ -222,7 +233,7 @@
                 "el": "Ένας οργανισμός ή ομάδα προσώπων ή/και οργανισμών, η οποία ταυτίζεται από ένα συγκεκριμένο όνομα, το οποίο δρα ή μπορεί να δρα ως ομάδα.",
                 "en": "A collective agent who is composed of persons who are organized for a common purpose or activity.",
                 "es": "Una organización o grupo de personas y/o organizaciones que se identifica mediante un nombre particular y que actúa o puede actuar, como una unidad.",
-                "fi": "Organisaatio tai ryhmä henkilöitä ja/tai organisaatioita, joka tunnetaan tietyllä nimellä ja joka toimii tai voi toimia yhtenä yksikkönä.",
+                "fi": "Yhteistoimija, joka muodostuu henkilöistä, jotka ovat järjestäytyneet yhteistä päämäärää tai toimintaa varten.",
                 "fr": "Organisation, ou groupe de personnes ou d\u2019organisations, qui est identifiée par un nom particulier et qui agit ou peut agir comme une unité.",
                 "hu": "Egy szervezet vagy személyek és/vagy szervezetek csoportja, amelyet egy adott névvel azonosítanak és amely egységként cselekszik vagy cselekedhet.",
                 "it": "Organizzazione o gruppo di persone e/o organizzazioni identificato da un particolare nome, che agisce, o può agire, come un'unità.",
@@ -240,6 +251,13 @@
                 "label": "Published"
             },
             "@type": "Class",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10011",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/CollectiveAgent.en",
+                    "label": "collective agent"
+                }
+            ],
             "lexicalAlias": "http://rdaregistry.info/Elements/c/CorporateBody.en",
             "instructionNumber": "8.1.2"
         },
@@ -260,7 +278,6 @@
                 "no": "familie",
                 "vi": "gia đình"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10011"}],
             "definition": {
                 "ca": ["Dues o més persones relacionades pel naixement, el matrimoni, l\u2019adopció, la unió civil o qualsevol altre estat legal similar, o que altrament es presenten com una família."],
                 "da": ["To eller flere personer, der er beslægtede via fødsel, ægteskab, adoption, registreret partnerskab eller lignende juridisk status, eller som på anden vis præsenterer sig selv som en familie."],
@@ -268,7 +285,7 @@
                 "el": ["Δύο ή περισσότερα πρόσωπα με σχέσεις όπως γέννησης, γάμου, υιοθεσίας, πολιτικής ένωσης ή παρόμοιου νομικού καθεστώτος ή άλλης περίπτωσης στην οποία εμφανίζονται ως οικογένεια."],
                 "en": ["A collective agent who is composed of persons who are related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family."],
                 "es": ["Dos o más personas relacionadas por nacimiento, matrimonio, adopción, unión civil o un estado legal similar; o quienes se presentan a sí mismos como una familia."],
-                "fi": ["Kaksi tai useampi henkilö, joita yhdistää sukulaisuussuhde, avioliitto, adoptio, rekisteröity parisuhde tai vastaava oikeudellinen asema tai jotka muuten esiintyvät perheenä."],
+                "fi": ["Yhteistoimija, joka muodostuu henkilöistä, jotka ovat suhteessa toisiinsa syntymän, avioliiton, adoption, rekisteröidyn parisuhteen tai vastaavan oikeudellisen aseman kautta tai jotka muuten esiintyvät perheenä."],
                 "fr": ["Deux ou plusieurs personnes liées par la naissance, le mariage, l\u2019adoption, l\u2019union civile ou tout autre statut légal de même ordre ou bien des personnes qui, pour toute autre raison, se présentent elles-mêmes comme une famille."],
                 "hu": ["Két vagy több személy, akik kapcsolatban állnak születés, házasság, polgári egyesülés vagy hasonló jogi státus révén, vagy akik máskülönben családként mutatják meg magukat."],
                 "it": ["Due o più persone legate da nascita, matrimonio, adozione, unione civile o simile status giuridico, o che si presentano come una famiglia."],
@@ -298,7 +315,7 @@
                 "el": "Δύο ή περισσότερα πρόσωπα με σχέσεις όπως γέννησης, γάμου, υιοθεσίας, πολιτικής ένωσης ή παρόμοιου νομικού καθεστώτος ή άλλης περίπτωσης στην οποία εμφανίζονται ως οικογένεια.",
                 "en": "A collective agent who is composed of persons who are related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family.",
                 "es": "Dos o más personas relacionadas por nacimiento, matrimonio, adopción, unión civil o un estado legal similar; o quienes se presentan a sí mismos como una familia.",
-                "fi": "Kaksi tai useampi henkilö, joita yhdistää sukulaisuussuhde, avioliitto, adoptio, rekisteröity parisuhde tai vastaava oikeudellinen asema tai jotka muuten esiintyvät perheenä.",
+                "fi": "Yhteistoimija, joka muodostuu henkilöistä, jotka ovat suhteessa toisiinsa syntymän, avioliiton, adoption, rekisteröidyn parisuhteen tai vastaavan oikeudellisen aseman kautta tai jotka muuten esiintyvät perheenä.",
                 "fr": "Deux ou plusieurs personnes liées par la naissance, le mariage, l\u2019adoption, l\u2019union civile ou tout autre statut légal de même ordre ou bien des personnes qui, pour toute autre raison, se présentent elles-mêmes comme une famille.",
                 "hu": "Két vagy több személy, akik kapcsolatban állnak születés, házasság, polgári egyesülés vagy hasonló jogi státus révén, vagy akik máskülönben családként mutatják meg magukat.",
                 "it": "Due o più persone legate da nascita, matrimonio, adozione, unione civile o simile status giuridico, o che si presentano come una famiglia.",
@@ -316,6 +333,13 @@
                 "label": "Published"
             },
             "@type": "Class",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10011",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/CollectiveAgent.en",
+                    "label": "collective agent"
+                }
+            ],
             "lexicalAlias": "http://rdaregistry.info/Elements/c/Family.en",
             "instructionNumber": "8.1.2"
         },
@@ -337,7 +361,6 @@
                 "sv": "Uttryck",
                 "vi": "biểu hiện"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10013"}],
             "definition": {
                 "ca": ["Realització intel·lectual or artística d\u2019una obra en la forma de notació alfanumèrica, musical o coreogràfica, de so, d\u2019imatge, d\u2019objecte, de moviment, etc., o de qualsevol combinació d\u2019aquestes formes."],
                 "da": ["Den intellektuelle eller kunstneriske virkeliggørelse af et værk i form af alfanumerisk, musik- eller koreografinotation, en lyd, et billede, en genstand, en bevægelse etc., eller en kombination af sådanne former."],
@@ -345,7 +368,7 @@
                 "el": ["Ένα πνευματικό περιεχόμενο ή μια καλλιτεχνική πραγμάτωση/υλοποίηση ενός έργου στη μορφή αλφαβητικής, αλφαριθμητικής, αριθμητικής ή χορογραφικής σημειογραφίας, ήχου, εικόνας, αντικειμένου, κίνησης κ.λπ. ή οποιοσδήποτε συνδυασμός αυτών των μορφών."],
                 "en": ["An intellectual or artistic realization of a work in the form of alpha-numeric, musical or choreographic notation, sound, image, object, movement, etc., or any combination of such forms."],
                 "es": ["La realización intelectual o artística de una obra en la forma de notaciones alfanumérica, musical o coreográfica, de sonido, imagen, objeto, movimiento, etc. o de cualquier combinación de tales formas."],
-                "fi": ["Teoksen tiedollinen tai taiteellinen aakkosnumeerinen toteuma, kuten musiikkinuotinnos, tanssinotaatio, ääni, kuva, esine, liike tai näiden yhdistelmä."],
+                "fi": ["Teoksen tiedollinen tai taiteellinen aakkosnumeerinen toteutus, joka voi olla muodoltaan aakkosnumeerinen, musiikkinuotinnos, tanssinotaatio, ääntä, kuva, esine, liikettä tms. tai mikä tahansa tällaisten muotojen yhdistelmä."],
                 "fr": ["Réalisation intellectuelle ou artistique d\u2019une œuvre sous forme de notation alphanumérique, musicale ou chorégraphique, de son, d\u2019image, d\u2019objet, de mouvement, etc. ou de toute combinaison de ces formes."],
                 "hu": ["Egy mű szellemi vagy művészi megvalósítása alfanumerikus, zenei vagy koreografikus jelrendszerben, hangban, képben, objektumban, mozgásban stb., vagy ilyen formák bármely kombinációjában."],
                 "it": ["Realizzazione intellettuale o artistica di un'opera in forma di notazione alfanumerica, musicale o coreografica, suono, immagine, oggetto, movimento, etc. o in una qualsiasi combinazione di queste forme."],
@@ -376,7 +399,7 @@
                 "el": "Ένα πνευματικό περιεχόμενο ή καλλιτεχνική πραγμάτωση/υλοποίηση ενός έργου στη μορφή αλφαβητικής, αλφαριθμητικής, αριθμητικής ή χορογραφικής σημειογραφίας, ήχου, εικόνας, αντικειμένου, κίνησης κ.λπ. ή οποιοσδήποτε συνδυασμός αυτών των μορφών.",
                 "en": "An intellectual or artistic realization of a work in the form of alpha-numeric, musical or choreographic notation, sound, image, object, movement, etc., or any combination of such forms.",
                 "es": "La realización intelectual o artística de una obra en la forma de notaciones alfanumérica, musical o coreográfica, de sonido, imagen, objeto, movimiento, etc. o de cualquier combinación de tales formas.",
-                "fi": "Teoksen tiedollinen tai taiteellinen aakkosnumeerinen toteuma, kuten musiikkinuotinnos, tanssinotaatio, ääni, kuva, esine, liike tai näiden yhdistelmä.",
+                "fi": "Teoksen tiedollinen tai taiteellinen aakkosnumeerinen toteutus, joka voi olla muodoltaan aakkosnumeerinen, musiikkinuotinnos, tanssinotaatio, ääntä, kuva, esine, liikettä tms. tai mikä tahansa tällaisten muotojen yhdistelmä.",
                 "fr": "Réalisation intellectuelle ou artistique d\u2019une œuvre sous forme de notation alphanumérique, musicale ou chorégraphique, de son, d\u2019image, d\u2019objet, de mouvement, etc. ou de toute combinaison de ces formes.",
                 "hu": "Egy mű szellemi vagy művészi megvalósítása alfanumerikus, zenei vagy koreografikus jelrendszerben, hangban, képben, objektumban, mozgásban stb., vagy ilyen formák bármely kombinációjában.",
                 "it": "Realizzazione intellettuale o artistica di un'opera in forma di notazione alfanumerica, musicale o coreografica, suono, immagine, oggetto, movimento, etc. o in una qualsiasi combinazione di queste forme.",
@@ -395,7 +418,14 @@
             },
             "@type": "Class",
             "lexicalAlias": "http://rdaregistry.info/Elements/c/Expression.en",
-            "instructionNumber": "5.1.2"
+            "instructionNumber": "5.1.2",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10013",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+                    "label": "RDA entity"
+                }
+            ]
         },
         {
             "@id": "http://rdaregistry.info/Elements/c/C10007",
@@ -415,7 +445,6 @@
                 "sv": "Manifestation",
                 "vi": "biểu thị"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10013"}],
             "definition": {
                 "ca": ["Materialització física d\u2019una expressió d\u2019una obra."],
                 "da": ["Fysisk konkretisering af et udtryk."],
@@ -473,7 +502,14 @@
             },
             "@type": "Class",
             "lexicalAlias": "http://rdaregistry.info/Elements/c/Manifestation.en",
-            "instructionNumber": "1.1.5"
+            "instructionNumber": "1.1.5",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10013",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+                    "label": "RDA entity"
+                }
+            ]
         },
         {
             "@id": "http://rdaregistry.info/Elements/c/C10012",
@@ -490,14 +526,13 @@
                 "no": "nomen",
                 "vi": "danh pháp"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10013"}],
             "definition": {
                 "ca": ["Designació que es refereix a una entitat RDA."],
                 "da": ["Betegnelse der refererer til en RDA entitet."],
                 "de": ["Eine Bezeichnung, die auf eine RDA-Entität verweist."],
                 "el": ["Ένας προσδιορισμός που αναφέρεται σε μια οντότητα RDA."],
                 "en": ["A label for any RDA entity except a nomen."],
-                "fi": ["Määrite, joka viittaa RDA-entiteettiin."],
+                "fi": ["Nimike mille tahansa RDA-entiteetille nomenia lukuun ottamatta"],
                 "fr": ["Désignation qui référe à une entité RDA."],
                 "hu": ["Egy megnevezés, amely egy RDA-entitásra utal."],
                 "nl": ["Een aanduiding die verwijst naar een RDA-entiteit."],
@@ -509,7 +544,7 @@
                 "de": ["Unter Bezeichnung fallen ein Name, ein Titel, ein Sucheinstieg, ein Identifikator, sowie Notationen oder Schlagwörter."],
                 "el": ["Ένας προσδιορισμός περιλαμβάνει ένα όνομα, έναν τίτλο, ένα σημείο πρόσβασης, ένα αναγνωριστικό και κώδικες θεματικής ταξινόμησης και επικεφαλίδες."],
                 "en": ["A nomen includes a name, title, access point, or identifier."],
-                "fi": ["Määrite sisältää nimen, nimekkeen, hakutiedon ja tunnisteen sekä aiheluokituksen luokat ja asiasanat."],
+                "fi": ["Nimike kattaa nimen, nimekkeen, hakutiedon ja tunnisteen."],
                 "fr": ["Une désignation comprend un nom, un titre, un point d\u2019accès, un identifiant, les codes de classification matière et les vedettes-matière."],
                 "hu": ["Egy megnevezés magába foglal egy nevet, címet, elérési pontot, azonosítót, tárgyi osztályozási kódokat és rovatokat."],
                 "nl": ["Een aanduiding omvat een naam, titel, ingang en onderwerpsclassificatie en hoofdwoorden."],
@@ -534,7 +569,7 @@
                 "de": "Eine Bezeichnung, die auf eine RDA-Entität verweist.",
                 "el": "Ένας προσδιορισμός που αναφέρεται σε μια οντότητα RDA.",
                 "en": "A label for any RDA entity except a nomen.",
-                "fi": "Määrite, joka viittaa RDA-entiteettiin.",
+                "fi": "Nimike mille tahansa RDA-entiteetille nomenia lukuun ottamatta",
                 "fr": "Désignation qui réfère à une entité RDA.",
                 "hu": "Egy megnevezés, amely egy RDA-entitásra utal.",
                 "nl": "Een aanduiding die verwijst naar een RDA-entiteit.",
@@ -551,7 +586,14 @@
                 "label": "Published"
             },
             "@type": "Class",
-            "lexicalAlias": "http://rdaregistry.info/Elements/c/Nomen.en"
+            "lexicalAlias": "http://rdaregistry.info/Elements/c/Nomen.en",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10013",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+                    "label": "RDA entity"
+                }
+            ]
         },
         {
             "@id": "http://rdaregistry.info/Elements/c/C10003",
@@ -571,7 +613,6 @@
                 "sv": "Exemplar",
                 "vi": "bản"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10013"}],
             "definition": {
                 "ca": ["Exemplar sol o ocurrència d\u2019una manifestació."],
                 "da": ["Enkelt forekomst af en manifestation"],
@@ -579,7 +620,7 @@
                 "el": ["Ένα μεμονωμένο παράδειγμα ή στιγμιότυπο μιας εκδήλωσης."],
                 "en": ["A single exemplar or instance of a manifestation."],
                 "es": ["Un ejemplar individual o una instancia de una manifestación."],
-                "fi": ["Manifestaation yksittäinen toteutuma."],
+                "fi": ["Manifestaation yksittäinen toteutuma tai tapaus."],
                 "fr": ["Instance ou exemplaire isolé d\u2019une manifestation."],
                 "hu": ["Egy megjelenési forma egyetlen példánya vagy előfordulása."],
                 "it": ["Singolo esemplare o istanza di una manifestazione."],
@@ -610,7 +651,7 @@
                 "el": "Ένα μεμονωμένο παράδειγμα ή στιγμιότυπο μιας εκδήλωσης.",
                 "en": "A single exemplar or instance of a manifestation.",
                 "es": "Un ejemplar individual o una instancia de una manifestación.",
-                "fi": "Manifestaation yksittäinen toteutuma.",
+                "fi": "Manifestaation yksittäinen toteutuma tai tapaus.",
                 "fr": "Instance ou exemplaire isolé d\u2019une manifestation.",
                 "hu": "Egy megjelenési forma egyetlen példánya vagy előfordulása.",
                 "it": "Singolo esemplare o istanza di una manifestazione.",
@@ -629,7 +670,14 @@
             },
             "@type": "Class",
             "lexicalAlias": "http://rdaregistry.info/Elements/c/Item.en",
-            "instructionNumber": "1.1.5"
+            "instructionNumber": "1.1.5",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10013",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+                    "label": "RDA entity"
+                }
+            ]
         },
         {
             "@id": "http://rdaregistry.info/Elements/c/C10004",
@@ -649,7 +697,6 @@
                 "sv": "Person",
                 "vi": "cá nhân"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10002"}],
             "definition": {
                 "ca": ["Individu o identitat establerta per un individu, ja sigui sol o en col·laboració amb un o més individus."],
                 "da": ["Individ eller en identitet, der er oprettet af et eller flere individer, alene eller i samarbejde med en eller flere individer."],
@@ -657,7 +704,7 @@
                 "el": ["Ένα πρόσωπο ή ταυτότητα καθιερωμένη από πρόσωπο είτε μόνο του είτε σε συνεργασία με ένα ή περισσότερα πρόσωπα."],
                 "en": ["An agent who is an individual human being who lives or is assumed to have lived."],
                 "es": ["Un individuo o una identidad establecida por un individuo, ya sea solo o en colaboración con uno o más individuos."],
-                "fi": ["Yksittäinen ihminen, joka on elossa tai jonka voi olettaa olleen elossa."],
+                "fi": ["Toimija, joka on ihmisyksilö, joka on elossa tai jonka voi olettaa olleen elossa."],
                 "fr": ["Être humain individuel qui vit ou est réputé avoir vécu."],
                 "hu": ["Egy egyén vagy egy egyén által létrehozott személyazonosság, akár egyedül, akár egy vagy több másik egyénnel való együttműködésben."],
                 "it": ["Individuo o identità stabilita da un individuo (da solo o in collaborazione con altri individui)."],
@@ -688,7 +735,7 @@
                 "el": "Ένα πρόσωπο ή ταυτότητα καθιερωμένη από πρόσωπο είτε μόνο του είτε σε συνεργασία με ένα ή περισσότερα πρόσωπα.",
                 "en": "An agent who is an individual human being who lives or is assumed to have lived.",
                 "es": "Un individuo o una identidad establecida por un individuo, ya sea solo o en colaboración con uno o más individuos.",
-                "fi": "Yksittäinen ihminen, joka on elossa tai jonka voi olettaa olleen elossa.",
+                "fi": "Toimija, joka on ihmisyksilö, joka on elossa tai jonka voi olettaa olleen elossa.",
                 "fr": "Être humain individuel qui vit ou est réputé avoir vécu.",
                 "hu": "Egy egyén vagy egy egyén által létrehozott személyazonosság, akár egyedül, akár egy vagy több másik egyénnel való együttműködésben.",
                 "it": "Individuo o identità stabilita da un individuo (da solo o in collaborazione con altri individui).",
@@ -706,6 +753,13 @@
                 "label": "Published"
             },
             "@type": "Class",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10002",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/Agent.en",
+                    "label": "agent"
+                }
+            ],
             "lexicalAlias": "http://rdaregistry.info/Elements/c/Person.en",
             "instructionNumber": "8.1.2"
         },
@@ -725,14 +779,13 @@
                 "no": "sted",
                 "vi": "địa điểm"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10013"}],
             "definition": {
                 "ca": ["Extensió determinada d\u2019espai."],
                 "da": ["Lokalitet, der defineres ved et navn."],
                 "de": ["Eine definierte Ausdehnung eines Raums."],
                 "el": ["Μια δεδομένη χωρική έκταση."],
                 "en": ["A given extent of space."],
-                "fi": ["Tilan ulottuvuus."],
+                "fi": ["Tilan tietty laajuus."],
                 "fr": ["Portion d\u2019espace déterminée."],
                 "hu": ["A tér egy adott kiterjedése."],
                 "it": ["Ubicazione identificata da un nome."],
@@ -760,7 +813,7 @@
                 "de": "Eine definierte Ausdehnung eines Raums.",
                 "el": "Μια δεδομένη χωρική έκταση.",
                 "en": "A given extent of space.",
-                "fi": "Tilan ulottuvuus.",
+                "fi": "Tilan tietty laajuus.",
                 "fr": "Portion d\u2019espace déterminée.",
                 "hu": "A tér egy adott kiterjedése.",
                 "it": "Ubicazione identificata da un nome.",
@@ -778,7 +831,14 @@
                 "label": "Published"
             },
             "@type": "Class",
-            "lexicalAlias": "http://rdaregistry.info/Elements/c/Place.en"
+            "lexicalAlias": "http://rdaregistry.info/Elements/c/Place.en",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10013",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+                    "label": "RDA entity"
+                }
+            ]
         },
         {
             "@id": "http://rdaregistry.info/Elements/c/C10013",
@@ -801,7 +861,7 @@
                 "de": ["Eine abstrakte Klasse wichtiger konzeptioneller Entitäten in der Gesamtheit des menschlichen Diskursuniversums, die für Benutzende von RDA-Metadaten in einem System zum Auffinden von Ressourcen von Interesse ist."],
                 "el": ["Μια αφηρημένη τάξη σημαντικών εννοιολογικών αντικειμένων στο σύμπαν του ανθρώπινου λόγου, τα οποία αποτελούν εστία ενδιαφέροντος για τους χρήστες των RDA μεταδεδομένων στα πληροφοριακά συστήματα των βιβλιοθηκών."],
                 "en": ["An abstract class of key conceptual objects in the universe of human discourse that are a focus of interest to users of RDA metadata in a system for resource discovery."],
-                "fi": ["Ihmisdiskurssin keskeisten käsitteellisten objektien abstrakti luokka, joka on RDA-metatiedon käyttäjien kiinnostuksen kohde hakujärjestelmässä ."],
+                "fi": ["Ihmisdiskurssin keskeisten käsitteellisten objektien abstrakti luokka, joka on RDA:n metatietojen käyttäjien kiinnostuksen kohde hakujärjestelmässä."],
                 "fr": ["Classe abstraite d\u2019objets conceptuels fondamentaux dans l\u2019univers du discours humain qui constitue un centre d\u2019intérêt pour les utilisateurs de métadonnées RDA dans un système de découverte de ressources."],
                 "hu": ["A fő fogalmi objektumok elvont osztálya az emberi diskurzus univerzumában, amely az RDA metaadatok használóinak érdeklődési középpontja a könyvtár-informatikai rendszerekben."],
                 "nl": ["Een abstracte klasse van de belangrijkste conceptuele objecten in de wereld van het menselijk vertoog dat van belang is voor gebruikers van RDA-metadata in bibliotheeksystemen."],
@@ -827,7 +887,7 @@
                 "de": "Eine abstrakte Klasse wichtiger konzeptioneller Entitäten in der Gesamtheit des menschlichen Diskursuniversums, die für Benutzende von RDA-Metadaten in einem System zum Auffinden von Ressourcen von Interesse ist.",
                 "el": "Μια αφηρημένη τάξη σημαντικών εννοιολογικών αντικειμένων στο σύμπαν του ανθρώπινου λόγου, τα οποία αποτελούν εστία ενδιαφέροντος για τους χρήστες των RDA μεταδεδομένων στα πληροφοριακά συστήματα των βιβλιοθηκών.",
                 "en": "An abstract class of key conceptual objects in the universe of human discourse that are a focus of interest to users of RDA metadata in a system for resource discovery.",
-                "fi": "Ihmisdiskurssin keskeisten käsitteellisten objektien abstrakti luokka, joka on RDA-metatiedon käyttäjien kiinnostuksen kohde hakujärjestelmässä .",
+                "fi": "Ihmisdiskurssin keskeisten käsitteellisten objektien abstrakti luokka, joka on RDA:n metatietojen käyttäjien kiinnostuksen kohde hakujärjestelmässä.",
                 "fr": "Classe abstraite d\u2019objets conceptuels fondamentaux dans l\u2019univers du discours humain qui constitue un centre d\u2019intérêt pour les utilisateurs de métadonnées RDA dans un système de découverte de ressources.",
                 "hu": "A fő fogalmi objektumok elvont osztálya az emberi diskurzus univerzumában, amely az RDA metaadatok használóinak érdeklődési középpontja a könyvtár-informatikai rendszerekben.",
                 "nl": "Een abstracte klasse van de belangrijkste conceptuele objecten in de wereld van het menselijk vertoog dat van belang is voor gebruikers van RDA-metadata in bibliotheeksystemen.",
@@ -839,7 +899,7 @@
                 "de": ["Unter RDA-Entität fällt ein Akteur, ein Exemplar, eine Expression, eine Familie, ein gemeinschaftlicher Akteur, ein Geografikum, eine Körperschaft, eine Manifestation, ein Nomen, eine Person, ein Werk und ein Zeitraum."],
                 "el": ["Μια οντότητα RDA περιλαμβάνει έναν φορέα, έναν συλλογικό φορέα, μια έκφραση, μια οικογένεια, ένα αντίτυπο, μια εκδήλωση, ένα όνομα, ένα φυσικό πρόσωπο, έναν τόπο, ένα χρονικό διάστημα και ένα έργο."],
                 "en": ["An RDA entity includes an agent, collective agent, corporate body, expression, family, item, manifestation, nomen, person, place, timespan, and work."],
-                "fi": ["RDA-entiteettiin sisältyy toimija, yhteistoimija, yhteisö, ekspressio, suku, kappale, manifestaatio, nomen, henkilö, paikka, ajanjakso ja teos."],
+                "fi": ["RDA-entiteetti kattaa toimijan, yhteistoimijan, yhteisön, ekspression, suvun, kappaleen, manifestaation, nomenin, henkilön, paikan, ajanjakson ja teoksen."],
                 "fr": ["Une entité RDA comprend un agent, un agent collectif, une collectivité, une expression, une famille, un item, un laps de temps, un lieu, une manifestation, un nomen, une œuvre et une personne."],
                 "hu": ["Egy RDA entitás magába foglal egy ágenst, egy kollektív ágenst, testületet, kifejezési formát, családot, példányt, megjelenési formát, noment, személyt, helyet, időtartamot és művet."],
                 "nl": ["Een RDA-entiteit omvat een actor, collectieve actor, corporatie, expressie, familie, item, manifestatie, nomen, persoon, plaats, tijdspanne and werk."],
@@ -872,14 +932,13 @@
                 "no": "tidsrom",
                 "vi": "khoảng thời gian"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10013"}],
             "definition": {
                 "ca": ["Extensió temporal que té un principi, un final i una durada."],
                 "da": ["Tidsrum med begyndelse, varighed og afslutning."],
                 "de": ["Eine zeitliche Ausdehnung, die einen Anfang, ein Ende und eine bestimmte Dauer hat."],
                 "el": ["Μια χρονική έκταση με αρχή, τέλος και διάρκεια."],
                 "en": ["A finite period of time."],
-                "fi": ["Ajallinen ulottuvuus, jolla on alku, loppu ja kesto."],
+                "fi": ["Ajan rajallinen jakso."],
                 "fr": ["Plage temporelle ayant un début, une fin et une durée."],
                 "hu": ["Időbeli kiterjedés, amelynek kezdete, vége és időtartama van."],
                 "nl": ["Een tijdsmaat die een begin heeft, een eind en een duur."],
@@ -905,7 +964,7 @@
                 "de": "Eine zeitliche Ausdehnung, die einen Anfang, ein Ende und eine bestimmte Dauer hat.",
                 "el": "Μια χρονική έκταση με αρχή, τέλος και διάρκεια.",
                 "en": "A finite period of time.",
-                "fi": "Ajallinen ulottuvuus, jolla on alku, loppu ja kesto.",
+                "fi": "Ajan rajallinen jakso.",
                 "fr": "Plage temporelle ayant un début, une fin et une durée.",
                 "hu": "Időbeli kiterjedés, amelynek kezdete, vége és időtartama van.",
                 "nl": "Een tijdsmaat die een begin heeft, een eind en een duur.",
@@ -925,7 +984,14 @@
                 "label": "Published"
             },
             "@type": "Class",
-            "lexicalAlias": "http://rdaregistry.info/Elements/c/Timespan.en"
+            "lexicalAlias": "http://rdaregistry.info/Elements/c/Timespan.en",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10013",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+                    "label": "RDA entity"
+                }
+            ]
         },
         {
             "@id": "http://rdaregistry.info/Elements/c/C10001",
@@ -945,7 +1011,6 @@
                 "sv": "Verk",
                 "vi": "tác phẩm"
             },
-            "subClassOf":[{"@id":"http://rdaregistry.info/Elements/c/C10013"}],
             "definition": {
                 "ca": ["Creació intel·lectual o artística distinta, és a dir, el contingut intel·lectual o artístic."],
                 "da": ["Selvstændig intellektuel eller kunstnerisk frembringelse, fx det intellektuelle eller kunstneriske indhold."],
@@ -953,7 +1018,7 @@
                 "el": ["Μια διακριτή διανοητική/πνευματική ή καλλιτεχνική δημιουργία, δηλαδή το πνευματικό ή καλλιτεχνικό περιεχόμενο."],
                 "en": ["A distinct intellectual or artistic creation, that is, the intellectual or artistic content."],
                 "es": ["Una creación intelectual o artística distintiva, i.e., el contenido intelectual o artístico."],
-                "fi": ["Itsenäinen tiedollinen tai taiteellinen sisältö."],
+                "fi": ["Itsenäinen tiedollinen tai taiteellinen luomus eli tiedollinen tai taiteellinen sisältö."],
                 "fr": ["Création intellectuelle ou artistique déterminée, c\u2019est-à-dire le contenu intellectuel ou artistique."],
                 "hu": ["Különálló szellemi vagy művészi alkotás, azaz az intellektuális vagy művészi tartalom."],
                 "it": ["Creazione intellettuale o artistica distinta (cioè contenuto artistico o intellettuale)."],
@@ -984,7 +1049,7 @@
                 "el": "Μια διακριτή διανοητική/πνευματική ή καλλιτεχνική δημιουργία, δηλαδή το πνευματικό ή καλλιτεχνικό περιεχόμενο.",
                 "en": "A distinct intellectual or artistic creation, that is, the intellectual or artistic content.",
                 "es": "Una creación intelectual o artística distintiva, i.e., el contenido intelectual o artístico.",
-                "fi": "Itsenäinen tiedollinen tai taiteellinen sisältö.",
+                "fi": "Itsenäinen tiedollinen tai taiteellinen luomus eli tiedollinen tai taiteellinen sisältö.",
                 "fr": "Création intellectuelle ou artistique déterminée, c\u2019est-à-dire le contenu intellectuel ou artistique.",
                 "hu": "Különálló szellemi vagy művészi alkotás, azaz az intellektuális vagy művészi tartalom.",
                 "it": "Creazione intellettuale o artistica distinta (cioè contenuto artistico o intellettuale).",
@@ -1003,7 +1068,14 @@
             },
             "@type": "Class",
             "lexicalAlias": "http://rdaregistry.info/Elements/c/Work.en",
-            "instructionNumber": "5.1.2"
+            "instructionNumber": "5.1.2",
+            "subClassOf": [
+                {
+                    "@id": "http://rdaregistry.info/Elements/c/C10013",
+                    "lexicalAlias": "http://rdaregistry.info/Elements/c/RDAEntity.en",
+                    "label": "RDA entity"
+                }
+            ]
         }
     ]
 }
