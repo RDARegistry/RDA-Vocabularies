@@ -1,11 +1,14 @@
 {"@context": {
+    "cc": "http://creativecommons.org/ns#",
     "dc": "http://purl.org/dc/elements/1.1/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
     "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "rdau": "http://rdaregistry.info/Elements/u/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "reg": "http://metadataregistry.org/uri/profile/regap/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vann": "http://purl.org/vocab/vann/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "ToolkitDefinition": {
         "@id": "rdakit:toolkitDefinition",
@@ -29,6 +32,7 @@
         "@type": "@id"
     },
     "version": "reg:currentVersion",
+    "versionInfo": "owl:versionInfo",
     "altLabel": {
         "@id": "skos:altLabel",
         "@container": "@language"
@@ -57,8 +61,14 @@
         "@id": "skos:ConceptScheme",
         "@type": "@id"
     },
+    "contributor": "dc:contributor",
+    "creator": "dc:creator",
     "definition": {
         "@id": "skos:definition",
+        "@container": "@language"
+    },
+    "description": {
+        "@id": "dc:description",
         "@container": "@language"
     },
     "editorialNote": {
@@ -97,10 +107,16 @@
         "@id": "skos:isSubjectOf",
         "@type": "@id"
     },
+    "issued": "dc:issued",
+    "licence": {
+        "@id": "cc:licence",
+        "@type": "@id"
+    },
     "mappingRelation": {
         "@id": "skos:mappingRelation",
         "@type": "@id"
     },
+    "modified": "dc:modified",
     "narrower": {
         "@id": "skos:narrower",
         "@type": "@id"
@@ -117,6 +133,7 @@
         "@id": "skos:note",
         "@container": "@language"
     },
+    "prefix": "vann:preferredNamespacePrefix",
     "prefLabel": {
         "@id": "skos:prefLabel",
         "@container": "@language"
@@ -129,6 +146,7 @@
         "@id": "skos:primarySubject",
         "@type": "@id"
     },
+    "publisher": "dc:publisher",
     "related": {
         "@id": "skos:related",
         "@type": "@id"
@@ -137,6 +155,7 @@
         "@id": "skos:relatedMatch",
         "@type": "@id"
     },
+    "rights": "dc:rights",
     "scopeNote": {
         "@id": "skos:scopeNote",
         "@container": "@language"
@@ -153,8 +172,15 @@
         "@id": "skos:symbol",
         "@type": "@id"
     },
+    "title": {
+        "@id": "dc:title",
+        "@container": "@language"
+    },
     "topConceptOf": {
         "@id": "skos:topConceptOf",
-        "@type": "@id"
+        "@type": "@id"   
+    },
+    "type": "dc:type",
+    "@type": "@id"
     }
 }}
