@@ -1,4 +1,5 @@
 {"@context": {
+    "cc": "http://creativecommons.org/ns#",
     "dc": "http://purl.org/dc/elements/1.1/",
     "rdac": "http://rdaregistry.info/Elements/c/",
     "rdaa": "http://rdaregistry.info/Elements/a/",
@@ -16,6 +17,8 @@
     "rdakit": "http://metadataregistry.org/uri/profile/rdakit/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "vann": "http://purl.org/vocab/vann/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "disjointWith": {
         "@id": "owl:disjointWith",
         "@type": "@id"
@@ -130,7 +133,7 @@
     },
     "instructionNumber": "rdakit:instructionNumber",
     "description": {
-        "@id": "skos:definition",
+        "@id": "dc:description",
         "@container": "@language"
     },
     "ToolkitDefinition": {
@@ -144,5 +147,30 @@
     "note": {
         "@id": "skos:scopeNote",
         "@container": "@language"
+    },
+     "title": {
+        "@id": "dc:title",
+        "@container": "@language"
+    },
+    "prefix": "vann:preferredNamespacePrefix",
+    "issued": {
+        "@id": "dc:issued",
+        "@type": "xsd:date"
+    },
+    "modified": {
+        "@id": "dc:modified",
+        "@type": "xsd:date"
+    },
+    "licence": {
+        "@id": "cc:licence",
+        "@type": "@id"
+    },
+    "versionInfo": "owl:versionInfo",
+    "rights": "dc:rights",
+    "contributor": "dc:contributor",
+    "creator": "dc:creator",
+    "type": {
+        "@id": "dc:type",
+        "@type": "@id"
     }
 }}
