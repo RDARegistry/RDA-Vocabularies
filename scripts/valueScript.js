@@ -46,15 +46,15 @@ if (typeof dataSource !== "undefined") {
                 detailTable += detailRow;
             }
             if (typeof d.broader != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.broader, docLang), "Broader terms", docLang);
+                detailRow = makeDetailRow(getLinkOut(d.broader), "Broader value");
                 detailTable += detailRow;
             }
             if (typeof d.narrower != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.narrower, docLang), "Narrower terms", docLang);
+                detailRow = makeDetailRow(getLinkOut(d.narrower), "Narrower value");
                 detailTable += detailRow;
             }
             if (typeof d.related != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.related, docLang), "Related terms", docLang);
+                detailRow = makeDetailRow(getLinkOut(d.related), "Related value");
                 detailTable += detailRow;
             }
             if (typeof d.notation != "undefined") {
