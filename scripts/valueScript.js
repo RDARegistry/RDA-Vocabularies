@@ -45,18 +45,6 @@ if (typeof dataSource !== "undefined") {
                 detailRow = makeDetailRow(getStringByLanguage(d.altLabel, docLang), "Alternate labels", docLang);
                 detailTable += detailRow;
             }
-            if (typeof d.broader != "undefined") {
-                detailRow = makeDetailRow(getLinkOut(d.broader), "Broader value");
-                detailTable += detailRow;
-            }
-            if (typeof d.narrower != "undefined") {
-                detailRow = makeDetailRow(getLinkOut(d.narrower), "Narrower value");
-                detailTable += detailRow;
-            }
-            if (typeof d.related != "undefined") {
-                detailRow = makeDetailRow(getLinkOut(d.related), "Related value");
-                detailTable += detailRow;
-            }
             if (typeof d.notation != "undefined") {
                 detailRow = makeDetailRow(getStringByLanguage(d.notation, "en"), "Notation");
                 detailTable += detailRow;
