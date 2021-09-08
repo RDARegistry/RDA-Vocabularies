@@ -16,7 +16,7 @@ $("#lang_" + docLang).css({
 var rdaPrefix = "";
 
 if (typeof dataSource !== "undefined") {
-    
+
     //noinspection ThisExpressionReferencesGlobalObjectJS
     (function () {
         $(function () {
@@ -24,12 +24,12 @@ if (typeof dataSource !== "undefined") {
             return prettyPrint();
         });
     }).call(this);
-    
+
     // set flag for VES
     function filterConcepts(obj) {
         return obj[ "@type"] !== "ConceptScheme";
     }
-    
+
     /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
@@ -43,6 +43,18 @@ if (typeof dataSource !== "undefined") {
             }
             if (typeof d.altLabel != "undefined") {
                 detailRow = makeDetailRow(getStringByLanguage(d.altLabel, docLang), "Alternate labels", docLang);
+                detailTable += detailRow;
+            }
+            if (typeof d.broader != "undefined") {
+                detailRow = makeDetailRow(getStringByLanguage(d.broader, docLang), "Broader terms", docLang);
+                detailTable += detailRow;
+            }
+            if (typeof d.narrower != "undefined") {
+                detailRow = makeDetailRow(getStringByLanguage(d.narrower, docLang), "Narrower terms", docLang);
+                detailTable += detailRow;
+            }
+            if (typeof d.related != "undefined") {
+                detailRow = makeDetailRow(getStringByLanguage(d.related, docLang), "Related terms", docLang);
                 detailTable += detailRow;
             }
             if (typeof d.notation != "undefined") {
@@ -59,7 +71,7 @@ if (typeof dataSource !== "undefined") {
         detailTable += '</table>';
         return detailTable;
     }
-    
+
     function directify(string, langCode) {
         // returns a string wrapped in a div with right-to-left attribute for specified languages
         rtlLangList = "ar, he";
@@ -82,7 +94,7 @@ if (typeof dataSource !== "undefined") {
         }
         return theString;
     }
-    
+
     function divify(string) {
         // returns a string wrapped in a div
         if (typeof string != "undefined") {
@@ -91,7 +103,7 @@ if (typeof dataSource !== "undefined") {
         theString = "<div>" + theString + "</div>";
         return theString;
     }
-    
+
     function getLinkedCurie(uri, prefix) {
         // returns external link with Curie label
         var label = "";
@@ -106,7 +118,7 @@ if (typeof dataSource !== "undefined") {
         }
         return linkifyOut(label, theUri);
     }
-    
+
     function getLinkedStringIn(uri, label, langCode) {
         // returns internal link for string label and Registry URL with parameter for selected language
         var theLabel = "";
@@ -124,7 +136,7 @@ if (typeof dataSource !== "undefined") {
         }
         return linkifyIn(theLabel, url);
     }
-    
+
     function getLinkIn(theData) {
         var label = "";
         var link = "";
@@ -136,7 +148,7 @@ if (typeof dataSource !== "undefined") {
         }
         return linkifyIn(label, link);
     }
-    
+
     function getLinkOut(theData) {
         var label = "";
         var link = "";
@@ -148,7 +160,7 @@ if (typeof dataSource !== "undefined") {
         }
         return linkifyOut(label, link);
     }
-    
+
     function getPrefix(theData) {
         // returns the vocabulary prefix
         var prefix = "[prefix]";
@@ -157,7 +169,7 @@ if (typeof dataSource !== "undefined") {
         }
         return prefix;
     }
-    
+
     function getStringByLanguage(theData, langCode, defaultLangCode) {
         // returns string corresponding to language, or defaults
         var langString = "";
@@ -190,7 +202,7 @@ if (typeof dataSource !== "undefined") {
         }
         return langString;
     }
-    
+
     function getURI(row) {
         // returns a URI from the jsonld
         var uri = "";
@@ -199,17 +211,17 @@ if (typeof dataSource !== "undefined") {
         }
         return uri;
     }
-    
+
     function linkifyIn(string, uri) {
         // returns internal link
         return '<a href="' + uri + '">' + string + '</a>';
     }
-    
+
     function linkifyOut(string, uri) {
         // returns external link
         return '<a href="' + uri + '" target="_blank">' + string + '</a>';
     }
-    
+
     function makeColumn(content) {
         // returns column content in a wrapper div with direction parameter
         var col = "";
@@ -220,7 +232,7 @@ if (typeof dataSource !== "undefined") {
         col = divify(theContent);
         return col;
     }
-    
+
     function makeCurieFromURI(uri, prefix) {
         // returns a curie
         var curie = "";
@@ -234,7 +246,7 @@ if (typeof dataSource !== "undefined") {
         }
         return curie;
     }
-    
+
     function makeDetailRow(rowValue, rowLabel, langCode) {
         // returns a two-column row for the detail display
         var detailRow = "";
@@ -256,7 +268,7 @@ if (typeof dataSource !== "undefined") {
         }
         return detailRow;
     }
-    
+
     function makeURLFromURI(uri, langCode) {
         // returns Registry URL with language parameter
         var url = "";
@@ -278,17 +290,17 @@ if (typeof dataSource !== "undefined") {
         }
         return url;
     }
-    
+
     function quotify(string) {
         // returns a string delimited with quotes
         return '"' + string + '"';
     }
-    
+
     function strongify(string) {
         // returns a string marked as strong
         return '<strong>' + string + '</strong>';
     }
-    
+
     function getLanguageCallout(data) {
         // not currently used: returns the xml language string
         if (typeof data != "undefined") {
@@ -301,30 +313,30 @@ if (typeof dataSource !== "undefined") {
         }
         return "@en *";
     }
-    
+
     function setFilter() {
-        
+
         var initFilter = null;
         if (window.location.hash.indexOf('#') > -1) {
             initFilter = window.location.hash.substr(1);
         }
         return initFilter;
     }
-    
+
     function setSearch(filter) {
         var table = $("table#pindex").DataTable();
         table.search('').column(2).search(filter).draw();
         $('input[type=search]').val(filter);
     }
-    
+
     var initFilter = setFilter();
-    
+
     //make sure we initiate a search when the hash changes
     window.onhashchange = function () {
         var initFilter = setFilter();
         setSearch(initFilter);
     };
-    
+
     $(document).ready(
     function () {
         var t8lines = 2;
@@ -382,7 +394,7 @@ if (typeof dataSource !== "undefined") {
             "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
             "deferRender": true
         });
-        
+
         // Add event listener for truncate on draw
         dtable.on('draw.dt', function () {
             //$('.too-long').collapser({mode: 'lines', truncate: 2, showText: "more" });
@@ -399,13 +411,13 @@ if (typeof dataSource !== "undefined") {
                 $("div#pindex_filter input").val(initFilter);
             }
         });
-        
+
         // Add event listener for opening and closing details
         dtable.children("tbody").on('click', 'td.details-control', function () {
             var tr = $(this).closest('tr');
             var t8 = tr.children("td.too-long");
             var row = table.row(tr);
-            
+
             if (row.child.isShown()) {
                 // This row is already open - close it
                 row.child.hide();
@@ -420,8 +432,8 @@ if (typeof dataSource !== "undefined") {
                 t8.trunk8('revert');
             }
         });
-        
-        
+
+
         $('input[type=search]').on('click', function () {
             if (history.pushState) {
                 history.pushState(null, null, document.location.pathname);
@@ -430,13 +442,13 @@ if (typeof dataSource !== "undefined") {
             }
             setSearch('');
         });
-        
+
         if (initFilter) {
             table.column(2).search(initFilter);
             $("div#pindex_filter input").val(initFilter);
         }
     });
-    
+
     $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
         var table = $("#pindex").DataTable();
         var clearSearch = $('<img class = "delete" title="Cancel Search" alt="" src="data:image/png;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD2SURBVHjaxFM7DoMwDH2pOESHHgDPcB223gKpAxK34EAMMIe1FCQOgFQxuflARVBSVepQS5Ht2PHn2RHMjF/ohB8p2gSZpprtyxEHX8dGTeMG0A5UlsD5rCSGvF55F4SpqpSm1GmCzPO3LXJy1LXllwvodoMsCpNVy2hbYBjCLRiaZ8u7Dng+QXlu9b4H7ncvBmKbwoYBWR4kaXv3YmAMyoEpjv2PdWUHcP1j1ECqFpyj777YA6Yss9KyuEeDaW0cCsCUJMDjYUE8kr5TNuOzC+JiMI5uz2rmJvNWvidwcJXXx8IAuwb6uMqrY2iVgzbx99/4EmAAarFu0IJle5oAAAAASUVORK5CYII="  style="cursor:pointer;padding-left:.5em;" />');
@@ -463,13 +475,13 @@ if (typeof dataSource !== "undefined") {
         //16px the image width
         $(oSettings.nTableWrapper).find('div.dataTables_filter input').css('padding-right', '16px');
     };
-    
+
     //auto-execute, no code needs to be added
     $.fn.dataTable.models.oSettings[ 'aoInitComplete'].push({
         "fn": $.fn.dataTableExt.oApi.clearSearch,
         "sName": 'whatever'
     });
-    
+
     $(document).ready(function () {
         $.protip({
             defaults: {
