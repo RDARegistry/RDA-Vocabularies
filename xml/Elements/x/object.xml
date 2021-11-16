@@ -21,8 +21,8 @@
         
         <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-12-17</dc:issued>
     <rdf:type>owl:Ontology</rdf:type>
-        <owl:versionInfo>v4.1.2</owl:versionInfo>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-03</dc:modified>
+        <owl:versionInfo>v5.0.0</owl:versionInfo>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-11-12</dc:modified>
     </owl:Ontology>
 
 <!-- Properties -->
@@ -90,6 +90,7 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30277"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40081"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/object/P70019"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50378"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20311"/>
     </rdf:Description>
 
@@ -211,7 +212,6 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40085"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/object/P70002"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50413"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50413"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20315"/>
     </rdf:Description>
 
@@ -220,60 +220,69 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">is RDA entity critiqued in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/RDAEntityCritiquedIn.en"/>
+  <rdfs:label xml:lang="en">is RDA entity critiqued by</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00024"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00014"/>
+  
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10359"/>
-</rdf:Description>
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00026"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/rdaEntityCritiquedBy.en"/>
+    </rdf:Description>
 
 <!-- Property: is RDA entity described in -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/object/P00025">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">is RDA entity described in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/RDAEntityDescribedIn.en"/>
+  <rdfs:label xml:lang="en">is RDA entity described by</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00025"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00014"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10360"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/rdaEntityDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00030"/>
+    </rdf:Description>
 
 <!-- Property: is RDA entity evaluated in -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/object/P00026">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">is RDA entity evaluated in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/RDAEntityEvaluatedIn.en"/>
+  <rdfs:label xml:lang="en">is RDA entity evaluated by</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00026"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00014"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10361"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/rdaEntityEvaluatedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00024"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00027"/>
+    </rdf:Description>
 
 <!-- Property: is RDA entity reviewed in -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/object/P00027">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">is RDA entity reviewed in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/RDAEntityReviewedIn.en"/>
+  <rdfs:label xml:lang="en">is RDA entity reviewed by</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00027"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00014"/>
+  
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10362"/>
-</rdf:Description>
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00026"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/rdaEntityReviewedBy.en"/>
+    </rdf:Description>
 
 <!-- Property: has related agent of RDA entity -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/x/object/P00006">
@@ -317,7 +326,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">has related collective agentof RDA entity</rdfs:label>
+  <rdfs:label xml:lang="en">has related collective agent of RDA entity</rdfs:label>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
@@ -636,6 +645,7 @@
         
         
     <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/relatedRDAEntityOfRDAEntity.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00028"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10307"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70010"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00006"/>
@@ -650,7 +660,7 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40068"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/object/P80010"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/p/object/P70013"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/datatype/P20297"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50304"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20297"/>
     </rdf:Description>
 
@@ -752,10 +762,8 @@
 
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/w/object/P10264"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70014"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00024"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00025"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00026"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/x/object/P00027"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30253"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40061"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/n/object/P80014"/>
@@ -827,4 +835,16 @@
     <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1001">
         <skos:prefLabel xml:lang="en">Published</skos:prefLabel>
     </skos:Concept>
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/x/object/P00030">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/x/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is RDA entity described with metadata by</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10013"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/x/object/rdaEntityDescribedWithMetadataBy.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10622"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/P00030"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00025"/>
+    </rdf:Description>
 </rdf:RDF>

@@ -21,8 +21,8 @@
         
         <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-18</dc:issued>
     <rdf:type>owl:Ontology</rdf:type>
-        <owl:versionInfo>v4.1.2</owl:versionInfo>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-03</dc:modified>
+        <owl:versionInfo>v5.0.0</owl:versionInfo>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-11-12</dc:modified>
     </owl:Ontology>
 
 <!-- Properties -->
@@ -115,18 +115,18 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">is accompanied by item</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to an item that is brought together with another item after being issued.</skos:definition>
+  <rdfs:label xml:lang="en">is held with</rdfs:label>
+  <skos:definition xml:lang="en">Relates an item to an item that is held in the same collection as an item.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40046"/>
   
   
   
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/accompaniedByItem.en"/>
   
-  <rdakit:toolkitLabel xml:lang="en">accompanied by item</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An item that is brought together with another item after being issued.</rdakit:toolkitDefinition>
+  
+  <rdakit:toolkitLabel xml:lang="en">held with</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is held in the same collection as an item.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est accompagné d’un item</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec un item qui est placé avec un autre item après publication.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">accompagné d’un item</rdakit:toolkitLabel>
@@ -211,7 +211,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40032"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/heldWith"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40032"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40036"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40035"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40029"/>
@@ -1132,14 +1133,14 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
   <rdfs:label xml:lang="en">is bound with</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to an item that is physically combined or joined with an item.</skos:definition>
+  <skos:definition xml:lang="en">Relates an item to an item that is physically combined with an item to form a collection manifestation.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40029"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/boundWith.en"/>
   
   <rdakit:toolkitLabel xml:lang="en">bound with</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An item that is physically combined or joined with an item.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">An item that is physically combined with an item to form a collection manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est relié avec</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec un item qui est physiquement combiné ou joint à un item.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">relié avec</rdakit:toolkitLabel>
@@ -1299,17 +1300,17 @@
 <!-- Property: has collection registrar agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40005">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">has collection registrar agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to an agent who is a curator who lists or inventories items in a collection aggregate.</skos:definition>
+  
+  <rdfs:label xml:lang="en">has collection registrar agent (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">Relates an item to an agent who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40017"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectionRegistrarAgent.en"/>
   
-  <rdakit:toolkitLabel xml:lang="en">collection registrar agent</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An agent who is a curator who lists or inventories items in a collection aggregate.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">collection registrar agent (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An agent who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour agent conservateur d’une collection de ressources</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec un agent conservateur qui dresse une liste ou un inventaire des items faisant partie d’un agrégat par regroupement.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">agent conservateur d’une collection de ressources</rdakit:toolkitLabel>
@@ -1395,7 +1396,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40122"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40122"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40106"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40005"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40005"/>
@@ -1404,12 +1406,12 @@
 <!-- Property: has collection registrar collective agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40122">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has collection registrar collective agent</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collection registrar collective agent (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectionRegistrarCollectiveAgent.en"/>
-  <skos:definition xml:lang="en">Relates an item to a collective agent who is a curator who lists or inventories items in a collection aggregate.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">collection registrar collective agent</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A collective agent who is a curator who lists or inventories items in a collection aggregate.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a collective agent who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">collection registrar collective agent (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A collective agent who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -1478,7 +1480,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40138"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40138"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40154"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40122"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40122"/>
@@ -1487,12 +1490,12 @@
 <!-- Property: has collection registrar corporate body -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40138">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has collection registrar corporate body</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collection registrar corporate body (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectionRegistrarCorporateBody.en"/>
-  <skos:definition xml:lang="en">Relates an item to a corporate body who is a curator who lists or inventories items in a collection aggregate.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">collection registrar corporate body</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A corporate body who is a curator who lists or inventories items in a collection aggregate.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a corporate body who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">collection registrar corporate body (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -1549,19 +1552,20 @@
         <rdakit:toolkitDefinition xml:lang="it">Ente curatore che elenca o inventaria gli item in un aggregato collezione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40138"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40138"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40138"/>
     </rdf:Description>
 
 <!-- Property: has collection registrar family -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40154">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has collection registrar family</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collection registrar family (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectionRegistrarFamily.en"/>
-  <skos:definition xml:lang="en">Relates an item to a family who is a curator who lists or inventories items in a collection aggregate.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">collection registrar family</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A family who is a curator who lists or inventories items in a collection aggregate.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a family who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">collection registrar family (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A family who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -1618,19 +1622,20 @@
         <rdakit:toolkitDefinition xml:lang="it">Famiglia curatore  che elenca o inventaria gli item in un aggregato collezione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40154"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40154"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40154"/>
     </rdf:Description>
 
 <!-- Property: has collection registrar person -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40106">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has collection registrar person</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collection registrar person (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectionRegistrarPerson.en"/>
-  <skos:definition xml:lang="en">Relates an item to a person who is a curator who lists or inventories items in a collection aggregate.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">collection registrar person</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A person who is a curator who lists or inventories items in a collection aggregate.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a person who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">collection registrar person (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who is a curator who lists or inventories items in a collection aggregate. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -1691,24 +1696,25 @@
         <rdakit:toolkitDefinition xml:lang="it">Curatore persona che elenca o inventaria gli item in un aggregato collezione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40106"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40106"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40106"/>
     </rdf:Description>
 
 <!-- Property: has collector agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40004">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">has collector agent</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collector agent (Deprecated)</rdfs:label>
   <skos:definition xml:lang="en">Relates an item to an agent who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40017"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectorAgent.en"/>
   
-  <rdakit:toolkitLabel xml:lang="en">collector agent</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An agent who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">collector agent (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An agent who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour agent collectionneur</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec un agent conservateur qui rassemble des items de diverses sources qui sont arrangés, décrits et catalogués comme une collection.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">agent collectionneur</rdakit:toolkitLabel>
@@ -1800,7 +1806,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40121"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40121"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40105"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40004"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40004"/>
@@ -1809,12 +1816,12 @@
 <!-- Property: has collector collective agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40121">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has collector collective agent</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collector collective agent (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectorCollectiveAgent.en"/>
-  <skos:definition xml:lang="en">Relates an item to a collective agent who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">collector collective agent</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A collective agent who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a collective agent who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">collector collective agent (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A collective agent who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -1879,7 +1886,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40137"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40137"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40153"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40121"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40121"/>
@@ -1888,12 +1896,12 @@
 <!-- Property: has collector corporate body -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40137">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has collector corporate body</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collector corporate body (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectorCorporateBody.en"/>
-  <skos:definition xml:lang="en">Relates an item to a corporate body who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">collector corporate body</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A corporate body who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a corporate body who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">collector corporate body (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -1954,19 +1962,20 @@
         <rdakit:toolkitDefinition xml:lang="it">Ente curatore che raccoglie item da varie fonti, che sono organizzati, descritti o catalogati come una collezione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40137"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40137"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40137"/>
     </rdf:Description>
 
 <!-- Property: has collector family -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40153">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has collector family</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collector family (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectorFamily.en"/>
-  <skos:definition xml:lang="en">Relates an item to a family who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">collector family</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A family who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a family who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">collector family (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A family who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -2027,19 +2036,20 @@
         <rdakit:toolkitDefinition xml:lang="it">Famiglia curatore che raccoglie item da varie fonti, che sono organizzati, descritti o catalogati come una collezione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40153"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40153"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40153"/>
     </rdf:Description>
 
 <!-- Property: has collector person -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40105">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has collector person</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has collector person (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/collectorPerson.en"/>
-  <skos:definition xml:lang="en">Relates an item to a person who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">collector person</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A person who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a person who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">collector person (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who is a curator who brings together items from various sources that are arranged, described, or catalogued as a collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -2100,7 +2110,8 @@
         <rdakit:toolkitDefinition xml:lang="it">Curatore persona che raccoglie item da varie fonti, che sono organizzati, descritti o catalogati come una collezione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40105"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40105"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40105"/>
     </rdf:Description>
 
@@ -2317,10 +2328,10 @@
 <!-- Property: has curator agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40017">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">has curator agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an item to an agent who conceives or manages the aggregation of an item in an exhibition or collection.</skos:definition>
+  
+  <rdfs:label xml:lang="en">has curator agent (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">Relates an item to an agent who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40072"/>
@@ -2328,8 +2339,8 @@
   
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/curatorAgent.en"/>
   
-  <rdakit:toolkitLabel xml:lang="en">curator agent</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">An agent who conceives or manages the aggregation of an item in an exhibition or collection.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">curator agent (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">An agent who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">a pour agent conservateur</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec un agent qui conçoit ou gère l’agrégation d’un item dans une exposition ou une collection.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">agent conservateur</rdakit:toolkitLabel>
@@ -2432,7 +2443,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40005"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40005"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40004"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40115"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40099"/>
@@ -2443,12 +2455,12 @@
 <!-- Property: has curator collective agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40115">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has curator collective agent</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has curator collective agent (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/curatorCollectiveAgent.en"/>
-  <skos:definition xml:lang="en">Relates an item to a collective agent who conceives or manages the aggregation of an item in an exhibition or collection.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">curator collective agent</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A collective agent who conceives or manages the aggregation of an item in an exhibition or collection.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a collective agent who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">curator collective agent (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A collective agent who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -2525,7 +2537,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40122"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40122"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40121"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40131"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40147"/>
@@ -2536,12 +2549,12 @@
 <!-- Property: has curator corporate body -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40131">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has curator corporate body</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has curator corporate body (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/curatorCorporateBody.en"/>
-  <skos:definition xml:lang="en">Relates an item to a corporate body who conceives or manages the aggregation of an item in an exhibition or collection.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">curator corporate body</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A corporate body who conceives or manages the aggregation of an item in an exhibition or collection.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a corporate body who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">curator corporate body (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A corporate body who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -2610,7 +2623,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40138"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40138"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40137"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40131"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40131"/>
@@ -2619,12 +2633,12 @@
 <!-- Property: has curator family -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40147">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has curator family</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has curator family (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/curatorFamily.en"/>
-  <skos:definition xml:lang="en">Relates an item to a family who conceives or manages the aggregation of an item in an exhibition or collection.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">curator family</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A family who conceives or manages the aggregation of an item in an exhibition or collection.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a family who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">curator family (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A family who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -2693,7 +2707,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40154"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40154"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40153"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40147"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40147"/>
@@ -2702,12 +2717,12 @@
 <!-- Property: has curator person -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40099">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">has curator person</rdfs:label>
+  
+  <rdfs:label xml:lang="en">has curator person (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/curatorPerson.en"/>
-  <skos:definition xml:lang="en">Relates an item to a person who conceives or manages the aggregation of an item in an exhibition or collection.</skos:definition>
-  <rdakit:toolkitLabel xml:lang="en">curator person</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A person who conceives or manages the aggregation of an item in an exhibition or collection.</rdakit:toolkitDefinition>
+  <skos:definition xml:lang="en">Relates an item to a person who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</skos:definition>
+  <rdakit:toolkitLabel xml:lang="en">curator person (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A person who conceives or manages the aggregation of an item in an exhibition or collection. (Deprecated)</rdakit:toolkitDefinition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
@@ -2776,7 +2791,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40106"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40106"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40105"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40099"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40099"/>
@@ -7656,16 +7672,16 @@
 <!-- Property: is item critiqued in -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40065">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is item critiqued in</rdfs:label>
+  <rdfs:label xml:lang="en">is item critiqued in (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/itemCritiquedIn.en"/>
-  <skos:definition xml:lang="en">Relates an item to a work that is a critical evaluation of an item.</skos:definition>
+  <skos:definition xml:lang="en">Relates an item to a work that is a critical evaluation of an item. (Deprecated)</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   
-  <rdakit:toolkitLabel xml:lang="en">item critiqued in</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that is a critical evaluation of an item.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">item critiqued in (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is a critical evaluation of an item. (Deprecated)</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est un item critiqué dans</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec une œuvre qui contient une évaluation critique d’un item.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">item critiqué dans</rdakit:toolkitLabel>
@@ -7751,7 +7767,8 @@
         <rdakit:toolkitDefinition xml:lang="it">Opera che contiene una valutazione critica di un item.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40065"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40065"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40065"/>
     </rdf:Description>
 
@@ -7761,13 +7778,13 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is item described in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/itemDescribedIn.en"/>
-  <skos:definition xml:lang="en">Relates an item to a work that describes an item.</skos:definition>
+  <rdfs:label xml:lang="en">is item described by</rdfs:label>
+  
+  <skos:definition xml:lang="en">Relates an item to a work that is a description of an item.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   
-  <rdakit:toolkitLabel xml:lang="en">item described in</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that describes an item.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">item described by</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is a description of an item.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est un item décrit dans</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec une œuvre qui décrit un item.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">item décrit dans</rdakit:toolkitLabel>
@@ -7873,11 +7890,13 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40063"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/itemDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40063"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40064"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40065"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40066"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40067"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40164"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40062"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40062"/>
     </rdf:Description>
@@ -7885,16 +7904,16 @@
 <!-- Property: is item evaluated in -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40066">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is item evaluated in</rdfs:label>
+  <rdfs:label xml:lang="en">is item evaluated in (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/itemEvaluatedIn.en"/>
-  <skos:definition xml:lang="en">Relates an item to a work that examines or judges an item.</skos:definition>
+  <skos:definition xml:lang="en">Relates an item to a work that examines or judges an item. (Deprecated)</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   
-  <rdakit:toolkitLabel xml:lang="en">item evaluated in</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that examines or judges an item.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">item evaluated in (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that examines or judges an item. (Deprecated)</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est un item évalué dans</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec une œuvre qui examine ou juge un item.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">item évalué dans</rdakit:toolkitLabel>
@@ -7980,23 +7999,24 @@
         <rdakit:toolkitDefinition xml:lang="it">Opera che esamina o giudica un item.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40066"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40066"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40066"/>
     </rdf:Description>
 
 <!-- Property: is item reviewed in -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40067">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is item reviewed in</rdfs:label>
+  <rdfs:label xml:lang="en">is item reviewed in (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/itemReviewedIn.en"/>
-  <skos:definition xml:lang="en">Relates an item to a work that is a brief evaluation of an item.</skos:definition>
+  <skos:definition xml:lang="en">Relates an item to a work that is a brief evaluation of an item. (Deprecated)</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   
-  <rdakit:toolkitLabel xml:lang="en">item reviewed in</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that is a brief evaluation of an item.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">item reviewed in (Deprecated)</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is a brief evaluation of an item. (Deprecated)</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est un item recensé dans</rdfs:label>
   <skos:definition xml:lang="fr">Met un item en relation avec une œuvre qui contient une brève évaluation d’un item.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">item recensé dans</rdakit:toolkitLabel>
@@ -8082,7 +8102,8 @@
         <rdakit:toolkitDefinition xml:lang="it">Opera che contiene una breve valutazione di un item.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40067"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40067"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40067"/>
     </rdf:Description>
 
@@ -10848,6 +10869,7 @@
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40049"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40092"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40161"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40071"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40071"/>
     </rdf:Description>
@@ -11147,7 +11169,8 @@
         <rdakit:toolkitDefinition xml:lang="it">Luogo associato a un item.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40077"/>
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40162"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40077"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40077"/>
     </rdf:Description>
 
@@ -13337,4 +13360,49 @@
     <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
         <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
     </skos:Concept>
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40161">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is holding of</rdfs:label>
+        <skos:definition xml:lang="en">Relates an item to a manifestation of a collection work that includes the item.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/holdingOf.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">holding of</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A manifestation of a collection work that includes the item.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40071"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40161"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40161"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40162">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has location of item</rdfs:label>
+        <skos:definition xml:lang="en">Relates an item to a place where an item is held, stored, or made available for access.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/locationOfItem.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">location of item</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A place where an item is held, stored, or made available for access.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40077"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40162"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40162"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/i/P40164">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/i/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is item described with metadata by</rdfs:label>
+        <skos:definition xml:lang="en">Relates an item to a work that is a metadata work for an item.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/i/itemDescribedWithMetadataBy.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">item described with metadata by</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A work that is a metadata work for an item.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/i/P40062"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/datatype/P40164"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/object/P40164"/>
+    </rdf:Description>
 </rdf:RDF>

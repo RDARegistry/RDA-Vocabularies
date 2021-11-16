@@ -21,8 +21,8 @@
         
         <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-09-18</dc:issued>
     <rdf:type>owl:Ontology</rdf:type>
-        <owl:versionInfo>v4.1.2</owl:versionInfo>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-03</dc:modified>
+        <owl:versionInfo>v5.0.0</owl:versionInfo>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-11-12</dc:modified>
     </owl:Ontology>
 
 <!-- Properties -->
@@ -575,10 +575,10 @@
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50426">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is agent described in</rdfs:label>
+  <rdfs:label xml:lang="en">is agent described by</rdfs:label>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/agentDescribedIn.en"/>
+  
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50426"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
@@ -592,8 +592,10 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50427"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/agentDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50427"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50368"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51108"/>
     </rdf:Description>
 
 <!-- Property: is aggregator collective agent of -->
@@ -618,6 +620,7 @@
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50830"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50981"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50711"/>
     </rdf:Description>
 
 <!-- Property: is aggregator corporate body of -->
@@ -634,7 +637,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50679"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10542"/>
-</rdf:Description>
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50862"/>
+    </rdf:Description>
 
 <!-- Property: is aggregator family of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50981">
@@ -650,7 +654,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50995"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50679"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10589"/>
-</rdf:Description>
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51013"/>
+    </rdf:Description>
 
 <!-- Property: is aggregator agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50453">
@@ -671,6 +676,7 @@
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50679"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50528"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50189"/>
     </rdf:Description>
 
 <!-- Property: is aggregator person of -->
@@ -687,7 +693,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50542"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50453"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10448"/>
-</rdf:Description>
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50560"/>
+    </rdf:Description>
 
 <!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50105">
@@ -840,8 +847,9 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10009"/>
   <rdfs:label xml:lang="en">is appellant corporate body of</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50042"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50305"/>
-</rdf:Description>
+  
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
+    </rdf:Description>
 
 <!-- Property: is appellant person of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50122">
@@ -886,7 +894,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50373"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00017"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50373"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50379"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50382"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50383"/>
@@ -2104,10 +2113,10 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/authorOfExpressionOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
+  
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50452"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50451"/>
+  
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20332"/>
 
     
@@ -3436,31 +3445,33 @@
 <!-- Property: is collection registrar agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50046">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectionRegistrarAgentOf.en"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40005"/>
-  <rdfs:label xml:lang="en">is collection registrar agent of</rdfs:label>
+  <rdfs:label xml:lang="en">is collection registrar agent of (Deprecated)</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50046"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
+  
   
   
 
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50791"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50133"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50791"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50640"/>
     </rdf:Description>
 
 <!-- Property: is collection registrar collective agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50791">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collection registrar collective agent of</rdfs:label>
+  
+  <rdfs:label xml:lang="en">is collection registrar collective agent of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectionRegistrarCollectiveAgentOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
@@ -3476,15 +3487,16 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50942"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50942"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51093"/>
     </rdf:Description>
 
 <!-- Property: is collection registrar corporate body of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50942">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collection registrar corporate body of</rdfs:label>
+  
+  <rdfs:label xml:lang="en">is collection registrar corporate body of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectionRegistrarCorporateBodyOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
@@ -3494,13 +3506,14 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50932"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50791"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40138"/>
-</rdf:Description>
+<reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+    </rdf:Description>
 
 <!-- Property: is collection registrar family of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51093">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collection registrar family of</rdfs:label>
+  
+  <rdfs:label xml:lang="en">is collection registrar family of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectionRegistrarFamilyOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
@@ -3510,13 +3523,14 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51083"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50791"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40154"/>
-</rdf:Description>
+<reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+    </rdf:Description>
 
 <!-- Property: is collection registrar person of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50640">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collection registrar person of</rdfs:label>
+  
+  <rdfs:label xml:lang="en">is collection registrar person of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectionRegistrarPersonOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
@@ -3526,16 +3540,17 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50630"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50046"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40106"/>
-</rdf:Description>
+<reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+    </rdf:Description>
 
 <!-- Property: is collective agent described in -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50427">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collective agent described in</rdfs:label>
+  <rdfs:label xml:lang="en">is collective agent described by</rdfs:label>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectiveAgentDescribedIn.en"/>
+  
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50427"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
@@ -3548,39 +3563,43 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50369"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectiveAgentDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50369"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50370"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51109"/>
     </rdf:Description>
 
 <!-- Property: is collector agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50045">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorAgentOf.en"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40004"/>
-  <rdfs:label xml:lang="en">is collector agent of</rdfs:label>
+  <rdfs:label xml:lang="en">is collector agent of (Deprecated)</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50045"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
+  
   
   
 
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50786"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50133"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50786"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50635"/>
     </rdf:Description>
 
 <!-- Property: is collector collective agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50786">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collector collective agent of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorCollectiveAgentOf.en"/>
+  
+  <rdfs:label xml:lang="en">is collector collective agent of (Deprecated)</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
@@ -3595,16 +3614,18 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50937"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorCollectiveAgentof.en"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50937"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51088"/>
     </rdf:Description>
 
 <!-- Property: is collector corporate body of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50937">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collector corporate body of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorCorporateBodyOf.en"/>
+  
+  <rdfs:label xml:lang="en">is collector corporate body of (Deprecated)</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005"/>
@@ -3613,14 +3634,16 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50932"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50786"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40137"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorCorporateBodyof.en"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+    </rdf:Description>
 
 <!-- Property: is collector family of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51088">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collector family of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorFamilyOf.en"/>
+  
+  <rdfs:label xml:lang="en">is collector family of (Deprecated)</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
@@ -3629,14 +3652,16 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51083"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50786"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40153"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorFamilyof.en"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+    </rdf:Description>
 
 <!-- Property: is collector person of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50635">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is collector person of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorPersonOf.en"/>
+  
+  <rdfs:label xml:lang="en">is collector person of (Deprecated)</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004"/>
@@ -3645,7 +3670,9 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50630"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50045"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40105"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectorPersonof.en"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+    </rdf:Description>
 
 <!-- Property: is collotyper agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50178">
@@ -4045,15 +4072,17 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10055"/>
   <rdfs:label xml:lang="en">is compiler agent of</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50189"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50204"/>
+  
   
   
 
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50711"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50453"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50711"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50560"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51118"/>
     </rdf:Description>
 
 <!-- Property: is compiler collective agent of -->
@@ -4067,7 +4096,7 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50711"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50693"/>
+  
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50189"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10491"/>
   
@@ -4076,8 +4105,10 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50862"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50679"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50862"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51013"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51119"/>
     </rdf:Description>
 
 <!-- Property: is compiler corporate body of -->
@@ -4091,10 +4122,12 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50862"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
+  
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50711"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10538"/>
-</rdf:Description>
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50830"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51120"/>
+    </rdf:Description>
 
 <!-- Property: is compiler family of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51013">
@@ -4107,10 +4140,12 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51013"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50995"/>
+  
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50711"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10585"/>
-</rdf:Description>
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50981"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51121"/>
+    </rdf:Description>
 
 <!-- Property: is compiler person of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50560">
@@ -4123,10 +4158,12 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50560"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50542"/>
+  
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50189"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10444"/>
-</rdf:Description>
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50528"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51122"/>
+    </rdf:Description>
 
 <!-- Property: has component of merger -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50232">
@@ -6379,10 +6416,10 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/contributorToAggregatedContentOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
+  
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50451"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50204"/>
+  
   
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20331"/>
 
@@ -6401,8 +6438,7 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50452"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50150"/>
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50150"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50151"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50134"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50156"/>
@@ -6418,14 +6454,16 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50369"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is corporate body described in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/corporateBodyDescribedIn.en"/>
+  <rdfs:label xml:lang="en">is corporate body described by</rdfs:label>
+  
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10326"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50251"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50427"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/corporateBodyDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51110"/>
+    </rdf:Description>
 
 <!-- Property: has corporate body member of collective agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50433">
@@ -6905,9 +6943,7 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50186"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50294"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50194"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50189"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50187"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50451"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50693"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50542"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50185"/>
@@ -6919,6 +6955,7 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50201"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50184"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50293"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51113"/>
     </rdf:Description>
 
 <!-- Property: is creator collective agent of expression of -->
@@ -7075,7 +7112,6 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50676"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50700"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50643"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50711"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50673"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50995"/>
@@ -7088,6 +7124,7 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50701"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50690"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50699"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51114"/>
     </rdf:Description>
 
 <!-- Property: is creator corporate body of expression of -->
@@ -7248,6 +7285,7 @@
         
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50830"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50042"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50002"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50831"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50842"/>
@@ -7255,9 +7293,6 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50827"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50851"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50794"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50046"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50045"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50862"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50824"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50858"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50044"/>
@@ -7276,11 +7311,13 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50856"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50264"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50857"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50043"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50852"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50005"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50841"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50850"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50860"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51115"/>
     </rdf:Description>
 
 <!-- Property: is creator family of expression of -->
@@ -7415,7 +7452,6 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50978"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51002"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50945"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51013"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50975"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50996"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50983"/>
@@ -7426,6 +7462,7 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51003"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50992"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51001"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51116"/>
     </rdf:Description>
 
 <!-- Property: is creator person of expression of -->
@@ -7576,14 +7613,15 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50525"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50549"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50492"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50560"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50522"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50259"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50257"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50543"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50530"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50559"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50527"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50526"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50126"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50086"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50555"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50124"/>
@@ -7592,6 +7630,7 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50539"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50548"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50001"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51117"/>
     </rdf:Description>
 
 <!-- Property: is criminal defendant corporate body of -->
@@ -7627,14 +7666,14 @@
 <!-- Property: is curator agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50133">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/curatorAgentOf.en"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10003"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/i/object/P40017"/>
-  <rdfs:label xml:lang="en">is curator agent of</rdfs:label>
+  <rdfs:label xml:lang="en">is curator agent of (Deprecated)</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50133"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50308"/>
   
@@ -7643,15 +7682,18 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50781"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50046"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50045"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50781"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50630"/>
     </rdf:Description>
 
 <!-- Property: is curator collective agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50781">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is curator collective agent of</rdfs:label>
+  
+  <rdfs:label xml:lang="en">is curator collective agent of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/curatorCollectiveAgentOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
@@ -7673,7 +7715,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50791"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50791"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50786"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50932"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51083"/>
@@ -7682,8 +7725,8 @@
 <!-- Property: is curator corporate body of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50932">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is curator corporate body of</rdfs:label>
+  
+  <rdfs:label xml:lang="en">is curator corporate body of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/curatorCorporateBodyOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
@@ -7699,15 +7742,16 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50942"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50942"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50937"/>
     </rdf:Description>
 
 <!-- Property: is curator family of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51083">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is curator family of</rdfs:label>
+  
+  <rdfs:label xml:lang="en">is curator family of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/curatorFamilyOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
@@ -7723,15 +7767,16 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51093"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51093"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51088"/>
     </rdf:Description>
 
 <!-- Property: is curator person of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50630">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is curator person of</rdfs:label>
+  
+  <rdfs:label xml:lang="en">is curator person of (Deprecated)</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/curatorPersonOf.en"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
@@ -7747,7 +7792,8 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50640"/>
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50640"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50635"/>
     </rdf:Description>
 
@@ -8518,8 +8564,9 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10284"/>
   <rdfs:label xml:lang="en">is degree committee member of</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50257"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50542"/>
-</rdf:Description>
+  
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50542"/>
+    </rdf:Description>
 
 <!-- Property: is degree granting institution of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50003">
@@ -8674,8 +8721,9 @@
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50053"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50326"/>
-</rdf:Description>
+  
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50443"/>
+    </rdf:Description>
 
 <!-- Property: has descendant family of person -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50099">
@@ -9557,7 +9605,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is editor agent of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorAgentOfTextOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
@@ -9571,7 +9619,8 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50720"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorAgentOf.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50720"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50569"/>
     </rdf:Description>
 
@@ -9604,7 +9653,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is editor collective agent of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorCollectiveAgentOfTextOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
@@ -9619,7 +9668,8 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50871"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorCollectiveAgentOf.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50871"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51022"/>
     </rdf:Description>
 
@@ -9644,7 +9694,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is editor corporate body of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorCorporateBodyOfTextOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005"/>
@@ -9653,7 +9703,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50926"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50720"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20456"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorCorporateBodyOf.en"/>
+    </rdf:Description>
 
 <!-- Property: is editor family of moving image work of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51026">
@@ -9676,7 +9727,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is editor family of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorFamilyOfTextOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
@@ -9685,7 +9736,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51077"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50720"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20515"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorFamilyOf.en"/>
+    </rdf:Description>
 
 <!-- Property: is editorial director agent of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50289">
@@ -9818,7 +9870,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is editor person of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorPersonOfTextOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004"/>
@@ -9827,7 +9879,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50624"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50450"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20338"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/editorPersonOf.en"/>
+    </rdf:Description>
 
 <!-- Property: has employee -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50026">
@@ -10084,14 +10137,16 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50370"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is family described in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/familyDescribedIn.en"/>
+  <rdfs:label xml:lang="en">is family described by</rdfs:label>
+  
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10327"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50250"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50427"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/familyDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51111"/>
+    </rdf:Description>
 
 <!-- Property: has family member of collective agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50436">
@@ -10204,7 +10259,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50326"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50438"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50441"/>
-</rdf:Description>
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50372"/>
+    </rdf:Description>
 
 <!-- Property: has fellow student -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50279">
@@ -12533,8 +12589,9 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10044"/>
   <rdfs:label xml:lang="en">is judge of</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50126"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/datatype/P50542"/>
-</rdf:Description>
+  
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50542"/>
+    </rdf:Description>
 
 <!-- Property: has jurisdiction governed -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50425">
@@ -12562,6 +12619,7 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10018"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50069"/>
 <rdfs:label xml:lang="en">is jurisdiction governed of (Deprecated)</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50131"/>
     </rdf:Description>
 
 <!-- Property: is landscape architect agent of -->
@@ -14762,7 +14820,8 @@
   <rdfs:label xml:lang="en">is other agent associated with work of (Deprecated)</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50131"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50305"/>
-</rdf:Description>
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50069"/>
+    </rdf:Description>
 
 <!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50260">
@@ -15614,14 +15673,16 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50368"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is person described in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/personDescribedIn.en"/>
+  <rdfs:label xml:lang="en">is person described by</rdfs:label>
+  
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10325"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50249"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50426"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/personDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51112"/>
+    </rdf:Description>
 
 <!-- Property: has person member of collective agent -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50445">
@@ -15723,7 +15784,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50445"/>
 
     
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50060"/>
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50055"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50060"/>
     </rdf:Description>
 
 <!-- Property: is person member of family of -->
@@ -15754,7 +15816,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerOfWorkAgentOf.en"/>
+  
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
   <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10056"/>
@@ -15767,7 +15829,8 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50706"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerAgentOfWorkOf.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50706"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50555"/>
     </rdf:Description>
 
@@ -15776,7 +15839,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is photographer collective agent of work of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerOfWorkCollectiveAgentOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
@@ -15791,7 +15854,8 @@
         
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50857"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerCollectiveAgentOfWorkOf.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50857"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51008"/>
     </rdf:Description>
 
@@ -15800,7 +15864,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is photographer corporate body of work of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerOfWorkCorporateBodyOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005"/>
@@ -15809,14 +15873,15 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50706"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10539"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerCorporateBodyOfWorkOf.en"/>
+    </rdf:Description>
 
 <!-- Property: is photographer family of work of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51008">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is photographer family of work of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerOfWorkFamilyOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
@@ -15825,7 +15890,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50995"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50706"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10586"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerFamilyOfWorkOf.en"/>
+    </rdf:Description>
 
 <!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50272">
@@ -15847,7 +15913,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">is photographer person of work of</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerOfWorkPersonOf.en"/>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004"/>
@@ -15856,7 +15922,8 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50542"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50190"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10445"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/photographerPersonOfWorkOf.en"/>
+    </rdf:Description>
 
 <!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50031">
@@ -15963,8 +16030,9 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10010"/>
   <rdfs:label xml:lang="en">is plaintiff corporate body of</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50043"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50305"/>
-</rdf:Description>
+  
+<rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
+    </rdf:Description>
 
 <!-- Property: is plaintiff person of -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P50124">
@@ -16964,8 +17032,9 @@
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50099"/>
   <rdfs:label xml:lang="en">is descendant family of person of</rdfs:label>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P50055"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50325"/>
+  
 <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/descendantFamilyOfPersonOf.en"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50056"/>
     </rdf:Description>
 
 <!-- Property: is programmer agent of -->
@@ -18526,8 +18595,7 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50372"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50438"/>
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50438"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50443"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50422"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50424"/>
@@ -19231,7 +19299,6 @@
     
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50056"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50055"/>
     </rdf:Description>
 
 <!-- Property: has related person of person -->
@@ -19417,7 +19484,9 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50309"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00001"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50478"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50309"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50306"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50308"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50307"/>
@@ -19464,7 +19533,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50358"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50479"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50358"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50361"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50363"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50364"/>
@@ -19505,7 +19575,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50333"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50480"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50333"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50330"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50332"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50331"/>
@@ -19544,7 +19615,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50324"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50481"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50324"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50321"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50323"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50322"/>
@@ -19583,7 +19655,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50315"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50482"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50315"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50312"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50314"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50313"/>
@@ -19787,7 +19860,6 @@
         
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50209"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50042"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50262"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50211"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50204"/>
@@ -19801,7 +19873,6 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50130"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50270"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50131"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50043"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50357"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50311"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P50265"/>
@@ -23267,4 +23338,208 @@
     <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
         <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
     </skos:Concept>
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51108">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is agent described with metadata by</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/agentDescribedWithMetadataBy.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10610"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51108"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50426"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51109"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51112"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51109">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collective agent described with metadata by</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/collectiveAgentDescribedWithMetadataBy.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10611"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51109"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50427"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51108"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51110"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51111"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51110">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is corporate body described with metadata by</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/corporateBodyDescribedWithMetadataBy.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10612"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51110"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50369"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51109"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51111">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is family described with metadata by</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/familyDescribedWithMetadataBy.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10613"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51111"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50370"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51109"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51112">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is person described with metadata by</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/personDescribedWithMetadataBy.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10614"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51112"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50368"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51108"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51113">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collector agent of </rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectorAgentOf.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10629"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51113"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50204"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51114"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51117"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51114">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collector collective agent of </rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectorCollectiveAgentof.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10630"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51114"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50693"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51113"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51115"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51116"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51115">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collector corporate body of </rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectorCorporateBodyof.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10631"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51115"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50844"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51114"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51116">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collector family of </rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectorFamilyof.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10632"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51116"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50995"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51114"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51117">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collector person of </rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectorPersonof.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10633"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51117"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50542"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51113"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51118">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collection registrar agent of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectionRegistrarAgentOf.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10634"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51118"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50189"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51119"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51122"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51119">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collection registrar collective agent of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10011"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectionRegistrarCollectiveAgentOf.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10635"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51119"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50711"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51118"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51120"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/a/object/P51121"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51120">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collection registrar corporate body of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10005"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectionRegistrarCorporateBodyOf.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10636"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51120"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50862"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51119"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51121">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collection registrar family of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10008"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectionRegistrarFamilyOf.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10637"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51121"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51013"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51119"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/a/object/P51122">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/a/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is collection registrar person of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10004"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/a/object/isCollectionRegistrarPersonOf.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10638"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/P51122"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50560"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/a/object/P51118"/>
+    </rdf:Description>
 </rdf:RDF>

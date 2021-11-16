@@ -21,8 +21,8 @@
         
         <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-12-18</dc:issued>
     <rdf:type>owl:Ontology</rdf:type>
-        <owl:versionInfo>v4.1.2</owl:versionInfo>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-03</dc:modified>
+        <owl:versionInfo>v5.0.0</owl:versionInfo>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-11-12</dc:modified>
     </owl:Ontology>
 
 <!-- Properties -->
@@ -902,7 +902,8 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70005"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/object/P70058"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70005"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70002"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70004"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70003"/>
@@ -993,8 +994,8 @@
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/object/P70060">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/object/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
-  <rdfs:label xml:lang="en">is timespan described in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/object/timespanDescribedIn.en"/>
+  <rdfs:label xml:lang="en">is timespan described by</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010"/>
@@ -1002,7 +1003,9 @@
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70060"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/object/P70014"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10602"/>
-</rdf:Description>
+<reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/object/timespanDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/t/object/P70063"/>
+    </rdf:Description>
 
 <!-- Property: has variant access point for timespan -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/t/object/P70048">
@@ -1106,5 +1109,17 @@
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/t/object/P70040"/>
         <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70062"/>
         <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/object/P70034"/>
+    </rdf:Description>
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/t/object/P70063">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/t/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is timespan described with metadata by</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10010"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10001"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/t/object/timespanDescribedWithMetadataBy.en"/>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/w/object/P10620"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/P70063"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/t/object/P70060"/>
     </rdf:Description>
 </rdf:RDF>

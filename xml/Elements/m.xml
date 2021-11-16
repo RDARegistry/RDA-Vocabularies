@@ -21,8 +21,8 @@
         
         <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-18</dc:issued>
     <rdf:type>owl:Ontology</rdf:type>
-        <owl:versionInfo>v4.1.2</owl:versionInfo>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-03</dc:modified>
+        <owl:versionInfo>v5.0.0</owl:versionInfo>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-11-12</dc:modified>
     </owl:Ontology>
 
 <!-- Properties -->
@@ -17126,6 +17126,7 @@
         
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30279"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30461"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30272"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30272"/>
     </rdf:Description>
@@ -17525,6 +17526,7 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30253"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30135"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30334"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30466"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30265"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30265"/>
     </rdf:Description>
@@ -19191,17 +19193,17 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
-  <rdfs:label xml:lang="en">is issued with</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is issued on the same carrier as a manifestation being described.</skos:definition>
+  <rdfs:label xml:lang="en">is on carrier unit with</rdfs:label>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is a part of the same carrier unit as another part manifestation.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30027"/>
   
   
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/issuedWith.en"/>
   
-  <rdakit:toolkitLabel xml:lang="en">issued with</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is issued on the same carrier as a manifestation being described.</rdakit:toolkitDefinition>
+  
+  <rdakit:toolkitLabel xml:lang="en">on carrier unit with</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is a part of the same carrier unit as another part manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est publié avec</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une manifestation qui est publiée sur le même support matériel qu’une manifestation décrite.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">publié avec</rdakit:toolkitLabel>
@@ -19281,7 +19283,9 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30036"/>
+    <skos:altLabel xml:lang="en">issued with</skos:altLabel>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/onCarrierUnitWith.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30036"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30037"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30035"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30035"/>
@@ -20007,6 +20011,7 @@
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30103"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30303"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30460"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30140"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30140"/>
     </rdf:Description>
@@ -25057,7 +25062,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   
   <rdfs:label xml:lang="en">is accompanied by manifestation</rdfs:label>
-  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is issued with another manifestation, without any relationship to its content.</skos:definition>
+  <skos:definition xml:lang="en">Relates a manifestation to a manifestation that is a part of the same manifestation as another part manifestation.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30048"/>
@@ -25065,7 +25070,7 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/accompaniedByManifestation.en"/>
   
   <rdakit:toolkitLabel xml:lang="en">accompanied by manifestation</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is issued with another manifestation, without any relationship to its content.</rdakit:toolkitDefinition>
+  <rdakit:toolkitDefinition xml:lang="en">A manifestation that is a part of the same manifestation as another part manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est accompagné d’une manifestation</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une manifestation qui est publiée avec une autre manifestation, sans aucune relation avec son contenu.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">accompagné d’une manifestation</rdakit:toolkitLabel>
@@ -25280,12 +25285,12 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is manifestation reviewed in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationReviewedIn.en"/>
+  <rdfs:label xml:lang="en">is manifestation reviewed by</rdfs:label>
+  
   <skos:definition xml:lang="en">Relates a manifestation to a work that is a brief evaluation of a manifestation.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
   
-  <rdakit:toolkitLabel xml:lang="en">manifestation reviewed in</rdakit:toolkitLabel>
+  <rdakit:toolkitLabel xml:lang="en">manifestation reviewed by</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">A work that is a brief evaluation of a manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est une manifestation recensée dans</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une œuvre qui contient une brève évaluation d’une manifestation.</skos:definition>
@@ -25293,7 +25298,7 @@
   <rdakit:toolkitDefinition xml:lang="fr">Œuvre qui contient une brève évaluation d’une manifestation.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">reseñada en (manifestación)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una obra que contiene un evaluación breve de la manifestación descrita.</rdakit:toolkitDefinition>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30254"/>
+  
   <rdakit:instructionNumber>23.5</rdakit:instructionNumber>
   
   <rdakit:toolkitLabel xml:lang="nl">manifestatie besproken in</rdakit:toolkitLabel>
@@ -25371,7 +25376,9 @@
         <rdakit:toolkitDefinition xml:lang="it">Opera che contiene una breve valutazione di una manifestazione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30259"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30258"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationReviewedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30259"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30259"/>
     </rdf:Description>
 
@@ -25381,12 +25388,12 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is manifestation critiqued in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationCritiquedIn.en"/>
+  <rdfs:label xml:lang="en">is manifestation critiqued by</rdfs:label>
+  
   <skos:definition xml:lang="en">Relates a manifestation to a work that is a critical evaluation of a manifestation.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
   
-  <rdakit:toolkitLabel xml:lang="en">manifestation critiqued in</rdakit:toolkitLabel>
+  <rdakit:toolkitLabel xml:lang="en">manifestation critiqued by</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="en">A work that is a critical evaluation of a manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est une manifestation critiquée dans</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une œuvre qui contient une évaluation critique d’une manifestation.</skos:definition>
@@ -25394,7 +25401,7 @@
   <rdakit:toolkitDefinition xml:lang="fr">Œuvre qui contient une évaluation critique d’une manifestation.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">críticada en (manifestación)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una obra que contiene una evaluación crítica de la manifestación descrita.</rdakit:toolkitDefinition>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30254"/>
+  
   <rdakit:instructionNumber>23.5</rdakit:instructionNumber>
   
   <rdakit:toolkitLabel xml:lang="nl">manifestatie bekritiseerd in</rdakit:toolkitLabel>
@@ -25472,7 +25479,9 @@
         <rdakit:toolkitDefinition xml:lang="it">Opera che contiene una valutazione critica di una manifestazione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30257"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30258"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationCritiquedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30257"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30257"/>
     </rdf:Description>
 
@@ -25583,20 +25592,20 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is manifestation evaluated in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationEvaluatedIn.en"/>
-  <skos:definition xml:lang="en">Relates a manifestation to a work that examines or judges a manifestation.</skos:definition>
+  <rdfs:label xml:lang="en">is manifestation evaluated by</rdfs:label>
+  
+  <skos:definition xml:lang="en">Relates a manifestation to a work that is an examination or judgement of a manifestation.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
   
-  <rdakit:toolkitLabel xml:lang="en">manifestation evaluated in</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that examines or judges a manifestation.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">manifestation evaluated by</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is an examination or judgement of a manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est une manifestation évaluée dans</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une œuvre qui examine ou juge une manifestation.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">manifestation évaluée dans</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="fr">Œuvre qui examine ou juge une manifestation.</rdakit:toolkitDefinition>
   <rdakit:toolkitLabel xml:lang="es">evaluada en (manifestación)</rdakit:toolkitLabel>
   <rdakit:toolkitDefinition xml:lang="es">Una obra que examina o juzga la manifestación descrita.</rdakit:toolkitDefinition>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30254"/>
+  
   <rdakit:instructionNumber>23.5</rdakit:instructionNumber>
   
   <rdakit:toolkitLabel xml:lang="nl">manifestatie beoordeeld in</rdakit:toolkitLabel>
@@ -25674,7 +25683,11 @@
         <rdakit:toolkitDefinition xml:lang="it">Opera che esamina o giudica una manifestazione.</rdakit:toolkitDefinition>
     
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30258"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30253"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationEvaluatedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30259"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30257"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30258"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30258"/>
     </rdf:Description>
 
@@ -25684,13 +25697,13 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
-  <rdfs:label xml:lang="en">is manifestation described in</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationDescribedIn.en"/>
-  <skos:definition xml:lang="en">Relates a manifestation to a work that describes a manifestation.</skos:definition>
+  <rdfs:label xml:lang="en">is manifestation described by</rdfs:label>
+  
+  <skos:definition xml:lang="en">Relates a manifestation to a work that is a description of a manifestation.</skos:definition>
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
   
-  <rdakit:toolkitLabel xml:lang="en">manifestation described in</rdakit:toolkitLabel>
-  <rdakit:toolkitDefinition xml:lang="en">A work that describes a manifestation.</rdakit:toolkitDefinition>
+  <rdakit:toolkitLabel xml:lang="en">manifestation described by</rdakit:toolkitLabel>
+  <rdakit:toolkitDefinition xml:lang="en">A work that is a description of a manifestation.</rdakit:toolkitDefinition>
   <rdfs:label xml:lang="fr">est une manifestation décrite dans</rdfs:label>
   <skos:definition xml:lang="fr">Met une manifestation en relation avec une œuvre qui décrit une manifestation.</skos:definition>
   <rdakit:toolkitLabel xml:lang="fr">manifestation décrite dans</rdakit:toolkitLabel>
@@ -25795,11 +25808,10 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30256"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30259"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30257"/>
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationDescribedBy.en"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30256"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30255"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30258"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30462"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30254"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30254"/>
     </rdf:Description>
@@ -26497,7 +26509,8 @@
     
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30254"/>
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30258"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30254"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30253"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30253"/>
     </rdf:Description>
@@ -29246,6 +29259,7 @@
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30022"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30046"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30030"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30458"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30033"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30033"/>
     </rdf:Description>
@@ -29363,6 +29377,7 @@
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30025"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30019"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30101"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30459"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30020"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30020"/>
     </rdf:Description>
@@ -38021,5 +38036,147 @@
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30457"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30457"/>
+    </rdf:Description>
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30458">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has subcollection</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to a manifestation of a collection work that is a discrete component of a manifestation of another collection work.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/subcollection.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">subcollection</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A manifestation of a collection work that is a discrete component of a manifestation of another collection work.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30033"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30458"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30458"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30459">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is subcollection of</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to a manifestation of a collection work that has a manifestation of another collection work as a discrete component.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/subcollectionOf.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">subcollection of</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A manifestation of a collection work that has a manifestation of another collection work as a discrete component.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30020"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30459"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30459"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30460">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has holding</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to an item that is included in the manifestation of a collection work.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/holding.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">holding</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">An item that is included in the manifestation of a collection work.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30140"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30460"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30460"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30461">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has location of collection</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to a place where the manifestation of a collection work is stored.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/locationOfCollection.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">location of collection</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A place where the manifestation of a collection work is stored.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30272"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30461"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30461"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30462">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">is manifestation described with metadata by</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to a work that is a metadata work for a manifestation.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/manifestationDescribedWithMetadataBy.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">manifestation described with metadata by</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A work that is a metadata work for a manifestation.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30254"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30463"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30462"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30462"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30463">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has finding aid</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to a work that is a metadata description set for a collection manifestation.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/findingAid.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">finding aid</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A work that is a metadata description set for a collection manifestation.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30462"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30464"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30465"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30463"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30463"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30464">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has catalogue</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to a work that is a metadata description set for the items that are held by a collection manifestation.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/catalogue.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">catalogue</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A work that is a metadata description set for the items that are held by a collection manifestation.</rdakit:toolkitDefinition>
+        <skos:altLabel xml:lang="en">analytic finding aid</skos:altLabel>
+        <skos:altLabel xml:lang="en">finding aid, analytic</skos:altLabel>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30463"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30464"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30464"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30465">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has hierarchic finding aid</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to a work that is a metadata description set for the sub-collections and items that are held by a collection manifestation.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/hierarchicFindingAid.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">hierarchic finding aid</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A work that is a metadata description set for the sub-collections and items that are held by a collection manifestation.</rdakit:toolkitDefinition>
+        <skos:altLabel xml:lang="en">finding aid, hierarchic</skos:altLabel>
+        <skos:scopeNote xml:lang="en">A collection includes an archival collection.</skos:scopeNote>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30463"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30465"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30465"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/m/P30466">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/m/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has index</rdfs:label>
+        <skos:definition xml:lang="en">Relates a manifestation to a work that is a systematic guide to the content of a manifestation that embodies a textual work.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10007"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/m/index.en"/>
+        <rdakit:hasElementType>2</rdakit:hasElementType>
+        <rdakit:toolkitLabel xml:lang="en">index</rdakit:toolkitLabel>
+        <rdakit:toolkitDefinition xml:lang="en">A work that is a systematic guide to the content of a manifestation that embodies a textual work.</rdakit:toolkitDefinition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/m/P30265"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/datatype/P30466"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/object/P30466"/>
     </rdf:Description>
 </rdf:RDF>
