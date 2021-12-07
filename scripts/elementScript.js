@@ -26,12 +26,11 @@ if (typeof dataSource !== "undefined") {
         });
     }).call(this);
     
-    // set flag for VES
-    function filterConcepts(obj) {
-        return obj[ "@type"] !== "ElementSet";
-    }
-    
-    
+  // set flag for VES
+  function filterProperty(obj) {
+    return obj[ "@type"] == "Property";
+  }
+  
     /* Formatting function for row details - modify as you need */
     function format(d) {
         // `d` is the original data object for the row
@@ -413,7 +412,7 @@ if (typeof dataSource !== "undefined") {
                 cache: true,
                 crossDomain: true,
                 "dataSrc": function (json) {
-                    json.data = json[ "@graph"].filter(filterConcepts);
+                    json.data = json[ "@graph"].filter(filterProperty);
                     window.rdaPrefix = getPrefix(json[ "@graph"]);
                     return json.data;
                 }
