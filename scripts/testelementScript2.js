@@ -539,8 +539,8 @@ if (typeof dataSource !== "undefined") {
         "orderable": false,
         "render": function (data, type, row) {
           return makeColumn(getHierarchy(row, "v"));
-        } */
-      }],
+        }} */
+      ],
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "deferRender": true
