@@ -419,28 +419,31 @@ if (typeof dataSource !== "undefined") {
                 }
             },
             "columns":[ {
-                "orderable": false,
                 "class": 'permalink',
+                "orderable": false,
                 "render": function (data, type, row) {
                     return makeColumn(getLinkInLabel(getURI(row), "#"));
                 }
             }, {
                 "class": 'details-control',
-                "orderable": false,
                 "data": null,
                 "defaultContent": ''
+                "orderable": false,
             }, {
                 "class": "curie",
+                "orderable": true,
                 "render": function (data, type, row) {
                     return makeColumn(getLinkOutCurie(getURI(row), window.rdaPrefix));
                 }
             }, {
                 "class": "prefLabel",
+                "orderable": true,
                 "render": function (data, type, row) {
                     return makeColumn(strongify(getStringByLanguage(getLabel(row), docLang, "en")));
                 }
             }, {
                 "class": "definition",
+                "orderable": false,
                 "render": function (data, type, row) {
                     var definition = "";
                     if (typeof row.definition !== "undefined") {
@@ -451,8 +454,9 @@ if (typeof dataSource !== "undefined") {
                     return makeColumn(getStringByLanguage(definition, docLang, "en"));
                 }
             }, {
-                "defaultContent": "",
                 "data": "subClassOf",
+                "defaultContent": "",
+                "orderable": false,
                 "render": function (data, type, row) {
                     return makeColumn(getDetailFromArray(data, "v"));
                 }
