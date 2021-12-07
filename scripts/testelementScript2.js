@@ -531,14 +531,15 @@ if (typeof dataSource !== "undefined") {
           }
           return makeColumn(getStringByLanguage(definition, docLang, "en"));
         }
-      }, {
+      } 
+      /* ,{
         "class": "hierarchy",
         "data": null,
         "defaultContent": "",
         "orderable": false,
         "render": function (data, type, row) {
           return makeColumn(getHierarchy(row, "v"));
-        }
+        } */
       }],
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
