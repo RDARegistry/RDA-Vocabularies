@@ -196,14 +196,20 @@ if (typeof dataSource !== "undefined") {
     }
     if (typeof row.subPropertyOf != "undefined") {
       if (row.subPropertyOf instanceof Array) {
-        hierarchy += divify("Superproperties");
+        hierarchy += divify(strongify("Superproperties:"));
         hierarchy += getListFromArray(row.subPropertyOf, theVh);
       }
     }
     if (typeof row.hasSubproperty != "undefined") {
       if (row.hasSubproperty instanceof Array) {
-       hierarchy += divify("Subproperties");
+        hierarchy += divify(strongify("Subproperties:"));
         hierarchy += getListFromArray(row.hasSubproperty, theVh);
+      }
+    }
+    if (typeof row.inverseOf != "undefined") {
+      if (row.inverseOf instanceof Array) {
+        hierarchy += divify(strongify("Inverse:"));
+        hierarchy += getListFromArray(row.inverseOf, theVh);
       }
     }
     return hierarchy;
