@@ -27,7 +27,7 @@ if (typeof dataSource !== "undefined") {
     }).call(this);
     
     // set flag for VES
-    function filterConcepts(obj) {
+    function filterOntology(obj) {
         return obj[ "@type"] !== "ElementSet";
     }
     
@@ -413,7 +413,7 @@ if (typeof dataSource !== "undefined") {
                 cache: true,
                 crossDomain: true,
                 "dataSrc": function (json) {
-                    json.data = json[ "@graph"].filter(filterConcepts);
+                    json.data = json[ "@graph"].filter(filterOntology);
                     window.rdaPrefix = getPrefix(json[ "@graph"]);
                     return json.data;
                 }
