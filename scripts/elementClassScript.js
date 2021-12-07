@@ -427,8 +427,8 @@ if (typeof dataSource !== "undefined") {
             }, {
                 "class": 'details-control',
                 "data": null,
-                "defaultContent": ''
-                "orderable": false,
+                "defaultContent": '',
+                "orderable": false
             }, {
                 "class": "curie",
                 "orderable": true,
