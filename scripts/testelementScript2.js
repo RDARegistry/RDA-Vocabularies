@@ -14,7 +14,7 @@ $("#lang_" + docLang).css({
 });
 
 // initialize wide scope variable for prefix
-var rdaPrefix = "";
+var rdaPrefix = "rda";
 
 if (typeof dataSource !== "undefined") {
     
