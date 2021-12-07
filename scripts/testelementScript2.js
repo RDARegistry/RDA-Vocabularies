@@ -28,7 +28,7 @@ if (typeof dataSource !== "undefined") {
     
     // set flag for VES
     function filterOntology(obj) {
-        return obj[ "@type"] !== "Ontology";
+        return obj[ "@type"] == "Property";
     }
     
     
