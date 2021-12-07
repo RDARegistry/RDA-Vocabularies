@@ -63,10 +63,6 @@ if (typeof dataSource !== "undefined") {
                 detailRow = makeDetailRow(getStringByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
                 detailTable += detailRow;
             }
-            if (typeof d.ToolkitDefinition != "undefined") {
-                detailRow = makeDetailRow(getStringByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
-                detailTable += detailRow;
-            }
             if (typeof d.status != "undefined") {
                 detailRow = makeDetailRow(getLinkOut(d.status), "Status");
                 detailTable += detailRow;

@@ -187,6 +187,39 @@ if (typeof dataSource !== "undefined") {
     return arrayDetail;
   }
   
+  function getHierarchy(row, vh) {
+    var hierarchy = "";
+    var label = "";
+    var labelLink = "";
+    var uri = "";
+    var uriLink = "";
+    // indicator for vertical or horizontal uri/label list
+    var theVh = "";
+    if (typeof vh != "undefined") {
+      theVh = vh;
+    }
+    if (typeof row.subPropertyOf != "undefined") {
+      if (row.subPropertOf instanceof Array) {
+        for (i = 0; i < row.subPropertyOf.length;++ i) {
+          label = getLabel(row.subPropertyOf[i]);
+          uri = getURI(row.subPropertyOf[i]);
+          labelLink = quotify(getLinkInLabel(uri, label));
+          uriLink = linkifyOut(uri, uri);
+          switch (theVh) {
+            case "h":
+            hierarchy += divify(uriLink + " [" + labelLink + " (en)]");
+            break;
+            case "v":
+            hierarchy += divify(uriLink) + divify(" [" + labelLink + " (en)]");
+            break;
+            default:
+            hierarchy += divify(uriLink + " [" + labelLink + " (en)]");
+          }
+        }
+      }
+    }
+    return hierarchy;
+  }
   function getLinkInLabel(uri, label, langCode) {
     // returns internal link for string label and Registry URL with parameter for selected language
     var theLabel = "";
@@ -462,11 +495,11 @@ if (typeof dataSource !== "undefined") {
         }
       }, {
         "class": "hierarchy",
-        "data": "subPropertyOf",
+        "data": null,
         "defaultContent": "",
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumn(getDetailFromArray(data, "v"));
+          return makeColumn(getHierarchy(row, "v"));
         }
       }],
       "order":[[2, 'asc']],
