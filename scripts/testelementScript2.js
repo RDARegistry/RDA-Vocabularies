@@ -434,7 +434,7 @@ if (typeof dataSource !== "undefined") {
       }, {
         "class": 'details-control',
         "data": null,
-        "defaultContent": ''
+        "defaultContent": '',
         "orderable": false
       }, {
         "class": "curie",
