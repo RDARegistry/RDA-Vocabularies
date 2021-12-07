@@ -426,23 +426,25 @@ if (typeof dataSource !== "undefined") {
         }
       },
       "columns":[ {
-        "orderable": false,
         "class": 'permalink',
+        "orderable": false,
         "render": function (data, type, row) {
           return makeColumn(getLinkInLabel(getURI(row), "#"));
         }
       }, {
         "class": 'details-control',
-        "orderable": false,
         "data": null,
         "defaultContent": ''
+        "orderable": false
       }, {
         "class": "curie",
+        "orderable": true,
         "render": function (data, type, row) {
           return makeColumn(getLinkOutCurie(getURI(row), window.rdaPrefix));
         }
       }, {
         "class": "prefLabel",
+        "orderable": true,
         "render": function (data, type, row) {
           return makeColumn(strongify(getStringByLanguage(getLabel(row), docLang, "en")));
         }
@@ -460,8 +462,8 @@ if (typeof dataSource !== "undefined") {
         }
       }, {
         "class": "hierarchy",
-        "defaultContent": "",
         "data": "subPropertyOf",
+        "defaultContent": "",
         "orderable": false,
         "render": function (data, type, row) {
           return makeColumn(getDetailFromArray(data, "v"));
