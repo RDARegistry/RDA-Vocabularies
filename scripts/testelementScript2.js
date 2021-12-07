@@ -207,9 +207,20 @@ if (typeof dataSource !== "undefined") {
       }
     }
     if (typeof row.inverseOf != "undefined") {
-      if (row.inverseOf instanceof Array) {
-        hierarchy += divify(strongify("Inverse:"));
-        hierarchy += getListFromArray(row.inverseOf, theVh);
+      label = getLabel(row.inverseOf);
+      uri = getURI(row.inverseOf);
+      labelLink = quotify(getLinkInLabel(uri, label));
+      uriLink = linkifyOut(uri, uri);
+      hierarchy += divify(strongify("Inverse:"));
+      switch (theVh) {
+        case "h":
+        hierarchy += divify(uriLink + " [" + labelLink + " (en)]");
+        break;
+        case "v":
+        hierarchy += divify(uriLink) + divify(" [" + labelLink + " (en)]");
+        break;
+        default:
+        hierarchy += divify(uriLink + " [" + labelLink + " (en)]");
       }
     }
     return hierarchy;
