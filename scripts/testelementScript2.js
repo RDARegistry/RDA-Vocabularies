@@ -410,6 +410,7 @@ if (typeof dataSource !== "undefined") {
     var t8lines = 2;
     var dtable = $("#pindex");
     var table = dtable.DataTable({
+      "autoWidth": false,
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
         //row.id = data["@id"].replace(/^.*\/(.*)$/ig, "$1");
