@@ -411,6 +411,9 @@ if (typeof dataSource !== "undefined") {
     var dtable = $("#pindex");
     var table = dtable.DataTable({
       "autoWidth": false,
+      "columnDefs":[ {
+        width: '25%', targets: 3
+      }]
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
         //row.id = data["@id"].replace(/^.*\/(.*)$/ig, "$1");
@@ -446,7 +449,6 @@ if (typeof dataSource !== "undefined") {
       }, {
         "class": "prefLabel",
         "orderable": true,
-        "width": '25%',
         "render": function (data, type, row) {
           return makeColumn(strongify(getStringByLanguage(getLabel(row), docLang, "en")));
         }
