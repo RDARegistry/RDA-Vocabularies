@@ -28,7 +28,7 @@ if (typeof dataSource !== "undefined") {
   
   // set flag for Ontology
   function filterOntology(obj) {
-    return obj[ "@type"] !== "Ontology";
+    return obj[ "@type"] == "Ontology";
   }
   
   /* json extraction: start */
