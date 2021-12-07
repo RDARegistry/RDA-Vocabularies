@@ -28,7 +28,7 @@ if (typeof dataSource !== "undefined") {
     
     // set flag for VES
     function filterConcepts(obj) {
-        return obj[ "@type"] !== "ElementSet";
+        return obj[ "@type"] !== "Ontology";
     }
     
     
