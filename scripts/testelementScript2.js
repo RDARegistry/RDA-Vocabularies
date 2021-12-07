@@ -411,9 +411,8 @@ if (typeof dataSource !== "undefined") {
     var dtable = $("#pindex");
     var table = dtable.DataTable({
       "autoWidth": false,
-      "columnDefs":[ {
-        width: '25%', targets: 3
-      }]
+      "columnDefs":[
+      {width: '25%', targets: 3}],
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
         //row.id = data["@id"].replace(/^.*\/(.*)$/ig, "$1");
