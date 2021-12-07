@@ -199,6 +199,11 @@ if (typeof dataSource !== "undefined") {
         hierarchy += getListFromArray(row.subPropertyOf, theVh);
       }
     }
+    if (typeof row.hasSubproperty != "undefined") {
+      if (row.hasSubproperty instanceof Array) {
+        hierarchy += getListFromArray(row.hasSubproperty, theVh);
+      }
+    }
     return hierarchy;
   }
   
