@@ -189,6 +189,21 @@ if (typeof dataSource !== "undefined") {
   
   function getHierarchy(row, vh) {
     var hierarchy = "";
+    // indicator for vertical or horizontal uri/label list
+    var theVh = "";
+    if (typeof vh != "undefined") {
+      theVh = vh;
+    }
+    if (typeof row.subPropertyOf != "undefined") {
+      if (row.subPropertyOf instanceof Array) {
+        hierarchy += geListFromArray(row.subPropertyOf);
+      }
+    }
+    return hierarchy;
+  }
+  
+  function getListFromArray(propArray, vh) {
+    var theList = "";
     var label = "";
     var labelLink = "";
     var uri = "";
@@ -198,28 +213,27 @@ if (typeof dataSource !== "undefined") {
     if (typeof vh != "undefined") {
       theVh = vh;
     }
-    if (typeof row.subPropertyOf != "undefined") {
-      if (row.subPropertOf instanceof Array) {
-        for (i = 0; i < row.subPropertyOf.length;++ i) {
-          label = getLabel(row.subPropertyOf[i]);
-          uri = getURI(row.subPropertyOf[i]);
-          labelLink = quotify(getLinkInLabel(uri, label));
-          uriLink = linkifyOut(uri, uri);
-          switch (theVh) {
-            case "h":
-            hierarchy += divify(uriLink + " [" + labelLink + " (en)]");
-            break;
-            case "v":
-            hierarchy += divify(uriLink) + divify(" [" + labelLink + " (en)]");
-            break;
-            default:
-            hierarchy += divify(uriLink + " [" + labelLink + " (en)]");
-          }
+    if (propArray instanceof Array) {
+      for (i = 0; i < propArray.length;++ i) {
+        label = getLabel(propArray[i]);
+        uri = getURI(propArray[i]);
+        labelLink = quotify(getLinkInLabel(uri, label));
+        uriLink = linkifyOut(uri, uri);
+        switch (theVh) {
+          case "h":
+          theList += divify(uriLink + " [" + labelLink + " (en)]");
+          break;
+          case "v":
+          theList += divify(uriLink) + divify(" [" + labelLink + " (en)]");
+          break;
+          default:
+          theList += divify(uriLink + " [" + labelLink + " (en)]");
         }
       }
     }
-    return hierarchy;
+    return theList;
   }
+  
   function getLinkInLabel(uri, label, langCode) {
     // returns internal link for string label and Registry URL with parameter for selected language
     var theLabel = "";
