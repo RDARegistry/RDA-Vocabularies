@@ -445,6 +445,7 @@ if (typeof dataSource !== "undefined") {
       }, {
         "class": "prefLabel",
         "orderable": true,
+        "width": '25%',
         "render": function (data, type, row) {
           return makeColumn(strongify(getStringByLanguage(getLabel(row), docLang, "en")));
         }
