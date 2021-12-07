@@ -196,11 +196,13 @@ if (typeof dataSource !== "undefined") {
     }
     if (typeof row.subPropertyOf != "undefined") {
       if (row.subPropertyOf instanceof Array) {
+        hierarchy += divify("Superproperties");
         hierarchy += getListFromArray(row.subPropertyOf, theVh);
       }
     }
     if (typeof row.hasSubproperty != "undefined") {
       if (row.hasSubproperty instanceof Array) {
+       hierarchy += divify("Subproperties");
         hierarchy += getListFromArray(row.hasSubproperty, theVh);
       }
     }
