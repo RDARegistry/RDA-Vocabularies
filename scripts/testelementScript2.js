@@ -448,6 +448,7 @@ if (typeof dataSource !== "undefined") {
         }
       }, {
         "class": "definition",
+        "orderable": false,
         "render": function (data, type, row) {
           var definition = "";
           if (typeof row.definition !== "undefined") {
@@ -458,8 +459,10 @@ if (typeof dataSource !== "undefined") {
           return makeColumn(getStringByLanguage(definition, docLang, "en"));
         }
       }, {
+        "class": "hierarchy",
         "defaultContent": "",
         "data": "subPropertyOf",
+        "orderable": false,
         "render": function (data, type, row) {
           return makeColumn(getDetailFromArray(data, "v"));
         }
