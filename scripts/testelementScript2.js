@@ -128,32 +128,41 @@ if (typeof dataSource !== "undefined") {
     return '<strong>' + string + '</strong>';
   }
   
-  // get from jsonld
+  // get strings from jsonld
+  function getLabel(row) {
+    // returns a label from a jsonld row
+    var theLabel = "";
+    if (typeof row[ "label"] != "undefined") {
+      theLabel = row[ "label"];
+    }
+    return theLabel;
+  }
+  
   function getDefinition(row) {
     // returns a definition from a jsonld row
-    var definition = "";
+    var theDefinition = "";
     if (typeof row[ "definition"] != "undefined") {
-      definition = row[ "definition"];
+      theDefinition = row[ "definition"];
     }
-    return definition;
+    return theDefinition;
   }
   
   function getLabel(row) {
     // returns a label from a jsonld row
-    var label = "";
+    var theLabel = "";
     if (typeof row[ "label"] != "undefined") {
-      label = row[ "label"];
+      theLabel = row[ "label"];
     }
-    return label;
+    return theLabel;
   }
   
   function getPrefix(theData) {
     // returns the vocabulary prefix from jsonld data
-    var prefix = "[prefix]";
+    var thePrefix = "[prefix]";
     if (typeof theData[0].prefix != "undefined") {
-      prefix = theData[0].prefix;
+      thePrefix = theData[0].prefix;
     }
-    return prefix;
+    return thePrefix;
   }
   
   function getURI(row) {
@@ -165,6 +174,20 @@ if (typeof dataSource !== "undefined") {
     return uri;
   }
   
+  // get links from a jsonld row
+  function getLinkOut(row) {
+    var theLabel = "";
+    var theURI = "";
+    var theLink = "";
+    if (typeof row[ "@id"] != "undefined") {
+      theURI = row[ "@id"];
+    }
+    if (typeof row[ "label"] != "undefined") {
+      theLabel = row[ "label"];
+    }
+    theLink = linkifyOut(theLabel, theURI)
+    return theLink;
+  }
   function getLinkOutCurie(uri, prefix) {
     // returns external link with Curie label
     var label = "";
@@ -325,18 +348,6 @@ if (typeof dataSource !== "undefined") {
       label = theData[ "label"];
     }
     return linkifyIn(label, link);
-  }
-  
-  function getLinkOut(theData) {
-    var label = "";
-    var link = "";
-    if (typeof theData[ "@id"] != "undefined") {
-      link = theData[ "@id"];
-    }
-    if (typeof theData[ "label"] != "undefined") {
-      label = theData[ "label"];
-    }
-    return linkifyOut(label, link);
   }
   
   
