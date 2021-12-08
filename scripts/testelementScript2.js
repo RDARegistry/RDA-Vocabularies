@@ -128,6 +128,39 @@ if (typeof dataSource !== "undefined") {
     return '<strong>' + string + '</strong>';
   }
   
+  // format links
+    // returns internal link
+    function linkifyIn(label, uri) {
+    var theLabel = "";
+    var theLink = "";
+    var theURI = "";
+    if (typeof label != "undefined") {
+      theLabel = label;
+    }
+    if (typeof uri != "undefined") {
+      theURI = uri;
+    }
+    theLink = '<a href="' + theURI + '">' + theLabel + '</a>'
+    return theLink;
+  }
+  
+  function linkifyOut(label, uri) {
+    // returns external link
+    var theLabel = "";
+    var theLink = "";
+    var theURI = "";
+    if (typeof label != "undefined") {
+      theLabel = label;
+    }
+    if (typeof uri != "undefined") {
+      theURI = uri;
+    }
+    theLink = '<a href="' + theURI + '" target="_blank">' + theLabel + '</a>'
+    return theLink;
+  }
+  
+
+  
   // get strings from jsonld
   function getLabel(row) {
     // returns a label from a jsonld row
@@ -385,16 +418,6 @@ if (typeof dataSource !== "undefined") {
       //            }
     }
     return langString;
-  }
-  
-  function linkifyIn(string, uri) {
-    // returns internal link
-    return '<a href="' + uri + '">' + string + '</a>';
-  }
-  
-  function linkifyOut(string, uri) {
-    // returns external link
-    return '<a href="' + uri + '" target="_blank">' + string + '</a>';
   }
   
   function makeColumn(content) {
