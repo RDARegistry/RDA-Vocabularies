@@ -242,14 +242,6 @@ if (typeof dataSource !== "undefined") {
   }
   
   // get strings from jsonld
-  function getLabel(row) {
-    // returns a label from a jsonld row
-    var theLabel = "";
-    if (typeof row[ "label"] != "undefined") {
-      theLabel = row[ "label"];
-    }
-    return theLabel;
-  }
   
   function getDefinition(row) {
     // returns a definition from a jsonld row
@@ -306,6 +298,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getLinkOut(row) {
+    // returns external link with label (defaulting to URI)
     var theLabel = "";
     var theLink = "";
     var theURI = "";
@@ -315,61 +308,11 @@ if (typeof dataSource !== "undefined") {
     if (typeof row[ "@id"] != "undefined") {
       theURI = row[ "@id"];
     }
+    if (theLabel.length < 1) {
+      theLabel = theURI;
+    }
     theLink = linkifyOut(theLabel, theURI)
     return theLink;
-  }
-  
-  /*     function getLinkOutCurieFromArray(row) {
-  var string = "";
-  if (typeof row != "undefined") {
-  if (row instanceof Array) {
-  for (i = 0; i < row.length;++ i) {
-  string += getLinkOutCurie(getURI(row[i]), window.rdaPrefix);
-  }
-  } else {
-  string = divify(getLinkOutCurie(getURI(row), window.rdaPrefix));
-  }
-  }
-  return string;
-  } */
-  
-  function getHierarchy(row, vh) {
-    var hierarchy = "";
-    // indicator for vertical or horizontal uri/label list
-    var theVh = "";
-    if (typeof vh != "undefined") {
-      theVh = vh;
-    }
-    if (typeof row.subPropertyOf != "undefined") {
-      if (row.subPropertyOf instanceof Array) {
-        hierarchy += divify(strongify("Superproperties:"));
-        hierarchy += getListFromArray(row.subPropertyOf, theVh);
-      }
-    }
-    if (typeof row.hasSubproperty != "undefined") {
-      if (row.hasSubproperty instanceof Array) {
-        hierarchy += divify(strongify("Subproperties:"));
-        hierarchy += getListFromArray(row.hasSubproperty, theVh);
-      }
-    }
-    if (typeof row.inverseOf != "undefined") {
-      label = getLabel(row.inverseOf);
-      uri = getURI(row.inverseOf);
-      labelLink = quotify(getLinkInLabel(uri, label));
-      uriLink = linkifyOut(uri, uri);
-      hierarchy += divify(strongify("Inverse:"));
-      switch (theVh) {
-        case "h":
-        hierarchy += divify(uriLink + " [" + labelLink + " (en)]");
-        break;
-        case "v":
-        hierarchy += divify(uriLink) + divify(" [" + labelLink + " (en)]");
-        break;
-        default:
-        hierarchy += divify(uriLink + " [" + labelLink + " (en)]");
-      }
-    }
-    return hierarchy;
   }
   
   function getListFromArray(propArray, vh) {
@@ -574,15 +517,7 @@ if (typeof dataSource !== "undefined") {
         "render": function (data, type, row) {
           return makeColumn(getStringByLanguage(getDefinition(row), docLang, "en"));
         }
-      }
-      /* ,{
-      "class": "hierarchy",
-      "data": null,
-      "defaultContent": "",
-      "orderable": false,
-      "render": function (data, type, row) {
-      return makeColumn(getHierarchy(row, "v"));
-      }} */],
+      }],
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "deferRender": true
