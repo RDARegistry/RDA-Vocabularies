@@ -574,7 +574,7 @@ if (typeof dataSource !== "undefined") {
         "class": "curie",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(getLinkInCurie(getURI(row), window.rdaPrefix)));
+          return makeColumn(getLinkInCurie(getURI(row), window.rdaPrefix));
         }
       }, {
         "class": "prefLabel",
