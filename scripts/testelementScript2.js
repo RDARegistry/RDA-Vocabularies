@@ -192,7 +192,13 @@ if (typeof dataSource !== "undefined") {
     if (typeof uri != "undefined") {
       theURI = uri;
     }
-    if (theURI !== null && typeof theURI.replace === "function") {
+    if (theURI.indexOf("datatype") > 0) {
+      thePrefix += "d";
+    }
+     if (theURI.indexOf("object") > 0) {
+      thePrefix += "o";
+    }
+   if (theURI !== null && typeof theURI.replace === "function") {
       // replace everything up to last sub-folder slash with prefix and colon
       theCurie = thePrefix + ":" + theURI.substr(1 + theURI.lastIndexOf("/"));
     }
