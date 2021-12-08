@@ -98,7 +98,7 @@ if (typeof dataSource !== "undefined") {
         label = getLabel(arrayRow[i]);
         uri = getURI(arrayRow[i]);
         labelLink = quotify(getLinkInLabel(uri, label));
-        curieLink = linkifyOut(makeCurieFromURI(uri, window.rdaPrefix), uri);
+        curieLink = linkifyIn(makeCurieFromURI(uri, window.rdaPrefix), uri);
         switch (theVh) {
           case "h":
           detailArray += divify(curieLink + " [" + labelLink + " (en)]");
