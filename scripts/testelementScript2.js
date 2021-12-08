@@ -78,6 +78,7 @@ if (typeof dataSource !== "undefined") {
     return detailTable;
   }
   
+  // Format string
   function directify(string, langCode) {
     // returns a string wrapped in a div with right-to-left attribute for specified languages
     rtlLangList = "ar, he";
@@ -117,13 +118,51 @@ if (typeof dataSource !== "undefined") {
     return theString;
   }
   
+  function quotify(string) {
+    // returns a string delimited with quotes
+    return '"' + string + '"';
+  }
+  
+  function strongify(string) {
+    // returns a string marked as strong
+    return '<strong>' + string + '</strong>';
+  }
+  
+  // get from jsonld
+  function getDefinition(row) {
+    // returns a definition from a jsonld row
+    var definition = "";
+    if (typeof row[ "definition"] != "undefined") {
+      label = row[ "definition"];
+    }
+    return definition;
+  }
+  
   function getLabel(row) {
-    // returns a label from the jsonld
+    // returns a label from a jsonld row
     var label = "";
     if (typeof row[ "label"] != "undefined") {
       label = row[ "label"];
     }
     return label;
+  }
+  
+  function getPrefix(theData) {
+    // returns the vocabulary prefix from jsonld data
+    var prefix = "[prefix]";
+    if (typeof theData[0].prefix != "undefined") {
+      prefix = theData[0].prefix;
+    }
+    return prefix;
+  }
+  
+  function getURI(row) {
+    // returns a URI from a jsonld row
+    var uri = "";
+    if (typeof row[ "@id"] != "undefined") {
+      uri = row[ "@id"];
+    }
+    return uri;
   }
   
   function getLinkOutCurie(uri, prefix) {
@@ -300,14 +339,6 @@ if (typeof dataSource !== "undefined") {
     return linkifyOut(label, link);
   }
   
-  function getPrefix(theData) {
-    // returns the vocabulary prefix
-    var prefix = "[prefix]";
-    if (typeof theData[0].prefix != "undefined") {
-      prefix = theData[0].prefix;
-    }
-    return prefix;
-  }
   
   function getStringByLanguage(theData, langCode, defaultLangCode) {
     // returns string corresponding to language, or defaults
@@ -340,15 +371,6 @@ if (typeof dataSource !== "undefined") {
       //            }
     }
     return langString;
-  }
-  
-  function getURI(row) {
-    // returns a URI from the jsonld
-    var uri = "";
-    if (typeof row[ "@id"] != "undefined") {
-      uri = row[ "@id"];
-    }
-    return uri;
   }
   
   function linkifyIn(string, uri) {
@@ -428,16 +450,6 @@ if (typeof dataSource !== "undefined") {
       }
     }
     return url;
-  }
-  
-  function quotify(string) {
-    // returns a string delimited with quotes
-    return '"' + string + '"';
-  }
-  
-  function strongify(string) {
-    // returns a string marked as strong
-    return '<strong>' + string + '</strong>';
   }
   
   function getLanguageCallout(data) {
@@ -523,24 +535,17 @@ if (typeof dataSource !== "undefined") {
         "class": "definition",
         "orderable": false,
         "render": function (data, type, row) {
-          var definition = "";
-          if (typeof row.definition !== "undefined") {
-            definition = row.definition;
-          } else {
-            definition = row.ToolkitDefinition;
-          }
-          return makeColumn(getStringByLanguage(definition, docLang, "en"));
+          return makeColumn(getStringByLanguage(getDefinition(row), docLang, "en"));
         }
-      } 
+      }
       /* ,{
-        "class": "hierarchy",
-        "data": null,
-        "defaultContent": "",
-        "orderable": false,
-        "render": function (data, type, row) {
-          return makeColumn(getHierarchy(row, "v"));
-        }} */
-      ],
+      "class": "hierarchy",
+      "data": null,
+      "defaultContent": "",
+      "orderable": false,
+      "render": function (data, type, row) {
+      return makeColumn(getHierarchy(row, "v"));
+      }} */],
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "deferRender": true
