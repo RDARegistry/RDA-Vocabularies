@@ -31,7 +31,7 @@ if (typeof dataSource !== "undefined") {
     return obj[ "@type"] == "Property";
   }
   
-  
+  // Detail
   /* Formatting function for row details - modify as you need */
   function format(d) {
     // `d` is the original data object for the row
@@ -78,7 +78,29 @@ if (typeof dataSource !== "undefined") {
     return detailTable;
   }
   
-  // Format string
+    function makeDetailRow(rowValue, rowLabel, langCode) {
+    // returns a two-column row for the detail display
+    var detailRow = "";
+    var theLangCode = "";
+    var theRowValue = "";
+    var theRowLabel = "";
+    if (typeof rowValue != "undefined") {
+      theRowValue = rowValue;
+    }
+    if (typeof rowLabel != "undefined") {
+      theRowLabel = rowLabel;
+    }
+    if (typeof langCode != "undefined") {
+      theLangCode = langCode;
+    }
+    // two columns; value column must have div wrapper
+    if (theRowValue.length > 0) {
+      detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
+    }
+    return detailRow;
+  }
+  
+// Format string
   function directify(string, langCode) {
     // returns a string wrapped in a div with right-to-left attribute for specified languages
     rtlLangList = "ar, he";
@@ -159,9 +181,25 @@ if (typeof dataSource !== "undefined") {
     return theLink;
   }
   
-
+   function makeCurieFromURI(uri, prefix) {
+    // returns a curie
+    var theCurie = "";
+    var thePrefix = "";
+    var theURI = "";
+    if (typeof prefix != "undefined") {
+      thePrefix = prefix;
+    }
+    if (typeof uri != "undefined") {
+      theURI = uri;
+    }
+    if (theURI !== null && typeof theUri.replace === "function") {
+      // replace everything up to last sub-folder slash with prefix and colon
+      theCurie = thePrefix + ":" + theURI.substr(1 + theURI.lastIndexOf("/"));
+    }
+    return theCurie;
+  }
   
-  // get strings from jsonld
+ // get strings from jsonld
   function getLabel(row) {
     // returns a label from a jsonld row
     var theLabel = "";
@@ -429,42 +467,6 @@ if (typeof dataSource !== "undefined") {
     }
     col = divify(theContent);
     return col;
-  }
-  
-  function makeCurieFromURI(uri, prefix) {
-    // returns a curie
-    var curie = "";
-    var thePrefix = "";
-    if (typeof prefix != "undefined") {
-      thePrefix = prefix;
-    }
-    if (uri !== null && typeof uri.replace === "function") {
-      // replace everything up to last sub-folder slash with prefix and colon
-      curie = thePrefix + ":" + uri.substr(1 + uri.lastIndexOf("/"));
-    }
-    return curie;
-  }
-  
-  function makeDetailRow(rowValue, rowLabel, langCode) {
-    // returns a two-column row for the detail display
-    var detailRow = "";
-    var theLangCode = "";
-    var theRowValue = "";
-    var theRowLabel = "";
-    if (typeof rowValue != "undefined") {
-      theRowValue = rowValue;
-    }
-    if (typeof rowLabel != "undefined") {
-      theRowLabel = rowLabel;
-    }
-    if (typeof langCode != "undefined") {
-      theLangCode = langCode;
-    }
-    // two columns; value column must have div wrapper
-    if (theRowValue.length > 0) {
-      detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
-    }
-    return detailRow;
   }
   
   function makeURLFromURI(uri, langCode) {
