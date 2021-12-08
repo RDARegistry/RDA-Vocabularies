@@ -292,7 +292,7 @@ if (typeof dataSource !== "undefined") {
     // returns internal link with label (defaulting to URI) or Curie label if prefix is given
     var theLabel = "";
     var theLink = "";
-    var theUri = getURI(row);
+    var theURI = getURI(row);
     if (typeof prefix != "undefined") {
       theLabel = makeCurieFromURI(theURI, prefix);
     } else {
@@ -301,7 +301,7 @@ if (typeof dataSource !== "undefined") {
     if (theLabel.length < 1) {
       theLabel = theURI;
     }
-    theLink = linkifyIn(theLabel, theUri)
+    theLink = linkifyIn(theLabel, theURI)
     return theLink;
   }
   
