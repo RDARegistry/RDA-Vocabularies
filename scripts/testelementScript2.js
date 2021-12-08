@@ -280,11 +280,11 @@ if (typeof dataSource !== "undefined") {
   
   function getURI(row) {
     // returns a URI from a jsonld row
-    var uri = "";
+    var theURI = "";
     if (typeof row[ "@id"] != "undefined") {
-      uri = row[ "@id"];
+      theURI = row[ "@id"];
     }
-    return uri;
+    return theURI;
   }
   
   // get links from a jsonld row
@@ -293,7 +293,7 @@ if (typeof dataSource !== "undefined") {
     var theLabel = "";
     var theLink = "";
     var theUri = "";
-    theURI = getURI(row)
+    theURI = getURI(row);
     if (typeof prefix != "undefined") {
       theLabel = makeCurieFromURI(theUri, prefix);
     } else {
