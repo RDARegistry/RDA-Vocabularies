@@ -56,7 +56,7 @@ if (typeof dataSource !== "undefined") {
         detailTable += detailRow;
       }
       if (typeof d.hasSubproperty != "undefined") {
-        detailRow = makeDetailRow(getDetailFromArray(d.hasSubproperty, "h"), "Subproperties");
+        detailRow = makeDetailRow(makeDetailArray(d.hasSubproperty, "h"), "Subproperties");
         detailTable += detailRow;
       }
       if (typeof d.ToolkitLabel != "undefined") {
@@ -78,7 +78,39 @@ if (typeof dataSource !== "undefined") {
     return detailTable;
   }
   
-    function makeDetailRow(rowValue, rowLabel, langCode) {
+  function makeDetailArray(row, vh) {
+    var curieLink = "",
+    var detailArray = "";
+    var label = "";
+    var labelLink = "";
+    var uri = "";
+    // indicator for vertical or horizontal uri/label list
+    var theVh = "";
+    if (typeof vh != "undefined") {
+      theVh = vh;
+    }
+    if (row instanceof Array) {
+      for (i = 0; i < row.length;++ i) {
+        label = getLabel(row[i]);
+        uri = getURI(row[i]);
+        labelLink = quotify(getLinkInLabel(uri, label));
+        curieLink = linkifyOut(uri, makeCurieFromURI(uri, window.rdaPrefix));
+        switch (theVh) {
+          case "h":
+          detailArray += divify(curieLink + " [" + labelLink + " (en)]");
+          break;
+          case "v":
+          detailArray += divify(curieLink) + divify(" [" + labelLink + " (en)]");
+          break;
+          default:
+          detailArray += divify(curieLink + " [" + labelLink + " (en)]");
+        }
+      }
+    }
+    return detailArray;
+  }
+  
+  function makeDetailRow(rowValue, rowLabel, langCode) {
     // returns a two-column row for the detail display
     var detailRow = "";
     var theLangCode = "";
@@ -100,7 +132,7 @@ if (typeof dataSource !== "undefined") {
     return detailRow;
   }
   
-// Format string
+  // Format string
   function directify(string, langCode) {
     // returns a string wrapped in a div with right-to-left attribute for specified languages
     rtlLangList = "ar, he";
@@ -151,8 +183,8 @@ if (typeof dataSource !== "undefined") {
   }
   
   // format links
-    // returns internal link
-    function linkifyIn(label, uri) {
+  // returns internal link
+  function linkifyIn(label, uri) {
     var theLabel = "";
     var theLink = "";
     var theURI = "";
@@ -181,7 +213,7 @@ if (typeof dataSource !== "undefined") {
     return theLink;
   }
   
-   function makeCurieFromURI(uri, prefix) {
+  function makeCurieFromURI(uri, prefix) {
     // returns a curie
     var theCurie = "";
     var thePrefix = "";
@@ -195,17 +227,17 @@ if (typeof dataSource !== "undefined") {
     if (theURI.indexOf("datatype") > 0) {
       thePrefix += "d";
     }
-     if (theURI.indexOf("object") > 0) {
+    if (theURI.indexOf("object") > 0) {
       thePrefix += "o";
     }
-   if (theURI !== null && typeof theURI.replace === "function") {
+    if (theURI !== null && typeof theURI.replace === "function") {
       // replace everything up to last sub-folder slash with prefix and colon
       theCurie = thePrefix + ":" + theURI.substr(1 + theURI.lastIndexOf("/"));
     }
     return theCurie;
   }
   
- // get strings from jsonld
+  // get strings from jsonld
   function getLabel(row) {
     // returns a label from a jsonld row
     var theLabel = "";
@@ -308,38 +340,6 @@ if (typeof dataSource !== "undefined") {
   }
   return string;
   } */
-  
-  function getDetailFromArray(row, vh) {
-    var arrayDetail = "";
-    var label = "";
-    var labelLink = "";
-    var uri = "";
-    var uriLink = "";
-    // indicator for vertical or horizontal uri/label list
-    var theVh = "";
-    if (typeof vh != "undefined") {
-      theVh = vh;
-    }
-    if (row instanceof Array) {
-      for (i = 0; i < row.length;++ i) {
-        label = getLabel(row[i]);
-        uri = getURI(row[i]);
-        labelLink = quotify(getLinkInLabel(uri, label));
-        uriLink = linkifyOut(uri, uri);
-        switch (theVh) {
-          case "h":
-          arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
-          break;
-          case "v":
-          arrayDetail += divify(uriLink) + divify(" [" + labelLink + " (en)]");
-          break;
-          default:
-          arrayDetail += divify(uriLink + " [" + labelLink + " (en)]");
-        }
-      }
-    }
-    return arrayDetail;
-  }
   
   function getHierarchy(row, vh) {
     var hierarchy = "";
