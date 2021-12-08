@@ -302,6 +302,23 @@ if (typeof dataSource !== "undefined") {
     return theLink;
   }
   
+  function getLinkInCurie(uri, prefix) {
+    // returns internal link with Curie label
+    var theCurie = "";
+    var theLink = "";
+    var theUri = "";
+    if (typeof uri != "undefined") {
+      theUri = uri;
+    }
+    if (typeof prefix != "undefined") {
+      theCurie = makeCurieFromURI(theUri, prefix);
+    } else {
+      theCurie = theUri;
+    }
+    theLink = linkifyOut(theLabel, theUri)
+    return theLink;
+  }
+  
   function getLinkOut(row) {
     var theLabel = "";
     var theLink = "";
@@ -314,21 +331,6 @@ if (typeof dataSource !== "undefined") {
     }
     theLink = linkifyOut(theLabel, theURI)
     return theLink;
-  }
-  
-  function getLinkOutCurie(uri, prefix) {
-    // returns external link with Curie label
-    var label = "";
-    var theUri = "";
-    if (typeof uri != "undefined") {
-      theUri = uri;
-    }
-    if (typeof prefix != "undefined") {
-      label = makeCurieFromURI(theUri, prefix);
-    } else {
-      label = theUri;
-    }
-    return linkifyOut(label, theUri);
   }
   
   /*     function getLinkOutCurieFromArray(row) {
@@ -572,7 +574,7 @@ if (typeof dataSource !== "undefined") {
         "class": "curie",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(getLinkOutCurie(getURI(row), window.rdaPrefix));
+          return makeColumn(getLinkInCurie(getURI(row), window.rdaPrefix)));
         }
       }, {
         "class": "prefLabel",
