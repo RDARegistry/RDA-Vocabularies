@@ -133,7 +133,7 @@ if (typeof dataSource !== "undefined") {
     // returns a definition from a jsonld row
     var definition = "";
     if (typeof row[ "definition"] != "undefined") {
-      label = row[ "definition"];
+      definition = row[ "definition"];
     }
     return definition;
   }
