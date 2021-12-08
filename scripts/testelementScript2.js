@@ -59,6 +59,10 @@ if (typeof dataSource !== "undefined") {
         detailRow = makeDetailRow(makeDetailArray(d.hasSubproperty, "h"), "Subproperties");
         detailTable += detailRow;
       }
+      if (typeof d.subPropertyOf != "undefined") {
+        detailRow = makeDetailRow(makeDetailArray(d.subPropertyOf, "h"), "Superproperties");
+        detailTable += detailRow;
+      }
       if (typeof d.ToolkitLabel != "undefined") {
         detailRow = makeDetailRow(getStringByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
         detailTable += detailRow;
@@ -78,7 +82,7 @@ if (typeof dataSource !== "undefined") {
     return detailTable;
   }
   
-  function makeDetailArray(row, vh) {
+  function makeDetailArray(arrayRow, vh) {
     var curieLink = "";
     var detailArray = "";
     var label = "";
@@ -89,12 +93,12 @@ if (typeof dataSource !== "undefined") {
     if (typeof vh != "undefined") {
       theVh = vh;
     }
-    if (row instanceof Array) {
-      for (i = 0; i < row.length;++ i) {
-        label = getLabel(row[i]);
-        uri = getURI(row[i]);
+    if (arrayRow instanceof Array) {
+      for (i = 0; i < arrayRow.length;++ i) {
+        label = getLabel(arrayRow[i]);
+        uri = getURI(arrayRow[i]);
         labelLink = quotify(getLinkInLabel(uri, label));
-        curieLink = linkifyOut(uri, makeCurieFromURI(uri, window.rdaPrefix));
+        curieLink = linkifyOut(makeCurieFromURI(uri, window.rdaPrefix), uri);
         switch (theVh) {
           case "h":
           detailArray += divify(curieLink + " [" + labelLink + " (en)]");
