@@ -79,7 +79,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function makeDetailArray(row, vh) {
-    var curieLink = "",
+    var curieLink = "";
     var detailArray = "";
     var label = "";
     var labelLink = "";
