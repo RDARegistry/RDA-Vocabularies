@@ -289,13 +289,12 @@ if (typeof dataSource !== "undefined") {
   
   // get links from a jsonld row
   function getLinkIn(row, prefix) {
-    // returns internal link with labe defaulting to URI, or Curie label if prefix is given
+    // returns internal link with label (defaulting to URI) or Curie label if prefix is given
     var theLabel = "";
     var theLink = "";
-    var theUri = "";
-    theURI = getURI(row);
+    var theUri = getURI(row);
     if (typeof prefix != "undefined") {
-      theLabel = makeCurieFromURI(theUri, prefix);
+      theLabel = makeCurieFromURI(theURI, prefix);
     } else {
       theLabel = getLabel(row);
     }
