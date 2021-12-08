@@ -315,7 +315,7 @@ if (typeof dataSource !== "undefined") {
     } else {
       theCurie = theUri;
     }
-    theLink = linkifyOut(theLabel, theUri)
+    theLink = linkifyOut(theCurie, theUri)
     return theLink;
   }
   
