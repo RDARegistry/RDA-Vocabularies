@@ -288,34 +288,21 @@ if (typeof dataSource !== "undefined") {
   }
   
   // get links from a jsonld row
-  function getLinkIn(row) {
+  function getLinkIn(row, prefix) {
+    // returns internal link with labe defaulting to URI, or Curie label if prefix is given
     var theLabel = "";
     var theLink = "";
-    var theURI = "";
-    if (typeof row[ "label"] != "undefined") {
-      theLabel = row[ "label"];
-    }
-    if (typeof row[ "@id"] != "undefined") {
-      theLink = makeURLFromURI(row[ "@id"]);
-    }
-    theLink = linkifyIn(theLabel, theURI)
-    return theLink;
-  }
-  
-  function getLinkInCurie(uri, prefix) {
-    // returns internal link with Curie label
-    var theCurie = "";
-    var theLink = "";
     var theUri = "";
-    if (typeof uri != "undefined") {
-      theUri = uri;
-    }
+    theURI = getURI(row)
     if (typeof prefix != "undefined") {
-      theCurie = makeCurieFromURI(theUri, prefix);
+      theLabel = makeCurieFromURI(theUri, prefix);
     } else {
-      theCurie = theUri;
+      theLabel = getLabel(row);
     }
-    theLink = linkifyOut(theCurie, theUri)
+    if (theLabel.length < 1) {
+      theLabel = theURI;
+    }
+    theLink = linkifyIn(theLabel, theUri)
     return theLink;
   }
   
@@ -574,7 +561,7 @@ if (typeof dataSource !== "undefined") {
         "class": "curie",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(getLinkInCurie(getURI(row), window.rdaPrefix));
+          return makeColumn(getLinkIn(row, window.rdaPrefix));
         }
       }, {
         "class": "prefLabel",
