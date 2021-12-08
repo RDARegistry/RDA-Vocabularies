@@ -175,19 +175,34 @@ if (typeof dataSource !== "undefined") {
   }
   
   // get links from a jsonld row
-  function getLinkOut(row) {
+  function getLinkIn(row) {
     var theLabel = "";
-    var theURI = "";
     var theLink = "";
-    if (typeof row[ "@id"] != "undefined") {
-      theURI = row[ "@id"];
-    }
+    var theURI = "";
     if (typeof row[ "label"] != "undefined") {
       theLabel = row[ "label"];
+    }
+    if (typeof row[ "@id"] != "undefined") {
+      theLink = makeURLFromURI(row[ "@id"]);
+    }
+    theLink = linkifyIn(theLabel, theURI)
+    return theLink;
+  }
+  
+  function getLinkOut(row) {
+    var theLabel = "";
+    var theLink = "";
+    var theURI = "";
+    if (typeof row[ "label"] != "undefined") {
+      theLabel = row[ "label"];
+    }
+    if (typeof row[ "@id"] != "undefined") {
+      theURI = row[ "@id"];
     }
     theLink = linkifyOut(theLabel, theURI)
     return theLink;
   }
+  
   function getLinkOutCurie(uri, prefix) {
     // returns external link with Curie label
     var label = "";
@@ -336,18 +351,6 @@ if (typeof dataSource !== "undefined") {
       url = makeURLFromURI(uri, theLangCode);
     }
     return linkifyIn(theLabel, url);
-  }
-  
-  function getLinkIn(theData) {
-    var label = "";
-    var link = "";
-    if (typeof theData[ "@id"] != "undefined") {
-      link = makeURLFromURI(theData[ "@id"]);
-    }
-    if (typeof theData[ "label"] != "undefined") {
-      label = theData[ "label"];
-    }
-    return linkifyIn(label, link);
   }
   
   
