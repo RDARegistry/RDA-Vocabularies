@@ -445,9 +445,11 @@ if (typeof dataSource !== "undefined") {
     return "@en *";
   }
   
+  // filters
   function setFilter() {
     
     var initFilter = null;
+    // if the page URL has an anchor for the URI local part
     if (window.location.hash.indexOf('#') > -1) {
       initFilter = window.location.hash.substr(1);
     }
@@ -462,7 +464,7 @@ if (typeof dataSource !== "undefined") {
   
   var initFilter = setFilter();
   
-  //make sure we initiate a search when the hash changes
+  //reset filter when the URL ahchor changes
   window.onhashchange = function () {
     var initFilter = setFilter();
     setSearch(initFilter);
