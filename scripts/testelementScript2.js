@@ -448,14 +448,14 @@ if (typeof dataSource !== "undefined") {
   // filters
   var initFilter = setFilter();
   
-  //reset filter when the URL ahchor changes
+  //reset filter when the URL anchor changes
   window.onhashchange = function () {
     var initFilter = setFilter();
     setSearch(initFilter);
   };
   
   function setFilter() {
-    
+    // returns URL anchor
     var initFilter = null;
     // if the page URL has an anchor for the URI local part
     if (window.location.hash.indexOf('#') > -1) {
@@ -465,6 +465,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function setSearch(filter) {
+    // draws the data table with the filter
     var table = $("table#pindex").DataTable();
     table.search('').column(2).search(filter).draw();
     $('input[type=search]').val(filter);
