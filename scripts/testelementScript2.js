@@ -98,7 +98,8 @@ if (typeof dataSource !== "undefined") {
         label = getLabel(arrayRow[i]);
         uri = getURI(arrayRow[i]);
         labelLink = quotify(getLinkInLabel(uri, label));
-        curieLink = linkifyIn(makeCurieFromURI(uri, window.rdaPrefix), uri);
+//        curieLink = linkifyIn(makeCurieFromURI(uri, window.rdaPrefix), uri);
+        curieLink = linkifyIn(makeCurieFromURI(uri, curiePrefix), uri);
         switch (theVh) {
           case "h":
           detailArray += divify(curieLink + " [" + labelLink + " (en)]");
@@ -472,8 +473,9 @@ if (typeof dataSource !== "undefined") {
   
   $(document).ready(
   function () {
-    var t8lines = 2;
+    var curiePrefix = "rda";
     var dtable = $("#pindex");
+    var t8lines = 2;
     var table = dtable.DataTable({
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
@@ -487,6 +489,7 @@ if (typeof dataSource !== "undefined") {
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterProperty);
           window.rdaPrefix = getPrefix(json[ "@graph"]);
+          curiePrefix = getPrefix(json[ "@graph"]);
           return json.data;
         }
       },
@@ -562,7 +565,6 @@ if (typeof dataSource !== "undefined") {
         t8.trunk8('revert');
       }
     });
-    
     
     $('input[type=search]').on('click', function () {
       if (history.pushState) {
