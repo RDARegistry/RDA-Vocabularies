@@ -446,6 +446,14 @@ if (typeof dataSource !== "undefined") {
   }
   
   // filters
+  var initFilter = setFilter();
+  
+  //reset filter when the URL ahchor changes
+  window.onhashchange = function () {
+    var initFilter = setFilter();
+    setSearch(initFilter);
+  };
+  
   function setFilter() {
     
     var initFilter = null;
@@ -461,14 +469,6 @@ if (typeof dataSource !== "undefined") {
     table.search('').column(2).search(filter).draw();
     $('input[type=search]').val(filter);
   }
-  
-  var initFilter = setFilter();
-  
-  //reset filter when the URL ahchor changes
-  window.onhashchange = function () {
-    var initFilter = setFilter();
-    setSearch(initFilter);
-  };
   
   $(document).ready(
   function () {
