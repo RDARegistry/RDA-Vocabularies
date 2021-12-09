@@ -448,7 +448,7 @@ if (typeof dataSource !== "undefined") {
   // filters
   var initFilter = setFilter();
   
-  //reset filter when the URL anchor changes
+  //reset filter and redraw when the URL anchor changes
   window.onhashchange = function () {
     var initFilter = setFilter();
     setSearch(initFilter);
