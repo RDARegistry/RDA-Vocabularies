@@ -527,7 +527,7 @@ if (typeof dataSource !== "undefined") {
     });
     
     // Add event listener for truncate on draw
-    dtable.on('draw.dt', function () {
+/*     dtable.on('draw.dt', function () {
       //$('.too-long').collapser({mode: 'lines', truncate: 2, showText: "more" });
       $('.too-long').trunk8({
         lines: t8lines
@@ -541,8 +541,7 @@ if (typeof dataSource !== "undefined") {
         }
         $("div#pindex_filter input").val(initFilter);
       }
-    });
-    
+    });  */
     // Add event listener for opening and closing details
     dtable.children("tbody").on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');
