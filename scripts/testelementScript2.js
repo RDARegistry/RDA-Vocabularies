@@ -37,7 +37,7 @@ if (typeof dataSource !== "undefined") {
     // `d` is the original data object for the row
     // format note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
     var detailRow = makeDetailRow();
-    var detailTable = '<table class="pindexpr_detail">';
+    var detailTable = '<table class="pindex_detail">';
     if (typeof d != "undefined") {
       if (typeof d.note != "undefined") {
         detailRow = makeDetailRow(getStringByLanguage(d.note, docLang), "Scope notes", docLang);
