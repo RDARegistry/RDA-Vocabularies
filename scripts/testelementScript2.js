@@ -19,11 +19,11 @@ var curiePrefix = "rda";
 if (typeof dataSource !== "undefined") {
   
   //noinspection ThisExpressionReferencesGlobalObjectJS
-/*  (function () {
-    $(function () {
-      $('pre').addClass('prettyprint');
-      return prettyPrint();
-    });
+  /*  (function () {
+  $(function () {
+  $('pre').addClass('prettyprint');
+  return prettyPrint();
+  });
   }).call(this); */
   
   // set flag for VES
@@ -261,13 +261,22 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  function getPrefix(theData) {
+  function getPrefix(data) {
     // returns the vocabulary prefix from jsonld data
     var thePrefix = "[prefix]";
-    if (typeof theData[0].prefix != "undefined") {
-      thePrefix = theData[0].prefix;
+    if (typeof data[0].prefix != "undefined") {
+      thePrefix = data[0].prefix;
     }
     return thePrefix;
+  }
+  
+  function getStatus(row) {
+    // returns the status row from a jsonld element row
+    var theStatus = "";
+    if (typeof row.status != "undefined") {
+      theStatus = row.status;
+    }
+    return theStatus;
   }
   
   function getURI(row) {
@@ -520,6 +529,12 @@ if (typeof dataSource !== "undefined") {
         "render": function (data, type, row) {
           return makeColumn(getStringByLanguage(getDefinition(row), docLang, "en"));
         }
+      }, {
+        "class": "status",
+        "orderable": true,
+        "render": function (data, type, row) {
+          return makeColumn((getLinkOut(getStatus(row))));
+        }
       }],
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
@@ -527,20 +542,20 @@ if (typeof dataSource !== "undefined") {
     });
     
     // Add event listener for truncate on draw
-/*     dtable.on('draw.dt', function () {
-      //$('.too-long').collapser({mode: 'lines', truncate: 2, showText: "more" });
-      $('.too-long').trunk8({
-        lines: t8lines
-      });
-      if (initFilter) {
-        var tr = $("#" + initFilter).closest('tr');
-        var row = table.row(tr);
-        if (typeof row.child(format(row.data())) != "undefined") {
-          row.child(format(row.data())).show();
-          tr.addClass('shown');
-        }
-        $("div#pindex_filter input").val(initFilter);
-      }
+    /*     dtable.on('draw.dt', function () {
+    //$('.too-long').collapser({mode: 'lines', truncate: 2, showText: "more" });
+    $('.too-long').trunk8({
+    lines: t8lines
+    });
+    if (initFilter) {
+    var tr = $("#" + initFilter).closest('tr');
+    var row = table.row(tr);
+    if (typeof row.child(format(row.data())) != "undefined") {
+    row.child(format(row.data())).show();
+    tr.addClass('shown');
+    }
+    $("div#pindex_filter input").val(initFilter);
+    }
     });  */
     // Add event listener for opening and closing details
     dtable.children("tbody").on('click', 'td.details-control', function () {
