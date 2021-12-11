@@ -279,6 +279,15 @@ if (typeof dataSource !== "undefined") {
     return theStatus;
   }
   
+  function getTitle(data) {
+    // returns the vocabulary title from jsonld data
+    var theTitle = "[title]";
+    if (typeof data[0].title != "undefined") {
+      theTitle = data[0].title;
+    }
+    return theTitle;
+  }
+  
   function getURI(row) {
     // returns a URI from a jsonld row
     var theURI = "";
@@ -375,9 +384,9 @@ if (typeof dataSource !== "undefined") {
   }
   
   
-  function getStringByLanguage(theData, langCode, defaultLangCode) {
+  function getStringByLanguage(row, langCode, defaultLangCode) {
     // returns string corresponding to language, or defaults
-    var langString = "";
+    var theString = "";
     // default language is English
     var theLangCode = "en";
     // default default language can only be English
@@ -389,23 +398,23 @@ if (typeof dataSource !== "undefined") {
     if (typeof langCode != "undefined") {
       theLangCode = langCode;
     }
-    if (typeof theData != "undefined" && theData != null) {
+    if (typeof row != "undefined" && row != null) {
       // available in selected language
-      if (typeof theData[theLangCode] != "undefined") {
-        langString = directify(quotify(theData[theLangCode]), theLangCode);
+      if (typeof row[theLangCode] != "undefined") {
+        theString = directify(quotify(row[theLangCode]), theLangCode);
       }
       // available in default language; add qualifier to indicate not available in selected language
       else if (theDefaultLangCode.length > 0) {
-        if (typeof theData[theDefaultLangCode] != "undefined") {
-          langString = directify(quotify(theData[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
+        if (typeof row[theDefaultLangCode] != "undefined") {
+          theString = directify(quotify(row[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
         }
       }
       // not available in selected or default language; output indicates the languages
       //            else if (theData instanceof Object) {
-      //                langString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
+      //                theString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
       //            }
     }
-    return langString;
+    return theString;
   }
   
   function makeColumn(content) {
@@ -497,6 +506,7 @@ if (typeof dataSource !== "undefined") {
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterProperty);
           window.curiePrefix = getPrefix(json[ "@graph"]);
+          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
           return json.data;
         }
       },
