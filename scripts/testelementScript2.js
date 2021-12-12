@@ -517,7 +517,8 @@ if (typeof dataSource !== "undefined") {
       window.curiePrefix = theMetadata.prefix;
       theVocTitle = getStringByLanguage(theMetadata.title);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
-      document.getElementById("vocDesription").innerHTML = getStringByLanguage(theMetadata.description);
+      theVocDescription = getStringByLanguage(theMetadata.description);
+      document.getElementById("vocDesription").innerHTML = theVocDescription;
     });
   });
   
