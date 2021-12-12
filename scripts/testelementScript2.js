@@ -26,12 +26,15 @@ if (typeof dataSource !== "undefined") {
   });
   }).call(this); */
   
-  // set flag for VES
+  // set filter for data
   function filterProperty(obj, index) {
+    // exclude first item in json graph that is metadata
     //    return obj[ "@type"] == "Property";
     return index > 0;
   }
+  // set filter for metadata
   function filterMeta(obj, index) {
+    // include first item in json graph that is metadata
     return index == 0;
   }
   
@@ -499,7 +502,7 @@ if (typeof dataSource !== "undefined") {
     var t8lines = 2;
     var table = dtable.DataTable({
       "preDrawCallback": function (settings) {
-//        window.curiePrefix = getPrefix(json[ "@graph"]);
+        //        window.curiePrefix = getPrefix(json[ "@graph"]);
       },
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
