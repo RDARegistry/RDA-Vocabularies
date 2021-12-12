@@ -496,7 +496,7 @@ if (typeof dataSource !== "undefined") {
     var table = dtable.DataTable({
     "preDrawCallback": function( settings ) {
           window.curiePrefix = getPrefix(json[ "@graph"]);
-  }
+  },
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
         //row.id = data["@id"].replace(/^.*\/(.*)$/ig, "$1");
