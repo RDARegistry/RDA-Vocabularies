@@ -506,7 +506,8 @@ if (typeof dataSource !== "undefined") {
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterProperty);
           window.curiePrefix = getPrefix(json[ "@graph"]);
-          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
+//          window.curiePrefix = getPrefix(json[ "@graph"]);
+//          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
           return json.data;
         }
       },
