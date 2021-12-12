@@ -494,9 +494,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function firstPublished(value, index, array) {
-    var theIndex = 0;
-    array["status"].label = "Published";
-    return theIndex;
+    return array["status"].label = "Published";
   }
   
   function getLanguageCallout(data) {
