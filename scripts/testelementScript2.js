@@ -553,11 +553,10 @@ if (typeof dataSource !== "undefined") {
       theVocURI = theMetadata[ "@id"];
       theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
       theVocDomain = theVocTitle.replace(" properties", "");
-      theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' +theVocTitle.replace("properties", "datatype properties") + '</a>';
-      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' +theVocTitle.replace("properties", "object properties") + '</a>';
+      theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
+      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
       theLinkCSV = '<a href="http://www.rdaregistry.info/csv/Elements/' + window.curiePrefix + '.csv">CSV (text/csv)</a> (English language only)';
-      theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1, -1) + '.jsonld">JSON-LD
-                    (application/json | application/json+ld)</a>';
+      theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1, -1) + '.jsonld">JSON-LD (application/json | application/json+ld)</a>';
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocURI").innerHTML = theVocURI;
