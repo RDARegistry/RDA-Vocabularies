@@ -268,14 +268,14 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-//  function getPrefix(data) {
-    // returns the vocabulary prefix from jsonld data
-//    var thePrefix = "[prefix]";
-//    if (typeof data[0].prefix != "undefined") {
-//      thePrefix = data[0].prefix;
-//    }
-//    return thePrefix;
-//  }
+  //  function getPrefix(data) {
+  // returns the vocabulary prefix from jsonld data
+  //    var thePrefix = "[prefix]";
+  //    if (typeof data[0].prefix != "undefined") {
+  //      thePrefix = data[0].prefix;
+  //    }
+  //    return thePrefix;
+  //  }
   
   function getPrefix(metadata) {
     // returns the vocabulary prefix from metadata
@@ -285,7 +285,7 @@ if (typeof dataSource !== "undefined") {
     }
     return thePrefix;
   }
-
+  
   
   function getStatus(row) {
     // returns the status row from a jsonld element row
@@ -296,11 +296,11 @@ if (typeof dataSource !== "undefined") {
     return theStatus;
   }
   
-  function getTitle(data) {
-    // returns the vocabulary title from jsonld data
-    var theTitle = "[title]";
-    if (typeof data[0].title != "undefined") {
-      theTitle = data[0].title;
+  function getTitle(metadata) {
+    // returns the vocabulary title from metadata
+    var theTitle = "";
+    if (typeof metadata.title != "undefined") {
+      theTitle = metadata.title;
     }
     return theTitle;
   }
@@ -513,7 +513,7 @@ if (typeof dataSource !== "undefined") {
     var t8lines = 2;
     var table = dtable.DataTable({
       "preDrawCallback": function (settings) {
-                window.curiePrefix = getPrefix(metadata);
+        window.curiePrefix = getPrefix(metadata);
       },
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
@@ -525,8 +525,8 @@ if (typeof dataSource !== "undefined") {
         //        cache: true,
         //        crossDomain: true,
         "dataSrc": function (json) {
-          json.data = json[ "@graph"].filter(filterData);
           metadata = json[ "@graph"].filter(filterMeta);
+          json.data = json[ "@graph"].filter(filterData);
           //          window.curiePrefix = getPrefix(json[ "@graph"]);
           //          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
           return json.data;
