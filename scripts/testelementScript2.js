@@ -513,7 +513,7 @@ if (typeof dataSource !== "undefined") {
     var t8lines = 2;
     var table = dtable.DataTable({
       "preDrawCallback": function (settings) {
-        window.curiePrefix = getPrefix(metadata);
+//        window.curiePrefix = getPrefix(metadata);
       },
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
@@ -525,7 +525,7 @@ if (typeof dataSource !== "undefined") {
         //        cache: true,
         //        crossDomain: true,
         "dataSrc": function (json) {
-          metadata = json[ "@graph"].filter(filterMeta);
+//          metadata = json[ "@graph"].filter(filterMeta);
           json.data = json[ "@graph"].filter(filterData);
           //          window.curiePrefix = getPrefix(json[ "@graph"]);
           //          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
