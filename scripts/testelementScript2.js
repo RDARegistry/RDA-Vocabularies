@@ -510,7 +510,7 @@ if (typeof dataSource !== "undefined") {
     $.getJSON(dataSource, function (data) {
       window.curiePrefix = data[0].prefix;
     });
-  };
+  });
   
   
   $(document).ready(
