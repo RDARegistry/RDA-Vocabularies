@@ -508,7 +508,9 @@ if (typeof dataSource !== "undefined") {
   
   $(document).ready(function () {
     $.getJSON(dataSource, function (data) {
-      window.curiePrefix = data["@graph"][0].prefix;
+     var metadata;
+     metadata = data.graph;
+      window.curiePrefix = metadata[0].prefix;
     });
   });
   
