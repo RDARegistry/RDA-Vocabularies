@@ -544,7 +544,7 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocURI").innerHTML = theMetadata[ "@id"];
       document.getElementById("vocPrefix").innerHTML = theMetadata.prefix;
-      theVersionLink = '<a href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
+      theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
       document.getElementById("vocVersion").innerHTML = theVersionLink;
     });
   });
