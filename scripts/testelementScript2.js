@@ -542,9 +542,9 @@ if (typeof dataSource !== "undefined") {
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
       theVocTitle = theMetadata.title["en"];
-      document.getElementById("vocTitle").innerHTML = theVocTitle;
+      document.getElementById("vocTitle").innerHTML = theMetadata.title["en"];
       theVocDescription = theMetadata.description["en"];
-      document.getElementById("vocDescription").innerHTML = theVocDescription;
+      document.getElementById("vocDescription").innerHTML = theMetadata.description["en"];
     });
   });
   
