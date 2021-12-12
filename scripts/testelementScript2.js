@@ -543,6 +543,7 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("vocDescription").innerHTML = theMetadata.description["en"];
       document.getElementById("vocURI").innerHTML = theMetadata["@id"];
       document.getElementById("vocPrefix").innerHTML = theMetadata.prefix;
+      document.getElementById("vocVersion").innerHTML = theMetadata.versionInfo;
     });
   });
   
