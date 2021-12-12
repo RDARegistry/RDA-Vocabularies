@@ -493,6 +493,12 @@ if (typeof dataSource !== "undefined") {
     return url;
   }
   
+  function firstPublished(value, index, array) {
+    var theIndex = 0;
+    array["status"].label = "Published";
+    return theIndex;
+  }
+  
   function getLanguageCallout(data) {
     // not currently used: returns the xml language string
     if (typeof data != "undefined") {
@@ -546,7 +552,9 @@ if (typeof dataSource !== "undefined") {
       var theVocToDatatype = "";
       var theVocToObject = "";
       var theVocURI = "";
+      var theFirst = "";
       theData = json[ "@graph"];
+      theFirst = theData.findIndex(firstPublished);
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
       theVocTitle = theMetadata.title[ "en"];
@@ -561,6 +569,7 @@ if (typeof dataSource !== "undefined") {
       theLinkXML = '<a href="http://www.rdaregistry.info/xml/Elements/' + window.curiePrefix.slice(-1) + '.xml">RDF/XML (application/rdf+xml)</a>';
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
+      document.getElementById("vocEntriesTotal").innerHTML = theFirst;
       document.getElementById("vocURI").innerHTML = theVocURI;
       document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
       document.getElementById("vocVersion").innerHTML = theVersionLink;
