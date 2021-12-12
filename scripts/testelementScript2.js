@@ -556,7 +556,7 @@ if (typeof dataSource !== "undefined") {
       theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
       theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
       theLinkCSV = '<a href="http://www.rdaregistry.info/csv/Elements/' + window.curiePrefix + '.csv">CSV (text/csv)</a> (English language only)';
-      theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1, -1) + '.jsonld">JSON-LD (application/json | application/json+ld)</a>';
+      theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1) + '.jsonld">JSON-LD (application/json | application/json+ld)</a>';
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocURI").innerHTML = theVocURI;
