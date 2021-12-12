@@ -506,13 +506,12 @@ if (typeof dataSource !== "undefined") {
     $('input[type=search]').val(filter);
   }
   
-  $(document).ready() {
-    function () {
-      $.getJSON(dataSource, function (data) {
-        window.curiePrefix = data[0].prefix;
-      });
-    }
-  }
+  $(document).ready(function () {
+    $.getJSON(dataSource, function (data) {
+      window.curiePrefix = data[0].prefix;
+    });
+  };
+  
   
   $(document).ready(
   function () {
