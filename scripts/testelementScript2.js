@@ -510,7 +510,8 @@ if (typeof dataSource !== "undefined") {
     $.getJSON(dataSource, function (json) {
       var thedata;
       var theMetadata;
-      var theVocTItle;
+      var theVocTitle;
+      var theVocDescription;
       theData = json[ "@graph"];
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
