@@ -27,7 +27,7 @@ if (typeof dataSource !== "undefined") {
   }).call(this); */
   
   // set filter for data
-  function filterProperty(obj, index) {
+  function filterData(obj, index) {
     // exclude first item in json graph that is metadata
     //    return obj[ "@type"] == "Property";
     return index > 0;
@@ -514,7 +514,7 @@ if (typeof dataSource !== "undefined") {
         //        cache: true,
         //        crossDomain: true,
         "dataSrc": function (json) {
-          json.data = json[ "@graph"].filter(filterProperty);
+          json.data = json[ "@graph"].filter(filterData);
           //          window.curiePrefix = getPrefix(json[ "@graph"]);
           //          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
           return json.data;
