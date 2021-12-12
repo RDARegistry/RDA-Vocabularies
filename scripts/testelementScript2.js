@@ -494,6 +494,9 @@ if (typeof dataSource !== "undefined") {
     var dtable = $("#pindex");
     var t8lines = 2;
     var table = dtable.DataTable({
+    "preDrawCallback": function( settings ) {
+          window.curiePrefix = getPrefix(json[ "@graph"]);
+  }
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
         //row.id = data["@id"].replace(/^.*\/(.*)$/ig, "$1");
@@ -505,7 +508,6 @@ if (typeof dataSource !== "undefined") {
 //        crossDomain: true,
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterProperty);
-          window.curiePrefix = getPrefix(json[ "@graph"]);
 //          window.curiePrefix = getPrefix(json[ "@graph"]);
 //          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
           return json.data;
