@@ -509,7 +509,7 @@ if (typeof dataSource !== "undefined") {
   $(document).ready(
   function () {
     var dtable = $("#pindex");
-    const metadata = [];
+    var metadata;
     var t8lines = 2;
     var table = dtable.DataTable({
       "preDrawCallback": function (settings) {
