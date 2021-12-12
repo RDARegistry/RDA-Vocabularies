@@ -500,7 +500,7 @@ if (typeof dataSource !== "undefined") {
       },
       "ajax": {
         url: dataSource,
-        dataType: 'json',
+//        dataType: 'json',
         cache: true,
         crossDomain: true,
         "dataSrc": function (json) {
