@@ -515,7 +515,7 @@ if (typeof dataSource !== "undefined") {
       theData = json[ "@graph"];
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
-      theVocTitle = getStringByLanguage(theMetadata.title);
+      theVocTitle = JSON.stringify(getStringByLanguage(theMetadata.title));
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       theVocDescription = getStringByLanguage(theMetadata.description);
       document.getElementById("vocDescription").innerHTML = theVocDescription;
