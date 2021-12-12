@@ -536,14 +536,10 @@ if (typeof dataSource !== "undefined") {
     $.getJSON(dataSource, function (json) {
       var thedata;
       var theMetadata;
-      var theVocTitle;
-      var theVocDescription;
       theData = json[ "@graph"];
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
-      theVocTitle = theMetadata.title["en"];
       document.getElementById("vocTitle").innerHTML = theMetadata.title["en"];
-      theVocDescription = theMetadata.description["en"];
       document.getElementById("vocDescription").innerHTML = theMetadata.description["en"];
     });
   });
