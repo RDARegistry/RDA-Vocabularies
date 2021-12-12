@@ -508,9 +508,12 @@ if (typeof dataSource !== "undefined") {
   
   $(document).ready(function () {
     $.getJSON(dataSource, function (json) {
-      var metadata;
-      metadata = json[ "@graph"];
-      window.curiePrefix = metadata[0].prefix;
+      var thedata;
+      var theMetadata;
+      theData = json[ "@graph"];
+      theMetadata = theDate[0];
+      window.curiePrefix = theMetadata.prefix;
+      document.getElementById("vocTitle").innerHTML = getStringByLanguage(theMetadata.title);
     });
   });
   
