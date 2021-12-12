@@ -299,7 +299,7 @@ if (typeof dataSource !== "undefined") {
       //            else if (theData instanceof Object) {
       //                theString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
       //            }
-     }
+    }
     return theLabel;
   }
   
@@ -534,19 +534,21 @@ if (typeof dataSource !== "undefined") {
   
   $(document).ready(function () {
     $.getJSON(dataSource, function (json) {
-      var thedata;
+      var theData;
       var theMetadata;
+      var theVersionLink;
       theData = json[ "@graph"];
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
-      document.getElementById("vocTitle").innerHTML = theMetadata.title["en"];
-      document.getElementById("vocDescription").innerHTML = theMetadata.description["en"];
-      document.getElementById("vocURI").innerHTML = theMetadata["@id"];
+      document.getElementById("vocTitle").innerHTML = theMetadata.title[ "en"];
+      document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
+      document.getElementById("vocURI").innerHTML = theMetadata[ "@id"];
       document.getElementById("vocPrefix").innerHTML = theMetadata.prefix;
-      document.getElementById("vocVersion").innerHTML = theMetadata.versionInfo;
+      theVersionLink = '<a href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
+      document.getElementById("vocVersion").innerHTML = theVersionLink;
     });
   });
-  
+  https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/v4.1.2
   
   $(document).ready(
   function () {
