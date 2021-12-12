@@ -516,7 +516,7 @@ if (typeof dataSource !== "undefined") {
         //        crossDomain: true,
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterData);
-          metadata = json[ "@graph"].flter(filterMeta);
+          metadata = json[ "@graph"].fllter(filterMeta);
           //          window.curiePrefix = getPrefix(json[ "@graph"]);
           //          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
           return json.data;
