@@ -518,7 +518,7 @@ if (typeof dataSource !== "undefined") {
       theVocTitle = getStringByLanguage(theMetadata.title);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       theVocDescription = getStringByLanguage(theMetadata.description);
-      document.getElementById("vocDesription").innerHTML = theVocDescription;
+      document.getElementById("vocDescription").innerHTML = theVocDescription;
     });
   });
   
