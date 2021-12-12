@@ -268,14 +268,73 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  //  function getPrefix(data) {
-  // returns the vocabulary prefix from jsonld data
-  //    var thePrefix = "[prefix]";
-  //    if (typeof data[0].prefix != "undefined") {
-  //      thePrefix = data[0].prefix;
-  //    }
-  //    return thePrefix;
-  //  }
+  function getLabelByLanguage(row, langCode, defaultLangCode) {
+    // returns a label in a specified language from a jsonld row
+    var theLabel = "";
+    var theLabels = "";
+    // default language is English
+    var theLangCode = "en";
+    // default default language can only be English
+    // [not enabled until translation processes in place]
+    var theDefaultLangCode = "";
+    if (typeof defaultLangCode != "undefined") {
+      theDefaultLangCode = defaultLangCode;
+    }
+    if (typeof langCode != "undefined") {
+      theLangCode = langCode;
+    }
+    if (typeof row[ "label"] != "undefined") {
+      theLabels = row[ "label"];
+      // available in selected language
+      if (typeof theLabels[theLangCode] != "undefined") {
+        theLabel = theLabels[theLangCode];
+      }
+      // available in default language; add qualifier to indicate not available in selected language
+      else if (theDefaultLangCode.length > 0) {
+        if (typeof row[theDefaultLangCode] != "undefined") {
+          theLabel = theLabels[theDefaultLangCode] + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode;
+        }
+      }
+      // not available in selected or default language; output indicates the languages
+      //            else if (theData instanceof Object) {
+      //                theString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
+      //            }
+     }
+    return theLabel;
+  }
+  
+  function getStringByLanguage(row, langCode, defaultLangCode) {
+    // returns string corresponding to language, or defaults
+    var theString = "";
+    // default language is English
+    var theLangCode = "en";
+    // default default language can only be English
+    // [not enabled until translation processes in place]
+    var theDefaultLangCode = "";
+    if (typeof defaultLangCode != "undefined") {
+      theDefaultLangCode = defaultLangCode;
+    }
+    if (typeof langCode != "undefined") {
+      theLangCode = langCode;
+    }
+    if (typeof row != "undefined" && row != null) {
+      // available in selected language
+      if (typeof row[theLangCode] != "undefined") {
+        theString = directify(quotify(row[theLangCode]), theLangCode);
+      }
+      // available in default language; add qualifier to indicate not available in selected language
+      else if (theDefaultLangCode.length > 0) {
+        if (typeof row[theDefaultLangCode] != "undefined") {
+          theString = directify(quotify(row[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
+        }
+      }
+      // not available in selected or default language; output indicates the languages
+      //            else if (theData instanceof Object) {
+      //                theString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
+      //            }
+    }
+    return theString;
+  }
   
   function getPrefix(metadata) {
     // returns the vocabulary prefix from metadata
@@ -401,39 +460,6 @@ if (typeof dataSource !== "undefined") {
   }
   
   
-  function getStringByLanguage(row, langCode, defaultLangCode) {
-    // returns string corresponding to language, or defaults
-    var theString = "";
-    // default language is English
-    var theLangCode = "en";
-    // default default language can only be English
-    // [not enabled until translation processes in place]
-    var theDefaultLangCode = "";
-    if (typeof defaultLangCode != "undefined") {
-      theDefaultLangCode = defaultLangCode;
-    }
-    if (typeof langCode != "undefined") {
-      theLangCode = langCode;
-    }
-    if (typeof row != "undefined" && row != null) {
-      // available in selected language
-      if (typeof row[theLangCode] != "undefined") {
-        theString = directify(quotify(row[theLangCode]), theLangCode);
-      }
-      // available in default language; add qualifier to indicate not available in selected language
-      else if (theDefaultLangCode.length > 0) {
-        if (typeof row[theDefaultLangCode] != "undefined") {
-          theString = directify(quotify(row[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
-        }
-      }
-      // not available in selected or default language; output indicates the languages
-      //            else if (theData instanceof Object) {
-      //                theString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
-      //            }
-    }
-    return theString;
-  }
-  
   function makeColumn(content) {
     // returns column content in a wrapper div with direction parameter
     var col = "";
@@ -515,9 +541,9 @@ if (typeof dataSource !== "undefined") {
       theData = json[ "@graph"];
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
-      theVocTitle = getStringByLanguage(theMetadata.title);
+      theVocTitle = theMetadata.title["en"]);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
-      theVocDescription = getStringByLanguage(theMetadata.description);
+      theVocDescription = theMetadata.description["en"];
       document.getElementById("vocDescription").innerHTML = theVocDescription;
     });
   });
