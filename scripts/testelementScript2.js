@@ -569,7 +569,6 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("linkJSON").innerHTML = theLinkJSON;
     });
   });
-  https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/v4.1.2
   
   $(document).ready(
   function () {
