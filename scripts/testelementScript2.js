@@ -501,8 +501,8 @@ if (typeof dataSource !== "undefined") {
       "ajax": {
         url: dataSource,
 //        dataType: 'json',
-        cache: true,
-        crossDomain: true,
+//        cache: true,
+//        crossDomain: true,
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterProperty);
           window.curiePrefix = getPrefix(json[ "@graph"]);
