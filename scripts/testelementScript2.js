@@ -548,7 +548,7 @@ if (typeof dataSource !== "undefined") {
       theVocURI = theMetadata[ "@id"];
       theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
       theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' +theVocTitle.replace("properties", "datatype properties") + '</a>';
-      theVocToObject = theVocTitle.replace("properties", "object properties");
+      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' +theVocTitle.replace("properties", "object properties") + '</a>';
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocURI").innerHTML = theVocURI;
