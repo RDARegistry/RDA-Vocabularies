@@ -537,6 +537,7 @@ if (typeof dataSource !== "undefined") {
       var theData;
       var theMetadata;
       var theVersionLink = "";
+      var theVocDomain = "";
       var theVocTitle = "";
       var theVocToDatatype = "";
       var theVocToObject = "";
@@ -547,6 +548,7 @@ if (typeof dataSource !== "undefined") {
       theVocTitle = theMetadata.title[ "en"];
       theVocURI = theMetadata[ "@id"];
       theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
+      theVocDomain = theVocTitle.replace(" properties", "");
       theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' +theVocTitle.replace("properties", "datatype properties") + '</a>';
       theVocToObject = '<a href="' + theVocURI + 'object/' + '">' +theVocTitle.replace("properties", "object properties") + '</a>';
       document.getElementById("vocTitle").innerHTML = theVocTitle;
@@ -554,6 +556,7 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("vocURI").innerHTML = theVocURI;
       document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
       document.getElementById("vocVersion").innerHTML = theVersionLink;
+      document.getElementById("vocDomain").innerHTML = theVocDomain;
       document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
       document.getElementById("vocToObject").innerHTML = theVocToObject;
     });
