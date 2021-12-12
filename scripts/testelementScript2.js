@@ -541,7 +541,7 @@ if (typeof dataSource !== "undefined") {
       theData = json[ "@graph"];
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
-      theVocTitle = theMetadata.title["en"]);
+      theVocTitle = theMetadata.title["en"];
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       theVocDescription = theMetadata.description["en"];
       document.getElementById("vocDescription").innerHTML = theVocDescription;
