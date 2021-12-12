@@ -536,20 +536,26 @@ if (typeof dataSource !== "undefined") {
     $.getJSON(dataSource, function (json) {
       var theData;
       var theMetadata;
-      var theVersionLink;
-      var theVocTitle;
-      var theVocURI;
+      var theVersionLink = "";
+      var theVocTitle = "";
+      var theVocToDatatype = "";
+      var theVocToObject = "";
+      var theVocURI = "";
       theData = json[ "@graph"];
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
       theVocTitle = theMetadata.title[ "en"];
       theVocURI = theMetadata[ "@id"];
       theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
+      theVocToDatatype = '<a href="' + theVocURI + '/datatype/' + '">' +theVocTitle.replace("properties", "datatype properties") + '</a>';
+      theVocToObject = theVocTitle.replace("properties", "object properties");
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocURI").innerHTML = theVocURI;
       document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
       document.getElementById("vocVersion").innerHTML = theVersionLink;
+      document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
+      document.getElementById("vocToObject").innerHTML = theVocToObject;
     });
   });
   https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/v4.1.2
