@@ -536,6 +536,10 @@ if (typeof dataSource !== "undefined") {
     $.getJSON(dataSource, function (json) {
       var theData;
       var theMetadata;
+      var theDownCSV = "";
+      var theDownJSON = "";
+      var theDownNT = "";
+      var theDownXML = "";
       var theVersionLink = "";
       var theVocDomain = "";
       var theVocTitle = "";
@@ -551,6 +555,7 @@ if (typeof dataSource !== "undefined") {
       theVocDomain = theVocTitle.replace(" properties", "");
       theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' +theVocTitle.replace("properties", "datatype properties") + '</a>';
       theVocToObject = '<a href="' + theVocURI + 'object/' + '">' +theVocTitle.replace("properties", "object properties") + '</a>';
+      theDownCSV = '<a href="http://www.rdaregistry.info/csv/Elements/' + window.curiePrefix + '.csv">CSV (text/csv)</a>';
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocURI").innerHTML = theVocURI;
