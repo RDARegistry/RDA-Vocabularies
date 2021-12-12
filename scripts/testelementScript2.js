@@ -509,7 +509,7 @@ if (typeof dataSource !== "undefined") {
   $(document).ready(function () {
     $.getJSON(dataSource, function (data) {
       var metadata;
-      metadata = data.graph;
+      metadata = data.@graph;
       window.curiePrefix = metadata[0].prefix;
     });
   });
