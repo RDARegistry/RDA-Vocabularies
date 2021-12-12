@@ -268,14 +268,24 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  function getPrefix(data) {
+//  function getPrefix(data) {
     // returns the vocabulary prefix from jsonld data
-    var thePrefix = "[prefix]";
-    if (typeof data[0].prefix != "undefined") {
-      thePrefix = data[0].prefix;
+//    var thePrefix = "[prefix]";
+//    if (typeof data[0].prefix != "undefined") {
+//      thePrefix = data[0].prefix;
+//    }
+//    return thePrefix;
+//  }
+  
+  function getPrefix(metadata) {
+    // returns the vocabulary prefix from metadata
+    var thePrefix = "";
+    if (typeof metadata.prefix != "undefined") {
+      thePrefix = metadata.prefix;
     }
     return thePrefix;
   }
+
   
   function getStatus(row) {
     // returns the status row from a jsonld element row
@@ -503,7 +513,7 @@ if (typeof dataSource !== "undefined") {
     var t8lines = 2;
     var table = dtable.DataTable({
       "preDrawCallback": function (settings) {
-        //        window.curiePrefix = getPrefix(json[ "@graph"]);
+                window.curiePrefix = getPrefix(metadata);
       },
       "createdRow": function (row, data, index) {
         //$('td', row).eq(3).addClass('too-long');
