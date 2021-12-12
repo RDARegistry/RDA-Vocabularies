@@ -541,6 +541,8 @@ if (typeof dataSource !== "undefined") {
       window.curiePrefix = theMetadata.prefix;
       document.getElementById("vocTitle").innerHTML = theMetadata.title["en"];
       document.getElementById("vocDescription").innerHTML = theMetadata.description["en"];
+      document.getElementById("vocURI").innerHTML = theMetadata["@id"];
+      document.getElementById("vocPrefix").innerHTML = theMetadata.prefix;
     });
   });
   
