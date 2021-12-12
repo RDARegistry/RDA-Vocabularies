@@ -565,6 +565,8 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("vocDomain").innerHTML = theVocDomain;
       document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
       document.getElementById("vocToObject").innerHTML = theVocToObject;
+      document.getElementById("linkCSV").innerHTML = theLinkCSV;
+      document.getElementById("linkJSON").innerHTML = theLinkJSON;
     });
   });
   https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/v4.1.2
