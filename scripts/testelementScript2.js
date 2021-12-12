@@ -514,6 +514,7 @@ if (typeof dataSource !== "undefined") {
       theMetadata = theDate[0];
       window.curiePrefix = theMetadata.prefix;
       document.getElementById("vocTitle").innerHTML = getStringByLanguage(theMetadata.title);
+      document.getElementById("vocDesription").innerHTML = getStringByLanguage(theMetadata.description);
     });
   });
   
