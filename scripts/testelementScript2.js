@@ -561,7 +561,6 @@ if (typeof dataSource !== "undefined") {
       thePublished = theData.filter(getPublished);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
-      document.getElementById("vocEntriesTotal").innerHTML = theFirst;
       document.getElementById("vocURI").innerHTML = theVocURI;
       document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
       document.getElementById("vocVersion").innerHTML = theVersionLink;
