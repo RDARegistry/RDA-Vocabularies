@@ -10,7 +10,7 @@ function gup(name, url, theDefault) {
 var docLang = gup('language', Location.href, 'en');
 // set language indicator style; border colour indicates on/selected
 $("#lang_" + docLang).css({
-  "padding": "5px", "border": "3px solid #446e9b", "border-radius": "5px"
+  "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
 });
 
 // initialize wide scope variable for prefix
