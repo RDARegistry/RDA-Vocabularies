@@ -32,11 +32,6 @@ if (typeof dataSource !== "undefined") {
     //    return obj[ "@type"] == "Property";
     return index > 0;
   }
-  // set filter for metadata
-  function filterMeta(obj, index) {
-    // include first item in json graph that is metadata
-    return index == 0;
-  }
   
   // Detail
   /* Formatting function for row details - modify as you need */
@@ -493,10 +488,9 @@ if (typeof dataSource !== "undefined") {
     return url;
   }
   
-  function firstPublished(value, index, array) {
-    return array["status"].label = "Published";
+  function getPublished(value, index, array) {
+    return value.status = "http://metadataregistry.org/uri/RegStatus/1001";
   }
-  
   function getLanguageCallout(data) {
     // not currently used: returns the xml language string
     if (typeof data != "undefined") {
@@ -550,9 +544,8 @@ if (typeof dataSource !== "undefined") {
       var theVocToDatatype = "";
       var theVocToObject = "";
       var theVocURI = "";
-      var theFirst = "";
+      var thePublished = "";
       theData = json[ "@graph"];
-      theFirst = theData.findIndex(firstPublished);
       theMetadata = theData[0];
       window.curiePrefix = theMetadata.prefix;
       theVocTitle = theMetadata.title[ "en"];
@@ -565,6 +558,7 @@ if (typeof dataSource !== "undefined") {
       theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1) + '.jsonld">JSON-LD (application/json | application/json+ld)</a>';
       theLinkNT = '<a href="http://www.rdaregistry.info/nt/Elements/' + window.curiePrefix.slice(-1) + '.nt">N-Triples (text/rdf+nt)</a>';
       theLinkXML = '<a href="http://www.rdaregistry.info/xml/Elements/' + window.curiePrefix.slice(-1) + '.xml">RDF/XML (application/rdf+xml)</a>';
+      thePublished = theData.filter(getPublished);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocEntriesTotal").innerHTML = theFirst;
@@ -600,10 +594,7 @@ if (typeof dataSource !== "undefined") {
         //        cache: true,
         //        crossDomain: true,
         "dataSrc": function (json) {
-          //          metadata = json[ "@graph"].filter(filterMeta);
           json.data = json[ "@graph"].filter(filterData);
-          //          window.curiePrefix = getPrefix(json[ "@graph"]);
-          //          window.vocTitle = getStringByLanguage(getTitle(json[ "@graph"]), doclang, "en");
           return json.data;
         }
       },
