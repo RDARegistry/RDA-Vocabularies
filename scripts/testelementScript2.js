@@ -489,7 +489,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getPublished(value, index, array) {
-    return value.status = "http://metadataregistry.org/uri/RegStatus/1001";
+    return value.status.label = "Published";
   }
   function getLanguageCallout(data) {
     // not currently used: returns the xml language string
@@ -540,6 +540,7 @@ if (typeof dataSource !== "undefined") {
       var theLinkXML = "";
       var theVersionLink = "";
       var theVocDomain = "";
+      var theVocEntriesTotal = 0;
       var theVocTitle = "";
       var theVocToDatatype = "";
       var theVocToObject = "";
@@ -561,6 +562,7 @@ if (typeof dataSource !== "undefined") {
       thePublished = theData.filter(getPublished);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
+      document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
       document.getElementById("vocURI").innerHTML = theVocURI;
       document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
       document.getElementById("vocVersion").innerHTML = theVersionLink;
