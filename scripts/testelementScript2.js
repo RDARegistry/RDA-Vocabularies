@@ -489,7 +489,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getPublished(value, index, array) {
-    return value.status.label = "Published";
+    return value["status"] = "Published";
   }
   function getLanguageCallout(data) {
     // not currently used: returns the xml language string
