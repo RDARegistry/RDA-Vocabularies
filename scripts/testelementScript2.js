@@ -492,7 +492,7 @@ if (typeof dataSource !== "undefined") {
     var isPublished = false;
     if (index > 0) {
       if (value[ "status"][ "label"] == "Published") {
-        isPubished = true;
+        isPublished = true;
       }
     }
     return isPublished;
