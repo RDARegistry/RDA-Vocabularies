@@ -491,7 +491,7 @@ if (typeof dataSource !== "undefined") {
   function getPublished(value, index, array) {
     var isPublished = false;
     if (index > 0) {
-      if (value[ "status"][ "label"] = "Published") {
+      if (value[ "status"][ "label"] == "Published") {
         isPubished = true;
       }
     }
