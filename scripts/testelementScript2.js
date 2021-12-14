@@ -649,6 +649,7 @@ if (typeof dataSource !== "undefined") {
       }],
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
+      "responsive": true,
       "deferRender": true
     });
     
