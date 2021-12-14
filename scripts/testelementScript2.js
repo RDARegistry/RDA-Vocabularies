@@ -545,6 +545,7 @@ if (typeof dataSource !== "undefined") {
       var theLinkNT = "";
       var theLinkXML = "";
       var theVersionLink = "";
+      var theVocCurieEx = "";
       var theVocDomain = "";
       var theVocEntriesTotal = 0;
       var theVocTitle = "";
@@ -567,11 +568,13 @@ if (typeof dataSource !== "undefined") {
       theLinkXML = "http://www.rdaregistry.info/xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
       thePublished = theData.filter(getPublished);
       theVocEntriesTotal = thePublished.length;
+      theVocCurieEx = makeCurieFromURI(getURI(thePublished[0]), window.curiePrefix);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
       document.getElementById("vocURI").innerHTML = theVocURI;
       document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
+      document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
       document.getElementById("vocVersion").innerHTML = theVersionLink;
       document.getElementById("vocDomain").innerHTML = theVocDomain;
       document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
