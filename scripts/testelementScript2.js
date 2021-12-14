@@ -555,7 +555,11 @@ if (typeof dataSource !== "undefined") {
       theVocDomain = theVocTitle.replace(" properties", "");
       theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
       theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-      theLinkCSV = '<a href="http://www.rdaregistry.info/csv/Elements/' + window.curiePrefix + '.csv">CSV (text/csv)</a> (English language only)';
+//      theLinkCSV = '<a href="http://www.rdaregistry.info/csv/Elements/' + window.curiePrefix + '.csv">CSV (text/csv)</a> (English language only)';
+//      theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1) + '.jsonld">JSON-LD (application/json | application/json+ld)</a>';
+//      theLinkNT = '<a href="http://www.rdaregistry.info/nt/Elements/' + window.curiePrefix.slice(-1) + '.nt">N-Triples (text/rdf+nt)</a>';
+//      theLinkXML = '<a href="http://www.rdaregistry.info/xml/Elements/' + window.curiePrefix.slice(-1) + '.xml">RDF/XML (application/rdf+xml)</a>';
+      theLinkCSV = "http://www.rdaregistry.info/csv/Elements/" + window.curiePrefix + ".csv">CSV (text/csv)</a> (English language only)';
       theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1) + '.jsonld">JSON-LD (application/json | application/json+ld)</a>';
       theLinkNT = '<a href="http://www.rdaregistry.info/nt/Elements/' + window.curiePrefix.slice(-1) + '.nt">N-Triples (text/rdf+nt)</a>';
       theLinkXML = '<a href="http://www.rdaregistry.info/xml/Elements/' + window.curiePrefix.slice(-1) + '.xml">RDF/XML (application/rdf+xml)</a>';
@@ -569,10 +573,10 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("vocDomain").innerHTML = theVocDomain;
       document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
       document.getElementById("vocToObject").innerHTML = theVocToObject;
-      document.getElementById("linkCSV").innerHTML = theLinkCSV;
-      document.getElementById("linkJSON").innerHTML = theLinkJSON;
-      document.getElementById("linkNT").innerHTML = theLinkNT;
-      document.getElementById("linkXML").innerHTML = theLinkXML;
+      document.getElementById("linkCSV").href = theLinkCSV;
+      document.getElementById("linkJSON").href = theLinkJSON;
+      document.getElementById("linkNT").href = theLinkNT;
+      document.getElementById("linkXML").href = theLinkXML;
     });
   });
   
