@@ -489,7 +489,13 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getPublished(value, index, array) {
-    return value["status"]["label"] = "Published";
+    var isPublished = false;
+    if (index > 0) {
+      if (value[ "status"][ "label"] = "Published") {
+        isPubished = true;
+      }
+    }
+    return isPublished;
   }
   function getLanguageCallout(data) {
     // not currently used: returns the xml language string
