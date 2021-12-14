@@ -559,7 +559,7 @@ if (typeof dataSource !== "undefined") {
       theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1) + '.jsonld">JSON-LD (application/json | application/json+ld)</a>';
       theLinkNT = '<a href="http://www.rdaregistry.info/nt/Elements/' + window.curiePrefix.slice(-1) + '.nt">N-Triples (text/rdf+nt)</a>';
       theLinkXML = '<a href="http://www.rdaregistry.info/xml/Elements/' + window.curiePrefix.slice(-1) + '.xml">RDF/XML (application/rdf+xml)</a>';
-      thePublished = theData.filter(getPublished);
+//      thePublished = theData.filter(getPublished);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
