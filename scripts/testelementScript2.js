@@ -540,6 +540,7 @@ if (typeof dataSource !== "undefined") {
     $.getJSON(dataSource, function (json) {
       var theData;
       var theMetadata;
+      var theCurieExURI = "";
       var theLinkCSV = "";
       var theLinkJSON = "";
       var theLinkNT = "";
@@ -568,7 +569,8 @@ if (typeof dataSource !== "undefined") {
       theLinkXML = "http://www.rdaregistry.info/xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
       thePublished = theData.filter(getPublished);
       theVocEntriesTotal = thePublished.length;
-      theVocCurieEx = makeCurieFromURI(getURI(thePublished[0]), window.curiePrefix);
+      theCurieExURI = getURI(thePublished[0]);
+      theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
