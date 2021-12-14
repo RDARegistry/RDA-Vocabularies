@@ -555,15 +555,11 @@ if (typeof dataSource !== "undefined") {
       theVocDomain = theVocTitle.replace(" properties", "");
       theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
       theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-//      theLinkCSV = '<a href="http://www.rdaregistry.info/csv/Elements/' + window.curiePrefix + '.csv">CSV (text/csv)</a> (English language only)';
-//      theLinkJSON = '<a href="http://www.rdaregistry.info/jsonld/Elements/' + window.curiePrefix.slice(-1) + '.jsonld">JSON-LD (application/json | application/json+ld)</a>';
-//      theLinkNT = '<a href="http://www.rdaregistry.info/nt/Elements/' + window.curiePrefix.slice(-1) + '.nt">N-Triples (text/rdf+nt)</a>';
-//      theLinkXML = '<a href="http://www.rdaregistry.info/xml/Elements/' + window.curiePrefix.slice(-1) + '.xml">RDF/XML (application/rdf+xml)</a>';
       theLinkCSV = "http://www.rdaregistry.info/csv/Elements/" + window.curiePrefix + ".csv";
       theLinkJSON = "http://www.rdaregistry.info/jsonld/Elements/" + window.curiePrefix.slice(-1) + ".jsonld";
       theLinkNT = "http://www.rdaregistry.info/nt/Elements/" + window.curiePrefix.slice(-1) + ".nt";
       theLinkXML = "http://www.rdaregistry.info/xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
-//      thePublished = theData.filter(getPublished);
+      thePublished = theData.filter(getPublished);
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
