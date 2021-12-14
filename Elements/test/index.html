@@ -147,42 +147,46 @@
         <div class="row mt-2">
           <div class="col-md-6">
             <!-- Header block -->
-            <div>
-              <div class="d-inline-flex flex-wrap"><h1><a href="/Elements/">RDA element
-                  sets</a></h1></div>
-              <div class="d-inline-flex"><span class="crumbSep">&gt;</span></div>
-              <div class="d-inline-flex flex-wrap"><h2 id="vocTitle"></h2></div>
+            <div class="row vocHeader">
+              <div class="">
+                <div class="d-inline-flex flex-wrap"><h1><a href="/Elements/">RDA element
+                    sets</a></h1></div>
+                <div class="d-inline-flex"><span class="crumbSep">&gt;</span></div>
+                <div class="d-inline-flex flex-wrap"><h2 id="vocTitle"></h2></div>
+              </div>
             </div>
             <!-- Reference block -->
-            <div class="vocMetadata">
-              <p id="vocDescription"></p>
-              <table>
-                <tr>
-                  <td>Number of active elements:</td>
-                  <td id="vocEntriesTotal">136</td>
-                </tr>
-                <tr>
-                  <td>Namespace:</td>
-                  <td id="vocURI"></td>
-                </tr>
-                <tr>
-                  <td>Version:</td>
-                  <td id="vocVersion"></td>
-                </tr>
-                <tr>
-                  <td>Suggested prefix*:</td>
-                  <td id="vocPrefix"></td>
-                </tr>
-                <tr>
-                  <td>Example curie:</td>
-                  <td id="vocPrefixEx"><a href="http://rdaregistry.info/Elements/i/P40001"
-                      >rdai:P40001</a></td>
-                </tr>
-              </table>
-              <p>* registered at <a href="http://prefix.cc/" target="_blank">prefix.cc</a></p>
+            <div class="row vocMetadata">
+              <div class="">
+                <p id="vocDescription"></p>
+                <table>
+                  <tr>
+                    <td>Number of active elements:</td>
+                    <td id="vocEntriesTotal">136</td>
+                  </tr>
+                  <tr>
+                    <td>Namespace:</td>
+                    <td id="vocURI"></td>
+                  </tr>
+                  <tr>
+                    <td>Version:</td>
+                    <td id="vocVersion"></td>
+                  </tr>
+                  <tr>
+                    <td>Suggested prefix*:</td>
+                    <td id="vocPrefix"></td>
+                  </tr>
+                  <tr>
+                    <td>Example curie:</td>
+                    <td id="vocPrefixEx"><a href="http://rdaregistry.info/Elements/i/P40001"
+                        >rdai:P40001</a></td>
+                  </tr>
+                </table>
+                <p>* registered at <a href="http://prefix.cc/" target="_blank">prefix.cc</a></p>
+              </div>
             </div>
             <!-- Languages block -->
-            <div class="vocLanguages">
+            <div class="row vocLanguages">
               <h3>Languages</h3>
               <ul>
                 <li><a href="?language=ar" id="lang_ar">Arabic</a></li>
@@ -205,31 +209,35 @@
           </div>
           <div class="col-md-6">
             <!-- Downloads block -->
-            <h3>Downloads</h3>
-            <div class="vocDownloads">
-              <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action" id="linkCSV">CSV
-                  (text/csv) [English language only]</a>
-                <a href="#" class="list-group-item list-group-item-action" id="linkJSON">JSON-LD
-                  (application/json | application/json+ld)</a>
-                <a href="#" class="list-group-item list-group-item-action" id="linkNT">N-Triples
-                  (text/rdf+nt)</a>
-                <a href="#" class="list-group-item list-group-item-action" id="linkXML">RDF/XML
-                  (application/rdf+xml)</a>
+            <div class="row vocDownloads">
+              <h3>Downloads</h3>
+              <div class="">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action" id="linkCSV">CSV
+                    (text/csv) [English language only]</a>
+                  <a href="#" class="list-group-item list-group-item-action" id="linkJSON">JSON-LD
+                    (application/json | application/json+ld)</a>
+                  <a href="#" class="list-group-item list-group-item-action" id="linkNT">N-Triples
+                    (text/rdf+nt)</a>
+                  <a href="#" class="list-group-item list-group-item-action" id="linkXML">RDF/XML
+                    (application/rdf+xml)</a>
+                </div>
               </div>
             </div>
             <!-- Semantics block -->
-            <div class="vocSemantics">
-              <h3>Semantics</h3>
-              <p>Each property in the element set:</p>
-              <ul>
-                <li>has a domain of the class that represents the <span id="vocDomain"></span>
-                  entity.</li>
-                <li>is linked from its child <strong>datatype</strong> property in <span
-                    id="vocToDatatype"></span> by <em>rdfs:subPropertyOf</em>.</li>
-                <li>is linked from its child <strong>object</strong> property in <span
-                    id="vocToObject"></span> by <em>rdfs:subPropertyOf</em>.</li>
-              </ul>
+            <div class="">
+              <div class="row vocSemantics">
+                <h3>Semantics</h3>
+                <p>Each property in the element set:</p>
+                <ul>
+                  <li>has a domain of the class that represents the <span id="vocDomain"></span>
+                    entity.</li>
+                  <li>is linked from its child <strong>datatype</strong> property in <span
+                      id="vocToDatatype"></span> by <em>rdfs:subPropertyOf</em>.</li>
+                  <li>is linked from its child <strong>object</strong> property in <span
+                      id="vocToObject"></span> by <em>rdfs:subPropertyOf</em>.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
