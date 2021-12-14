@@ -566,6 +566,7 @@ if (typeof dataSource !== "undefined") {
       theLinkNT = "http://www.rdaregistry.info/nt/Elements/" + window.curiePrefix.slice(-1) + ".nt";
       theLinkXML = "http://www.rdaregistry.info/xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
       thePublished = theData.filter(getPublished);
+      theVocEntriesTotal = thePublished.length;
       document.getElementById("vocTitle").innerHTML = theVocTitle;
       document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
       document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
