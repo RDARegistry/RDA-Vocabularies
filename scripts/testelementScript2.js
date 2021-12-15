@@ -6,8 +6,20 @@ function gup(name, url, theDefault) {
   var results = regex.exec(url);
   return results == null ? theDefault: results[1];
 }
+function getLangCodeFromURL() {
+  // get language code from the page URL
+  // default to code for English
+  var theLangCode = "en";
+  var theURL = window.location.href;
+  var theIndex = theURL.indexOf("language=");
+  if (theIndex > 0) {
+    theLangCode = theURL.substr(theIndex + 9, 2);
+  }
+  return theLangCode;
+}
 // set language to display; default English
-var docLang = gup('language', Location.href, 'en');
+// var docLang = gup('language', Location.href, 'en');
+var docLang = getLangCodeFromURL();
 // set language indicator style; border colour indicates on/selected
 $("#lang_" + docLang).css({
   "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
