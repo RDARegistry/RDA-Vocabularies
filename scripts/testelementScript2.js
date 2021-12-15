@@ -13,6 +13,9 @@ $("#lang_" + docLang).css({
   "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
 });
 
+// Set namespace domain constant
+var baseDomain = "http://www.rdaregistry.info/";
+
 // initialize wide scope variable for prefix
 var curiePrefix = "rda";
 
@@ -589,53 +592,53 @@ if (typeof dataSource !== "undefined") {
         }
       }],
       "initComplete": function (settings, json) {
-      var theData;
-      var theMetadata;
-      var theCurieExURI = "";
-      var theLinkCSV = "";
-      var theLinkJSON = "";
-      var theLinkNT = "";
-      var theLinkXML = "";
-      var theVersionLink = "";
-      var theVocCurieEx = "";
-      var theVocDomain = "";
-      var theVocEntriesTotal = 0;
-      var theVocTitle = "";
-      var theVocToDatatype = "";
-      var theVocToObject = "";
-      var theVocURI = "";
-      var thePublished = "";
-      theData = json[ "@graph"];
-      theMetadata = theData[0];
-      window.curiePrefix = theMetadata.prefix;
-      theVocTitle = theMetadata.title[ "en"];
-      theVocURI = theMetadata[ "@id"];
-      theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-      theVocDomain = theVocTitle.replace(" properties", "");
-      theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
-      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-      theLinkCSV = "http://www.rdaregistry.info/csv/Elements/" + window.curiePrefix + ".csv";
-      theLinkJSON = "http://www.rdaregistry.info/jsonld/Elements/" + window.curiePrefix.slice(-1) + ".jsonld";
-      theLinkNT = "http://www.rdaregistry.info/nt/Elements/" + window.curiePrefix.slice(-1) + ".nt";
-      theLinkXML = "http://www.rdaregistry.info/xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
-      thePublished = theData.filter(getPublished);
-      theVocEntriesTotal = thePublished.length;
-      theCurieExURI = getURI(thePublished[0]);
-      theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
-      document.getElementById("vocTitle").innerHTML = theVocTitle;
-      document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
-      document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
-      document.getElementById("vocURI").innerHTML = theVocURI;
-      document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
-      document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
-      document.getElementById("vocVersion").innerHTML = theVersionLink;
-      document.getElementById("vocDomain").innerHTML = theVocDomain;
-      document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
-      document.getElementById("vocToObject").innerHTML = theVocToObject;
-      document.getElementById("linkCSV").href = theLinkCSV;
-      document.getElementById("linkJSON").href = theLinkJSON;
-      document.getElementById("linkNT").href = theLinkNT;
-      document.getElementById("linkXML").href = theLinkXML;
+        var theData;
+        var theMetadata;
+        var theCurieExURI = "";
+        var theLinkCSV = "";
+        var theLinkJSON = "";
+        var theLinkNT = "";
+        var theLinkXML = "";
+        var theVersionLink = "";
+        var theVocCurieEx = "";
+        var theVocDomain = "";
+        var theVocEntriesTotal = 0;
+        var theVocTitle = "";
+        var theVocToDatatype = "";
+        var theVocToObject = "";
+        var theVocURI = "";
+        var thePublished = "";
+        theData = json[ "@graph"];
+        theMetadata = theData[0];
+        window.curiePrefix = theMetadata.prefix;
+        theVocTitle = theMetadata.title[ "en"];
+        theVocURI = theMetadata[ "@id"];
+        theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
+        theVocDomain = theVocTitle.replace(" properties", "");
+        theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
+        theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
+        theLinkCSV = window.baseDomain + "csv/Elements/" + window.curiePrefix + ".csv";
+        theLinkJSON = window.baseDomain + "jsonld/Elements/" + window.curiePrefix.slice(-1) + ".jsonld";
+        theLinkNT = window.baseDomain + "nt/Elements/" + window.curiePrefix.slice(-1) + ".nt";
+        theLinkXML = window.baseDomain + "xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
+        thePublished = theData.filter(getPublished);
+        theVocEntriesTotal = thePublished.length;
+        theCurieExURI = getURI(thePublished[0]);
+        theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
+        document.getElementById("vocTitle").innerHTML = theVocTitle;
+        document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
+        document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
+        document.getElementById("vocURI").innerHTML = theVocURI;
+        document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
+        document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
+        document.getElementById("vocVersion").innerHTML = theVersionLink;
+        document.getElementById("vocDomain").innerHTML = theVocDomain;
+        document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
+        document.getElementById("vocToObject").innerHTML = theVocToObject;
+        document.getElementById("linkCSV").href = theLinkCSV;
+        document.getElementById("linkJSON").href = theLinkJSON;
+        document.getElementById("linkNT").href = theLinkNT;
+        document.getElementById("linkXML").href = theLinkXML;
       },
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
