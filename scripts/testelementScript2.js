@@ -617,10 +617,10 @@ if (typeof dataSource !== "undefined") {
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-        theLinkCSV = window.baseDomain + "csv/Elements/" + window.curiePrefix + ".csv";
-        theLinkJSON = window.baseDomain + "jsonld/Elements/" + window.curiePrefix.slice(-1) + ".jsonld";
-        theLinkNT = window.baseDomain + "nt/Elements/" + window.curiePrefix.slice(-1) + ".nt";
-        theLinkXML = window.baseDomain + "xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
+        theLinkCSV = baseDomain + "csv/Elements/" + window.curiePrefix + ".csv";
+        theLinkJSON = baseDomain + "jsonld/Elements/" + window.curiePrefix.slice(-1) + ".jsonld";
+        theLinkNT = baseDomain + "nt/Elements/" + window.curiePrefix.slice(-1) + ".nt";
+        theLinkXML = baseDomain + "xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
         thePublished = theData.filter(getPublished);
         theVocEntriesTotal = thePublished.length;
         theCurieExURI = getURI(thePublished[0]);
