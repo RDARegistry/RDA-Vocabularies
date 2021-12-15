@@ -724,7 +724,9 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("linkJSON").href = theLinkJSON;
       document.getElementById("linkNT").href = theLinkNT;
       document.getElementById("linkXML").href = theLinkXML;
-    });
+      //    });
+      //  });
+    }
   });
   
   $(document).ready(function () {
