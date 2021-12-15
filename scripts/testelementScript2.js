@@ -595,6 +595,55 @@ if (typeof dataSource !== "undefined") {
           return makeColumn((getLinkOut(getStatus(row))));
         }
       }],
+      "initComplete": function (settings, json) {
+      var theData;
+      var theMetadata;
+      var theCurieExURI = "";
+      var theLinkCSV = "";
+      var theLinkJSON = "";
+      var theLinkNT = "";
+      var theLinkXML = "";
+      var theVersionLink = "";
+      var theVocCurieEx = "";
+      var theVocDomain = "";
+      var theVocEntriesTotal = 0;
+      var theVocTitle = "";
+      var theVocToDatatype = "";
+      var theVocToObject = "";
+      var theVocURI = "";
+      var thePublished = "";
+      theData = json[ "@graph"];
+      theMetadata = theData[0];
+      window.curiePrefix = theMetadata.prefix;
+      theVocTitle = theMetadata.title[ "en"];
+      theVocURI = theMetadata[ "@id"];
+      theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
+      theVocDomain = theVocTitle.replace(" properties", "");
+      theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
+      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
+      theLinkCSV = "http://www.rdaregistry.info/csv/Elements/" + window.curiePrefix + ".csv";
+      theLinkJSON = "http://www.rdaregistry.info/jsonld/Elements/" + window.curiePrefix.slice(-1) + ".jsonld";
+      theLinkNT = "http://www.rdaregistry.info/nt/Elements/" + window.curiePrefix.slice(-1) + ".nt";
+      theLinkXML = "http://www.rdaregistry.info/xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
+      thePublished = theData.filter(getPublished);
+      theVocEntriesTotal = thePublished.length;
+      theCurieExURI = getURI(thePublished[0]);
+      theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
+      document.getElementById("vocTitle").innerHTML = theVocTitle;
+      document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
+      document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
+      document.getElementById("vocURI").innerHTML = theVocURI;
+      document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
+      document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
+      document.getElementById("vocVersion").innerHTML = theVersionLink;
+      document.getElementById("vocDomain").innerHTML = theVocDomain;
+      document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
+      document.getElementById("vocToObject").innerHTML = theVocToObject;
+      document.getElementById("linkCSV").href = theLinkCSV;
+      document.getElementById("linkJSON").href = theLinkJSON;
+      document.getElementById("linkNT").href = theLinkNT;
+      document.getElementById("linkXML").href = theLinkXML;
+      },
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       //      "responsive": true,
@@ -670,14 +719,14 @@ if (typeof dataSource !== "undefined") {
     "sName": 'whatever'
   });
   
-  $('#pindex').dataTable({
-    "initComplete": function (settings, json) {
+//  $('#pindex').dataTable({
+//    "initComplete": function (settings, json) {
       //    alert( 'DataTables has finished its initialisation.' );
       //  }
       //} );
       //$(document).ready(function () {
       //    $.getJSON(dataSource, function (json) {
-      var theData;
+/*       var theData;
       var theMetadata;
       var theCurieExURI = "";
       var theLinkCSV = "";
@@ -723,11 +772,11 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("linkCSV").href = theLinkCSV;
       document.getElementById("linkJSON").href = theLinkJSON;
       document.getElementById("linkNT").href = theLinkNT;
-      document.getElementById("linkXML").href = theLinkXML;
+      document.getElementById("linkXML").href = theLinkXML; */
       //    });
       //  });
-    }
-  });
+//    }
+//  });
   
   $(document).ready(function () {
     $.protip({
