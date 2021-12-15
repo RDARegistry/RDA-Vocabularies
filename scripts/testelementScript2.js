@@ -1,13 +1,6 @@
-function gup(name, url, theDefault) {
-  if (! url) url = location.href;
-  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-  var regexS = "[\\?&]" + name + "=([^&#]*)";
-  var regex = new RegExp(regexS);
-  var results = regex.exec(url);
-  return results == null ? theDefault: results[1];
-}
 function getLangCodeFromURL() {
   // get language code from the page URL
+  // 2-letter code is specified by appending "language=aa" to the URL
   // default to code for English
   var theLangCode = "en";
   var theURL = window.location.href;
@@ -17,8 +10,7 @@ function getLangCodeFromURL() {
   }
   return theLangCode;
 }
-// set language to display; default English
-// var docLang = gup('language', Location.href, 'en');
+// set language to display
 var docLang = getLangCodeFromURL();
 // set language indicator style; border colour indicates on/selected
 $("#lang_" + docLang).css({
@@ -629,10 +621,10 @@ if (typeof dataSource !== "undefined") {
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-        theLinkCSV = baseDomain + "csv/Elements/" + window.curiePrefix + ".csv";
-        theLinkJSON = baseDomain + "jsonld/Elements/" + window.curiePrefix.slice(-1) + ".jsonld";
-        theLinkNT = baseDomain + "nt/Elements/" + window.curiePrefix.slice(-1) + ".nt";
-        theLinkXML = baseDomain + "xml/Elements/" + window.curiePrefix.slice(-1) + ".xml";
+        theLinkCSV = baseDomain + "csv/Elements/" + curiePrefix + ".csv";
+        theLinkJSON = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
+        theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
+        theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
         thePublished = theData.filter(getPublished);
         theVocEntriesTotal = thePublished.length;
         theCurieExURI = getURI(thePublished[0]);
@@ -641,7 +633,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
         document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
         document.getElementById("vocURI").innerHTML = theVocURI;
-        document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
+        document.getElementById("vocPrefix").innerHTML = curiePrefix;
         document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
         document.getElementById("vocVersion").innerHTML = theVersionLink;
         document.getElementById("vocDomain").innerHTML = theVocDomain;
