@@ -535,7 +535,7 @@ if (typeof dataSource !== "undefined") {
     table.search('').column(2).search(filter).draw();
     $('input[type=search]').val(filter);
   }
-
+  
   $(document).ready(
   function () {
     var dtable = $("#pindex");
@@ -597,7 +597,7 @@ if (typeof dataSource !== "undefined") {
       }],
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
-//      "responsive": true,
+      //      "responsive": true,
       "deferRender": true
     });
     
@@ -670,8 +670,13 @@ if (typeof dataSource !== "undefined") {
     "sName": 'whatever'
   });
   
-  $(document).ready(function () {
-    $.getJSON(dataSource, function (json) {
+  $('#pindex').dataTable({
+    "initComplete": function (settings, json) {
+      //    alert( 'DataTables has finished its initialisation.' );
+      //  }
+      //} );
+      //$(document).ready(function () {
+      //    $.getJSON(dataSource, function (json) {
       var theData;
       var theMetadata;
       var theCurieExURI = "";
@@ -721,8 +726,8 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("linkXML").href = theLinkXML;
     });
   });
-
-$(document).ready(function () {
+  
+  $(document).ready(function () {
     $.protip({
       defaults: {
         position: 'top-left',
