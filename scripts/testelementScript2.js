@@ -10,7 +10,7 @@ function getLangCodeFromURL() {
   }
   return theLangCode;
 }
-// set language to display
+// initialize wide scope variable for code for language to display
 var docLang = getLangCodeFromURL();
 // set language indicator style; border colour indicates on/selected
 $("#lang_" + docLang).css({
@@ -303,6 +303,63 @@ if (typeof dataSource !== "undefined") {
       //            }
     }
     return theLabel;
+  }
+  
+  function getLanguages(thePublished) {
+    const theLanguages =[ {
+      langcode: "ar", label: "Arabic"
+    } {
+      langcode: "ca", label: "Catalan"
+    } {
+      langcode: "da", label: "Danish"
+    } {
+      langcode: "de", label: "German"
+    } {
+      langcode: "el", label: "Greek"
+    } {
+      langcode: "en", label: "English"
+    } {
+      langcode: "et", label: "Estonian"
+    } {
+      langcode: "fi", label: "Finnish"
+    } {
+      langcode: "fr", label: "French"
+    } {
+      langcode: "hu", label: "Hungarian"
+    } {
+      langcode: "it", label: "Italian"
+    } {
+      langcode: "nl", label: "Dutch"
+    } {
+      langcode: "no", label: "Norwegian"
+    } {
+      langcode: "sv", label: "Swedish"
+    } {
+      langcode: "vi", label: "Vietnamese"
+    }];
+    var theLanguagesUsed = "";
+    var theVocLanguages = "";
+    theLanguagesUsed = theLanguages.filter(checkUsed);
+    theLanguagesUsed.forEach(setLanguage);
+    return theVocLanguages;
+  }
+  
+  function checkUsed(value) {
+    var isUsed = false;
+    theLangCode = value.langcode;
+    if (typeof thePublished.ToolkitLabel[theLangCode] != "undefined") {
+      isUsed = true;
+    }
+    return isUsed;
+  }
+  
+  function setLanguage(value) {
+  var theLangCode = "";
+  var theLangLabel = "";
+  theLangCode = value.langcode;
+  theLangLabel = value.label;
+  theVocLanguages += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
+  
   }
   
   function getStringByLanguage(row, langCode, defaultLangCode) {
@@ -605,6 +662,7 @@ if (typeof dataSource !== "undefined") {
         var theLinkXML = "";
         var theVersionLink = "";
         var theVocCurieEx = "";
+        var theVocLanguages = "";
         var theVocDomain = "";
         var theVocEntriesTotal = 0;
         var theVocTitle = "";
@@ -614,10 +672,12 @@ if (typeof dataSource !== "undefined") {
         var thePublished = "";
         theData = json[ "@graph"];
         theMetadata = theData[0];
+        thePublished = theData.filter(getPublished);
         window.curiePrefix = theMetadata.prefix;
         theVocTitle = theMetadata.title[ "en"];
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
+        theVocLanguages = getLanguages(thePublished);
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
@@ -625,8 +685,8 @@ if (typeof dataSource !== "undefined") {
         theLinkJSON = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
-        thePublished = theData.filter(getPublished);
         theVocEntriesTotal = thePublished.length;
+        // Example curie is first published element in data and may not be the lowest in curie order
         theCurieExURI = getURI(thePublished[0]);
         theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
         document.getElementById("vocTitle").innerHTML = theVocTitle;
