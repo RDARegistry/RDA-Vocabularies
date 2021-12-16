@@ -338,10 +338,10 @@ if (typeof dataSource !== "undefined") {
       langcode: "vi", label: "Vietnamese"
     }];
     var theLanguagesUsed = "";
-    var theVocLanguages = "";
+    var theVocLanguageList = "";
     theLanguagesUsed = theLanguages.filter(checkUsed);
     theLanguagesUsed.forEach(setLanguage);
-    return theVocLanguages;
+    return theVocLanguageList;
   }
   
   function checkUsed(value) {
@@ -354,12 +354,11 @@ if (typeof dataSource !== "undefined") {
   }
   
   function setLanguage(value) {
-  var theLangCode = "";
-  var theLangLabel = "";
-  theLangCode = value.langcode;
-  theLangLabel = value.label;
-  theVocLanguages += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
-  
+    var theLangCode = "";
+    var theLangLabel = "";
+    theLangCode = value.langcode;
+    theLangLabel = value.label;
+    theVocLanguageList += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
   }
   
   function getStringByLanguage(row, langCode, defaultLangCode) {
@@ -662,7 +661,7 @@ if (typeof dataSource !== "undefined") {
         var theLinkXML = "";
         var theVersionLink = "";
         var theVocCurieEx = "";
-        var theVocLanguages = "";
+        var theVocLanguageList = "";
         var theVocDomain = "";
         var theVocEntriesTotal = 0;
         var theVocTitle = "";
@@ -677,7 +676,7 @@ if (typeof dataSource !== "undefined") {
         theVocTitle = theMetadata.title[ "en"];
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-        theVocLanguages = getLanguages(thePublished);
+        theVocLanguageList = getLanguages(thePublished);
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
@@ -696,6 +695,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocPrefix").innerHTML = curiePrefix;
         document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
         document.getElementById("vocVersion").innerHTML = theVersionLink;
+        document.getElementById("vocLanguageList").innerHTML = theVocLanguageList;
         document.getElementById("vocDomain").innerHTML = theVocDomain;
         document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
         document.getElementById("vocToObject").innerHTML = theVocToObject;
