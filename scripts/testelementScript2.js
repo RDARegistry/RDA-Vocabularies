@@ -23,6 +23,9 @@ var baseDomain = "http://www.rdaregistry.info/";
 // initialize wide scope variable for prefix
 var curiePrefix = "rda";
 
+// initialize wide scope variable for published elements array
+var publishedElements = "rda";
+
 if (typeof dataSource !== "undefined") {
   
   //noinspection ThisExpressionReferencesGlobalObjectJS
@@ -305,7 +308,7 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  function getLanguages(thePublished) {
+  function getLanguages() {
     const theLanguages =[ {
       langcode: "ar", label: "Arabic"
     }, {
@@ -337,9 +340,8 @@ if (typeof dataSource !== "undefined") {
     }, {
       langcode: "vi", label: "Vietnamese"
     }];
-    const thePublishedList = thePublished;
     var theVocLanguageList = "";
-    theLanguagesUsed = theLanguages.filter(checkUsed);
+    theLanguagesUsed = window.publishedElements.filter(checkUsed);
     theLanguagesUsed.forEach(setLanguage);
     return theVocLanguageList;
   }
@@ -347,7 +349,7 @@ if (typeof dataSource !== "undefined") {
   function checkUsed(value) {
     var isUsed = false;
     theLangCode = value.langcode;
-    if (typeof thePublishedList.ToolkitLabel[theLangCode] != "undefined") {
+    if (typeof window.publishedElements.ToolkitLabel[theLangCode] != "undefined") {
       isUsed = true;
     }
     return isUsed;
@@ -671,12 +673,12 @@ if (typeof dataSource !== "undefined") {
         var thePublished = "";
         theData = json[ "@graph"];
         theMetadata = theData[0];
-        thePublished = theData.filter(getPublished);
+        window.publishedElements = theData.filter(getPublished);
         window.curiePrefix = theMetadata.prefix;
         theVocTitle = theMetadata.title[ "en"];
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-        theVocLanguageList = getLanguages(thePublished);
+        theVocLanguageList = getLanguages();
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
