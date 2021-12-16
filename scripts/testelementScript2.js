@@ -12,6 +12,7 @@ function getLangCodeFromURL() {
 }
 // initialize wide scope variable for code for language to display
 var docLang = getLangCodeFromURL();
+var languagesList = "";
 // set language indicator style; border colour indicates on/selected
 $("#lang_" + docLang).css({
   "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
@@ -24,7 +25,7 @@ var baseDomain = "http://www.rdaregistry.info/";
 var curiePrefix = "rda";
 
 // initialize wide scope variable for published elements array
-var publishedElements = "rda";
+var publishedElements;
 
 if (typeof dataSource !== "undefined") {
   
@@ -340,10 +341,9 @@ if (typeof dataSource !== "undefined") {
     }, {
       langcode: "vi", label: "Vietnamese"
     }];
-    var theVocLanguageList = "";
     theLanguagesUsed = window.publishedElements.filter(checkUsed);
     theLanguagesUsed.forEach(setLanguage);
-    return theVocLanguageList;
+    return;
   }
   
   function checkUsed(value) {
@@ -678,7 +678,7 @@ if (typeof dataSource !== "undefined") {
         theVocTitle = theMetadata.title[ "en"];
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-        theVocLanguageList = getLanguages();
+        window.languagesList = getLanguages();
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
@@ -697,7 +697,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocPrefix").innerHTML = curiePrefix;
         document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
         document.getElementById("vocVersion").innerHTML = theVersionLink;
-        document.getElementById("vocLanguageList").innerHTML = theVocLanguageList;
+        document.getElementById("vocLanguageList").innerHTML = window.languagesList;
         document.getElementById("vocDomain").innerHTML = theVocDomain;
         document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
         document.getElementById("vocToObject").innerHTML = theVocToObject;
