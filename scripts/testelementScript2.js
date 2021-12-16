@@ -308,33 +308,33 @@ if (typeof dataSource !== "undefined") {
   function getLanguages(thePublished) {
     const theLanguages =[ {
       langcode: "ar", label: "Arabic"
-    } {
+    }, {
       langcode: "ca", label: "Catalan"
-    } {
+    }, {
       langcode: "da", label: "Danish"
-    } {
+    }, {
       langcode: "de", label: "German"
-    } {
+    }, {
       langcode: "el", label: "Greek"
-    } {
+    }, {
       langcode: "en", label: "English"
-    } {
+    }, {
       langcode: "et", label: "Estonian"
-    } {
+    }, {
       langcode: "fi", label: "Finnish"
-    } {
+    }, {
       langcode: "fr", label: "French"
-    } {
+    }, {
       langcode: "hu", label: "Hungarian"
-    } {
+    }, {
       langcode: "it", label: "Italian"
-    } {
+    }, {
       langcode: "nl", label: "Dutch"
-    } {
+    }, {
       langcode: "no", label: "Norwegian"
-    } {
+    }, {
       langcode: "sv", label: "Swedish"
-    } {
+    }, {
       langcode: "vi", label: "Vietnamese"
     }];
     var theLanguagesUsed = "";
