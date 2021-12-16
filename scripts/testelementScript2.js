@@ -337,7 +337,7 @@ if (typeof dataSource !== "undefined") {
     }, {
       langcode: "vi", label: "Vietnamese"
     }];
-    var theLanguagesUsed = "";
+    const thePublishedList = thePublished;
     var theVocLanguageList = "";
     theLanguagesUsed = theLanguages.filter(checkUsed);
     theLanguagesUsed.forEach(setLanguage);
@@ -347,7 +347,7 @@ if (typeof dataSource !== "undefined") {
   function checkUsed(value) {
     var isUsed = false;
     theLangCode = value.langcode;
-    if (typeof thePublished.ToolkitLabel[theLangCode] != "undefined") {
+    if (typeof thePublishedList.ToolkitLabel[theLangCode] != "undefined") {
       isUsed = true;
     }
     return isUsed;
