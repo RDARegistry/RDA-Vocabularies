@@ -349,7 +349,7 @@ if (typeof dataSource !== "undefined") {
   function checkUsed(value) {
     var isUsed = false;
     theLangCode = value.langcode;
-    if (typeof window.publishedElements.ToolkitLabel[theLangCode] != "undefined") {
+    if (typeof window.publishedElements["ToolkitLabel"][theLangCode] != "undefined") {
       isUsed = true;
     }
     return isUsed;
