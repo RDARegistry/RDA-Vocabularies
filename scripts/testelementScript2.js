@@ -311,10 +311,10 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  function getLanguages() {
-    var theVocLanguageList = "";
+  function getLanguages(theLanguages) {
+    var theVocLanguages = "";
     theLanguages.forEach(checkUsed);
-    return theVocLanguageList;
+    return theVocLanguages;
   }
   
   function checkUsed(language) {
@@ -705,7 +705,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocPrefix").innerHTML = curiePrefix;
         document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
         document.getElementById("vocVersion").innerHTML = theVersionLink;
-        //        document.getElementById("vocLanguageList").innerHTML = window.languagesList;
+        //        document.getElementById("vocLanguages").innerHTML = window.languagesList;
         document.getElementById("vocDomain").innerHTML = theVocDomain;
         document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
         document.getElementById("vocToObject").innerHTML = theVocToObject;
