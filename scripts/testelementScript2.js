@@ -635,15 +635,15 @@ if (typeof dataSource !== "undefined") {
         var theLinkXML = "";
         var theVersionLink = "";
         var theVocCurieEx = "";
-        var theVocLanguageList = "";
+        var theVocLanguages = "";
         var theVocDomain = "";
         var theVocEntriesTotal = 0;
         var theVocTitle = "";
         var theVocToDatatype = "";
         var theVocToObject = "";
         var theVocURI = "";
-        var thePublished = "";
-        var theLanguages =[ {
+        // Array of json objects for the possible languages of the vocabulary
+        const theLanguages =[ {
           langcode: "ar", label: "Arabic"
         }, {
           langcode: "ca", label: "Catalan"
@@ -674,25 +674,30 @@ if (typeof dataSource !== "undefined") {
         }, {
           langcode: "vi", label: "Vietnamese"
         }]
+        // Extract the json graph of vocabulary entries, then the first entry (always metadata), then the published entries
         theData = json[ "@graph"];
         theMetadata = theData[0];
         window.publishedElements = theData.filter(getPublished);
-        window.curiePrefix = theMetadata.prefix;
+        // Get the vocabulary title for the Header block
         theVocTitle = theMetadata.title[ "en"];
+        // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
+        theVocEntriesTotal = window.publishedElements.length;
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-        //        getLanguages();
+        window.curiePrefix = theMetadata.prefix;
+        theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
+        // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
+        // Set the file links for the Downloads block
         theLinkCSV = baseDomain + "csv/Elements/" + curiePrefix + ".csv";
         theLinkJSON = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
-        theVocEntriesTotal = window.publishedElements.length;
         // Example curie is first published element in data and may not be the lowest in curie order
         theCurieExURI = getURI(window.publishedElements[0]);
-        theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
+        theVocLanguages = getLanguages();
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
         document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
