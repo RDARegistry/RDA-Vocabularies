@@ -430,9 +430,9 @@ if (typeof dataSource !== "undefined") {
   function getURI(row) {
     // returns a URI from a jsonld row
     var theURI = "";
-    var wah = row["@id"];
-    if (typeof wah != "undefined") {
-      theURI = wah;
+    var theRowID = row["@id"];
+    if (typeof theRowID != "undefined") {
+      theURI = theRowID;
     }
     return theURI;
   }
@@ -701,7 +701,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocPrefix").innerHTML = curiePrefix;
         document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
         document.getElementById("vocVersion").innerHTML = theVersionLink;
-        document.getElementById("vocLanguageList").innerHTML = window.languagesList;
+//        document.getElementById("vocLanguageList").innerHTML = window.languagesList;
         document.getElementById("vocDomain").innerHTML = theVocDomain;
         document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
         document.getElementById("vocToObject").innerHTML = theVocToObject;
