@@ -430,8 +430,9 @@ if (typeof dataSource !== "undefined") {
   function getURI(row) {
     // returns a URI from a jsonld row
     var theURI = "";
-    if (typeof row[ "@id"] != "undefined") {
-      theURI = row[ "@id"];
+    var wah = row["@id"];
+    if (typeof wah != "undefined") {
+      theURI = wah;
     }
     return theURI;
   }
