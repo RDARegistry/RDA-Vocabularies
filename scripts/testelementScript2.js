@@ -21,11 +21,45 @@ $("#lang_" + docLang).css({
 // Set namespace domain constant
 var baseDomain = "http://www.rdaregistry.info/";
 
-// initialize wide scope variable for prefix
+// initialize global variable for prefix
 var curiePrefix = "rda";
 
-// initialize wide scope variable for published elements array
-var publishedElements;
+const theLanguages =[ {
+  langcode: "ar", label: "Arabic"
+}, {
+  langcode: "ca", label: "Catalan"
+}, {
+  langcode: "da", label: "Danish"
+}, {
+  langcode: "de", label: "German"
+}, {
+  langcode: "el", label: "Greek"
+}, {
+  langcode: "en", label: "English"
+}, {
+  langcode: "et", label: "Estonian"
+}, {
+  langcode: "fi", label: "Finnish"
+}, {
+  langcode: "fr", label: "French"
+}, {
+  langcode: "hu", label: "Hungarian"
+}, {
+  langcode: "it", label: "Italian"
+}, {
+  langcode: "nl", label: "Dutch"
+}, {
+  langcode: "no", label: "Norwegian"
+}, {
+  langcode: "sv", label: "Swedish"
+}, {
+  langcode: "vi", label: "Vietnamese"
+}]
+
+// initialize global variable for published elements array
+const publishedElements =[];
+
+// Process vocabulary data if defined.
 
 if (typeof dataSource !== "undefined") {
   
@@ -310,37 +344,6 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getLanguages() {
-    const theLanguages =[ {
-      langcode: "ar", label: "Arabic"
-    }, {
-      langcode: "ca", label: "Catalan"
-    }, {
-      langcode: "da", label: "Danish"
-    }, {
-      langcode: "de", label: "German"
-    }, {
-      langcode: "el", label: "Greek"
-    }, {
-      langcode: "en", label: "English"
-    }, {
-      langcode: "et", label: "Estonian"
-    }, {
-      langcode: "fi", label: "Finnish"
-    }, {
-      langcode: "fr", label: "French"
-    }, {
-      langcode: "hu", label: "Hungarian"
-    }, {
-      langcode: "it", label: "Italian"
-    }, {
-      langcode: "nl", label: "Dutch"
-    }, {
-      langcode: "no", label: "Norwegian"
-    }, {
-      langcode: "sv", label: "Swedish"
-    }, {
-      langcode: "vi", label: "Vietnamese"
-    }];
     theLanguagesUsed = window.publishedElements.filter(checkUsed);
     theLanguagesUsed.forEach(setLanguage);
     return;
@@ -349,7 +352,7 @@ if (typeof dataSource !== "undefined") {
   function checkUsed(value) {
     var isUsed = false;
     theLangCode = value.langcode;
-    if (typeof window.publishedElements["ToolkitLabel"][theLangCode] != "undefined") {
+    if (typeof window.publishedElements.ToolkitLabel[theLangCode] != "undefined") {
       isUsed = true;
     }
     return isUsed;
@@ -678,7 +681,7 @@ if (typeof dataSource !== "undefined") {
         theVocTitle = theMetadata.title[ "en"];
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-        getLanguages();
+//        getLanguages();
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
