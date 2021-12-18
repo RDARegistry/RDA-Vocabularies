@@ -311,28 +311,28 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  /*  function getLanguages() {
-  theLanguagesUsed = window.publishedElements.filter(checkUsed);
-  theLanguagesUsed.forEach(setLanguage);
-  return;
+  function getLanguages() {
+    var theVocLanguageList = "";
+    theLanguages.forEach(checkUsed);
+    return theVocLanguageList;
   }
   
-  function checkUsed(value) {
-  var isUsed = false;
-  theLangCode = value.langcode;
-  if (typeof window.publishedElements.ToolkitLabel[theLangCode] != "undefined") {
-  isUsed = true;
-  }
-  return isUsed;
+  function checkUsed(language) {
+    var langCodeUsed = "";
+    var theLangCode = "";
+    var theLangLabel = "";
+    theLangCode = language.langcode;
+    langCodeUsed = window.publishedElements.filter(filterLangCodes);
+    if (langCodeUsed.length > 0) {
+      theLangLabel = language.label;
+      theVocLanguageList += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
+    }
+    return;
   }
   
-  function setLanguage(value) {
-  var theLangCode = "";
-  var theLangLabel = "";
-  theLangCode = value.langcode;
-  theLangLabel = value.label;
-  theVocLanguageList += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
-  } */
+  function filterLangCodes(obj) {
+    return obj.ToolkitLabel[theLangCode] != "undefined";
+  }
   
   function getStringByLanguage(row, langCode, defaultLangCode) {
     // returns string corresponding to language, or defaults
