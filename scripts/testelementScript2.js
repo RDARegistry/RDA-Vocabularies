@@ -430,7 +430,7 @@ if (typeof dataSource !== "undefined") {
     if (typeof row[ "@id"] != "undefined") {
       theURI = row[ "@id"];
     }
-    if (theLabel.length < 1) {
+    if (theLabel.length == 0) {
       theLabel = theURI;
     }
     theLink = linkifyOut(theLabel, theURI)
