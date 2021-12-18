@@ -14,10 +14,6 @@ function getLangCodeFromURL() {
 var docLang = getLangCodeFromURL();
 var theVocLanguages = "";
 
-// set language indicator style; border colour indicates on/selected
-$("#lang_" + docLang).css({
-  "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
-});
 
 // Set namespace domain constant
 var baseDomain = "http://www.rdaregistry.info/";
@@ -696,7 +692,9 @@ if (typeof dataSource !== "undefined") {
         theLinkJSON = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
+        // Get the vocabulary languages display list
         getLanguages(theLanguages);
+        // Push to block values to the page
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
         document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
@@ -712,6 +710,10 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("linkJSON").href = theLinkJSON;
         document.getElementById("linkNT").href = theLinkNT;
         document.getElementById("linkXML").href = theLinkXML;
+        // set language indicator style; border colour indicates on/selected
+        $("#lang_" + docLang).css({
+          "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
+        });
       },
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
