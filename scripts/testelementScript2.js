@@ -325,7 +325,7 @@ if (typeof dataSource !== "undefined") {
     langCodeUsed = window.publishedElements.filter(filterLangCodes);
     if (langCodeUsed.length > 0) {
       theLangLabel = language.label;
-      theVocLanguageList += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
+      theVocLanguages += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
     }
     return;
   }
