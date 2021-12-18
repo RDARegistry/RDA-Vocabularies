@@ -25,7 +25,7 @@ var baseDomain = "http://www.rdaregistry.info/";
 var curiePrefix = "rda";
 
 // initialize global variable for published elements array
-var publishedElements =;
+var publishedElements;
 
 // Process vocabulary data if defined.
 
