@@ -689,9 +689,9 @@ if (typeof dataSource !== "undefined") {
         theLinkJSON = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
-        theVocEntriesTotal = thePublished.length;
+        theVocEntriesTotal = window.publishedElements.length;
         // Example curie is first published element in data and may not be the lowest in curie order
-        theCurieExURI = getURI(thePublished[0]);
+        theCurieExURI = getURI(window.publishedElements[0]);
         theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
