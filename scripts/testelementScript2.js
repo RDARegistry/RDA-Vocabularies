@@ -685,6 +685,8 @@ if (typeof dataSource !== "undefined") {
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
         window.curiePrefix = theMetadata.prefix;
+        // Example curie is first published element in data and may not be the lowest in curie order
+        theCurieExURI = getURI(window.publishedElements[0]);
         theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
         // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
         theVocDomain = theVocTitle.replace(" properties", "");
@@ -695,8 +697,6 @@ if (typeof dataSource !== "undefined") {
         theLinkJSON = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
-        // Example curie is first published element in data and may not be the lowest in curie order
-        theCurieExURI = getURI(window.publishedElements[0]);
         theVocLanguages = getLanguages();
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
