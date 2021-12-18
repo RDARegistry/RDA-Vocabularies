@@ -24,40 +24,8 @@ var baseDomain = "http://www.rdaregistry.info/";
 // initialize global variable for prefix
 var curiePrefix = "rda";
 
-const theLanguages =[ {
-  langcode: "ar", label: "Arabic"
-}, {
-  langcode: "ca", label: "Catalan"
-}, {
-  langcode: "da", label: "Danish"
-}, {
-  langcode: "de", label: "German"
-}, {
-  langcode: "el", label: "Greek"
-}, {
-  langcode: "en", label: "English"
-}, {
-  langcode: "et", label: "Estonian"
-}, {
-  langcode: "fi", label: "Finnish"
-}, {
-  langcode: "fr", label: "French"
-}, {
-  langcode: "hu", label: "Hungarian"
-}, {
-  langcode: "it", label: "Italian"
-}, {
-  langcode: "nl", label: "Dutch"
-}, {
-  langcode: "no", label: "Norwegian"
-}, {
-  langcode: "sv", label: "Swedish"
-}, {
-  langcode: "vi", label: "Vietnamese"
-}]
-
 // initialize global variable for published elements array
-const publishedElements =[];
+var publishedElements =[];
 
 // Process vocabulary data if defined.
 
@@ -343,28 +311,28 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-/*  function getLanguages() {
-    theLanguagesUsed = window.publishedElements.filter(checkUsed);
-    theLanguagesUsed.forEach(setLanguage);
-    return;
+  /*  function getLanguages() {
+  theLanguagesUsed = window.publishedElements.filter(checkUsed);
+  theLanguagesUsed.forEach(setLanguage);
+  return;
   }
   
   function checkUsed(value) {
-    var isUsed = false;
-    theLangCode = value.langcode;
-    if (typeof window.publishedElements.ToolkitLabel[theLangCode] != "undefined") {
-      isUsed = true;
-    }
-    return isUsed;
+  var isUsed = false;
+  theLangCode = value.langcode;
+  if (typeof window.publishedElements.ToolkitLabel[theLangCode] != "undefined") {
+  isUsed = true;
+  }
+  return isUsed;
   }
   
   function setLanguage(value) {
-    var theLangCode = "";
-    var theLangLabel = "";
-    theLangCode = value.langcode;
-    theLangLabel = value.label;
-    theVocLanguageList += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
-  } */ 
+  var theLangCode = "";
+  var theLangLabel = "";
+  theLangCode = value.langcode;
+  theLangLabel = value.label;
+  theVocLanguageList += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
+  } */
   
   function getStringByLanguage(row, langCode, defaultLangCode) {
     // returns string corresponding to language, or defaults
@@ -430,7 +398,7 @@ if (typeof dataSource !== "undefined") {
   function getURI(row) {
     // returns a URI from a jsonld row
     var theURI = "";
-    var theRowID = row["@id"];
+    var theRowID = row[ "@id"];
     if (typeof theRowID != "undefined") {
       theURI = theRowID;
     }
@@ -675,6 +643,37 @@ if (typeof dataSource !== "undefined") {
         var theVocToObject = "";
         var theVocURI = "";
         var thePublished = "";
+        var theLanguages =[ {
+          langcode: "ar", label: "Arabic"
+        }, {
+          langcode: "ca", label: "Catalan"
+        }, {
+          langcode: "da", label: "Danish"
+        }, {
+          langcode: "de", label: "German"
+        }, {
+          langcode: "el", label: "Greek"
+        }, {
+          langcode: "en", label: "English"
+        }, {
+          langcode: "et", label: "Estonian"
+        }, {
+          langcode: "fi", label: "Finnish"
+        }, {
+          langcode: "fr", label: "French"
+        }, {
+          langcode: "hu", label: "Hungarian"
+        }, {
+          langcode: "it", label: "Italian"
+        }, {
+          langcode: "nl", label: "Dutch"
+        }, {
+          langcode: "no", label: "Norwegian"
+        }, {
+          langcode: "sv", label: "Swedish"
+        }, {
+          langcode: "vi", label: "Vietnamese"
+        }]
         theData = json[ "@graph"];
         theMetadata = theData[0];
         window.publishedElements = theData.filter(getPublished);
@@ -682,7 +681,7 @@ if (typeof dataSource !== "undefined") {
         theVocTitle = theMetadata.title[ "en"];
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-//        getLanguages();
+        //        getLanguages();
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
@@ -694,6 +693,8 @@ if (typeof dataSource !== "undefined") {
         // Example curie is first published element in data and may not be the lowest in curie order
         theCurieExURI = getURI(thePublished[0]);
         theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
+        
+        
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
         document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
@@ -701,7 +702,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocPrefix").innerHTML = curiePrefix;
         document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
         document.getElementById("vocVersion").innerHTML = theVersionLink;
-//        document.getElementById("vocLanguageList").innerHTML = window.languagesList;
+        //        document.getElementById("vocLanguageList").innerHTML = window.languagesList;
         document.getElementById("vocDomain").innerHTML = theVocDomain;
         document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
         document.getElementById("vocToObject").innerHTML = theVocToObject;
