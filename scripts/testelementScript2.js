@@ -12,7 +12,8 @@ function getLangCodeFromURL() {
 }
 // initialize wide scope variable for code for language to display
 var docLang = getLangCodeFromURL();
-var languagesList = "";
+var theVocLanguages = "";
+
 // set language indicator style; border colour indicates on/selected
 $("#lang_" + docLang).css({
   "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
@@ -312,9 +313,8 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getLanguages(theLanguages) {
-    var theVocLanguages = "";
     theLanguages.forEach(checkUsed);
-    return theVocLanguages;
+    return;
   }
   
   function checkUsed(language) {
@@ -325,7 +325,7 @@ if (typeof dataSource !== "undefined") {
     langCodeUsed = window.publishedElements.filter(filterLangCodes);
     if (langCodeUsed.length > 0) {
       theLangLabel = language.label;
-      theVocLanguages += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
+      window.theVocLanguages += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
     }
     return;
   }
@@ -635,7 +635,6 @@ if (typeof dataSource !== "undefined") {
         var theLinkXML = "";
         var theVersionLink = "";
         var theVocCurieEx = "";
-        var theVocLanguages = "";
         var theVocDomain = "";
         var theVocEntriesTotal = 0;
         var theVocTitle = "";
@@ -705,7 +704,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocPrefix").innerHTML = curiePrefix;
         document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
         document.getElementById("vocVersion").innerHTML = theVersionLink;
-        //        document.getElementById("vocLanguages").innerHTML = window.languagesList;
+        document.getElementById("vocLanguages").innerHTML = window.theVocLanguages;
         document.getElementById("vocDomain").innerHTML = theVocDomain;
         document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
         document.getElementById("vocToObject").innerHTML = theVocToObject;
