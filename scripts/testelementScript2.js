@@ -412,7 +412,7 @@ if (typeof dataSource !== "undefined") {
     } else {
       theLabel = getLabel(row);
     }
-    if (theLabel.length < 1) {
+    if (theLabel.length == 0) {
       theLabel = theURI;
     }
     theLink = linkifyIn(theLabel, theURI)
