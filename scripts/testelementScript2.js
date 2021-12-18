@@ -415,7 +415,7 @@ if (typeof dataSource !== "undefined") {
     if (theLabel.length == 0) {
       theLabel = theURI;
     }
-    theLink = linkifyIn(theLabel, theURI)
+    theLink = linkifyIn(theLabel, theURI);
     return theLink;
   }
   
@@ -433,7 +433,7 @@ if (typeof dataSource !== "undefined") {
     if (theLabel.length == 0) {
       theLabel = theURI;
     }
-    theLink = linkifyOut(theLabel, theURI)
+    theLink = linkifyOut(theLabel, theURI);
     return theLink;
   }
   
