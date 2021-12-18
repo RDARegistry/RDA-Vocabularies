@@ -25,7 +25,7 @@ var baseDomain = "http://www.rdaregistry.info/";
 var curiePrefix = "rda";
 
 // initialize global variable for published elements array
-var publishedElements =[];
+var publishedElements =;
 
 // Process vocabulary data if defined.
 
@@ -693,8 +693,6 @@ if (typeof dataSource !== "undefined") {
         // Example curie is first published element in data and may not be the lowest in curie order
         theCurieExURI = getURI(thePublished[0]);
         theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
-        
-        
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
         document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
