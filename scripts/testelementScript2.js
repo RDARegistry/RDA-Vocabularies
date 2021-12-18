@@ -696,7 +696,7 @@ if (typeof dataSource !== "undefined") {
         theLinkJSON = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
-        theVocLanguages = getLanguages(theLanguages);
+        getLanguages(theLanguages);
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
         document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
