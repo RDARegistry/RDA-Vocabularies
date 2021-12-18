@@ -343,7 +343,7 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  function getLanguages() {
+/*  function getLanguages() {
     theLanguagesUsed = window.publishedElements.filter(checkUsed);
     theLanguagesUsed.forEach(setLanguage);
     return;
@@ -364,7 +364,7 @@ if (typeof dataSource !== "undefined") {
     theLangCode = value.langcode;
     theLangLabel = value.label;
     theVocLanguageList += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
-  }
+  } */ 
   
   function getStringByLanguage(row, langCode, defaultLangCode) {
     // returns string corresponding to language, or defaults
