@@ -623,7 +623,7 @@ if (typeof dataSource !== "undefined") {
         "class": "curie",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(getLinkIn(row, curiePrefix));
+          return makeColumn(getLinkIn(row, window.curiePrefix));
         }
       }, {
         "class": "prefLabel",
@@ -673,7 +673,7 @@ if (typeof dataSource !== "undefined") {
         window.curiePrefix = theMetadata.prefix;
         // Example curie is first published element in data and may not be the lowest in curie order
         theCurieExURI = getURI(window.publishedElements[0]);
-        theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
+        theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
         // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
