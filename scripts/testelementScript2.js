@@ -14,6 +14,38 @@ function getLangCodeFromURL() {
 var docLang = getLangCodeFromURL();
 var theVocLanguages = "";
 
+// Array of jsonld objects for the possible languages of the vocabulary
+const theLanguages =[ {
+  langcode: "ar", label: "Arabic"
+}, {
+  langcode: "ca", label: "Catalan"
+}, {
+  langcode: "da", label: "Danish"
+}, {
+  langcode: "de", label: "German"
+}, {
+  langcode: "el", label: "Greek"
+}, {
+  langcode: "en", label: "English"
+}, {
+  langcode: "et", label: "Estonian"
+}, {
+  langcode: "fi", label: "Finnish"
+}, {
+  langcode: "fr", label: "French"
+}, {
+  langcode: "hu", label: "Hungarian"
+}, {
+  langcode: "it", label: "Italian"
+}, {
+  langcode: "nl", label: "Dutch"
+}, {
+  langcode: "no", label: "Norwegian"
+}, {
+  langcode: "sv", label: "Swedish"
+}, {
+  langcode: "vi", label: "Vietnamese"
+}]
 // Set namespace domain constant
 var baseDomain = "http://www.rdaregistry.info/";
 
@@ -626,38 +658,6 @@ if (typeof dataSource !== "undefined") {
         var theVocToDatatype = "";
         var theVocToObject = "";
         var theVocURI = "";
-        // Array of jsonld objects for the possible languages of the vocabulary
-        const theLanguages =[ {
-          langcode: "ar", label: "Arabic"
-        }, {
-          langcode: "ca", label: "Catalan"
-        }, {
-          langcode: "da", label: "Danish"
-        }, {
-          langcode: "de", label: "German"
-        }, {
-          langcode: "el", label: "Greek"
-        }, {
-          langcode: "en", label: "English"
-        }, {
-          langcode: "et", label: "Estonian"
-        }, {
-          langcode: "fi", label: "Finnish"
-        }, {
-          langcode: "fr", label: "French"
-        }, {
-          langcode: "hu", label: "Hungarian"
-        }, {
-          langcode: "it", label: "Italian"
-        }, {
-          langcode: "nl", label: "Dutch"
-        }, {
-          langcode: "no", label: "Norwegian"
-        }, {
-          langcode: "sv", label: "Swedish"
-        }, {
-          langcode: "vi", label: "Vietnamese"
-        }]
         // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
         theData = json[ "@graph"];
         theMetadata = theData[0];
