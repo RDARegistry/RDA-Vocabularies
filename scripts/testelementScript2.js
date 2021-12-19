@@ -283,6 +283,15 @@ if (typeof dataSource !== "undefined") {
   
   // get strings from jsonld
   
+  function getCuriePrefix(vocData) {
+    // sets the vocabulary prefix from jsonld data
+    var theVocMetadata = vocData[0]
+    if (typeof theVocMetadata.prefix != "undefined") {
+      window.curiePrefix = theVocMetadata.prefix;
+    }
+    return;
+  }
+  
   function getDefinition(row) {
     // returns a definition from a jsonld row
     var theDefinition = "";
@@ -385,15 +394,6 @@ if (typeof dataSource !== "undefined") {
       //            }
     }
     return theString;
-  }
-  
-  function getPrefix(vocMetadata) {
-    // returns the prefix from jsonld vocabulary metadata
-    var thePrefix = "";
-    if (typeof vocMetadata.prefix != "undefined") {
-      thePrefix = vocMetadata.prefix;
-    }
-    return thePrefix;
   }
   
   function getStatus(row) {
@@ -605,7 +605,7 @@ if (typeof dataSource !== "undefined") {
         //        crossDomain: true,
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterData);
-          window.curiePrefix = json.data[0].prefix;
+          getCuriePrefix(json.data);
           return json.data;
         }
       },
