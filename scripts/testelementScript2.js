@@ -15,36 +15,36 @@ var docLang = getLangCodeFromURL();
 var theVocLanguages = "";
 
 // Array of jsonld objects for the possible languages of the vocabulary
-const theLanguages =[ {
-  langcode: "ar", label: "Arabic"
+const regLanguages =[ {
+  langcode: "ar", label: "Arabic", rtl: true
 }, {
-  langcode: "ca", label: "Catalan"
+  langcode: "ca", label: "Catalan", rtl: false
 }, {
-  langcode: "da", label: "Danish"
+  langcode: "da", label: "Danish", rtl: false
 }, {
-  langcode: "de", label: "German"
+  langcode: "de", label: "German", rtl: false
 }, {
-  langcode: "el", label: "Greek"
+  langcode: "el", label: "Greek", rtl: false
 }, {
-  langcode: "en", label: "English"
+  langcode: "en", label: "English", rtl: false
 }, {
-  langcode: "et", label: "Estonian"
+  langcode: "et", label: "Estonian", rtl: false
 }, {
-  langcode: "fi", label: "Finnish"
+  langcode: "fi", label: "Finnish", rtl: false
 }, {
-  langcode: "fr", label: "French"
+  langcode: "fr", label: "French", rtl: false
 }, {
-  langcode: "hu", label: "Hungarian"
+  langcode: "hu", label: "Hungarian", rtl: false
 }, {
-  langcode: "it", label: "Italian"
+  langcode: "it", label: "Italian", rtl: false
 }, {
-  langcode: "nl", label: "Dutch"
+  langcode: "nl", label: "Dutch", rtl: false
 }, {
-  langcode: "no", label: "Norwegian"
+  langcode: "no", label: "Norwegian", rtl: false
 }, {
-  langcode: "sv", label: "Swedish"
+  langcode: "sv", label: "Swedish", rtl: false
 }, {
-  langcode: "vi", label: "Vietnamese"
+  langcode: "vi", label: "Vietnamese", rtl: false
 }]
 
 // Set namespace domain constant
@@ -64,6 +64,16 @@ if (typeof dataSource !== "undefined") {
   function filterData(obj, index) {
     // filter out vocabulary metata that is always first item in jsonld graph
     return index > 0;
+  }
+  
+  // set filter for current language code used in published vocabulary entries
+  function filterCurrentLangCode(obj) {
+    return obj.ToolkitLabel[theLangCode] != "undefined";
+  }
+  
+  // get right-to-left value of current language code
+  function getCurrentLangCodeRTL(obj) {
+    return obj[theLangCode][rtl];
   }
   
   // Detail
@@ -187,7 +197,12 @@ if (typeof dataSource !== "undefined") {
     if (theLangCode.length > 0) {
       rtlIndex = rtlLangList.indexOf(theLangCode);
     }
-    if (rtlIndex > -1) {
+    /*     if (rtlIndex > -1) {
+    theString = '<div dir="rtl">' + theString + '</div>';
+    } else {
+    theString = "<div>" + theString + "</div>";
+    } */
+    if (regLanguages[theLangCode][rtl]) {
       theString = '<div dir="rtl">' + theString + '</div>';
     } else {
       theString = "<div>" + theString + "</div>";
@@ -331,8 +346,8 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  function getLanguages(theLanguages) {
-    theLanguages.forEach(checkUsed);
+  function getLanguages(regLanguages) {
+    regLanguages.forEach(checkUsed);
     return;
   }
   
@@ -341,16 +356,12 @@ if (typeof dataSource !== "undefined") {
     var theLangCode = "";
     var theLangLabel = "";
     theLangCode = language.langcode;
-    langCodeUsed = window.publishedElements.filter(filterLangCodes);
+    langCodeUsed = window.publishedElements.filter(filterCurrentLangCode);
     if (langCodeUsed.length > 0) {
       theLangLabel = language.label;
       window.theVocLanguages += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
     }
     return;
-  }
-  
-  function filterLangCodes(obj) {
-    return obj.ToolkitLabel[theLangCode] != "undefined";
   }
   
   function getValueByLanguage(row, langCode, defaultLangCode) {
@@ -683,7 +694,7 @@ if (typeof dataSource !== "undefined") {
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
         // Get the vocabulary languages display list
-        getLanguages(theLanguages);
+        getLanguages(regLanguages);
         // Push to block values to the page
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
