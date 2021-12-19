@@ -623,7 +623,7 @@ if (typeof dataSource !== "undefined") {
         "class": "curie",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(getLinkIn(row, window.curiePrefix));
+          return makeColumn(getLinkIn(row, curiePrefix));
         }
       }, {
         "class": "prefLabel",
