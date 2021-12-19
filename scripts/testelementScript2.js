@@ -1,50 +1,50 @@
-function getLangCodeFromURL() {
+function getLanguageCodeFromURL() {
   // get language code from the page URL
   // 2-letter code is specified by appending "language=aa" to the vocabulary/entry URL
   // default to code for English
-  var theLangCode = "en";
+  var theLanguageCode = "en";
   var theURL = window.location.href;
   var theIndex = theURL.indexOf("language=");
   if (theIndex > 0) {
-    theLangCode = theURL.substr(theIndex + 9, 2);
+    theLanguageCode = theURL.substr(theIndex + 9, 2);
   }
-  return theLangCode;
+  return theLanguageCode;
 }
 // initialize wide scope variable for code for language to display
-var docLang = getLangCodeFromURL();
+var theCurrentLanguageCode = getLanguageCodeFromURL();
 var theVocLanguages = "";
 
 // Array of jsonld objects for the possible languages of the vocabulary
 const regLanguages =[ {
-  langcode: "ar", label: "Arabic", rtl: true
+  code: "ar", label: "Arabic", rtl: true
 }, {
-  langcode: "ca", label: "Catalan", rtl: false
+  code: "ca", label: "Catalan", rtl: false
 }, {
-  langcode: "da", label: "Danish", rtl: false
+  code: "da", label: "Danish", rtl: false
 }, {
-  langcode: "de", label: "German", rtl: false
+  code: "de", label: "German", rtl: false
 }, {
-  langcode: "el", label: "Greek", rtl: false
+  code: "el", label: "Greek", rtl: false
 }, {
-  langcode: "en", label: "English", rtl: false
+  code: "en", label: "English", rtl: false
 }, {
-  langcode: "et", label: "Estonian", rtl: false
+  code: "et", label: "Estonian", rtl: false
 }, {
-  langcode: "fi", label: "Finnish", rtl: false
+  code: "fi", label: "Finnish", rtl: false
 }, {
-  langcode: "fr", label: "French", rtl: false
+  code: "fr", label: "French", rtl: false
 }, {
-  langcode: "hu", label: "Hungarian", rtl: false
+  code: "hu", label: "Hungarian", rtl: false
 }, {
-  langcode: "it", label: "Italian", rtl: false
+  code: "it", label: "Italian", rtl: false
 }, {
-  langcode: "nl", label: "Dutch", rtl: false
+  code: "nl", label: "Dutch", rtl: false
 }, {
-  langcode: "no", label: "Norwegian", rtl: false
+  code: "no", label: "Norwegian", rtl: false
 }, {
-  langcode: "sv", label: "Swedish", rtl: false
+  code: "sv", label: "Swedish", rtl: false
 }, {
-  langcode: "vi", label: "Vietnamese", rtl: false
+  code: "vi", label: "Vietnamese", rtl: false
 }]
 
 // Set namespace domain constant
@@ -71,11 +71,6 @@ if (typeof dataSource !== "undefined") {
     return obj.ToolkitLabel[theLangCode] != "undefined";
   }
   
-  // get right-to-left value of current language code
-  function getCurrentLangCodeRTL(obj) {
-    return obj[theLangCode][rtl];
-  }
-  
   // Detail
   /* Formatting function for row details - modify as you need */
   function format(d) {
@@ -85,7 +80,7 @@ if (typeof dataSource !== "undefined") {
     var detailTable = '<table class="pindex_detail">';
     if (typeof d != "undefined") {
       if (typeof d.note != "undefined") {
-        detailRow = makeDetailRow(getValueByLanguage(d.note, docLang), "Scope notes", docLang);
+        detailRow = makeDetailRow(getValueByLanguage(d.note, theCurrentLanguageCode), "Scope notes", theCurrentLanguageCode);
         detailTable += detailRow;
       }
       if (typeof d.domain != "undefined") {
@@ -109,11 +104,11 @@ if (typeof dataSource !== "undefined") {
         detailTable += detailRow;
       }
       if (typeof d.ToolkitLabel != "undefined") {
-        detailRow = makeDetailRow(getValueByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
+        detailRow = makeDetailRow(getValueByLanguage(d.ToolkitLabel, theCurrentLanguageCode), "Toolkit label", theCurrentLanguageCode);
         detailTable += detailRow;
       }
       if (typeof d.ToolkitDefinition != "undefined") {
-        detailRow = makeDetailRow(getValueByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
+        detailRow = makeDetailRow(getValueByLanguage(d.ToolkitDefinition, theCurrentLanguageCode), "Toolkit definition", theCurrentLanguageCode);
         detailTable += detailRow;
       }
       if (typeof d.status != "undefined") {
@@ -159,10 +154,10 @@ if (typeof dataSource !== "undefined") {
     return detailArray;
   }
   
-  function makeDetailRow(rowValue, rowLabel, langCode) {
-    // returns a two-column row for the detail display
-    var detailRow = "";
-    var theLangCode = "";
+  function makeDetailRow(rowValue, rowLabel, languageCode) {
+    // returns a two-column table row for the detail display
+    var theDetailRow = "";
+    var theLanguageCode = "";
     var theRowValue = "";
     var theRowLabel = "";
     if (typeof rowValue != "undefined") {
@@ -171,38 +166,38 @@ if (typeof dataSource !== "undefined") {
     if (typeof rowLabel != "undefined") {
       theRowLabel = rowLabel;
     }
-    if (typeof langCode != "undefined") {
-      theLangCode = langCode;
+    if (typeof languageCode != "undefined") {
+      theLanguageCode = languageCode;
     }
     // two columns; value column must have div wrapper
     if (theRowValue.length > 0) {
-      detailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
+      theDetailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
     }
-    return detailRow;
+    return theDetailRow;
   }
   
   // Format string
-  function directify(string, langCode) {
+  function directify(string, languageCode) {
     // returns a string wrapped in a div with right-to-left attribute for specified languages
     rtlLangList = "ar, he";
     rtlIndex = -1;
-    theLangCode = "";
+    theLanguageCode = "";
     theString = "";
     if (typeof string != "undefined") {
       theString = string;
     }
-    if (typeof langCode != "undefined") {
-      theLangCode = langCode;
+    if (typeof languageCode != "undefined") {
+      theLanguageCode = languageCode;
     }
-    if (theLangCode.length > 0) {
-      rtlIndex = rtlLangList.indexOf(theLangCode);
+    if (theLanguageCode.length > 0) {
+      rtlIndex = rtlLangList.indexOf(theLanguageCode);
     }
     /*     if (rtlIndex > -1) {
     theString = '<div dir="rtl">' + theString + '</div>';
     } else {
     theString = "<div>" + theString + "</div>";
     } */
-    if (regLanguages[theLangCode]["rtl"]) {
+    if (regLanguages[theLanguageCode][ "rtl"]) {
       theString = '<div dir="rtl">' + theString + '</div>';
     } else {
       theString = "<div>" + theString + "</div>";
@@ -311,36 +306,36 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  function getLabelByLanguage(row, langCode, defaultLangCode) {
+  function getLabelByLanguage(row, languageCode, defaultLangCode) {
     // returns a label in a specified language from a jsonld row
     var theLabel = "";
     var theLabels = "";
     // default language is English
-    var theLangCode = "en";
+    var theLanguageCode = "en";
     // default default language can only be English
     // [not enabled until translation processes in place]
-    var theDefaultLangCode = "";
-    if (typeof defaultLangCode != "undefined") {
-      theDefaultLangCode = defaultLangCode;
+    var theDefaultLanguageCode = "";
+    if (typeof defaultLanguageCode != "undefined") {
+      theDefaultLanguageCode = defaultLanguageCode;
     }
-    if (typeof langCode != "undefined") {
-      theLangCode = langCode;
+    if (typeof languageCode != "undefined") {
+      theLanguageCode = languageCode;
     }
     if (typeof row[ "label"] != "undefined") {
       theLabels = row[ "label"];
       // available in selected language
-      if (typeof theLabels[theLangCode] != "undefined") {
-        theLabel = theLabels[theLangCode];
+      if (typeof theLabels[theLanguageCode] != "undefined") {
+        theLabel = theLabels[theLanguageCode];
       }
       // available in default language; add qualifier to indicate not available in selected language
-      else if (theDefaultLangCode.length > 0) {
-        if (typeof row[theDefaultLangCode] != "undefined") {
-          theLabel = theLabels[theDefaultLangCode] + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode;
+      else if (theDefaultLangudageCode.length > 0) {
+        if (typeof row[theDefaultLangudageCode] != "undefined") {
+          theLabel = theLabels[theDefaultLanguageCode] + " ['" + theDefaultLanguageCode + "'; no '" + theLanguageCode + "']", theDefaultLanguageCode;
         }
       }
       // not available in selected or default language; output indicates the languages
       //            else if (theData instanceof Object) {
-      //                theString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
+      //                theString = directify("[no '" + theLanguageCode + "' or '" + theDefaultLanguagCode + "']", theDefaultLanguageCode);
       //            }
     }
     return theLabel;
@@ -351,47 +346,47 @@ if (typeof dataSource !== "undefined") {
     return;
   }
   
-  function checkUsed(language) {
+  function checkUsed(languageRow) {
     var langCodeUsed = "";
-    var theLangCode = "";
-    var theLangLabel = "";
-    theLangCode = language.langcode;
-    langCodeUsed = window.publishedElements.filter(filterCurrentLangCode);
-    if (langCodeUsed.length > 0) {
-      theLangLabel = language.label;
-      window.theVocLanguages += '<li><a href="?language=' + theLangCode + '" id="lang_' + theLangCode + '">' + theLangLabel + '</a></li>';
+    var theLanguageCode = "";
+    var theLanguageLabel = "";
+    theLanguageCode = languageRow.code;
+    languageCodeUsed = window.publishedElements.filter(filterCurrentLanguageCode);
+    if (languageCodeUsed.length > 0) {
+      theLanguageLabel = languageRow.label;
+      window.theVocLanguages += '<li><a href="?language=' + theLanguageCode + '" id="lang_' + theLanguageCode + '">' + theLanguageLabel + '</a></li>';
     }
     return;
   }
   
-  function getValueByLanguage(row, langCode, defaultLangCode) {
+  function getValueByLanguage(row, languageCode, defaultLanguageCode) {
     // returns jsonld value of language code in jsonld row
     var theString = "";
     // default language is English
-    var theLangCode = "en";
+    var theLanguageCode = "en";
     // default default language can only be English
     // [not enabled until translation processes in place]
-    var theDefaultLangCode = "";
-    if (typeof defaultLangCode != "undefined") {
-      theDefaultLangCode = defaultLangCode;
+    var theDefaultLanguageCode = "";
+    if (typeof defaultLanguageCode != "undefined") {
+      theDefaultLanguageCode = defaultLanguageCode;
     }
-    if (typeof langCode != "undefined") {
-      theLangCode = langCode;
+    if (typeof languageCode != "undefined") {
+      theLanguageCode = languageCode;
     }
     if (typeof row != "undefined" && row != null) {
       // available in selected language
-      if (typeof row[theLangCode] != "undefined") {
-        theString = directify(quotify(row[theLangCode]), theLangCode);
+      if (typeof row[theLanguageCode] != "undefined") {
+        theString = directify(quotify(row[theLanguageCode]), theLanguageCode);
       }
       // available in default language; add qualifier to indicate not available in selected language
-      else if (theDefaultLangCode.length > 0) {
-        if (typeof row[theDefaultLangCode] != "undefined") {
-          theString = directify(quotify(row[theDefaultLangCode]) + " ['" + theDefaultLangCode + "'; no '" + theLangCode + "']", theDefaultLangCode);
+      else if (theDefaultLanguageCode.length > 0) {
+        if (typeof row[theDefaultLanguageCode] != "undefined") {
+          theString = directify(quotify(row[theDefaultLanguageCode]) + " ['" + theDefaultLanguageCode + "'; no '" + theLanguageCode + "']", theDefaultLanguageCode);
         }
       }
       // not available in selected or default language; output indicates the languages
       //            else if (theData instanceof Object) {
-      //                theString = directify("[no '" + theLangCode + "' or '" + theDefaultLangCode + "']", theDefaultLangCode);
+      //                theString = directify("[no '" + theLanguageCode + "' or '" + theDefaultLanguageCode + "']", theDefaultLangCode);
       //            }
     }
     return theString;
@@ -502,20 +497,20 @@ if (typeof dataSource !== "undefined") {
     return theList;
   }
   
-  function getLinkInLabel(uri, label, langCode) {
+  function getLinkInLabel(uri, label, languageCode) {
     // returns internal link for string label and Registry URL with parameter for selected language
     var theLabel = "";
     // language code is omitted to get permalink
-    var theLangCode = "";
+    var theLanguageCode = "";
     var url = "";
     if (typeof label != "undefined") {
       theLabel = label;
     }
-    if (typeof langCode != "undefined") {
-      theLangCode = langCode;
+    if (typeof languageCode != "undefined") {
+      theLanguageCode = languageCode;
     }
     if (typeof uri != "undefined") {
-      url = makeURLFromURI(uri, theLangCode);
+      url = makeURLFromURI(uri, theLanguageCode);
     }
     return linkifyIn(theLabel, url);
   }
@@ -532,12 +527,12 @@ if (typeof dataSource !== "undefined") {
     return col;
   }
   
-  function makeURLFromURI(uri, langCode) {
+  function makeURLFromURI(uri, languageCode) {
     // returns Registry URL with language parameter
     var url = "";
-    var theLangCode = "";
-    if (typeof langCode != "undefined") {
-      theLangCode = langCode;
+    var theLanguageCode = "";
+    if (typeof languageCode != "undefined") {
+      theLanguageCode = languageCode;
     }
     if (typeof uri !== "undefined") {
       url = uri;
@@ -547,7 +542,7 @@ if (typeof dataSource !== "undefined") {
         // no specified language gives the permalink (display default is English)
         //                if (theLangCode.length != 0) {
         // Insert language code parameter before hash
-        //                    url = url.replace("#", "?language=" + theLangCode + "#");
+        //                    url = url.replace("#", "?language=" + theLanguageCode + "#");
         //                }
       }
     }
@@ -566,8 +561,8 @@ if (typeof dataSource !== "undefined") {
   function getLanguageCallout(data) {
     // not currently used: returns the xml language string
     if (typeof data != "undefined") {
-      if (typeof data[docLang] != "undefined") {
-        return "@" + docLang;
+      if (typeof data[theCurrentLanguageCode] != "undefined") {
+        return "@" + theCurrentLanguageCode;
       }
       if (typeof data[ 'en'] != "undefined") {
         return "@en";
@@ -639,13 +634,13 @@ if (typeof dataSource !== "undefined") {
         "class": "prefLabel",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(strongify(getValueByLanguage(getLabel(row), docLang, "en")));
+          return makeColumn(strongify(getValueByLanguage(getLabel(row), theCurrentLanguageCode, "en")));
         }
       }, {
         "class": "definition",
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumn(getValueByLanguage(getDefinition(row), docLang, "en"));
+          return makeColumn(getValueByLanguage(getDefinition(row), theCurrentLanguageCode, "en"));
         }
       }, {
         "class": "status",
@@ -712,7 +707,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("linkNT").href = theLinkNT;
         document.getElementById("linkXML").href = theLinkXML;
         // set language indicator style; border colour indicates on/selected
-        $("#lang_" + docLang).css({
+        $("#lang_" + theCurrentLanguageCode).css({
           "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
         });
       },
