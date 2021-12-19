@@ -45,7 +45,7 @@ const regLanguages =[ {
   code: "sv", label: "Swedish", rtl: false
 }, {
   code: "vi", label: "Vietnamese", rtl: false
-}]
+}];
 
 // Set namespace domain constant
 var baseDomain = "http://www.rdaregistry.info/";
@@ -181,6 +181,7 @@ if (typeof dataSource !== "undefined") {
     // returns a string wrapped in a div with right-to-left attribute for specified languages
     rtlLangList = "ar, he";
     rtlIndex = -1;
+    isRtl = false;
     theLanguageCode = "en";
     theString = "";
     if (typeof string != "undefined") {
@@ -197,7 +198,8 @@ if (typeof dataSource !== "undefined") {
     } else {
     theString = "<div>" + theString + "</div>";
     } */
-    if (regLanguages[theLanguageCode][ "rtl"]) {
+    isRtl = regLanguages[theLanguageCode][ "rtl"];
+    if (isRtl) {
       theString = '<div dir="rtl">' + theString + '</div>';
     } else {
       theString = "<div>" + theString + "</div>";
