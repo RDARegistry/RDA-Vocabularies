@@ -605,6 +605,7 @@ if (typeof dataSource !== "undefined") {
         //        crossDomain: true,
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterData);
+          window.curiePrefix = json.data[0].prefix;
           return json.data;
         }
       },
@@ -623,7 +624,7 @@ if (typeof dataSource !== "undefined") {
         "class": "curie",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(getLinkIn(row, window.curiePrefix));
+          return makeColumn(getLinkIn(row, curiePrefix));
         }
       }, {
         "class": "prefLabel",
