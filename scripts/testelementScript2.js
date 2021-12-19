@@ -78,8 +78,12 @@ if (typeof dataSource !== "undefined") {
   // set filter for current language code used in published vocabulary entries
   
   function filterLanguageCode(obj) {
-//    return obj.ToolkitLabel[window.languageCodeToCheck] != "undefined";
-    return obj.ToolkitLabel["vi"] != "undefined";
+    //    return obj.ToolkitLabel[window.languageCodeToCheck] != "undefined";
+    var theFilter = false;
+    if (obj.ToolkitLabel[ "vi"] != "undefined") {
+      theFilter = true;
+    }
+    return theFilter;
   }
   
   // Detail
@@ -388,7 +392,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function checkUsed(languageRow) {
-    var languageCodeUsed = [];
+    var languageCodeUsed =[];
     var theLanguageLabel = "";
     window.languageCodeToCheck = languageRow.code;
     languageCodeUsed = window.publishedElements.filter(filterLanguageCode);
@@ -419,7 +423,7 @@ if (typeof dataSource !== "undefined") {
       theLanguageCode = languageCode;
     }
     if (typeof row != "undefined" && row != null) {
-    
+      
       // available in selected language
       
       if (typeof row[theLanguageCode] != "undefined") {
