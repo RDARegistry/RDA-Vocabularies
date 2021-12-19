@@ -15,7 +15,7 @@ var theCurrentLanguageCode = getLanguageCodeFromURL();
 var theVocLanguages = "";
 
 // Array of jsonld objects for the possible languages of the vocabulary
-const regLanguages = [ {
+const regLanguages =[ {
   code: "ar", label: "Arabic", rtl: true
 }, {
   code: "ca", label: "Catalan", rtl: false
@@ -193,16 +193,16 @@ if (typeof dataSource !== "undefined") {
     if (theLanguageCode.length > 0) {
       rtlIndex = rtlLangList.indexOf(theLanguageCode);
     }
-     if (rtlIndex > -1) {
-    theString = '<div dir="rtl">' + theString + '</div>';
-    } else {
-    theString = "<div>" + theString + "</div>";
-    }
-    /*    isRtl = regLanguages[theLanguageCode][ "rtl"];
-    if (isRtl) {
+    if (rtlIndex > -1) {
       theString = '<div dir="rtl">' + theString + '</div>';
     } else {
       theString = "<div>" + theString + "</div>";
+    }
+    /*    isRtl = regLanguages[theLanguageCode][ "rtl"];
+    if (isRtl) {
+    theString = '<div dir="rtl">' + theString + '</div>';
+    } else {
+    theString = "<div>" + theString + "</div>";
     } */
     return theString;
   }
@@ -234,6 +234,29 @@ if (typeof dataSource !== "undefined") {
   }
   
   // format links
+  // returns formatted link
+  function linkify(label, uri, linkOut) {
+    var isLinkOut = false;
+    var theLabel = "";
+    var theLink = "";
+    var theURI = "";
+    if (typeof label != "undefined") {
+      theLabel = label;
+    }
+    if (typeof uri != "undefined") {
+      theURI = uri;
+    }
+    if (typeof linkOut != "undefined") {
+      isLinkOut = linkOut;
+    }
+    if (isLinkOut) {
+      theLink = '<a href="' + theURI + '" target="_blank">' + theLabel + '</a>';
+    } else {
+      theLink = '<a href="' + theURI + '">' + theLabel + '</a>';
+    }
+    return theLink;
+  }
+  
   // returns internal link
   function linkifyIn(label, uri) {
     var theLabel = "";
@@ -245,7 +268,7 @@ if (typeof dataSource !== "undefined") {
     if (typeof uri != "undefined") {
       theURI = uri;
     }
-    theLink = '<a href="' + theURI + '">' + theLabel + '</a>'
+    theLink = '<a href="' + theURI + '">' + theLabel + '</a>';
     return theLink;
   }
   
@@ -260,7 +283,7 @@ if (typeof dataSource !== "undefined") {
     if (typeof uri != "undefined") {
       theURI = uri;
     }
-    theLink = '<a href="' + theURI + '" target="_blank">' + theLabel + '</a>'
+    theLink = '<a href="' + theURI + '" target="_blank">' + theLabel + '</a>';
     return theLink;
   }
   
