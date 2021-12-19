@@ -138,7 +138,7 @@ if (typeof dataSource !== "undefined") {
         label = getLabel(arrayRow[i]);
         uri = getURI(arrayRow[i]);
         labelLink = quotify(getLinkInLabel(uri, label));
-        curieLink = linkify(makeCurieFromURI(uri, window.curiePrefix), uri);
+        curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
         switch (theVh) {
           case "h":
           detailArray += divify(curieLink + " [" + labelLink + " (en)]");
@@ -256,36 +256,6 @@ if (typeof dataSource !== "undefined") {
     }
     return theLink;
   }
-  
-  // returns internal link
-/*   function linkifyIn(label, uri) {
-    var theLabel = "";
-    var theLink = "";
-    var theURI = "";
-    if (typeof label != "undefined") {
-      theLabel = label;
-    }
-    if (typeof uri != "undefined") {
-      theURI = uri;
-    }
-    theLink = '<a href="' + theURI + '">' + theLabel + '</a>';
-    return theLink;
-  }
-  
-  function linkifyOut(label, uri) {
-    // returns external link
-    var theLabel = "";
-    var theLink = "";
-    var theURI = "";
-    if (typeof label != "undefined") {
-      theLabel = label;
-    }
-    if (typeof uri != "undefined") {
-      theURI = uri;
-    }
-    theLink = '<a href="' + theURI + '" target="_blank">' + theLabel + '</a>';
-    return theLink;
-  } */
   
   function makeCurieFromURI(uri, prefix) {
     // returns a curie
