@@ -75,8 +75,8 @@ if (typeof dataSource !== "undefined") {
   
   // set filter for current language code used in published vocabulary entries
   
-  function filterCurrentLanguageCode(obj) {
-    return obj.ToolkitLabel[theCurrentLanguageCode] != "undefined";
+  function filterLanguageCode(obj) {
+    return obj.ToolkitLabel[theLanguageCode] != "undefined";
   }
   
   // Detail
@@ -389,7 +389,7 @@ if (typeof dataSource !== "undefined") {
     var theLanguageCode = "";
     var theLanguageLabel = "";
     theLanguageCode = languageRow.code;
-    languageCodeUsed = window.publishedElements.filter(filterCurrentLanguageCode);
+    languageCodeUsed = window.publishedElements.filter(filterLanguageCode);
     if (languageCodeUsed.length > 0) {
       theLanguageLabel = languageRow.label;
       window.theVocLanguages += '<li><a href="?language=' + theLanguageCode + '" id="lang_' + theLanguageCode + '">' + theLanguageLabel + '</a></li>';
