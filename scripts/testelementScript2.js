@@ -138,7 +138,7 @@ if (typeof dataSource !== "undefined") {
         label = getLabel(arrayRow[i]);
         uri = getURI(arrayRow[i]);
         labelLink = quotify(getLinkInLabel(uri, label));
-        curieLink = linkifyIn(makeCurieFromURI(uri, window.curiePrefix), uri);
+        curieLink = linkify(makeCurieFromURI(uri, window.curiePrefix), uri);
         switch (theVh) {
           case "h":
           detailArray += divify(curieLink + " [" + labelLink + " (en)]");
@@ -258,7 +258,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   // returns internal link
-  function linkifyIn(label, uri) {
+/*   function linkifyIn(label, uri) {
     var theLabel = "";
     var theLink = "";
     var theURI = "";
@@ -285,7 +285,7 @@ if (typeof dataSource !== "undefined") {
     }
     theLink = '<a href="' + theURI + '" target="_blank">' + theLabel + '</a>';
     return theLink;
-  }
+  } */
   
   function makeCurieFromURI(uri, prefix) {
     // returns a curie
@@ -468,7 +468,7 @@ if (typeof dataSource !== "undefined") {
     if (theLabel.length == 0) {
       theLabel = theURI;
     }
-    theLink = linkifyIn(theLabel, theURI);
+    theLink = linkify(theLabel, theURI);
     return theLink;
   }
   
@@ -486,7 +486,7 @@ if (typeof dataSource !== "undefined") {
     if (theLabel.length == 0) {
       theLabel = theURI;
     }
-    theLink = linkifyOut(theLabel, theURI);
+    theLink = linkify(theLabel, theURI, true);
     return theLink;
   }
   
@@ -506,7 +506,7 @@ if (typeof dataSource !== "undefined") {
         label = getLabel(propArray[i]);
         uri = getURI(propArray[i]);
         labelLink = quotify(getLinkInLabel(uri, label));
-        uriLink = linkifyOut(uri, uri);
+        uriLink = linkify(uri, uri, true);
         switch (theVh) {
           case "h":
           theList += divify(uriLink + " [" + labelLink + " (en)]");
@@ -537,7 +537,7 @@ if (typeof dataSource !== "undefined") {
     if (typeof uri != "undefined") {
       url = makeURLFromURI(uri, theLanguageCode);
     }
-    return linkifyIn(theLabel, url);
+    return linkify(theLabel, url);
   }
   
   
@@ -703,7 +703,7 @@ if (typeof dataSource !== "undefined") {
         window.curiePrefix = theMetadata.prefix;
         // Example curie is first published element in data and may not be the lowest in curie order
         theCurieExURI = getURI(window.publishedElements[0]);
-        theVocCurieEx = linkifyIn(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
+        theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
         // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
