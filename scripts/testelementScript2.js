@@ -197,7 +197,7 @@ if (typeof dataSource !== "undefined") {
     } else {
     theString = "<div>" + theString + "</div>";
     } */
-    if (regLanguages[theLanguageCode][ "rtl"]) {
+    if (window.regLanguages[theLanguageCode][ "rtl"]) {
       theString = '<div dir="rtl">' + theString + '</div>';
     } else {
       theString = "<div>" + theString + "</div>";
