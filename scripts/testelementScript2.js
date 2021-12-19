@@ -46,6 +46,7 @@ const theLanguages =[ {
 }, {
   langcode: "vi", label: "Vietnamese"
 }]
+
 // Set namespace domain constant
 var baseDomain = "http://www.rdaregistry.info/";
 
