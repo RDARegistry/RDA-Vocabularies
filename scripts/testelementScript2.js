@@ -283,9 +283,9 @@ if (typeof dataSource !== "undefined") {
   
   // get strings from jsonld
   
-  function getCuriePrefix(vocData) {
+  function getCuriePrefix(vocGraph) {
     // sets the vocabulary prefix from jsonld data
-    var theVocMetadata = vocData[0]
+    var theVocMetadata = vocGraph[0]
     if (typeof theVocMetadata.prefix != "undefined") {
       window.curiePrefix = theVocMetadata.prefix;
     }
@@ -605,7 +605,7 @@ if (typeof dataSource !== "undefined") {
         //        crossDomain: true,
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterData);
-          getCuriePrefix(json.data);
+          getCuriePrefix(json[ "@graph"]);
           return json.data;
         }
       },
