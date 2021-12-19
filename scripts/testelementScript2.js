@@ -14,7 +14,9 @@ function getLanguageCodeFromURL() {
 // initialize wide scope variable for code for language to display
 
 var theCurrentLanguageCode = getLanguageCodeFromURL();
-var theVocLanguages = "";
+var vocLanguagesSelector = "";
+
+var languageCodeToCheck = "";
 
 // Array of jsonld objects for the possible languages of the vocabulary
 
@@ -385,14 +387,13 @@ if (typeof dataSource !== "undefined") {
   }
   
   function checkUsed(languageRow) {
-    var langCodeUsed = "";
-    var theLanguageCode = "";
+    var languageCodeUsed = "";
     var theLanguageLabel = "";
-    theLanguageCode = languageRow.code;
+    window.languageCodeToCheck = languageRow.code;
     languageCodeUsed = window.publishedElements.filter(filterLanguageCode);
     if (languageCodeUsed.length > 0) {
       theLanguageLabel = languageRow.label;
-      window.theVocLanguages += '<li><a href="?language=' + theLanguageCode + '" id="lang_' + theLanguageCode + '">' + theLanguageLabel + '</a></li>';
+      window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
     }
     return;
   }
@@ -767,7 +768,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocPrefix").innerHTML = curiePrefix;
         document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
         document.getElementById("vocVersion").innerHTML = theVersionLink;
-        document.getElementById("vocLanguages").innerHTML = window.theVocLanguages;
+        document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
         document.getElementById("vocDomain").innerHTML = theVocDomain;
         document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
         document.getElementById("vocToObject").innerHTML = theVocToObject;
