@@ -1,6 +1,6 @@
 function getLangCodeFromURL() {
   // get language code from the page URL
-  // 2-letter code is specified by appending "language=aa" to the URL
+  // 2-letter code is specified by appending "language=aa" to the vocabulary/entry URL
   // default to code for English
   var theLangCode = "en";
   var theURL = window.location.href;
@@ -13,7 +13,6 @@ function getLangCodeFromURL() {
 // initialize wide scope variable for code for language to display
 var docLang = getLangCodeFromURL();
 var theVocLanguages = "";
-
 
 // Set namespace domain constant
 var baseDomain = "http://www.rdaregistry.info/";
@@ -28,18 +27,9 @@ var publishedElements;
 
 if (typeof dataSource !== "undefined") {
   
-  //noinspection ThisExpressionReferencesGlobalObjectJS
-  /*  (function () {
-  $(function () {
-  $('pre').addClass('prettyprint');
-  return prettyPrint();
-  });
-  }).call(this); */
-  
   // set filter for data
   function filterData(obj, index) {
-    // exclude first item in json graph that is metadata
-    //    return obj[ "@type"] == "Property";
+    // filter out vocabulary metata that is always first item in jsonld graph
     return index > 0;
   }
   
@@ -52,7 +42,7 @@ if (typeof dataSource !== "undefined") {
     var detailTable = '<table class="pindex_detail">';
     if (typeof d != "undefined") {
       if (typeof d.note != "undefined") {
-        detailRow = makeDetailRow(getStringByLanguage(d.note, docLang), "Scope notes", docLang);
+        detailRow = makeDetailRow(getValueByLanguage(d.note, docLang), "Scope notes", docLang);
         detailTable += detailRow;
       }
       if (typeof d.domain != "undefined") {
@@ -76,11 +66,11 @@ if (typeof dataSource !== "undefined") {
         detailTable += detailRow;
       }
       if (typeof d.ToolkitLabel != "undefined") {
-        detailRow = makeDetailRow(getStringByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
+        detailRow = makeDetailRow(getValueByLanguage(d.ToolkitLabel, docLang), "Toolkit label", docLang);
         detailTable += detailRow;
       }
       if (typeof d.ToolkitDefinition != "undefined") {
-        detailRow = makeDetailRow(getStringByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
+        detailRow = makeDetailRow(getValueByLanguage(d.ToolkitDefinition, docLang), "Toolkit definition", docLang);
         detailTable += detailRow;
       }
       if (typeof d.status != "undefined") {
@@ -330,8 +320,8 @@ if (typeof dataSource !== "undefined") {
     return obj.ToolkitLabel[theLangCode] != "undefined";
   }
   
-  function getStringByLanguage(row, langCode, defaultLangCode) {
-    // returns string corresponding to language, or defaults
+  function getValueByLanguage(row, langCode, defaultLangCode) {
+    // returns jsonld value of language code in jsonld row
     var theString = "";
     // default language is English
     var theLangCode = "en";
@@ -363,15 +353,14 @@ if (typeof dataSource !== "undefined") {
     return theString;
   }
   
-  function getPrefix(metadata) {
-    // returns the vocabulary prefix from metadata
+  function getPrefix(vocMetadata) {
+    // returns the prefix from jsonld vocabulary metadata
     var thePrefix = "";
-    if (typeof metadata.prefix != "undefined") {
-      thePrefix = metadata.prefix;
+    if (typeof vocMetadata.prefix != "undefined") {
+      thePrefix = vocMetadata.prefix;
     }
     return thePrefix;
   }
-  
   
   function getStatus(row) {
     // returns the status row from a jsonld element row
@@ -382,11 +371,11 @@ if (typeof dataSource !== "undefined") {
     return theStatus;
   }
   
-  function getTitle(metadata) {
+  function getTitle(vocMetadata) {
     // returns the vocabulary title from metadata
     var theTitle = "";
-    if (typeof metadata.title != "undefined") {
-      theTitle = metadata.title;
+    if (typeof vocMetadata.title != "undefined") {
+      theTitle = vocMetadata.title;
     }
     return theTitle;
   }
@@ -572,7 +561,7 @@ if (typeof dataSource !== "undefined") {
   $(document).ready(
   function () {
     var dtable = $("#pindex");
-    var metadata;
+    var vocMetadata;
     var t8lines = 2;
     var table = dtable.DataTable({
       "ajax": {
@@ -606,13 +595,13 @@ if (typeof dataSource !== "undefined") {
         "class": "prefLabel",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(strongify(getStringByLanguage(getLabel(row), docLang, "en")));
+          return makeColumn(strongify(getValueByLanguage(getLabel(row), docLang, "en")));
         }
       }, {
         "class": "definition",
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumn(getStringByLanguage(getDefinition(row), docLang, "en"));
+          return makeColumn(getValueByLanguage(getDefinition(row), docLang, "en"));
         }
       }, {
         "class": "status",
@@ -626,7 +615,7 @@ if (typeof dataSource !== "undefined") {
         var theMetadata;
         var theCurieExURI = "";
         var theLinkCSV = "";
-        var theLinkJSON = "";
+        var theLinkJSONLD = "";
         var theLinkNT = "";
         var theLinkXML = "";
         var theVersionLink = "";
@@ -637,7 +626,7 @@ if (typeof dataSource !== "undefined") {
         var theVocToDatatype = "";
         var theVocToObject = "";
         var theVocURI = "";
-        // Array of json objects for the possible languages of the vocabulary
+        // Array of jsonld objects for the possible languages of the vocabulary
         const theLanguages =[ {
           langcode: "ar", label: "Arabic"
         }, {
@@ -669,7 +658,7 @@ if (typeof dataSource !== "undefined") {
         }, {
           langcode: "vi", label: "Vietnamese"
         }]
-        // Extract the json graph of vocabulary entries, then the first entry (always metadata), then the published entries
+        // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
         theData = json[ "@graph"];
         theMetadata = theData[0];
         window.publishedElements = theData.filter(getPublished);
@@ -689,7 +678,7 @@ if (typeof dataSource !== "undefined") {
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
         // Set the file links for the Downloads block
         theLinkCSV = baseDomain + "csv/Elements/" + curiePrefix + ".csv";
-        theLinkJSON = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
+        theLinkJSONLD = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
         // Get the vocabulary languages display list
@@ -707,7 +696,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
         document.getElementById("vocToObject").innerHTML = theVocToObject;
         document.getElementById("linkCSV").href = theLinkCSV;
-        document.getElementById("linkJSON").href = theLinkJSON;
+        document.getElementById("linkJSONLD").href = theLinkJSONLD;
         document.getElementById("linkNT").href = theLinkNT;
         document.getElementById("linkXML").href = theLinkXML;
         // set language indicator style; border colour indicates on/selected
