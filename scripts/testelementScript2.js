@@ -78,7 +78,7 @@ if (typeof dataSource !== "undefined") {
   // set filter for current language code used in published vocabulary entries
   
   function filterLanguageCode(obj) {
-    return obj.ToolkitLabel[theLanguageCode] != "undefined";
+    return obj.ToolkitLabel[window.languageCodeToCheck] != "undefined";
   }
   
   // Detail
