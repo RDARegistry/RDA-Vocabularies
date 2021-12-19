@@ -181,7 +181,7 @@ if (typeof dataSource !== "undefined") {
     // returns a string wrapped in a div with right-to-left attribute for specified languages
     rtlLangList = "ar, he";
     rtlIndex = -1;
-    theLanguageCode = "";
+    theLanguageCode = "en";
     theString = "";
     if (typeof string != "undefined") {
       theString = string;
@@ -197,7 +197,7 @@ if (typeof dataSource !== "undefined") {
     } else {
     theString = "<div>" + theString + "</div>";
     } */
-    if (window.regLanguages[theLanguageCode][ "rtl"]) {
+    if (regLanguages[theLanguageCode][ "rtl"]) {
       theString = '<div dir="rtl">' + theString + '</div>';
     } else {
       theString = "<div>" + theString + "</div>";
