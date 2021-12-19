@@ -15,7 +15,7 @@ var theCurrentLanguageCode = getLanguageCodeFromURL();
 var theVocLanguages = "";
 
 // Array of jsonld objects for the possible languages of the vocabulary
-const regLanguages =[ {
+const regLanguages = [ {
   code: "ar", label: "Arabic", rtl: true
 }, {
   code: "ca", label: "Catalan", rtl: false
@@ -193,17 +193,17 @@ if (typeof dataSource !== "undefined") {
     if (theLanguageCode.length > 0) {
       rtlIndex = rtlLangList.indexOf(theLanguageCode);
     }
-    /*     if (rtlIndex > -1) {
+     if (rtlIndex > -1) {
     theString = '<div dir="rtl">' + theString + '</div>';
     } else {
     theString = "<div>" + theString + "</div>";
-    } */
-    isRtl = regLanguages[theLanguageCode][ "rtl"];
+    }
+    /*    isRtl = regLanguages[theLanguageCode][ "rtl"];
     if (isRtl) {
       theString = '<div dir="rtl">' + theString + '</div>';
     } else {
       theString = "<div>" + theString + "</div>";
-    }
+    } */
     return theString;
   }
   
