@@ -387,7 +387,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function checkUsed(languageRow) {
-    var languageCodeUsed = "";
+    var languageCodeUsed = [];
     var theLanguageLabel = "";
     window.languageCodeToCheck = languageRow.code;
     languageCodeUsed = window.publishedElements.filter(filterLanguageCode);
