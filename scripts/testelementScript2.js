@@ -1,7 +1,8 @@
 function getLanguageCodeFromURL() {
   // get language code from the page URL
   // 2-letter code is specified by appending "language=aa" to the vocabulary/entry URL
-  // default to code for English
+  // default code is for English
+  
   var theLanguageCode = "en";
   var theURL = window.location.href;
   var theIndex = theURL.indexOf("language=");
@@ -11,10 +12,12 @@ function getLanguageCodeFromURL() {
   return theLanguageCode;
 }
 // initialize wide scope variable for code for language to display
+
 var theCurrentLanguageCode = getLanguageCodeFromURL();
 var theVocLanguages = "";
 
 // Array of jsonld objects for the possible languages of the vocabulary
+
 const regLanguages =[ {
   code: "ar", label: "Arabic", rtl: true
 }, {
@@ -48,12 +51,15 @@ const regLanguages =[ {
 }];
 
 // Set namespace domain constant
+
 var baseDomain = "http://www.rdaregistry.info/";
 
 // initialize global variable for prefix
+
 var curiePrefix = "rda";
 
 // initialize global variable for published elements array
+
 var publishedElements;
 
 // Process vocabulary data if defined.
@@ -61,21 +67,25 @@ var publishedElements;
 if (typeof dataSource !== "undefined") {
   
   // set filter for data
+  
   function filterData(obj, index) {
     // filter out vocabulary metata that is always first item in jsonld graph
     return index > 0;
   }
   
   // set filter for current language code used in published vocabulary entries
+  
   function filterCurrentLanguageCode(obj) {
     return obj.ToolkitLabel[theCurrentLanguageCode] != "undefined";
   }
   
   // Detail
   /* Formatting function for row details - modify as you need */
+  
   function format(d) {
     // `d` is the original data object for the row
     // format note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
+    
     var detailRow = makeDetailRow();
     var detailTable = '<table class="pindex_detail">';
     if (typeof d != "undefined") {
@@ -128,7 +138,9 @@ if (typeof dataSource !== "undefined") {
     var label = "";
     var labelLink = "";
     var uri = "";
+    
     // indicator for vertical or horizontal uri/label list
+    
     var theVh = "";
     if (typeof vh != "undefined") {
       theVh = vh;
@@ -156,6 +168,7 @@ if (typeof dataSource !== "undefined") {
   
   function makeDetailRow(rowValue, rowLabel, languageCode) {
     // returns a two-column table row for the detail display
+    
     var theDetailRow = "";
     var theLanguageCode = "";
     var theRowValue = "";
@@ -170,6 +183,7 @@ if (typeof dataSource !== "undefined") {
       theLanguageCode = languageCode;
     }
     // two columns; value column must have div wrapper
+    
     if (theRowValue.length > 0) {
       theDetailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
     }
@@ -177,8 +191,10 @@ if (typeof dataSource !== "undefined") {
   }
   
   // Format string
+  
   function directify(string, languageCode) {
     // returns a string wrapped in a div with right-to-left attribute for specified languages
+    
     rtlLangList = "ar, he";
     rtlIndex = -1;
     isRtl = false;
@@ -209,6 +225,7 @@ if (typeof dataSource !== "undefined") {
   
   function divify(string, className) {
     // returns a string wrapped in a div
+    
     var theClassName = "";
     var theString = "";
     if (typeof string != "undefined") {
@@ -225,16 +242,19 @@ if (typeof dataSource !== "undefined") {
   
   function quotify(string) {
     // returns a string delimited with quotes
+    
     return '"' + string + '"';
   }
   
   function strongify(string) {
     // returns a string marked as strong
+    
     return '<strong>' + string + '</strong>';
   }
   
   // format links
   // returns formatted link
+  
   function linkify(label, uri, linkOut) {
     var isLinkOut = false;
     var theLabel = "";
@@ -259,6 +279,7 @@ if (typeof dataSource !== "undefined") {
   
   function makeCurieFromURI(uri, prefix) {
     // returns a curie
+    
     var theCurie = "";
     var thePrefix = "";
     var theURI = "";
@@ -276,6 +297,7 @@ if (typeof dataSource !== "undefined") {
     }
     if (theURI !== null && typeof theURI.replace === "function") {
       // replace everything up to last sub-folder slash with prefix and colon
+      
       theCurie = thePrefix + ":" + theURI.substr(1 + theURI.lastIndexOf("/"));
     }
     return theCurie;
@@ -285,6 +307,7 @@ if (typeof dataSource !== "undefined") {
   
   function getCuriePrefix(vocGraph) {
     // sets the vocabulary prefix from jsonld data
+    
     var theVocMetadata = vocGraph[0]
     if (typeof theVocMetadata.prefix != "undefined") {
       window.curiePrefix = theVocMetadata.prefix;
@@ -294,6 +317,7 @@ if (typeof dataSource !== "undefined") {
   
   function getDefinition(row) {
     // returns a definition from a jsonld row
+    
     var theDefinition = "";
     if (typeof row[ "definition"] != "undefined") {
       theDefinition = row[ "definition"];
@@ -303,6 +327,7 @@ if (typeof dataSource !== "undefined") {
   
   function getLabel(row) {
     // returns a label from a jsonld row
+    
     var theLabel = "";
     if (typeof row[ "label"] != "undefined") {
       theLabel = row[ "label"];
@@ -312,12 +337,17 @@ if (typeof dataSource !== "undefined") {
   
   function getLabelByLanguage(row, languageCode, defaultLangCode) {
     // returns a label in a specified language from a jsonld row
+    
     var theLabel = "";
     var theLabels = "";
+    
     // default language is English
+    
     var theLanguageCode = "en";
+    
     // default default language can only be English
     // [not enabled until translation processes in place]
+    
     var theDefaultLanguageCode = "";
     if (typeof defaultLanguageCode != "undefined") {
       theDefaultLanguageCode = defaultLanguageCode;
@@ -327,11 +357,15 @@ if (typeof dataSource !== "undefined") {
     }
     if (typeof row[ "label"] != "undefined") {
       theLabels = row[ "label"];
+      
       // available in selected language
+      
       if (typeof theLabels[theLanguageCode] != "undefined") {
         theLabel = theLabels[theLanguageCode];
       }
+      
       // available in default language; add qualifier to indicate not available in selected language
+      
       else if (theDefaultLangudageCode.length > 0) {
         if (typeof row[theDefaultLangudageCode] != "undefined") {
           theLabel = theLabels[theDefaultLanguageCode] + " ['" + theDefaultLanguageCode + "'; no '" + theLanguageCode + "']", theDefaultLanguageCode;
@@ -365,11 +399,16 @@ if (typeof dataSource !== "undefined") {
   
   function getValueByLanguage(row, languageCode, defaultLanguageCode) {
     // returns jsonld value of language code in jsonld row
+    
     var theString = "";
+    
     // default language is English
+    
     var theLanguageCode = "en";
+    
     // default default language can only be English
     // [not enabled until translation processes in place]
+    
     var theDefaultLanguageCode = "";
     if (typeof defaultLanguageCode != "undefined") {
       theDefaultLanguageCode = defaultLanguageCode;
@@ -378,11 +417,15 @@ if (typeof dataSource !== "undefined") {
       theLanguageCode = languageCode;
     }
     if (typeof row != "undefined" && row != null) {
+    
       // available in selected language
+      
       if (typeof row[theLanguageCode] != "undefined") {
         theString = directify(quotify(row[theLanguageCode]), theLanguageCode);
       }
+      
       // available in default language; add qualifier to indicate not available in selected language
+      
       else if (theDefaultLanguageCode.length > 0) {
         if (typeof row[theDefaultLanguageCode] != "undefined") {
           theString = directify(quotify(row[theDefaultLanguageCode]) + " ['" + theDefaultLanguageCode + "'; no '" + theLanguageCode + "']", theDefaultLanguageCode);
@@ -398,6 +441,7 @@ if (typeof dataSource !== "undefined") {
   
   function getStatus(row) {
     // returns the status row from a jsonld element row
+    
     var theStatus = "";
     if (typeof row.status != "undefined") {
       theStatus = row.status;
@@ -407,6 +451,7 @@ if (typeof dataSource !== "undefined") {
   
   function getTitle(vocMetadata) {
     // returns the vocabulary title from metadata
+    
     var theTitle = "";
     if (typeof vocMetadata.title != "undefined") {
       theTitle = vocMetadata.title;
@@ -416,6 +461,7 @@ if (typeof dataSource !== "undefined") {
   
   function getURI(row) {
     // returns a URI from a jsonld row
+    
     var theURI = "";
     var theRowID = row[ "@id"];
     if (typeof theRowID != "undefined") {
@@ -427,6 +473,7 @@ if (typeof dataSource !== "undefined") {
   // get links from a jsonld row
   function getLinkIn(row, prefix) {
     // returns internal link with label (defaulting to URI) or Curie label if prefix is given
+    
     var theLabel = "";
     var theLink = "";
     var theURI = getURI(row);
@@ -444,6 +491,7 @@ if (typeof dataSource !== "undefined") {
   
   function getLinkOut(row) {
     // returns external link with label (defaulting to URI)
+    
     var theLabel = "";
     var theLink = "";
     var theURI = "";
@@ -494,8 +542,11 @@ if (typeof dataSource !== "undefined") {
   
   function getLinkInLabel(uri, label, languageCode) {
     // returns internal link for string label and Registry URL with parameter for selected language
+    
     var theLabel = "";
+    
     // language code is omitted to get permalink
+    
     var theLanguageCode = "";
     var url = "";
     if (typeof label != "undefined") {
@@ -513,6 +564,7 @@ if (typeof dataSource !== "undefined") {
   
   function makeColumn(content) {
     // returns column content in a wrapper div with direction parameter
+    
     var col = "";
     var theContent = "";
     if (typeof content != "undefined") {
@@ -524,6 +576,7 @@ if (typeof dataSource !== "undefined") {
   
   function makeURLFromURI(uri, languageCode) {
     // returns Registry URL with language parameter
+    
     var url = "";
     var theLanguageCode = "";
     if (typeof languageCode != "undefined") {
@@ -570,6 +623,7 @@ if (typeof dataSource !== "undefined") {
   var initFilter = setFilter();
   
   //reset filter and redraw when the URL anchor changes
+  
   window.onhashchange = function () {
     var initFilter = setFilter();
     setSearch(initFilter);
@@ -577,8 +631,11 @@ if (typeof dataSource !== "undefined") {
   
   function setFilter() {
     // returns URL anchor
+    
     var initFilter = null;
+    
     // if the page URL has an anchor for the URI local part
+    
     if (window.location.hash.indexOf('#') > -1) {
       initFilter = window.location.hash.substr(1);
     }
@@ -587,6 +644,7 @@ if (typeof dataSource !== "undefined") {
   
   function setSearch(filter) {
     // draws the data table with the filter
+    
     var table = $("table#pindex").DataTable();
     table.search('').column(2).search(filter).draw();
     $('input[type=search]').val(filter);
@@ -661,32 +719,47 @@ if (typeof dataSource !== "undefined") {
         var theVocToDatatype = "";
         var theVocToObject = "";
         var theVocURI = "";
+        
         // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
+        
         theData = json[ "@graph"];
         theMetadata = theData[0];
         window.publishedElements = theData.filter(getPublished);
+        
         // Get the vocabulary title for the Header block
+        
         theVocTitle = theMetadata.title[ "en"];
+        
         // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
+        
         theVocEntriesTotal = window.publishedElements.length;
         theVocURI = theMetadata[ "@id"];
         theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-//        window.curiePrefix = theMetadata.prefix;
+        
         // Example curie is first published element in data and may not be the lowest in curie order
+        
         theCurieExURI = getURI(window.publishedElements[0]);
         theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
+        
         // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
+        
         theVocDomain = theVocTitle.replace(" properties", "");
         theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
         theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
+        
         // Set the file links for the Downloads block
+        
         theLinkCSV = baseDomain + "csv/Elements/" + curiePrefix + ".csv";
         theLinkJSONLD = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
         theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
         theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
+        
         // Get the vocabulary languages display list
+        
         getLanguages(regLanguages);
+        
         // Push to block values to the page
+        
         document.getElementById("vocTitle").innerHTML = theVocTitle;
         document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
         document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
@@ -702,7 +775,9 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("linkJSONLD").href = theLinkJSONLD;
         document.getElementById("linkNT").href = theLinkNT;
         document.getElementById("linkXML").href = theLinkXML;
+        
         // set language indicator style; border colour indicates on/selected
+        
         $("#lang_" + theCurrentLanguageCode).css({
           "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
         });
