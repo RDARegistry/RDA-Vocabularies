@@ -11,14 +11,17 @@ function getLanguageCodeFromURL() {
   }
   return theLanguageCode;
 }
-// initialize wide scope variable for code for language to display
+// Initialize global variable for code for current language, and for languages selector display
 
 var theCurrentLanguageCode = getLanguageCodeFromURL();
 var vocLanguagesSelector = "";
 
+// Initialize global variable for language code to check for selector
+
 var languageCodeToCheck = "";
 
-// Array of jsonld objects for the possible languages of the vocabulary
+// Declare constant array of jsonld objects for the possible languages of the vocabulary
+// Object includes language code, label in English, and indication of right-to-left display
 
 const regLanguages =[ {
   code: "ar", label: "Arabic", rtl: true
@@ -52,15 +55,15 @@ const regLanguages =[ {
   code: "vi", label: "Vietnamese", rtl: false
 }];
 
-// Set namespace domain constant
+// Initialize and set global variable for namespace domain constant
 
 var baseDomain = "http://www.rdaregistry.info/";
 
-// initialize global variable for prefix
+// Initialize global variable for prefix
 
 var curiePrefix = "rda";
 
-// initialize global variable for published elements array
+// Initialize global variable for published elements array
 
 var publishedElements;
 
@@ -68,68 +71,68 @@ var publishedElements;
 
 if (typeof dataSource !== "undefined") {
   
-  // set filter for data
+  // Filter for vocabulary data
   
   function filterData(obj, index) {
     // filter out vocabulary metata that is always first item in jsonld graph
     return index > 0;
   }
   
-  // set filter for current language code used in published vocabulary entries
+  // Filter for current language code used in published vocabulary entries
   
   function filterLanguageCode(obj) {
     //    return obj.ToolkitLabel[window.languageCodeToCheck] != "undefined";
     var theFilter = false;
-    if (obj["ToolkitLabel"][ "vi"] !== "undefined") {
+    if (obj[ "ToolkitLabel"][ "vi"] !== "undefined") {
       theFilter = true;
     }
     return theFilter;
   }
   
-  // Detail
-  /* Formatting function for row details - modify as you need */
+  // Details display
   
   function format(d) {
+    // Format table for details
     // `d` is the original data object for the row
-    // format note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
+    // Includes note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
     
-    var detailRow = makeDetailRow();
+    var detailRow = formatDetailRow();
     var detailTable = '<table class="pindex_detail">';
     if (typeof d != "undefined") {
       if (typeof d.note != "undefined") {
-        detailRow = makeDetailRow(getValueByLanguage(d.note, theCurrentLanguageCode), "Scope notes", theCurrentLanguageCode);
+        detailRow = formatDetailRow(getValueByLanguage(d.note, theCurrentLanguageCode), "Scope notes", theCurrentLanguageCode);
         detailTable += detailRow;
       }
       if (typeof d.domain != "undefined") {
-        detailRow = makeDetailRow(getLinkIn(d.domain), "Domain");
+        detailRow = formatDetailRow(getLinkIn(d.domain), "Domain");
         detailTable += detailRow;
       }
       if (typeof d.range != "undefined") {
-        detailRow = makeDetailRow(getLinkIn(d.range), "Range");
+        detailRow = formatDetailRow(getLinkIn(d.range), "Range");
         detailTable += detailRow;
       }
       if (typeof d.inverseOf != "undefined") {
-        detailRow = makeDetailRow(getLinkIn(d.inverseOf), "Inverse");
+        detailRow = formatDetailRow(getLinkIn(d.inverseOf), "Inverse");
         detailTable += detailRow;
       }
       if (typeof d.hasSubproperty != "undefined") {
-        detailRow = makeDetailRow(makeDetailArray(d.hasSubproperty, "h"), "Subproperties");
+        detailRow = formatDetailRow(formatMultivalueDetail(d.hasSubproperty, "h"), "Subproperties");
         detailTable += detailRow;
       }
       if (typeof d.subPropertyOf != "undefined") {
-        detailRow = makeDetailRow(makeDetailArray(d.subPropertyOf, "h"), "Superproperties");
+        detailRow = formatDetailRow(formatMultivalueDetail(d.subPropertyOf, "h"), "Superproperties");
         detailTable += detailRow;
       }
       if (typeof d.ToolkitLabel != "undefined") {
-        detailRow = makeDetailRow(getValueByLanguage(d.ToolkitLabel, theCurrentLanguageCode), "Toolkit label", theCurrentLanguageCode);
+        detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel, theCurrentLanguageCode), "Toolkit label", theCurrentLanguageCode);
         detailTable += detailRow;
       }
       if (typeof d.ToolkitDefinition != "undefined") {
-        detailRow = makeDetailRow(getValueByLanguage(d.ToolkitDefinition, theCurrentLanguageCode), "Toolkit definition", theCurrentLanguageCode);
+        detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition, theCurrentLanguageCode), "Toolkit definition", theCurrentLanguageCode);
         detailTable += detailRow;
       }
       if (typeof d.status != "undefined") {
-        detailRow = makeDetailRow(getLinkOut(d.status), "Status");
+        detailRow = formatDetailRow(getLinkOut(d.status), "Status");
         detailTable += detailRow;
       }
     } else {
@@ -139,7 +142,33 @@ if (typeof dataSource !== "undefined") {
     return detailTable;
   }
   
-  function makeDetailArray(arrayRow, vh) {
+  function formatDetailRow(rowValue, rowLabel, languageCode) {
+    // returns a two-column table row for the detail display
+    
+    var theDetailRow = "";
+    var theLanguageCode = "";
+    var theRowValue = "";
+    var theRowLabel = "";
+    if (typeof rowValue != "undefined") {
+      theRowValue = rowValue;
+    }
+    if (typeof rowLabel != "undefined") {
+      theRowLabel = rowLabel;
+    }
+    if (typeof languageCode != "undefined") {
+      theLanguageCode = languageCode;
+    }
+    // two columns; value column must have div wrapper
+    
+    if (theRowValue.length > 0) {
+      theDetailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
+    }
+    return theDetailRow;
+  }
+  
+  function formatMultivalueDetail(arrayRow, vh) {
+    // Format multi-value list for detail entry
+    
     var curieLink = "";
     var detailArray = "";
     var label = "";
@@ -173,34 +202,10 @@ if (typeof dataSource !== "undefined") {
     return detailArray;
   }
   
-  function makeDetailRow(rowValue, rowLabel, languageCode) {
-    // returns a two-column table row for the detail display
-    
-    var theDetailRow = "";
-    var theLanguageCode = "";
-    var theRowValue = "";
-    var theRowLabel = "";
-    if (typeof rowValue != "undefined") {
-      theRowValue = rowValue;
-    }
-    if (typeof rowLabel != "undefined") {
-      theRowLabel = rowLabel;
-    }
-    if (typeof languageCode != "undefined") {
-      theLanguageCode = languageCode;
-    }
-    // two columns; value column must have div wrapper
-    
-    if (theRowValue.length > 0) {
-      theDetailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
-    }
-    return theDetailRow;
-  }
-  
-  // Format string
+  // Basic string formatting
   
   function directify(string, languageCode) {
-    // returns a string wrapped in a div with right-to-left attribute for specified languages
+    // returns a string wrapped in a div with right-to-left attribute for specified language code
     
     rtlLangList = "ar, he";
     rtlIndex = -1;
@@ -230,31 +235,34 @@ if (typeof dataSource !== "undefined") {
     return theString;
   }
   
-  function divify(string, className) {
+  function divify(string) {
     // returns a string wrapped in a div
     
-    var theClassName = "";
     var theString = "";
     if (typeof string != "undefined") {
       theString = string;
     }
-    if (typeof className != "undefined") {
-      theClassName = className;
-      theString = '<div class="' + theClassName + '">' + theString + "</div>";
-    } else {
-      theString = "<div>" + theString + "</div>";
-    }
-    return theString;
+    return "<div>" + theString + "</div>";
   }
   
   function quotify(string) {
     // returns a string delimited with quotes
+    
+    var theString = "";
+    if (typeof string != "undefined") {
+      theString = string;
+    }
     
     return '"' + string + '"';
   }
   
   function strongify(string) {
     // returns a string marked as strong
+    
+    var theString = "";
+    if (typeof string != "undefined") {
+      theString = string;
+    }
     
     return '<strong>' + string + '</strong>';
   }
@@ -514,37 +522,37 @@ if (typeof dataSource !== "undefined") {
     return theLink;
   }
   
-  function getListFromArray(propArray, vh) {
-    var theList = "";
-    var label = "";
-    var labelLink = "";
-    var uri = "";
-    var uriLink = "";
-    // indicator for vertical or horizontal uri/label list
-    var theVh = "";
-    if (typeof vh != "undefined") {
-      theVh = vh;
-    }
-    if (propArray instanceof Array) {
-      for (i = 0; i < propArray.length;++ i) {
-        label = getLabel(propArray[i]);
-        uri = getURI(propArray[i]);
-        labelLink = quotify(getLinkInLabel(uri, label));
-        uriLink = linkify(uri, uri, true);
-        switch (theVh) {
-          case "h":
-          theList += divify(uriLink + " [" + labelLink + " (en)]");
-          break;
-          case "v":
-          theList += divify(uriLink) + divify(" [" + labelLink + " (en)]");
-          break;
-          default:
-          theList += divify(uriLink + " [" + labelLink + " (en)]");
-        }
-      }
-    }
-    return theList;
+  /*   function getListFromArray(propArray, vh) {
+  var theList = "";
+  var label = "";
+  var labelLink = "";
+  var uri = "";
+  var uriLink = "";
+  // indicator for vertical or horizontal uri/label list
+  var theVh = "";
+  if (typeof vh != "undefined") {
+  theVh = vh;
   }
+  if (propArray instanceof Array) {
+  for (i = 0; i < propArray.length;++ i) {
+  label = getLabel(propArray[i]);
+  uri = getURI(propArray[i]);
+  labelLink = quotify(getLinkInLabel(uri, label));
+  uriLink = linkify(uri, uri, true);
+  switch (theVh) {
+  case "h":
+  theList += divify(uriLink + " [" + labelLink + " (en)]");
+  break;
+  case "v":
+  theList += divify(uriLink) + divify(" [" + labelLink + " (en)]");
+  break;
+  default:
+  theList += divify(uriLink + " [" + labelLink + " (en)]");
+  }
+  }
+  }
+  return theList;
+  }  */
   
   function getLinkInLabel(uri, label, languageCode) {
     // returns internal link for string label and Registry URL with parameter for selected language
