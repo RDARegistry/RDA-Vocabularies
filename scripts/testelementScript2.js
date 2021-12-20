@@ -81,10 +81,10 @@ if (typeof dataSource !== "undefined") {
   // Filter for current language code used in published vocabulary entries
   
   function filterLanguageCode(obj) {
-  var isUsed = false;
-  if (typeOf obj.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
-    isUsed = true;
-  }
+    var isUsed = false;
+    if (typeOf obj.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
+      isUsed = true;
+    }
     return isUsed;
   }
   
@@ -767,21 +767,21 @@ if (typeof dataSource !== "undefined") {
     // Add event listener for opening and closing details
     dtable.children("tbody").on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');
-//      var t8 = tr.children("td.too-long");
+      //      var t8 = tr.children("td.too-long");
       var row = table.row(tr);
       
       if (row.child.isShown()) {
         // This row is already open - close it
         row.child.hide();
         tr.removeClass('shown');
-/*         t8.trunk8({
-          lines: 2
+        /*         t8.trunk8({
+        lines: 2
         }); */
       } else {
         // Open this row
         row.child(format(row.data())).show();
         tr.addClass('shown');
-//        t8.trunk8('revert');
+        //        t8.trunk8('revert');
       }
     });
     
