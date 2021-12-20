@@ -167,7 +167,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function formatMultivalueDetail(arrayRow, vh) {
-    // Format multi-value list for detail entry
+    // Returns a formatted multi-value list in current language for detail entry
     
     var curieLink = "";
     var detailArray = "";
@@ -183,7 +183,7 @@ if (typeof dataSource !== "undefined") {
     }
     if (arrayRow instanceof Array) {
       for (i = 0; i < arrayRow.length;++ i) {
-        label = getLabel(arrayRow[i]);
+        label = getLabelByLanguage(arrayRow[i], theCurrentLanguageCode);
         uri = getURI(arrayRow[i]);
         labelLink = quotify(getLinkForDetailLabel(uri, label));
         curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
