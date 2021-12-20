@@ -185,7 +185,7 @@ if (typeof dataSource !== "undefined") {
       for (i = 0; i < arrayRow.length;++ i) {
         label = getLabel(arrayRow[i]);
         uri = getURI(arrayRow[i]);
-        labelLink = quotify(getLinkInLabel(uri, label));
+        labelLink = quotify(getLinkForDetailLabel(uri, label));
         curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
         switch (theVh) {
           case "h":
@@ -410,6 +410,26 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
+  function getLink(row, isLinkOut, prefix) {
+    // Returns a hyperlink with label from jsonld row
+    // Link is external, label is curie prefix, if specified
+    
+    var theLabel = "";
+    var theLink = "";
+    var theLinkIsExternal = false;
+    var theURI = getURI(row);
+    if (typeof isLinkOut != "undefined") {
+      theLinkIsExternal = isLinkOut;
+    }
+    if (typeof prefix != "undefined") {
+      theLabel = makeCurieFromURI(theURI, prefix);
+    } else {
+      theLabel = getLabelOrURI(row);
+    }
+    theLink = linkify(theLabel, theURI, theLinkIsExternal);
+    return theLink;
+  }
+  
   function getLanguages(regLanguages) {
     regLanguages.forEach(checkUsed);
     return;
@@ -500,102 +520,11 @@ if (typeof dataSource !== "undefined") {
     return theURI;
   }
   
-  // get links from a jsonld row
-  
-  function getLink(row, isLinkOut, prefix) {
-    // Returns a hyperlink with label
-    var theLabel = "";
-    var theLink = "";
-    var theLinkIsExternal = false;
-    var theURI = getURI(row);
-    if (typeof isLinkOut != "undefined") {
-      theLinkIsExternal = isLinkOut;
-    }
-    if (typeof prefix != "undefined") {
-      theLabel = makeCurieFromURI(theURI, prefix);
-    } else {
-      theLabel = getLabelOrURI(row);
-    }
-    theLink = linkify(theLabel, theURI, theLinkIsExternal);
-    return theLink;
-  }
-  
-  /*   function getLinkIn(row, prefix) {
-  // returns internal link with label (defaulting to URI) or Curie label if prefix is given
-  
-  var theLabel = "";
-  var theLink = "";
-  var theURI = getURI(row);
-  if (typeof prefix != "undefined") {
-  theLabel = makeCurieFromURI(theURI, prefix);
-  } else {
-  theLabel = getLabel(row);
-  }
-  if (theLabel.length == 0) {
-  theLabel = theURI;
-  }
-  theLink = linkify(theLabel, theURI);
-  return theLink;
-  }
-  
-  function getLinkOut(row) {
-  // returns external link with label (defaulting to URI)
-  
-  var theLabel = "";
-  var theLink = "";
-  var theURI = "";
-  if (typeof row[ "label"] != "undefined") {
-  theLabel = row[ "label"];
-  }
-  if (typeof row[ "@id"] != "undefined") {
-  theURI = row[ "@id"];
-  }
-  if (theLabel.length == 0) {
-  theLabel = theURI;
-  }
-  theLink = linkify(theLabel, theURI, true);
-  return theLink;
-  } */
-  
-  /*   function getListFromArray(propArray, vh) {
-  var theList = "";
-  var label = "";
-  var labelLink = "";
-  var uri = "";
-  var uriLink = "";
-  // indicator for vertical or horizontal uri/label list
-  var theVh = "";
-  if (typeof vh != "undefined") {
-  theVh = vh;
-  }
-  if (propArray instanceof Array) {
-  for (i = 0; i < propArray.length;++ i) {
-  label = getLabel(propArray[i]);
-  uri = getURI(propArray[i]);
-  labelLink = quotify(getLinkInLabel(uri, label));
-  uriLink = linkify(uri, uri, true);
-  switch (theVh) {
-  case "h":
-  theList += divify(uriLink + " [" + labelLink + " (en)]");
-  break;
-  case "v":
-  theList += divify(uriLink) + divify(" [" + labelLink + " (en)]");
-  break;
-  default:
-  theList += divify(uriLink + " [" + labelLink + " (en)]");
-  }
-  }
-  }
-  return theList;
-  }  */
-  
-  function getLinkInLabel(uri, label, languageCode) {
-    // returns internal link for string label and Registry URL with parameter for selected language
-    
-    var theLabel = "";
-    
+  function getLinkForDetailLabel(uri, label, languageCode) {
+    // returns internal link for Registry URL with label in selected language
     // language code is omitted to get permalink
     
+    var theLabel = "";
     var theLanguageCode = "";
     var url = "";
     if (typeof label != "undefined") {
@@ -609,7 +538,6 @@ if (typeof dataSource !== "undefined") {
     }
     return linkify(theLabel, url);
   }
-  
   
   function makeColumn(content) {
     // returns column content in a wrapper div with direction parameter
@@ -720,7 +648,7 @@ if (typeof dataSource !== "undefined") {
         "class": 'permalink',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumn(getLinkInLabel(getURI(row), "#"));
+          return makeColumn(getLinkForDetailLabel(getURI(row), "#"));
         }
       }, {
         "class": 'details-control',
