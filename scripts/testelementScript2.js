@@ -269,13 +269,13 @@ if (typeof dataSource !== "undefined") {
   
   // Format links
   
-  function linkify(label, uri, linkOut) {
+  function linkify(label, uri, isLinkOut) {
     // Returns link based on label and URI
     // Internal link uses same browser window; external link uses new browser window
     
-    var isLinkOut = false;
     var theLabel = "";
     var theLink = "";
+    var theLinkIsExternal = false;
     var theURI = "";
     if (typeof label != "undefined") {
       theLabel = label;
@@ -283,10 +283,10 @@ if (typeof dataSource !== "undefined") {
     if (typeof uri != "undefined") {
       theURI = uri;
     }
-    if (typeof linkOut != "undefined") {
-      isLinkOut = linkOut;
+    if (typeof isLinkOut != "undefined") {
+      theLinkIsExternal = isLinkOut;
     }
-    if (isLinkOut) {
+    if (theLinkIsExternal) {
       theLink = '<a href="' + theURI + '" target="_blank">' + theLabel + '</a>';
     } else {
       theLink = '<a href="' + theURI + '">' + theLabel + '</a>';
@@ -350,6 +350,18 @@ if (typeof dataSource !== "undefined") {
     var theLabel = "";
     if (typeof row[ "label"] != "undefined") {
       theLabel = row[ "label"];
+    }
+    return theLabel;
+  }
+  
+  function getLabelOrURI(row) {
+    // Returns a label, or URI if no label, from a jsonld row
+    
+    var theLabel = "";
+    if (typeof row[ "label"] != "undefined") {
+      theLabel = row[ "label"];
+    } else {
+      theLabel = getURI(row);
     }
     return theLabel;
   }
@@ -489,6 +501,24 @@ if (typeof dataSource !== "undefined") {
   }
   
   // get links from a jsonld row
+  
+  function getLink(row, isLinkOut, prefix) {
+    // Returns a hyperlink with label
+    var theLabel = "";
+    var theLink = "";
+    var theLinkIsExternal = false;
+    if (typeof isLinkOut != "undefined") {
+      theLinkIsExternal = isLinkOut;
+    }
+    if (typeof prefix != "undefined") {
+      theLabel = makeCurieFromURI(theURI, prefix);
+    } else {
+      theLabel = getLabelOrURI(row);
+    }
+    theLink = linkify(theLabel, theURI, theLinkIsExternal);
+    return theLink;
+  }
+  
   function getLinkIn(row, prefix) {
     // returns internal link with label (defaulting to URI) or Curie label if prefix is given
     
