@@ -88,6 +88,18 @@ if (typeof dataSource !== "undefined") {
     return isUsed;
   }
   
+  // filter for published status of vocabulary entries
+  
+  function filterPublished(value, index, array) {
+    var isPublished = false;
+    if (index > 0) {
+      if (value[ "status"][ "label"] == "Published") {
+        isPublished = true;
+      }
+    }
+    return isPublished;
+  }
+  
   // Details display
   
   function format(d) {
@@ -528,15 +540,6 @@ if (typeof dataSource !== "undefined") {
     return url;
   }
   
-  function getPublished(value, index, array) {
-    var isPublished = false;
-    if (index > 0) {
-      if (value[ "status"][ "label"] == "Published") {
-        isPublished = true;
-      }
-    }
-    return isPublished;
-  }
   function getLanguageCallout(data) {
     // not currently used: returns the xml language string
     if (typeof data != "undefined") {
@@ -655,7 +658,7 @@ if (typeof dataSource !== "undefined") {
         
         theData = json[ "@graph"];
         theMetadata = theData[0];
-        window.publishedElements = theData.filter(getPublished);
+        window.publishedElements = theData.filter(filterPublished);
         
         // Get the vocabulary title for the Header block
         
