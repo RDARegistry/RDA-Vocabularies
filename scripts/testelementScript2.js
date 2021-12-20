@@ -397,7 +397,7 @@ if (typeof dataSource !== "undefined") {
       
       // available in default language; add qualifier to indicate not available in selected language
       
-      else if (theDefaultLangudageCode.length > 0) {
+      else if (theDefaultLanguageCode.length > 0) {
         if (typeof row[theDefaultLangudageCode] != "undefined") {
           theLabel = theLabels[theDefaultLanguageCode] + " ['" + theDefaultLanguageCode + "'; no '" + theLanguageCode + "']", theDefaultLanguageCode;
         }
