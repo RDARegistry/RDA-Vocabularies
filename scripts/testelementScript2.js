@@ -71,35 +71,6 @@ var publishedElements;
 
 if (typeof dataSource !== "undefined") {
   
-  // Filter for vocabulary data
-  
-  function filterData(obj, index) {
-    // filter out vocabulary metata that is always first item in jsonld graph
-    return index > 0;
-  }
-  
-  // Filter for current language code used in published vocabulary entries
-  
-  function filterLanguageCode(obj) {
-    var isUsed = false;
-    if (typeof obj.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
-      isUsed = true;
-    }
-    return isUsed;
-  }
-  
-  // filter for published status of vocabulary entries
-  
-  function filterPublished(value, index, array) {
-    var isPublished = false;
-    if (index > 0) {
-      if (value[ "status"][ "label"] == "Published") {
-        isPublished = true;
-      }
-    }
-    return isPublished;
-  }
-  
   // Details display
   
   function format(d) {
@@ -551,6 +522,35 @@ if (typeof dataSource !== "undefined") {
       }
     }
     return "@en *";
+  }
+  
+  // Filter for vocabulary data
+  
+  function filterData(obj, index) {
+    // filter out vocabulary metata that is always first item in jsonld graph
+    return index > 0;
+  }
+  
+  // Filter for current language code used in published vocabulary entries
+  
+  function filterLanguageCode(obj) {
+    var isUsed = false;
+    if (typeof obj.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
+      isUsed = true;
+    }
+    return isUsed;
+  }
+  
+  // filter for published status of vocabulary entries
+  
+  function filterPublished(value, index, array) {
+    var isPublished = false;
+    if (index > 0) {
+      if (value[ "status"][ "label"] == "Published") {
+        isPublished = true;
+      }
+    }
+    return isPublished;
   }
   
   // filters
