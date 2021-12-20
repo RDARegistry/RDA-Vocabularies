@@ -507,6 +507,7 @@ if (typeof dataSource !== "undefined") {
     var theLabel = "";
     var theLink = "";
     var theLinkIsExternal = false;
+    var theURI = getURI(row);
     if (typeof isLinkOut != "undefined") {
       theLinkIsExternal = isLinkOut;
     }
