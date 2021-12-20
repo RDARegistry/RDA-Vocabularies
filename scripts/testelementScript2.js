@@ -104,15 +104,15 @@ if (typeof dataSource !== "undefined") {
         detailTable += detailRow;
       }
       if (typeof d.domain != "undefined") {
-        detailRow = formatDetailRow(getLinkIn(d.domain), "Domain");
+        detailRow = formatDetailRow(getLink(d.domain, false), "Domain");
         detailTable += detailRow;
       }
       if (typeof d.range != "undefined") {
-        detailRow = formatDetailRow(getLinkIn(d.range), "Range");
+        detailRow = formatDetailRow(getLink(d.range, false), "Range");
         detailTable += detailRow;
       }
       if (typeof d.inverseOf != "undefined") {
-        detailRow = formatDetailRow(getLinkIn(d.inverseOf), "Inverse");
+        detailRow = formatDetailRow(getLink(d.inverseOf, false), "Inverse");
         detailTable += detailRow;
       }
       if (typeof d.hasSubproperty != "undefined") {
@@ -132,7 +132,7 @@ if (typeof dataSource !== "undefined") {
         detailTable += detailRow;
       }
       if (typeof d.status != "undefined") {
-        detailRow = formatDetailRow(getLinkOut(d.status), "Status");
+        detailRow = formatDetailRow(getLink(d.status, true), "Status");
         detailTable += detailRow;
       }
     } else {
@@ -520,42 +520,42 @@ if (typeof dataSource !== "undefined") {
     return theLink;
   }
   
-  function getLinkIn(row, prefix) {
-    // returns internal link with label (defaulting to URI) or Curie label if prefix is given
-    
-    var theLabel = "";
-    var theLink = "";
-    var theURI = getURI(row);
-    if (typeof prefix != "undefined") {
-      theLabel = makeCurieFromURI(theURI, prefix);
-    } else {
-      theLabel = getLabel(row);
-    }
-    if (theLabel.length == 0) {
-      theLabel = theURI;
-    }
-    theLink = linkify(theLabel, theURI);
-    return theLink;
+  /*   function getLinkIn(row, prefix) {
+  // returns internal link with label (defaulting to URI) or Curie label if prefix is given
+  
+  var theLabel = "";
+  var theLink = "";
+  var theURI = getURI(row);
+  if (typeof prefix != "undefined") {
+  theLabel = makeCurieFromURI(theURI, prefix);
+  } else {
+  theLabel = getLabel(row);
+  }
+  if (theLabel.length == 0) {
+  theLabel = theURI;
+  }
+  theLink = linkify(theLabel, theURI);
+  return theLink;
   }
   
   function getLinkOut(row) {
-    // returns external link with label (defaulting to URI)
-    
-    var theLabel = "";
-    var theLink = "";
-    var theURI = "";
-    if (typeof row[ "label"] != "undefined") {
-      theLabel = row[ "label"];
-    }
-    if (typeof row[ "@id"] != "undefined") {
-      theURI = row[ "@id"];
-    }
-    if (theLabel.length == 0) {
-      theLabel = theURI;
-    }
-    theLink = linkify(theLabel, theURI, true);
-    return theLink;
+  // returns external link with label (defaulting to URI)
+  
+  var theLabel = "";
+  var theLink = "";
+  var theURI = "";
+  if (typeof row[ "label"] != "undefined") {
+  theLabel = row[ "label"];
   }
+  if (typeof row[ "@id"] != "undefined") {
+  theURI = row[ "@id"];
+  }
+  if (theLabel.length == 0) {
+  theLabel = theURI;
+  }
+  theLink = linkify(theLabel, theURI, true);
+  return theLink;
+  } */
   
   /*   function getListFromArray(propArray, vh) {
   var theList = "";
