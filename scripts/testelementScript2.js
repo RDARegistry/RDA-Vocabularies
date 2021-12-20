@@ -82,7 +82,7 @@ if (typeof dataSource !== "undefined") {
   
   function filterLanguageCode(obj) {
     var isUsed = false;
-    if (typeOf obj.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
+    if (typeof obj.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
       isUsed = true;
     }
     return isUsed;
