@@ -730,7 +730,7 @@ if (typeof dataSource !== "undefined") {
         "class": "curie",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(getLinkIn(row, curiePrefix));
+          return makeColumn(getLink(row, false, curiePrefix));
         }
       }, {
         "class": "prefLabel",
@@ -748,7 +748,7 @@ if (typeof dataSource !== "undefined") {
         "class": "status",
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn((getLinkOut(getStatus(row))));
+          return makeColumn((getLink(getStatus(row), true)));
         }
       }],
       "initComplete": function (settings, json) {
