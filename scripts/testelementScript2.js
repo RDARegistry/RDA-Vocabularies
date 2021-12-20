@@ -768,21 +768,21 @@ if (typeof dataSource !== "undefined") {
     // Add event listener for opening and closing details
     dtable.children("tbody").on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');
-      var t8 = tr.children("td.too-long");
+//      var t8 = tr.children("td.too-long");
       var row = table.row(tr);
       
       if (row.child.isShown()) {
         // This row is already open - close it
         row.child.hide();
         tr.removeClass('shown');
-        t8.trunk8({
+/*         t8.trunk8({
           lines: 2
-        });
+        }); */
       } else {
         // Open this row
         row.child(format(row.data())).show();
         tr.addClass('shown');
-        t8.trunk8('revert');
+//        t8.trunk8('revert');
       }
     });
     
