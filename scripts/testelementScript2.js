@@ -167,11 +167,11 @@ if (typeof dataSource !== "undefined") {
   
   function formatMultivalueDetail(arrayRow, vh) {
     // Returns a formatted multi-value list in current language for detail entry
+    // The values are internal Curie links with English label
     
     var curieLink = "";
     var detailArray = "";
     var label = "";
-    var labelLink = "";
     var uri = "";
     
     // indicator for vertical or horizontal uri/label list
@@ -182,19 +182,18 @@ if (typeof dataSource !== "undefined") {
     }
     if (arrayRow instanceof Array) {
       for (i = 0; i < arrayRow.length;++ i) {
-        label = getLabel(arrayRow[i]);
+        label = quotify(getLabel(arrayRow[i]));
         uri = getURI(arrayRow[i]);
-        labelLink = quotify(getLinkForDetailLabel(uri, label));
         curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
         switch (theVh) {
           case "h":
-          detailArray += divify(curieLink + " [" + labelLink + " (en)]");
+          detailArray += divify(curieLink + " [" + label + " (en)]");
           break;
           case "v":
-          detailArray += divify(curieLink) + divify(" [" + labelLink + " (en)]");
+          detailArray += divify(curieLink) + divify(" [" + label + " (en)]");
           break;
           default:
-          detailArray += divify(curieLink + " [" + labelLink + " (en)]");
+          detailArray += divify(curieLink + " [" + label + " (en)]");
         }
       }
     }
