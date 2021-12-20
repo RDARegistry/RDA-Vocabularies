@@ -205,7 +205,7 @@ if (typeof dataSource !== "undefined") {
   // Basic string formatting
   
   function directify(string, languageCode) {
-    // returns a string wrapped in a div with right-to-left attribute for specified language code
+    // Returns a string wrapped in a div with right-to-left attribute for specified language code
     
     rtlLangList = "ar, he";
     rtlIndex = -1;
@@ -236,7 +236,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function divify(string) {
-    // returns a string wrapped in a div
+    // Returns a string wrapped in a div
     
     var theString = "";
     if (typeof string != "undefined") {
@@ -246,7 +246,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function quotify(string) {
-    // returns a string delimited with quotes
+    // Returns a string delimited with quotes
     
     var theString = "";
     if (typeof string != "undefined") {
@@ -257,7 +257,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function strongify(string) {
-    // returns a string marked as strong
+    // Returns a string marked as strong
     
     var theString = "";
     if (typeof string != "undefined") {
@@ -267,10 +267,12 @@ if (typeof dataSource !== "undefined") {
     return '<strong>' + string + '</strong>';
   }
   
-  // format links
-  // returns formatted link
+  // Format links
   
   function linkify(label, uri, linkOut) {
+    // Returns link based on label and URI
+    // Internal link uses same browser window; external link uses new browser window
+    
     var isLinkOut = false;
     var theLabel = "";
     var theLink = "";
@@ -293,7 +295,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function makeCurieFromURI(uri, prefix) {
-    // returns a curie
+    // Returns a curie
     
     var theCurie = "";
     var thePrefix = "";
@@ -304,24 +306,26 @@ if (typeof dataSource !== "undefined") {
     if (typeof uri != "undefined") {
       theURI = uri;
     }
+    // check and set curie prefix for datatype and object children
+    
     if (theURI.indexOf("datatype") > 0) {
       thePrefix += "d";
     }
     if (theURI.indexOf("object") > 0) {
       thePrefix += "o";
     }
+    // replace URI up to last sub-folder slash with prefix and colon
     if (theURI !== null && typeof theURI.replace === "function") {
-      // replace everything up to last sub-folder slash with prefix and colon
-      
       theCurie = thePrefix + ":" + theURI.substr(1 + theURI.lastIndexOf("/"));
     }
     return theCurie;
   }
   
-  // get strings from jsonld
+  // Get data from jsonld
   
   function getCuriePrefix(vocGraph) {
-    // sets the vocabulary prefix from jsonld data
+    // Sets the vocabulary prefix from jsonld metadata
+    // Metadata is always the first entry
     
     var theVocMetadata = vocGraph[0]
     if (typeof theVocMetadata.prefix != "undefined") {
@@ -331,7 +335,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getDefinition(row) {
-    // returns a definition from a jsonld row
+    // Returns a definition from a jsonld row
     
     var theDefinition = "";
     if (typeof row[ "definition"] != "undefined") {
@@ -341,7 +345,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getLabel(row) {
-    // returns a label from a jsonld row
+    // Returns a label from a jsonld row
     
     var theLabel = "";
     if (typeof row[ "label"] != "undefined") {
@@ -351,7 +355,7 @@ if (typeof dataSource !== "undefined") {
   }
   
   function getLabelByLanguage(row, languageCode, defaultLangCode) {
-    // returns a label in a specified language from a jsonld row
+    // Returns a label in a specified language from a jsonld row
     
     var theLabel = "";
     var theLabels = "";
