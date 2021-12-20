@@ -182,7 +182,7 @@ if (typeof dataSource !== "undefined") {
     }
     if (arrayRow instanceof Array) {
       for (i = 0; i < arrayRow.length;++ i) {
-        label = getLabelByLanguage(arrayRow[i], theCurrentLanguageCode);
+        label = getLabel(arrayRow[i]);
         uri = getURI(arrayRow[i]);
         labelLink = quotify(getLinkForDetailLabel(uri, label));
         curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
@@ -361,50 +361,6 @@ if (typeof dataSource !== "undefined") {
       theLabel = row[ "label"];
     } else {
       theLabel = getURI(row);
-    }
-    return theLabel;
-  }
-  
-  function getLabelByLanguage(row, languageCode, defaultLanguageCode) {
-    // Returns a label in a specified language from a jsonld row
-    
-    var theLabel = "";
-    var theLabels = "";
-    
-    // default language is English
-    
-    var theLanguageCode = "en";
-    
-    // default default language can only be English
-    // [not enabled until translation processes in place]
-    
-    var theDefaultLanguageCode = "";
-    if (typeof defaultLanguageCode != "undefined") {
-      theDefaultLanguageCode = defaultLanguageCode;
-    }
-    if (typeof languageCode != "undefined") {
-      theLanguageCode = languageCode;
-    }
-    if (typeof row[ "label"] != "undefined") {
-      theLabels = row[ "label"];
-      
-      // available in selected language
-      
-      if (typeof theLabels[theLanguageCode] != "undefined") {
-        theLabel = theLabels[theLanguageCode];
-      }
-      
-      // available in default language; add qualifier to indicate not available in selected language
-      
-      else if (theDefaultLanguageCode.length > 0) {
-        if (typeof row[theDefaultLangudageCode] != "undefined") {
-          theLabel = theLabels[theDefaultLanguageCode] + " ['" + theDefaultLanguageCode + "'; no '" + theLanguageCode + "']", theDefaultLanguageCode;
-        }
-      }
-      // not available in selected or default language; output indicates the languages
-      //            else if (theData instanceof Object) {
-      //                theString = directify("[no '" + theLanguageCode + "' or '" + theDefaultLanguagCode + "']", theDefaultLanguageCode);
-      //            }
     }
     return theLabel;
   }
