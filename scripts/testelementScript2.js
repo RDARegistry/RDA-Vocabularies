@@ -82,8 +82,6 @@ if (typeof dataSource !== "undefined") {
   
   function filterLanguageCode(obj) {
     return typeOf obj.ToolkitLabel[window.languageCodeToCheck] != "undefined";
-    var theFilter = false;
-    return theFilter;
   }
   
   // Details display
