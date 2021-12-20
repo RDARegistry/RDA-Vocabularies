@@ -366,7 +366,7 @@ if (typeof dataSource !== "undefined") {
     return theLabel;
   }
   
-  function getLabelByLanguage(row, languageCode, defaultLangCode) {
+  function getLabelByLanguage(row, languageCode, defaultLanguageCode) {
     // Returns a label in a specified language from a jsonld row
     
     var theLabel = "";
