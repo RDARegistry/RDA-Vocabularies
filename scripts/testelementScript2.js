@@ -414,13 +414,21 @@ if (typeof dataSource !== "undefined") {
   
   // Details display
   
-  function format(d) {
+  function formatDetail(d) {
     // Format table for details
     // `d` is the original data object for the row
     // Includes note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
     
+    // Initialize detail table header row as two columns
+    
     var detailRow = formatDetailRow();
+    
+    // Initialize detail table
+    
     var detailTable = '<table class="pindex_detail">';
+    
+    // Assemble rows for specified fields
+    
     if (typeof d != "undefined") {
       if (typeof d.note != "undefined") {
         detailRow = formatDetailRow(getValueByLanguage(d.note, theCurrentLanguageCode), "Scope notes", theCurrentLanguageCode);
@@ -461,6 +469,9 @@ if (typeof dataSource !== "undefined") {
     } else {
       detailTable += detailRow;
     }
+    
+    // Finalize detail table
+    
     detailTable += '</table>';
     return detailTable;
   }
@@ -672,10 +683,10 @@ if (typeof dataSource !== "undefined") {
   
   $(document).ready(
   function () {
-    var dtable = $("#pindex");
+    var pageTable = $("#pindex");
     var vocMetadata;
     var t8lines = 2;
-    var table = dtable.DataTable({
+    var table = pageTable.DataTable({
       "ajax": {
         url: dataSource,
         //        dataType: 'json',
@@ -738,7 +749,10 @@ if (typeof dataSource !== "undefined") {
     });
     
     // Add event listener for opening and closing details
-    dtable.children("tbody").on('click', 'td.details-control', function () {
+    
+    pageTable.children("tbody").on('click', 'td.details-control', function () {
+    
+    // Get row containing the cell
       var tr = $(this).closest('tr');
       //      var t8 = tr.children("td.too-long");
       var row = table.row(tr);
@@ -752,7 +766,7 @@ if (typeof dataSource !== "undefined") {
         }); */
       } else {
         // Open this row
-        row.child(format(row.data())).show();
+        row.child(formatDetail(row.data())).show();
         tr.addClass('shown');
         //        t8.trunk8('revert');
       }
@@ -783,8 +797,8 @@ if (typeof dataSource !== "undefined") {
         initFilter = null;
         var tr = $("#" + initFilter).closest('tr');
         var row = table.row(tr);
-        if (typeof row.child(format(row.data())) != "undefined") {
-          row.child(format(row.data())).hide();
+        if (typeof row.child(formatDetail(row.data())) != "undefined") {
+          row.child(formatDetail(row.data())).hide();
           tr.removeClass('shown');
         }
         if (history.pushState) {
