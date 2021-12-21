@@ -104,14 +104,20 @@ if (typeof dataSource !== "undefined") {
     return theString;
   }
   
-  function divify(string) {
-    // Returns a string wrapped in a div
+  function divify(string, className) {
+    // Returns a string wrapped in a div with optional class name
     
+    var theClassName = "";
     var theString = "";
     if (typeof string != "undefined") {
       theString = string;
     }
-    return "<div>" + theString + "</div>";
+    if (typeof className != "undefined") {
+      theString = '<div class="' + className + '">' + theString + '</div>';
+    } else {
+      theString = '<div>' + theString + '</div>';
+    }
+    return theString;
   }
   
   function quotify(string) {
@@ -492,10 +498,10 @@ if (typeof dataSource !== "undefined") {
     if (typeof languageCode != "undefined") {
       theLanguageCode = languageCode;
     }
-    // two columns; value column must have div wrapper
+    // two columns; both columns have div wrapper for styling
     
     if (theRowValue.length > 0) {
-      theDetailRow = '<tr>' + '<td class="detailLabel">' + theRowLabel + ':' + '</td>' + '<td class="detailValue">' + divify(theRowValue) + '</td>' + '</tr>';
+      theDetailRow = '<tr>' + '<td>' + divify(theRowLabel, "detailLabel") + ':' + '</td>' + '<td>' + divify(theRowValue, "detailValue") + '</td>' + '</tr>';
     }
     return theDetailRow;
   }
@@ -751,8 +757,8 @@ if (typeof dataSource !== "undefined") {
     // Add event listener for opening and closing details
     
     pageTable.children("tbody").on('click', 'td.details-control', function () {
-    
-    // Get row containing the cell
+      
+      // Get row containing the cell
       var tr = $(this).closest('tr');
       //      var t8 = tr.children("td.too-long");
       var row = table.row(tr);
