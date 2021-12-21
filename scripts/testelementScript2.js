@@ -714,8 +714,7 @@ if (typeof dataSource !== "undefined") {
       }, {
         "class": 'details-control',
         "data": null,
-        "defaultContent": '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"
-                      > </i></button>',
+        "defaultContent": '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>',
         "orderable": false
       }, {
         "class": "curie",
