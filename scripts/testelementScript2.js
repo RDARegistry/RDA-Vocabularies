@@ -762,7 +762,7 @@ if (typeof dataSource !== "undefined") {
       // Get row containing the cell
       var tr = $(this).closest('tr');
       var row = table.row(tr);
-      var cell = table.cell(this);
+      var cell = table.cell(this).node;
       if (row.child.isShown()) {
         // This row is already open - close it
         row.child.hide();
@@ -771,9 +771,7 @@ if (typeof dataSource !== "undefined") {
         // Open this row
         row.child(formatDetail(row.data())).show();
         //        tr.addClass('shown');
-        cell.data('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>').draw();
-        
-        // row.td.details-control.data = '<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>';
+        cell.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
       }
     });
     
