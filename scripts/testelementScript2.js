@@ -606,7 +606,7 @@ if (typeof dataSource !== "undefined") {
     // Get the vocabulary languages display list
     
     getLanguages(regLanguages);
-    
+       
     // Push to block values to the page
     
     document.getElementById("vocTitle").innerHTML = theVocTitle;
@@ -624,6 +624,7 @@ if (typeof dataSource !== "undefined") {
     document.getElementById("linkJSONLD").href = theLinkJSONLD;
     document.getElementById("linkNT").href = theLinkNT;
     document.getElementById("linkXML").href = theLinkXML;
+    document.getElementById("rightsStatement").innerHTML = theMetadata.rights[ "en"];
     document.getElementById("indexTitle").innerHTML = theTableTitle;
   }
   
