@@ -721,7 +721,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("linkJSONLD").href = theLinkJSONLD;
         document.getElementById("linkNT").href = theLinkNT;
         document.getElementById("linkXML").href = theLinkXML;
-        document.getElementById("tableTitle").href = theTableTitle;
+        document.getElementById("indexTitle").innerHTML = theTableTitle;
         
         // set language indicator style; border colour indicates on/selected
         
