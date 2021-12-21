@@ -608,12 +608,6 @@ if (typeof dataSource !== "undefined") {
     document.getElementById("linkNT").href = theLinkNT;
     document.getElementById("linkXML").href = theLinkXML;
     document.getElementById("indexTitle").innerHTML = theTableTitle;
-    
-    // set language indicator style; border colour indicates on/selected
-    
-    $("#lang_" + theCurrentLanguageCode).css({
-      "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
-    });
   }
   
   
@@ -732,6 +726,11 @@ if (typeof dataSource !== "undefined") {
       }],
       "initComplete": function (settings, json) {
         setPageDetails(json);
+        // set language indicator style; border colour indicates on/selected
+        
+        $("#lang_" + theCurrentLanguageCode).css({
+          "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
+        });
       },
       /*          var theData;
       var theMetadata;
@@ -818,11 +817,6 @@ if (typeof dataSource !== "undefined") {
       document.getElementById("linkXML").href = theLinkXML;
       document.getElementById("indexTitle").innerHTML = theTableTitle;
       
-      // set language indicator style; border colour indicates on/selected
-      
-      $("#lang_" + theCurrentLanguageCode).css({
-      "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
-      });
       }, */
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
