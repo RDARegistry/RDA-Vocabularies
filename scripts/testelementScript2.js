@@ -71,118 +71,6 @@ var publishedElements;
 
 if (typeof dataSource !== "undefined") {
   
-  // Details display
-  
-  function format(d) {
-    // Format table for details
-    // `d` is the original data object for the row
-    // Includes note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
-    
-    var detailRow = formatDetailRow();
-    var detailTable = '<table class="pindex_detail">';
-    if (typeof d != "undefined") {
-      if (typeof d.note != "undefined") {
-        detailRow = formatDetailRow(getValueByLanguage(d.note, theCurrentLanguageCode), "Scope notes", theCurrentLanguageCode);
-        detailTable += detailRow;
-      }
-      if (typeof d.domain != "undefined") {
-        detailRow = formatDetailRow(getLink(d.domain, false), "Domain");
-        detailTable += detailRow;
-      }
-      if (typeof d.range != "undefined") {
-        detailRow = formatDetailRow(getLink(d.range, false), "Range");
-        detailTable += detailRow;
-      }
-      if (typeof d.inverseOf != "undefined") {
-        detailRow = formatDetailRow(getLink(d.inverseOf, false), "Inverse");
-        detailTable += detailRow;
-      }
-      if (typeof d.hasSubproperty != "undefined") {
-        detailRow = formatDetailRow(formatMultivalueDetail(d.hasSubproperty, "h"), "Subproperties");
-        detailTable += detailRow;
-      }
-      if (typeof d.subPropertyOf != "undefined") {
-        detailRow = formatDetailRow(formatMultivalueDetail(d.subPropertyOf, "h"), "Superproperties");
-        detailTable += detailRow;
-      }
-      if (typeof d.ToolkitLabel != "undefined") {
-        detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel, theCurrentLanguageCode), "Toolkit label", theCurrentLanguageCode);
-        detailTable += detailRow;
-      }
-      if (typeof d.ToolkitDefinition != "undefined") {
-        detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition, theCurrentLanguageCode), "Toolkit definition", theCurrentLanguageCode);
-        detailTable += detailRow;
-      }
-      if (typeof d.status != "undefined") {
-        detailRow = formatDetailRow(getLink(d.status, true), "Status");
-        detailTable += detailRow;
-      }
-    } else {
-      detailTable += detailRow;
-    }
-    detailTable += '</table>';
-    return detailTable;
-  }
-  
-  function formatDetailRow(rowValue, rowLabel, languageCode) {
-    // returns a two-column table row for the detail display
-    
-    var theDetailRow = "";
-    var theLanguageCode = "";
-    var theRowValue = "";
-    var theRowLabel = "";
-    if (typeof rowValue != "undefined") {
-      theRowValue = rowValue;
-    }
-    if (typeof rowLabel != "undefined") {
-      theRowLabel = rowLabel;
-    }
-    if (typeof languageCode != "undefined") {
-      theLanguageCode = languageCode;
-    }
-    // two columns; value column must have div wrapper
-    
-    if (theRowValue.length > 0) {
-      theDetailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
-    }
-    return theDetailRow;
-  }
-  
-  function formatMultivalueDetail(arrayRow, vh) {
-    // Returns a formatted multi-value list in current language for detail entry
-    // The values are internal Curie links with English label
-    
-    var curieLink = "";
-    var detailArray = "";
-    var label = "";
-    var uri = "";
-    
-    // indicator for vertical or horizontal uri/label list
-    
-    var theVh = "";
-    if (typeof vh != "undefined") {
-      theVh = vh;
-    }
-    if (arrayRow instanceof Array) {
-      for (i = 0; i < arrayRow.length;++ i) {
-        label = quotify(getLabel(arrayRow[i]));
-        uri = getURI(arrayRow[i]);
-        curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
-        switch (theVh) {
-          case "h":
-          detailArray += divify(curieLink + " [" + label + " (en)]");
-          break;
-          case "v":
-          detailArray += divify(curieLink) + divify(" [" + label + " (en)]");
-          break;
-          default:
-          detailArray += divify(curieLink + " [" + label + " (en)]");
-        }
-      }
-    }
-    return detailArray;
-  }
-  
   // Basic string formatting
   
   function directify(string, languageCode) {
@@ -522,6 +410,118 @@ if (typeof dataSource !== "undefined") {
       }
     }
     return "@en *";
+  }
+  
+  // Details display
+  
+  function format(d) {
+    // Format table for details
+    // `d` is the original data object for the row
+    // Includes note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
+    
+    var detailRow = formatDetailRow();
+    var detailTable = '<table class="pindex_detail">';
+    if (typeof d != "undefined") {
+      if (typeof d.note != "undefined") {
+        detailRow = formatDetailRow(getValueByLanguage(d.note, theCurrentLanguageCode), "Scope notes", theCurrentLanguageCode);
+        detailTable += detailRow;
+      }
+      if (typeof d.domain != "undefined") {
+        detailRow = formatDetailRow(getLink(d.domain, false), "Domain");
+        detailTable += detailRow;
+      }
+      if (typeof d.range != "undefined") {
+        detailRow = formatDetailRow(getLink(d.range, false), "Range");
+        detailTable += detailRow;
+      }
+      if (typeof d.inverseOf != "undefined") {
+        detailRow = formatDetailRow(getLink(d.inverseOf, false), "Inverse");
+        detailTable += detailRow;
+      }
+      if (typeof d.hasSubproperty != "undefined") {
+        detailRow = formatDetailRow(formatMultivalueDetail(d.hasSubproperty, "h"), "Subproperties");
+        detailTable += detailRow;
+      }
+      if (typeof d.subPropertyOf != "undefined") {
+        detailRow = formatDetailRow(formatMultivalueDetail(d.subPropertyOf, "h"), "Superproperties");
+        detailTable += detailRow;
+      }
+      if (typeof d.ToolkitLabel != "undefined") {
+        detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel, theCurrentLanguageCode), "Toolkit label", theCurrentLanguageCode);
+        detailTable += detailRow;
+      }
+      if (typeof d.ToolkitDefinition != "undefined") {
+        detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition, theCurrentLanguageCode), "Toolkit definition", theCurrentLanguageCode);
+        detailTable += detailRow;
+      }
+      if (typeof d.status != "undefined") {
+        detailRow = formatDetailRow(getLink(d.status, true), "Status");
+        detailTable += detailRow;
+      }
+    } else {
+      detailTable += detailRow;
+    }
+    detailTable += '</table>';
+    return detailTable;
+  }
+  
+  function formatDetailRow(rowValue, rowLabel, languageCode) {
+    // returns a two-column table row for the detail display
+    
+    var theDetailRow = "";
+    var theLanguageCode = "";
+    var theRowValue = "";
+    var theRowLabel = "";
+    if (typeof rowValue != "undefined") {
+      theRowValue = rowValue;
+    }
+    if (typeof rowLabel != "undefined") {
+      theRowLabel = rowLabel;
+    }
+    if (typeof languageCode != "undefined") {
+      theLanguageCode = languageCode;
+    }
+    // two columns; value column must have div wrapper
+    
+    if (theRowValue.length > 0) {
+      theDetailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
+    }
+    return theDetailRow;
+  }
+  
+  function formatMultivalueDetail(arrayRow, vh) {
+    // Returns a formatted multi-value list in current language for detail entry
+    // The values are internal Curie links with English label
+    
+    var curieLink = "";
+    var detailArray = "";
+    var label = "";
+    var uri = "";
+    
+    // indicator for vertical or horizontal uri/label list
+    
+    var theVh = "";
+    if (typeof vh != "undefined") {
+      theVh = vh;
+    }
+    if (arrayRow instanceof Array) {
+      for (i = 0; i < arrayRow.length;++ i) {
+        label = quotify(getLabel(arrayRow[i]));
+        uri = getURI(arrayRow[i]);
+        curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
+        switch (theVh) {
+          case "h":
+          detailArray += divify(curieLink + " [" + label + " (en)]");
+          break;
+          case "v":
+          detailArray += divify(curieLink) + divify(" [" + label + " (en)]");
+          break;
+          default:
+          detailArray += divify(curieLink + " [" + label + " (en)]");
+        }
+      }
+    }
+    return detailArray;
   }
   
   // Filter for vocabulary data
