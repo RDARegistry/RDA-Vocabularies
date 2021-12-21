@@ -771,7 +771,7 @@ if (typeof dataSource !== "undefined") {
         // Open this row
         row.child(formatDetail(row.data())).show();
         //        tr.addClass('shown');
-        row.td.details-control = '<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>';
+        row.td.details-control.data = '<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>';
       }
     });
     
