@@ -606,7 +606,7 @@ if (typeof dataSource !== "undefined") {
     // Get the vocabulary languages display list
     
     getLanguages(regLanguages);
-       
+    
     // Push to block values to the page
     
     document.getElementById("vocTitle").innerHTML = theVocTitle;
@@ -761,21 +761,17 @@ if (typeof dataSource !== "undefined") {
       
       // Get row containing the cell
       var tr = $(this).closest('tr');
-      //      var t8 = tr.children("td.too-long");
       var row = table.row(tr);
       
       if (row.child.isShown()) {
         // This row is already open - close it
         row.child.hide();
-        tr.removeClass('shown');
-        /*         t8.trunk8({
-        lines: 2
-        }); */
+        //        tr.removeClass('shown');
       } else {
         // Open this row
         row.child(formatDetail(row.data())).show();
-        tr.addClass('shown');
-        //        t8.trunk8('revert');
+        //        tr.addClass('shown');
+        row.td.details-control = '<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>';
       }
     });
     
