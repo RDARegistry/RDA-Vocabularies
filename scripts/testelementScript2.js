@@ -645,6 +645,7 @@ if (typeof dataSource !== "undefined") {
         var theLinkJSONLD = "";
         var theLinkNT = "";
         var theLinkXML = "";
+        var theTableTitle = "";
         var theVersionLink = "";
         var theVocCurieEx = "";
         var theVocDomain = "";
@@ -663,6 +664,17 @@ if (typeof dataSource !== "undefined") {
         // Get the vocabulary title for the Header block
         
         theVocTitle = theMetadata.title[ "en"];
+        
+        // Set the table title from the vocabulary title
+        // Warning! This is dependent on content of jsonld metadata
+        
+        if (theVocTitle.indexOf("Classes") > -1) {
+          theTableTitle = "Classes";
+        }
+        else if (theVocTitle.indexOf("Properties") > -1) {
+          theTableTitle = "Properties";
+        }
+        theTableTitle += " Index";
         
         // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
         
@@ -709,6 +721,7 @@ if (typeof dataSource !== "undefined") {
         document.getElementById("linkJSONLD").href = theLinkJSONLD;
         document.getElementById("linkNT").href = theLinkNT;
         document.getElementById("linkXML").href = theLinkXML;
+        document.getElementById("tableTitle").href = theTableTitle;
         
         // set language indicator style; border colour indicates on/selected
         
