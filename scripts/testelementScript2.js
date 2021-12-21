@@ -614,7 +614,7 @@ if (typeof dataSource !== "undefined") {
     $("#lang_" + theCurrentLanguageCode).css({
       "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
     });
-  },
+  }
   
   
   // Filter for vocabulary data
