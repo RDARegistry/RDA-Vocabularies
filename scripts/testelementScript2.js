@@ -666,12 +666,12 @@ if (typeof dataSource !== "undefined") {
         theVocTitle = theMetadata.title[ "en"];
         
         // Set the table title from the vocabulary title
-        // Warning! This is dependent on content of jsonld metadata
+        // Warning! This is dependent on consistent use of vocabulary titles in jsonld metadata
         
         if (theVocTitle.indexOf("Classes") > -1) {
           theTableTitle = "Classes";
         }
-        else if (theVocTitle.indexOf("Properties") > -1) {
+        else if (theVocTitle.indexOf("properties") > -1) {
           theTableTitle = "Properties";
         }
         theTableTitle += " Index";
