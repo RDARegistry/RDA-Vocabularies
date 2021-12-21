@@ -493,7 +493,7 @@ if (typeof dataSource !== "undefined") {
       theRowValue = rowValue;
     }
     if (typeof rowLabel != "undefined") {
-      theRowLabel = rowLabel;
+      theRowLabel = rowLabel + ":";
     }
     if (typeof languageCode != "undefined") {
       theLanguageCode = languageCode;
@@ -501,7 +501,7 @@ if (typeof dataSource !== "undefined") {
     // two columns; both columns have div wrapper for styling
     
     if (theRowValue.length > 0) {
-      theDetailRow = '<tr>' + '<td>' + divify(theRowLabel, "detailLabel") + ':' + '</td>' + '<td>' + divify(theRowValue, "detailValue") + '</td>' + '</tr>';
+      theDetailRow = '<tr>' + '<td>' + divify(theRowLabel, "detailLabel") + '</td>' + '<td>' + divify(theRowValue, "detailValue") + '</td>' + '</tr>';
     }
     return theDetailRow;
   }
