@@ -501,7 +501,7 @@ if (typeof dataSource !== "undefined") {
     // two columns; both columns have div wrapper for styling
     
     if (theRowValue.length > 0) {
-      theDetailRow = '<tr>' + '<td>' + divify(theRowLabel, "detailLabel") + '</td>' + '<td>' + divify(theRowValue, "detailValue") + '</td>' + '</tr>';
+      theDetailRow = '<tr>' + '<td class="detailLabel">' + divify(theRowLabel) + '</td>' + '<td class="detailValue">' + divify(theRowValue) + '</td>' + '</tr>';
     }
     return theDetailRow;
   }
