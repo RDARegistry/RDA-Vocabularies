@@ -771,7 +771,7 @@ if (typeof dataSource !== "undefined") {
         // Open this row
         row.child(formatDetail(row.data())).show();
         //        tr.addClass('shown');
-        cell.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
+        $(cell.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>'));
       }
     });
     
