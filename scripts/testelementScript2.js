@@ -610,7 +610,6 @@ if (typeof dataSource !== "undefined") {
     document.getElementById("indexTitle").innerHTML = theTableTitle;
   }
   
-  
   // Filter for vocabulary data
   
   function filterData(obj, index) {
@@ -732,92 +731,6 @@ if (typeof dataSource !== "undefined") {
           "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
         });
       },
-      /*          var theData;
-      var theMetadata;
-      var theCurieExURI = "";
-      var theLinkCSV = "";
-      var theLinkJSONLD = "";
-      var theLinkNT = "";
-      var theLinkXML = "";
-      var theTableTitle = "";
-      var theVersionLink = "";
-      var theVocCurieEx = "";
-      var theVocDomain = "";
-      var theVocEntriesTotal = 0;
-      var theVocTitle = "";
-      var theVocToDatatype = "";
-      var theVocToObject = "";
-      var theVocURI = "";
-      
-      // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
-      
-      theData = json[ "@graph"];
-      theMetadata = theData[0];
-      window.publishedElements = theData.filter(filterPublished);
-      
-      // Get the vocabulary title for the Header block
-      
-      theVocTitle = theMetadata.title[ "en"];
-      
-      // Set the table title from the vocabulary title
-      // Warning! This is dependent on consistent use of vocabulary titles in jsonld metadata
-      
-      if (theVocTitle.indexOf("Classes") > -1) {
-      theTableTitle = "Classes";
-      }
-      else if (theVocTitle.indexOf("properties") > -1) {
-      theTableTitle = "Properties";
-      }
-      theTableTitle += " Index";
-      
-      // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
-      
-      theVocEntriesTotal = window.publishedElements.length;
-      theVocURI = theMetadata[ "@id"];
-      theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theMetadata.versionInfo + '">' + theMetadata.versionInfo + '</a>';
-      
-      // Example curie is first published element in data and may not be the lowest in curie order
-      
-      theCurieExURI = getURI(window.publishedElements[0]);
-      theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
-      
-      // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
-      
-      theVocDomain = theVocTitle.replace(" properties", "");
-      theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
-      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-      
-      // Set the file links for the Downloads block
-      
-      theLinkCSV = baseDomain + "csv/Elements/" + curiePrefix + ".csv";
-      theLinkJSONLD = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
-      theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
-      theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
-      
-      // Get the vocabulary languages display list
-      
-      getLanguages(regLanguages);
-      
-      // Push to block values to the page
-      
-      document.getElementById("vocTitle").innerHTML = theVocTitle;
-      document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
-      document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
-      document.getElementById("vocURI").innerHTML = theVocURI;
-      document.getElementById("vocPrefix").innerHTML = curiePrefix;
-      document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
-      document.getElementById("vocVersion").innerHTML = theVersionLink;
-      document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
-      document.getElementById("vocDomain").innerHTML = theVocDomain;
-      document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
-      document.getElementById("vocToObject").innerHTML = theVocToObject;
-      document.getElementById("linkCSV").href = theLinkCSV;
-      document.getElementById("linkJSONLD").href = theLinkJSONLD;
-      document.getElementById("linkNT").href = theLinkNT;
-      document.getElementById("linkXML").href = theLinkXML;
-      document.getElementById("indexTitle").innerHTML = theTableTitle;
-      
-      }, */
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       //      "responsive": true,
