@@ -495,7 +495,7 @@ if (typeof dataSource !== "undefined") {
     // two columns; value column must have div wrapper
     
     if (theRowValue.length > 0) {
-      theDetailRow = '<tr>' + '<td>' + theRowLabel + ':' + '</td>' + '<td>' + divify(theRowValue) + '</td>' + '</tr>';
+      theDetailRow = '<tr>' + '<td class="detailLabel">' + theRowLabel + ':' + '</td>' + '<td class="detailValue">' + divify(theRowValue) + '</td>' + '</tr>';
     }
     return theDetailRow;
   }
