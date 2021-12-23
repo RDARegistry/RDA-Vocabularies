@@ -233,12 +233,12 @@ if (typeof dataSource !== "undefined") {
     // Returns a label from a jsonld row
     
     var theLabel = "";
-    /*    if (theVocType == "Ontology" && typeof row[ "label"] != "undefined") {
-    theLabel = row[ "label"];
+    if (theVocType == "Ontology" && typeof row[ "label"] != "undefined") {
+      theLabel = row[ "label"];
     } else if (theVocType == "ConceptScheme" && typeof row[ "prefLabel"] != "undefined") {
-    theLabel = row[ "prefLabel"];
-    } */
-    theLabel = row[ "label"];
+      theLabel = row[ "prefLabel"];
+    }
+    //    theLabel = row[ "label"];
     return theLabel;
   }
   
