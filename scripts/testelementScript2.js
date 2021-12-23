@@ -640,9 +640,9 @@ if (typeof dataSource !== "undefined") {
     // Set the file links for the Downloads block
     
     theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
-    theLinkJSONLD = baseDomain + 'jsonld' + filepathPart + '/' + filenameLocal + ".jsonld";
+    theLinkJSONLD = baseDomain + 'jsonld/' + filepathPart + '/' + filenameLocal + ".jsonld";
     theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
-    theLinkXML = baseDomain + 'xml' + filepathPart + '/' + filenameLocal + '.xml';
+    theLinkXML = baseDomain + 'xml/' + filepathPart + '/' + filenameLocal + '.xml';
     
     // Get the vocabulary languages display list
     
