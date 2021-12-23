@@ -747,9 +747,15 @@ if (typeof dataSource !== "undefined") {
   function setSearch(filter) {
     // draws the data table with the filter
     
+    var tablePage;
     var table = $("table#pindex").DataTable();
     table.search('').column(2).search(filter).draw();
     
+    tablePage = table.pageInfo();
+    if (tablePage.length == 1) {
+      
+      $("#pindex").children("tbody").td.details - control.click();
+    }
     // Put the filter in the search box
     
     $('input[type=search]').val(filter);
