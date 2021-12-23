@@ -544,6 +544,7 @@ if (typeof dataSource !== "undefined") {
   function setPageDetails(json) {
     var filenameLocal = "";
     var filepathPart = "";
+    var hasSemanticBlock = false;
     var theData;
     var theMetadata;
     var theCurieExURI = "";
@@ -569,14 +570,9 @@ if (typeof dataSource !== "undefined") {
     theMetadata = theData[0];
     window.publishedElements = theData.filter(filterPublished);
     
-    // Get the vocabulary type for the Header block
+    // Get the vocabulary type ("Ontology" or "ConceptScheme" for the Header block
     
     theVocType = theMetadata[ "@type"];
-    if (theVocType == "Ontology") {
-      theVocTypeLink = '<a href="/Elements/">RDA element sets</a>';
-    } else if (theVocType == "ConceptScheme") {
-      theVocTypeLink = '<a href="/termList/">RDA value vocabularies</a>';
-    }
     
     // Get the vocabulary title for the Header block
     
@@ -603,21 +599,26 @@ if (typeof dataSource !== "undefined") {
     theCurieExURI = getURI(window.publishedElements[0]);
     theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
     
-    // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
-    
-    theVocDomain = theVocTitle.replace(" properties", "");
-    theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
-    theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-    
     // Set the file links for the Downloads block
+    // Element sets and value vocabularies have different filepath constructors
     
     if (theVocType == "Ontology") {
       filenameLocal = curiePrefix.slice(-1);
       filepathPart = "Elements";
+      theVocTypeLink = '<a href="/' + filepathPart + '/">RDA element sets</a>';
+      
+      // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
+      
+      hasSemanticBlock = true;
+      theVocDomain = theVocTitle.replace(" properties", "");
+      theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
+      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
     } else if (theVocType == "ConceptScheme") {
       var theSchemeURI = theMetadata.inScheme;
-      filenameLocal = theSchemeURI.substr(1 + theSchemeURI.lastIndexOf("/"))
+      filenameLocal = theSchemeURI.substr(1 + theSchemeURI.lastIndexOf("/"));
       filepathPart = "termList";
+      theVocTypeLink = '<a href="/' + filepathPart + '/">RDA value vocabularies</a>';
+      hasSemanticBlock = false;
     }
     theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
     theLinkJSONLD = baseDomain + 'jsonld' + filepathPart + '/' + filenameLocal + ".jsonld";
@@ -638,14 +639,18 @@ if (typeof dataSource !== "undefined") {
     document.getElementById("vocPrefix").innerHTML = curiePrefix;
     document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
     document.getElementById("vocVersion").innerHTML = theVersionLink;
-    document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
-    document.getElementById("vocDomain").innerHTML = theVocDomain;
-    document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
-    document.getElementById("vocToObject").innerHTML = theVocToObject;
     document.getElementById("linkCSV").href = theLinkCSV;
     document.getElementById("linkJSONLD").href = theLinkJSONLD;
     document.getElementById("linkNT").href = theLinkNT;
     document.getElementById("linkXML").href = theLinkXML;
+    document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
+    if (hasSemanticsBlock) {
+      document.getElementById("vocDomain").innerHTML = theVocDomain;
+      document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
+      document.getElementById("vocToObject").innerHTML = theVocToObject;
+    } else {
+      document.getElementById("vocHasSemantics").innerHTML = "";
+    }
     document.getElementById("rightsStatement").innerHTML = theMetadata.rights[ "en"];
     document.getElementById("indexTitle").innerHTML = theTableTitle;
   }
