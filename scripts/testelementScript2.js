@@ -762,7 +762,7 @@ if (typeof dataSource !== "undefined") {
           // Get the vocabulary type ("Ontology" or "ConceptScheme"
           
           window.theVocType = window.theVocMetadata[ "@type"];
-         
+          
           return json.data;
         }
       },
@@ -818,17 +818,17 @@ if (typeof dataSource !== "undefined") {
     
     // Add event listener for opening and closing details
     
-    pageTable.children("tbody").on('click', 'td.details-control', function () {
-      
+    //    pageTable.children("tbody").on('click', 'td.details-control', function () {
+    table.children("tbody").on('click', 'td.details-control', function () {
       // Get row containing the cell
       var tr = $(this).closest('tr');
       var row = table.row(tr);
-      var cell = table.cell(this).node;
       if (row.child.isShown()) {
         // This row is already open - close it
         row.child.hide();
         //        tr.removeClass('shown');
       } else {
+        var cell = table.cell(this).node;
         // Open this row
         row.child(formatDetail(row.data())).show();
         //        tr.addClass('shown');
