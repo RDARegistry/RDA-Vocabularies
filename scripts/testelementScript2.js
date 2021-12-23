@@ -677,7 +677,8 @@ if (typeof dataSource !== "undefined") {
   // Filter for vocabulary data
   
   function filterData(obj, index) {
-    // filter out vocabulary metata that is always first item in jsonld graph
+    // Filter excludes vocabulary metata that is always first item in jsonld graph
+    
     return index > 0;
   }
   
@@ -691,7 +692,7 @@ if (typeof dataSource !== "undefined") {
     return isUsed;
   }
   
-  // filter for published status of vocabulary entries
+  // Filter for published status of vocabulary entries
   
   function filterPublished(value, index, array) {
     var isPublished = false;
@@ -704,14 +705,31 @@ if (typeof dataSource !== "undefined") {
   }
   
   // filters
-  var initFilter = setFilter();
+  //  var initFilter = setFilter();
+  var initFilter = getAnchor();
   
   //reset filter and redraw when the URL anchor changes
   
   window.onhashchange = function () {
-    var initFilter = setFilter();
-    setSearch(initFilter);
+    //    var initFilter = setFilter();
+    var urlFilter = getAnchor();
+    setSearch(urlFilter);
   };
+  
+  function getAnchor() {
+    // returns URL anchor
+    
+    var theURLAnchor = "";
+    
+    // if the page URL has an anchor for the URI local part
+    
+    if (window.location.hash.indexOf('#') > -1) {
+      theURLAnchor = window.location.hash.substr(1);
+    }
+    return theURLAnchor;
+  }
+  
+  
   
   function setFilter() {
     // returns URL anchor
@@ -731,6 +749,9 @@ if (typeof dataSource !== "undefined") {
     
     var table = $("table#pindex").DataTable();
     table.search('').column(2).search(filter).draw();
+    
+    // Put the filter in the search box
+    
     $('input[type=search]').val(filter);
   }
   
@@ -816,7 +837,7 @@ if (typeof dataSource !== "undefined") {
       "deferRender": true
     });
     
-    // Add event listener for opening and closing details
+    // Add event listener for expading and collapsing details
     
     pageTable.children("tbody").on('click', 'td.details-control', function () {
       // Get row containing the cell
