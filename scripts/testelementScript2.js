@@ -67,6 +67,10 @@ var curiePrefix = "rda";
 
 var publishedElements;
 
+// Initialize global variable for vocabulary type
+
+var theVocType = "";
+
 // Process vocabulary data if defined.
 
 if (typeof dataSource !== "undefined") {
@@ -223,8 +227,10 @@ if (typeof dataSource !== "undefined") {
     // Returns a label from a jsonld row
     
     var theLabel = "";
-    if (typeof row[ "label"] != "undefined") {
+    if (theVocType == "Ontology" && typeof row[ "label"] != "undefined") {
       theLabel = row[ "label"];
+    } else if (theVocType == "ConceptScheme" && typeof row[ "prefLabel"] != "undefined") {
+      theLabel = row[ "prefLabel"];
     }
     return theLabel;
   }
@@ -460,6 +466,10 @@ if (typeof dataSource !== "undefined") {
         detailRow = formatDetailRow(formatMultivalueDetail(d.subPropertyOf, "h"), "Superproperties");
         detailTable += detailRow;
       }
+      if (typeof d.altLabel != "undefined") {
+        detailRow = formatDetailRow((getValueByLanguage(d.altLabel, theCurrentLanguageCode), "Alternate label", theCurrentLanguageCode);
+        detailTable += detailRow;
+      }
       if (typeof d.ToolkitLabel != "undefined") {
         detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel, theCurrentLanguageCode), "Toolkit label", theCurrentLanguageCode);
         detailTable += detailRow;
@@ -558,7 +568,6 @@ if (typeof dataSource !== "undefined") {
     var theVocDomain = "";
     var theVocEntriesTotal = 0;
     var theVocTitle = "";
-    var theVocType = "";
     var theVocTypeLink = "";
     var theVocToDatatype = "";
     var theVocToObject = "";
@@ -572,7 +581,7 @@ if (typeof dataSource !== "undefined") {
     
     // Get the vocabulary type ("Ontology" or "ConceptScheme" for the Header block
     
-    theVocType = theMetadata[ "@type"];
+    window.theVocType = theMetadata[ "@type"];
     
     // Get the vocabulary title for the Header block
     
@@ -599,7 +608,6 @@ if (typeof dataSource !== "undefined") {
     theCurieExURI = getURI(window.publishedElements[0]);
     theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
     
-    // Set the file links for the Downloads block
     // Element sets and value vocabularies have different filepath constructors
     
     if (theVocType == "Ontology") {
@@ -618,8 +626,14 @@ if (typeof dataSource !== "undefined") {
       filenameLocal = theSchemeURI.substr(1 + theSchemeURI.lastIndexOf("/"));
       filepathPart = "termList";
       theVocTypeLink = '<a href="/' + filepathPart + '/">RDA value vocabularies</a>';
+      
+      // There is no Semantics block for a value vocabulary
+      
       hasSemanticBlock = false;
     }
+    
+    // Set the file links for the Downloads block
+    
     theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
     theLinkJSONLD = baseDomain + 'jsonld' + filepathPart + '/' + filenameLocal + ".jsonld";
     theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
