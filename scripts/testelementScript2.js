@@ -833,7 +833,7 @@ if (typeof dataSource !== "undefined") {
         row.child(formatDetail(row.data())).show();
         //        tr.addClass('shown');
         cell.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
-        table.draw('page');
+        table.page.draw('page');
       }
     });
     
