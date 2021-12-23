@@ -759,6 +759,10 @@ if (typeof dataSource !== "undefined") {
           
           getCuriePrefix();
           
+          // Get the vocabulary type ("Ontology" or "ConceptScheme"
+          
+          window.theVocType = window.theVocMetadata[ "@type"];
+         
           return json.data;
         }
       },
