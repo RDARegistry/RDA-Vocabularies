@@ -859,7 +859,7 @@ if (typeof dataSource !== "undefined") {
     });
     
     $('#pindex').on('draw.dt', function () {
-      tablePage = table.pageInfo();
+      var tablePage = table.pageInfo();
       if (tablePage.length == 1) {
         
         $("#pindex").children("tbody").td.details - control.click();
