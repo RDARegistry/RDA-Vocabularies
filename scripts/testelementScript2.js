@@ -858,13 +858,13 @@ if (typeof dataSource !== "undefined") {
       }
     });
     
-    $('#pindex').on('draw.dt', function () {
+/*     $('#pindex').on('draw.dt', function () {
       var tablePage = table.pageInfo();
       if (tablePage.length == 1) {
         
         $("#pindex").children("tbody").td.details - control.click();
       }
-    });
+    }); */
     
     $('input[type=search]').on('click', function () {
       if (history.pushState) {
