@@ -825,6 +825,7 @@ if (typeof dataSource !== "undefined") {
       if (row.child.isShown()) {
         // This row is already open - close it
         row.child.hide();
+        $(this).html('<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>');
         //        tr.removeClass('shown');
       } else {
         // Open this row
