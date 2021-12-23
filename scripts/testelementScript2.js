@@ -741,9 +741,19 @@ if (typeof dataSource !== "undefined") {
         //        cache: true,
         //        crossDomain: true,
         "dataSrc": function (json) {
+          
+          // get vocabulary metadata; always first row of graph
+          
+          window.theVocMetadata = json[ "@graph"][0];
+          
+          // get vocabulary data; filter out first row of graph
+          
           json.data = json[ "@graph"].filter(filterData);
-          window.theVocMetadata = json.datajson[ "@graph"][0];
+          
+          // get vocabulary curie prefix
+          
           getCuriePrefix();
+          
           return json.data;
         }
       },
