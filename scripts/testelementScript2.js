@@ -555,6 +555,8 @@ if (typeof dataSource !== "undefined") {
     var theVocDomain = "";
     var theVocEntriesTotal = 0;
     var theVocTitle = "";
+    var theVocType = "";
+    var theVocTypeLink = "";
     var theVocToDatatype = "";
     var theVocToObject = "";
     var theVocURI = "";
@@ -564,6 +566,15 @@ if (typeof dataSource !== "undefined") {
     theData = json[ "@graph"];
     theMetadata = theData[0];
     window.publishedElements = theData.filter(filterPublished);
+    
+    // Get the vocabulary type for the Header block
+    
+    theVocType = theMetadata[ "@type"];
+    if (theVocType) == "Ontology") {
+      theVocTypeLink = '<a href="/Elements/">RDA element sets</a>' ';
+    } else if (theVocType) == "ConceptScheme") {
+      theVocTypeLink = '<a href="/termList/">RDA values</a>' ';
+    }
     
     // Get the vocabulary title for the Header block
     
@@ -609,6 +620,7 @@ if (typeof dataSource !== "undefined") {
     
     // Push to block values to the page
     
+    document.getElementById("vocTypeLink").innerHTML = theVocTypeLink;
     document.getElementById("vocTitle").innerHTML = theVocTitle;
     document.getElementById("vocDescription").innerHTML = theMetadata.description[ "en"];
     document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
@@ -771,7 +783,8 @@ if (typeof dataSource !== "undefined") {
         // Open this row
         row.child(formatDetail(row.data())).show();
         //        tr.addClass('shown');
-        $(cell.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>'));
+        cell.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
+        table.draw('page');
       }
     });
     
