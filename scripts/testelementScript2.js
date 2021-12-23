@@ -742,7 +742,7 @@ if (typeof dataSource !== "undefined") {
         //        crossDomain: true,
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterData);
-          window.theVocMetadata = json.data[0];
+          window.theVocMetadata = json.datajson[ "@graph"][0];
           getCuriePrefix();
           return json.data;
         }
