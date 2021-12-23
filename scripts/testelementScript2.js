@@ -828,11 +828,11 @@ if (typeof dataSource !== "undefined") {
         row.child.hide();
         //        tr.removeClass('shown');
       } else {
-        var cell = table.cell(this).node;
+        var cell = table.cell(this).node.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
         // Open this row
         row.child(formatDetail(row.data())).show();
         //        tr.addClass('shown');
-        cell.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
+//        cell.html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
         table.page.draw('page');
       }
     });
