@@ -67,6 +67,10 @@ var curiePrefix = "rda";
 
 var publishedElements;
 
+// Initialize global variable for vocabulary data
+
+var theVocData = "";
+
 // Initialize global variable for vocabulary metadata
 
 var theVocMetadata = "";
@@ -623,7 +627,7 @@ if (typeof dataSource !== "undefined") {
       theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
       theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
     } else if (theVocType == "ConceptScheme") {
-      var theSchemeURI = window.theVocMetadata.inScheme;
+      var theSchemeURI = window.theVocData[0].inScheme;
       filenameLocal = theSchemeURI.substr(1 + theSchemeURI.lastIndexOf("/"));
       filepathPart = "termList";
       theVocTypeLink = '<a href="/' + filepathPart + '/">RDA value vocabularies</a>';
@@ -749,6 +753,7 @@ if (typeof dataSource !== "undefined") {
           // get vocabulary data; filter out first row of graph
           
           json.data = json[ "@graph"].filter(filterData);
+          theVocData = json.data;
           
           // get vocabulary curie prefix
           
