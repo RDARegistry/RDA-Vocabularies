@@ -820,19 +820,20 @@ if (typeof dataSource !== "undefined") {
     
     pageTable.children("tbody").on('click', 'td.details-control', function () {
       // Get row containing the cell
+      
       var tr = $(this).closest('tr');
       var row = table.row(tr);
       if (row.child.isShown()) {
-        // This row is already open - close it
+        // This row is already open - close it and reset expand details button
+        
         row.child.hide();
         $(this).html('<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>');
-        //        tr.removeClass('shown');
       } else {
-        // Open this row
+        // Open this row and set collapse details button
+        
         row.child(formatDetail(row.data())).show();
-        //        tr.addClass('shown');
         $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
-        table.page.draw('page');
+//        table.page.draw('page');
       }
     });
     
