@@ -571,9 +571,9 @@ if (typeof dataSource !== "undefined") {
     
     theVocType = theMetadata[ "@type"];
     if (theVocType == "Ontology") {
-      theVocTypeLink = '<a href="/Elements/">RDA element sets</a>' ';
+      theVocTypeLink = '<a href="/Elements/">RDA element sets</a>';
     } else if (theVocType == "ConceptScheme") {
-      theVocTypeLink = '<a href="/termList/">RDA value vocabularies</a>' ';
+      theVocTypeLink = '<a href="/termList/">RDA value vocabularies</a>';
     }
     
     // Get the vocabulary title for the Header block
