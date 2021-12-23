@@ -227,11 +227,12 @@ if (typeof dataSource !== "undefined") {
     // Returns a label from a jsonld row
     
     var theLabel = "";
-    if (theVocType == "Ontology" && typeof row[ "label"] != "undefined") {
-      theLabel = row[ "label"];
+    /*    if (theVocType == "Ontology" && typeof row[ "label"] != "undefined") {
+    theLabel = row[ "label"];
     } else if (theVocType == "ConceptScheme" && typeof row[ "prefLabel"] != "undefined") {
-      theLabel = row[ "prefLabel"];
-    }
+    theLabel = row[ "prefLabel"];
+    } */
+    theLabel = row[ "label"];
     return theLabel;
   }
   
@@ -467,7 +468,7 @@ if (typeof dataSource !== "undefined") {
         detailTable += detailRow;
       }
       if (typeof d.altLabel != "undefined") {
-        detailRow = formatDetailRow((getValueByLanguage(d.altLabel, theCurrentLanguageCode), "Alternate label", theCurrentLanguageCode);
+        detailRow = formatDetailRow(getValueByLanguage(d.altLabel, theCurrentLanguageCode), "Alternate label", theCurrentLanguageCode);
         detailTable += detailRow;
       }
       if (typeof d.ToolkitLabel != "undefined") {
@@ -733,7 +734,6 @@ if (typeof dataSource !== "undefined") {
   function () {
     var pageTable = $("#pindex");
     var vocMetadata;
-    var t8lines = 2;
     var table = pageTable.DataTable({
       "ajax": {
         url: dataSource,
