@@ -833,7 +833,6 @@ if (typeof dataSource !== "undefined") {
         
         row.child(formatDetail(row.data())).show();
         $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
-//        table.page.draw('page');
       }
     });
     
