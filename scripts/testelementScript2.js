@@ -887,9 +887,10 @@ if (typeof dataSource !== "undefined") {
   $(document).ready(function () {
     $.protip({
       defaults: {
-        position: 'top-left',
+        delayIn: 500,
         gravity: true,
-        delayIn: 500
+        position: 'top-left',
+        scheme: 'aqua'
       }
     })
   });
