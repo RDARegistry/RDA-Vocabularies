@@ -542,6 +542,8 @@ if (typeof dataSource !== "undefined") {
   }
   
   function setPageDetails(json) {
+    var filenameLocal = "";
+    var filepathPart = "";
     var theData;
     var theMetadata;
     var theCurieExURI = "";
@@ -609,10 +611,18 @@ if (typeof dataSource !== "undefined") {
     
     // Set the file links for the Downloads block
     
-    theLinkCSV = baseDomain + "csv/Elements/" + curiePrefix + ".csv";
-    theLinkJSONLD = baseDomain + "jsonld/Elements/" + curiePrefix.slice(-1) + ".jsonld";
-    theLinkNT = baseDomain + "nt/Elements/" + curiePrefix.slice(-1) + ".nt";
-    theLinkXML = baseDomain + "xml/Elements/" + curiePrefix.slice(-1) + ".xml";
+    if (theVocType == "Ontology") {
+      filenameLocal = curiePrefix.slice(-1);
+      filepathPart = "Elements";
+    } else if (theVocType == "ConceptScheme") {
+      var theSchemeURI = theMetadata.inScheme;
+      filenameLocal = theSchemeURI.substr(1 + theSchemeURI.lastIndexOf("/"))
+      filepathPart = "termList";
+    }
+    theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
+    theLinkJSONLD = baseDomain + 'jsonld' + filepathPart + '/' + filenameLocal + ".jsonld";
+    theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
+    theLinkXML = baseDomain + 'xml' + filepathPart + '/' filenameLocal + '.xml';
     
     // Get the vocabulary languages display list
     
