@@ -751,11 +751,6 @@ if (typeof dataSource !== "undefined") {
     var table = $("table#pindex").DataTable();
     table.search('').column(2).search(filter).draw();
     
-    tablePage = table.pageInfo();
-    if (tablePage.length == 1) {
-      
-      $("#pindex").children("tbody").td.details - control.click();
-    }
     // Put the filter in the search box
     
     $('input[type=search]').val(filter);
@@ -860,6 +855,14 @@ if (typeof dataSource !== "undefined") {
         
         row.child(formatDetail(row.data())).show();
         $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
+      }
+    });
+    
+    $('#pindex').on('draw.dt', function () {
+      tablePage = table.pageInfo();
+      if (tablePage.length == 1) {
+        
+        $("#pindex").children("tbody").td.details - control.click();
       }
     });
     
