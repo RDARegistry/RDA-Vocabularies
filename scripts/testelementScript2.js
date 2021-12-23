@@ -206,13 +206,11 @@ if (typeof dataSource !== "undefined") {
   
   // Get data from jsonld
   
-  function getCuriePrefix(vocGraph) {
-    // Sets the vocabulary prefix from jsonld metadata
-    // Metadata is always the first entry
+  function getCuriePrefix() {
+    // Sets the vocabulary prefix from vocabulary metadata
     
-    var theVocMetadata = vocGraph[0]
-    if (typeof theVocMetadata.prefix != "undefined") {
-      window.curiePrefix = theVocMetadata.prefix;
+    if (typeof window.theVocMetadata.prefix != "undefined") {
+      window.curiePrefix = window.theVocMetadata.prefix;
     }
     return;
   }
@@ -580,16 +578,15 @@ if (typeof dataSource !== "undefined") {
     // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
     
     theData = json[ "@graph"];
-    theVocMetadata = theData[0];
     window.publishedElements = theData.filter(filterPublished);
     
     // Get the vocabulary type ("Ontology" or "ConceptScheme" for the Header block
     
-    window.theVocType = theVocMetadata[ "@type"];
+    window.theVocType = window.theVocMetadata[ "@type"];
     
     // Get the vocabulary title for the Header block
     
-    theVocTitle = theVocMetadata.title[ "en"];
+    theVocTitle = window.theVocMetadata.title[ "en"];
     
     // Set the table title from the vocabulary title
     // Warning! This is dependent on consistent use of vocabulary titles in jsonld metadata
@@ -604,8 +601,8 @@ if (typeof dataSource !== "undefined") {
     // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
     
     theVocEntriesTotal = window.publishedElements.length;
-    theVocURI = theVocMetadata[ "@id"];
-    theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + theVocMetadata.versionInfo + '">' + theVocMetadata.versionInfo + '</a>';
+    theVocURI = window.theVocMetadata[ "@id"];
+    theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + window.theVocMetadata.versionInfo + '">' + window.theVocMetadata.versionInfo + '</a>';
     
     // Example curie is first published element in data and may not be the lowest in curie order
     
@@ -626,7 +623,7 @@ if (typeof dataSource !== "undefined") {
       theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
       theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
     } else if (theVocType == "ConceptScheme") {
-      var theSchemeURI = theVocMetadata.inScheme;
+      var theSchemeURI = window.theVocMetadata.inScheme;
       filenameLocal = theSchemeURI.substr(1 + theSchemeURI.lastIndexOf("/"));
       filepathPart = "termList";
       theVocTypeLink = '<a href="/' + filepathPart + '/">RDA value vocabularies</a>';
@@ -651,7 +648,7 @@ if (typeof dataSource !== "undefined") {
     
     document.getElementById("vocTypeLink").innerHTML = theVocTypeLink;
     document.getElementById("vocTitle").innerHTML = theVocTitle;
-    document.getElementById("vocDescription").innerHTML = theVocMetadata.description[ "en"];
+    document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
     document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
     document.getElementById("vocURI").innerHTML = theVocURI;
     document.getElementById("vocPrefix").innerHTML = curiePrefix;
@@ -669,7 +666,7 @@ if (typeof dataSource !== "undefined") {
     } else {
       document.getElementById("vocHasSemantics").innerHTML = "";
     }
-    document.getElementById("rightsStatement").innerHTML = theVocMetadata.rights[ "en"];
+    document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
     document.getElementById("indexTitle").innerHTML = theTableTitle;
   }
   
@@ -745,7 +742,8 @@ if (typeof dataSource !== "undefined") {
         //        crossDomain: true,
         "dataSrc": function (json) {
           json.data = json[ "@graph"].filter(filterData);
-          getCuriePrefix(json[ "@graph"]);
+          window.theVocMetadata = json.data[0];
+          getCuriePrefix();
           return json.data;
         }
       },
