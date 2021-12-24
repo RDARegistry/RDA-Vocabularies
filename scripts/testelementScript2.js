@@ -834,6 +834,7 @@ if (typeof dataSource !== "undefined") {
       },
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
+      "pagingType": 'full_numbers',
       //      "responsive": true,
       "deferRender": true
     });
