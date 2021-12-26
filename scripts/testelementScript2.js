@@ -698,7 +698,7 @@ if (typeof dataSource !== "undefined") {
     } else {
     document.getElementById("vocHasSemantics").innerHTML = "";
     } */
-    theSemanticsBlock = formatSemanticsBlock(theVocKind);
+    theSemanticsBlock = formatSemanticsBlock(window.theVocKind);
     if (theSemanticsBlock.length > 0) {
       document.getElementById("vocHasSemantics").innerHTML = theSemanticsBlock;
     }
@@ -863,7 +863,7 @@ if (typeof dataSource !== "undefined") {
           // Get the vocabulary type ("Ontology" or "ConceptScheme"
           
           //          window.theVocKind = window.theVocMetadata[ "@type"];
-          window.theVocKind = getVocKind(window.theVocMetadata[ "@ID"]);
+          window.theVocKind = getVocKind(window.theVocMetadata[ "@id"]);
           
           return json.data;
         }
