@@ -753,8 +753,9 @@ if (typeof dataSource !== "undefined") {
       theLanguagesBlock += '<p>An object element set uses English labels only.</p>';
       break;
       default:
+      var languages = window.regLanguages;
       theLanguagesBlock += '<ul>';
-      window.regLanguages.forEach(checkUsed);
+      languages.forEach(checkUsed);
       theLanguagesBlock += window.vocLanguagesSelector;
       theLanguagesBlock += '</ul>';
     }
