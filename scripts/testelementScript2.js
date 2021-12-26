@@ -711,7 +711,7 @@ if (typeof dataSource !== "undefined") {
     
     // Get the vocabulary languages display list
     
-//    getLanguages(regLanguages);
+    //    getLanguages(regLanguages);
     
     // Push to block values to the page
     
@@ -727,7 +727,7 @@ if (typeof dataSource !== "undefined") {
     document.getElementById("linkJSONLD").href = theLinkJSONLD;
     document.getElementById("linkNT").href = theLinkNT;
     document.getElementById("linkXML").href = theLinkXML;
-//    document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
+    //    document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
     theLanguagesBlock = formatLanguagesBlock();
     if (theLanguagesBlock.length > 0) {
       document.getElementById("vocHasLanguages").innerHTML = theLanguagesBlock;
@@ -784,7 +784,7 @@ if (typeof dataSource !== "undefined") {
       theSemanticsBlock = "";
       break;
       case "datatype":
-      var theVocToParent = window.theVocURI.replace("/datatype", "");
+      var theVocToParent = '<a href="' + window.theVocURI.replace("/datatype", "") + '">' + window.theVocTitle.replace("datatype properties", "properties") + '</a>';
       theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
       theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
       theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
@@ -792,7 +792,7 @@ if (typeof dataSource !== "undefined") {
       theSemanticsBlock += '</ul>';
       break;
       case "object":
-      var theVocToParent = window.theVocURI.replace("/object", "");
+      var theVocToParent = '<a href="' + window.theVocURI.replace("/object", "") + '">' + window.theVocTitle.replace("object properties ", "properties") + '</a>';
       theSemanticsBlock += '<p>Each property in the object element set:</p>';
       theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
       theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
