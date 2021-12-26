@@ -709,7 +709,7 @@ if (typeof dataSource !== "undefined") {
     
     // Get the vocabulary languages display list
     
-    getLanguages(regLanguages);
+//    getLanguages(regLanguages);
     
     // Push to block values to the page
     
