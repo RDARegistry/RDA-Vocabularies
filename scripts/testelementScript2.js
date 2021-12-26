@@ -898,7 +898,7 @@ if (typeof dataSource !== "undefined") {
           // Get the vocabulary type ("Ontology" or "ConceptScheme"
           
           //          window.theVocType = window.theVocMetadata[ "@type"];
-          window.theVocType = getVocType(window.theVocMetadata[ "@ID"]);
+          window.theVocType = getVocKind(window.theVocMetadata[ "@ID"]);
           
           return json.data;
         }
