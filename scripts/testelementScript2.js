@@ -75,9 +75,9 @@ var theVocData = "";
 
 var theVocMetadata = "";
 
-// Initialize global variable for vocabulary type
+// Initialize global variable for kind vocabulary
 
-var theVocType = "";
+var theVocKind = "";
 
 // Process vocabulary data if defined.
 
@@ -236,7 +236,7 @@ if (typeof dataSource !== "undefined") {
     
     // Value vocabularies use prefLabel property; element sets use label property
     
-    if (theVocType == "value" && typeof row[ "prefLabel"] != "undefined") {
+    if (theVocKind == "value" && typeof row[ "prefLabel"] != "undefined") {
       theLabel = row[ "prefLabel"];
     } else {
       theLabel = row[ "label"];
@@ -614,7 +614,7 @@ if (typeof dataSource !== "undefined") {
     var theVocDomain = "";
     var theVocEntriesTotal = 0;
     var theVocTitle = "";
-    var theVocTypeLink = "";
+    var theVocMenuLink = "";
     var theVocToDatatype = "";
     var theVocToObject = "";
     var theVocURI = "";
@@ -624,25 +624,14 @@ if (typeof dataSource !== "undefined") {
     theData = json[ "@graph"];
     window.publishedElements = theData.filter(filterPublished);
     
-    // Get the vocabulary type ("Ontology" or "ConceptScheme" for the Header block
-    //    window.theVocType = window.theVocMetadata[ "@type"];
-    
     // Get the vocabulary title for the Header block
     
     theVocTitle = window.theVocMetadata.title[ "en"];
     
-    // Set the table title from the vocabulary type
-    // Warning! This is dependent on consistent use of vocabulary titles in jsonld metadata
+    // Set the table title from the kind of vocabulary
+    // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
     
-    /*     if (theVocTitle.indexOf("Classes") > -1) {
-    theTableTitle = "Classes";
-    } else if (theVocTitle.indexOf("properties") > -1) {
-    theTableTitle = "Properties";
-    }
-    theTableTitle += " Index";    }
-     */
-    
-    switch (theVocType) {
+    switch (theVocKind) {
       case "class":
       theTableTitle = "Classes";
       break;
@@ -667,47 +656,23 @@ if (typeof dataSource !== "undefined") {
     
     // Element sets and value vocabularies have different filepath constructors
     
-    /*     if (theVocType == "Ontology") {
-    filenameLocal = curiePrefix.slice(-1);
-    filepathPart = "Elements";
-    theVocTypeLink = '<a href="/' + filepathPart + '/">RDA element sets</a>';
-    
-    // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
-    
-    hasSemanticsBlock = true;
-    theVocDomain = theVocTitle.replace(" properties", "");
-    theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
-    theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-    } else if (theVocType == "ConceptScheme") {
-    var theSchemeURI = window.theVocData[0].inScheme;
-    filenameLocal = theSchemeURI.substr(1 + theSchemeURI.lastIndexOf("/"));
-    filepathPart = "termList";
-    theVocTypeLink = '<a href="/' + filepathPart + '/">RDA value vocabularies</a>';
-    
-    // There is no Semantics block for a value vocabulary
-    
-    hasSemanticsBlock = false;
-    } */
-    switch (theVocType) {
-      case "canonical":
-      hasSemanticsBlock = true;
-      break;
-      case "class":
-      hasSemanticsBlock = false;
-      break;
-      case "datatype":
-      hasSemanticsBlock = true;
-      break;
-      case "object":
-      hasSemanticsBlock = true;
-      break;
+    switch (theVocKind) {
       case "value":
-      hasSemanticsBlock = false;
+      theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
       break;
       default:
-      hasSemanticsBlock = false;
+      theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     }
+    // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
     
+    switch (theVocKind) {
+      case "canonical":
+      theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
+      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
+      break;
+      default:
+      theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
+    }
     
     // Set the file links for the Downloads block
     
@@ -722,7 +687,7 @@ if (typeof dataSource !== "undefined") {
     
     // Push to block values to the page
     
-    document.getElementById("vocTypeLink").innerHTML = theVocTypeLink;
+    document.getElementById("vocMenuLink").innerHTML = theVocMenuLink;
     document.getElementById("vocTitle").innerHTML = theVocTitle;
     document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
     document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
@@ -754,7 +719,7 @@ if (typeof dataSource !== "undefined") {
   function formatSemanticsBlock() {
     
     var theSemanticsBlock = '<h3>Semantics</h3>';
-    switch (theVocType) {
+    switch (theVocKind) {
       case "canonical":
       theSemanticsBlock += '<p>Each property in the canonical element set:</p>';
       theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
@@ -897,8 +862,8 @@ if (typeof dataSource !== "undefined") {
           
           // Get the vocabulary type ("Ontology" or "ConceptScheme"
           
-          //          window.theVocType = window.theVocMetadata[ "@type"];
-          window.theVocType = getVocKind(window.theVocMetadata[ "@ID"]);
+          //          window.theVocKind = window.theVocMetadata[ "@type"];
+          window.theVocKind = getVocKind(window.theVocMetadata[ "@ID"]);
           
           return json.data;
         }
