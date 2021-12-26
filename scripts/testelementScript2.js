@@ -699,7 +699,6 @@ if (typeof dataSource !== "undefined") {
       default:
       theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     }
-    // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
     
     // Set the file links for the Downloads block
     
@@ -727,13 +726,6 @@ if (typeof dataSource !== "undefined") {
     document.getElementById("linkNT").href = theLinkNT;
     document.getElementById("linkXML").href = theLinkXML;
     document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
-    /*     if (hasSemanticsBlock) {
-    document.getElementById("vocDomain").innerHTML = window.theVocDomain;
-    document.getElementById("vocToDatatype").innerHTML = theVocToDatatype;
-    document.getElementById("vocToObject").innerHTML = theVocToObject;
-    } else {
-    document.getElementById("vocHasSemantics").innerHTML = "";
-    } */
     theSemanticsBlock = formatSemanticsBlock();
     if (theSemanticsBlock.length > 0) {
       document.getElementById("vocHasSemantics").innerHTML = theSemanticsBlock;
@@ -763,17 +755,19 @@ if (typeof dataSource !== "undefined") {
       theSemanticsBlock = "";
       break;
       case "datatype":
+      var theVocToParent = window.theVocURI.replace("/datatype", "");
       theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
       theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
       theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
-      theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToDatatype + ' by <em>rdfs:subPropertyOf</em>.</li>';
+      theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
       theSemanticsBlock += '</ul>';
       break;
       case "object":
+      var theVocToParent = window.theVocURI.replace("/object", "");
       theSemanticsBlock += '<p>Each property in the object element set:</p>';
       theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
       theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
-      theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToDatatype + ' by <em>rdfs:subPropertyOf</em>.</li>';
+      theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
       theSemanticsBlock += '</ul>';
       break;
       case "value":
