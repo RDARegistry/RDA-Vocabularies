@@ -601,7 +601,7 @@ if (typeof dataSource !== "undefined") {
   function setPageDetails(json) {
     var filenameLocal = "";
     var filepathPart = "";
-    var hasSemanticsBlock = false;
+    var theSemanticsBlock = "";
     var theData;
     var theCurieExURI = "";
     var theLinkCSV = "";
@@ -665,15 +665,6 @@ if (typeof dataSource !== "undefined") {
     }
     // Get the vocabulary domain and links to datatype and object vocabularies for the Semantics block
     
-    switch (theVocKind) {
-      case "canonical":
-      theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
-      theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
-      break;
-      default:
-      theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
-    }
-    
     // Set the file links for the Downloads block
     
     theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
@@ -707,6 +698,7 @@ if (typeof dataSource !== "undefined") {
     } else {
     document.getElementById("vocHasSemantics").innerHTML = "";
     } */
+    theSemanticsBlock = formatSemanticsBlock(theVocKind);
     if (theSemanticsBlock.length > 0) {
       document.getElementById("vocHasSemantics").innerHTML = theSemanticsBlock;
     }
@@ -716,11 +708,18 @@ if (typeof dataSource !== "undefined") {
   
   // Format Semantics block
   
-  function formatSemanticsBlock() {
+  function formatSemanticsBlock(vocKind) {
     
-    var theSemanticsBlock = '<h3>Semantics</h3>';
+    var vocKind = "";
+    var theSemanticsBlock = "";
+    if (typeof vocKind != "undefined") {
+      theVocKind = vocKind;
+    }
+    theSemanticsBlock += '<h3>Semantics</h3>';
     switch (theVocKind) {
       case "canonical":
+      var theVocToDatatype = '<a href="' + theVocURI + 'datatype/' + '">' + theVocTitle.replace("properties", "datatype properties") + '</a>';
+      var theVocToObject = '<a href="' + theVocURI + 'object/' + '">' + theVocTitle.replace("properties", "object properties") + '</a>';
       theSemanticsBlock += '<p>Each property in the canonical element set:</p>';
       theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
       theSemanticsBlock += '<li>has a domain of the class that represents the ' + theVocDomain + ' entity.</li>';
@@ -751,6 +750,7 @@ if (typeof dataSource !== "undefined") {
       default:
       theSemanticsBlock = "";
     }
+    return theSemanticsBlock;
   }
   
   // Filter for vocabulary data
