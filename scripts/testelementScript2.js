@@ -792,7 +792,7 @@ if (typeof dataSource !== "undefined") {
       theSemanticsBlock += '</ul>';
       break;
       case "object":
-      var theVocToParent = '<a href="' + window.theVocURI.replace("/object", "") + '">' + window.theVocTitle.replace("object properties ", "properties") + '</a>';
+      var theVocToParent = '<a href="' + window.theVocURI.replace("/object", "") + '">' + window.theVocTitle.replace("object properties", "properties") + '</a>';
       theSemanticsBlock += '<p>Each property in the object element set:</p>';
       theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
       theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
