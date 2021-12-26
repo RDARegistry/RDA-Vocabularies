@@ -23,7 +23,7 @@ var languageCodeToCheck = "";
 // Declare constant array of jsonld objects for the possible languages of the vocabulary
 // Object includes language code, label in English, and indication of right-to-left display
 
-const regLanguages =[ {
+var regLanguages =[ {
   code: "ar", label: "Arabic", rtl: true
 }, {
   code: "ca", label: "Catalan", rtl: false
