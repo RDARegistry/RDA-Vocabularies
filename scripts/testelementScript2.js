@@ -668,7 +668,9 @@ if (typeof dataSource !== "undefined") {
     // Set the table title from the kind of vocabulary
     // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
     
-    switch (window.theVocKind) {
+    vocKind = window.theVocKind;
+    
+    switch (vocKind) {
       case "class":
       theTableTitle = "Classes";
       break;
@@ -692,7 +694,7 @@ if (typeof dataSource !== "undefined") {
     
     // Element sets and value vocabularies have different filepath constructors
     
-    switch (window.theVocKind) {
+    switch (vocKind) {
       case "value":
       theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
       break;
