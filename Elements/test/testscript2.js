@@ -113,11 +113,11 @@ function getAnchor() {
 function directify(string, languageCode) {
   // Returns a string wrapped in a div with right-to-left attribute for specified language code
   
-  rtlLangList = "ar, he";
-  rtlIndex = -1;
-  isRtl = false;
-  theLanguageCode = "en";
-  theString = "";
+  var rtlLangList = "ar, he";
+  var rtlIndex = -1;
+  var isRtl = false;
+  var theLanguageCode = "en";
+  var theString = "";
   if (typeof string != "undefined") {
     theString = string;
   }
