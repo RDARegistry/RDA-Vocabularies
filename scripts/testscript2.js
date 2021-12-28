@@ -124,20 +124,20 @@ function directify(string, languageCode) {
   if (typeof languageCode != "undefined") {
     theLanguageCode = languageCode;
   }
-  if (theLanguageCode.length > 0) {
+/*   if (theLanguageCode.length > 0) {
     rtlIndex = rtlLangList.indexOf(theLanguageCode);
   }
   if (rtlIndex > -1) {
     theString = '<div dir="rtl">' + theString + '</div>';
   } else {
     theString = "<div>" + theString + "</div>";
-  }
-  /*    isRtl = regLanguages[theLanguageCode][ "rtl"];
+  } */
+  isRtl = window.regLanguages[theLanguageCode][ "rtl"];
   if (isRtl) {
   theString = '<div dir="rtl">' + theString + '</div>';
   } else {
   theString = "<div>" + theString + "</div>";
-  } */
+  }
   return theString;
 }
 //
