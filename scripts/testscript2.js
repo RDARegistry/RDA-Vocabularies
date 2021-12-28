@@ -720,7 +720,7 @@ function setPageDetails(json) {
   // Set the table title from the kind of vocabulary
   // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
   
-  vocKind = window.theVocKind;
+  var vocKind = window.theVocKind;
   
   switch (vocKind) {
     case "class":
