@@ -309,7 +309,7 @@ function getRtl(languageCode) {
   }
   window.languageCodeToCheck = languageCode;
   theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
-  return theLanguage["rtl"];
+  return theLanguage[0]["rtl"];
 }
 function getLanguageFromLanguages(languageObject) {
   return languageObject["code"] == window.languageCodeToCheck;
