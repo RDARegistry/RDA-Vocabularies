@@ -132,7 +132,7 @@ function directify(string, languageCode) {
   } else {
     theString = "<div>" + theString + "</div>";
   } */
-  window.regLanguages.forEach(checkRtl);
+  isRtl = getRtl(languageCode);
   if (isRtl) {
   theString = '<div dir="rtl">' + theString + '</div>';
   } else {
@@ -141,14 +141,6 @@ function directify(string, languageCode) {
   return theString;
 }
 //
-function checkRtl(obj) {
-  var isRtl = false;
-  var theLanguageCode = window.theCurrentLanguageCode;
-  if (obj['code'] == theLanguageCode) {
-    isRtl = obj['rtl']
-  }
-  return isRtl;
-}
 function divify(string, className) {
   //
   // Returns a string wrapped in a div with optional class name
@@ -306,7 +298,16 @@ function checkUsed(languageRow) {
   }
 }
 
-
+//
+// Get rtl for language code from regLanguages
+//
+function getRtl(languageCode) {
+  var theLanguage = window.regLanguage.filter(getLanguageFromLanguages);
+  return theLanguage["rtl"];
+}
+function getLanguageFromLanguages(languageObject) {
+  return languageObject["code"] = window.languageCodeToCheck;
+}
 //
 // Get entry data from jsonld
 //
