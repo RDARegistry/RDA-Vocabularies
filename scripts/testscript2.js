@@ -258,7 +258,7 @@ function getDomain(vocTitle) {
   if (typeof vocTitle != "undefined") {
     theVocTitle = vocTitle;
   }
-  switch (window..theVocKind) {
+  switch (window.theVocKind) {
     case "canonical":
     theVocDomain = theVocTitle.replace("properties", "").trim();
     break;
@@ -289,12 +289,12 @@ function getLanguages(regLanguages) {
 function checkUsed(languageRow) {
   var languageCodeUsed =[];
   var theLanguageLabel = "";
-  window..languageCodeToCheck = languageRow.code;
-  //  languageCodeUsed = window..publishedElements.filter(filterLanguageCode);
-  if (typeof window..publishedElements.ToolkitLabel[window..languageCodeToCheck] != "undefined") {
+  window.languageCodeToCheck = languageRow.code;
+  //  languageCodeUsed = window.publishedElements.filter(filterLanguageCode);
+  if (typeof window.publishedElements.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
     //  if (languageCodeUsed.length > 0) {
     theLanguageLabel = languageRow.label;
-    window..vocLanguagesSelector += '<li><a href="?language=' + window..languageCodeToCheck + '" id="lang_' + window..languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
+    window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
 }
 
@@ -705,22 +705,22 @@ function setPageDetails(json) {
   // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
   
   theData = json[ "@graph"];
-  window..publishedElements = theData.filter(filterPublished);
+  window.publishedElements = theData.filter(filterPublished);
   
   // Get the vocabulary title for the Header block
   
-  window..theVocTitle = window..theVocMetadata.title[ "en"];
+  window.theVocTitle = window.theVocMetadata.title[ "en"];
   
-  window..theVocURI = window..theVocMetadata[ "@id"];
+  window.theVocURI = window.theVocMetadata[ "@id"];
   
-  window..theVocKind = getVocKind(window..theVocURI);
+  window.theVocKind = getVocKind(window.theVocURI);
   
-  window..theVocDomain = getDomain(window..theVocTitle);
+  window.theVocDomain = getDomain(window.theVocTitle);
   
   // Set the table title from the kind of vocabulary
   // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
   
-  vocKind = window..theVocKind;
+  vocKind = window.theVocKind;
   
   switch (vocKind) {
     case "class":
@@ -736,12 +736,12 @@ function setPageDetails(json) {
   
   // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
   
-  theVocEntriesTotal = window..publishedElements.length;
-  theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + window..theVocMetadata.versionInfo + '">' + window..theVocMetadata.versionInfo + '</a>';
+  theVocEntriesTotal = window.publishedElements.length;
+  theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + window.theVocMetadata.versionInfo + '">' + window.theVocMetadata.versionInfo + '</a>';
   
   // Example curie is first published element in data and may not be the lowest in curie order
   
-  theCurieExURI = getURI(window..publishedElements[0]);
+  theCurieExURI = getURI(window.publishedElements[0]);
   theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
   
   // Element sets and value vocabularies have different filepath constructors
@@ -768,10 +768,10 @@ function setPageDetails(json) {
   // Push to block values to the page
   
   document.getElementById("vocMenuLink").innerHTML = theVocMenuLink;
-  document.getElementById("vocTitle").innerHTML = window..theVocTitle;
-  document.getElementById("vocDescription").innerHTML = window..theVocMetadata.description[ "en"];
+  document.getElementById("vocTitle").innerHTML = window.theVocTitle;
+  document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
   document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
-  document.getElementById("vocURI").innerHTML = window..theVocURI;
+  document.getElementById("vocURI").innerHTML = window.theVocURI;
   document.getElementById("vocPrefix").innerHTML = curiePrefix;
   document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
   document.getElementById("vocVersion").innerHTML = theVersionLink;
@@ -779,7 +779,7 @@ function setPageDetails(json) {
   document.getElementById("linkJSONLD").href = theLinkJSONLD;
   document.getElementById("linkNT").href = theLinkNT;
   document.getElementById("linkXML").href = theLinkXML;
-  //    document.getElementById("vocLanguages").innerHTML = window..vocLanguagesSelector;
+  //    document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
   theLanguagesBlock = formatLanguagesBlock();
   if (theLanguagesBlock.length > 0) {
     document.getElementById("vocHasLanguages").innerHTML = theLanguagesBlock;
@@ -788,7 +788,7 @@ function setPageDetails(json) {
   if (theSemanticsBlock.length > 0) {
     document.getElementById("vocHasSemantics").innerHTML = theSemanticsBlock;
   }
-  document.getElementById("rightsStatement").innerHTML = window..theVocMetadata.rights[ "en"];
+  document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
   document.getElementById("indexTitle").innerHTML = theTableTitle;
 }
 
@@ -797,7 +797,7 @@ function setPageDetails(json) {
 function formatLanguagesBlock() {
   var theLanguagesBlock = "";
   theLanguagesBlock += '<h3>Languages</h3>';
-  switch (window..theVocKind) {
+  switch (window.theVocKind) {
     case "datatype":
     theLanguagesBlock += '<p>A datatype element set uses English labels only.</p>';
     break;
@@ -805,10 +805,10 @@ function formatLanguagesBlock() {
     theLanguagesBlock += '<p>An object element set uses English labels only.</p>';
     break;
     default:
-    var languages = window..regLanguages;
+    var languages = window.regLanguages;
     theLanguagesBlock += '<ul>';
     languages.forEach(checkUsed);
-    theLanguagesBlock += window..vocLanguagesSelector;
+    theLanguagesBlock += window.vocLanguagesSelector;
     theLanguagesBlock += '</ul>';
   }
   
@@ -822,13 +822,13 @@ function formatSemanticsBlock() {
   
   var theSemanticsBlock = "";
   theSemanticsBlock += '<h3>Semantics</h3>';
-  switch (window..theVocKind) {
+  switch (window.theVocKind) {
     case "canonical":
-    var theVocToDatatype = '<a href="' + window..theVocURI + 'datatype/' + '">' + window..theVocTitle.replace("properties", "datatype properties") + '</a>';
-    var theVocToObject = '<a href="' + window..theVocURI + 'object/' + '">' + window..theVocTitle.replace("properties", "object properties") + '</a>';
+    var theVocToDatatype = '<a href="' + window.theVocURI + 'datatype/' + '">' + window.theVocTitle.replace("properties", "datatype properties") + '</a>';
+    var theVocToObject = '<a href="' + window.theVocURI + 'object/' + '">' + window.theVocTitle.replace("properties", "object properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the canonical element set:</p>';
     theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
-    theSemanticsBlock += '<li>has a domain of the class that represents the ' + window..theVocDomain + ' entity.</li>';
+    theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>is linked from its child <strong>datatype</strong> property in ' + theVocToDatatype + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '<li>is linked from its child <strong>object</strong> property in ' + theVocToObject + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
@@ -837,18 +837,18 @@ function formatSemanticsBlock() {
     theSemanticsBlock = "";
     break;
     case "datatype":
-    var theVocToParent = '<a href="' + window..theVocURI.replace("/datatype", "") + '">' + window..theVocTitle.replace("datatype properties", "properties") + '</a>';
+    var theVocToParent = '<a href="' + window.theVocURI.replace("/datatype", "") + '">' + window.theVocTitle.replace("datatype properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
     theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
-    theSemanticsBlock += '<li>has a domain of the class that represents the ' + window..theVocDomain + ' entity.</li>';
+    theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
     case "object":
-    var theVocToParent = '<a href="' + window..theVocURI.replace("/object", "") + '">' + window..theVocTitle.replace("object properties", "properties") + '</a>';
+    var theVocToParent = '<a href="' + window.theVocURI.replace("/object", "") + '">' + window.theVocTitle.replace("object properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the object element set:</p>';
     theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
-    theSemanticsBlock += '<li>has a domain of the class that represents the ' + window..theVocDomain + ' entity.</li>';
+    theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
@@ -877,7 +877,7 @@ function filterData(obj, index) {
 //
 function filterLanguageCode(obj) {
   var isUsed = false;
-  if (typeof obj.ToolkitLabel[window..languageCodeToCheck] != "undefined") {
+  if (typeof obj.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
     isUsed = true;
   }
   return isUsed;
