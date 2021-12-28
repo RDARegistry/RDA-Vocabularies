@@ -116,7 +116,7 @@ function directify(string, languageCode) {
   var rtlLangList = "ar, he";
   var rtlIndex = -1;
   var isRtl = false;
-  var theLanguageCode = "en";
+  var theLanguageCode = window.theCurrentLanguageCode;
   var theString = "";
   if (typeof string != "undefined") {
     theString = string;
@@ -132,7 +132,7 @@ function directify(string, languageCode) {
   } else {
     theString = "<div>" + theString + "</div>";
   } */
-  isRtl = window.regLanguages[theLanguageCode][ "rtl"];
+  window.regLanguages.forEach(checkRtl);
   if (isRtl) {
   theString = '<div dir="rtl">' + theString + '</div>';
   } else {
@@ -141,6 +141,14 @@ function directify(string, languageCode) {
   return theString;
 }
 //
+function checkRtl(obj) {
+  var isRtl = false;
+//  var theLanguageCode = window.theCurrentLanguageCode;
+  if (obj['code'] == theLanguageCode) {
+    isRtl = obj['rtl']
+  }
+  return isRtl;
+}
 function divify(string, className) {
   //
   // Returns a string wrapped in a div with optional class name
