@@ -106,15 +106,16 @@ function getAnchor() {
   }
   return theURLAnchor;
 }
-
 //
 // Basic string formatting
 //
+//
+// Set string orientation
+//
 function directify(string, languageCode) {
+  //
   // Returns a string wrapped in a div with right-to-left attribute for specified language code
-  
-  var rtlLangList = "ar, he";
-  var rtlIndex = -1;
+  //
   var isRtl = false;
   var theLanguageCode = window.theCurrentLanguageCode;
   var theString = "";
@@ -124,19 +125,11 @@ function directify(string, languageCode) {
   if (typeof languageCode != "undefined") {
     theLanguageCode = languageCode;
   }
-/*   if (theLanguageCode.length > 0) {
-    rtlIndex = rtlLangList.indexOf(theLanguageCode);
-  }
-  if (rtlIndex > -1) {
+  isRtl = getRtl(languageCode);
+  if (isRtl) {
     theString = '<div dir="rtl">' + theString + '</div>';
   } else {
     theString = "<div>" + theString + "</div>";
-  } */
-  isRtl = getRtl(languageCode);
-  if (isRtl) {
-  theString = '<div dir="rtl">' + theString + '</div>';
-  } else {
-  theString = "<div>" + theString + "</div>";
   }
   return theString;
 }
@@ -280,6 +273,14 @@ function getDomain(vocTitle) {
   return theVocDomain;
 }
 //
+// Get language data for the code to be checked from Registry languages array
+//
+function getLanguageFromLanguages(languageObject) {
+  return languageObject[ "code"] == window.languageCodeToCheck;
+}
+//
+//
+//
 function getLanguagesUsed(regLanguages) {
   regLanguages.forEach(checkUsed);
   return;
@@ -289,7 +290,7 @@ function getLanguagesUsed(regLanguages) {
 function checkUsed(languageObject) {
   var languageCodeUsed =[];
   var theLanguageLabel = "";
-  window.languageCodeToCheck = languageObject["code"];
+  window.languageCodeToCheck = languageObject[ "code"];
   //  languageCodeUsed = window.publishedElements.filter(filterLanguageCode);
   if (typeof window.publishedElements.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
     //  if (languageCodeUsed.length > 0) {
@@ -309,10 +310,10 @@ function getRtl(languageCode) {
   }
   window.languageCodeToCheck = languageCode;
   theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
-  return theLanguage[0]["rtl"];
-}
-function getLanguageFromLanguages(languageObject) {
-  return languageObject["code"] == window.languageCodeToCheck;
+  //
+  // Return the rtl value for the only entry in the array
+  //
+  return theLanguage[0][ "rtl"];
 }
 //
 // Get entry data from jsonld
