@@ -805,9 +805,9 @@ function formatLanguagesBlock() {
     theLanguagesBlock += '<p>An object element set uses English labels only.</p>';
     break;
     default:
-    var languages = window.regLanguages;
+    var theLanguages = window.regLanguages;
     theLanguagesBlock += '<ul>';
-    languages.forEach(checkUsed);
+    theLanguages.forEach(checkUsed);
     theLanguagesBlock += window.vocLanguagesSelector;
     theLanguagesBlock += '</ul>';
   }
