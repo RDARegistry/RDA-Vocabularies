@@ -302,7 +302,7 @@ function checkUsed(languageRow) {
 // Get rtl for language code from regLanguages
 //
 function getRtl(languageCode) {
-  var theLanguage = window.regLanguage.filter(getLanguageFromLanguages);
+  var theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
   return theLanguage["rtl"];
 }
 function getLanguageFromLanguages(languageObject) {
