@@ -7,12 +7,12 @@
 //
 // RDA Registry base domain
 //
-const window.baseDomain = "http://www.rdaregistry.info/";
+var baseDomain = "http://www.rdaregistry.info/";
 //
 // Array of jsonld objects for the possible languages of the vocabulary
 // Object includes language code, label in English, and indication of right-to-left display
 //
-const window.regLanguages =[ {
+var regLanguages =[ {
   code: "ar", label: "Arabic", rtl: true
 }, {
   code: "ca", label: "Catalan", rtl: false
