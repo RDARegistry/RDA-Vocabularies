@@ -312,7 +312,7 @@ function getRtl(languageCode) {
   return theLanguage["rtl"];
 }
 function getLanguageFromLanguages(languageObject) {
-  return languageObject["code"] = window.languageCodeToCheck;
+  return languageObject["code"] == window.languageCodeToCheck;
 }
 //
 // Get entry data from jsonld
