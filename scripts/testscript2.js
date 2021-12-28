@@ -791,9 +791,9 @@ function setPageDetails(json) {
   document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
   document.getElementById("indexTitle").innerHTML = theTableTitle;
 }
-
+//
 // Format Languages block
-
+//
 function formatLanguagesBlock() {
   var theLanguagesBlock = "";
   var theLanguages = window.regLanguages;
@@ -811,13 +811,11 @@ function formatLanguagesBlock() {
     theLanguagesBlock += window.vocLanguagesSelector;
     theLanguagesBlock += '</ul>';
   }
-  
   return theLanguagesBlock;
 }
-
-
+//
 // Format Semantics block
-
+//
 function formatSemanticsBlock() {
   
   var theSemanticsBlock = "";
