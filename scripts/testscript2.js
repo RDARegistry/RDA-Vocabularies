@@ -796,6 +796,7 @@ function setPageDetails(json) {
 
 function formatLanguagesBlock() {
   var theLanguagesBlock = "";
+  var theLanguages = window.regLanguages;
   theLanguagesBlock += '<h3>Languages</h3>';
   switch (window.theVocKind) {
     case "datatype":
@@ -805,7 +806,6 @@ function formatLanguagesBlock() {
     theLanguagesBlock += '<p>An object element set uses English labels only.</p>';
     break;
     default:
-    var theLanguages = window.regLanguages;
     theLanguagesBlock += '<ul>';
     theLanguages.forEach(checkUsed);
     theLanguagesBlock += window.vocLanguagesSelector;
