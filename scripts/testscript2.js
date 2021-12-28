@@ -280,16 +280,16 @@ function getDomain(vocTitle) {
   return theVocDomain;
 }
 //
-function getLanguages(regLanguages) {
+function getLanguagesUsed(regLanguages) {
   regLanguages.forEach(checkUsed);
   return;
 }
 //
 
-function checkUsed(languageRow) {
+function checkUsed(languageObject) {
   var languageCodeUsed =[];
   var theLanguageLabel = "";
-  window.languageCodeToCheck = languageRow.code;
+  window.languageCodeToCheck = languageObject["code"];
   //  languageCodeUsed = window.publishedElements.filter(filterLanguageCode);
   if (typeof window.publishedElements.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
     //  if (languageCodeUsed.length > 0) {
@@ -302,7 +302,13 @@ function checkUsed(languageRow) {
 // Get rtl for language code from regLanguages
 //
 function getRtl(languageCode) {
-  var theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
+  var theLanguage = "";
+  var theLanguageCode = "en";
+  if (typeof languageCode != "undefined") {
+    theLanguageCode = languageCode;
+  }
+  window.languageCodeToCheck = languageCode;
+  theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
   return theLanguage["rtl"];
 }
 function getLanguageFromLanguages(languageObject) {
@@ -772,7 +778,7 @@ function setPageDetails(json) {
   
   // Get the vocabulary languages display list
   
-  //    getLanguages(regLanguages);
+  //    getLanguagesUsed(regLanguages);
   
   // Push to block values to the page
   
