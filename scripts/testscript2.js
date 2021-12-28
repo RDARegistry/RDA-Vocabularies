@@ -143,7 +143,7 @@ function directify(string, languageCode) {
 //
 function checkRtl(obj) {
   var isRtl = false;
-//  var theLanguageCode = window.theCurrentLanguageCode;
+  var theLanguageCode = window.theCurrentLanguageCode;
   if (obj['code'] == theLanguageCode) {
     isRtl = obj['rtl']
   }
