@@ -49,12 +49,12 @@ var regLanguages =[ {
 var curiePrefix = "";
 var localIDToSearch = "";
 var languageCodeToCheck = "";
-var publishedElements;
 var theCurrentLanguageCode = "";
 var theVocData = "";
 var theVocDomain = "";
 var theVocKind = "";
 var theVocMetadata = "";
+var theVocPublishedElements;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
@@ -290,8 +290,8 @@ function checkUsed(languageObject) {
   var languageCodeUsed =[];
   var theLanguageLabel = "";
   window.languageCodeToCheck = languageObject[ "code"];
-  //  languageCodeUsed = window.publishedElements.filter(filterLanguageCode);
-  if (typeof window.publishedElements.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
+  //  languageCodeUsed = window.theVocPublishedElements.filter(filterLanguageCode);
+  if (typeof window.theVocPublishedElements.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
     //  if (languageCodeUsed.length > 0) {
     theLanguageLabel = languageRow.label;
     window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
@@ -707,7 +707,7 @@ function setPageDetails(json) {
   // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
   
   theData = json[ "@graph"];
-  window.publishedElements = theData.filter(filterPublished);
+  window.theVocPublishedElements = theData.filter(filterPublished);
   
   // Get the vocabulary title for the Header block
   
@@ -738,12 +738,12 @@ function setPageDetails(json) {
   
   // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
   
-  theVocEntriesTotal = window.publishedElements.length;
+  theVocEntriesTotal = window.theVocPublishedElements.length;
   theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + window.theVocMetadata.versionInfo + '">' + window.theVocMetadata.versionInfo + '</a>';
   
   // Example curie is first published element in data and may not be the lowest in curie order
   
-  theCurieExURI = getURI(window.publishedElements[0]);
+  theCurieExURI = getURI(window.theVocPublishedElements[0]);
   theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
   
   // Element sets and value vocabularies have different filepath constructors
