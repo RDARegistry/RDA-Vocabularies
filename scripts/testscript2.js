@@ -59,7 +59,7 @@ var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
 //
-// Set the current language code
+// Initialize the current language code from the page URL
 //
 theCurrentLanguageCode = getLanguageCodeFromURL();
 //
@@ -78,17 +78,18 @@ window.onhashchange = function () {
 //
 function getLanguageCodeFromURL() {
   //
-  // Returns the language code from the page URL
+  // Sts the current language code from the page URL
   // 2-letter code is specified by appending "language=aa" to the vocabulary/entry URL
   // Default code is for English
   //
-  var theLanguageCode = "en";
   var theURL = window.location.href;
   var theIndex = theURL.indexOf("language=");
   if (theIndex > 0) {
-    theLanguageCode = theURL.substr(theIndex + 9, 2);
+    window.theCurrentLanguageCode = theURL.substr(theIndex + 9, 2);
+  } else {
+    window.theCurrentLanguageCode = "en"
   }
-  return theLanguageCode;
+  return;
 }
 //
 // Get the anchor (# string) from the page URL
@@ -283,7 +284,8 @@ function getLanguagesUsed(regLanguages) {
   return;
 }
 //
-
+//
+//
 function checkUsed(languageObject) {
   var languageCodeUsed =[];
   var theLanguageLabel = "";
@@ -295,7 +297,6 @@ function checkUsed(languageObject) {
     window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
 }
-
 //
 // Get rtl for language code from regLanguages
 //
@@ -386,16 +387,6 @@ function getStatus(row) {
   return theStatus;
 }
 //
-function getTitle(vocMetadata) {
-  // Returns the vocabulary title from metadata
-  
-  var theTitle = "";
-  if (typeof vocMetadata.title != "undefined") {
-    theTitle = vocMetadata.title;
-  }
-  return theTitle;
-}
-//
 function getURI(row) {
   // Returns a URI from a jsonld row
   
@@ -449,47 +440,45 @@ function getValueByLanguage(row, languageCode, defaultLanguageCode) {
   return theString;
 }
 //
-
-function getVocKind(vocURI) {
-  // Returns the kind of vocabulary from the vocabulary URI
+// Get the kind of vocabulary
+//
+function getVocKind() {
+  // Sets the kind of vocabulary from the vocabulary URI
   // The kind is based on the URI pattern
-  
-  var theVocKind = "";
-  var theVocURI = "";
-  if (typeof vocURI != "undefined") {
-    theVocURI = vocURI;
-    
-    // value vocabulary uses "termlist" in URI/filepath
-    
-    if (theVocURI.indexOf("/termList/") > -1) {
-      theVocKind = "value";
+  //
+  if (typeof window.theVocURI != "undefined") {
+    //
+    // Value vocabulary uses "termlist" in URI/filepath
+    //
+    if (window.theVocURI.indexOf("/termList/") > -1) {
+      window.theVocKind = "value";
     }
-    
-    // datatype element set uses "datatype" in URI/filepath
-    
-    else if (theVocURI.indexOf("/datatype/") > -1) {
-      theVocKind = "datatype";
+    //
+    // Datatype element set uses "datatype" in URI/filepath
+    //
+    else if (window.theVocURI.indexOf("/datatype/") > -1) {
+      window.theVocKind = "datatype";
     }
-    
-    // object element set uses "object" in URI/filepath
-    
-    else if (theVocURI.indexOf("/object/") > -1) {
-      theVocKind = "object";
+    //
+    // Object element set uses "object" in URI/filepath
+    //
+    else if (window.theVocURI.indexOf("/object/") > -1) {
+      window.theVocKind = "object";
     }
-    
-    // classes element set uses entity code "c" in URI/filepath
-    
-    else if (theVocURI.indexOf("/c/") > -1) {
-      theVocKind = "class";
+    //
+    // Classes element set uses entity code "c" in URI/filepath
+    //
+    else if (window.theVocURI.indexOf("/c/") > -1) {
+      window.theVocKind = "class";
     }
-    
-    // all other vocabularies are canonical element sets
-    
+    //
+    // Default: all other vocabularies are canonical element sets
+    //
     else {
-      theVocKind = "canonical";
+      window.theVocKind = "canonical";
     }
   }
-  return theVocKind;
+  return;
 }
 //
 function getLinkForDetailLabel(uri, label, languageCode) {
@@ -726,9 +715,9 @@ function setPageDetails(json) {
   
   window.theVocURI = window.theVocMetadata[ "@id"];
   
-  window.theVocKind = getVocKind(window.theVocURI);
+  getVocKind();
   
-  window.theVocDomain = getDomain();
+  getDomain();
   
   // Set the table title from the kind of vocabulary
   // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
