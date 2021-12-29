@@ -242,35 +242,32 @@ function getCuriePrefix() {
   return;
 }
 //
-function getDomain(vocTitle) {
+// Get the vocabulary domain
+//
+function getDomain() {
   //
-  // Sets the vocabulary domain
+  // Sets the vocabulary domain extracted from the vocabulary title
   //
-  var theVocDomain = "";
-  var theVocTitle = "";
-  if (typeof vocTitle != "undefined") {
-    theVocTitle = vocTitle;
-  }
   switch (window.theVocKind) {
     case "canonical":
-    theVocDomain = theVocTitle.replace("properties", "").trim();
+    window.theVocDomain = window.theVocTitle.replace("properties", "").trim();
     break;
     case "datatype":
-    theVocDomain = theVocTitle.replace("datatype properties", "").trim();
+    window.theVocDomain = window.theVocTitle.replace("datatype properties", "").trim();
     break;
     case "datatype":
-    theVocDomain = theVocTitle.replace("object properties", "").trim();
+    window.theVocDomain = window.theVocTitle.replace("object properties", "").trim();
     break;
     case "class":
-    theVocDomain = "Classes";
+    window.theVocDomain = "Classes";
     break;
     case "value":
-    theVocDomain = "Concepts";
+    window.theVocDomain = "Concepts";
     break;
     default:
-    theVocDomain = "Properties";
+    window.theVocDomain = "Properties";
   }
-  return theVocDomain;
+  return;
 }
 //
 // Get language data for the code to be checked from Registry languages array
@@ -731,7 +728,7 @@ function setPageDetails(json) {
   
   window.theVocKind = getVocKind(window.theVocURI);
   
-  window.theVocDomain = getDomain(window.theVocTitle);
+  window.theVocDomain = getDomain();
   
   // Set the table title from the kind of vocabulary
   // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
@@ -915,7 +912,6 @@ if (typeof dataSource !== "undefined") {
   $(document).ready(
   function () {
     var pageTable = $("#pindex");
-    var vocMetadata;
     var table;
     //
     // Set table to datatable instance
