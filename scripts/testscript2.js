@@ -930,12 +930,12 @@ if (typeof dataSource !== "undefined") {
           //
           window.theVocMetadata = json[ "@graph"][0];
           //
-          // get vocabulary data; filter out first row of graph
+          // Get vocabulary data; filter out first row of graph
           //
           json.data = json[ "@graph"].filter(filterData);
-          theVocData = json.data;
+          window.theVocData = json.data;
           //
-          // get vocabulary curie prefix
+          // Get vocabulary curie prefix
           //
           getCuriePrefix();
           return json.data;
@@ -989,7 +989,7 @@ if (typeof dataSource !== "undefined") {
         //
         setPageDetails(json);
         //
-        // set language indicator style; border colour indicates on/selected
+        // Set language indicator style; border colour indicates on/selected
         //
         $("#lang_" + theCurrentLanguageCode).css({
           "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
