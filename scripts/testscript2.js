@@ -152,7 +152,6 @@ function listify(theString) {
   //
   return '<li>' + theString + '</li>';
 }
-
 //
 function quotify(theString) {
   //
@@ -272,13 +271,6 @@ function getDomain() {
 function getLanguageFromLanguages(languageObject) {
   return languageObject[ "code"] == window.languageCodeToCheck;
 }
-//
-//
-//
-/* function getLanguagesUsed(regLanguages) {
-regLanguages.forEach(getLanguageIsUsed);
-return;
-} */
 //
 // Check for use of specified language
 //
@@ -583,7 +575,7 @@ function formatDetail(d) {
   
   if (typeof d != "undefined") {
     if (typeof d.note != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.note, theCurrentLanguageCode), "Scope notes", theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.note, window.theCurrentLanguageCode), "Scope notes", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.domain != "undefined") {
@@ -607,15 +599,15 @@ function formatDetail(d) {
       detailTable += detailRow;
     }
     if (typeof d.altLabel != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.altLabel, theCurrentLanguageCode), "Alternate label", theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.altLabel, window.theCurrentLanguageCode), "Alternate label", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.ToolkitLabel != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel, theCurrentLanguageCode), "Toolkit label", theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel, window.theCurrentLanguageCode), "Toolkit label", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.ToolkitDefinition != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition, theCurrentLanguageCode), "Toolkit definition", theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition, window.theCurrentLanguageCode), "Toolkit definition", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.status != "undefined") {
@@ -947,16 +939,6 @@ function filterData(obj, index) {
   return index > 0;
 }
 //
-// Filter for current language code used in published vocabulary entries
-//
-function filterLanguageCode(obj) {
-  var isUsed = false;
-  if (typeof obj.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
-    isUsed = true;
-  }
-  return isUsed;
-}
-//
 // Filter for vocabulary entries with published status
 //
 function filterPublished(value, index, array) {
@@ -1025,14 +1007,14 @@ if (typeof dataSource !== "undefined") {
         "name": 'Label',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(strongify(getValueByLanguage(getLabel(row), theCurrentLanguageCode, "en")));
+          return makeColumn(strongify(getValueByLanguage(getLabel(row), window.theCurrentLanguageCode, "en")));
         }
       }, {
         "class": "definition",
         "name": 'Definition',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumn(getValueByLanguage(getDefinition(row), theCurrentLanguageCode, "en"));
+          return makeColumn(getValueByLanguage(getDefinition(row), window.theCurrentLanguageCode, "en"));
         }
       }, {
         "class": "status",
@@ -1050,7 +1032,7 @@ if (typeof dataSource !== "undefined") {
         //
         // Set language indicator style; border colour indicates on/selected
         //
-        $("#lang_" + theCurrentLanguageCode).css({
+        $("#lang_" + window.theCurrentLanguageCode).css({
           "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
         });
       },
