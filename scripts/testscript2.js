@@ -766,31 +766,31 @@ function setPageDetails(json) {
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
     switch (window.theVocDomain) {
-      case "Agent";
+      case "Agent":
       filenameLocal = "a";
       break;
-      case "Expression";
+      case "Expression":
       filenameLocal = "e";
       break;
-      case "Item";
+      case "Item":
       filenameLocal = "i";
       break;
-      case "Manifestation";
+      case "Manifestation":
       filenameLocal = "m";
       break;
-      case "Nomen";
+      case "Nomen":
       filenameLocal = "n";
       break;
-      case "Place";
+      case "Place":
       filenameLocal = "p";
       break;
-      case "RDA Entity";
+      case "RDA Entity":
       filenameLocal = "x";
       break;
-      case "Timespan";
+      case "Timespan":
       filenameLocal = "t";
       break;
-      case "Work";
+      case "Work":
       filenameLocal = "w";
       break;
     }
