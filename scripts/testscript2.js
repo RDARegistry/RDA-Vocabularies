@@ -617,6 +617,9 @@ function formatDetailRow(rowValue, rowLabel) {
   if (typeof rowValue != "undefined") {
     theRowValue = rowValue;
   }
+  else {
+    theRowValue = window.detailList;
+  }
   if (typeof rowLabel != "undefined") {
     theRowLabel = rowLabel + ":";
   }
