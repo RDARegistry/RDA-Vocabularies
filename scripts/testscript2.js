@@ -674,10 +674,10 @@ function formMultivalueDetail(detailArray) {
   return;
 }
 function addDetailItem(obj) {
-  label = quotify(getLabel(obj));
-  uri = getURI(obj);
-  curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
-  detailItem = listify(curieLink + " [" + label + " (en)]");
+  var label = quotify(getLabel(obj));
+  var uri = getURI(obj);
+  var curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
+  var detailItem = listify(curieLink + " [" + label + " (en)]");
   window.detailList += detailItem;
   return;
 }
