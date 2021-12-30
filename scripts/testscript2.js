@@ -149,7 +149,7 @@ function listify(theString) {
   //
   // Returns a string marked as a list item
   //
-  return '<li>' + theString + '</li' >;
+  return '<li>' + theString + '</li>';
 }
 
 //
