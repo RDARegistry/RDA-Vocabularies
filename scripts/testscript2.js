@@ -209,7 +209,7 @@ function makeCurieFromURI(uri, prefix) {
     theURI = uri;
   }
   //
-  // check and set curie prefix for datatype and object children
+  // Check and set curie prefix for datatype and object children
   //
   if (theURI.indexOf("datatype") > 0) {
     thePrefix += "d";
@@ -217,7 +217,9 @@ function makeCurieFromURI(uri, prefix) {
   if (theURI.indexOf("object") > 0) {
     thePrefix += "o";
   }
-  // replace URI up to last sub-folder slash with prefix and colon
+  //
+  // Replace URI up to last sub-folder slash with prefix and colon
+  //
   if (theURI !== null && typeof theURI.replace === "function") {
     theCurie = thePrefix + ":" + theURI.substr(1 + theURI.lastIndexOf("/"));
   }
@@ -272,19 +274,19 @@ function getLanguageFromLanguages(languageObject) {
 //
 //
 //
-function getLanguagesUsed(regLanguages) {
-  regLanguages.forEach(checkUsed);
-  return;
-}
+/* function getLanguagesUsed(regLanguages) {
+regLanguages.forEach(getLanguageIsUsed);
+return;
+} */
 //
 //
 //
-function checkUsed(languageObject) {
+function getLanguageIsUsed(languageObject) {
   var languageCodeUsed =[];
   var theLanguageLabel = "";
   window.languageCodeToCheck = languageObject[ "code"];
   //  languageCodeUsed = window.theVocPublishedElements.filter(filterLanguageCode);
-  if (typeof window.theVocPublishedElements['ToolkitLabel'][window.languageCodeToCheck] != "undefined") {
+  if (typeof window.theVocPublishedElements[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
     //  if (languageCodeUsed.length > 0) {
     theLanguageLabel = languageRow.label;
     window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
@@ -849,7 +851,7 @@ function formatLanguagesBlock() {
     break;
     default:
     theLanguagesBlock += '<ul>';
-    theLanguages.forEach(checkUsed);
+    theLanguages.forEach(getLanguageIsUsed);
     theLanguagesBlock += window.vocLanguagesSelector;
     theLanguagesBlock += '</ul>';
   }
