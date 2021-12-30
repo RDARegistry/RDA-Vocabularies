@@ -791,10 +791,10 @@ function setPageDetails(json) {
   document.getElementById("linkNT").href = theLinkNT;
   document.getElementById("linkXML").href = theLinkXML;
   //    document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
-  theLanguagesBlock = formatLanguagesBlock();
+/*   theLanguagesBlock = formatLanguagesBlock();
   if (theLanguagesBlock.length > 0) {
     document.getElementById("vocHasLanguages").innerHTML = theLanguagesBlock;
-  }
+  } */
   theSemanticsBlock = formatSemanticsBlock();
   if (theSemanticsBlock.length > 0) {
     document.getElementById("vocHasSemantics").innerHTML = theSemanticsBlock;
