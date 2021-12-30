@@ -760,9 +760,40 @@ function setPageDetails(json) {
   switch (window.theVocKind) {
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
+    filepathPart = "termList";
     break;
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
+    filepathPart = "Elements";
+    switch (window.theVocDomain) {
+      case "Agent";
+      filenameLocal = "a";
+      break;
+      case "Expression";
+      filenameLocal = "e";
+      break;
+      case "Item";
+      filenameLocal = "i";
+      break;
+      case "Manifestation";
+      filenameLocal = "m";
+      break;
+      case "Nomen";
+      filenameLocal = "n";
+      break;
+      case "Place";
+      filenameLocal = "p";
+      break;
+      case "RDA Entity";
+      filenameLocal = "x";
+      break;
+      case "Timespan";
+      filenameLocal = "t";
+      break;
+      case "Work";
+      filenameLocal = "w";
+      break;
+    }
   }
   //
   // Set the file links for the Downloads block
