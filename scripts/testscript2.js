@@ -791,9 +791,9 @@ function setPageDetails(json) {
   document.getElementById("linkNT").href = theLinkNT;
   document.getElementById("linkXML").href = theLinkXML;
   //    document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
-/*   theLanguagesBlock = formatLanguagesBlock();
+  /*   theLanguagesBlock = formatLanguagesBlock();
   if (theLanguagesBlock.length > 0) {
-    document.getElementById("vocHasLanguages").innerHTML = theLanguagesBlock;
+  document.getElementById("vocHasLanguages").innerHTML = theLanguagesBlock;
   } */
   theSemanticsBlock = formatSemanticsBlock();
   if (theSemanticsBlock.length > 0) {
@@ -828,10 +828,15 @@ function formatLanguagesBlock() {
 // Format Semantics block
 //
 function formatSemanticsBlock() {
-  
+  //
+  // Returns formatted content based on the vocabulary kind for the Semantics Block
+  //
   var theSemanticsBlock = "";
   theSemanticsBlock += '<h3>Semantics</h3>';
   switch (window.theVocKind) {
+    //
+    // Canonical element set references domain and datatype and object element sets
+    //
     case "canonical":
     var theVocToDatatype = '<a href="' + window.theVocURI + 'datatype/' + '">' + window.theVocTitle.replace("properties", "datatype properties") + '</a>';
     var theVocToObject = '<a href="' + window.theVocURI + 'object/' + '">' + window.theVocTitle.replace("properties", "object properties") + '</a>';
@@ -845,6 +850,9 @@ function formatSemanticsBlock() {
     case "class":
     theSemanticsBlock = "";
     break;
+    //
+    // Datatype element set references domain and canonical element set
+    //
     case "datatype":
     var theVocToParent = '<a href="' + window.theVocURI.replace("/datatype", "") + '">' + window.theVocTitle.replace("datatype properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
@@ -853,6 +861,9 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
+    //
+    // Object element set references domain and canonical element set
+    //
     case "object":
     var theVocToParent = '<a href="' + window.theVocURI.replace("/object", "") + '">' + window.theVocTitle.replace("object properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the object element set:</p>';
@@ -869,7 +880,6 @@ function formatSemanticsBlock() {
   }
   return theSemanticsBlock;
 }
-
 //
 // Filters
 //
