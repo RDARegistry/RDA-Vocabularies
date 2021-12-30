@@ -48,6 +48,7 @@ var regLanguages =[ {
 //
 var curiePrefix = "";
 var detailList = "";
+var languageIsUsed = false;
 var localIDToSearch = "";
 var languageCodeToCheck = "";
 var theCurrentLanguageCode = "";
@@ -55,7 +56,7 @@ var theVocData = "";
 var theVocDomain = "";
 var theVocKind = "";
 var theVocMetadata = "";
-var theVocPublishedElements;
+var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
@@ -282,15 +283,30 @@ return;
 //
 //
 function getLanguageIsUsed(languageObject) {
-  var languageCodeUsed =[];
   var theLanguageLabel = "";
+  //
+  // Get the language code to check from the language object
+  //
   window.languageCodeToCheck = languageObject[ "code"];
-  //  languageCodeUsed = window.theVocPublishedElements.filter(filterLanguageCode);
-  if (typeof window.theVocPublishedElements[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
-    //  if (languageCodeUsed.length > 0) {
-    theLanguageLabel = languageRow.label;
+  //  languageCodeUsed = window.theVocPublishedEntries.filter(filterLanguageCode);
+  //
+  // Check the language is used for the Toolkit label in any of the published elements of the vocabulary
+  //
+  window.languageIsUsed = false;
+  window.theVocPublishedEntries.forEach(getLanguageIsPublished);
+  if (window.languageIsUsed) {
+    theLanguageLabel = languageObject[ "label"];
     window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
+}
+//
+//
+//
+function getLanguageIsPublished(entryObject) {
+  if (typeof entryObject[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
+    window.languageIsUsed = true;
+  }
+  return;
 }
 //
 // Get rtl for language code from the Registry languages
@@ -714,7 +730,7 @@ function setPageDetails(json) {
   // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
   //
   theData = json[ "@graph"];
-  window.theVocPublishedElements = theData.filter(filterPublished);
+  window.theVocPublishedEntries = theData.filter(filterPublished);
   //
   // Get the global vocabulary title for the Header block
   //
@@ -749,12 +765,12 @@ function setPageDetails(json) {
   //
   // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
   //
-  theVocEntriesTotal = window.theVocPublishedElements.length;
+  theVocEntriesTotal = window.theVocPublishedEntries.length;
   theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + window.theVocMetadata.versionInfo + '">' + window.theVocMetadata.versionInfo + '</a>';
   //
   // Example curie is first published element in data and may not be the lowest in curie order
   //
-  theCurieExURI = getURI(window.theVocPublishedElements[0]);
+  theCurieExURI = getURI(window.theVocPublishedEntries[0]);
   theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
   //
   // Element sets and value vocabularies have different filepath constructors
@@ -840,7 +856,6 @@ function setPageDetails(json) {
 //
 function formatLanguagesBlock() {
   var theLanguagesBlock = "";
-  var theLanguages = window.regLanguages;
   theLanguagesBlock += '<h3>Languages</h3>';
   switch (window.theVocKind) {
     case "datatype":
@@ -851,7 +866,7 @@ function formatLanguagesBlock() {
     break;
     default:
     theLanguagesBlock += '<ul>';
-    theLanguages.forEach(getLanguageIsUsed);
+    window.regLanguages.forEach(getLanguageIsUsed);
     theLanguagesBlock += window.vocLanguagesSelector;
     theLanguagesBlock += '</ul>';
   }
