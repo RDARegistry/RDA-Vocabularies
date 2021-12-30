@@ -575,11 +575,11 @@ function formatDetail(d) {
       detailTable += detailRow;
     }
     if (typeof d.hasSubproperty != "undefined") {
-      detailRow = formatDetailRow(formMultivalueDetail(d.hasSubproperty), "Subproperties");
+      detailRow = formatDetailRow(formatMultivalueDetail(d.hasSubproperty), "Subproperties");
       detailTable += detailRow;
     }
     if (typeof d.subPropertyOf != "undefined") {
-      detailRow = formatDetailRow(formMultivalueDetail(d.subPropertyOf), "Superproperties");
+      detailRow = formatDetailRow(formatMultivalueDetail(d.subPropertyOf), "Superproperties");
       detailTable += detailRow;
     }
     if (typeof d.altLabel != "undefined") {
@@ -607,17 +607,22 @@ function formatDetail(d) {
   detailTable += '</table>';
   return detailTable;
 }
-
+//
+// Format row for detail display
+//
 function formatDetailRow(rowValue, rowLabel) {
-  // returns a two-column table row for the detail display
-  
+  //
+  // Returns a two-column table row for the detail display
+  //
   var theDetailRow = "";
   var theRowValue = "";
   var theRowLabel = "";
   if (typeof rowValue != "undefined") {
     theRowValue = rowValue;
-  }
-  else {
+  } else {
+    //
+    // Row value defaults to global detail list
+    //
     theRowValue = window.detailList;
   }
   if (typeof rowLabel != "undefined") {
@@ -627,60 +632,45 @@ function formatDetailRow(rowValue, rowLabel) {
   
   if (theRowValue.length > 0) {
     theDetailRow = '<tr>' + '<td class="detailLabel">' + divify(theRowLabel) + '</td>' + '<td class="detailValue">' + divify(theRowValue) + '</td>' + '</tr>';
-  }
-  else {
+  } else {
     theDetailRow = '<tr>' + '<th class="detailLabel"></th>' + '<th class="detailValue"></th>' + '</tr>';
   }
   return theDetailRow;
 }
 //
-// Format detail from array
+// Format detail list from array
 //
-function formatMultivalueDetail(arrayRow, vh) {
-  // Returns a formatted multi-value list in current language for detail entry
-  // The values are internal Curie links with English label
-  
-  var curieLink = "";
-  var detailArray = "";
-  var label = "";
-  var uri = "";
-  
-  // indicator for vertical or horizontal uri/label list
-  
-  var theVh = "";
-  if (typeof vh != "undefined") {
-    theVh = vh;
-  }
-  if (arrayRow instanceof Array) {
-    for (i = 0; i < arrayRow.length;++ i) {
-      label = quotify(getLabel(arrayRow[i]));
-      uri = getURI(arrayRow[i]);
-      curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
-      switch (theVh) {
-        case "h":
-        detailArray += divify(curieLink + " [" + label + " (en)]");
-        break;
-        case "v":
-        detailArray += divify(curieLink) + divify(" [" + label + " (en)]");
-        break;
-        default:
-        detailArray += divify(curieLink + " [" + label + " (en)]");
-      }
-    }
-  }
-  return detailArray;
-}
-function formMultivalueDetail(detailArray) {
+function formatMultivalueDetail(detailArray) {
+  //
+  // Sets a global variable to a list of entries in the array of detail objects
+  // Initialize list
+  //
   window.detailList = '<ul>';
-  detailArray.forEach(addDetailItem);
+  //
+  // Process each object in the array
+  //
+  detailArray.forEach(formatValueForMultivalueDetail);
+  //
+  // Finalize list
+  //
   window.detailList += '</ul>';
   return;
 }
-function addDetailItem(obj) {
-  var label = quotify(getLabel(obj));
-  var uri = getURI(obj);
+//
+// Add an item to the detail list
+//
+function formatValueForMultivalueDetail(detailObject) {
+  //
+  // Adds an item to a global variable for a list of detail entries
+  // List item is formatted from jsonld detail object
+  //
+  var label = quotify(getLabel(detailObject));
+  var uri = getURI(detailObject);
   var curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
   var detailItem = listify(curieLink + " [" + label + " (en)]");
+  //
+  // Add item to the global detail list
+  //
   window.detailList += detailItem;
   return;
 }
