@@ -733,7 +733,6 @@ function setPageDetails(json) {
   // Set the table title from the kind of vocabulary
   // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
   //
-//  var vocKind = window.theVocKind;
   switch (window.theVocKind) {
     case "class":
     theTableTitle = "Classes";
@@ -755,30 +754,30 @@ function setPageDetails(json) {
   //
   theCurieExURI = getURI(window.theVocPublishedElements[0]);
   theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
-  
+  //
   // Element sets and value vocabularies have different filepath constructors
-  
-  switch (vocKind) {
+  //
+  switch (window.theVocKind) {
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
     break;
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
   }
-  
+  //
   // Set the file links for the Downloads block
-  
+  //
   theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
   theLinkJSONLD = baseDomain + 'jsonld/' + filepathPart + '/' + filenameLocal + ".jsonld";
   theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
   theLinkXML = baseDomain + 'xml/' + filepathPart + '/' + filenameLocal + '.xml';
-  
+  //
   // Get the vocabulary languages display list
-  
+  //
   //    getLanguagesUsed(regLanguages);
-  
+  //
   // Push to block values to the page
-  
+  //
   document.getElementById("vocMenuLink").innerHTML = theVocMenuLink;
   document.getElementById("vocTitle").innerHTML = window.theVocTitle;
   document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
