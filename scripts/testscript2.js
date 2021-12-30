@@ -674,7 +674,7 @@ function addDetailItem(obj) {
   label = quotify(getLabel(obj));
   uri = getURI(obj);
   curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
-  detailItem = listify((curieLink + " [" + label + " (en)]");
+  detailItem = listify(curieLink + " [" + label + " (en)]");
   window.detailList += detailItem;
   return;
 }
