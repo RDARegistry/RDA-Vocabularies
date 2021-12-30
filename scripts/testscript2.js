@@ -673,19 +673,21 @@ function formatMultivalueDetail(arrayRow, vh) {
   return detailArray;
 }
 function formMultivalueDetail(detailArray) {
-  window.detailList = '<li>';
+  window.detailList = '<ul>';
   detailArray.forEach(addDetailItem);
-  window.detailList += '</li>';
+  window.detailList += '</ul>';
   return;
 }
 function addDetailItem(obj) {
-  label = quotify(getLabel(obj));
+  label = quotify(getLabel(obj);
   uri = getURI(obj);
   curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
   detailItem = listify((curieLink + " [" + label + " (en)]");
   window.detailList += detailItem;
   return;
 }
+function listify(theString);
+ return '<li>' + theString + '</li'>;
 //
 //
 //
