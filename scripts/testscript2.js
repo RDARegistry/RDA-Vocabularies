@@ -708,28 +708,33 @@ function setPageDetails(json) {
   var theVocMenuLink = "";
   var theVocToDatatype = "";
   var theVocToObject = "";
-  
+  //
   // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
-  
+  //
   theData = json[ "@graph"];
   window.theVocPublishedElements = theData.filter(filterPublished);
-  
-  // Get the vocabulary title for the Header block
-  
+  //
+  // Get the global vocabulary title for the Header block
+  //
   window.theVocTitle = window.theVocMetadata.title[ "en"];
-  
+  //
+  // Get the global vocabulary URI
+  //
   window.theVocURI = window.theVocMetadata[ "@id"];
-  
+  //
+  // Get the global kind of vocabulary
+  //
   getVocKind();
-  
+  //
+  // Get the global vocabulary domain
+  //
   getDomain();
-  
+  //
   // Set the table title from the kind of vocabulary
   // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
-  
-  var vocKind = window.theVocKind;
-  
-  switch (vocKind) {
+  //
+//  var vocKind = window.theVocKind;
+  switch (window.theVocKind) {
     case "class":
     theTableTitle = "Classes";
     break;
@@ -740,14 +745,14 @@ function setPageDetails(json) {
     theTableTitle = "Properties";
   }
   theTableTitle += " Index";
-  
+  //
   // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
-  
+  //
   theVocEntriesTotal = window.theVocPublishedElements.length;
   theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + window.theVocMetadata.versionInfo + '">' + window.theVocMetadata.versionInfo + '</a>';
-  
+  //
   // Example curie is first published element in data and may not be the lowest in curie order
-  
+  //
   theCurieExURI = getURI(window.theVocPublishedElements[0]);
   theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
   
