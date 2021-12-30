@@ -47,6 +47,7 @@ var regLanguages =[ {
 // Global variables
 //
 var curiePrefix = "";
+var detailList = "";
 var localIDToSearch = "";
 var languageCodeToCheck = "";
 var theCurrentLanguageCode = "";
@@ -298,7 +299,7 @@ function checkUsed(languageObject) {
   }
 }
 //
-// Get rtl for language code from regLanguages
+// Get rtl for language code from the Registry languages
 //
 function getRtl(languageCode) {
   var theLanguage = "";
@@ -582,11 +583,11 @@ function formatDetail(d) {
       detailTable += detailRow;
     }
     if (typeof d.hasSubproperty != "undefined") {
-      detailRow = formatDetailRow(formatMultivalueDetail(d.hasSubproperty, "h"), "Subproperties");
+      detailRow = formatDetailRow(formMultivalueDetail(d.hasSubproperty), "Subproperties");
       detailTable += detailRow;
     }
     if (typeof d.subPropertyOf != "undefined") {
-      detailRow = formatDetailRow(formatMultivalueDetail(d.subPropertyOf, "h"), "Superproperties");
+      detailRow = formatDetailRow(formMultivalueDetail(d.subPropertyOf), "Superproperties");
       detailTable += detailRow;
     }
     if (typeof d.altLabel != "undefined") {
@@ -634,7 +635,9 @@ function formatDetailRow(rowValue, rowLabel) {
   }
   return theDetailRow;
 }
-
+//
+// Format detail from array
+//
 function formatMultivalueDetail(arrayRow, vh) {
   // Returns a formatted multi-value list in current language for detail entry
   // The values are internal Curie links with English label
@@ -668,6 +671,20 @@ function formatMultivalueDetail(arrayRow, vh) {
     }
   }
   return detailArray;
+}
+function formMultivalueDetail(detailArray) {
+  window.detailList = '<li>';
+  detailArray.forEach(addDetailItem);
+  window.detailList += '</li>';
+  return;
+}
+function addDetailItem(obj) {
+  label = quotify(getLabel(obj));
+  uri = getURI(obj);
+  curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
+  detailItem = listify((curieLink + " [" + label + " (en)]");
+  window.detailList += detailItem;
+  return;
 }
 //
 //
