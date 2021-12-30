@@ -280,24 +280,30 @@ regLanguages.forEach(getLanguageIsUsed);
 return;
 } */
 //
-//
+// Check for use of specified language
 //
 function getLanguageIsUsed(languageObject) {
+  //
+  // Checks that the code of a specified language object from the Registry languages is in use
+  //
   var theLanguageLabel = "";
   //
   // Get the language code to check from the language object
   //
   window.languageCodeToCheck = languageObject[ "code"];
-  //  languageCodeUsed = window.theVocPublishedEntries.filter(filterLanguageCode);
   //
   // Check the language is used for the Toolkit label in any of the published elements of the vocabulary
   //
   window.languageIsUsed = false;
   window.theVocPublishedEntries.forEach(getLanguageIsPublished);
+  //
+  // Add the language to the selector list if it is used
+  //
   if (window.languageIsUsed) {
     theLanguageLabel = languageObject[ "label"];
     window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
+  return;
 }
 //
 //
