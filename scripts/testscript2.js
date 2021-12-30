@@ -114,16 +114,12 @@ function getAnchor() {
 //
 // Set string orientation
 //
-function directify(string, languageCode) {
+function directify(theString, languageCode) {
   //
   // Returns a string wrapped in a div with right-to-left attribute for specified language code
   //
   var isRtl = false;
   var theLanguageCode = window.theCurrentLanguageCode;
-  var theString = "";
-  if (typeof string != "undefined") {
-    theString = string;
-  }
   if (typeof languageCode != "undefined") {
     theLanguageCode = languageCode;
   }
@@ -136,15 +132,11 @@ function directify(string, languageCode) {
   return theString;
 }
 //
-function divify(string, className) {
+function divify(theString, className) {
   //
   // Returns a string wrapped in a div with optional class name
   //
   var theClassName = "";
-  var theString = "";
-  if (typeof string != "undefined") {
-    theString = string;
-  }
   if (typeof className != "undefined") {
     theString = '<div class="' + className + '">' + theString + '</div>';
   } else {
@@ -153,26 +145,26 @@ function divify(string, className) {
   return theString;
 }
 //
-function quotify(string) {
+function listify(theString) {
+  //
+  // Returns a string marked as a list item
+  //
+  return '<li>' + theString + '</li' >;
+}
+
+//
+function quotify(theString) {
   //
   // Returns a string delimited with quotes
   //
-  var theString = "";
-  if (typeof string != "undefined") {
-    theString = string;
-  }
-  return '"' + string + '"';
+  return '"' + theString + '"';
 }
 //
-function strongify(string) {
+function strongify(theString) {
   //
   // Returns a string marked as strong
   //
-  var theString = "";
-  if (typeof string != "undefined") {
-    theString = string;
-  }
-  return '<strong>' + string + '</strong>';
+  return '<strong>' + theString + '</strong>';
 }
 //
 // Format links
@@ -679,15 +671,13 @@ function formMultivalueDetail(detailArray) {
   return;
 }
 function addDetailItem(obj) {
-  label = quotify(getLabel(obj);
+  label = quotify(getLabel(obj));
   uri = getURI(obj);
   curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
   detailItem = listify((curieLink + " [" + label + " (en)]");
   window.detailList += detailItem;
   return;
 }
-function listify(theString);
- return '<li>' + theString + '</li'>;
 //
 //
 //
