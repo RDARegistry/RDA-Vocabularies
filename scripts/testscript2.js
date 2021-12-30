@@ -284,7 +284,7 @@ function checkUsed(languageObject) {
   var theLanguageLabel = "";
   window.languageCodeToCheck = languageObject[ "code"];
   //  languageCodeUsed = window.theVocPublishedElements.filter(filterLanguageCode);
-  if (typeof window.theVocPublishedElements.ToolkitLabel[window.languageCodeToCheck] != "undefined") {
+  if (typeof window.theVocPublishedElements['ToolkitLabel'][window.languageCodeToCheck] != "undefined") {
     //  if (languageCodeUsed.length > 0) {
     theLanguageLabel = languageRow.label;
     window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
