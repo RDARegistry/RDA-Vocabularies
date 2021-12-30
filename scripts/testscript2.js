@@ -718,6 +718,7 @@ function searchLocalID() {
 function setPageDetails(json) {
   var filenameLocal = "";
   var filepathPart = "";
+  var theLanguagesBlock = "";
   var theSemanticsBlock = "";
   var theData;
   var theCurieExURI = "";
