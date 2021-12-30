@@ -625,6 +625,9 @@ function formatDetailRow(rowValue, rowLabel) {
   if (theRowValue.length > 0) {
     theDetailRow = '<tr>' + '<td class="detailLabel">' + divify(theRowLabel) + '</td>' + '<td class="detailValue">' + divify(theRowValue) + '</td>' + '</tr>';
   }
+  else {
+    theDetailRow = '<tr>' + '<th class="detailLabel"></th>' + '<th class="detailValue"></th>' + '</tr>';
+  }
   return theDetailRow;
 }
 //
