@@ -307,7 +307,7 @@ function getLanguageIsPublished(entryObject) {
 // Get rtl for language code from the Registry languages
 //
 function getRtl() {
-  var theLanguageArray;
+  var theLanguageArray = "";
   window.languageCodeToCheck = window.theCurrentLanguageCode;
   theLanguageArray = window.regLanguages.filter(getLanguageFromLanguages);
   //
