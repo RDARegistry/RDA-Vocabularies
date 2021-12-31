@@ -314,7 +314,7 @@ function getRtl() {
   } else {
     theLanguageCode = window.theDefaultLanguageCode;
   }
-  window.languageCodeToCheck = languageCode;
+  window.languageCodeToCheck = theLanguageCode;
   theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
   //
   // Return the rtl value for the only entry in the array
