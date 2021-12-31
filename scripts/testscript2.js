@@ -468,47 +468,31 @@ function getVocKind() {
   return;
 }
 //
-function getLinkForDetailLabel(uri, label) {
-  // Returns internal link for Registry URL with label in selected language
-  // language code is omitted to get permalink
-  
-  var theLabel = "";
-  var url = "";
-  if (typeof label != "undefined") {
-    theLabel = label;
+function getPermalink(uri) {
+  var thePermalink = "";
+  if (typeof uri !== "undefined") {
+    thePermalink = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
   }
-  if (typeof uri != "undefined") {
-    url = makeURLFromURI(uri, window.theCurrentLanguageCode);
-  }
-  return linkify(theLabel, url);
+  return thePermalink;
 }
+
 //
 function makeColumnRow(content) {
   // returns column row content in a wrapper div with direction parameter
   return divify(content);
 }
 //
-function makeURLFromURI(uri, languageCode) {
-  // returns Registry URL with language parameter
-  
-  var url = "";
-  var theLanguageCode = "";
-  if (typeof languageCode != "undefined") {
-    theLanguageCode = languageCode;
+// Create Registry URL from entry URI
+//
+function getLanguageURL(permalink) {
+  //
+  // Returns permalink URL with current language parameter
+  //
+  var theUrl = "";
+  if (typeof permalink !== "undefined") {
+    theUrl = permalink.replace("#", "?language=" + window.theCurrentLanguageCode + "#");
   }
-  if (typeof uri !== "undefined") {
-    url = uri;
-    if (uri !== null && typeof uri.replace === "function") {
-      // Regular expression adds 'www' to domain and inserts hash to parameterize the local part
-      url = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
-      // no specified language gives the permalink (display default is English)
-      //                if (theLangCode.length != 0) {
-      // Insert language code parameter before hash
-      //                    url = url.replace("#", "?language=" + theLanguageCode + "#");
-      //                }
-    }
-  }
-  return url;
+  return theUrl;
 }
 //
 // Details display
@@ -638,7 +622,8 @@ function formatValueForMultivalueDetail(detailObject) {
   //
   var label = quotify(getLabel(detailObject));
   var uri = getURI(detailObject);
-  var detailItem = listify(linkify(uri, uri) + " [" + label + "@" + theDefaultLanguageCode + "]");
+  var theUrl = getLanguageURL(getPermalink(uri));
+  var detailItem = listify(linkify(theUrl, uri) + " [" + label + "@" + theDefaultLanguageCode + "]");
   //
   // Add item to the global detail list
   //
@@ -942,7 +927,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Permalink',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumnRow(getLinkForDetailLabel(getURI(row), "#"));
+          return makeColumnRow(linkify("#", getPermalink(uri)));
         }
       }, {
         "class": 'detailsControl',
