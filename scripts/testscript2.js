@@ -638,8 +638,7 @@ function formatValueForMultivalueDetail(detailObject) {
   //
   var label = quotify(getLabel(detailObject));
   var uri = getURI(detailObject);
-  var curieLink = linkify(makeCurieFromURI(uri, curiePrefix), uri);
-  var detailItem = listify(curieLink + " [" + label + " (en)]");
+  var detailItem = listify(linkify(label, uri) + " [" + label + " (en)]");
   //
   // Add item to the global detail list
   //
