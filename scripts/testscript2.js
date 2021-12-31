@@ -1024,7 +1024,7 @@ if (typeof dataSource !== "undefined") {
     
     $('#pindex').on('draw.dt', function () {
     var table = $("#pindex").DataTable();    
-    var theTablePage = table.pageInfo();
+    var theTablePage = table.page.info();
     if (theTablePage.length == 1) {
     
     $("#pindex").children("tbody").td.details-control.click();
