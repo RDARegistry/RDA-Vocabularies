@@ -121,7 +121,7 @@ function directify(theString) {
   // Returns a string wrapped in a div with right-to-left attribute for current language code
   //
   var isRtl = false;
-  isRtl = getRtl(window.theCurrentLanguageCode);
+  isRtl = getRtl();
   if (isRtl) {
     theString = '<div dir="rtl">' + theString + '</div>';
   } else {
@@ -307,14 +307,7 @@ function getLanguageIsPublished(entryObject) {
 // Get rtl for language code from the Registry languages
 //
 function getRtl() {
-  var theLanguage = "";
-  var theLanguageCode = "";
-  if (typeof languageCode != "undefined") {
-    theLanguageCode = languageCode;
-  } else {
-    theLanguageCode = window.theDefaultLanguageCode;
-  }
-  window.languageCodeToCheck = theLanguageCode;
+  window.languageCodeToCheck = window.theCurrentLanguageCode;
   theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
   //
   // Return the rtl value for the only entry in the array
