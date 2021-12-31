@@ -927,7 +927,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Permalink',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumnRow(linkify("#", getPermalink(getURI(row)));
+          return makeColumnRow(linkify("#", getPermalink(getURI(row)))(;
         }
       }, {
         "class": 'detailsControl',
