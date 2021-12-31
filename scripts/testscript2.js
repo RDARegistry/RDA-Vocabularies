@@ -307,12 +307,13 @@ function getLanguageIsPublished(entryObject) {
 // Get rtl for language code from the Registry languages
 //
 function getRtl() {
+  var theLanguageArray;
   window.languageCodeToCheck = window.theCurrentLanguageCode;
-  theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
+  theLanguageArray = window.regLanguages.filter(getLanguageFromLanguages);
   //
   // Return the rtl value for the only entry in the array
   //
-  return theLanguage[0][ "rtl"];
+  return theLanguageArray[0][ "rtl"];
 }
 //
 // Get entry data from jsonld
