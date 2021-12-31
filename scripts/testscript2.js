@@ -969,7 +969,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Label',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumnRow(strongify(getValueByLanguage(getLabel(row)));
+          return makeColumnRow(strongify(getValueByLanguage(getLabel(row))));
         }
       }, {
         "class": "definition",
