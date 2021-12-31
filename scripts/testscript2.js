@@ -427,7 +427,7 @@ function getValueByLanguage(entryObject) {
   // Add quotes to show it is a string value and markup as div
   //
   else {
-    theString = divify(quotify(entryObject[window.theDefaultLanguageCode]) + " [@" + window.theDefaultLanguageCode + "; no @" + theLanguageCode + "]");
+    theString = divify(quotify(entryObject[window.theDefaultLanguageCode]) + " [@" + window.theDefaultLanguageCode + "; no @" + window.theCurrentLanguageCode + "]");
   }
   return theString;
 }
