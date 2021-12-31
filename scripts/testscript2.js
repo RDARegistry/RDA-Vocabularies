@@ -63,7 +63,7 @@ var vocLanguagesSelector = "";
 //
 // Initialize the current language code from the page URL
 //
-window.theCurrentLanguageCode = getLanguageCodeFromURL();
+getLanguageCodeFromURL();
 //
 // Set the initial search filter to page URL anchor, if any
 //
