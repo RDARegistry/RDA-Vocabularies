@@ -946,7 +946,7 @@ if (typeof dataSource !== "undefined") {
           return makeColumnRow(getLinkForDetailLabel(getURI(row), "#"));
         }
       }, {
-        "class": 'details-control',
+        "class": 'detailsControl',
         "data": null,
         "defaultContent": '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>',
         "name": 'Detail',
@@ -1001,7 +1001,7 @@ if (typeof dataSource !== "undefined") {
     //
     // Add event listener for expanding and collapsing details
     //
-    pageTable.children("tbody").on('click', 'td.details-control', function () {
+    pageTable.children("tbody").on('click', 'td.detailsControl', function () {
       //
       // Get row containing the cell
       //
@@ -1022,14 +1022,22 @@ if (typeof dataSource !== "undefined") {
       }
     });
     
-    $('#pindex').on('draw.dt', function () {
-    var table = $("#pindex").DataTable();    
+    table.on('draw', function () {
+      var theTablePage = table.page.info();
+      if (theTablePage.length == 1) {
+        
+        $("#pindex").children("tbody").td.detailsControl.click();
+      }
+    });
+    
+    /*    $('#pindex').on('draw.dt', function () {
+    var table = $("#pindex").DataTable();
     var theTablePage = table.page.info();
     if (theTablePage.length == 1) {
     
-    $("#pindex").children("tbody").td.details-control.click();
+    $("#pindex").children("tbody").td.details - control.click();
     }
-    });
+    }); */
     
     $('input[type=search]').on('click', function () {
       if (history.pushState) {
