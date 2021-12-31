@@ -1023,8 +1023,9 @@ if (typeof dataSource !== "undefined") {
     });
     
     $('#pindex').on('draw.dt', function () {
-    var tablePage = pageTable.pageInfo();
-    if (tablePage.length == 1) {
+    var table = $("#pindex").DataTable();    
+    var theTablePage = table.pageInfo();
+    if (theTablePage.length == 1) {
     
     $("#pindex").children("tbody").td.details-control.click();
     }
