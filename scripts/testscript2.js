@@ -120,9 +120,11 @@ function directify(theString, languageCode) {
   // Returns a string wrapped in a div with right-to-left attribute for specified language code
   //
   var isRtl = false;
-  var theLanguageCode = window.theCurrentLanguageCode;
+  var theLanguageCode = "";
   if (typeof languageCode != "undefined") {
     theLanguageCode = languageCode;
+  } else {
+    theLanguageCode = window.theCurrentLanguageCode;
   }
   isRtl = getRtl(languageCode);
   if (isRtl) {
@@ -544,35 +546,37 @@ function makeURLFromURI(uri, languageCode) {
   return url;
 }
 //
-function getLanguageCallout(data) {
-  // not currently used: returns the xml language string
-  if (typeof data != "undefined") {
-    if (typeof data[theCurrentLanguageCode] != "undefined") {
-      return "@" + theCurrentLanguageCode;
-    }
-    if (typeof data[ 'en'] != "undefined") {
-      return "@en";
-    }
-  }
-  return "@en *";
+/* function getLanguageCallout(data) {
+// not currently used: returns the xml language string
+if (typeof data != "undefined") {
+if (typeof data[theCurrentLanguageCode] != "undefined") {
+return "@" + theCurrentLanguageCode;
 }
+if (typeof data[ 'en'] != "undefined") {
+return "@en";
+}
+}
+return "@en *";
+} */
+//
 // Details display
-
+..
 function formatDetail(d) {
+  //
   // Format table for details
   // `d` is the original data object for the row
   // Includes note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
-  
+  //
   // Initialize detail table header row as two columns
-  
+  //
   var detailRow = formatDetailRow();
-  
+  //
   // Initialize detail table
-  
+  //
   var detailTable = '<table class="pindex_detail">';
-  
+  //
   // Assemble rows for specified fields
-  
+  //
   if (typeof d != "undefined") {
     if (typeof d.note != "undefined") {
       detailRow = formatDetailRow(getValueByLanguage(d.note, window.theCurrentLanguageCode), "Scope notes", window.theCurrentLanguageCode);
@@ -617,9 +621,9 @@ function formatDetail(d) {
   } else {
     detailTable += detailRow;
   }
-  
+  //
   // Finalize detail table
-  
+  //
   detailTable += '</table>';
   return detailTable;
 }
