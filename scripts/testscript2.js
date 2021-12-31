@@ -484,7 +484,7 @@ function getLinkForDetailLabel(uri, label) {
     theLabel = label;
   }
   if (typeof uri != "undefined") {
-    url = makeURLFromURI(uri, theLanguageCode);
+    url = makeURLFromURI(uri, window.theCurrentLanguageCode);
   }
   return linkify(theLabel, url);
 }
