@@ -560,7 +560,7 @@ return "@en *";
 } */
 //
 // Details display
-..
+//
 function formatDetail(d) {
   //
   // Format table for details
@@ -575,7 +575,7 @@ function formatDetail(d) {
   //
   var detailTable = '<table class="pindex_detail">';
   //
-  // Assemble rows for specified fields
+  // Assemble table rows for specified fields
   //
   if (typeof d != "undefined") {
     if (typeof d.note != "undefined") {
