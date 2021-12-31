@@ -52,6 +52,7 @@ var languageIsUsed = false;
 var localIDToSearch = "";
 var languageCodeToCheck = "";
 var theCurrentLanguageCode = "";
+var theDefaultLanguageCode = "en";
 var theVocData = "";
 var theVocDomain = "";
 var theVocKind = "";
@@ -89,7 +90,7 @@ function getLanguageCodeFromURL() {
   if (theIndex > 0) {
     window.theCurrentLanguageCode = theURL.substr(theIndex + 9, 2);
   } else {
-    window.theCurrentLanguageCode = "en";
+    window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
   return;
 }
@@ -115,18 +116,12 @@ function getAnchor() {
 //
 // Set string orientation
 //
-function directify(theString, languageCode) {
+function directify(theString) {
   //
-  // Returns a string wrapped in a div with right-to-left attribute for specified language code
+  // Returns a string wrapped in a div with right-to-left attribute for current language code
   //
   var isRtl = false;
-  var theLanguageCode = "";
-  if (typeof languageCode != "undefined") {
-    theLanguageCode = languageCode;
-  } else {
-    theLanguageCode = window.theCurrentLanguageCode;
-  }
-  isRtl = getRtl(languageCode);
+  isRtl = getRtl(window.theCurrentLanguageCode);
   if (isRtl) {
     theString = '<div dir="rtl">' + theString + '</div>';
   } else {
@@ -311,11 +306,13 @@ function getLanguageIsPublished(entryObject) {
 //
 // Get rtl for language code from the Registry languages
 //
-function getRtl(languageCode) {
+function getRtl() {
   var theLanguage = "";
-  var theLanguageCode = "en";
+  var theLanguageCode = "";
   if (typeof languageCode != "undefined") {
     theLanguageCode = languageCode;
+  } else {
+    theLanguageCode = window.theDefaultLanguageCode;
   }
   window.languageCodeToCheck = languageCode;
   theLanguage = window.regLanguages.filter(getLanguageFromLanguages);
@@ -398,55 +395,39 @@ function getStatus(row) {
   return theStatus;
 }
 //
-function getURI(row) {
-  // Returns a URI from a jsonld row
-  
+// Get the URI of a vocabulary entry
+//
+function getURI(entryObject) {
+  //
+  // Returns a URI from a jsonld entry
+  //
   var theURI = "";
-  var theRowID = row[ "@id"];
-  if (typeof theRowID != "undefined") {
-    theURI = theRowID;
+  if (typeof entryObject[ "@id"] != "undefined") {
+    theURI = entryObject[ "@id"];
   }
   return theURI;
 }
 //
-function getValueByLanguage(row, languageCode, defaultLanguageCode) {
-  // Returns jsonld value of language code in jsonld row
-  
+function getValueByLanguage(entryObject) {
+  //
+  // Returns formatted string for jsonld value of language code in jsonld entry
+  //
   var theString = "";
-  
-  // default language is EngliRh
-  
-  var theLanguageCode = "en";
-  
-  // default default language can only be English
-  // [not enabled until translation processes in place]
-  
-  var theDefaultLanguageCode = "";
-  if (typeof defaultLanguageCode != "undefined") {
-    theDefaultLanguageCode = defaultLanguageCode;
+  //
+  // Available in current language
+  //
+  if (typeof entryObject[window.theCurrentLanguageCode] != "undefined") {
+    //
+    // Add explicit quotes to show it is a string value and markup as div with display direction
+    //
+    theString = directify(quotify(entryObject[window.theCurrentLanguageCode]));
   }
-  if (typeof languageCode != "undefined") {
-    theLanguageCode = languageCode;
-  }
-  if (typeof row != "undefined" && row != null) {
-    
-    // available in selected language
-    
-    if (typeof row[theLanguageCode] != "undefined") {
-      theString = directify(quotify(row[theLanguageCode]), theLanguageCode);
-    }
-    
-    // available in default language; add qualifier to indicate not available in selected language
-    
-    else if (theDefaultLanguageCode.length > 0) {
-      if (typeof row[theDefaultLanguageCode] != "undefined") {
-        theString = directify(quotify(row[theDefaultLanguageCode]) + " ['" + theDefaultLanguageCode + "'; no '" + theLanguageCode + "']", theDefaultLanguageCode);
-      }
-    }
-    // not available in selected or default language; output indicates the languages
-    //            else if (theData instanceof Object) {
-    //                theString = directify("[no '" + theLanguageCode + "' or '" + theDefaultLanguageCode + "']", theDefaultLangCode);
-    //            }
+  //
+  // Not available in current language: use default (English) and add qualifier to indicate not available in current language
+  // Add quotes to show it is a string value and markup as div
+  //
+  else {
+    theString = divify(quotify(entryObject[window.theDefaultLanguageCode]) + " [@" + window.theDefaultLanguageCode + "; no @" + theLanguageCode + "]");
   }
   return theString;
 }
@@ -454,6 +435,7 @@ function getValueByLanguage(row, languageCode, defaultLanguageCode) {
 // Get the kind of vocabulary
 //
 function getVocKind() {
+  //
   // Sets the kind of vocabulary from the vocabulary URI
   // The kind is based on the URI pattern
   //
@@ -492,18 +474,14 @@ function getVocKind() {
   return;
 }
 //
-function getLinkForDetailLabel(uri, label, languageCode) {
+function getLinkForDetailLabel(uri, label) {
   // Returns internal link for Registry URL with label in selected language
   // language code is omitted to get permalink
   
   var theLabel = "";
-  var theLanguageCode = "";
   var url = "";
   if (typeof label != "undefined") {
     theLabel = label;
-  }
-  if (typeof languageCode != "undefined") {
-    theLanguageCode = languageCode;
   }
   if (typeof uri != "undefined") {
     url = makeURLFromURI(uri, theLanguageCode);
@@ -511,16 +489,9 @@ function getLinkForDetailLabel(uri, label, languageCode) {
   return linkify(theLabel, url);
 }
 //
-function makeColumn(content) {
-  // returns column content in a wrapper div with direction parameter
-  
-  var col = "";
-  var theContent = "";
-  if (typeof content != "undefined") {
-    theContent = content;
-  }
-  col = divify(theContent);
-  return col;
+function makeColumnRow(content) {
+  // returns column row content in a wrapper div with direction parameter
+  return divify(content);
 }
 //
 function makeURLFromURI(uri, languageCode) {
@@ -546,19 +517,6 @@ function makeURLFromURI(uri, languageCode) {
   return url;
 }
 //
-/* function getLanguageCallout(data) {
-// not currently used: returns the xml language string
-if (typeof data != "undefined") {
-if (typeof data[theCurrentLanguageCode] != "undefined") {
-return "@" + theCurrentLanguageCode;
-}
-if (typeof data[ 'en'] != "undefined") {
-return "@en";
-}
-}
-return "@en *";
-} */
-//
 // Details display
 //
 function formatDetail(d) {
@@ -579,7 +537,7 @@ function formatDetail(d) {
   //
   if (typeof d != "undefined") {
     if (typeof d.note != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.note, window.theCurrentLanguageCode), "Scope notes", window.theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.note), "Scope notes", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.domain != "undefined") {
@@ -603,15 +561,15 @@ function formatDetail(d) {
       detailTable += detailRow;
     }
     if (typeof d.altLabel != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.altLabel, window.theCurrentLanguageCode), "Alternate label", window.theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.altLabel), "Alternate label", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.ToolkitLabel != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel, window.theCurrentLanguageCode), "Toolkit label", window.theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel), "Toolkit label", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.ToolkitDefinition != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition, window.theCurrentLanguageCode), "Toolkit definition", window.theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition), "Toolkit definition", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.status != "undefined") {
@@ -991,7 +949,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Permalink',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumn(getLinkForDetailLabel(getURI(row), "#"));
+          return makeColumnRow(getLinkForDetailLabel(getURI(row), "#"));
         }
       }, {
         "class": 'details-control',
@@ -1004,28 +962,28 @@ if (typeof dataSource !== "undefined") {
         "name": 'Curie',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(getLink(row, false, curiePrefix));
+          return makeColumnRow(getLink(row, false, curiePrefix));
         }
       }, {
         "class": "prefLabel",
         "name": 'Label',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn(strongify(getValueByLanguage(getLabel(row), window.theCurrentLanguageCode, "en")));
+          return makeColumnRow(strongify(getValueByLanguage(getLabel(row)));
         }
       }, {
         "class": "definition",
         "name": 'Definition',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumn(getValueByLanguage(getDefinition(row), window.theCurrentLanguageCode, "en"));
+          return makeColumnRow(getValueByLanguage(getDefinition(row)));
         }
       }, {
         "class": "status",
         "name": 'Status',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumn((getLink(getStatus(row), true)));
+          return makeColumnRow((getLink(getStatus(row), true)));
         }
       }],
       "initComplete": function (settings, json) {
