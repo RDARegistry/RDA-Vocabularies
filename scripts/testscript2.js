@@ -326,7 +326,7 @@ function getDefinition(row) {
   switch (window.theVocKind) {
     case "datatype":
     case "object":
-    theDefinition = {"en": ["The definition is attached to the parent canonical element."]);
+    theDefinition = {"en": ["The definition is attached to the parent canonical element."]};
     break;
     default:
     if (typeof row[ "definition"] != "undefined") {
