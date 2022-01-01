@@ -522,7 +522,7 @@ function formatDetail(d) {
   //
   if (typeof d != "undefined") {
     if (typeof d.note != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.note), "Scope notes", window.theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.note), "Scope notes");
       detailTable += detailRow;
     }
     if (typeof d.domain != "undefined") {
@@ -546,19 +546,19 @@ function formatDetail(d) {
       detailTable += detailRow;
     }
     if (typeof d.ToolkitLabel != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel), "Toolkit label", window.theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel), "Toolkit label");
       detailTable += detailRow;
     }
     if (typeof d.ToolkitDefinition != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition), "Toolkit definition", window.theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition), "Toolkit definition");
       detailTable += detailRow;
     }
     if (typeof d.altLabel != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.altLabel), "Alternate label", window.theCurrentLanguageCode);
+      detailRow = formatDetailRow(getValueByLanguage(d.altLabel), "Alternate label");
       detailTable += detailRow;
     }
     if (typeof d.notation != "undefined") {
-      detailRow = formatDetailRow(d.notation, "Notation");
+      detailRow = formatDetailRow(d.notation[window.theDefaultLanguageCode], "Notation");
       detailTable += detailRow;
     }
     if (typeof d.status != "undefined") {
