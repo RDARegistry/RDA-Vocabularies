@@ -610,6 +610,20 @@ function formatDetailRow(rowValue, rowLabel) {
 function formatMultivalueDetail(detailArray) {
   //
   // Sets a global variable to a list of entries in the array of detail objects
+  //
+  // Sort array by URI
+  //
+  detailArray.sort(function (a, b) {
+    let x = a.@ id.toLowerCase();
+    let y = b.@ id.toLowerCase();
+    if (x < y) {
+      return -1;
+    }
+    if (x > y) {
+      return 1;
+    }
+    return 0;
+  });
   // Initialize list
   //
   window.detailList = '<ul>';
@@ -817,9 +831,9 @@ function formatLanguagesBlock() {
   // Block content depends on the kind of vocabulary
   //
   switch (window.theVocKind) {
-  //
-  // There are no translations for datatype and object element sets; English element label is only annotation
-  //
+    //
+    // There are no translations for datatype and object element sets; English element label is only annotation
+    //
     case "datatype":
     theLanguagesBlock += '<p>A datatype element set uses English labels only.</p>';
     break;
