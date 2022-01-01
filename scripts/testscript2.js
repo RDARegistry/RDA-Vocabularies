@@ -966,7 +966,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Definition',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumnRow((getDefinition(row));
+          return makeColumnRow(getDefinition(row));
         }
       }, {
         "class": "status",
