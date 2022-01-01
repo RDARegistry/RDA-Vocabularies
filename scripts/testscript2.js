@@ -686,10 +686,6 @@ function setPageDetails(json) {
   //
   window.theVocURI = window.theVocMetadata[ "@id"];
   //
-  // Get the global kind of vocabulary
-  //
-  getVocKind();
-  //
   // Get the global vocabulary domain
   //
   getDomain();
@@ -931,6 +927,10 @@ if (typeof dataSource !== "undefined") {
           // Get vocabulary curie prefix
           //
           getCuriePrefix();
+          //
+          // Get the kind of vocabulary
+          //
+          getVocKind();
           return json.data;
         }
       },
