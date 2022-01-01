@@ -360,7 +360,7 @@ function getLabelOrURI(row) {
   if (typeof row[ "label"] != "undefined") {
     theLabel = row[ "label"];
   } else {
-    theLabel = getDefinition((row);
+    theLabel = row[ "@id"];
   }
   return theLabel;
 }
