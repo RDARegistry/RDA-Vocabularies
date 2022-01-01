@@ -855,6 +855,7 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
     theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
+    theSemanticsBlock += '<li>has a range of <em>rdfs:Literal</em>.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
@@ -866,6 +867,8 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<p>Each property in the object element set:</p>';
     theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
+    theSemanticsBlock += '<li>has a range of the class that represents the related entity.</li>';
+    theSemanticsBlock += '<li>has an inverse property.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
