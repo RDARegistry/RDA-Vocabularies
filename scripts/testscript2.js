@@ -290,7 +290,7 @@ function getLanguageIsUsed(languageObject) {
   //
   if (window.languageIsUsed) {
     theLanguageLabel = languageObject[ "label"];
-    window.vocLanguagesSelector = '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
+    window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
   return;
 }
