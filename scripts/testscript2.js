@@ -682,10 +682,6 @@ function setPageDetails(json) {
   //
   window.theVocTitle = window.theVocMetadata.title[ "en"];
   //
-  // Get the global vocabulary URI
-  //
-  window.theVocURI = window.theVocMetadata[ "@id"];
-  //
   // Get the global vocabulary domain
   //
   getDomain();
@@ -928,7 +924,11 @@ if (typeof dataSource !== "undefined") {
           //
           getCuriePrefix();
           //
-          // Get the kind of vocabulary
+          // Get the global vocabulary URI
+          //
+          window.theVocURI = window.theVocMetadata[ "@id"];
+          //
+          // Get the global kind of vocabulary
           //
           getVocKind();
           return json.data;
