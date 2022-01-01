@@ -802,19 +802,31 @@ function setPageDetails(json) {
 //
 function formatLanguagesBlock() {
   //
-  // Returns content for the
+  // Returns formatted content based on published languages for the Languages Block
   //
   var theLanguagesBlock = "";
+  //
+  // Set block header
+  //
   theLanguagesBlock += '<h3>Languages</h3>';
+  //
+  // Block content depends on the kind of vocabulary
+  //
   switch (window.theVocKind) {
+  //
+  // There are no translations for datatype and object element sets; English element label is only annotation
+  //
     case "datatype":
     theLanguagesBlock += '<p>A datatype element set uses English labels only.</p>';
     break;
     case "object":
     theLanguagesBlock += '<p>An object element set uses English labels only.</p>';
     break;
+    //
+    // Set languages selector list with item for each language used in published elements
+    //
     default:
-    theLanguagesBlock += '<ul>';
+    theLanguagesBlock += '<ul class="list-inline list-unstyled m-0 p-0">';
     window.regLanguages.forEach(getLanguageIsUsed);
     theLanguagesBlock += window.vocLanguagesSelector;
     theLanguagesBlock += '</ul>';
@@ -829,6 +841,9 @@ function formatSemanticsBlock() {
   // Returns formatted content based on the vocabulary kind for the Semantics Block
   //
   var theSemanticsBlock = "";
+  //
+  // Set block header
+  //
   theSemanticsBlock += '<h3>Semantics</h3>';
   switch (window.theVocKind) {
     //
@@ -838,7 +853,7 @@ function formatSemanticsBlock() {
     var theVocToDatatype = '<a href="' + window.theVocURI + 'datatype/' + '">' + window.theVocTitle.replace("properties", "datatype properties") + '</a>';
     var theVocToObject = '<a href="' + window.theVocURI + 'object/' + '">' + window.theVocTitle.replace("properties", "object properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the canonical element set:</p>';
-    theSemanticsBlock += '<ul class="ms-3 my-0 ps-2">';
+    theSemanticsBlock += '<ul class="list-unstyled ms-3 my-0 ps-2">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>is linked from its child <strong>datatype</strong> property in ' + theVocToDatatype + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '<li>is linked from its child <strong>object</strong> property in ' + theVocToObject + ' by <em>rdfs:subPropertyOf</em>.</li>';
@@ -848,24 +863,24 @@ function formatSemanticsBlock() {
     theSemanticsBlock = "";
     break;
     //
-    // Datatype element set references domain and canonical element set
+    // Datatype element set references domain and canonical element set, and literal range
     //
     case "datatype":
     var theVocToParent = '<a href="' + window.theVocURI.replace("/datatype", "") + '">' + window.theVocTitle.replace("datatype properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
-    theSemanticsBlock += '<ul class="ms-3 my-0 ps-2">';
+    theSemanticsBlock += '<ul class="list-unstyled ms-3 my-0 ps-2">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>has a range of <em>rdfs:Literal</em>.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
     //
-    // Object element set references domain and canonical element set
+    // Object element set references domain and canonical element set, and entity range
     //
     case "object":
     var theVocToParent = '<a href="' + window.theVocURI.replace("/object", "") + '">' + window.theVocTitle.replace("object properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the object element set:</p>';
-    theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
+    theSemanticsBlock += '<ul class="list-unstyled ms-3 my-0 ps-1">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>has a range of the class that represents the related entity.</li>';
     theSemanticsBlock += '<li>has an inverse property.</li>';
