@@ -838,7 +838,7 @@ function formatSemanticsBlock() {
     var theVocToDatatype = '<a href="' + window.theVocURI + 'datatype/' + '">' + window.theVocTitle.replace("properties", "datatype properties") + '</a>';
     var theVocToObject = '<a href="' + window.theVocURI + 'object/' + '">' + window.theVocTitle.replace("properties", "object properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the canonical element set:</p>';
-    theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
+    theSemanticsBlock += '<ul class="ms-3 my-0 ps-2">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>is linked from its child <strong>datatype</strong> property in ' + theVocToDatatype + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '<li>is linked from its child <strong>object</strong> property in ' + theVocToObject + ' by <em>rdfs:subPropertyOf</em>.</li>';
@@ -853,7 +853,7 @@ function formatSemanticsBlock() {
     case "datatype":
     var theVocToParent = '<a href="' + window.theVocURI.replace("/datatype", "") + '">' + window.theVocTitle.replace("datatype properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
-    theSemanticsBlock += '<ul class="ms-3 my-0 ps-1">';
+    theSemanticsBlock += '<ul class="ms-3 my-0 ps-2">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>has a range of <em>rdfs:Literal</em>.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
