@@ -828,7 +828,7 @@ function formatLanguagesBlock() {
     default:
     theLanguagesBlock += '<ul class="list-inline list-unstyled m-0 p-0">';
     window.regLanguages.forEach(getLanguageIsUsed);
-    theLanguagesBlock += '<li class="list-inline-item>' + window.vocLanguagesSelector + '</ul>';
+    theLanguagesBlock += '<li class="list-inline-item">' + window.vocLanguagesSelector + '</ul>';
     theLanguagesBlock += '</ul>';
   }
   return theLanguagesBlock;
