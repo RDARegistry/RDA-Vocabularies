@@ -545,16 +545,20 @@ function formatDetail(d) {
       detailRow = formatDetailRow(formatMultivalueDetail(d.subPropertyOf), "Superproperties");
       detailTable += detailRow;
     }
-    if (typeof d.altLabel != "undefined") {
-      detailRow = formatDetailRow(getValueByLanguage(d.altLabel), "Alternate label", window.theCurrentLanguageCode);
-      detailTable += detailRow;
-    }
     if (typeof d.ToolkitLabel != "undefined") {
       detailRow = formatDetailRow(getValueByLanguage(d.ToolkitLabel), "Toolkit label", window.theCurrentLanguageCode);
       detailTable += detailRow;
     }
     if (typeof d.ToolkitDefinition != "undefined") {
       detailRow = formatDetailRow(getValueByLanguage(d.ToolkitDefinition), "Toolkit definition", window.theCurrentLanguageCode);
+      detailTable += detailRow;
+    }
+    if (typeof d.altLabel != "undefined") {
+      detailRow = formatDetailRow(getValueByLanguage(d.altLabel), "Alternate label", window.theCurrentLanguageCode);
+      detailTable += detailRow;
+    }
+    if (typeof d.notation != "undefined") {
+      detailRow = formatDetailRow(d.notation), "Notation");
       detailTable += detailRow;
     }
     if (typeof d.status != "undefined") {
