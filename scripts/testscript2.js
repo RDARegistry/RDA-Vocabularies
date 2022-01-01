@@ -767,6 +767,12 @@ function setPageDetails(json) {
   //
   theSemanticsBlock = formatSemanticsBlock();
   //
+  // Expand Agent semantics to its subtypes
+  //
+  if (window.theVocDomain == "Agent") {
+    theSemanticsBlock = theSemanticsBlock.replace("Agent entity", "Agent entity or its subtypes");
+  }
+  //
   // Push values to the page
   //
   document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
