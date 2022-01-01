@@ -614,8 +614,8 @@ function formatMultivalueDetail(detailArray) {
   // Sort array by URI
   //
   detailArray.sort(function (a, b) {
-    let x = a.@ id.toLowerCase();
-    let y = b.@ id.toLowerCase();
+    let x = a["@id"].toLowerCase();
+    let y = b["@id"].toLowerCase();
     if (x < y) {
       return -1;
     }
