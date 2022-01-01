@@ -326,11 +326,11 @@ function getDefinition(row) {
   switch (window.theVocKind) {
     case "datatype":
     case "object":
-    theDefinition = {"en": ["The definition is attached to the parent canonical element."]};
+    theDefinition = "The definition is attached to the parent canonical property.";
     break;
     default:
     if (typeof row[ "definition"] != "undefined") {
-      theDefinition = row[ "definition"];
+      theDefinition = getValueByLanguage(row[ "definition"])
     }
   }
   return theDefinition;
@@ -966,7 +966,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Definition',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumnRow(getValueByLanguage(getDefinition(row)));
+          return makeColumnRow((getDefinition(row));
         }
       }, {
         "class": "status",
