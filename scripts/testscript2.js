@@ -248,7 +248,7 @@ function getDomain() {
     case "datatype":
     window.theVocDomain = window.theVocTitle.replace("datatype properties", "").trim();
     break;
-    case "datatype":
+    case "object":
     window.theVocDomain = window.theVocTitle.replace("object properties", "").trim();
     break;
     case "class":
@@ -323,8 +323,15 @@ function getDefinition(row) {
   // Returns a definition from a jsonld entry row
   //
   var theDefinition = "";
-  if (typeof row[ "definition"] != "undefined") {
-    theDefinition = row[ "definition"];
+  switch (window.theVocKind) {
+    case "datatype":
+    case "object":
+    theDefinition = "The definition is attached to the parent canonical element.";
+    break;
+    default:
+    if (typeof row[ "definition"] != "undefined") {
+      theDefinition = row[ "definition"];
+    }
   }
   return theDefinition;
 }
@@ -353,7 +360,7 @@ function getLabelOrURI(row) {
   if (typeof row[ "label"] != "undefined") {
     theLabel = row[ "label"];
   } else {
-    theLabel = getURI(row);
+    theLabel = getDefinition((row);
   }
   return theLabel;
 }
