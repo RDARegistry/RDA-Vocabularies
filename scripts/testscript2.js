@@ -760,12 +760,18 @@ function setPageDetails(json) {
   theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
   theLinkXML = baseDomain + 'xml/' + filepathPart + '/' + filenameLocal + '.xml';
   //
-  // Get the vocabulary languages display list
+  // Get the content for the Languages block
   //
-  //    getLanguagesUsed(regLanguages);
+  theLanguagesBlock = formatLanguagesBlock();
+  //
+  // Get the content for the Semantics block
+  //
+  theSemanticsBlock = formatSemanticsBlock();
   //
   // Push values to the page
   //
+  document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
+  document.getElementById("indexTitle").innerHTML = theTableTitle;
   document.getElementById("vocMenuLink").innerHTML = theVocMenuLink;
   document.getElementById("vocTitle").innerHTML = window.theVocTitle;
   document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
@@ -778,22 +784,21 @@ function setPageDetails(json) {
   document.getElementById("linkJSONLD").href = theLinkJSONLD;
   document.getElementById("linkNT").href = theLinkNT;
   document.getElementById("linkXML").href = theLinkXML;
-  //    document.getElementById("vocLanguages").innerHTML = window.vocLanguagesSelector;
-  theLanguagesBlock = formatLanguagesBlock();
   if (theLanguagesBlock.length > 0) {
     document.getElementById("vocHasLanguages").innerHTML = theLanguagesBlock;
   }
-  theSemanticsBlock = formatSemanticsBlock();
   if (theSemanticsBlock.length > 0) {
     document.getElementById("vocHasSemantics").innerHTML = theSemanticsBlock;
   }
-  document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
-  document.getElementById("indexTitle").innerHTML = theTableTitle;
+  return;
 }
 //
 // Format Languages block
 //
 function formatLanguagesBlock() {
+  //
+  // Returns content for the
+  //
   var theLanguagesBlock = "";
   theLanguagesBlock += '<h3>Languages</h3>';
   switch (window.theVocKind) {
