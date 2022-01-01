@@ -290,7 +290,7 @@ function getLanguageIsUsed(languageObject) {
   //
   if (window.languageIsUsed) {
     theLanguageLabel = languageObject[ "label"];
-    window.vocLanguagesSelector += '<li><a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
+    window.vocLanguagesSelector += '<a href="?language=' + window.languageCodeToCheck + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a>';
   }
   return;
 }
@@ -813,9 +813,9 @@ function formatLanguagesBlock() {
   // Block content depends on the kind of vocabulary
   //
   switch (window.theVocKind) {
-  //
-  // There are no translations for datatype and object element sets; English element label is only annotation
-  //
+    //
+    // There are no translations for datatype and object element sets; English element label is only annotation
+    //
     case "datatype":
     theLanguagesBlock += '<p>A datatype element set uses English labels only.</p>';
     break;
@@ -828,7 +828,7 @@ function formatLanguagesBlock() {
     default:
     theLanguagesBlock += '<ul class="list-inline list-unstyled m-0 p-0">';
     window.regLanguages.forEach(getLanguageIsUsed);
-    theLanguagesBlock += window.vocLanguagesSelector;
+    theLanguagesBlock += '<li class="list-inline-item>' + window.vocLanguagesSelector + '</ul>';
     theLanguagesBlock += '</ul>';
   }
   return theLanguagesBlock;
