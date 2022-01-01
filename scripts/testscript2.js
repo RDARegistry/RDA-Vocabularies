@@ -558,7 +558,7 @@ function formatDetail(d) {
       detailTable += detailRow;
     }
     if (typeof d.notation != "undefined") {
-      detailRow = formatDetailRow(d.notation), "Notation");
+      detailRow = formatDetailRow(d.notation, "Notation");
       detailTable += detailRow;
     }
     if (typeof d.status != "undefined") {
