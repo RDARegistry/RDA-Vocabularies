@@ -61,6 +61,7 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
+var tableOptions = "lrtip";
 //
 // Initialize the current language code from the page URL
 //
@@ -684,9 +685,6 @@ function searchLocalID() {
   // Draws the data table with the search
   //
   var table = $("table#pindex").DataTable();
-  table({
-    "dom": 'lrtip'
-  });
   table.search('').column('Curie:name').search(window.localIDToSearch).draw();
   //
   // Put the filter in the search box
@@ -1060,7 +1058,8 @@ if (typeof dataSource !== "undefined") {
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "pagingType": 'simple_numbers',
       //      "responsive": true,
-      "deferRender": true
+      "deferRender": true,
+      "dom": window.tableOptions
     });
     //
     // Add event listener for expanding and collapsing details
@@ -1089,11 +1088,11 @@ if (typeof dataSource !== "undefined") {
     table.on('draw', function () {
       var pageTable = $("#pindex");
       var theTablePage = table.page.info();
-      if (theTablePage.recordsDisplay == 1) {
+    /*  if (theTablePage.recordsDisplay == 1) {
         //        pageTable.children("tbody").tr[0].cells.td.detailsControl.click();
       }
     });
-    /*     $('input[type=search]').on('click', function () {
+         $('input[type=search]').on('click', function () {
     if (history.pushState) {
     history.pushState(null, null, document.location.pathname);
     } else {
