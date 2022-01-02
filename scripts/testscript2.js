@@ -295,7 +295,7 @@ function getLanguageIsUsed(languageObject) {
   return;
 }
 //
-//
+// Check that language code is used for a published Toolkit label
 //
 function getLanguageIsPublished(entryObject) {
   if (typeof entryObject[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
@@ -307,6 +307,9 @@ function getLanguageIsPublished(entryObject) {
 // Get rtl for language code from the Registry languages
 //
 function getRtl() {
+  //
+  // Returns a right-to-left flag for the current language code
+  //
   var theLanguageArray = "";
   window.languageCodeToCheck = window.theCurrentLanguageCode;
   theLanguageArray = window.regLanguages.filter(getLanguageFromLanguages);
@@ -318,9 +321,9 @@ function getRtl() {
 //
 // Get entry data from jsonld
 //
-function getDefinition(row) {
+function getDefinition(entryObject) {
   //
-  // Returns a definition from a jsonld entry row
+  // Returns a definition from a jsonld entry
   //
   var theDefinition = "";
   switch (window.theVocKind) {
@@ -329,25 +332,27 @@ function getDefinition(row) {
     theDefinition = "The definition is attached to the parent canonical property.";
     break;
     default:
-    if (typeof row[ "definition"] != "undefined") {
-      theDefinition = getValueByLanguage(row[ "definition"])
+    if (typeof entryObject[ "definition"] != "undefined") {
+      theDefinition = getValueByLanguage(entryObject[ "definition"])
     }
   }
   return theDefinition;
 }
 //
-function getLabel(row) {
+// Get entry label
+//
+function getLabel(entryObject) {
   //
-  // Returns a label from a jsonld entry row
+  // Returns a label from a jsonld entry
   //
   var theLabel = "";
   //
   // Value vocabularies use prefLabel property; element sets use label property
   //
-  if (window.theVocKind == "value" && typeof row[ "prefLabel"] != "undefined") {
-    theLabel = row[ "prefLabel"];
+  if (window.theVocKind == "value" && typeof entryObject[ "prefLabel"] != "undefined") {
+    theLabel = entryObject[ "prefLabel"];
   } else {
-    theLabel = row[ "label"];
+    theLabel = entryObject[ "label"];
   }
   return theLabel;
 }
@@ -365,33 +370,38 @@ function getLabelOrURI(row) {
   return theLabel;
 }
 //
-function getLink(row, isLinkOut, prefix) {
+// Get hyperlink
+//
+function getLink(entryObject, isLinkOut, prefix) {
   //
-  // Returns a hyperlink with label from jsonld row
+  // Returns a hyperlink with label from a jsonld object
   // Link is external, label is curie prefix, if specified
   //
   var theLabel = "";
   var theLink = "";
   var theLinkIsExternal = false;
-  var theURI = getURI(row);
+  var theURI = getURI(entryObject);
   if (typeof isLinkOut != "undefined") {
     theLinkIsExternal = isLinkOut;
   }
   if (typeof prefix != "undefined") {
     theLabel = makeCurieFromURI(theURI, prefix);
   } else {
-    theLabel = getLabelOrURI(row);
+    theLabel = getLabelOrURI(entryObject);
   }
   theLink = linkify(theLabel, theURI, theLinkIsExternal);
   return theLink;
 }
 //
-function getStatus(row) {
-  // Returns the status row from a jsonld element row
-  
+// Get the status object
+//
+function getStatus(entryObject) {
+  //
+  // Returns the status row from a jsonld object
+  //
   var theStatus = "";
-  if (typeof row.status != "undefined") {
-    theStatus = row.status;
+  if (typeof entryObject.status != "undefined") {
+    theStatus = entryObject.status;
   }
   return theStatus;
 }
@@ -408,6 +418,8 @@ function getURI(entryObject) {
   }
   return theURI;
 }
+//
+// Get the value string for the current language from a jsonld entry
 //
 function getValueByLanguage(entryObject) {
   //
@@ -475,17 +487,25 @@ function getVocKind() {
   return;
 }
 //
+// Get permalink URL from URI
+//
 function getPermalink(uri) {
+  //
+  // Transform URI to URL with regular expression
+  //
   var thePermalink = "";
   if (typeof uri !== "undefined") {
     thePermalink = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
   }
   return thePermalink;
 }
-
+//
+// Format row of table column
 //
 function makeColumnRow(content) {
-  // returns column row content in a wrapper div with direction parameter
+  //
+  // Returns column row content in a wrapper div with direction parameter
+  //
   return divify(content);
 }
 //
@@ -519,6 +539,7 @@ function formatDetail(d) {
   var detailTable = '<table class="pindex_detail">';
   //
   // Assemble table rows for specified fields
+  // Missing fields are ignored
   //
   if (typeof d != "undefined") {
     if (typeof d.note != "undefined") {
@@ -614,8 +635,8 @@ function formatMultivalueDetail(detailArray) {
   // Sort array by URI
   //
   detailArray.sort(function (a, b) {
-    let x = a["@id"].toLowerCase();
-    let y = b["@id"].toLowerCase();
+    let x = a[ "@id"].toLowerCase();
+    let y = b[ "@id"].toLowerCase();
     if (x < y) {
       return -1;
     }
@@ -656,7 +677,7 @@ function formatValueForMultivalueDetail(detailObject) {
   return;
 }
 //
-//
+// Search the Curie column for the local part ID
 //
 function searchLocalID() {
   //
