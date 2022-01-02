@@ -1087,7 +1087,7 @@ if (typeof dataSource !== "undefined") {
       var pageTable = $("#pindex");
       var theTablePage = table.page.info();
       if (theTablePage.recordsDisplay == 1) {
-        pageTable.children("tbody").tr.td.detailsControl.click();
+        pageTable.children("tbody").rows[0].tr.cells.td.detailsControl.click();
       }
     });
     
