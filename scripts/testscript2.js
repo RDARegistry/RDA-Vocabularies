@@ -983,6 +983,8 @@ if (typeof dataSource !== "undefined") {
           json.data = json[ "@graph"].filter(filterData);
           window.theVocData = json.data;
           //
+          // Initialize global variables required for rendering
+          //
           // Get vocabulary curie prefix
           //
           getCuriePrefix();
@@ -1053,7 +1055,7 @@ if (typeof dataSource !== "undefined") {
       },
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
-      "pagingType": 'full_numbers',
+      "pagingType": 'simple_numbers',
       //      "responsive": true,
       "deferRender": true
     });
@@ -1085,7 +1087,7 @@ if (typeof dataSource !== "undefined") {
       var theTablePage = table.page.info();
       if (theTablePage.length == 1) {
         
-        $("#pindex").children("tbody").td.detailsControl.click();
+        pageTable.children("tbody").td.detailsControl.click();
       }
     });
     
