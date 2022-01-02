@@ -1090,14 +1090,14 @@ if (typeof dataSource !== "undefined") {
 //        pageTable.children("tbody").tr[0].cells.td.detailsControl.click();
       }
     });
-     $('input[type=search]').on('click', function () {
+ /*     $('input[type=search]').on('click', function () {
       if (history.pushState) {
         history.pushState(null, null, document.location.pathname);
       } else {
         location.hash = '';
       }
       searchLocalID('');
-    });
+    }); */
     
     if (window.localIDToSearch.length > 0) {
       table.column('Curie:name').search(window.localIDToSearch);
