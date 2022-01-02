@@ -684,6 +684,9 @@ function searchLocalID() {
   // Draws the data table with the search
   //
   var table = $("table#pindex").DataTable();
+  table({
+    "dom": 'lrtip'
+  });
   table.search('').column('Curie:name').search(window.localIDToSearch).draw();
   //
   // Put the filter in the search box
@@ -1087,6 +1090,7 @@ if (typeof dataSource !== "undefined") {
       var pageTable = $("#pindex");
       var theTablePage = table.page.info();
       if (theTablePage.recordsDisplay == 1) {
+<<<<<<< HEAD
 //        pageTable.children("tbody").tr[0].cells.td.detailsControl.click();
       }
     });
@@ -1097,6 +1101,18 @@ if (typeof dataSource !== "undefined") {
         location.hash = '';
       }
       searchLocalID('');
+=======
+        //        pageTable.children("tbody").tr[0].cells.td.detailsControl.click();
+      }
+    });
+    /*     $('input[type=search]').on('click', function () {
+    if (history.pushState) {
+    history.pushState(null, null, document.location.pathname);
+    } else {
+    location.hash = '';
+    }
+    searchLocalID('');
+>>>>>>> parent of fe7dec795 (Update testscript2.js)
     }); */
     
     if (window.localIDToSearch.length > 0) {
