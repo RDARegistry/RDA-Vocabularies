@@ -1087,20 +1087,10 @@ if (typeof dataSource !== "undefined") {
       var pageTable = $("#pindex");
       var theTablePage = table.page.info();
       if (theTablePage.recordsDisplay == 1) {
-        pageTable.children("tbody").rows[0].tr.cells.td.detailsControl.click();
+//        pageTable.children("tbody").tr[0].cells.td.detailsControl.click();
       }
     });
-    
-    /*    $('#pindex').on('draw.dt', function () {
-    var table = $("#pindex").DataTable();
-    var theTablePage = table.page.info();
-    if (theTablePage.length == 1) {
-    
-    $("#pindex").children("tbody").td.details - control.click();
-    }
-    }); */
-    
-    $('input[type=search]').on('click', function () {
+     $('input[type=search]').on('click', function () {
       if (history.pushState) {
         history.pushState(null, null, document.location.pathname);
       } else {
@@ -1125,7 +1115,7 @@ if (typeof dataSource !== "undefined") {
       }
     })
   });
-  $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
+/*   $.fn.dataTableExt.oApi.clearSearch = function (oSettings) {
     var table = $("#pindex").DataTable();
     var clearSearch = $('<img class = "delete" title="Cancel Search" alt="" src="data:image/png;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD2SURBVHjaxFM7DoMwDH2pOESHHgDPcB223gKpAxK34EAMMIe1FCQOgFQxuflARVBSVepQS5Ht2PHn2RHMjF/ohB8p2gSZpprtyxEHX8dGTeMG0A5UlsD5rCSGvF55F4SpqpSm1GmCzPO3LXJy1LXllwvodoMsCpNVy2hbYBjCLRiaZ8u7Dng+QXlu9b4H7ncvBmKbwoYBWR4kaXv3YmAMyoEpjv2PdWUHcP1j1ECqFpyj777YA6Yss9KyuEeDaW0cCsCUJMDjYUE8kr5TNuOzC+JiMI5uz2rmJvNWvidwcJXXx8IAuwb6uMqrY2iVgzbx99/4EmAAarFu0IJle5oAAAAASUVORK5CYII="  style="cursor:pointer;padding-left:.5em;" />');
     $(clearSearch).click(function () {
@@ -1156,5 +1146,5 @@ if (typeof dataSource !== "undefined") {
   $.fn.dataTable.models.oSettings[ 'aoInitComplete'].push({
     "fn": $.fn.dataTableExt.oApi.clearSearch,
     "sName": 'whatever'
-  });
+  }); */
 }
