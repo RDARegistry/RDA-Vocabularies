@@ -1084,9 +1084,10 @@ if (typeof dataSource !== "undefined") {
     });
     
     table.on('draw', function () {
+     var pageTable = $("#pindex");
       var theTablePage = table.page.info();
       if (theTablePage.recordsDisplay == 1) {
-        $("#pindex").children("tbody").td.detailsControl.click();
+        pageTable.children("tbody").tr.td.detailsControl.click();
       }
     });
     
