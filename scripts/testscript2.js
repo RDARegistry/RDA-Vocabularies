@@ -1084,7 +1084,7 @@ if (typeof dataSource !== "undefined") {
     });
     
     table.on('draw', function () {
-     var pageTable = $("#pindex");
+      var pageTable = $("#pindex");
       var theTablePage = table.page.info();
       if (theTablePage.recordsDisplay == 1) {
         pageTable.children("tbody").tr.td.detailsControl.click();
