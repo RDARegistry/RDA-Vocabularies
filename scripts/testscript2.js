@@ -61,7 +61,7 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
-var domSetting = "lrtip";
+var domSetting = "lrftip";
 //
 // Initialize the current language code from the page URL
 //
@@ -70,6 +70,9 @@ getLanguageCodeFromURL();
 // Set the initial search filter to page URL anchor, if any
 //
 window.localIDToSearch = getAnchor();
+if (window.localIDToSearch.length > 0) {
+  window.domSetting = "lrtip";
+}
 //
 // Set change of URL anchor to reset filter and redraw
 //
@@ -301,19 +304,19 @@ function getLanguageIsUsed(languageObject) {
     // Add language filter to language selector link, depending on existing filter and anchor
     //
     if (theLanguageIndex > -1) {
-    //
-    // Replace existing filter
-    //
+      //
+      // Replace existing filter
+      //
       theURL = thePageURL.slice(0, theLanguageIndex) + "?language=" + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
     } else if (theHashIndex > -1) {
-    //
-    // Insert filter before anchor
-    //
+      //
+      // Insert filter before anchor
+      //
       theURL = thePageURL.replace("#", "?language=" + window.languageCodeToCheck + "#")
     } else {
-    //
-    // Add filter
-    //
+      //
+      // Add filter
+      //
       theURL = thePageURL + "?language=" + window.languageCodeToCheck;
     }
     window.vocLanguagesSelector += '<li><a href="' + theURL + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
@@ -714,7 +717,7 @@ function searchLocalID() {
   //
   // Put the filter in the search box
   //
-  $('input[type=search]').val(window.localIDToSearch);
+  // $('input[type=search]').val(window.localIDToSearch);
 }
 //
 // Get and set page and global variables
@@ -1115,7 +1118,7 @@ if (typeof dataSource !== "undefined") {
     })
     if (window.localIDToSearch.length > 0) {
       table.column('Curie:name').search(window.localIDToSearch);
-      $("div#pindex_filter input").val(window.localIDToSearch);
+      //      $("div#pindex_filter input").val(window.localIDToSearch);
     }
     //
     // Set tooltip defaults
