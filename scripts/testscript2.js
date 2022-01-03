@@ -61,6 +61,9 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
+//
+// Set the datatable DOM to display all table utilities
+//
 var domSetting = "lrftip";
 //
 // Initialize the current language code from the page URL
@@ -71,6 +74,9 @@ getLanguageCodeFromURL();
 //
 window.localIDToSearch = getAnchor();
 if (window.localIDToSearch.length > 0) {
+  //
+  // Set the datatable DOM to display only the processing indicator (not really used) and table
+  //
   window.domSetting = "rt";
 }
 //
@@ -1112,12 +1118,12 @@ if (typeof dataSource !== "undefined") {
         $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
       }
     });
-    table.on('draw', function () {
+ /*    table.on('draw', function () {
       var pageTable = $("#pindex");
       var theTablePage = table.page.info();
-    })
+    }) */
     if (window.localIDToSearch.length > 0) {
-      table.column('Curie:name').search(window.localIDToSearch);
+//      table.column('Curie:name').search(window.localIDToSearch);
       //      $("div#pindex_filter input").val(window.localIDToSearch);
     }
     //
