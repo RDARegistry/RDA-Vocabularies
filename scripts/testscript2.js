@@ -538,11 +538,11 @@ function getPermalink(uri) {
 //
 // Format row of table column
 //
-function makeColumnRow(content) {
+function makeColumnRow(content, className) {
   //
   // Returns column row content in a wrapper div with direction parameter
   //
-  return divify(content);
+  return divify(content, className);
 }
 //
 // Create Registry URL from entry URI
@@ -1039,7 +1039,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Curie',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumnRow(getLink(row, false, curiePrefix));
+          return makeColumnRow(getLink(row, false, curiePrefix), "dataDisplay");
         }
       }, {
         "class": "prefLabel",
