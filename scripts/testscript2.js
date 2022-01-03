@@ -1110,7 +1110,7 @@ if (typeof dataSource !== "undefined") {
       defaults: {
         delayIn: 500,
         gravity: true,
-        position: 'top-left',
+        position: 'top-left-corner',
         scheme: 'aqua'
       }
     })
