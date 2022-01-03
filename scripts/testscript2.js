@@ -80,13 +80,6 @@ if (window.localIDToSearch.length > 0) {
   window.domSetting = "rt";
 }
 //
-// Set change of URL anchor to reset filter and redraw
-//
-/* window.onhashchange = function () {
-window.localIDToSearch = getAnchor();
-searchLocalID(window.localIDToSearch);
-}; */
-//
 // Get the language code from the page URL
 //
 function getLanguageCodeFromURL() {
@@ -712,20 +705,6 @@ function formatValueForMultivalueDetail(detailObject) {
   return;
 }
 //
-// Search the Curie column for the local part ID
-//
-/* function searchLocalID() {
-//
-// Draws the data table with the search
-//
-var table = $("table#pindex").DataTable();
-table.search('').column('Curie:name').search(window.localIDToSearch).draw();
-//
-// Put the filter in the search box
-//
-// $('input[type=search]').val(window.localIDToSearch);
-} */
-//
 // Get and set page and global variables
 //
 function setPageDetails(json) {
@@ -1118,10 +1097,9 @@ if (typeof dataSource !== "undefined") {
         $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
       }
     });
-    /*    table.on('draw', function () {
-    var pageTable = $("#pindex");
-    var theTablePage = table.page.info();
-    }) */
+    //
+    // Search Curie if local ID to search
+    //
     if (window.localIDToSearch.length > 0) {
       table.column('Curie:name').search(window.localIDToSearch);
     }
@@ -1132,7 +1110,7 @@ if (typeof dataSource !== "undefined") {
       defaults: {
         delayIn: 500,
         gravity: true,
-        position: 'top',
+        position: 'top-left',
         scheme: 'aqua'
       }
     })
