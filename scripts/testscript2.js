@@ -684,9 +684,6 @@ function searchLocalID() {
   // Draws the data table with the search
   //
   var table = $("table#pindex").DataTable();
-  table({
-    "dom": 'lrtip'
-  });
   table.search('').column('Curie:name').search(window.localIDToSearch).draw();
   //
   // Put the filter in the search box
