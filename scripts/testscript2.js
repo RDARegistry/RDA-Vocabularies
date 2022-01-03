@@ -82,10 +82,10 @@ if (window.localIDToSearch.length > 0) {
 //
 // Set change of URL anchor to reset filter and redraw
 //
-window.onhashchange = function () {
-  window.localIDToSearch = getAnchor();
-  searchLocalID(window.localIDToSearch);
-};
+/* window.onhashchange = function () {
+window.localIDToSearch = getAnchor();
+searchLocalID(window.localIDToSearch);
+}; */
 //
 // Get the language code from the page URL
 //
@@ -1118,13 +1118,12 @@ if (typeof dataSource !== "undefined") {
         $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
       }
     });
- /*    table.on('draw', function () {
-      var pageTable = $("#pindex");
-      var theTablePage = table.page.info();
+    /*    table.on('draw', function () {
+    var pageTable = $("#pindex");
+    var theTablePage = table.page.info();
     }) */
     if (window.localIDToSearch.length > 0) {
-//      table.column('Curie:name').search(window.localIDToSearch);
-      //      $("div#pindex_filter input").val(window.localIDToSearch);
+      table.column('Curie:name').search(window.localIDToSearch);
     }
     //
     // Set tooltip defaults
