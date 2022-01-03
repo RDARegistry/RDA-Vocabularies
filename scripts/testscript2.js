@@ -276,7 +276,7 @@ function getLanguageIsUsed(languageObject) {
   // Checks that the code of a specified language object from the Registry languages is in use
   //
   var theLanguageLabel = "";
-  var thePageURL = window.location.href;
+  var theURL = "";
   //
   // Get the language code to check from the language object
   //
@@ -291,8 +291,8 @@ function getLanguageIsUsed(languageObject) {
   //
   if (window.languageIsUsed) {
     theLanguageLabel = languageObject[ "label"];
-    thePageURL = thePageURL.replace("#", "?language=" + window.languageCodeToCheck + "#")
-    window.vocLanguagesSelector += '<li><a href="' + thePageURL + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
+    theURL = window.baseDomain + window.location.pathname + "?language=" + window.languageCodeToCheck + window.location.hash; 
+    window.vocLanguagesSelector += '<li><a href="' + theURL + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
   return;
 }
