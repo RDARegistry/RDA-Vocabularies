@@ -68,7 +68,7 @@ getLanguageCodeFromURL();
 //
 // Set the initial search filter to page URL anchor, if any
 //
-localIDToSearch = getAnchor();
+window.localIDToSearch = getAnchor();
 //
 // Set change of URL anchor to reset filter and redraw
 //
