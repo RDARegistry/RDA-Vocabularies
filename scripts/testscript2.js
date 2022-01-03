@@ -61,6 +61,7 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
+var domSetting = "lrtip";
 //
 // Initialize the current language code from the page URL
 //
@@ -296,11 +297,23 @@ function getLanguageIsUsed(languageObject) {
     theLanguageLabel = languageObject[ "label"];
     theHashIndex = thePageURL.indexOf("#");
     theLanguageIndex = thePageURL.indexOf("?language=");
+    //
+    // Add language filter to language selector link, depending on existing filter and anchor
+    //
     if (theLanguageIndex > -1) {
+    //
+    // Replace existing filter
+    //
       theURL = thePageURL.slice(0, theLanguageIndex) + "?language=" + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
     } else if (theHashIndex > -1) {
+    //
+    // Insert filter before anchor
+    //
       theURL = thePageURL.replace("#", "?language=" + window.languageCodeToCheck + "#")
     } else {
+    //
+    // Add filter
+    //
       theURL = thePageURL + "?language=" + window.languageCodeToCheck;
     }
     window.vocLanguagesSelector += '<li><a href="' + theURL + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
@@ -1069,6 +1082,7 @@ if (typeof dataSource !== "undefined") {
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "pagingType": 'simple_numbers',
+      "dom": window.domSetting,
       //      "responsive": true,
       "deferRender": true
     });
