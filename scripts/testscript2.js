@@ -1110,9 +1110,11 @@ if (typeof dataSource !== "undefined") {
     //
     if (window.localIDToSearch.length > 0) {
       var pageInfo = "";
+      var row = "";
       table.column('Curie:name').search(window.localIDToSearch);
       pageInfo = table.page.info();
-      table.row(pageInfo.start).child(formatDetail(row.data())).show();
+      row = table.row(pageInfo.start);
+      row.child(formatDetail(row.data())).show();
     }
     //
     // Set tooltip defaults
