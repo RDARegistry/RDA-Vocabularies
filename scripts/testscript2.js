@@ -71,7 +71,7 @@ getLanguageCodeFromURL();
 //
 window.localIDToSearch = getAnchor();
 if (window.localIDToSearch.length > 0) {
-  window.domSetting = "lrtip";
+  window.domSetting = "rt";
 }
 //
 // Set change of URL anchor to reset filter and redraw
