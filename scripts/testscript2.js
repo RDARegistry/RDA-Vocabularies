@@ -1112,7 +1112,7 @@ if (typeof dataSource !== "undefined") {
       var pageInfo = "";
       table.column('Curie:name').search(window.localIDToSearch);
       pageInfo = table.page.info();
-      table.row(info.start).child(formatDetail(row.data())).show();
+      table.row(pageInfo.start).child(formatDetail(row.data())).show();
     }
     //
     // Set tooltip defaults
