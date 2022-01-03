@@ -176,28 +176,28 @@ function strongify(theString) {
 //
 // Format links
 //
-function linkify(label, uri, isLinkOut) {
+function linkify(label, url, isLinkOut) {
   //
-  // Returns link based on label and URI
+  // Returns link based on label and URL
   // Internal link uses same browser window; external link uses new browser window
   //
   var theLabel = "";
   var theLink = "";
   var theLinkIsExternal = false;
-  var theURI = "";
+  var theURL = "";
   if (typeof label != "undefined") {
     theLabel = label;
   }
-  if (typeof uri != "undefined") {
-    theURI = uri;
+  if (typeof url != "undefined") {
+    theURL = url;
   }
   if (typeof isLinkOut != "undefined") {
     theLinkIsExternal = isLinkOut;
   }
   if (theLinkIsExternal) {
-    theLink = '<a href="' + theURI + '" target="_blank">' + theLabel + '</a>';
+    theLink = '<a href="' + theURL + '" target="_blank">' + theLabel + '</a>';
   } else {
-    theLink = '<a href="' + theURI + '">' + theLabel + '</a>';
+    theLink = '<a href="' + theURL + '">' + theLabel + '</a>';
   }
   return theLink;
 }
@@ -715,15 +715,15 @@ function formatValueForMultivalueDetail(detailObject) {
 // Search the Curie column for the local part ID
 //
 /* function searchLocalID() {
-  //
-  // Draws the data table with the search
-  //
-  var table = $("table#pindex").DataTable();
-  table.search('').column('Curie:name').search(window.localIDToSearch).draw();
-  //
-  // Put the filter in the search box
-  //
-  // $('input[type=search]').val(window.localIDToSearch);
+//
+// Draws the data table with the search
+//
+var table = $("table#pindex").DataTable();
+table.search('').column('Curie:name').search(window.localIDToSearch).draw();
+//
+// Put the filter in the search box
+//
+// $('input[type=search]').val(window.localIDToSearch);
 } */
 //
 // Get and set page and global variables
@@ -852,7 +852,7 @@ function setPageDetails(json) {
   document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
   document.getElementById("indexTitle").innerHTML = theTableTitle;
   document.getElementById("vocMenuLink").innerHTML = theVocMenuLink;
-  document.getElementById("vocTitle").innerHTML = window.theVocTitle;
+  document.getElementById("vocTitle").innerHTML = linkify(window.theVocTitle, getPermalink(theVocURI));
   document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
   document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
   document.getElementById("vocURI").innerHTML = window.theVocURI;
