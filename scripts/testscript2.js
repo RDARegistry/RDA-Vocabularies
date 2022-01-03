@@ -1026,7 +1026,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Permalink',
         "orderable": false,
         "render": function (data, type, row) {
-          return makeColumnRow(linkify("#", getPermalink(getURI(row))));
+          return makeColumnRow(linkify("#", getPermalink(getURI(row))), "dataDisplay");
         }
       }, {
         "class": 'detailsControl',
@@ -1060,7 +1060,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Status',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumnRow((getLink(getStatus(row), true)));
+          return makeColumnRow((getLink(getStatus(row), true)), "dataDisplay");
         }
       }],
       "initComplete": function (settings, json) {
