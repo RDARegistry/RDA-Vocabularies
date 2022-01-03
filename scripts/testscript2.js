@@ -1109,7 +1109,10 @@ if (typeof dataSource !== "undefined") {
     // Search Curie if local ID to search
     //
     if (window.localIDToSearch.length > 0) {
+      var pageInfo = "";
       table.column('Curie:name').search(window.localIDToSearch);
+      pageInfo = table.page.info();
+      table.row(info.start).child(formatDetail(row.data())).show();
     }
     //
     // Set tooltip defaults
