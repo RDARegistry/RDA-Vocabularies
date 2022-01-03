@@ -114,6 +114,14 @@ function getAnchor() {
   return theURLAnchor;
 }
 //
+// Set change of URL anchor to reset filter and redraw
+//
+window.onhashchange = function () {
+  var table = $("table#pindex").DataTable();
+  window.localIDToSearch = getAnchor();
+  table.search('').column('Curie:name').search(window.localIDToSearch).draw();
+};
+//
 // Basic string formatting
 //
 //
@@ -1111,7 +1119,6 @@ if (typeof dataSource !== "undefined") {
         delayIn: 500,
         gravity: true,
         position: 'top-left-corner'
-//        scheme: 'aqua'
       }
     })
   });
