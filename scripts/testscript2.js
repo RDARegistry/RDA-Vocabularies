@@ -714,7 +714,7 @@ function formatValueForMultivalueDetail(detailObject) {
 //
 // Search the Curie column for the local part ID
 //
-function searchLocalID() {
+/* function searchLocalID() {
   //
   // Draws the data table with the search
   //
@@ -724,7 +724,7 @@ function searchLocalID() {
   // Put the filter in the search box
   //
   // $('input[type=search]').val(window.localIDToSearch);
-}
+} */
 //
 // Get and set page and global variables
 //
