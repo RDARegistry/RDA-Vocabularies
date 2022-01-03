@@ -291,7 +291,7 @@ function getLanguageIsUsed(languageObject) {
   //
   if (window.languageIsUsed) {
     theLanguageLabel = languageObject[ "label"];
-    thePageURL += "?language=" + window.languageCodeToCheck;
+    thePageURL = thePageURL.replace("#", "?language=" + window.languageCodeToCheck + "#")
     window.vocLanguagesSelector += '<li><a href="' + thePageURL + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
   return;
