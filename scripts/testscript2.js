@@ -1092,7 +1092,7 @@ if (typeof dataSource !== "undefined") {
         table.column('Curie:name').search(window.localIDToSearch);
         $("div#pindex_filter input").val(window.localIDToSearch);
       }
-    }
+    })
     //
     // Set tooltip defaults
     //
