@@ -44,6 +44,8 @@ var regLanguages =[ {
   code: "sv", label: "Swedish", rtl: false
 }, {
   code: "vi", label: "Vietnamese", rtl: false
+}, {
+  code: "zh", label: "Chinese", rtl: false
 }];
 //
 // Global variables
