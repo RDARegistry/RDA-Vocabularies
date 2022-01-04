@@ -69,7 +69,7 @@ var vocLanguagesSelector = "";
 //
 // Set the datatable DOM to display all table utilities
 //
-var domSetting = "";
+var domSetting = "lrftip";
 //
 // Initialize the current language code from the page URL
 //
@@ -1125,7 +1125,7 @@ if (typeof dataSource !== "undefined") {
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "pagingType": 'simple_numbers',
-      "dom": window.domSetting,
+//      "dom": window.domSetting,
       "language": window.theLocalisationObject,
       //      "responsive": true,
       "deferRender": true
