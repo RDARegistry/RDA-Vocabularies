@@ -71,11 +71,9 @@ var domSetting = "lrftip";
 //
 getLanguageCodeFromURL();
 //
-// Get the DataTables localisation object from json file
+// Get DataTables localisation object from json file
 //
-/* window.theLocalisationObject = {
-"search": "Hi!",
-}; */
+getLocalisation();
 //
 // Set the initial search filter to page URL anchor, if any
 //
@@ -103,6 +101,16 @@ function getLanguageCodeFromURL() {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
   return;
+}
+//
+// Get the localisation object
+//
+function getLocalisation() {
+  $.getJSON("localisation.js", function (localData) {
+    if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
+      window.theLocalisationObject = localData[window.theCurrentLanguageCode];
+    }
+  });
 }
 //
 // Get the anchor (# string) from the page URL
@@ -1025,14 +1033,6 @@ if (typeof dataSource !== "undefined") {
           // Get the global kind of vocabulary
           //
           getVocKind();
-          //
-          // Get the localisation object
-          //
-          $.getJSON("localisation.js", function (localData) {
-            if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
-              window.theLocalisationObject = localData[window.theCurrentLanguageCode];
-            }
-          });
           return json.data;
         }
       },
