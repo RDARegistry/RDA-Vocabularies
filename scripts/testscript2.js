@@ -789,7 +789,7 @@ function setPageDetails(json) {
   // Example curie is first published element in data and may not be the lowest in curie order
   //
   theCurieExURI = getURI(window.theVocPublishedEntries[0]);
-  theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
+  theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
   //
   // Element sets and value vocabularies have different filepath constructors
   //
@@ -797,6 +797,7 @@ function setPageDetails(json) {
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
     filepathPart = "termList";
+    filenameLocal = window.curiePrefix;
     break;
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
@@ -834,7 +835,7 @@ function setPageDetails(json) {
   //
   // Set the file links for the Downloads block
   //
-  theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
+  theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + window.curiePrefix + '.csv';
   theLinkJSONLD = baseDomain + 'jsonld/' + filepathPart + '/' + filenameLocal + ".jsonld";
   theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
   theLinkXML = baseDomain + 'xml/' + filepathPart + '/' + filenameLocal + '.xml';
@@ -862,7 +863,7 @@ function setPageDetails(json) {
   document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
   document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
   document.getElementById("vocURI").innerHTML = window.theVocURI;
-  document.getElementById("vocPrefix").innerHTML = curiePrefix;
+  document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
   document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
   document.getElementById("vocVersion").innerHTML = theVersionLink;
   document.getElementById("linkCSV").href = theLinkCSV;
@@ -1062,7 +1063,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Curie',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumnRow(getLink(row, false, curiePrefix), "dataDisplay");
+          return makeColumnRow(getLink(row, false, window.curiePrefix), "dataDisplay");
         }
       }, {
         "class": "prefLabel",
