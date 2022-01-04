@@ -53,6 +53,8 @@ var localIDToSearch = "";
 var languageCodeToCheck = "";
 var theCurrentLanguageCode = "";
 var theDefaultLanguageCode = "en";
+var theLocalisationObject = {
+};
 var theVocData = "";
 var theVocDomain = "";
 var theVocKind = "";
@@ -69,6 +71,14 @@ var domSetting = "lrftip";
 // Initialize the current language code from the page URL
 //
 getLanguageCodeFromURL();
+//
+// Get the DataTables localisation object from json file
+//
+$.getJSON("localisation.json", function (localData) {
+  if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
+    window.theLocalisationObject = localData[window.theCurrentLanguageCode];
+  }
+}
 //
 // Set the initial search filter to page URL anchor, if any
 //
@@ -1079,6 +1089,7 @@ if (typeof dataSource !== "undefined") {
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "pagingType": 'simple_numbers',
       "dom": window.domSetting,
+      "language": window.theLocalisationObject,
       //      "responsive": true,
       "deferRender": true
     });
