@@ -77,7 +77,7 @@ getLanguageCodeFromURL();
 $.getJSON("localisation.json", function (localData) {
   if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = localData[window.theCurrentLanguageCode];
-  }
+  };
 });
 /* window.theLocalisationObject = {
   "decimal": ",",
