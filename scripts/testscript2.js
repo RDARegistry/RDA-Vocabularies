@@ -78,7 +78,7 @@ $.getJSON("localisation.json", function (localData) {
   if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = localData[window.theCurrentLanguageCode];
   }
-}
+};
 //
 // Set the initial search filter to page URL anchor, if any
 //
