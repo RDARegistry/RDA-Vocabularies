@@ -69,7 +69,9 @@ var vocLanguagesSelector = "";
 //
 // Set the datatable DOM to display all table utilities
 //
-var domSetting = "lrftip";
+var domSetting = "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+        "<'row'<'col-sm-12'tr>>" +
+        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
 //
 // Initialize the current language code from the page URL
 //
@@ -1125,7 +1127,7 @@ if (typeof dataSource !== "undefined") {
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "pagingType": 'simple_numbers',
-//      "dom": window.domSetting,
+      "dom": window.domSetting,
       "language": window.theLocalisationObject,
       //      "responsive": true,
       "deferRender": true
