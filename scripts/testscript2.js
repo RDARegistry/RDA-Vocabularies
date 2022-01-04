@@ -797,6 +797,9 @@ function setPageDetails(json) {
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
     filepathPart = "termList";
+    //
+    // Get local part of hash URI: everything after last slash
+    //
     filenameLocal = window.theVocURI.substr(1 + theVocURI.lastIndexOf("/"));
     break;
     default:
