@@ -85,7 +85,7 @@ if (window.localIDToSearch.length > 0) {
 //
 function getLanguageCodeFromURL() {
   //
-  // Sts the current language code from the page URL
+  // Sets the current language code from the page URL
   // 2-letter code is specified by appending "language=aa" to the vocabulary/entry URL
   // Default code is for English
   //
@@ -797,7 +797,7 @@ function setPageDetails(json) {
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
     filepathPart = "termList";
-    filenameLocal = window.curiePrefix;
+    filenameLocal = window.theVocURI.substr(1 + theVocURI.lastIndexOf("/"));
     break;
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
