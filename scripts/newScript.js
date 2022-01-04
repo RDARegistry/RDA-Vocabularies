@@ -273,6 +273,9 @@ function getDomain() {
     case "value":
     window.theVocDomain = "Concepts";
     break;
+    case "rof":
+    window.theVocDomain = "";
+    break;
     default:
     window.theVocDomain = "Properties";
   }
@@ -497,9 +500,15 @@ function getVocKind() {
   //
   if (typeof window.theVocURI != "undefined") {
     //
+    // ROF element set uses "rof" in URI/filepath
+    //
+    if (window.theVocURI.indexOf("/rof/") > -1) {
+      window.theVocKind = "rof";
+    }
+    //
     // Value vocabulary uses "termlist" in URI/filepath
     //
-    if (window.theVocURI.indexOf("/termList/") > -1) {
+    else if (window.theVocURI.indexOf("/termList/") > -1) {
       window.theVocKind = "value";
     }
     //
@@ -764,6 +773,9 @@ function setPageDetails(json) {
     case "value":
     theTableTitle = "Concepts";
     break;
+    case "rof":
+    theTableTitle = "Classes/Properties";
+    break;
     default:
     theTableTitle = "Properties";
   }
@@ -789,6 +801,11 @@ function setPageDetails(json) {
     // Get local part of hash URI: everything after last slash
     //
     filenameLocal = window.theVocURI.substr(1 + theVocURI.lastIndexOf("/"));
+    break;
+    case "rof":
+    theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
+    filepathPart = "Elements";
+    filenameLocal = "rof";
     break;
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
@@ -894,6 +911,9 @@ function formatLanguagesBlock() {
     case "object":
     theLanguagesBlock += '<p>An object element set uses English labels only.</p>';
     break;
+    case "rof":
+    theLanguagesBlock += '<p>The element set uses English labels only.</p>';
+    break;
     //
     // Set languages selector list with item for each language used in published elements
     //
@@ -931,9 +951,6 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>is linked from its child <strong>object</strong> property in ' + theVocToObject + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
-    case "class":
-    theSemanticsBlock = "";
-    break;
     //
     // Datatype element set references domain and canonical element set, and literal range
     //
@@ -958,9 +975,6 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>has an inverse property.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
-    break;
-    case "value":
-    theSemanticsBlock = "";
     break;
     default:
     theSemanticsBlock = "";
