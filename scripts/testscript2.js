@@ -1025,6 +1025,14 @@ if (typeof dataSource !== "undefined") {
           // Get the global kind of vocabulary
           //
           getVocKind();
+          //
+          // Get the localisation object
+          //
+          $.getJSON("localisation.js", function (localData) {
+            if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
+              window.theLocalisationObject = localData[window.theCurrentLanguageCode];
+            }
+          });
           return json.data;
         }
       },
@@ -1089,11 +1097,6 @@ if (typeof dataSource !== "undefined") {
       "language": window.theLocalisationObject,
       //      "responsive": true,
       "deferRender": true
-    });
-    $.getJSON("localisation.js", function (localData) {
-      if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
-        window.theLocalisationObject = localData[window.theCurrentLanguageCode];
-      }
     });
     //
     // Add event listener for expanding and collapsing details
