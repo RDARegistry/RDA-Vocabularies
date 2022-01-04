@@ -78,7 +78,7 @@ $.getJSON("localisation.json", function (localData) {
     window.theLocalisationObject = localData[window.theCurrentLanguageCode];
   };
 });
-/* window.theLocalisationObject = {
+ window.theLocalisationObject = {
   "decimal": ",",
   "emptyTable": "Keine Daten in der Tabelle vorhanden",
   "info": "_START_ bis _END_ von _TOTAL_ Einträgen",
@@ -89,7 +89,7 @@ $.getJSON("localisation.json", function (localData) {
   "lengthMenu": "_MENU_ Zeilen anzeigen",
   "loadingRecords": "Wird geladen ..",
   "processing": "Bitte warten ..",
-  "search": "Suche:",
+  search: "Suche:",
   "zeroRecords": "Keine passenden Einträge gefunden",
   "paginate": {
     "first": "Erste",
@@ -101,7 +101,7 @@ $.getJSON("localisation.json", function (localData) {
     "sortAscending": ": aktivieren, um Spalte aufsteigend zu sortieren",
     "sortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
   }
-}; */
+};
 //
 // Set the initial search filter to page URL anchor, if any
 //
