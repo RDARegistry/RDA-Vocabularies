@@ -53,8 +53,7 @@ var localIDToSearch = "";
 var languageCodeToCheck = "";
 var theCurrentLanguageCode = "";
 var theDefaultLanguageCode = "en";
-var theLocalisationObject = {
-};
+var theLocalisationObject = "";
 var theVocData = "";
 var theVocDomain = "";
 var theVocKind = "";
@@ -76,7 +75,7 @@ getLanguageCodeFromURL();
 //
 $.getJSON("localisation.json", function (localData) {
   if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
-    window.theLocalisationObject = JSON.parse(localData[window.theCurrentLanguageCode]);
+    window.theLocalisationObject = localData[window.theCurrentLanguageCode];
   };
 });
 /* window.theLocalisationObject = {
