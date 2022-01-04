@@ -73,14 +73,9 @@ getLanguageCodeFromURL();
 //
 // Get the DataTables localisation object from json file
 //
-$.getJSON("localisation.js", function (localData) {
-  if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
-    window.theLocalisationObject = localData[window.theCurrentLanguageCode];
-  };
-});
-window.theLocalisationObject = {
-  "search": "Hi!",
-};
+/* window.theLocalisationObject = {
+"search": "Hi!",
+}; */
 //
 // Set the initial search filter to page URL anchor, if any
 //
@@ -1094,6 +1089,11 @@ if (typeof dataSource !== "undefined") {
       "language": window.theLocalisationObject,
       //      "responsive": true,
       "deferRender": true
+    });
+    $.getJSON("localisation.js", function (localData) {
+      if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
+        window.theLocalisationObject = localData[window.theCurrentLanguageCode];
+      }
     });
     //
     // Add event listener for expanding and collapsing details
