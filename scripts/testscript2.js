@@ -357,8 +357,10 @@ function getLanguageIsUsed(languageObject) {
 // Check that language code is used for a published Toolkit label
 //
 function getLanguageIsPublished(entryObject) {
-  if (typeof entryObject[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
-    window.languageIsUsed = true;
+  if (typeof entryObject[ "ToolkitLabel"] != "undefined") {
+    if (typeof entryObject[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
+      window.languageIsUsed = true;
+    }
   }
   return;
 }
