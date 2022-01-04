@@ -25,6 +25,8 @@ var regLanguages =[ {
 }, {
   code: "en", label: "English", rtl: false
 }, {
+  code: "es", label: "Spanish", rtl: false
+}, {
   code: "et", label: "Estonian", rtl: false
 }, {
   code: "fi", label: "Finnish", rtl: false
