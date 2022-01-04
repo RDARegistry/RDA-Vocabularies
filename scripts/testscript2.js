@@ -69,7 +69,7 @@ var vocLanguagesSelector = "";
 //
 // Set the datatable DOM to display all table utilities
 //
-var domSetting = "lrftip";
+var domSetting = "";
 //
 // Initialize the current language code from the page URL
 //
