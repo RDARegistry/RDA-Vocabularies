@@ -111,20 +111,22 @@ function getLanguageCodeFromURL() {
 // Get the localisation object
 //
 function getLocalisation() {
-  /*   $.getJSON("localisation.js", function (localData) {
-  if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
-  window.theLocalisationObject = localData[window.theCurrentLanguageCode];
-  }
-  }); */
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function () {
-    if (typeof this[window.theCurrentLanguageCode] != "undefined") {
-      window.theLocalisationObject = this[window.theCurrentLanguageCode];
+  $.getJSON("localisation.js", function (localData) {
+    if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
+      window.theLocalisationObject = localData[window.theCurrentLanguageCode];
     }
   }
-  xhttp.open("GET", "localisation.js");
-  xhttp.send();
+  return;
 }
+/*  const xhttp = new XMLHttpRequest();
+xhttp.onload = function () {
+if (typeof this[window.theCurrentLanguageCode] != "undefined") {
+window.theLocalisationObject = this[window.theCurrentLanguageCode];
+}
+}
+xhttp.open("GET", "localisation.js");
+xhttp.send(); */
+
 //
 // Get the anchor (# string) from the page URL
 //
