@@ -112,17 +112,16 @@ function getLanguageCodeFromURL() {
 //
 function getLocalisation() {
   $.getJSON("localisation.json", function (data) {
-    var localData = JSON.parse(data);
-    if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
-      window.theLocalisationObject = localData[window.theCurrentLanguageCode];
-    }
+    getLoc(data);
   });
   return;
 }
-function getLoc(jsonData) {
+function getLoc(data) {
+  var localData = JSON.parse(data);
   if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = localData[window.theCurrentLanguageCode];
   }
+  return;
 }
 //
 // Get the anchor (# string) from the page URL
