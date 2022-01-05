@@ -138,7 +138,7 @@ function getAnchor() {
   return theURLAnchor;
 }
 //
-// Set DataTables DOM settings
+// Set DataTables DOM settings with Bootstrap 5
 //
 function setDTDom() {
   if (window.localIDToSearch.length > 0) {

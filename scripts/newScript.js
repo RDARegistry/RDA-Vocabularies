@@ -52,6 +52,7 @@ var regLanguages =[ {
 //
 var curiePrefix = "";
 var detailList = "";
+var domSetting = "";
 var languageIsUsed = false;
 var localIDToSearch = "";
 var languageCodeToCheck = "";
@@ -75,15 +76,19 @@ var domSetting = "lrftip";
 //
 getLanguageCodeFromURL();
 //
-// Set the initial search filter to page URL anchor, if any
+// Set the initial search filter to page URL anchor and set DT DOM
 //
 window.localIDToSearch = getAnchor();
-if (window.localIDToSearch.length > 0) {
-  //
-  // Set the datatable DOM to display only the processing indicator (not really used) and table
-  //
-  window.domSetting = "rt";
-}
+setDTDom();
+//
+// Set change of URL anchor to reset filter and redraw
+//
+window.onhashchange = function () {
+  var table = $("table#pindex").DataTable();
+  window.localIDToSearch = getAnchor();
+  setDTDom();
+  table.search('').column('Curie:name').search(window.localIDToSearch).draw();
+};
 //
 // Get the language code from the page URL
 //
@@ -119,13 +124,23 @@ function getAnchor() {
   return theURLAnchor;
 }
 //
-// Set change of URL anchor to reset filter and redraw
+// Set DataTables DOM settings with Bootstrap 5
 //
-window.onhashchange = function () {
-  var table = $("table#pindex").DataTable();
-  window.localIDToSearch = getAnchor();
-  table.search('').column('Curie:name').search(window.localIDToSearch).draw();
-};
+function setDTDom() {
+  if (window.localIDToSearch.length > 0) {
+    //
+    // Set the DOM to display only the processing indicator (not really used) and table
+    //
+    window.domSetting = "<'row'<'col-sm-12'tr>>";
+  } else {
+    //
+    // Set the DOM to display all utilities
+    //
+    window.domSetting = "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+    "<'row'<'col-sm-12'tr>>" +
+    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
+  }
+}
 //
 // Basic string formatting
 //
