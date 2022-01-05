@@ -84,7 +84,7 @@ if (window.localIDToSearch.length > 0) {
   //
   // Set the datatable DOM to display only the processing indicator (not really used) and table
   //
-  window.domSetting = "rt";
+  window.domSetting = "<'row'<'col-sm-12'tr>>";
 }
 //
 // Get the language code from the page URL
