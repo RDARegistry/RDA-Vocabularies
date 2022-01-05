@@ -115,7 +115,7 @@ function getLocalisation() {
     if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
       window.theLocalisationObject = localData[window.theCurrentLanguageCode];
     }
-  }
+  };
   return;
 }
 /*  const xhttp = new XMLHttpRequest();
