@@ -72,6 +72,10 @@ var vocLanguagesSelector = "";
 //
 getLanguageCodeFromURL();
 //
+// Get DataTables localisation object from json file
+//
+getLocalisation();
+//
 // Set the initial search filter to page URL anchor and set DT DOM
 //
 window.localIDToSearch = getAnchor();
@@ -1041,10 +1045,6 @@ if (typeof dataSource !== "undefined") {
   function () {
     var pageTable = $("#pindex");
     var table;
-    //
-    // Get DataTables localisation object from json file
-    //
-    getLocalisation();
     //
     // Set table to datatable instance
     //
