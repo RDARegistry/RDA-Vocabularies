@@ -112,11 +112,14 @@ function getLanguageCodeFromURL() {
 //
 function getLocalisation() {
   $.getJSON("localisation.json", function (data) {
-    getLoc(data);
+    var localData = JSON.parse(data);
+    if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
+      window.theLocalisationObject = localData[window.theCurrentLanguageCode];
+    }
   });
   return;
 }
-function getLoc(localData) {
+function getLoc(jsonData) {
   if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = localData[window.theCurrentLanguageCode];
   }
