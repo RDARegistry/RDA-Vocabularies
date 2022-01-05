@@ -68,10 +68,6 @@ var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
 //
-// Set the datatable DOM to display all table utilities
-//
-var domSetting = "lrftip";
-//
 // Initialize the current language code from the page URL
 //
 getLanguageCodeFromURL();
