@@ -122,7 +122,7 @@ function getLocalisation() {
   // Define a callback function
   xhttp.onload = function () {
     // Here you can use the Data
-//    localData = JSON.parse(this);
+    localData = JSON.parse(this.responseText);
     if (typeof this[window.theCurrentLanguageCode] != "undefined") {
       window.theLocalisationObject = this[window.theCurrentLanguageCode];
     }
