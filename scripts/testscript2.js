@@ -111,10 +111,26 @@ function getLanguageCodeFromURL() {
 // Get the localisation object
 //
 function getLocalisation() {
-  $.getJSON("localisation.json", function (data) {
-    var localData = JSON.parse(data);
-    getLoc(localData);
-  });
+  /*  $.getJSON("localisation.json", function (data) {
+  var localData = JSON.parse(data);
+  getLoc(localData);
+  }); */
+  var localData = "";
+  // Create an XMLHttpRequest object
+  const xhttp = new XMLHttpRequest();
+  
+  // Define a callback function
+  xhttp.onload = function () {
+    // Here you can use the Data
+    localData = = JSON.parse(this)
+    if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
+      window.theLocalisationObject = localData[window.theCurrentLanguageCode];
+    }
+  }
+  
+  // Send a request
+  xhttp.open("GET", "localisation.json");
+  xhttp.send();
   return;
 }
 function getLoc(localData) {
