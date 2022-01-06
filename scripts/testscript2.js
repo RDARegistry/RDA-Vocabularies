@@ -92,14 +92,19 @@ function setDTObject() {
 }
 
 function getLocalisation(myCallback) {
-  let req = new XMLHttpRequest();
-  req.open('GET', "localisation.json");
-  req.onload = function () {
-    var data = this.response;
+  //  let req = new XMLHttpRequest();
+  //  req.open('GET', "localisation.json");
+  //  req.onload = function () {
+  //    var data = this.response;
+  //    window.localisationData = data;
+  //    myCallback;
+  //  }
+  //  req.send();
+  $.getJSON("localisation.json", function (data) {
     window.localisationData = data;
-    myCallback;
-  }
-  req.send();
+  });
+  myCallback;
+  return;
 }
 
 getLocalisation(setDTObject);
