@@ -76,7 +76,7 @@ getLanguageCodeFromURL();
 // Get DataTables localisation object from json file
 //
 //getLocalisation();
-$.getJSON("localisation.json", function (data) {
+$.getJSON("localise.json", function (data) {
   window.localData = data;
 });
 if (typeof window.localData[window.theCurrentLanguageCode] != "undefined") {
