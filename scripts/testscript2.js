@@ -67,6 +67,7 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
+var localData = "";
 //
 // Initialize the current language code from the page URL
 //
@@ -74,7 +75,10 @@ getLanguageCodeFromURL();
 //
 // Get DataTables localisation object from json file
 //
-getLocalisation();
+//getLocalisation();
+$.getJSON("localisation.json", function (data) {
+  window.localData = data;
+  });
 //
 // Set the initial search filter to page URL anchor and set DT DOM
 //
