@@ -1036,7 +1036,6 @@ if (typeof dataSource !== "undefined") {
     $.getJSON("localisation.json", function (data) {
       window.localisationData = data;
     });
-    setDTStrings();
     //
     // Set table to datatable instance
     //
@@ -1130,6 +1129,9 @@ if (typeof dataSource !== "undefined") {
       "pagingType": 'simple_numbers',
       "dom": window.domSetting,
       "language": window.theLocalisationObject,
+      "preDrawCallback": function (settings) {
+        setDTStrings();
+      },
       //      "responsive": true,
       "deferRender": true
     });
