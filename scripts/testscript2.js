@@ -72,7 +72,6 @@ var localisationData = "";
 // Initialize the current language code from the page URL
 //
 getLanguageCodeFromURL();
-setDTStrings();
 function setDTStrings() {
   if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
@@ -1037,6 +1036,7 @@ if (typeof dataSource !== "undefined") {
     $.getJSON("localisation.json", function (data) {
       window.localisationData = data;
     });
+    setDTStrings();
     //
     // Set table to datatable instance
     //
