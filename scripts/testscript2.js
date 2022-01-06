@@ -74,12 +74,6 @@ var localisationData = "";
 getLanguageCodeFromURL();
 setDTStrings();
 function setDTStrings() {
-  //
-  // Get DataTables localisation object from json file
-  //
-  $.getJSON("localisation.json", function (data) {
-    window.localisationData = data;
-  });
   if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
   }
@@ -1037,6 +1031,12 @@ if (typeof dataSource !== "undefined") {
   function () {
     var pageTable = $("#pindex");
     var table;
+    //
+    // Get DataTables localisation object from json file
+    //
+    $.getJSON("localisation.json", function (data) {
+      window.localisationData = data;
+    });
     //
     // Set table to datatable instance
     //
