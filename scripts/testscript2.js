@@ -95,7 +95,7 @@ function getLocalisation(myCallback) {
   let req = new XMLHttpRequest();
   req.open('GET', "localisation.json");
   req.onload = function () {
-    var data = this;
+    var data = this.response;
     window.localisationData = data;
     myCallback;
   }
