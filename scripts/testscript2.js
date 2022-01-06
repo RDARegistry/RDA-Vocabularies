@@ -67,7 +67,7 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
-var localData = "";
+var localisationData = "";
 //
 // Initialize the current language code from the page URL
 //
@@ -75,13 +75,12 @@ getLanguageCodeFromURL();
 //
 // Get DataTables localisation object from json file
 //
-//getLocalisation();
 $.getJSON("localise.json", function (data) {
-  window.localData = data;
+  window.localisationData = data;
 });
-if (typeof window.localData[window.theCurrentLanguageCode] != "undefined") {
+/* if (typeof window.localData[window.theCurrentLanguageCode] != "undefined") {
   window.theLocalisationObject = window.localData[window.theCurrentLanguageCode];
-}
+} */
 //
 // Set the initial search filter to page URL anchor and set DT DOM
 //
@@ -111,39 +110,6 @@ function getLanguageCodeFromURL() {
     window.theCurrentLanguageCode = theURL.substr(theIndex + 9, 2);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
-  }
-  return;
-}
-//
-// Get the localisation object
-//
-function getLocalisation() {
-  /*  $.getJSON("localisation.json", function (data) {
-  var localData = JSON.parse(data);
-  getLoc(localData);
-  }); */
-  // Create an XMLHttpRequest object
-  var localData = "";
-  const xhttp = new XMLHttpRequest();
-  
-  // Define a callback function
-  xhttp.onload = function () {
-    // Here you can use the Data
-    //    localData = JSON.parse(this);
-    localData = this.response;
-    if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
-      window.theLocalisationObject = localData[window.theCurrentLanguageCode];
-    }
-  }
-  
-  // Send a request
-  xhttp.open("GET", "localise.json", true);
-  xhttp.send();
-  return;
-}
-function getLoc(localData) {
-  if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
-    window.theLocalisationObject = localData[window.theCurrentLanguageCode];
   }
   return;
 }
