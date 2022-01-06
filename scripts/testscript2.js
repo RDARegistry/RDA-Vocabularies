@@ -72,12 +72,37 @@ var localisationData = "";
 // Initialize the current language code from the page URL
 //
 getLanguageCodeFromURL();
-function setDTStrings() {
+
+/*  */ function setDTStrings() {
+  //
+  // Get DataTables localisation object from json file
+  //
+  $.getJSON("localisation.json", function (data) {
+    window.localisationData = data;
+  });
   if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
   }
   return;
+} * /
+function setDTObject() {
+  if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
+    window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
+  }
 }
+
+function getLocalisation(myCallback) {
+  let req = new XMLHttpRequest();
+  req.open('GET', "localisation.json");
+  req.onload = function () {
+    var data = JSON.parse(this);
+    window.localisationData = data;
+    myCallback;
+  }
+  req.send();
+}
+
+getLocalisation(setDTObject);
 //
 // Set the initial search filter to page URL anchor and set DT DOM
 //
@@ -1031,12 +1056,6 @@ if (typeof dataSource !== "undefined") {
     var pageTable = $("#pindex");
     var table;
     //
-    // Get DataTables localisation object from json file
-    //
-    $.getJSON("localisation.json", function (data) {
-      window.localisationData = data;
-    });
-    //
     // Set table to datatable instance
     //
     table = pageTable.DataTable({
@@ -1129,9 +1148,6 @@ if (typeof dataSource !== "undefined") {
       "pagingType": 'simple_numbers',
       "dom": window.domSetting,
       "language": window.theLocalisationObject,
-      "preDrawCallback": function (settings) {
-        setDTStrings();
-      },
       //      "responsive": true,
       "deferRender": true
     });
