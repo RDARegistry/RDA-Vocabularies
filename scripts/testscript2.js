@@ -112,12 +112,12 @@ function getLanguageCodeFromURL() {
 //
 function getLocalisation() {
   $.getJSON("localisation.json", function (data) {
-    getLoc(data);
+    var localData = JSON.parse(data);
+    getLoc(localData);
   });
   return;
 }
-function getLoc(data) {
-  var localData = JSON.parse(data);
+function getLoc(localData) {
   if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = localData[window.theCurrentLanguageCode];
   }
