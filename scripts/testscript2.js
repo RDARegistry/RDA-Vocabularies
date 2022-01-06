@@ -75,12 +75,12 @@ getLanguageCodeFromURL();
 //
 // Get DataTables localisation object from json file
 //
-$.getJSON("localise.json", function (data) {
+$.getJSON("localisation.json", function (data) {
   window.localisationData = data;
 });
-/* if (typeof window.localData[window.theCurrentLanguageCode] != "undefined") {
-  window.theLocalisationObject = window.localData[window.theCurrentLanguageCode];
-} */
+if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
+  window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode];
+}
 //
 // Set the initial search filter to page URL anchor and set DT DOM
 //
