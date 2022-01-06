@@ -72,14 +72,14 @@ var localisationData = "";
 // Initialize the current language code from the page URL
 //
 getLanguageCodeFromURL();
-//
-// Get DataTables localisation object from json file
-//
-$.getJSON("localisation.json", function (data) {
-  window.localisationData = data;
-});
 setDTStrings();
 function setDTStrings() {
+  //
+  // Get DataTables localisation object from json file
+  //
+  $.getJSON("localisation.json", function (data) {
+    window.localisationData = data;
+  });
   if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
   }
