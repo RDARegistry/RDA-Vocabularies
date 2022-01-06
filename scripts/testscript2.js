@@ -123,7 +123,7 @@ function getLocalisation() {
     // Here you can use the Data
     //    localData = JSON.parse(this);
     var localData = "";
-    localData = this;
+    localData = this.response;
     if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
       window.theLocalisationObject = localData[window.theCurrentLanguageCode];
     }
