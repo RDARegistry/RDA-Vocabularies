@@ -72,19 +72,19 @@ var localisationData = "";
 // Initialize the current language code from the page URL
 //
 getLanguageCodeFromURL();
-
-/*  */ function setDTStrings() {
-  //
-  // Get DataTables localisation object from json file
-  //
-  $.getJSON("localisation.json", function (data) {
-    window.localisationData = data;
-  });
-  if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
-    window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
-  }
-  return;
-} * /
+/*
+function setDTStrings() {
+//
+// Get DataTables localisation object from json file
+//
+$.getJSON("localisation.json", function (data) {
+window.localisationData = data;
+});
+if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
+window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
+}
+return;
+} */
 function setDTObject() {
   if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
