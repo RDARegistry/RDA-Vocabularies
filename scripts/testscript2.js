@@ -116,13 +116,13 @@ function getLocalisation() {
   getLoc(localData);
   }); */
   // Create an XMLHttpRequest object
+  var localData = "";
   const xhttp = new XMLHttpRequest();
   
   // Define a callback function
   xhttp.onload = function () {
     // Here you can use the Data
     //    localData = JSON.parse(this);
-    var localData = "";
     localData = this.response;
     if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
       window.theLocalisationObject = localData[window.theCurrentLanguageCode];
