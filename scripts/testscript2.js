@@ -78,7 +78,8 @@ getLanguageCodeFromURL();
 $.getJSON("localisation.json", function (data) {
   window.localisationData = data;
 });
-function getDTStrings() {
+setDTStrings();
+function setDTStrings() {
   if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
     window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
   }
