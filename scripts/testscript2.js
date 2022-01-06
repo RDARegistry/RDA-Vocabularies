@@ -78,7 +78,11 @@ getLanguageCodeFromURL();
 //getLocalisation();
 $.getJSON("localise.json", function (data) {
   window.localData = data;
-  });
+});
+if (typeof localData[window.theCurrentLanguageCode] != "undefined") {
+  window.theLocalisationObject = localData[window.theCurrentLanguageCode];
+}
+
 //
 // Set the initial search filter to page URL anchor and set DT DOM
 //
