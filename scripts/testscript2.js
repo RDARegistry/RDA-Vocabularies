@@ -129,7 +129,7 @@ function getLocalisation() {
   }
   
   // Send a request
-  xhttp.open("GET", "localisation.json", true);
+  xhttp.open("GET", "localise.json", true);
   xhttp.send();
   return;
 }
