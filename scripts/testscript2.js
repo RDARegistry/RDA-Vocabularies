@@ -20,7 +20,7 @@ var languageCodeToCheck = "";
 var regLanguages = "";
 var theCurrentLanguageCode = "";
 var theDefaultLanguageCode = "en";
-var theLocalisationObject = "";
+var theDTStrings = "";
 var theVocData = "";
 var theVocDomain = "";
 var theVocKind = "";
@@ -46,7 +46,7 @@ function setLanguagesData() {
     code: "da", label: "Danish", rtl: false
   }, {
     code: "de", label: "German", rtl: false,
-    "dtStrings": {
+    dtStrings: {
       "decimal": ",",
       "emptyTable": "Keine Daten in der Tabelle vorhanden",
       "info": "_START_ bis _END_ von _TOTAL_ Einträgen",
@@ -102,12 +102,21 @@ function setLanguagesData() {
 // Initialize the current language code from the page URL
 //
 getLanguageCodeFromURL();
-//setDTStrings();
+window.theDTStrings = getDTStrings();
 //
 //
 //
-function setDTStrings() {
-  return;
+unction getDTStrings() {
+  //
+  // Returns a DataTables strings object for the current language code
+  //
+  var theLanguageObject = "";
+  window.languageCodeToCheck = window.theCurrentLanguageCode;
+  theLanguageObject = window.regLanguages.filter(getLanguageFromLanguages);
+  //
+  // Return the rtl value for the only entry in the array
+  //
+  return theLanguageObject[0][ "dtStrings"];
 }
 //
 // Set the initial search filter to page URL anchor and set DT DOM
@@ -405,13 +414,13 @@ function getRtl() {
   //
   // Returns a right-to-left flag for the current language code
   //
-  var theLanguageArray = "";
+  var theLanguageObject = "";
   window.languageCodeToCheck = window.theCurrentLanguageCode;
-  theLanguageArray = window.regLanguages.filter(getLanguageFromLanguages);
+  theLanguageObject = window.regLanguages.filter(getLanguageFromLanguages);
   //
   // Return the rtl value for the only entry in the array
   //
-  return theLanguageArray[0][ "rtl"];
+  return theLanguageObject[0][ "rtl"];
 }
 //
 // Get entry data from jsonld
@@ -1153,7 +1162,7 @@ if (typeof dataSource !== "undefined") {
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "pagingType": 'simple_numbers',
       "dom": window.domSetting,
-      "language": window.theLocalisationObject,
+      "language": window.theDTStrings,
       //      "responsive": true,
       "deferRender": true
     });
