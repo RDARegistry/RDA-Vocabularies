@@ -106,7 +106,7 @@ window.theDTStrings = getDTStrings();
 //
 //
 //
-unction getDTStrings() {
+function getDTStrings() {
   //
   // Returns a DataTables strings object for the current language code
   //
