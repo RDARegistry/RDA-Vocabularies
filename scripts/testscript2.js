@@ -9,45 +9,6 @@
 //
 var baseDomain = "http://www.rdaregistry.info/";
 //
-// Array of jsonld objects for the possible languages of the vocabulary
-// Object includes language code, label in English, and indication of right-to-left display
-//
-var regLanguages =[ {
-  code: "ar", label: "Arabic", rtl: true
-}, {
-  code: "ca", label: "Catalan", rtl: false
-}, {
-  code: "da", label: "Danish", rtl: false
-}, {
-  code: "de", label: "German", rtl: false
-}, {
-  code: "el", label: "Greek", rtl: false
-}, {
-  code: "en", label: "English", rtl: false
-}, {
-  code: "es", label: "Spanish", rtl: false
-}, {
-  code: "et", label: "Estonian", rtl: false
-}, {
-  code: "fi", label: "Finnish", rtl: false
-}, {
-  code: "fr", label: "French", rtl: false
-}, {
-  code: "hu", label: "Hungarian", rtl: false
-}, {
-  code: "it", label: "Italian", rtl: false
-}, {
-  code: "nl", label: "Dutch", rtl: false
-}, {
-  code: "no", label: "Norwegian", rtl: false
-}, {
-  code: "sv", label: "Swedish", rtl: false
-}, {
-  code: "vi", label: "Vietnamese", rtl: false
-}, {
-  code: "zh", label: "Chinese", rtl: false
-}];
-//
 // Global variables
 //
 var curiePrefix = "";
@@ -56,6 +17,7 @@ var domSetting = "";
 var languageIsUsed = false;
 var localIDToSearch = "";
 var languageCodeToCheck = "";
+var regLanguages = "";
 var theCurrentLanguageCode = "";
 var theDefaultLanguageCode = "en";
 var theLocalisationObject = "";
@@ -67,47 +29,86 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
-var localisationData = "";
+//
+//
+//
+setLanguagesData();
+//
+// Array of jsonld objects for the possible languages of the vocabulary
+// Object includes language code, label in English, indication of right-to-left display, and DataTable display strings
+//
+function setLanguagesData() {
+  window.regLanguages =[ {
+    code: "ar", label: "Arabic", rtl: true
+  }, {
+    code: "ca", label: "Catalan", rtl: false
+  }, {
+    code: "da", label: "Danish", rtl: false
+  }, {
+    code: "de", label: "German", rtl: false,
+    "dtStrings": {
+      "decimal": ",",
+      "emptyTable": "Keine Daten in der Tabelle vorhanden",
+      "info": "_START_ bis _END_ von _TOTAL_ Einträgen",
+      "infoEmpty": "Keine Daten vorhanden",
+      "infoFiltered": "(gefiltert von _MAX_ Einträgen)",
+      "thousands": ".",
+      "lengthMenu": "_MENU_ Zeilen anzeigen",
+      "loadingRecords": "Wird geladen ..",
+      "processing": "Bitte warten ..",
+      "search": "Suche:",
+      "zeroRecords": "Keine passenden Einträge gefunden",
+      "paginate": {
+        "first": "Erste",
+        "last": "Letzte",
+        "next": "Nächste",
+        "previous": "Zurück"
+      },
+      "aria": {
+        "sortAscending": ": aktivieren, um Spalte aufsteigend zu sortieren",
+        "sortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
+      }
+    }
+  }, {
+    code: "el", label: "Greek", rtl: false
+  }, {
+    code: "en", label: "English", rtl: false
+  }, {
+    code: "es", label: "Spanish", rtl: false
+  }, {
+    code: "et", label: "Estonian", rtl: false
+  }, {
+    code: "fi", label: "Finnish", rtl: false
+  }, {
+    code: "fr", label: "French", rtl: false
+  }, {
+    code: "hu", label: "Hungarian", rtl: false
+  }, {
+    code: "it", label: "Italian", rtl: false
+  }, {
+    code: "nl", label: "Dutch", rtl: false
+  }, {
+    code: "no", label: "Norwegian", rtl: false
+  }, {
+    code: "sv", label: "Swedish", rtl: false
+  }, {
+    code: "vi", label: "Vietnamese", rtl: false
+  }, {
+    code: "zh", label: "Chinese", rtl: false
+  }];
+  return;
+}
 //
 // Initialize the current language code from the page URL
 //
 getLanguageCodeFromURL();
-/*
+//setDTStrings();
+//
+//
+//
 function setDTStrings() {
-//
-// Get DataTables localisation object from json file
-//
-$.getJSON("localisation.json", function (data) {
-window.localisationData = data;
-});
-if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
-window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
-}
-return;
-} */
-function setDTObject() {
-  if (typeof window.localisationData[window.theCurrentLanguageCode] != "undefined") {
-    window.theLocalisationObject = window.localisationData[window.theCurrentLanguageCode].dtStrings;
-  }
-}
-
-function getLocalisation(myCallback) {
-  //  let req = new XMLHttpRequest();
-  //  req.open('GET', "localisation.json");
-  //  req.onload = function () {
-  //    var data = this.response;
-  //    window.localisationData = data;
-  //    myCallback;
-  //  }
-  //  req.send();
-  $.getJSON("localisation.json", function (data) {
-    window.localisationData = data;
-  });
-  myCallback;
   return;
 }
-
-getLocalisation(setDTObject);
 //
 // Set the initial search filter to page URL anchor and set DT DOM
 //
@@ -837,7 +838,7 @@ function setPageDetails(json) {
   // Example curie is first published element in data and may not be the lowest in curie order
   //
   theCurieExURI = getURI(window.theVocPublishedEntries[0]);
-  theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, window.curiePrefix), theCurieExURI);
+  theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
   //
   // Element sets and value vocabularies have different filepath constructors
   //
@@ -891,7 +892,7 @@ function setPageDetails(json) {
   //
   // Set the file links for the Downloads block
   //
-  theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + window.curiePrefix + '.csv';
+  theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
   theLinkJSONLD = baseDomain + 'jsonld/' + filepathPart + '/' + filenameLocal + ".jsonld";
   theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
   theLinkXML = baseDomain + 'xml/' + filepathPart + '/' + filenameLocal + '.xml';
@@ -919,7 +920,7 @@ function setPageDetails(json) {
   document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
   document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
   document.getElementById("vocURI").innerHTML = window.theVocURI;
-  document.getElementById("vocPrefix").innerHTML = window.curiePrefix;
+  document.getElementById("vocPrefix").innerHTML = curiePrefix;
   document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
   document.getElementById("vocVersion").innerHTML = theVersionLink;
   document.getElementById("linkCSV").href = theLinkCSV;
@@ -951,7 +952,7 @@ function formatLanguagesBlock() {
   //
   switch (window.theVocKind) {
     //
-    // There are no translations for datatype and object element sets, or for ROF; English element label is only annotation
+    // There are no translations for datatype and object element sets; English element label is only annotation
     //
     case "datatype":
     theLanguagesBlock += '<p>A datatype element set uses English labels only.</p>';
@@ -1112,7 +1113,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Curie',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumnRow(getLink(row, false, window.curiePrefix), "dataDisplay");
+          return makeColumnRow(getLink(row, false, curiePrefix), "dataDisplay");
         }
       }, {
         "class": "prefLabel",
