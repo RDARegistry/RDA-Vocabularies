@@ -1555,7 +1555,7 @@ if (typeof dataSource !== "undefined") {
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
       "pagingType": 'simple_numbers',
       "dom": window.domSetting,
-      "language": window.theLocalisationObject,
+      "language": window.theDTStrings,
       //      "responsive": true,
       "deferRender": true
     });
