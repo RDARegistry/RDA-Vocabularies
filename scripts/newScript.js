@@ -9,45 +9,6 @@
 //
 var baseDomain = "http://www.rdaregistry.info/";
 //
-// Array of jsonld objects for the possible languages of the vocabulary
-// Object includes language code, label in English, and indication of right-to-left display
-//
-var regLanguages =[ {
-  code: "ar", label: "Arabic", rtl: true
-}, {
-  code: "ca", label: "Catalan", rtl: false
-}, {
-  code: "da", label: "Danish", rtl: false
-}, {
-  code: "de", label: "German", rtl: false
-}, {
-  code: "el", label: "Greek", rtl: false
-}, {
-  code: "en", label: "English", rtl: false
-}, {
-  code: "es", label: "Spanish", rtl: false
-}, {
-  code: "et", label: "Estonian", rtl: false
-}, {
-  code: "fi", label: "Finnish", rtl: false
-}, {
-  code: "fr", label: "French", rtl: false
-}, {
-  code: "hu", label: "Hungarian", rtl: false
-}, {
-  code: "it", label: "Italian", rtl: false
-}, {
-  code: "nl", label: "Dutch", rtl: false
-}, {
-  code: "no", label: "Norwegian", rtl: false
-}, {
-  code: "sv", label: "Swedish", rtl: false
-}, {
-  code: "vi", label: "Vietnamese", rtl: false
-}, {
-  code: "zh", label: "Chinese", rtl: false
-}];
-//
 // Global variables
 //
 var curiePrefix = "";
