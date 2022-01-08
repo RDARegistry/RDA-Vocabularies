@@ -813,7 +813,9 @@ function getRtl() {
   //
   // Return the rtl value for the only entry in the array
   //
-  return theLanguageObject[0][ "rtl"];
+  //  return theLanguageObject[0][ "rtl"];
+  var theRTL = window.regLanguages[window.theCurrentLanguageCode].rtl;
+  return theRTL;
 }
 //
 // Get entry data from jsonld
