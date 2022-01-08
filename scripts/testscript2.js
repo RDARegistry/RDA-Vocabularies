@@ -1573,7 +1573,7 @@ if (typeof dataSource !== "undefined") {
       "pagingType": 'simple_numbers',
       "dom": window.domSetting,
       "language": window.theDTStrings,
-      //      "responsive": true,
+      "responsive": true,
       "deferRender": true
     });
     //
