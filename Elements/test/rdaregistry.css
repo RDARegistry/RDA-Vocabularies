@@ -5,7 +5,11 @@
  * Modifies/overwrites standard scheme styles
  */
 /*
- *  Set colours
+ * Set colours
+ * 
+ * Basic background and link text is RDA dark blue (#446e9b); foreground text is white (#ffffff).
+ * This overlays Bootstrap 5 "dark" scheme (changes black to dark blue) and retains sufficient contrast.
+ * 
  */
 * a {
   color: #446e9b;
@@ -82,6 +86,7 @@ body {
 * a {
   text-decoration: none;
 }
+/* Header 1 and 2 used for breadcrumb */
 h1,
 h2 {
   display: inline-block;
@@ -98,6 +103,9 @@ h3 {
 .crumbSep {
   font-size: 1.6rem;
 }
+/* 
+ * Page Metadata Block
+ */
 .vocDisplay tr {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
@@ -108,18 +116,26 @@ h3 {
 .vocDisplay td {
   vertical-align: top;
 }
-/* Language selector */
+/* 
+ * Page Languages Block
+ */
 .vocLanguages ul li {
   display: inline-block;
   padding-bottom: 0.5rem;
   padding-right: 0.1rem;
   padding-top: 0.5rem;
 }
-/* Adds white/invisible border to match selection indicator */
+/* Adds white/invisible border to match active language indicator */
 .vocLanguages ul li a {
   padding: 0.2rem;
   border: 3px solid #ffffff;
   border-radius: 0.5rem;
+}
+/* 
+ * Data detail display
+ */
+.pindex_detail {
+  margin-left: 2rem;
 }
 .pindex_detail td.detailLabel {
   vertical-align: top;
@@ -135,10 +151,11 @@ h3 {
   margin: 0;
   padding: 0;
 }
-.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+/* .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
   background-color: #446e9b !important;
-}
+} */
+/* Detail expand/collapse buttons */
 .btnCollapse,
 .btnExpand {
   border-radius: 25%;
@@ -156,11 +173,9 @@ h3 {
   border: 1px solid #006600;
   olor: #000000;
 }
-/* DataTables */
-.pindex_detail {
-  margin-left: 2rem;
-}
-/* Stuff for other pages */
+/* 
+ * Stuff for other Registry pages (to be checked)
+ */
 .list-alpha-lower {
   list-style-type: lower-alpha;
 }
