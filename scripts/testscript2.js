@@ -808,14 +808,15 @@ function getRtl() {
   // Returns a right-to-left flag for the current language code
   //
   var theLanguageObject = "";
+  //
+  // Set the language code to filter/check as the current language code
+  //
   window.languageCodeToCheck = window.theCurrentLanguageCode;
   theLanguageObject = window.regLanguages.filter(getLanguageFromLanguages);
   //
   // Return the rtl value for the only entry in the array
   //
-  //  return theLanguageObject[0][ "rtl"];
-  var theRTL = window.regLanguages[window.theCurrentLanguageCode].rtl;
-  return theRTL;
+  return theLanguageObject[0][ "rtl"];
 }
 //
 // Get entry data from jsonld
