@@ -492,7 +492,7 @@ function setLanguagesData() {
   //
   // Sort array by label
   //
-  detailArray.sort(function (a, b) {
+  window.regLanguages.sort(function (a, b) {
     let x = a.label.toLowerCase();
     let y = b.label.toLowerCase();
     if (x < y) {
