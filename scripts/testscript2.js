@@ -1514,6 +1514,16 @@ if (typeof dataSource !== "undefined") {
           return json.data;
         }
       },
+      "buttons": {
+        "buttons":[ {
+          "text": 'Active',
+          "action": function (e, dt, node, config) {
+            alert('Activated!');
+            this.disable();
+            // disable button
+          }
+        }]
+      },
       "columns":[ {
         "class": 'permalink',
         "name": 'Permalink',
@@ -1573,7 +1583,7 @@ if (typeof dataSource !== "undefined") {
       "pagingType": 'simple_numbers',
       "dom": window.domSetting,
       "language": window.theDTStrings,
-//      "responsive": true,
+      //      "responsive": true,
       "deferRender": true
     });
     //
