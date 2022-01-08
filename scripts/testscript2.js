@@ -1521,9 +1521,9 @@ if (typeof dataSource !== "undefined") {
         "buttons":[ {
           "text": 'Active',
           "action": function (e, dt, node, config) {
-            alert('Activated!');
-            this.disable();
+            dt.filter(filterPublished).draw();
             // disable button
+            this.disable();
           }
         }]
       },
