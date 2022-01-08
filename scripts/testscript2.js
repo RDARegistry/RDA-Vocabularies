@@ -1517,7 +1517,6 @@ if (typeof dataSource !== "undefined") {
       "columns":[ {
         "class": 'permalink',
         "name": 'Permalink',
-        "title": 'Permalink',
         "orderable": false,
         "render": function (data, type, row) {
           return makeColumnRow(linkify("#", getPermalink(getURI(row))), "dataDisplay");
@@ -1527,13 +1526,11 @@ if (typeof dataSource !== "undefined") {
         "data": null,
         "defaultContent": '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>',
         "name": 'Detail',
-        "title": 'Show detail',
         "orderable": false
       }, {
         "class": "curie",
         "name": 'Curie',
         "orderable": true,
-        "title": 'Curie',
         "render": function (data, type, row) {
           return makeColumnRow(getLink(row, false, curiePrefix), "dataDisplay");
         }
@@ -1541,7 +1538,6 @@ if (typeof dataSource !== "undefined") {
         "class": "prefLabel",
         "name": 'Label',
         "orderable": true,
-        "title": 'Label',
         "render": function (data, type, row) {
           return makeColumnRow(strongify(getValueByLanguage(getLabel(row))));
         }
@@ -1549,7 +1545,6 @@ if (typeof dataSource !== "undefined") {
         "class": "definition",
         "name": 'Definition',
         "orderable": false,
-        "title": 'Definition',
         "render": function (data, type, row) {
           return makeColumnRow(getDefinition(row));
         }
@@ -1557,7 +1552,6 @@ if (typeof dataSource !== "undefined") {
         "class": "status",
         "name": 'Status',
         "orderable": true,
-        "title": 'Status',
         "render": function (data, type, row) {
           return makeColumnRow((getLink(getStatus(row), true)), "dataDisplay");
         }
@@ -1579,7 +1573,7 @@ if (typeof dataSource !== "undefined") {
       "pagingType": 'simple_numbers',
       "dom": window.domSetting,
       "language": window.theDTStrings,
-      //      "responsive": true,
+//      "responsive": true,
       "deferRender": true
     });
     //
@@ -1623,7 +1617,8 @@ if (typeof dataSource !== "undefined") {
       defaults: {
         delayIn: 500,
         gravity: true,
-        position: 'top-left-corner'
+        position: 'top-left-corner',
+        size: 'small'
       }
     })
   });
