@@ -14,6 +14,12 @@ var baseDomain = "http://www.rdaregistry.info/";
 var collapseButton = '<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>';
 var expandButton = '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>';
 //
+// Style for current language selector
+//
+var languageDisplayedCSS = {
+  "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
+};
+//
 // Global variables
 //
 var curiePrefix = "";
@@ -1538,7 +1544,7 @@ if (typeof dataSource !== "undefined") {
               dt.column('Status:name').search("Published").draw();
             } else if (this.text == "Show all") {
               this.text("Show published");
-              window.theVocDT.draw();
+ //             window.theVocDT.draw();
             }
             return;
             // disable button
@@ -1596,9 +1602,7 @@ if (typeof dataSource !== "undefined") {
         //
         // Set language indicator style; border colour indicates on/selected
         //
-        $("#lang_" + window.theCurrentLanguageCode).css({
-          "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
-        });
+        $("#lang_" + window.theCurrentLanguageCode).css(window.languageDisplayedCSS);
       },
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
