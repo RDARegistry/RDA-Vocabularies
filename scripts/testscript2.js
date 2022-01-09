@@ -1526,6 +1526,7 @@ if (typeof dataSource !== "undefined") {
       "buttons": {
         "buttons":[ {
           "text": 'Show published',
+          "className": 'btnPublished',
           "action": function (e, dt, node, config) {
             this.text("Show all");
             dt.column('Status:name').search("Published").draw();
