@@ -1519,9 +1519,9 @@ if (typeof dataSource !== "undefined") {
       },
       "buttons": {
         "buttons":[ {
-          "text": 'Active',
+          "text": 'Published',
           "action": function (e, dt, node, config) {
-            dt.column( Status:name ).search( "Published" ).draw();;
+            dt.column( 'Status:name' ).search( "Published" ).draw();;
             // disable button
             this.disable();
           }
