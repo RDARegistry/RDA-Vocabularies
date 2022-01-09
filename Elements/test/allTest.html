@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Page title -->
+    <title>RDA Registry | Vocabularies</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="protip.min.css" />
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.3/b-2.1.1/datatables.min.css" />
+    <link rel="stylesheet" href="rdaregistry.css" />
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+      aria-label="Navigation for RDA Registry">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">RDA Registry</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarRR" aria-controls="navbarRR" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarRR">
+          <ul class="nav navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddElements" data-bs-toggle="dropdown"
+                aria-expanded="false">Elements</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Elements sub-menu">
+                <li><a class="dropdown-item" href="/Elements/">Elements</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/Elements/c/">Classes</a></li>
+                <li><a class="dropdown-item" href="/Elements/a/">Agent properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/e/">Expression properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/i/">Item properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/m/">Manifestation properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/n/">Nomen properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/p/">Place properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/t/">Timespan properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/w/">Work properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/x/">RDA Entity properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/u/">Unconstrained properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/rof/">RDA/ONIX Framework
+                  elements</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddValues" data-bs-toggle="dropdown"
+                aria-expanded="false">Values</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Values sub-menu">
+                <li><a class="dropdown-item" href="/termList/">Values</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/termList/">RDA values</a></li>
+                <li><a class="dropdown-item" href="/termList/#rof">RDA/ONIX Framework
+                  values</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddData" data-bs-toggle="dropdown"
+                aria-expanded="false">Data</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Data sub-menu">
+                <li><a class="dropdown-item" href="/rgData/">Data</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/rgData/rdaCuries.html">Curie prefixes</a></li>
+                <li><a class="dropdown-item" href="/Examples/">Examples</a></li>
+                <li><a class="dropdown-item" href="http://rballs.info/">R-Balls</a></li>
+                <li><a class="dropdown-item" href="/rgDatasets/">Datasets</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddTools" data-bs-toggle="dropdown"
+                aria-expanded="false">Tools</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Tools sub-menu">
+                <li><a class="dropdown-item" href="/rgTools/">Tools</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/Maps/">Maps</a></li>
+                <li><a class="dropdown-item" href="/Aligns/">Alignments</a></li>
+                <li><a class="dropdown-item" href="/Profiles/">Profiles</a></li>
+                <li><a class="dropdown-item" href="/rgArch/">Archaeology</a></li>
+                <li><a class="dropdown-item" href="/rimmf/">RIMMF</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddAbout" data-bs-toggle="dropdown"
+                aria-expanded="false">About</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Elements sub-menu">
+                <li><a class="dropdown-item" href="/rgAbout/">About</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/rgAbout/issues.html">Issues</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/">Updates</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/versions.html">-
+                  Versions</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/deprecation.html">-
+                    Deprecation</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/">RDA Reference</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/dataflow/">- Data flow</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/translations/">-
+                  Translations</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaont/">RDA ontology</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rof.html">RDA/ONIX Framework</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/rgGuide/">Guide</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank"
+              >Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://access.rdatoolkit.org"
+                target="_blank">RDA Toolkit</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <!-- Meta block -->
+      <!-- Data block -->
+      <div class="row mt-2 p-2 border">
+        <!-- Content for tooltips -->
+        <div class="">
+          <div class="">
+            <h2 id="indexTitle">Everything Index</h2>
+          </div>
+          <div class="table-responsive-md" id="tabledata">
+            <table class="table table-hover table-sm" id="allIndex">
+              <thead class="table-light">
+                <tr>
+                  <th> # </th>
+                  <th>
+                    <button class="btnExpand" type="button" disabled="disabled"><i
+                        class="bi bi-arrows-expand"> </i></button>
+                  </th>
+                  <th>CURIE</th>
+                  <th>Label</th>
+                  <th>Definition</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody> </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Scripts-->
+    <script type="text/javascript">
+      var dataSource = "elements.jsonld";
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.3/b-2.1.1/datatables.min.js"></script>
+    <script type="text/javascript" src="protip.min.js"></script>
+    <script type="text/javascript" defer="defer" src="/scripts/allTest.js"></script>
+  </body>
+</html>
