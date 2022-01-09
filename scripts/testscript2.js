@@ -1534,6 +1534,7 @@ if (typeof dataSource !== "undefined") {
             this.text("Show published");
             window.theVocDT.draw();
           }
+          return;
           // disable button
           //            this.disable();
         }
