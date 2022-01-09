@@ -1527,7 +1527,6 @@ if (typeof dataSource !== "undefined") {
         "buttons":[ {
           "text": 'Show published',
           "action": function (e, dt, node, config) {
-            var that = this;
             this.text("Show all");
             dt.column('Status:name').search("Published").draw();
           } else if (this.text == "Show all") {
