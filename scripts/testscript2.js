@@ -1521,7 +1521,7 @@ if (typeof dataSource !== "undefined") {
         "buttons":[ {
           "text": 'Active',
           "action": function (e, dt, node, config) {
-            dt.column( 6 ).search( "Published" ).draw();;
+            dt.column( 5 ).search( "Published" ).draw();;
             // disable button
             this.disable();
           }
