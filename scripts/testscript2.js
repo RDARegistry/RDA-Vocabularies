@@ -533,7 +533,9 @@ setDTDom();
 //
 // Set change of URL anchor to reset filter and redraw
 //
-window.onhashchange = function () {
+//window.onhashchange = function () {
+window.addEventListener("hashchange", changeSearch);
+function changeSearch() {
   var table = $("table#pindex").DataTable();
   window.localIDToSearch = getAnchor();
   setDTDom();
@@ -589,7 +591,7 @@ function setDTDom() {
     window.domSetting = "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
     "<'row'<'col-sm-12'tr>>" +
     "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
- /*    window.domSetting = "<'row'<'col-sm-12 col-md-4'l><'col-sm-12 col-md-4'B><'col-sm-12 col-md-4'f>>" +
+    /*    window.domSetting = "<'row'<'col-sm-12 col-md-4'l><'col-sm-12 col-md-4'B><'col-sm-12 col-md-4'f>>" +
     "<'row'<'col-sm-12'tr>>" +
     "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>"; */
   }
@@ -1517,15 +1519,15 @@ if (typeof dataSource !== "undefined") {
           return json.data;
         }
       },
-/*       "buttons": {
-        "buttons":[ {
-          "text": 'Show published',
-          "action": function (e, dt, node, config) {
-            dt.column( 'Status:name' ).search( "Published" ).draw();;
-            // disable button
-            this.disable();
-          }
-        }]
+      /*       "buttons": {
+      "buttons":[ {
+      "text": 'Show published',
+      "action": function (e, dt, node, config) {
+      dt.column( 'Status:name' ).search( "Published" ).draw();;
+      // disable button
+      this.disable();
+      }
+      }]
       }, */
       "columns":[ {
         "class": 'permalink',
