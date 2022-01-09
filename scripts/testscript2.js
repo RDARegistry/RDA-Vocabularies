@@ -574,9 +574,12 @@ function getAnchor() {
   return theURLAnchor;
 }
 //
-// Set DataTables DOM settings with Bootstrap 5
+// Set DataTables DOM settings
 //
 function setDTDom() {
+  //
+  // Set Bootstrap 5 version of DOM settings
+  //
   if (window.localIDToSearch.length > 0) {
     //
     // Set the DOM to display only the processing indicator (not really used) and table
@@ -1518,16 +1521,16 @@ if (typeof dataSource !== "undefined") {
           return json.data;
         }
       },
-      /*       "buttons": {
-      "buttons":[ {
-      "text": 'Show published',
-      "action": function (e, dt, node, config) {
-      dt.column( 'Status:name' ).search( "Published" ).draw();;
-      // disable button
-      this.disable();
-      }
-      }]
-      }, */
+      "buttons": {
+        "buttons":[ {
+          "text": 'Show published',
+          "action": function (e, dt, node, config) {
+            dt.column('Status:name').search("Published").draw();;
+            // disable button
+            //      this.disable();
+          }
+        }]
+      },
       "columns":[ {
         "class": 'permalink',
         "name": 'Permalink',
