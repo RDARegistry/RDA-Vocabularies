@@ -9,6 +9,11 @@
 //
 var baseDomain = "http://www.rdaregistry.info/";
 //
+// Expand/collapse button HTML
+//
+var collapseButton = '<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>';
+var expandButton = '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>';
+//
 // Global variables
 //
 var curiePrefix = "";
@@ -1551,7 +1556,7 @@ if (typeof dataSource !== "undefined") {
       }, {
         "class": 'detailsControl',
         "data": null,
-        "defaultContent": '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>',
+        "defaultContent": window.expandButton,
         "name": 'Detail',
         "orderable": false
       }, {
@@ -1617,13 +1622,13 @@ if (typeof dataSource !== "undefined") {
         // This row is already open - close it and reset expand details button
         //
         row.child.hide();
-        $(this).html('<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>');
+        $(this).html(window.expandButton);
       } else {
         //
         // Open this row and set collapse details button
         //
         row.child(formatDetail(row.data())).show();
-        $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
+        $(this).html(window.collapseButton);
       }
     });
     //
