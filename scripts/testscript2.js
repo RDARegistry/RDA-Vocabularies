@@ -1519,7 +1519,7 @@ if (typeof dataSource !== "undefined") {
       },
       "buttons": {
         "buttons":[ {
-          "text": 'Published',
+          "text": 'Show published',
           "action": function (e, dt, node, config) {
             dt.column( 'Status:name' ).search( "Published" ).draw();;
             // disable button
