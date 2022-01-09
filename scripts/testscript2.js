@@ -1528,124 +1528,125 @@ if (typeof dataSource !== "undefined") {
           "text": 'Show published',
           "className": 'btnPublished',
           "action": function (e, dt, node, config) {
-            this.text("Show all");
-            dt.column('Status:name').search("Published").draw();
-          } else if (this.text == "Show all") {
-            this.text("Show published");
-            window.theVocDT.draw();
+            if (this.text == "Show published") {
+              this.text("Show all");
+              dt.column('Status:name').search("Published").draw();
+            } else if (this.text == "Show all") {
+              this.text("Show published");
+              window.theVocDT.draw();
+            }
+            return;
+            // disable button
+            //            this.disable();
           }
-          return;
-          // disable button
-          //            this.disable();
+        }]
+      },
+      "columns":[ {
+        "class": 'permalink',
+        "name": 'Permalink',
+        "orderable": false,
+        "render": function (data, type, row) {
+          return makeColumnRow(linkify("#", getPermalink(getURI(row))), "dataDisplay");
         }
-      }]
-    },
-    "columns":[ {
-      "class": 'permalink',
-      "name": 'Permalink',
-      "orderable": false,
-      "render": function (data, type, row) {
-        return makeColumnRow(linkify("#", getPermalink(getURI(row))), "dataDisplay");
-      }
-    }, {
-      "class": 'detailsControl',
-      "data": null,
-      "defaultContent": '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>',
-      "name": 'Detail',
-      "orderable": false
-    }, {
-      "class": "curie",
-      "name": 'Curie',
-      "orderable": true,
-      "render": function (data, type, row) {
-        return makeColumnRow(getLink(row, false, curiePrefix), "dataDisplay");
-      }
-    }, {
-      "class": "prefLabel",
-      "name": 'Label',
-      "orderable": true,
-      "render": function (data, type, row) {
-        return makeColumnRow(strongify(getValueByLanguage(getLabel(row))));
-      }
-    }, {
-      "class": "definition",
-      "name": 'Definition',
-      "orderable": false,
-      "render": function (data, type, row) {
-        return makeColumnRow(getDefinition(row));
-      }
-    }, {
-      "class": "status",
-      "name": 'Status',
-      "orderable": true,
-      "render": function (data, type, row) {
-        return makeColumnRow((getLink(getStatus(row), true)), "dataDisplay");
-      }
-    }],
-    "initComplete": function (settings, json) {
-      //
-      // Set page detail values from jsonld
-      //
-      setPageDetails(json);
-      //
-      // Set language indicator style; border colour indicates on/selected
-      //
-      $("#lang_" + window.theCurrentLanguageCode).css({
-        "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
-      });
-    },
-    "order":[[2, 'asc']],
-    "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
-    "pagingType": 'simple_numbers',
-    "dom": window.domSetting,
-    "language": window.theDTStrings,
-    //      "responsive": true,
-    "deferRender": true
-  });
-  //
-  // Add event listener for expanding and collapsing details
-  //
-  pageTable.children("tbody").on('click', 'td.detailsControl', function () {
+      }, {
+        "class": 'detailsControl',
+        "data": null,
+        "defaultContent": '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>',
+        "name": 'Detail',
+        "orderable": false
+      }, {
+        "class": "curie",
+        "name": 'Curie',
+        "orderable": true,
+        "render": function (data, type, row) {
+          return makeColumnRow(getLink(row, false, curiePrefix), "dataDisplay");
+        }
+      }, {
+        "class": "prefLabel",
+        "name": 'Label',
+        "orderable": true,
+        "render": function (data, type, row) {
+          return makeColumnRow(strongify(getValueByLanguage(getLabel(row))));
+        }
+      }, {
+        "class": "definition",
+        "name": 'Definition',
+        "orderable": false,
+        "render": function (data, type, row) {
+          return makeColumnRow(getDefinition(row));
+        }
+      }, {
+        "class": "status",
+        "name": 'Status',
+        "orderable": true,
+        "render": function (data, type, row) {
+          return makeColumnRow((getLink(getStatus(row), true)), "dataDisplay");
+        }
+      }],
+      "initComplete": function (settings, json) {
+        //
+        // Set page detail values from jsonld
+        //
+        setPageDetails(json);
+        //
+        // Set language indicator style; border colour indicates on/selected
+        //
+        $("#lang_" + window.theCurrentLanguageCode).css({
+          "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
+        });
+      },
+      "order":[[2, 'asc']],
+      "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
+      "pagingType": 'simple_numbers',
+      "dom": window.domSetting,
+      "language": window.theDTStrings,
+      //      "responsive": true,
+      "deferRender": true
+    });
     //
-    // Get row containing the cell
+    // Add event listener for expanding and collapsing details
     //
-    var tr = $(this).closest('tr');
-    var row = table.row(tr);
-    if (row.child.isShown()) {
+    pageTable.children("tbody").on('click', 'td.detailsControl', function () {
       //
-      // This row is already open - close it and reset expand details button
+      // Get row containing the cell
       //
-      row.child.hide();
-      $(this).html('<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>');
-    } else {
-      //
-      // Open this row and set collapse details button
-      //
+      var tr = $(this).closest('tr');
+      var row = table.row(tr);
+      if (row.child.isShown()) {
+        //
+        // This row is already open - close it and reset expand details button
+        //
+        row.child.hide();
+        $(this).html('<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>');
+      } else {
+        //
+        // Open this row and set collapse details button
+        //
+        row.child(formatDetail(row.data())).show();
+        $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
+      }
+    });
+    //
+    // Search Curie if local ID to search
+    //
+    if (window.localIDToSearch.length > 0) {
+      var pageInfo = "";
+      var row = "";
+      table.column('Curie:name').search(window.localIDToSearch);
+      pageInfo = table.page.info();
+      row = table.row(pageInfo.start);
       row.child(formatDetail(row.data())).show();
-      $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
     }
+    //
+    // Set tooltip defaults
+    //
+    $.protip({
+      defaults: {
+        delayIn: 500,
+        gravity: true,
+        position: 'top-left-corner',
+        size: 'small'
+      }
+    })
   });
-  //
-  // Search Curie if local ID to search
-  //
-  if (window.localIDToSearch.length > 0) {
-    var pageInfo = "";
-    var row = "";
-    table.column('Curie:name').search(window.localIDToSearch);
-    pageInfo = table.page.info();
-    row = table.row(pageInfo.start);
-    row.child(formatDetail(row.data())).show();
-  }
-  //
-  // Set tooltip defaults
-  //
-  $.protip({
-    defaults: {
-      delayIn: 500,
-      gravity: true,
-      position: 'top-left-corner',
-      size: 'small'
-    }
-  })
-});
 }
