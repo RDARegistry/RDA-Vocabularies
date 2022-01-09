@@ -1525,9 +1525,15 @@ if (typeof dataSource !== "undefined") {
         "buttons":[ {
           "text": 'Show published',
           "action": function (e, dt, node, config) {
-            dt.column('Status:name').search("Published").draw();;
+            if (this.text() == "Show published") {
+              this.text("Show all");
+              dt.column('Status:name').search("Published").draw();
+            } else if (this.text == "Show all") {
+              this.text("Show published");
+              dt.column('Status:name').search("").draw();
+            }
             // disable button
-            //      this.disable();
+            //            this.disable();
           }
         }]
       },
