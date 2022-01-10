@@ -1102,10 +1102,6 @@ function formatDetail(d) {
       detailRow = formatDetailRow(d.notation[window.theDefaultLanguageCode], "Notation");
       detailTable += detailRow;
     }
-    if (typeof d.status != "undefined") {
-      detailRow = formatDetailRow(getLink(d.status, true), "Status");
-      detailTable += detailRow;
-    }
   } else {
     detailTable += detailRow;
   }
