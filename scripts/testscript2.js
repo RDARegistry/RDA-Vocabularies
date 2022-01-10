@@ -9,17 +9,6 @@
 //
 var baseDomain = "http://www.rdaregistry.info/";
 //
-// Expand/collapse button HTML
-//
-var collapseButton = '<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>';
-var expandButton = '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>';
-//
-// Style for current language selector
-//
-var languageDisplayedCSS = {
-  "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
-};
-//
 // Global variables
 //
 var curiePrefix = "";
@@ -40,7 +29,6 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
-var theDT = "";
 //
 //
 //
@@ -586,12 +574,9 @@ function getAnchor() {
   return theURLAnchor;
 }
 //
-// Set DataTables DOM settings
+// Set DataTables DOM settings with Bootstrap 5
 //
 function setDTDom() {
-  //
-  // Set Bootstrap 5 version of DOM settings
-  //
   if (window.localIDToSearch.length > 0) {
     //
     // Set the DOM to display only the processing indicator (not really used) and table
@@ -601,11 +586,7 @@ function setDTDom() {
     //
     // Set the DOM to display all utilities
     //
-    /*    window.domSetting = "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
-    "<'row'<'col-sm-12'tr>>" +
-    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>"; */
-    
-    window.domSetting = "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-2'B><'col-sm-12 col-md-4'f>>" +
+    window.domSetting = "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
     "<'row'<'col-sm-12'tr>>" +
     "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
   }
@@ -840,16 +821,16 @@ function getRtl() {
   //
   // Returns a right-to-left flag for the current language code
   //
-  var theLanguageObject = "";
+  var theLanguageArray = "";
   //
   // Set the language code to filter/check as the current language code
   //
   window.languageCodeToCheck = window.theCurrentLanguageCode;
-  theLanguageObject = window.regLanguages.filter(getLanguageFromLanguages);
+  theLanguageArray = window.regLanguages.filter(getLanguageFromLanguages);
   //
   // Return the rtl value for the only entry in the array
   //
-  return theLanguageObject[0][ "rtl"];
+  return theLanguageArray[0][ "rtl"];
 }
 //
 // Get entry data from jsonld
@@ -1529,28 +1510,6 @@ if (typeof dataSource !== "undefined") {
           return json.data;
         }
       },
-      "buttons": {
-        "buttons":[ {
-          "text": 'Show published',
-          "className": 'btnPublished',
-          "action": function (e, dt, node, config) {
-            if (this.text() == "Show published") {
-              this.text("Show all");
-              window.theDT = dt;
-              dt.column('Status:name').search("Published").draw();
-            } else if (this.text() == "Show all") {
-              this.text("Show published");
-              window.theDT.draw();
-              //                            dt.column('Status:name').search("").draw();
-              
-              //              window.location.reload();
-            }
-            return;
-            // disable button
-            //            this.disable();
-          }
-        }]
-      },
       "columns":[ {
         "class": 'permalink',
         "name": 'Permalink',
@@ -1561,7 +1520,7 @@ if (typeof dataSource !== "undefined") {
       }, {
         "class": 'detailsControl',
         "data": null,
-        "defaultContent": window.expandButton,
+        "defaultContent": '<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>',
         "name": 'Detail',
         "orderable": false
       }, {
@@ -1601,7 +1560,9 @@ if (typeof dataSource !== "undefined") {
         //
         // Set language indicator style; border colour indicates on/selected
         //
-        $("#lang_" + window.theCurrentLanguageCode).css(window.languageDisplayedCSS);
+        $("#lang_" + window.theCurrentLanguageCode).css({
+          "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
+        });
       },
       "order":[[2, 'asc']],
       "lengthMenu":[[25, 50, 100, -1],[25, 50, 100, "All"]],
@@ -1625,13 +1586,13 @@ if (typeof dataSource !== "undefined") {
         // This row is already open - close it and reset expand details button
         //
         row.child.hide();
-        $(this).html(window.expandButton);
+        $(this).html('<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>');
       } else {
         //
         // Open this row and set collapse details button
         //
         row.child(formatDetail(row.data())).show();
-        $(this).html(window.collapseButton);
+        $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
       }
     });
     //
@@ -1652,8 +1613,7 @@ if (typeof dataSource !== "undefined") {
       defaults: {
         delayIn: 500,
         gravity: true,
-        position: 'top-left-corner',
-        size: 'small'
+        position: 'top-left-corner'
       }
     })
   });
