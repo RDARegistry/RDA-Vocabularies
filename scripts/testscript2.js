@@ -40,7 +40,6 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
-var theVocDT = "";
 //
 //
 //
@@ -1232,7 +1231,6 @@ function setPageDetails(json) {
   var theVocMenuLink = "";
   var theVocToDatatype = "";
   var theVocToObject = "";
-  window.theVocDT = $("table#pindex").DataTable();
   //
   // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
   //
@@ -1540,8 +1538,8 @@ if (typeof dataSource !== "undefined") {
               dt.column('Status:name').search("Published").draw();
             } else if (this.text() == "Show all") {
               this.text("Show published");
-              //              window.theVocDT.draw();
-              window.location.reload();
+              dt.ajax.reload();
+              //              window.location.reload();
             }
             return;
             // disable button
