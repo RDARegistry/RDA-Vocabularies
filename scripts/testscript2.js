@@ -40,6 +40,7 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
+var theDT = "";
 //
 //
 //
@@ -1535,10 +1536,13 @@ if (typeof dataSource !== "undefined") {
           "action": function (e, dt, node, config) {
             if (this.text() == "Show published") {
               this.text("Show all");
+              window.theDT = dt;
               dt.column('Status:name').search("Published").draw();
             } else if (this.text() == "Show all") {
               this.text("Show published");
-              dt.ajax.reload();
+              window.theDT.draw();
+              //                            dt.column('Status:name').search("").draw();
+              
               //              window.location.reload();
             }
             return;
