@@ -1540,7 +1540,8 @@ if (typeof dataSource !== "undefined") {
               dt.column('Status:name').search("Published").draw();
             } else if (this.text() == "Show all") {
               this.text("Show published");
-              window.theVocDT.draw();
+              //              window.theVocDT.draw();
+              window.location.reload();
             }
             return;
             // disable button
