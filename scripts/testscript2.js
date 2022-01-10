@@ -1539,12 +1539,12 @@ if (typeof dataSource !== "undefined") {
           "text": 'Show published',
           "className": 'btnPublished',
           "action": function (e, dt, node, config) {
-            if (this.text == "Show published") {
+            if (this.text() == "Show published") {
               this.text("Show all");
               dt.column('Status:name').search("Published").draw();
-            } else if (this.text == "Show all") {
+            } else if (this.text() == "Show all") {
               this.text("Show published");
- //             window.theVocDT.draw();
+              window.theVocDT.draw();
             }
             return;
             // disable button
