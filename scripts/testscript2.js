@@ -998,6 +998,12 @@ function getVocKind() {
       window.theVocKind = "class";
     }
     //
+    // Agent element set uses entity code "a" in URI/filepath
+    //
+    else if (window.theVocURI.indexOf("/a/") > -1) {
+      window.theVocKind = "agent";
+    }
+    //
     // Default: all other vocabularies are canonical element sets
     //
     else {
@@ -1572,6 +1578,17 @@ if (typeof dataSource !== "undefined") {
       //      "responsive": true,
       "deferRender": true
     });
+    //
+    // Agent buttons
+    //
+    if (window.theVocKind == "agent") {
+      table.button().add(0, {
+        action: function (e, dt, button, config) {
+          dt.ajax.reload();
+        },
+        text: 'Person'
+      })
+    }
     //
     // Add event listener for expanding and collapsing details
     //
