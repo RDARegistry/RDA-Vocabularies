@@ -1332,6 +1332,19 @@ function setVocDetails(json) {
     theSemanticsBlock = theSemanticsBlock.replace("Agent entity", "Agent entity or its subtypes");
   }
   //
+  // Agent buttons
+  //
+  if (window.theVocKind == "agent") {
+    var table = $("#pindex").DataTable();
+    table.button().add(0, {
+      action: function (e, dt, button, config) {
+        dt.ajax.reload();
+      },
+      text: 'Person'
+    })
+  }
+  
+  //
   // Push values to the page
   //
   document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
@@ -1578,17 +1591,6 @@ if (typeof dataSource !== "undefined") {
       //      "responsive": true,
       "deferRender": true
     });
-    //
-    // Agent buttons
-    //
-    if (window.theVocKind == "agent") {
-      table.button().add(0, {
-        action: function (e, dt, button, config) {
-          dt.ajax.reload();
-        },
-        text: 'Person'
-      })
-    }
     //
     // Add event listener for expanding and collapsing details
     //
