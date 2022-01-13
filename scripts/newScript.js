@@ -718,7 +718,7 @@ function getCuriePrefix() {
 //
 // Get the vocabulary domain
 //
-function getDomain() {
+function getVocDomain() {
   //
   // Sets the vocabulary domain extracted from the vocabulary title
   //
@@ -1195,7 +1195,7 @@ function formatValueForMultivalueDetail(detailObject) {
 //
 // Get and set page and global variables
 //
-function setPageDetails(json) {
+function setVocDetails(json) {
   var filenameLocal = "";
   var filepathPart = "";
   var theLanguagesBlock = "";
@@ -1225,7 +1225,7 @@ function setPageDetails(json) {
   //
   // Get the global vocabulary domain
   //
-  getDomain();
+  getVocDomain();
   //
   // Set the table title from the kind of vocabulary
   // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
@@ -1556,7 +1556,7 @@ if (typeof dataSource !== "undefined") {
         //
         // Set page detail values from jsonld
         //
-        setPageDetails(json);
+        setVocDetails(json);
         //
         // Set language indicator style; border colour indicates on/selected
         //
