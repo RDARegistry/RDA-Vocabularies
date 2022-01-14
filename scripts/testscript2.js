@@ -998,12 +998,6 @@ function getVocKind() {
       window.theVocKind = "class";
     }
     //
-    // Agent element set uses entity code "a" in URI/filepath
-    //
-    else if (window.theVocURI.indexOf("/a/") > -1) {
-      window.theVocKind = "agent";
-    }
-    //
     // Default: all other vocabularies are canonical element sets
     //
     else {
@@ -1331,19 +1325,6 @@ function setVocDetails(json) {
   if (window.theVocDomain == "Agent") {
     theSemanticsBlock = theSemanticsBlock.replace("Agent entity", "Agent entity or its subtypes");
   }
-  //
-  // Agent buttons
-  //
-  if (window.theVocKind == "agent") {
-    var table = $("#pindex").DataTable();
-    table.button().add(0, {
-      action: function (e, dt, button, config) {
-        dt.ajax.reload();
-      },
-      text: 'Person'
-    })
-  }
-  
   //
   // Push values to the page
   //
