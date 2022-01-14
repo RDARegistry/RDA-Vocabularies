@@ -1096,10 +1096,13 @@ function formatDetail(d) {
     }
     if (typeof d.altLabel != "undefined") {
       detailRow = formatDetailRow(getValueByLanguage(d.altLabel), "Alternate label");
+      //
+      // Alternate labels vary by language and may have no English original; do not display for 'undefined' content
+      //
       if (detailRow.indexOf("undefined") < 0) {
         detailTable += detailRow;
       }
-     }
+    }
     if (typeof d.notation != "undefined") {
       detailRow = formatDetailRow(d.notation[window.theDefaultLanguageCode], "Notation");
       detailTable += detailRow;
