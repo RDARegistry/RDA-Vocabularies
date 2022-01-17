@@ -1252,9 +1252,12 @@ function setVocDetails(json) {
   theCurieExURI = getURI(window.theVocPublishedEntries[0]);
   theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, window.theVocPrefix), theCurieExURI);
   //
-  // Element sets and value vocabularies have different filepath constructors
+  // Construct different filepaths for element sets and value vocabularies
   //
   switch (window.theVocKind) {
+    //
+    // Value vocabulary
+    //
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
     filepathPart = "termList";
@@ -1263,11 +1266,17 @@ function setVocDetails(json) {
     //
     filenameLocal = window.theVocURI.substr(1 + theVocURI.lastIndexOf("/"));
     break;
+    //
+    // RDA/ONIX Framework
+    //
     case "rof":
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
     filenameLocal = "rof";
     break;
+    //
+    // Default for element sets
+    //
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
@@ -1298,6 +1307,17 @@ function setVocDetails(json) {
       break;
       case "Work":
       filenameLocal = "w";
+      break;
+    }
+    //
+    // Canonical, datatype, and object element sets have different filename constructors
+    //
+    switch (window.theVocKind) {
+      case "datatype":
+      filenameLocal += "/datatype";
+      break;
+      case "object":
+      filenameLocal += "/object";
       break;
     }
   }

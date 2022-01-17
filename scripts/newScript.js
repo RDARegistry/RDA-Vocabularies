@@ -1,5 +1,5 @@
 //
-// Javascrpt for RDA Registry
+// Javascript for RDA Registry
 //
 "use strict";
 //
@@ -11,7 +11,6 @@ var baseDomain = "http://www.rdaregistry.info/";
 //
 // Global variables
 //
-var curiePrefix = "";
 var detailList = "";
 var domSetting = "";
 var languageIsUsed = false;
@@ -25,6 +24,7 @@ var theVocData = "";
 var theVocDomain = "";
 var theVocKind = "";
 var theVocMetadata = "";
+var theVocPrefix = "";
 var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
@@ -687,15 +687,6 @@ function makeCurieFromURI(uri, prefix) {
     theURI = uri;
   }
   //
-  // Check and set curie prefix for datatype and object children
-  //
-  if (theURI.indexOf("datatype") > 0) {
-    thePrefix += "d";
-  }
-  if (theURI.indexOf("object") > 0) {
-    thePrefix += "o";
-  }
-  //
   // Replace URI up to last sub-folder slash with prefix and colon
   //
   if (theURI !== null && typeof theURI.replace === "function") {
@@ -706,12 +697,12 @@ function makeCurieFromURI(uri, prefix) {
 //
 // Set variables from jsonld
 //
-function getCuriePrefix() {
+function getVocPrefix() {
   //
   // Sets the vocabulary prefix
   //
   if (typeof window.theVocMetadata.prefix != "undefined") {
-    window.curiePrefix = window.theVocMetadata.prefix;
+    window.theVocPrefix = window.theVocMetadata.prefix;
   }
   return;
 }
@@ -1250,7 +1241,7 @@ function setVocDetails(json) {
   }
   theTableTitle += " Index";
   //
-  // Get the vocabulary active entries total, namespace URI, version link, Curie prefix, example Curie for the Reference block
+  // Get the vocabulary active entries total, namespace URI, version link, example Curie for the Reference block
   //
   theVocEntriesTotal = window.theVocPublishedEntries.length;
   theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + window.theVocMetadata.versionInfo + '">' + window.theVocMetadata.versionInfo + '</a>';
@@ -1258,11 +1249,14 @@ function setVocDetails(json) {
   // Example curie is first published element in data and may not be the lowest in curie order
   //
   theCurieExURI = getURI(window.theVocPublishedEntries[0]);
-  theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, curiePrefix), theCurieExURI);
+  theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, window.theVocPrefix), theCurieExURI);
   //
   // Element sets and value vocabularies have different filepath constructors
   //
   switch (window.theVocKind) {
+    //
+    // Value vocabulary
+    //
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
     filepathPart = "termList";
@@ -1271,11 +1265,17 @@ function setVocDetails(json) {
     //
     filenameLocal = window.theVocURI.substr(1 + theVocURI.lastIndexOf("/"));
     break;
+    //
+    // RDA/ONIX Framework
+    //
     case "rof":
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
     filenameLocal = "rof";
     break;
+    //
+    // Default for element sets
+    //
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
@@ -1308,11 +1308,22 @@ function setVocDetails(json) {
       filenameLocal = "w";
       break;
     }
+    //
+    // Canonical, datatype, and object element sets have different filename constructors
+    //
+    switch (window.theVocKind) {
+      case "datatype":
+      filenameLocal += "/datatype";
+      break;
+      case "object":
+      filenameLocal += "/object";
+      break;
+    }
   }
   //
   // Set the file links for the Downloads block
   //
-  theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + curiePrefix + '.csv';
+  theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + window.theVocPrefix + '.csv';
   theLinkJSONLD = baseDomain + 'jsonld/' + filepathPart + '/' + filenameLocal + ".jsonld";
   theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
   theLinkXML = baseDomain + 'xml/' + filepathPart + '/' + filenameLocal + '.xml';
@@ -1340,7 +1351,7 @@ function setVocDetails(json) {
   document.getElementById("vocDescription").innerHTML = window.theVocMetadata.description[ "en"];
   document.getElementById("vocEntriesTotal").innerHTML = theVocEntriesTotal;
   document.getElementById("vocURI").innerHTML = window.theVocURI;
-  document.getElementById("vocPrefix").innerHTML = curiePrefix;
+  document.getElementById("vocPrefix").innerHTML = window.theVocPrefix;
   document.getElementById("vocCurieEx").innerHTML = theVocCurieEx;
   document.getElementById("vocVersion").innerHTML = theVersionLink;
   document.getElementById("linkCSV").href = theLinkCSV;
@@ -1503,7 +1514,7 @@ if (typeof dataSource !== "undefined") {
           //
           // Get vocabulary curie prefix
           //
-          getCuriePrefix();
+          getVocPrefix();
           //
           // Get the global vocabulary URI
           //
@@ -1533,7 +1544,7 @@ if (typeof dataSource !== "undefined") {
         "name": 'Curie',
         "orderable": true,
         "render": function (data, type, row) {
-          return makeColumnRow(getLink(row, false, curiePrefix), "dataDisplay");
+          return makeColumnRow(getLink(row, false, window.theVocPrefix), "dataDisplay");
         }
       }, {
         "class": "prefLabel",
