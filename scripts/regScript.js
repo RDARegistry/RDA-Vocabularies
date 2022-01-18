@@ -9,6 +9,10 @@
 //
 var baseDomain = "http://www.rdaregistry.info/";
 //
+// Redirect datatype and object definitions to parent
+//
+var definitionRedirect = "The definition is attached to the parent canonical property.";
+//
 // Global variables
 //
 var detailList = "";
@@ -834,7 +838,7 @@ function getDefinition(entryObject) {
   switch (window.theVocKind) {
     case "datatype":
     case "object":
-    theDefinition = "The definition is attached to the parent canonical property.";
+    theDefinition = window.definitionRedirect;
     break;
     default:
     if (typeof entryObject[ "definition"] != "undefined") {
