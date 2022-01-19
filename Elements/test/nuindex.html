@@ -126,7 +126,7 @@
       <h1>Guide for developers</h1>
       <div class="row mt-2">
         <div class="col-md-4">
-          <div class="btn-group-vertical" role="group" aria-label="Guide table of contents">
+          <div class="btn-group-vertical" role="group" aria-label="Guide table of contents" id="gToc">
             <button type="button" class="btn btn-dark btnGuide text-start" data-bs-toggle="collapse"
               data-bs-target="#gLRM" aria-expanded="false" aria-controls="gLRM">IFLA Library
               Reference Model</button>
@@ -178,13 +178,13 @@
           </div>
         </div>
         <div class="col-md-8">
-          <div class="collapse show" id="gDefault">
+          <div class="collapse show" id="gDefault" data-bs-parent="#gToc">
             <h2>RDA Reference</h2>
             <p>This is a guide for RDA usage within a local application. It provides information for
               developers on the use of RDA content available via the RDA Registry.</p>
             <p>The guide is aimed at technical users.</p>
           </div>
-          <div class="collapse" id="gLRM">
+          <div class="collapse" id="gLRM" data-bs-parent="#gToc">
             <h2>IFLA Library Reference Model</h2>
             <p>RDA is an implementation of the <a
                 href="https://www.ifla.org/publications/node/11412" target="_blank">IFLA Library
@@ -250,7 +250,7 @@
             <p>The LRM namespace is <a href="https://www.iflastandards.info/lrm/lrmer.html"
                 >http://iflastandards.info/ns/lrm/lrmer/</a>.</p>
           </div>
-          <div class="collapse" id="gEnt">
+          <div class="collapse" id="gEnt" data-bs-parent="#gToc">
             <h2>RDA entities</h2>
             <h3>Implementation of LRM</h3>
             <div>
@@ -295,7 +295,7 @@
                 element.</p>
             </div>
           </div>
-          <div class="collapse" id="gEle">
+          <div class="collapse" id="gEle" data-bs-parent="#gToc">
             <h2>RDA elements</h2>
             <div>
               <p>An RDA element is represented in the RDA Registry as an RDF property.</p>
