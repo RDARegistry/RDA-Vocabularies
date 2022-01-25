@@ -125,63 +125,56 @@
     <main class="container regDisplay">
       <h1><a href="/rgArch">RDA archaeology</a></h1>
       <div class="row mt-2">
-        <div class="col-md-4">
-          <ul>
-            <li><a href="#orig">Change of original namespace</a></li>
-            <li><a href="#threer">3R Project</a></li>
-          </ul>
+        <div class="col-md-6">
+          <h2>Map from deprecated to published RDA Generation concepts</h2>
+          <p>This map relates the deprecated URIs in the deprecated published and unpublished RDA
+            Generation of ... value vocabularies to the published URIs for the consolidated RDA
+            Generation value vocabulary.</p>
+          <p>The map is given in a terse triple language (ttl) serialization.</p>
+          <div class="boxData p-4">
+            <pre>
+<!-- InstanceBeginEditable name="MapCode" -->
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix genAudio: &lt;http://rdaregistry.info/termList/genAudio/&gt; .
+@prefix genDigital: &lt;http://rdaregistry.info/termList/genDigital/&gt; .
+@prefix genMicroform: &lt;http://rdaregistry.info/termList/genMicroform/&gt; .
+@prefix genMoPic: &lt;http://rdaregistry.info/termList/genMoPic/&gt; .
+@prefix genVideo: &lt;http://rdaregistry.info/termList/genVideo/&gt; .
+@prefix RDAGeneration: &lt;http://rdaregistry.info/termList/RDAGeneration/&gt; .
+#
+# Map from deprecated RDA concepts to published RDA concepts
+# in the RDA Generation value vocabulary.
+# 15 Jul 2016
+#
+genAudio:1001 owl:sameAs RDAGeneration:1006 .
+genAudio:1002 owl:sameAs RDAGeneration:1016 .
+genAudio:1003 owl:sameAs RDAGeneration:1002 .
+genAudio:1004 owl:sameAs RDAGeneration:1008 .
+genAudio:1005 owl:sameAs RDAGeneration:1015 .
+genAudio:1006 owl:sameAs RDAGeneration:1017 .
+genDigital:1001 owl:sameAs RDAGeneration:1009 .
+genDigital:1002 owl:sameAs RDAGeneration:1005 .
+genDigital:1003 owl:sameAs RDAGeneration:1001 .
+genMicroform:1001 owl:sameAs RDAGeneration:1004 .
+genMicroform:1002 owl:sameAs RDAGeneration:1010 .
+genMicroform:1003 owl:sameAs RDAGeneration:1014 .
+genMicroform:1004 owl:sameAs RDAGeneration:1007 .
+genMoPic:1001 owl:sameAs RDAGeneration:1009 .
+genMoPic:1002 owl:sameAs RDAGeneration:1005 .
+genMoPic:1003 owl:sameAs RDAGeneration:1003 .
+genMoPic:1004 owl:sameAs RDAGeneration:1011 .
+genMoPic:1005 owl:sameAs RDAGeneration:1018 .
+genVideo:1001 owl:sameAs RDAGeneration:1004 .
+genVideo:1002 owl:sameAs RDAGeneration:1003 .
+genVideo:1003 owl:sameAs RDAGeneration:1003 .
+           </pre>
+          </div>
         </div>
-        <div class="col-md-8">
-          <p>This section contains tools for using older versions of RDA Vocabularies.</p>
-          <a id="orig"></a>
-          <h2>Change of original namespace</h2>
-          <p>The RDA Registry namespace was changed from an original namespace used for initial
-            development of the RDA elements sets and value vocabularies.</p>
-          <p>The following maps relate elements and concepts from the original namespace, now
-            deprecated, to the current namespace. Note that elements and concepts may have
-            subsequently been deprecated in turn.</p>
-          <ul>
-            <li><a href="mapRDAOld2NewClass.html">Map from deprecated to published RDA
-              classes</a></li>
-            <li><a href="mapRDAOld2NewProp.html">Map from deprecated to published RDA
-              properties</a></li>
-            <li><a href="mapBad2RDACC.html">Map from bad to correct URIs for RDA Colour Content
-                value vocabulary</a></li>
-            <li><a href="mapRDAExtentOld2New.html">Map from deprecated to published RDA Carrier
-                Extent Unit concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDAGenerationOld2New.html">Map from deprecated to published RDA
-                Generation concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDALayoutOld2New.html">Map from deprecated to published RDA Layout
-                concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDAMaterialOld2New.html">Map from deprecated to published RDA Material
-                concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDAProductionOld2New.html">Map from deprecated to published RDA
-                Production concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDAMiscOld2New.html">Map from miscelleneous deprecated to published RDA
-                value vocabulary concepts</a> (Jul 2016)</li>
-          </ul>
-          <a id="threer"></a>
-          <h2>3R Project</h2>
-          <p>Many elements and concepts were changed during the RDA Toolkit Restructure and Redesign
-            (3R) Project.</p>
-          <p>The following lists give elements and concepts that were deprecated.</p>
-          <ul>
-            <li><a href="list3RDepElements.html">List of elements deprecated during 3R</a></li>
-            <li><a href="list3RDepConcepts.html">List of concepts deprecated during 3R</a></li>
-          </ul>
-          <p>The following documents give information on new, deprecated, and amended elements and
-            concepts developed during 3R.</p>
-          <ul>
-            <li><a href="http://www.rdaregistry.info/rtf/rgArch/RDAElementChanges2.7.3-4.0.1.rtf"
-                target="_blank">RDA element changes in the 3R Project</a> [Rich text format
-              (application/rtf)]</li>
-            <li><a href="http://www.rdaregistry.info/rtf/rgArch/RDAConceptChanges2.7.3-4.0.1.rtf"
-                target="_blank">RDA concept changes in the 3R Project</a> [Rich text format
-              (application/rtf)]</li>
-          </ul>
-          <h2>FAQs</h2>
-          <p>For frequently asked questions about RDA Registry archaeology, see <a
-              href="archFAQ.html">Frequently Asked Questions (Archaeology)</a>.</p>
+        <div class="col-md-6">
+          <div class="d-inline-flex list-group">
+            <a href="http://www.rdaregistry.info/ttl/Maps/mapRDAGenerationOld2New.ttl"
+              class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+          </div>
         </div>
       </div>
     </main>
@@ -213,7 +206,7 @@
           </div>
         </div>
       </div>
-      <p><em>This page was last updated 10 Mar 2022.</em></p>
+      <p><em>This page was last updated dd mmm yyyy.</em></p>
     </footer>
     <!-- Scripts-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>

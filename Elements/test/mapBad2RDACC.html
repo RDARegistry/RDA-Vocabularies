@@ -125,63 +125,31 @@
     <main class="container regDisplay">
       <h1><a href="/rgArch">RDA archaeology</a></h1>
       <div class="row mt-2">
-        <div class="col-md-4">
-          <ul>
-            <li><a href="#orig">Change of original namespace</a></li>
-            <li><a href="#threer">3R Project</a></li>
-          </ul>
+        <div class="col-md-6">
+          <h2>Map from bad to correct URIs for RDA Colour Content value vocabulary</h2>
+          <p>This map relates the incorrect URIs originally published for the <a
+              href="http://www.rdaregistry.info/termList/RDAColourContent/">RDA Colour Content</a>
+            value vocabulary to the current, correct URIs.</p>
+          <p>The map is given in a terse triple language (ttl) serialization.</p>
+          <div class="boxData p-4">
+            <pre>
+@prefix rdacc: &lt;http://rdaregistry.info/termList/RDAColourContent/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+#
+# Map from bad to good RDA Colour content URIs
+# 17 October 2015
+#
+&lt;http://metadataregistry.org/uri/RDAColourContent/1002&gt; owl:sameAs rdacc:1002 .
+&lt;http://metadataregistry.org/uri/RDAColourContent/1001&gt; owl:sameAs rdacc:1001 .
+           </pre>
+          </div>
         </div>
-        <div class="col-md-8">
-          <p>This section contains tools for using older versions of RDA Vocabularies.</p>
-          <a id="orig"></a>
-          <h2>Change of original namespace</h2>
-          <p>The RDA Registry namespace was changed from an original namespace used for initial
-            development of the RDA elements sets and value vocabularies.</p>
-          <p>The following maps relate elements and concepts from the original namespace, now
-            deprecated, to the current namespace. Note that elements and concepts may have
-            subsequently been deprecated in turn.</p>
-          <ul>
-            <li><a href="mapRDAOld2NewClass.html">Map from deprecated to published RDA
-              classes</a></li>
-            <li><a href="mapRDAOld2NewProp.html">Map from deprecated to published RDA
-              properties</a></li>
-            <li><a href="mapBad2RDACC.html">Map from bad to correct URIs for RDA Colour Content
-                value vocabulary</a></li>
-            <li><a href="mapRDAExtentOld2New.html">Map from deprecated to published RDA Carrier
-                Extent Unit concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDAGenerationOld2New.html">Map from deprecated to published RDA
-                Generation concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDALayoutOld2New.html">Map from deprecated to published RDA Layout
-                concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDAMaterialOld2New.html">Map from deprecated to published RDA Material
-                concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDAProductionOld2New.html">Map from deprecated to published RDA
-                Production concepts</a> (Jul 2016)</li>
-            <li><a href="mapRDAMiscOld2New.html">Map from miscelleneous deprecated to published RDA
-                value vocabulary concepts</a> (Jul 2016)</li>
-          </ul>
-          <a id="threer"></a>
-          <h2>3R Project</h2>
-          <p>Many elements and concepts were changed during the RDA Toolkit Restructure and Redesign
-            (3R) Project.</p>
-          <p>The following lists give elements and concepts that were deprecated.</p>
-          <ul>
-            <li><a href="list3RDepElements.html">List of elements deprecated during 3R</a></li>
-            <li><a href="list3RDepConcepts.html">List of concepts deprecated during 3R</a></li>
-          </ul>
-          <p>The following documents give information on new, deprecated, and amended elements and
-            concepts developed during 3R.</p>
-          <ul>
-            <li><a href="http://www.rdaregistry.info/rtf/rgArch/RDAElementChanges2.7.3-4.0.1.rtf"
-                target="_blank">RDA element changes in the 3R Project</a> [Rich text format
-              (application/rtf)]</li>
-            <li><a href="http://www.rdaregistry.info/rtf/rgArch/RDAConceptChanges2.7.3-4.0.1.rtf"
-                target="_blank">RDA concept changes in the 3R Project</a> [Rich text format
-              (application/rtf)]</li>
-          </ul>
-          <h2>FAQs</h2>
-          <p>For frequently asked questions about RDA Registry archaeology, see <a
-              href="archFAQ.html">Frequently Asked Questions (Archaeology)</a>.</p>
+        <div class="col-md-6">
+          <h3>Downloads</h3>
+          <div class="d-inline-flex list-group">
+            <a href="http://www.rdaregistry.info/ttl/Maps/mapBad2RDACC.ttl"
+              class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+          </div>
         </div>
       </div>
     </main>
