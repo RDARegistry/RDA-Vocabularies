@@ -124,62 +124,150 @@
     </nav>
     <main class="container regDisplay">
       <h1><a href="/rgArch">RDA archaeology</a></h1>
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <h2>Frequently Asked Questions</h2>
-          <ul>
-            <li><a href="#faq1">Why was a new namespace, http://rdaregistry.info, used for the RDA
-                element sets instead of the original http://rdvocab.info?</a></li>
-            <li><a href="#faq2">Did this change in the namespace break things for applications using
-                the old IRIs and elements that have not made the transition?</a></li>
-            <li><a href="#faq5">Are there any plans to move the RDA value vocabularies that are
-                still in the original rdvocab.info namespace?</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <div class="faq-q">
-            <p><a id="faq1">Q.</a> Why was a new namespace, <a href="http://rdaregistry.info"
-                >http://rdaregistry.info</a>, used for the published RDA vocabularies instead of the
-              original <a href="http://rdvocab.info">http://rdvocab.info</a>?</p>
+      <div id="faqArch">
+        <div class="row mt-4">
+          <h1>About the RDA Registry and vocabularies</h1>
+          <div class="col-md-4">
+            <div class="mt-4 ms-2">
+              <div class="btn-group-vertical" role="group" aria-label="FAQ Archaeology questions">
+                <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
+                  data-bs-target="#f1" aria-expanded="false" aria-controls="f1">Why was a new
+                  namespace, http://rdaregistry.info, used for the RDA element sets instead of the
+                  original http://rdvocab.info?</button>
+                <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
+                  data-bs-target="#f2" aria-expanded="false" aria-controls="f2">Did this change in
+                  the namespace break things for applications using the old IRIs and elements that
+                  have not made the transition?</button>
+                <button type="button" class="btn btnToc text-start ps-4" data-bs-toggle="collapse"
+                  data-bs-target="#f3" aria-expanded="false" aria-controls="f3">Are there any plans
+                  to move the RDA value vocabularies that are still in the original rdvocab.info
+                  namespace?</button>
+              </div>
+            </div>
           </div>
-          <div class="faq-a">
-            <p>The rdvocab.info namespace was set up in 2008 following the <a
-                href="http://www.bl.uk/bibliographic/meeting.html">Data Model Meeting</a> in London
-              in 2007. The domain used was intended to reflect, but not fully brand, the namespace
-              as &quot;RDA&quot;, because it could not be assumed that the developments agreed at
-              the meeting would be successful. For various reasons associated with the ongoing
-              development of <a href="http://www.rda-rsc.org/content/about-rda">RDA: Resource
-                Description and Access</a>, the representation of the basic RDA elements in RDF was
-              not approved until 2012. By then, there was a much clearer understanding of the issues
-              of elements for aggregated statements, and elements unconstrained by RDA semantics for
-              use in non-RDA applications. There were also significant differences between the data
-              used to develop the RDA element sets and the elements published in the current version
-              of RDA. It would have taken longer to update the old element sets, with many
-              deprecations, than to republish them using current, approved data.</p>
-          </div>
-          <div class="faq-q">
-            <p><a id="faq2">Q.</a> Did this change in the namespace break things for applications
-              using the old URIs and elements that have not made the transition?</p>
-          </div>
-          <div class="faq-a">
-            <p>Yes, but every effort was made to bridge the gap between the old and the new. These
-              include redirection from the old element sets to the new namespace, the development of
-                <a href="http://www.rdaregistry.info/rgArch">maps between the old and new URIs</a>,
-              and the provision of <a href="Maps/#lexical-en">alternate URIs using the English
-                label</a> of the element as the local part, similar to the construction of the old
-              URIs. A map from the old URIs known to be in use is available. The old element sets
-              had the status of &quot;New-Proposed&quot; and were never officially published.</p>
-          </div>
-          <div class="faq-q">
-            <p><a id="faq5">Q.</a> What about the RDA value vocabularies in the original
-              rdvocab.info namespace?</p>
-          </div>
-          <div class="faq-a">
-            <p>The RDA value vocabularies were moved to rdaregistry.info namespace in 2015. The old
-              URIs in &quot;Published&quot; status were redirected to the new ones. From August
-              2016, all the RDA value vocabularies have &quot;Published&quot; or
-              &quot;Deprecated&quot; status. The published value vocabularies are updated as
-              required so that they remain in synchronization with RDA.</p>
+          <div class="col-md-8">
+            <div class="collapse show" id="f0" data-bs-parent="#faqArch">
+              <div class="border border-dark mt-2 p-4">
+                <h2>Introduction</h2>
+                <p>The RDA Registry contains vocabularies that represent the RDA entities, elements,
+                  and controlled terminologies as <a href="../Elements/index.html">RDA element
+                    sets</a> and <a href="../termList/index.html">RDA value vocabularies</a> in
+                  Resource Description Framework (RDF).</p>
+                <h3>Background</h3>
+                <p>Work on a draft version of the RDA element sets and value vocabularies began in
+                  2008, following the <a href="http://www.bl.uk/bibliographic/meeting.html"
+                    target="_blank">Data model meeting</a> at the British Library, London, England,
+                  between experts in RDA and related metadata communities. Since then a significant
+                  amount of discussion and learning has occurred. The current RDA vocabularies
+                  reflect that understanding.</p>
+                <p>The draft version of the elements available at http://rdvocab.info were never
+                  officially published, so those elements are <strong>deprecated</strong> and users
+                  and applications redirected to the published versions . A <a
+                    href="../rgArch/mapRDAOld2NewProp.html">Map from deprecated to published RDA
+                    properties</a> contains redirections for the most popular properties that have
+                  been deprecated; a <a href="../rgArch/mapRDAOld2NewClass.html">Map from deprecated
+                    to published RDA classes</a> contains redirections for all of the classes that
+                  have been deprecated.</p>
+                <p>In January 2014 the RDA vocabularies were made available in published form in the
+                  namespace http://rdaregistry.info/. This operational version of the elements has
+                  been extensively rearranged, and is updated as required to reflect decisions by
+                  the <a href="http://www.rda-rsc.org/" target="_blank">RDA Steering Committee</a>
+                  (RSC).</p>
+                <p>The published vocabularies are currently available in several sets which reflect
+                  the underlying <a href="https://www.ifla.org/publications/node/11412">IFLA Library
+                    Reference Model</a>. There is also a version for library and other users who
+                  prefer properties not locked-in to LRM. These &quot;unconstrained&quot; elements
+                  are in a separate set, but they have the same internal relationships as the
+                  elements in the &quot;constrained&quot; sets.</p>
+                <h3>Development</h3>
+                <p>The RDA Development Team, with representation from RSC, TMQ, and American Library
+                  Association Digital Reference, works on extensions and refinements of the RDA
+                  element sets and value vocabularies. The RDA editor <a href="../rimmf/"
+                    target="_blank">RIMMF</a> (RDA in Many Metadata Formats) is developed by TMQ to
+                  use the vocabularies and other RDA Registry services. The Team is always happy to
+                  discuss current and future requirements of users or potential users of the
+                  vocabularies.</p>
+                <h3>Further information</h3>
+                <p>For further information about the development of the RDA vocabularies, see:</p>
+                <ul>
+                  <li><a href="http://library.ifla.org/1324/" target="_blank">Instructions,
+                      interfaces, and interoperable data: the RIMMF experience with RDA</a> / Gordon
+                    Dunsire, Deborah Fritz, and Richard Fritz. Paper presented at IFLA WLIC
+                    2016.</li>
+                  <li><a href="http://dx.doi.org/10.1080/19386389.2015.1099990" target="_blank"
+                      >Building a platform to manage RDA vocabularies and data for an international,
+                      linked data world</a> / Jon Phipps, Gordon Dunsire, and Diane Hillmann. In:
+                    Journal of Library Metadata, v.15, issue 3-4 (2015), pp. 252-264. DOI:
+                    10.1080/19386389.2015.1099990</li>
+                  <li><a href="http://store.torrossa.it/resources/an/2914394" target="_blank">RDA
+                      and the semantic Web : lectio magistralis in library science : Florence,
+                      Italy, Florence University, 4th March, 2014</a> and the <a
+                      href="http://www.gordondunsire.com/pubs/pres/RDASemanticWeb.pptx"
+                      target="_blank">accompanying presentation</a> by Gordon Dunsire.</li>
+                  <li>Seminar: Global Interoperability and Linked Data in Libraries, 18-19 June
+                    2012, University of Florence. Italy. <ul>
+                      <li><a href="http://leo.cineca.it/index.php/jlis/article/view/6303/7876"
+                          target="_blank">RDA and the Semantic Web, Linked Data Environment</a> /
+                        Barbara Tillett</li>
+                      <li><a href="http://leo.cineca.it/index.php/jlis/article/view/5463/7897"
+                          target="_blank">Linked and open data: RDA and bibliographic control</a> /
+                        Alan Danskin</li>
+                    </ul> contained in Global Interoperability and Linked Data in Libraries: Special
+                    issue. JLIS.it Vol. 4, No. 1 (2013)</li>
+                  <li><a href="http://dcevents.dublincore.org/BibData/fyo/paper/view/114/44"
+                      target="_blank">Five Years On - Background and Planning for the Future</a> and
+                    the <a href="http://dcevents.dublincore.org/BibData/fyo/paper/view/114/43"
+                      target="_blank">accompanying presentation</a>. Presented by Dr. Barbara B.
+                    Tillett for the Seminar held at the British Library, London, April 27,
+                    2012.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="collapse" id="f1" data-bs-parent="#faqArch">
+              <div class="border border-dark mt-2 p-4">
+                <p>Why was a new namespace, http://rdaregistry.info, used for the RDA element sets
+                  instead of the original http://rdvocab.info?</p>
+                <p>The rdvocab.info namespace was set up in 2008 following the <a
+                    href="http://www.bl.uk/bibliographic/meeting.html">Data Model Meeting</a> in
+                  London in 2007. The domain used was intended to reflect, but not fully brand, the
+                  namespace as &quot;RDA&quot;, because it could not be assumed that the
+                  developments agreed at the meeting would be successful. For various reasons
+                  associated with the ongoing development of <a
+                    href="http://www.rda-rsc.org/content/about-rda">RDA: Resource Description and
+                    Access</a>, the representation of the basic RDA elements in RDF was not approved
+                  until 2012. By then, there was a much clearer understanding of the issues of
+                  elements for aggregated statements, and elements unconstrained by RDA semantics
+                  for use in non-RDA applications. There were also significant differences between
+                  the data used to develop the RDA element sets and the elements published in the
+                  current version of RDA. It would have taken longer to update the old element sets,
+                  with many deprecations, than to republish them using current, approved data.</p>
+              </div>
+            </div>
+            <div class="collapse" id="f2" data-bs-parent="#faqArch">
+              <div class="border border-dark mt-2 p-4">
+                <p>Did this change in the namespace break things for applications using the old IRIs
+                  and elements that have not made the transition?</p>
+                <p>Yes, but every effort was made to bridge the gap between the old and the new.
+                  These include redirection from the old element sets to the new namespace, the
+                  development of <a href="http://www.rdaregistry.info/rgArch">maps between the old
+                    and new URIs</a>, and the provision of <a href="Maps/#lexical-en">alternate URIs
+                    using the English label</a> of the element as the local part, similar to the
+                  construction of the old URIs. A map from the old URIs known to be in use is
+                  available. The old element sets had the status of &quot;New-Proposed&quot; and
+                  were never officially published.</p>
+              </div>
+            </div>
+            <div class="collapse" id="f3" data-bs-parent="#faqArch">
+              <div class="border border-dark mt-2 p-4">
+                <p>Are there any plans to move the RDA value vocabularies that are still in the
+                  original rdvocab.info namespace?</p>
+                <p>The RDA value vocabularies were moved to rdaregistry.info namespace in 2015. The
+                  old URIs in &quot;Published&quot; status were redirected to the new ones. From
+                  August 2016, all the RDA value vocabularies have &quot;Published&quot; or
+                  &quot;Deprecated&quot; status. The published value vocabularies are updated as
+                  required so that they remain in synchronization with RDA.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
