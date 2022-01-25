@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry</title>
+    <title>RDA Registry | Archaeology</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -123,17 +123,27 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <a href="/rgArch">RDA archaeology</a>
+      <h1><a href="/rgArch">RDA archaeology</a></h1>
       <div class="row mt-2">
-        <div class="col-md-4">
-          <h2>List of elements deprecated during 3R</h2>
-          <p>This list is of elements in RDA Vocabularies release v4.0.2 that are deprecated.</p>
+        <div class="col-md-6">
+          <h2>Map from bad to correct URIs for RDA Colour Content value vocabulary</h2>
+          <p>This map relates the incorrect URIs originally published for the <a href="http://www.rdaregistry.info/termList/RDAColourContent/">RDA Colour Content</a> value vocabulary to the current, correct URIs.</p>
+          <p>The map is given in a terse triple language (ttl) serialization.</p>
+          <pre>
+@prefix rdacc: &lt;http://rdaregistry.info/termList/RDAColourContent/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+#
+# Map from bad to good RDA Colour content URIs
+# 17 October 2015
+#
+&lt;http://metadataregistry.org/uri/RDAColourContent/1002&gt; owl:sameAs rdacc:1002 .
+&lt;http://metadataregistry.org/uri/RDAColourContent/1001&gt; owl:sameAs rdacc:1001 .
+         </pre>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
           <h3>Downloads</h3>
           <ul>
-            <li><a href="http://www.rdaregistry.info/csv/rgArch/list3RDepElements.csv"
-                target="_blank">Comma-separated variable (text/csv)</a></li>
+            <li><a href="http://www.rdaregistry.info/ttl/Maps/mapBad2RDACC.ttl" target="_blank">Turtle (text/turtle)</a></li>
           </ul>
         </div>
       </div>
