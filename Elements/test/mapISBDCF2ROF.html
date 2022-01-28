@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Archaeology</title>
+    <title>RDA Registry | Maps</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -123,47 +123,84 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <h1><a href="/rgArch">RDA archaeology</a></h1>
+      <h1><a href="/maps/">RDA maps</a></h1>
       <div class="row mt-2">
         <div class="col-md-6">
-          <h2>Map from deprecated to published RDA Layout concepts</h2>
-          <p>This map relates the deprecated URIs in the deprecated published and unpublished RDA
-            Layout of ... value vocabularies to the published URIs for the consolidated RDA Layout
-            value vocabulary.</p>
-          <p>The map is given in a terse triple language (ttl) serialization.</p>
-          <div class="boxData p-4">
+          <h2>Map from ISBD content forms to RDA/ONIX Framework</h2>
+          <p>The map relates the <a
+              href="http://www.iflastandards.info/isbd/terms/contentform.html" target="_blank">ISBD
+              Content Form</a> value vocabulary to the RDA/ONIX Framework value vocabularies using
+            the <a href="RDA/ONIX Framework elements" target="_blank">RDA/ONIX Framework element
+              set</a>.</p>
+          <p>The map is too large to display on this page. Please use a download to view the
+            map.</p>
+          <div class="boxData p-4 mb-4">
             <pre>
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix layout: &lt;http://rdaregistry.info/termList/layout/&gt; .
-@prefix layoutCartoImage: &lt;http://rdaregistry.info/termList/layoutCartoImage/&gt; .
-@prefix layoutTacMusic: &lt;http://rdaregistry.info/termList/layoutTacMusic/&gt; .
+@prefix isbdcf: &lt;http://iflastandards.info/ns/isbd/terms/contentform/&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rof: &lt;http://rdaregistry.info/Elements/rof/&gt; .
+@prefix rofch: &lt;http://rdaregistry.info/termList/rofch/&gt; .
+@prefix rofid: &lt;http://rdaregistry.info/termList/rofid/&gt; .
+@prefix rofim: &lt;http://rdaregistry.info/termList/rofim/&gt; .
+@prefix rofsm: &lt;http://rdaregistry.info/termList/rofsm/&gt; .
 #
-# Map from deprecated RDA concepts to published RDA concepts
-# in the RDA Layout value vocabulary.
-# 15 Jul 2016
+# Map from ISBD content form values to RDA/ONIX Framework
+# 3 June 2015
 #
-layoutCartoImage:1001 owl:sameAs layout:1006 .
-layoutCartoImage:1002 owl:sameAs layout:1003 .
-layoutTacMusic:1001 owl:sameAs layout:1004 .
-layoutTacMusic:1002 owl:sameAs layout:1005 .
-layoutTacMusic:1003 owl:sameAs layout:1007 .
-layoutTacMusic:1004 owl:sameAs layout:1008 .
-layoutTacMusic:1005 owl:sameAs layout:1009 .
-layoutTacMusic:1006 owl:sameAs layout:1010 .
-layoutTacMusic:1007 owl:sameAs layout:1011 .
-layoutTacMusic:1008 owl:sameAs layout:1012 .
-layoutTacMusic:1009 owl:sameAs layout:1013 .
-layoutTacMusic:1010 owl:sameAs layout:1014 .
-layoutTacMusic:1011 owl:sameAs layout:1015 .
-layoutTacMusic:1012 owl:sameAs layout:1016 .
-           </pre>
+isbdcf:1001
+  rof:P10012 rofch:T1001 ;
+  rof:P10013 rofsm:T1006 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 ;
+  a rof:C10008 .
+isbdcf:1002 rof:P10012 rofch:T1003 .
+isbdcf:1004
+  rof:P10012 rofch:T1002 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 .
+isbdcf:1006
+  rof:P10012 rofch:T1004 ;
+  rof:P10013 rofsm:T1006 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 ;
+  a rof:C10008 .
+isbdcf:1007
+  rof:P10012 rofch:T1004 ;
+  rof:P10013 rofsm:T1002 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 ;
+  a rof:C10008 .
+isbdcf:1008
+  rof:P10012 rofch:T1001 ;
+  rof:P10013 rofsm:T1002 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 ;
+  a rof:C10008 .
+isbdcf:1009
+  rof:P10012 rofch:T1001 ;
+  rof:P10024 rofid:T1003 ;
+  rof:P10025 rofim:T1003 .
+isbdcf:1005 rof:P10024 rofid:T1002 .
+isbdcf:1003 rof:P10025 rofim:T1002 .
+</pre>
           </div>
         </div>
         <div class="col-md-6">
           <h3>Downloads</h3>
-          <div class="d-inline-flex list-group">
-            <a href="http://www.rdaregistry.info/ttl/Maps/mapRDALayoutOld2New.ttl"
-              class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="http://www.rdaregistry.info/ttl/Maps/mapISBDCF2ROF.ttl"
+                class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+            </div>
+          </div>
+          <p>The map is given in a terse triple language (ttl) serialization.</p>
+          <h3>Alignments</h3>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="../Aligns/alignISBDCF2ROF.html"
+                class="list-group-item list-group-item-action px-2 py-1">Alignment from ISBD content
+                forms to RDA/ONIX Framework</a>
+            </div>
           </div>
         </div>
       </div>
@@ -196,7 +233,7 @@ layoutTacMusic:1012 owl:sameAs layout:1016 .
           </div>
         </div>
       </div>
-      <p><em>This page was last updated dd mmm yyyy.</em></p>
+      <p><em>This page was last updated 10 Mar 2022.</em></p>
     </footer>
     <!-- Scripts-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>

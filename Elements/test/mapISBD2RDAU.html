@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Archaeology</title>
+    <title>RDA Registry | Maps</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -123,56 +123,129 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <h1><a href="/rgArch">RDA archaeology</a></h1>
+      <h1><a href="/maps/">RDA maps</a></h1>
       <div class="row mt-2">
         <div class="col-md-6">
-          <h2>List of concepts deprecated during 3R</h2>
-          <p>This list is of concepts in RDA Vocabularies release v4.0.2 that are deprecated.</p>
-          <div class="boxData p-4">
+          <h2>Map from ISBD properties to unconstrained properties derived from RDA</h2>
+          <p>The map relates the <a href="http://www.iflastandards.info/isbd/elements"
+              target="_blank">ISBD elements</a> element set to the <a
+              href="http://www.rdaregistry.info/Elements/u/" target="_blank">unconstrained
+              properties</a> derived from the RDA element set.</p>
+          <p>This map is given in a terse triple language (ttl) serialization.</p>
+          <div class="boxData p-4 mb-4">
             <pre>
-Deprecated concept
-
-rdagen:1001
-rdagen:1002
-rdagen:1003
-rdagen:1003
-rdaterm:1004
-rdaterm:1006
-rdaterm:1021
-rdaterm:1022
-rdaterm:1024
-rdaterm:1029
-rdaterm:1030
-rdaterm:1037
-rdaterm:1048
-rdaterm:1049
-rdaterm:1052
-rdaterm:1054
-rdaterm:1056
-rdaterm:1060
-rdaterm:1061
-rdaterm:1065
-rdaterm:1070
-rdaterm:1074
-rdaterm:1075
-rdaterm:1082
-rdaterm:1087
-rdaterm:1088
-rdaterm:1090
-rdaterm:1094
-rdaterm:1095
-rdaterm:1096
-rdaterm:1100
-rdaterm:1106
-rdaterm:1107
-            </pre>
+@prefix isbd: &lt;http://iflastandards.info/ns/isbd/elements/&gt; .
+@prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+#
+# Map from ISBD properties to unconstrained properties derived from RDA
+# 23 September 2015
+#
+isbd:P1001 rdfs:subPropertyOf rdau:P60049 .
+isbd:P1002 rdfs:subPropertyOf rdau:P60049 .
+isbd:P1004 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1024 rdfs:subPropertyOf rdau:P60539 .
+isbd:P1025 rdfs:subPropertyOf rdau:P60249 .
+isbd:P1034 rdfs:subPropertyOf rdau:P60521 .
+isbd:P1041 rdfs:subPropertyOf rdau:P60101 .
+isbd:P1047 rdfs:subPropertyOf rdau:P60565 .
+isbd:P1054 rdfs:subPropertyOf rdau:P60550 .
+isbd:P1055 rdfs:subPropertyOf rdau:P60557 .
+isbd:P1060 rdfs:subPropertyOf rdau:P60558 .
+isbd:P1063 rdfs:subPropertyOf rdau:P60513 .
+isbd:P1064 rdfs:subPropertyOf rdau:P60215 .
+isbd:P1065 rdfs:subPropertyOf rdau:P60129 .
+isbd:P1068 rdfs:subPropertyOf rdau:P60136 .
+isbd:P1075 rdfs:subPropertyOf rdau:P60052 .
+isbd:P1078 rdfs:subPropertyOf rdau:P60470 .
+isbd:P1086 rdfs:subPropertyOf rdau:P60136 .
+isbd:P1094 rdfs:subPropertyOf rdau:P60137 .
+isbd:P1095 rdfs:subPropertyOf rdau:P60470 .
+isbd:P1096 rdfs:subPropertyOf rdau:P60244 .
+isbd:P1097 rdfs:subPropertyOf rdau:P60313 .
+isbd:P1098 rdfs:subPropertyOf rdau:P60297 .
+isbd:P1100 rdfs:subPropertyOf rdau:P60281 .
+isbd:P1101 rdfs:subPropertyOf rdau:P60713 .
+isbd:P1116 rdfs:subPropertyOf rdau:P60533 .
+isbd:P1117 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1118 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1119 rdfs:subPropertyOf rdau:P60488 .
+isbd:P1120 rdfs:subPropertyOf rdau:P60533 .
+isbd:P1123 rdfs:subPropertyOf rdau:P60259 .
+isbd:P1126 rdfs:subPropertyOf rdau:P60560 .
+isbd:P1128 rdfs:subPropertyOf rdau:P60543 .
+isbd:P1129 rdfs:subPropertyOf rdau:P60532 .
+isbd:P1130 rdfs:subPropertyOf rdau:P60532 .
+isbd:P1134 rdfs:subPropertyOf rdau:P60481 .
+isbd:P1135 rdfs:subPropertyOf rdau:P60481 .
+isbd:P1136 rdfs:subPropertyOf rdau:P60470 .
+isbd:P1137 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1137 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1138 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1138 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1139 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1139 rdfs:subPropertyOf rdau:P60515 .
+isbd:P1146 rdfs:subPropertyOf rdau:P60550 .
+isbd:P1147 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1147 rdfs:subPropertyOf rdau:P60516 .
+isbd:P1148 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1148 rdfs:subPropertyOf rdau:P60516 .
+isbd:P1149 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1149 rdfs:subPropertyOf rdau:P60516 .
+isbd:P1150 rdfs:subPropertyOf rdau:P60521 .
+isbd:P1178 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1178 rdfs:subPropertyOf rdau:P60590 .
+isbd:P1179 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1179 rdfs:subPropertyOf rdau:P60590 .
+isbd:P1180 rdfs:subPropertyOf rdau:P60328 .
+isbd:P1180 rdfs:subPropertyOf rdau:P60590 .
+isbd:P1181 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1181 rdfs:subPropertyOf rdau:P60589 .
+isbd:P1183 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1183 rdfs:subPropertyOf rdau:P60589 .
+isbd:P1184 rdfs:subPropertyOf rdau:P60369 .
+isbd:P1184 rdfs:subPropertyOf rdau:P60589 .
+</pre>
           </div>
         </div>
         <div class="col-md-6">
           <h3>Downloads</h3>
-          <div class="d-inline-flex list-group">
-            <a href="http://www.rdaregistry.info/csv/rgArch/list3RDepConcepts.csv"
-              class="list-group-item list-group-item-action px-2 py-1">CSV (text/csv)</a>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="http://www.rdaregistry.info/ttl/Maps/mapISBD2RDAU.ttl"
+                class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+            </div>
+          </div>
+          <p>The map consists of shortcut mappings entailed from adding the <a
+              href="mapISBDU2RDAU.html" target="_blank">Map from unconstrained ISBD properties to
+              unconstrained properties derived from RDA</a> to the <a
+              href="http://www.iflastandards.info/isbd/elements" target="_blank">ISBD elements</a>
+            element set, which includes mappings to the ISBD elements (unconstrained) element
+            set.</p>
+          <p>For example:</p>
+          <div class="boxData p-4 mb-4">
+            <pre>
+# from ISBD elements:
+isbd:P1001 reg:hasUnconstrained isbdu:P1001 .
+# from http://metadataregistry.org/uri/profile/RegAp/ (reg):
+reg:hasUnconstrained rdfs:subPropertyOf rdfs:subPropertyOf .
+# entails:
+isbd:P1001 rdfs:subPropertyOf isbdu:P1001 .
+# from map of unconstrained ISBD to unconstrained properties derived from RDA:
+isbdu:P1001 rdfs:subPropertyOf rdau:P60049 .
+# entails:
+isbd:P1001 rdfs:subPropertyOf rdau:P60049 .
+	   </pre>
+          </div>
+          <p>The map is given in a terse triple language (ttl) serialization.</p>
+          <h3>Alignments</h3>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="../Aligns/alignISBD2RDA.html"
+                class="list-group-item list-group-item-action px-2 py-1">Alignment of the ISBD:
+                International Standard Bibliographic Description element set with RDA: Resource
+                Description and Access element set</a>
+            </div>
           </div>
         </div>
       </div>

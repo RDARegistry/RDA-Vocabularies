@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Archaeology</title>
+    <title>RDA Registry | Maps</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -123,32 +123,35 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <h1><a href="/rgArch">RDA archaeology</a></h1>
+      <h1><a href="/maps/">RDA maps</a></h1>
       <div class="row mt-2">
         <div class="col-md-6">
-          <h2>Map from bad to correct URIs for RDA Colour Content value vocabulary</h2>
-          <p>This map relates the incorrect URIs originally published for the <a
-              href="http://www.rdaregistry.info/termList/RDAColourContent/">RDA Colour Content</a>
-            value vocabulary to the current, correct URIs.</p>
-          <p>The map is given in a terse triple language (ttl) serialization.</p>
-          <div class="boxData p-4">
-            <pre>
-@prefix rdacc: &lt;http://rdaregistry.info/termList/RDAColourContent/&gt; .
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-#
-# Map from bad to good RDA Colour content URIs
-# 17 October 2015
-#
-&lt;http://metadataregistry.org/uri/RDAColourContent/1002&gt; owl:sameAs rdacc:1002 .
-&lt;http://metadataregistry.org/uri/RDAColourContent/1001&gt; owl:sameAs rdacc:1001 .
-           </pre>
-          </div>
+          <h2>Map from RDA properties to Dublin Core Terms</h2>
+          <p>The map relates selected RDA properties to <a
+              href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core
+              metadata terms</a> properties.</p>
+          <p>The map is too large to display on this page. Please use a download to view the
+            map.</p>
         </div>
         <div class="col-md-6">
           <h3>Downloads</h3>
-          <div class="d-inline-flex list-group">
-            <a href="http://www.rdaregistry.info/ttl/Maps/mapBad2RDACC.ttl"
-              class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="http://www.rdaregistry.info/csv/Maps/mapRDA2DCT.csv"
+                class="list-group-item list-group-item-action px-2 py-1">CSV (text/csv)</a>
+              <a href="http://www.rdaregistry.info/nt/Maps/mapRDA2DCT.nt"
+                class="list-group-item list-group-item-action px-2 py-1">N-triples (rdf+nt)</a>
+              <a href="http://www.rdaregistry.info/ttl/Maps/mapRDA2DCT.ttl"
+                class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+            </div>
+          </div>
+          <h3>Alignments</h3>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="../Aligns/alignRDA2DCT.html"
+                class="list-group-item list-group-item-action px-2 py-1">Alignment from RDA elements
+                to Dublin Core Terms</a>
+            </div>
           </div>
         </div>
       </div>

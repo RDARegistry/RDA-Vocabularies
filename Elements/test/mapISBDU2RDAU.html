@@ -123,88 +123,150 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <h1>Maps for use with RDA vocabularies</h1>
+      <h1><a href="/maps/">RDA maps</a></h1>
       <div class="row mt-2">
         <div class="col-md-6">
-          <nav class="d-inline-flex list-group my-4 ms-2" aria-label="Navigation for maps section">
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"><strong>Dublin
-                Core Terms</strong></p>
-            <a href="mapRDA2DCT.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA properties to Dublin Core Terms</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"><strong>IFLA
-                LRM</strong></p>
-            <a href="mapRDAEntity2LRM.html" class="list-group-item list-group-item-action px-2 py-1"
-              >Map from RDA classes to IFLA LRM</a>
-            <a href="mapRDA2LRM.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA properties to IFLA LRM</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"
-                ><strong>ISBD</strong></p>
-            <a href="mapISBD2RDAU.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from ISBD properties to unconstrained properties derived from RDA</a>
-            <a href="mapISBDU2RDAU.html" class="list-group-item list-group-item-action px-2 py-1"
-              >Map from unconstrained ISBD properties to unconstrained properties derived from
-              RDA</a>
-            <a href="mapRDAU2ISBDU.html" class="list-group-item list-group-item-action px-2 py-1"
-              >Map from unconstrained properties derived from RDA to unconstrained ISBD
-              properties</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1">Lexical URIs in
-              English</p>
-            <a href="mapRDACan2Lex.html" class="list-group-item list-group-item-action px-2 py-1"
-              >Map from canonical to lexical URIs in the RDA properties element sets</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"><strong>MARC 21
-                formats</strong></p>
-            <a href="mapRDA2M21A.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA properties to MARC 21 Authority encodings</a>
-            <a href="mapRDA2M21B.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA properties to MARC 21 Bibliographic encodings</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"><strong>MARC
-                Relator Codes</strong></p>
-            <a href="mapUnc2MRC.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from unconstrained properties to MARC Code List for Relators</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"><strong>RDA
-                recording methods</strong></p>
-            <a href="mapRDA2Path.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA properties to recording methods</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"
-                ><strong>RDA/ONIX Framework</strong></p>
-            <a href="mapRDARef2ROF.html" class="list-group-item list-group-item-action px-2 py-1"
-              >Map from RDA refinements to RDA/ONIX Framework concepts</a>
-            <a href="mapRDACT2ROF.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA carrier types to RDA/ONIX Framework</a>
-            <a href="mapRDACO2ROF.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA content types to RDA/ONIX Framework</a>
-            <a href="mapRDAMT2ROF.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA media types to RDA/ONIX Framework</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"
-                ><strong>Unconstrained properties</strong></p>
-            <a href="mapRDA2Unc.html" class="list-group-item list-group-item-action px-2 py-1">Map
-              from RDA properties to unconstrained properties</a>
-            <a href="mapUncCan2Lex.html" class="list-group-item list-group-item-action px-2 py-1"
-              >Map from canonical to lexical URIs in the Unconstrained properties element set</a>
-            <p class="list-group-item list-group-item-action disabled m-0 px-2 py-1"><strong>ISBD to
-                RDA/ONIX Framework</strong></p>
-            <a href="mapISBDCF2ROF.html" class="list-group-item list-group-item-action px-2 py-1"
-              >Map from ISBD content forms to RDA/ONIX Framework</a>
-            <a href="mapISBDMT2ROF.html" class="list-group-item list-group-item-action px-2 py-1"
-              >Map from ISBD media types to RDA/ONIX Framework</a>
-          </nav>
+          <h2>Map from unconstrained ISBD properties to unconstrained properties derived from
+            RDA</h2>
+          <p>mapDescription</p>
+          <p>This map is given in a terse triple language (ttl) serialization.</p>
+          <div class="boxData p-4 mb-4">
+            <pre>
+@prefix isbdu: &lt;http://iflastandards.info/ns/isbd/unc/elements/&gt; .
+@prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+#
+# Map from unconstrained ISBD properties to unconstrained properties derived from RDA
+# 23 September 2015
+#
+isbdu:P1001 rdfs:subPropertyOf rdau:P60049 .
+isbdu:P1002 rdfs:subPropertyOf rdau:P60049 .
+isbdu:P1003 rdfs:subPropertyOf rdau:P60050 .
+isbdu:P1004 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1005 rdfs:subPropertyOf rdau:P60589 .
+isbdu:P1007 rdfs:subPropertyOf rdau:P60339 .
+isbdu:P1008 rdfs:subPropertyOf rdau:P60329 .
+isbdu:P1009 rdfs:subPropertyOf rdau:P60078 .
+isbdu:P1010 rdfs:subPropertyOf rdau:P60343 .
+isbdu:P1011 rdfs:subPropertyOf rdau:P60364 .
+isbdu:P1012 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1014 rdfs:subPropertyOf rdau:P60488 .
+isbdu:P1019 rdfs:subPropertyOf rdau:P60162 .
+isbdu:P1020 rdfs:subPropertyOf rdau:P60546 .
+isbdu:P1021 rdfs:subPropertyOf rdau:P60072 .
+isbdu:P1024 rdfs:subPropertyOf rdau:P60539 .
+isbdu:P1025 rdfs:subPropertyOf rdau:P60249 .
+isbdu:P1033 rdfs:subPropertyOf rdau:P60597 .
+isbdu:P1034 rdfs:subPropertyOf rdau:P60521 .
+isbdu:P1041 rdfs:subPropertyOf rdau:P60101 .
+isbdu:P1044 rdfs:subPropertyOf rdau:P60122 .
+isbdu:P1045 rdfs:subPropertyOf rdau:P60470 .
+isbdu:P1046 rdfs:subPropertyOf rdau:P60056 .
+isbdu:P1047 rdfs:subPropertyOf rdau:P60565 .
+isbdu:P1048 rdfs:subPropertyOf rdau:P60542 .
+isbdu:P1050 rdfs:subPropertyOf rdau:P60109 .
+isbdu:P1051 rdfs:subPropertyOf rdau:P60346 .
+isbdu:P1052 rdfs:subPropertyOf rdau:P60506 .
+isbdu:P1053 rdfs:subPropertyOf rdau:P60550 .
+isbdu:P1054 rdfs:subPropertyOf rdau:P60550 .
+isbdu:P1055 rdfs:subPropertyOf rdau:P60557 .
+isbdu:P1057 rdfs:subPropertyOf rdau:P60486 .
+isbdu:P1058 rdfs:subPropertyOf rdau:P60334 .
+isbdu:P1059 rdfs:subPropertyOf rdau:P60340 .
+isbdu:P1060 rdfs:subPropertyOf rdau:P60558 .
+isbdu:P1061 rdfs:subPropertyOf rdau:P60581 .
+isbdu:P1062 rdfs:subPropertyOf rdau:P60559 .
+isbdu:P1063 rdfs:subPropertyOf rdau:P60513 .
+isbdu:P1064 rdfs:subPropertyOf rdau:P60215 .
+isbdu:P1065 rdfs:subPropertyOf rdau:P60129 .
+isbdu:P1066 rdfs:subPropertyOf rdau:P60528 .
+isbdu:P1068 rdfs:subPropertyOf rdau:P60136 .
+isbdu:P1075 rdfs:subPropertyOf rdau:P60052 .
+isbdu:P1078 rdfs:subPropertyOf rdau:P60470 .
+isbdu:P1086 rdfs:subPropertyOf rdau:P60136 .
+isbdu:P1087 rdfs:subPropertyOf rdau:P60130 .
+isbdu:P1090 rdfs:subPropertyOf rdau:P60372 .
+isbdu:P1094 rdfs:subPropertyOf rdau:P60137 .
+isbdu:P1095 rdfs:subPropertyOf rdau:P60470 .
+isbdu:P1096 rdfs:subPropertyOf rdau:P60244 .
+isbdu:P1097 rdfs:subPropertyOf rdau:P60313 .
+isbdu:P1098 rdfs:subPropertyOf rdau:P60297 .
+isbdu:P1100 rdfs:subPropertyOf rdau:P60281 .
+isbdu:P1101 rdfs:subPropertyOf rdau:P60713 .
+isbdu:P1116 rdfs:subPropertyOf rdau:P60533 .
+isbdu:P1117 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1118 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1119 rdfs:subPropertyOf rdau:P60488 .
+isbdu:P1120 rdfs:subPropertyOf rdau:P60533 .
+isbdu:P1122 rdfs:subPropertyOf rdau:P60578 .
+isbdu:P1123 rdfs:subPropertyOf rdau:P60259 .
+isbdu:P1126 rdfs:subPropertyOf rdau:P60560 .
+isbdu:P1128 rdfs:subPropertyOf rdau:P60543 .
+isbdu:P1129 rdfs:subPropertyOf rdau:P60532 .
+isbdu:P1130 rdfs:subPropertyOf rdau:P60532 .
+isbdu:P1131 rdfs:subPropertyOf rdau:P60553 .
+isbdu:P1133 rdfs:subPropertyOf rdau:P60552 .
+isbdu:P1134 rdfs:subPropertyOf rdau:P60481 .
+isbdu:P1135 rdfs:subPropertyOf rdau:P60481 .
+isbdu:P1136 rdfs:subPropertyOf rdau:P60470 .
+isbdu:P1137 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1137 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1138 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1138 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1139 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1139 rdfs:subPropertyOf rdau:P60515 .
+isbdu:P1140 rdfs:subPropertyOf rdau:P60507 .
+isbdu:P1141 rdfs:subPropertyOf rdau:P60338 .
+isbdu:P1142 rdfs:subPropertyOf rdau:P60337 .
+isbdu:P1143 rdfs:subPropertyOf rdau:P60077 .
+isbdu:P1146 rdfs:subPropertyOf rdau:P60550 .
+isbdu:P1147 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1147 rdfs:subPropertyOf rdau:P60516 .
+isbdu:P1148 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1148 rdfs:subPropertyOf rdau:P60516 .
+isbdu:P1149 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1149 rdfs:subPropertyOf rdau:P60516 .
+isbdu:P1150 rdfs:subPropertyOf rdau:P60521 .
+isbdu:P1155 rdfs:subPropertyOf rdau:P60345 .
+isbdu:P1178 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1178 rdfs:subPropertyOf rdau:P60590 .
+isbdu:P1179 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1179 rdfs:subPropertyOf rdau:P60590 .
+isbdu:P1180 rdfs:subPropertyOf rdau:P60328 .
+isbdu:P1180 rdfs:subPropertyOf rdau:P60590 .
+isbdu:P1181 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1181 rdfs:subPropertyOf rdau:P60589 .
+isbdu:P1183 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1183 rdfs:subPropertyOf rdau:P60589 .
+isbdu:P1184 rdfs:subPropertyOf rdau:P60369 .
+isbdu:P1184 rdfs:subPropertyOf rdau:P60589 .
+</pre>
+          </div>
         </div>
         <div class="col-md-6">
-          <p>This section contains maps to and from RDA element sets and value vocabularies.</p>
-          <p>We use the term &quot;map&quot; to refer to a set of mappings. We use the term
-            &quot;mapping&quot; to refer to a single relationship between two classes, properties,
-            or concepts taken from different element sets and value vocabularies.</p>
-          <p>A map is a set of RDF triples representing the semantic relationship between two
-            element sets or value vocabularies.</p>
-          <p>Some maps are based on <a href="../Aligns/">alignments</a>. An alignment is usually a
-            comma separated variable file containing general relationships that may ignore the
-            precise semantics embedded in the vocabularies.</p>
+          <h3>Downloads</h3>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="http://www.rdaregistry.info/ttl/Maps/mapISBDU2RDAU.ttl"
+                class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+            </div>
+          </div>
+          <p>The map is given in a terse triple language (ttl) serialization.</p>
+          <h3>Alignments</h3>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="../Aligns/alignISBD2RDA.html"
+                class="list-group-item list-group-item-action px-2 py-1">Alignment of the ISBD:
+                International Standard Bibliographic Description element set with RDA: Resource
+                Description and Access element set</a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
     <footer class="container footDisplay">
       <div class="row py-1 mb-2">
-        <div class="d-flex">
+        <div class="d-flex justify-content-center">
           <div class="p-2">
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img
                 alt="Creative Commons License" style="border-width:0"

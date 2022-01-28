@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Archaeology</title>
+    <title>RDA Registry | Maps</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -123,40 +123,52 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <h1><a href="/rgArch">RDA archaeology</a></h1>
+      <h1><a href="/maps/">RDA maps</a></h1>
       <div class="row mt-2">
         <div class="col-md-6">
-          <h2>Map from deprecated to published RDA classes</h2>
-          <p>This map relates the deprecated URIs in rdvocab.info to the published URIs for the RDA
-            Classes in rdaregistry.info.</p>
-          <p>The map is given in a terse triple language (ttl) serialization.</p>
-          <div class="boxData p-4">
+          <h2>Map from ISBD media types to RDA/ONIX Framework</h2>
+          <p>The map relates the <a href="http://www.iflastandards.info/isbd/terms/mediatype.html"
+              target="_blank">ISBD Media Type</a> value vocabulary to the <a
+              href="http://www.rdaregistry.info/termList/rofit/" target="_blank">ROF Intermediation
+              Tool</a> value vocabulary using the <a
+              href="http://www.rdaregistry.info/Elements/rof/" target="_blank">RDA/ONIX Framework
+              element set</a>.</p>
+          <p>This map is given in a terse triple language (ttl) serialization.</p>
+          <div class="boxData p-4 mb-4">
             <pre>
-<!-- InstanceBeginEditable name="MapCode" -->
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdac: &lt;http://rdaregistry.info/Elements/c/&gt; .
-@prefix xrdaFRBR: &lt;http://rdvocab.info/uri/schema/FRBRentitiesRDA/&gt; .
+@prefix isbdmt &lt;http://iflastandards.info/ns/isbd/terms/mediatype/&gt; .
+@prefix rof: &lt;http://rdaregistry.info/Elements/rof/&gt; .
+@prefix rofit: &lt;http://rdaregistry.info/termList/rofit/&gt; .
 #
-# Map from deprecated RDA classes to published RDA classes
-# 24 May 2014
+# Map from ISBD media type categories to RDA/ONIX Framework
+# 3 June 2015
 #
-rdac:C10001 owl:sameAs xrdaFRBR:Work .
-rdac:C10002 owl:sameAs xrdaFRBR:Agent .
-rdac:C10003 owl:sameAs xrdaFRBR:Item .
-rdac:C10004 owl:sameAs xrdaFRBR:Person .
-rdac:C10005 owl:sameAs xrdaFRBR:CorporateBody .
-rdac:C10006 owl:sameAs xrdaFRBR:Expression .
-rdac:C10007 owl:sameAs xrdaFRBR:Manifestation .
-rdac:C10008 owl:sameAs xrdaFRBR:Family .
-<!-- InstanceEndEditable -->
+isbdmt:1001 rof:P10005 rofit:T1005 .
+isbdmt:1002 rof:P10005 rofit:T1007 .
+isbdmt:1003 rof:P10005 rofit:T1001 .
+isbdmt:1004 rof:P10005 rofit:T1002 .
+isbdmt:1005 rof:P10005 rofit:T1003 .
+isbdmt:1006 rof:P10005 rofit:T1004 .
+isbdmt:1007 rof:P10005 rofit:T1006 .
 </pre>
           </div>
         </div>
         <div class="col-md-6">
           <h3>Downloads</h3>
-          <div class="d-inline-flex list-group">
-            <a href="http://www.rdaregistry.info/ttl/Maps/mapRDAOld2NewClass.ttl"
-              class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="http://www.rdaregistry.info/ttl/Maps/mapISBDMT2ROF.ttl"
+                class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+            </div>
+          </div>
+          <p>The map is given in a terse triple language (ttl) serialization.</p>
+          <h3>Alignments</h3>
+          <div class="mb-4">
+            <div class="d-inline-flex list-group">
+              <a href="../Aligns/alignISBDMT2ROF.html"
+                class="list-group-item list-group-item-action px-2 py-1">Alignment from RDA media
+                types to RDA/ONIX Framework</a>
+            </div>
           </div>
         </div>
       </div>
@@ -189,7 +201,7 @@ rdac:C10008 owl:sameAs xrdaFRBR:Family .
           </div>
         </div>
       </div>
-      <p><em>This page was last updated dd mmm yyyy.</em></p>
+      <p><em>This page was last updated 10 Mar 2022.</em></p>
     </footer>
     <!-- Scripts-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
