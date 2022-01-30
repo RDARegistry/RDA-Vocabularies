@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Maps</title>
+    <title>RDA Registry | Alignments</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -123,33 +123,48 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <h1><a href="/maps/">RDA maps</a></h1>
+      <h1><a href="/maps/">RDA alignments</a></h1>
       <div class="row mt-2">
         <div class="col-md-6">
-          <h2>Map from canonical to lexical URIs in the RDA element sets</h2>
-          <p>The map relates the canonical URIs in the RDA properties element sets to equivalent
-            English lexical URIs.</p>
-          <p>The map is too large to display on this page. Please use a download to view the
-            map.</p>
+          <h2>Alignment from ISBD content forms to RDA/ONIX Framework</h2>
+          <p>This alignment relates the <a
+              href="http://www.iflastandards.info/isbd/terms/contentform.html">ISBD Content Form</a>
+            value vocabulary to the RDA/ONIX Framework element set and value vocabularies.</p>
+          <p>This alignment is given in a comma-separated variable (csv) format.</p>
+          <div class="boxData p-4 mb-4">
+            <pre>
+ISBD Label,ROF Character,ROF Sensory Mode,ROF Image Dimensionality,ROF Image Movement
+dataset,language,none,not applicable,not applicable
+image,image,,,
+movement,,,,moving
+music,music,,not applicable,not applicable
+object,,,three-dimensional,
+program,other,none,not applicable,not applicable
+sounds,other,hearing,not applicable,not applicable
+spoken word,language,hearing,not applicable,not applicable
+text,language,,not applicable,not applicable
+multiple content forms,,,,
+other content form,,,,
+           </pre>
+          </div>
         </div>
         <div class="col-md-6">
           <h3>Downloads</h3>
           <div class="mb-4">
             <div class="d-inline-flex list-group">
-              <a href="http://www.rdaregistry.info/csv/Maps/mapRDACan2Lex.csv"
-                class="list-group-item list-group-item-action px-2 py-1">CSV (text/csv)</a>
-              <a href="http://www.rdaregistry.info/nt/Maps/mapRDACan2Lex.nt"
-                class="list-group-item list-group-item-action px-2 py-1">N-triples (rdf+nt)</a>
-              <a href="http://www.rdaregistry.info/ttl/Maps/mapRDACan2Lex.ttl"
-                class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+              <a href="alignISBDCF2ROF.csv" class="list-group-item list-group-item-action px-2 py-1"
+                >CSV (text/csv)</a>
             </div>
           </div>
-          <h3>Alignments</h3>
+          <p>The alignment is given in a comma-separated variable (csv) format.</p>
+          <p>See also <a href="alignISBDCFX2ROF.html">Alignment from ISBD content form compounds to
+              RDA/ONIX Framework</a></p>
+          <h3>Maps</h3>
           <div class="mb-4">
             <div class="d-inline-flex list-group">
-              <a href="./Aligns/alignRDACan2Lex.html"
-                class="list-group-item list-group-item-action px-2 py-1">Alignment from canonical to
-                lexical URIs in the RDA properties element set (csv)</a>
+              <a href="../Maps/mapISBDCF2ROF.html"
+                class="list-group-item list-group-item-action px-2 py-1">Map from ISBD content forms
+                to RDA/ONIX Framework</a>
             </div>
           </div>
         </div>

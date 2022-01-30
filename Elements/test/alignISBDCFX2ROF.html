@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Maps</title>
+    <title>RDA Registry | Alignments</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -123,49 +123,44 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <h1><a href="/maps/">RDA maps</a></h1>
+      <h1><a href="/maps/">RDA alignments</a></h1>
       <div class="row mt-2">
         <div class="col-md-6">
-          <h2>Map from RDA refinements to RDA/ONIX Framework concepts</h2>
-          <p>The map relates <a href="../termList/#rofrda">RDA value refinements</a> to <a
-              href="../termList/#rof">RDA/ONIX Framework value vocabularies</a>.</p>
-          <p>This map is given in a terse triple language (ttl) serialization.</p>
+          <h2>Alignment from ISBD content form compounds to RDA/ONIX Framework</h2>
+          <p>This alignment relates compound statements based on the <a
+              href="http://www.iflastandards.info/isbd/terms/contentform.html">ISBD Content Form</a>
+            value vocabulary to the RDA/ONIX Framework element set and value vocabularies.</p>
+          <p>This alignment is given in a comma-separated variable (csv) format.</p>
           <div class="boxData p-4 mb-4">
             <pre>
-@prefix rofch: &lt;http://rdaregistry.info/termList/rofch/>&gt; .
-@prefix rofchrda: &lt;http://rdaregistry.info/termList/rofchrda/&gt; .
-@prefix rofit: &lt;http://rdaregistry.info/termList/rofit/&gt; .
-@prefix rofitrda: &lt;http://rdaregistry.info/termList/rofitrda/&gt; .
-@prefix rofsf: &lt;http://rdaregistry.info/termList/rofsf/&gt; .
-@prefix rofsfrda: &lt;http://rdaregistry.info/termList/rofsfrda/&gt; .
-@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
-#
-# Map from RDA local refinements to RDA/ONIX Framework concepts
-# 2 June 2015 (missing prefixes added 1 December 2015)
-#
-rofchrda:T1001 skos:broader rofch:T1004 .
-rofitrda:T1001 skos:broader rofit:T1001 .
-rofitrda:T1002 skos:broader rofit:T1001 .
-rofitrda:T1003 skos:broader rofit:T1001 .
-rofitrda:T1004 skos:broader rofit:T1001 .
-rofitrda:T1005 skos:broader rofit:T1003 .
-rofitrda:T1006 skos:broader rofit:T1003 .
-rofitrda:T1007 skos:broader rofit:T1003 .
-rofsfrda:T1001 skos:broader rofsf:T1001 .           </pre>
+ISBD Compound Label,ROF Character,ROF Sensory Mode,ROF Image Dimensionality,ROF Image Movement
+image (moving ; 2-dimensional ; visual),image,sight,two-dimensional,moving
+image (moving ; 3-dimensional ; visual),image,sight,three-dimensional,moving
+image (still ; 2-dimensional ; tactile),image,touch,two-dimensional,still
+image (still ; 2-dimensional ; visual,image,sight,two-dimensional,still
+image (still ; 3-dimensional; visual),image,sight,three-dimensional,still
+movement (notated ; tactile),other,touch,not applicable,not applicable
+movement (notated ; visual),other,sight,not applicable,not applicable
+music (notated ; tactile),music,touch,not applicable,not applicable
+music (notated ; visual),music,sight,not applicable,not applicable
+music (performed),music,hearing,not applicable,not applicable
+object (tactile),image,touch,three-dimensional,still
+text (tactile),language,touch,not applicable,not applicable
+text (visual),language,sight,not applicable,not applicable
+           </pre>
           </div>
         </div>
         <div class="col-md-6">
           <h3>Downloads</h3>
           <div class="mb-4">
             <div class="d-inline-flex list-group">
-              <a href="http://www.rdaregistry.info/csv/Maps/mapRDARef2ROF.csv"
+              <a href="alignISBDCFX2ROF.csv"
                 class="list-group-item list-group-item-action px-2 py-1">CSV (text/csv)</a>
-              <a href="http://www.rdaregistry.info/nt/Maps/mapRDARef2ROF.nt"
-                class="list-group-item list-group-item-action px-2 py-1">N-triples (rdf+nt)</a>
-              <a href="http://www.rdaregistry.info/ttl/Maps/mapRDARef2ROF.ttl"
-                class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
             </div>
           </div>
+          <p>The alignment is given in a comma-separated variable (csv) format.</p>
+          <p>See also <a href="alignISBDCF2ROF.html">Alignment from ISBD content forms to RDA/ONIX
+              Framework</a></p>
         </div>
       </div>
     </main>
