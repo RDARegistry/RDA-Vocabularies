@@ -76,37 +76,53 @@ selector:checked {
 .protip-skin-default--scheme-pro[data-pt-position = "bottom-right-corner"] .protip-arrow {
   border-left-color: #446e9b !important;
 }
+/* Reset tooltip container style */
+.protip-skin-default--size-small {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
 /* 
  * Other settings
  */
 body {
   font-size: 100%;
-  /* Navbar fixed to the top */
+  /* Padding for navbar fixed to the top */
   padding-top: 4rem;
 }
-/* no underlines for links */
+/* No underlines for links */
 * a {
   text-decoration: none;
 }
-/* Header 1 and 2 used for breadcrumb */
-h1,
-h2 {
+/* Headers */
+.regDisplay h1 {
+  font-size: 1.6rem;
+}
+.regDisplay h2 {
+  font-size: 1.4rem;
+}
+.regDisplay h3 {
+  font-size: 1.2rem;
+}
+/* Header 1 and 2 used for breadcrumb in vocabulary display */
+.vocDisplay h1,
+.vocDisplay h2 {
   display: inline-block;
 }
-h1 {
+.vocDisplay h1 {
   font-size: 1.6rem;
 }
-h2 {
+.vocDisplay h2 {
   font-size: 1.6rem;
 }
-h3 {
+.vocDisplay h3 {
   font-size: 1.4rem;
 }
 .crumbSep {
   font-size: 1.6rem;
 }
 /* 
- * Page Metadata Block
+ * Vocabulary Page Metadata Block
  */
 .vocDisplay tr {
   padding-bottom: 0.5rem;
@@ -119,7 +135,7 @@ h3 {
   vertical-align: top;
 }
 /* 
- * Page Languages Block
+ * Vocabulary Page Languages Block
  */
 .vocLanguages ul li {
   display: inline-block;
@@ -133,14 +149,8 @@ h3 {
   border: 3px solid #ffffff;
   border-radius: 0.5rem;
 }
-/* Reset tooltip container style */
-.protip-skin-default--size-small {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-}
 /* 
- * Data detail display
+ * Vocabulary Data detail display
  */
 .pindex_detail {
   margin-left: 2rem;
@@ -159,7 +169,9 @@ h3 {
   margin: 0;
   padding: 0;
 }
-/* Detail expand/collapse buttons */
+/* 
+ * Vocabulary Detail expand/collapse buttons
+ */
 .btnCollapse,
 .btnExpand {
   border-radius: 25%;
@@ -178,19 +190,53 @@ h3 {
   olor: #000000;
 }
 /* 
- * Table buttons
+ * Vocabulary Table buttons
  */
 .btnPublished {
-    background-color: #446e9b !important;
-    white-space: nowrap;
-} 
-.imgSizing {
+  background-color: #446e9b !important;
+  white-space: nowrap;
+}
+/* 
+ * Registry pages (not vocabulary pages)
+ */
+.regDisplay ul {
+  list-style-type: none;
+}
+.regDisplay .listCircle {
+  list-style-type: circle;
+}
+.regPrompt {
+  background-color: #ffffcc;
+  border-color: #446e9b;
+  border-style: solid;
+  border-radius: 1rem;
+  border-width: 1px;
+  padding: 0.5rem;
   width: auto;
-  height: auto;
-  padding: 2rem;
-  margin: 2rem;
-  border: thin solid #000000;
-  border-radius: 2rem;
+}
+/* 
+ * Guide button
+ */
+.btnToc {
+  background-color: #446e9b !important;
+  border-color: #ffffff;
+  color: #ffffff !important;
+}
+.bgBox {
+  background-color: #f0f0f0;
+}
+.boxImage {
+  border-style: solid;
+  border-color: #446e9b;
+  border-radius: 1rem;
+  border-width: 1px;
+}
+.boxData {
+  background-color: #f0f0f0;
+  border-style: solid;
+  border-color: #446e9b;
+  border-radius: 0.5rem;
+  border-width: 1px;
 }
 /* 
  * Stuff for other Registry pages (to be checked)
@@ -242,14 +288,6 @@ h3 {
   font-size: 0.9em;
   padding-top: 0.5em;
 }
-.rg-prompt {
-  background-color: #ffffcc;
-  border-style: none;
-  border-radius: 1em;
-  margin: 0.5em;
-  padding: 0.5em;
-  width: auto;
-}
 .rg-xbox {
   background-color: #f0f0f0;
   margin: 0.5em;
@@ -259,6 +297,31 @@ h3 {
 .rg-xbox-key p {
   margin: 0em;
   padding: 0.1em;
+}
+.rg-photo-clear {
+  clear: both;
+}
+.rg-photo-left {
+  float: left;
+  margin: 0.5em;
+}
+.rg-photo-left img {
+  margin: 0;
+  padding: 0;
+}
+.rg-photo-left p {
+  padding-top: 0.5em;
+}
+.rg-photo-right {
+  float: right;
+  margin: 0.5em;
+}
+.rg-photo-right img {
+  margin: 0;
+  padding: 0;
+}
+.rg-photo-right p {
+  padding-top: 0.5em;
 }
 .rg-table table {
   padding: 0.5em;
