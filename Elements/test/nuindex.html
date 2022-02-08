@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Examples</title>
+    <title>RDA Registry | Archaeology</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -124,85 +124,81 @@
     </nav>
     <main class="container regDisplay">
       <div class="row mt-3">
-        <h1><a href="/Examples/">Examples that use RDA vocabularies</a></h1>
+        <h1><a href="/rgArch">RDA archaeology</a></h1>
       </div>
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <h2>Volume (text) 3 from Complete examples – bibliographic records</h2>
-          <p>This example corresponds to <em>Volume (text) 3</em> from <a
-              href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf"
-              target="_blank">Complete examples - bibliographic records</a>.</p>
-          <div class="boxData p-4">
-            <pre>
-@prefix ex: &lt;http://example.com/&gt; .
-@prefix rdaa: &lt;http://rdaregistry.info/Elements/a/&gt; .
-@prefix rdaco: &lt;http://rdaregistry.info/termList/RDAContentType/&gt; .
-@prefix rdact: &lt;http://rdaregistry.info/termList/RDACarrierType/&gt; .
-@prefix rdae: &lt;http://rdaregistry.info/Elements/e/&gt; .
-@prefix rdai: &lt;http://rdaregistry.info/Elements/i/&gt; .
-@prefix rdam: &lt;http://rdaregistry.info/Elements/m/&gt; .
-@prefix rdami: &lt;http://rdaregistry.info/termList/ModeIssue/&gt; .
-@prefix rdamt: &lt;http://rdaregistry.info/termList/RDAMediaType/&gt; .
-@prefix rdaw: &lt;http://rdaregistry.info/Elements/w/&gt; .
-@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
-#
-# 1 May 2016
-#
-ex:A1
-  rdaa:P50103 "Miguel de Cervantes Saavedra" ;
-  rdaa:P50117 "Cervantes Saavedra, Miguel de, 1547-1616" ;
-  rdaa:P50121 "1547" ;
-  rdaa:P50120 "1616" .
-ex:A2
-  rdaa:P50117 "Jarvis, Charles, 1675?-1739" ;
-  rdaa:P50121 "1675?" ;
-  rdaa:P50120 "1739" .
-ex:E1
-  rdae:P20001 rdaco:1020 ;
-  rdae:P20002 "Cervantes Saavedra, Miguel de, 1547-1616. Don Quixote. English" ;
-  rdae:P20006 "English"@en ;
-  rdae:P20037 ex:A2 ;
-  rdae:P20231 ex:W1 .
-ex:I1
-  rdai:P40003 "Binding: marbled paper over boards with a leather spine"@en ;
-  rdai:P40026 "Previously owned by Rosa del Valle, 1829-1860"@en .
-ex:M1
-  rdam:P30001 rdact:1049 ;
-  rdam:P30002 rdamt:1007 ;
-  rdam:P30003 rdami:1002 ;
-  rdam:P30011 "1828" ;
-  rdam:P30088 "Exeter" ;
-  rdam:P30103 ex:I1 ;
-  rdam:P30105 "translated from the original Spanish of Miguel de Cervantes Saavedra by Charles Jarvis, Esq." ;
-  rdam:P30135 ex:W1 ;
-  rdam:P30139 ex:E1 ;
-  rdam:P30156 "The life and exploits of Don Quixote de la Mancha" ;
-  rdam:P30169 "13 cm" ;
-  rdam:P30176 "J. & B. Williams" ;
-  rdam:P30181 "4 volumes"@en .
-ex:W1
-  rdaw:P10002 "Cervantes Saavedra, Miguel de, 1547-1616. Don Quixote" ;
-  rdaw:P10061 ex:A1 ;
-  rdaw:P10223 "Don Quixote" ;
-  rdaw:P10256 "A novel about a delusional knight calling himself &quot;Don Quixote,&quot; who is inspired to live out the adventures he has read about in chivalric romances"@en .
-rdaco:1020 skos:prefLabel "text"@en .
-rdact:1049 skos:prefLabel "volume"@en .
-rdami:1002 skos:prefLabel "multipart monograph"@en .
-rdamt:1007 skos:prefLabel "unmediated"@en .
-</pre>
+      <div id="faqArch">
+        <div class="row mt-2">
+          <div class="col-md-4">
+            <h2>Frequently Asked Questions (Archaeology)</h2>
+            <div class="mt-2 ms-2">
+              <div class="btn-group-vertical" role="group" aria-label="FAQ Archaeology questions">
+                <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
+                  data-bs-target="#f1" aria-expanded="false" aria-controls="f1">Why was a new
+                  namespace, http://rdaregistry.info, used for the RDA element sets instead of the
+                  original http://rdvocab.info?</button>
+                <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
+                  data-bs-target="#f2" aria-expanded="false" aria-controls="f2">Did this change in
+                  the namespace break things for applications using the old IRIs and elements that
+                  have not made the transition?</button>
+                <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
+                  data-bs-target="#f3" aria-expanded="false" aria-controls="f3">Are there any plans
+                  to move the RDA value vocabularies that are still in the original rdvocab.info
+                  namespace?</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <h3>Downloads</h3>
-          <div class="d-inline-flex list-group mb-2">
-            <a href="http://www.rdaregistry.info/ttl/Examples/exRSCFullTextVolume3.ttl"
-              class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+          <div class="col-md-8">
+            <div class="collapse show" id="f0" data-bs-parent="#faqArch">
+              <div class="border border-dark p-4">
+                <p>Click on the question to show the answer.</p>
+              </div>
+            </div>
+            <div class="collapse" id="f1" data-bs-parent="#faqArch">
+              <div class="border border-dark p-4">
+                <p>Why was a new namespace, http://rdaregistry.info, used for the RDA element sets
+                  instead of the original http://rdvocab.info?</p>
+                <p>The rdvocab.info namespace was set up in 2008 following the <a
+                    href="http://www.bl.uk/bibliographic/meeting.html">Data Model Meeting</a> in
+                  London in 2007. The domain used was intended to reflect, but not fully brand, the
+                  namespace as &quot;RDA&quot;, because it could not be assumed that the
+                  developments agreed at the meeting would be successful. For various reasons
+                  associated with the ongoing development of <a
+                    href="http://www.rda-rsc.org/content/about-rda">RDA: Resource Description and
+                    Access</a>, the representation of the basic RDA elements in RDF was not approved
+                  until 2012. By then, there was a much clearer understanding of the issues of
+                  elements for aggregated statements, and elements unconstrained by RDA semantics
+                  for use in non-RDA applications. There were also significant differences between
+                  the data used to develop the RDA element sets and the elements published in the
+                  current version of RDA. It would have taken longer to update the old element sets,
+                  with many deprecations, than to republish them using current, approved data.</p>
+              </div>
+            </div>
+            <div class="collapse" id="f2" data-bs-parent="#faqArch">
+              <div class="border border-dark p-4">
+                <p>Did this change in the namespace break things for applications using the old IRIs
+                  and elements that have not made the transition?</p>
+                <p>Yes, but every effort was made to bridge the gap between the old and the new.
+                  These include redirection from the old element sets to the new namespace, the
+                  development of <a href="http://www.rdaregistry.info/rgArch">maps between the old
+                    and new URIs</a>, and the provision of <a href="Maps/#lexical-en">alternate URIs
+                    using the English label</a> of the element as the local part, similar to the
+                  construction of the old URIs. A map from the old URIs known to be in use is
+                  available. The old element sets had the status of &quot;New-Proposed&quot; and
+                  were never officially published.</p>
+              </div>
+            </div>
+            <div class="collapse" id="f3" data-bs-parent="#faqArch">
+              <div class="border border-dark p-4">
+                <p>Are there any plans to move the RDA value vocabularies that are still in the
+                  original rdvocab.info namespace?</p>
+                <p>The RDA value vocabularies were moved to rdaregistry.info namespace in 2015. The
+                  old URIs in &quot;Published&quot; status were redirected to the new ones. From
+                  August 2016, all the RDA value vocabularies have &quot;Published&quot; or
+                  &quot;Deprecated&quot; status. The published value vocabularies are updated as
+                  required so that they remain in synchronization with RDA.</p>
+              </div>
+            </div>
           </div>
-          <p>This example is also used for the <a
-              href="http://rballs.info/topics/m/rdaex/rdaexVolumeText3.html" target="_blank">RDA
-              Example: Volume (text) 3 r-ball</a>.</p>
-          <p>Note that variations in the RDF representations are intentional and are compatible with
-            RDA guidance and instructions.</p>
         </div>
       </div>
     </main>
