@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Datasets</title>
+    <title>RDA Registry | Archaeology</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -123,57 +123,82 @@
       </div>
     </nav>
     <main class="container regDisplay">
-      <div id="datasetsToc">
-        <div class="row mt-3">
-          <h1>Datasets that use RDA vocabularies</h1>
+      <div class="row mt-3">
+        <div class="">
+          <div class="d-inline-flex flex-wrap"><h1><a href="/rgArch">RDA archaeology</a></h1></div>
+          <div class="d-inline-flex"><span class="crumbSep">:</span></div>
+          <div class="d-inline-flex flex-wrap"><h2>Frequently Asked Questions</h2></div>
         </div>
+      </div>
+      <div id="faqArch">
         <div class="row mt-2">
           <div class="col-md-4">
             <div class="ms-3">
-              <div class="btn-group-vertical" role="group" aria-label="Datasets table of contents">
+              <div class="btn-group-vertical" role="group" aria-label="FAQ Archaeology questions">
                 <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
-                  data-bs-target="#dAlk" aria-expanded="false" aria-controls="dAlk">AlKindi</button>
+                  data-bs-target="#f1" aria-expanded="false" aria-controls="f1">Why was a new
+                  namespace, http://rdaregistry.info, used for the RDA element sets instead of the
+                  original http://rdvocab.info?</button>
                 <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
-                  data-bs-target="#dRef" aria-expanded="false" aria-controls="dRef">RDA Entity
-                  Finder</button>
+                  data-bs-target="#f2" aria-expanded="false" aria-controls="f2">Did this change in
+                  the namespace break things for applications using the old IRIs and elements that
+                  have not made the transition?</button>
                 <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
-                  data-bs-target="#dSud" aria-expanded="false" aria-controls="dSud">Sudoc
-                  bibliographic data</button>
+                  data-bs-target="#f3" aria-expanded="false" aria-controls="f3">Are there any plans
+                  to move the RDA value vocabularies that are still in the original rdvocab.info
+                  namespace?</button>
               </div>
             </div>
           </div>
           <div class="col-md-8">
-            <div class="collapse show" id="gDefault" data-bs-parent="#datasetsToc">
+            <div class="collapse show" id="f0" data-bs-parent="#faqArch">
               <div class="border border-dark p-4">
-                <h2>Introduction</h2>
-                <p>This section contains information about datasets and services that use one or
-                  more classes, properties, or concepts from the RDA element sets and value
-                  vocabularies.</p>
+                <p>Click on the question to show the answer.</p>
               </div>
             </div>
-            <div class="collapse" id="dAlk" data-bs-parent="#datasetsToc">
+            <div class="collapse" id="f1" data-bs-parent="#faqArch">
               <div class="border border-dark p-4">
-                <h2><a href="https://alkindi.diamond-ils.org/" target="_blank">AlKindi</a></h2>
-                <p>A union catalogue of the written religious and cultural heritage of the Middle
-                  East.</p>
-                <p>A dataset download is not available.</p>
+                <p>Why was a new namespace, http://rdaregistry.info, used for the RDA element sets
+                  instead of the original http://rdvocab.info?</p>
+                <p>The rdvocab.info namespace was set up in 2008 following the <a
+                    href="http://www.bl.uk/bibliographic/meeting.html">Data Model Meeting</a> in
+                  London in 2007. The domain used was intended to reflect, but not fully brand, the
+                  namespace as &quot;RDA&quot;, because it could not be assumed that the
+                  developments agreed at the meeting would be successful. For various reasons
+                  associated with the ongoing development of <a
+                    href="http://www.rda-rsc.org/content/about-rda">RDA: Resource Description and
+                    Access</a>, the representation of the basic RDA elements in RDF was not approved
+                  until 2012. By then, there was a much clearer understanding of the issues of
+                  elements for aggregated statements, and elements unconstrained by RDA semantics
+                  for use in non-RDA applications. There were also significant differences between
+                  the data used to develop the RDA element sets and the elements published in the
+                  current version of RDA. It would have taken longer to update the old element sets,
+                  with many deprecations, than to republish them using current, approved data.</p>
               </div>
             </div>
-            <div class="collapse" id="dRef" data-bs-parent="#datasetsToc">
+            <div class="collapse" id="f2" data-bs-parent="#faqArch">
               <div class="border border-dark p-4">
-                <h2><a href="https://lab.kb.nl/tool/rda-entity-finder" target="_blank">RDA Entity
-                    Finder</a></h2>
-                <p>Works, Expressions and Manifestations of novels in the Dutch National
-                  Bibliography.</p>
-                <p>A dataset download is not available.</p>
+                <p>Did this change in the namespace break things for applications using the old IRIs
+                  and elements that have not made the transition?</p>
+                <p>Yes, but every effort was made to bridge the gap between the old and the new.
+                  These include redirection from the old element sets to the new namespace, the
+                  development of <a href="http://www.rdaregistry.info/rgArch">maps between the old
+                    and new URIs</a>, and the provision of <a href="Maps/#lexical-en">alternate URIs
+                    using the English label</a> of the element as the local part, similar to the
+                  construction of the old URIs. A map from the old URIs known to be in use is
+                  available. The old element sets had the status of &quot;New-Proposed&quot; and
+                  were never officially published.</p>
               </div>
             </div>
-            <div class="collapse" id="dSud" data-bs-parent="#datasetsToc">
+            <div class="collapse" id="f3" data-bs-parent="#faqArch">
               <div class="border border-dark p-4">
-                <h2><a href="http://datahub.io/dataset/sudocfr" target="_blank">Sudoc bibliographic
-                    data</a></h2>
-                <p>10 million bibliographic records from Sudoc, the French academic union catalogue,
-                  maintained by ABES.</p>
+                <p>Are there any plans to move the RDA value vocabularies that are still in the
+                  original rdvocab.info namespace?</p>
+                <p>The RDA value vocabularies were moved to rdaregistry.info namespace in 2015. The
+                  old URIs in &quot;Published&quot; status were redirected to the new ones. From
+                  August 2016, all the RDA value vocabularies have &quot;Published&quot; or
+                  &quot;Deprecated&quot; status. The published value vocabularies are updated as
+                  required so that they remain in synchronization with RDA.</p>
               </div>
             </div>
           </div>
