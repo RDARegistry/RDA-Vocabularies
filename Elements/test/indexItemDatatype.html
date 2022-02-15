@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description"
+      content="This is the technical documentation for the RDA: Resource Description and Access published value vocabularies and element sets." />
+    <meta name="keywords" content="RDA, vocabularies, documentation, registry" />
+    <meta name="author"
+      content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Page title -->
+    <title>RDA Registry | Vocabularies</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/protip.min.css" />
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+      href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.3/b-2.1.1/datatables.min.css" />
+    <link rel="stylesheet" href="/styles/rdaregistry.css" />
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+      aria-label="Navigation for RDA Registry">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">RDA Registry</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarRR" aria-controls="navbarRR" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarRR">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddElements" data-bs-toggle="dropdown"
+                aria-expanded="false">Elements</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Elements sub-menu">
+                <li><a class="dropdown-item" href="/Elements/">Elements</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/Elements/c/">Classes</a></li>
+                <li><a class="dropdown-item" href="/Elements/a/">Agent properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/e/">Expression properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/i/">Item properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/m/">Manifestation properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/n/">Nomen properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/p/">Place properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/t/">Timespan properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/w/">Work properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/x/">RDA Entity properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/u/">Unconstrained properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/rof/">RDA/ONIX Framework
+                  elements</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddValues" data-bs-toggle="dropdown"
+                aria-expanded="false">Values</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Values sub-menu">
+                <li><a class="dropdown-item" href="/termList/">Values</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/termList/">RDA values</a></li>
+                <li><a class="dropdown-item" href="/termList/#rof">RDA/ONIX Framework
+                  values</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddData" data-bs-toggle="dropdown"
+                aria-expanded="false">Data</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Data sub-menu">
+                <li><a class="dropdown-item" href="/rgData/">Data</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/rgData/rdaCuries.html">Curie prefixes</a></li>
+                <li><a class="dropdown-item" href="/Examples/">Examples</a></li>
+                <li><a class="dropdown-item" href="http://rballs.info/">R-Balls</a></li>
+                <li><a class="dropdown-item" href="/rgDatasets/">Datasets</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddTools" data-bs-toggle="dropdown"
+                aria-expanded="false">Tools</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Tools sub-menu">
+                <li><a class="dropdown-item" href="/rgTools/">Tools</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/Maps/">Maps</a></li>
+                <li><a class="dropdown-item" href="/Aligns/">Alignments</a></li>
+                <li><a class="dropdown-item" href="/Profiles/">Profiles</a></li>
+                <li><a class="dropdown-item" href="/rgArch/">Archaeology</a></li>
+                <li><a class="dropdown-item" href="/rimmf/">RIMMF</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddAbout" data-bs-toggle="dropdown"
+                aria-expanded="false">About</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="About sub-menu">
+                <li><a class="dropdown-item" href="/rgAbout/">About</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/rgAbout/issues.html">Issues</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/">Updates</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/versions.html">-
+                  Versions</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/deprecation.html">-
+                    Deprecation</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/">RDA Reference</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/dataflow/">- Data flow</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/translations/">-
+                  Translations</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaont/">RDA ontology</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rof.html">RDA/ONIX Framework</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/rgGuide/">Guide</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank"
+              >Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://access.rdatoolkit.org"
+                target="_blank">RDA Toolkit</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <!-- Meta block -->
+      <div class="vocDisplay">
+        <div class="row mt-2">
+          <div class="col-md-6">
+            <!-- Header block -->
+            <div class="row vocHeader">
+              <div class="">
+                <div class="d-inline-flex flex-wrap"><h1 id="vocMenuLink"></h1></div>
+                <div class="d-inline-flex"><span class="crumbSep">:</span></div>
+                <div class="d-inline-flex flex-wrap"><h2 id="vocTitle"></h2></div>
+              </div>
+            </div>
+            <!-- Reference block -->
+            <div class="row mt-2 vocMetadata">
+              <p id="vocDescription"></p>
+              <table>
+                <tr>
+                  <td>Number of active elements:</td>
+                  <td id="vocEntriesTotal"></td>
+                </tr>
+                <tr>
+                  <td>Namespace:</td>
+                  <td id="vocURI"></td>
+                </tr>
+                <tr>
+                  <td>Version:</td>
+                  <td id="vocVersion"></td>
+                </tr>
+                <tr>
+                  <td>Suggested prefix*:</td>
+                  <td id="vocPrefix"></td>
+                </tr>
+                <tr>
+                  <td>Example curie:</td>
+                  <td id="vocCurieEx"><a href="http://rdaregistry.info/Elements/i/P40001"></a></td>
+                </tr>
+              </table>
+              <p>* registered at <a href="http://prefix.cc/" target="_blank">prefix.cc</a></p>
+            </div>
+            <!-- Languages block -->
+            <div class="row mt-2 vocLanguages" id="vocHasLanguages"> </div>
+          </div>
+          <div class="col-md-6">
+            <!-- Downloads block -->
+            <div class="row mt-2 ms-2 vocDownloads">
+              <h3>Downloads</h3>
+              <div class="">
+                <div class="d-inline-flex list-group">
+                  <a href="#" class="list-group-item list-group-item-action px-2 py-1" id="linkCSV"
+                    >CSV (text/csv) [English language only]</a>
+                  <a href="#" class="list-group-item list-group-item-action px-2 py-1"
+                    id="linkJSONLD">JSON-LD (application/json | application/json+ld)</a>
+                  <a href="#" class="list-group-item list-group-item-action px-2 py-1" id="linkNT"
+                    >N-Triples (text/rdf+nt)</a>
+                  <a href="#" class="list-group-item list-group-item-action px-2 py-1" id="linkXML"
+                    >RDF/XML (application/rdf+xml)</a>
+                </div>
+              </div>
+            </div>
+            <!-- Semantics block -->
+            <div class="">
+              <div class="row mt-2 ms-2 vocSemantics" id="vocHasSemantics"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Data block -->
+      <div class="row mt-2 p-2 border">
+        <!-- Content for tooltips -->
+        <div>
+          <div id="tooltipPermalink" hidden="hidden">
+            <p class="m-0 p-1">The permalink for RDA Registry documentation for the vocabulary
+              entry.</p>
+            <p class="m-0 p-1">Note: This is not the URI for the entry.</p>
+          </div>
+          <div id="tooltipDetails" hidden="hidden">
+            <p class="m-0 p-1">Show or hide more detail for the vocabulary entry.</p>
+            <p class="m-0 p-1">Click the expand button to show more detail.</p>
+            <p class="m-0 p-1">Click the collapse button to show less detail.</p>
+          </div>
+          <div id="tooltipCurie" hidden="hidden">
+            <p class="m-0 p-1">The compact URI (CURIE) of the entry.</p>
+            <p class="m-0 p-1">The associated link is the full URI of the vocabulary entry.</p>
+            <p class="m-0 p-1">[Click the column heading to sort by the Curie.]</p>
+          </div>
+          <div id="tooltipLabel" hidden="hidden">
+            <p class="m-0 p-1">The RDA Registry label of the vocabulary entry.</p>
+            <p class="m-0 p-1">[Click the column heading to sort by the label.]</p>
+          </div>
+          <div id="tooltipDefinition" hidden="hidden">
+            <p class="m-0 p-1">The RDA Registry definition of the vocabulary entry.</p>
+          </div>
+          <div id="tooltipStatus" hidden="hidden">
+            <p class="m-0 p-1">The status of the vocabulary entry.</p>
+            <p class="m-0 p-1">[Click the column heading to sort by the status.]</p>
+          </div>
+        </div>
+        <!-- Index title -->
+        <div class="">
+          <h2 id="indexTitle"></h2>
+        </div>
+        <!-- Index table -->
+        <div class="table-responsive-md" id="tabledata">
+          <table class="table table-hover table-sm" id="pindex">
+            <thead class="table-light">
+              <tr>
+                <th class="protip" data-pt-title="#tooltipPermalink"
+                  data-pt-position="top-right-corner"> # </th>
+                <th class="protip" data-pt-title="#tooltipDetails"
+                  data-pt-position="top-right-corner">
+                  <button class="btnExpand" type="button" disabled="disabled"><i
+                      class="bi bi-arrows-expand"> </i></button>
+                </th>
+                <th class="protip" data-pt-title="#tooltipCurie">CURIE</th>
+                <th class="protip" data-pt-title="#tooltipLabel">Label</th>
+                <th class="protip" data-pt-title="#tooltipDefinition">Definition</th>
+                <th class="protip" data-pt-title="#tooltipStatus">Status</th>
+              </tr>
+            </thead>
+            <tbody> </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer class="container footDisplay">
+      <div class="row py-1 mb-2">        <div class="col-md-2 p-2">           <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img               alt="Creative Commons License" class="img-fluid"               src="https://licensebuttons.net/l/by/4.0/88x31.png" target="_blank" /></a>         </div>         <div class="col-md-4 p-2">           <p class="m-0 p-0"><strong><span xmlns:dct="http://purl.org/dc/terms/"                 property="dct:title">RDA Vocabularies</span></strong> and <strong><span                 xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA               Registry</span></strong> are licensed under a <a rel="license"               href="http://creativecommons.org/licenses/by/4.0/deed.en_US" target="_blank">Creative               Commons Attribution 4.0 International License</a>.</p>           <p class="m-0 p-0">Based on a work at <a xmlns:dct="http://purl.org/dc/terms/"               href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.</p>         </div>         <div class="col-md-4 p-2">           <p class="m-0 p-0" id="rightsStatement"></p>         </div>         <div class="col-md-2 p-2">           <a href="https://www.rdatoolkit.org" target="_blank"><img src="../../rgImages/RDAlogo.jpg"               class="img-fluid" alt="RDA logo" /></a>         </div> </div>
+    </footer>
+    <!-- Scripts-->
+    <!-- Set data source for this page -->
+    <script type="text/javascript">
+      var dataSource = "//www.rdaregistry.info/jsonld/Elements/i/datatype.jsonld";
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.11.3/b-2.1.1/datatables.min.js"></script>
+    <script type="text/javascript" src="/scripts/protip.min.js"></script>
+    <script type="text/javascript" defer="defer" src="/scripts/regScript.js"></script>
+  </body>
+</html>
