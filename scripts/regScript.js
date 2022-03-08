@@ -2,19 +2,8 @@
 // Javascript for RDA Registry
 //
 "use strict";
-//
-// Global constants
-//
-// RDA Registry base domain
-//
 var baseDomain = "http://www.rdaregistry.info/";
-//
-// Redirect datatype and object definitions to parent
-//
 var definitionRedirect = "The definition is attached to the parent canonical property.";
-//
-// Global variables
-//
 var detailList = "";
 var domSetting = "";
 var languageIsUsed = false;
@@ -33,14 +22,7 @@ var theVocPublishedEntries;
 var theVocTitle = "";
 var theVocURI = "";
 var vocLanguagesSelector = "";
-//
-//
-//
 setLanguagesData();
-//
-// Array of jsonld objects for the possible languages of the vocabulary
-// Object includes language code, label in English, indication of right-to-left display, and DataTable display strings
-//
 function setLanguagesData() {
   window.regLanguages =[ {
     code: "ar", label: "Arabic", rtl: true,
@@ -493,9 +475,6 @@ function setLanguagesData() {
       }
     }
   }];
-  //
-  // Sort array by label
-  //
   window.regLanguages.sort(function (a, b) {
     let x = a.label.toLowerCase();
     let y = b.label.toLowerCase();
@@ -509,49 +488,23 @@ function setLanguagesData() {
   });
   return;
 }
-//
-// Initialize the current language code from the page URL
-//
 getLanguageCodeFromURL();
 window.theDTStrings = getDTStrings();
-//
-//
-//
 function getDTStrings() {
-  //
-  // Returns a DataTables strings object for the current language code
-  //
   var theLanguageObject = "";
   window.languageCodeToCheck = window.theCurrentLanguageCode;
   theLanguageObject = window.regLanguages.filter(getLanguageFromLanguages);
-  //
-  // Return the rtl value for the only entry in the array
-  //
   return theLanguageObject[0][ "dtStrings"];
 }
-//
-// Set the initial search filter to page URL anchor and set DT DOM
-//
 window.localIDToSearch = getAnchor();
 setDTDom();
-//
-// Set change of URL anchor to reset filter and redraw
-//
 window.onhashchange = function () {
   var table = $("table#pindex").DataTable();
   window.localIDToSearch = getAnchor();
   setDTDom();
   table.search('').column('Curie:name').search(window.localIDToSearch).draw();
 };
-//
-// Get the language code from the page URL
-//
 function getLanguageCodeFromURL() {
-  //
-  // Sets the current language code from the page URL
-  // 2-letter code is specified by appending "language=aa" to the vocabulary/entry URL
-  // Default code is for English
-  //
   var theURL = window.location.href;
   var theIndex = theURL.indexOf("language=");
   if (theIndex > 0) {
@@ -561,50 +514,23 @@ function getLanguageCodeFromURL() {
   }
   return;
 }
-//
-// Get the anchor (# string) from the page URL
-//
 function getAnchor() {
-  //
-  // Returns the anchor from the page URL; defaults to empty string
-  //
   var theURLAnchor = "";
-  //
-  // if the page URL has an anchor for the URI local part
-  //
   if (window.location.hash.indexOf('#') > -1) {
     theURLAnchor = window.location.hash.substr(1);
   }
   return theURLAnchor;
 }
-//
-// Set DataTables DOM settings with Bootstrap 5
-//
 function setDTDom() {
   if (window.localIDToSearch.length > 0) {
-    //
-    // Set the DOM to display only the processing indicator (not really used) and table
-    //
     window.domSetting = "<'row'<'col-sm-12'tr>>";
   } else {
-    //
-    // Set the DOM to display all utilities
-    //
     window.domSetting = "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
     "<'row'<'col-sm-12'tr>>" +
     "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>";
   }
 }
-//
-// Basic string formatting
-//
-//
-// Set string orientation
-//
 function directify(theString) {
-  //
-  // Returns a string wrapped in a div with right-to-left attribute for current language code
-  //
   var isRtl = false;
   isRtl = getRtl();
   if (isRtl) {
@@ -614,11 +540,7 @@ function directify(theString) {
   }
   return theString;
 }
-//
 function divify(theString, className) {
-  //
-  // Returns a string wrapped in a div with optional class name
-  //
   var theClassName = "";
   if (typeof className != "undefined") {
     theString = '<div class="' + className + '">' + theString + '</div>';
@@ -627,35 +549,16 @@ function divify(theString, className) {
   }
   return theString;
 }
-//
 function listify(theString) {
-  //
-  // Returns a string marked as a list item
-  //
   return '<li>' + theString + '</li>';
 }
-//
 function quotify(theString) {
-  //
-  // Returns a string delimited with quotes
-  //
   return '"' + theString + '"';
 }
-//
 function strongify(theString) {
-  //
-  // Returns a string marked as strong
-  //
   return '<strong>' + theString + '</strong>';
 }
-//
-// Format links
-//
 function linkify(label, url, isLinkOut) {
-  //
-  // Returns link based on label and URL
-  // Internal link uses same browser window; external link uses new browser window
-  //
   var theLabel = "";
   var theLink = "";
   var theLinkIsExternal = false;
@@ -676,11 +579,7 @@ function linkify(label, url, isLinkOut) {
   }
   return theLink;
 }
-//
 function makeCurieFromURI(uri, prefix) {
-  //
-  // Returns a curie
-  //
   var theCurie = "";
   var thePrefix = "";
   var theURI = "";
@@ -690,33 +589,18 @@ function makeCurieFromURI(uri, prefix) {
   if (typeof uri != "undefined") {
     theURI = uri;
   }
-  //
-  // Replace URI up to last sub-folder slash with prefix and colon
-  //
   if (theURI !== null && typeof theURI.replace === "function") {
     theCurie = thePrefix + ":" + theURI.substr(1 + theURI.lastIndexOf("/"));
   }
   return theCurie;
 }
-//
-// Set variables from jsonld
-//
 function getVocPrefix() {
-  //
-  // Sets the vocabulary prefix
-  //
   if (typeof window.theVocMetadata.prefix != "undefined") {
     window.theVocPrefix = window.theVocMetadata.prefix;
   }
   return;
 }
-//
-// Get the vocabulary domain
-//
 function getVocDomain() {
-  //
-  // Sets the vocabulary domain extracted from the vocabulary title
-  //
   switch (window.theVocKind) {
     case "canonical":
     window.theVocDomain = window.theVocTitle.replace("properties", "").trim();
@@ -741,66 +625,33 @@ function getVocDomain() {
   }
   return;
 }
-//
-// Get language data for the code to be checked from Registry languages array
-//
 function getLanguageFromLanguages(languageObject) {
   return languageObject[ "code"] == window.languageCodeToCheck;
 }
-//
-// Check for use of specified language
-//
 function getLanguageIsUsed(languageObject) {
-  //
-  // Checks that the code of a specified language object from the Registry languages is in use
-  //
   var theLanguageLabel = "";
   var thePageURL = window.location.href;
   var theURL = "";
   var theLanguageIndex = 0;
   var theHashIndex = 0;
-  //
-  // Get the language code to check from the language object
-  //
   window.languageCodeToCheck = languageObject[ "code"];
-  //
-  // Check the language is used for the Toolkit label in any of the published elements of the vocabulary
-  //
   window.languageIsUsed = false;
   window.theVocPublishedEntries.forEach(getLanguageIsPublished);
-  //
-  // Add the language to the selector list if it is used
-  //
   if (window.languageIsUsed) {
     theLanguageLabel = languageObject[ "label"];
     theHashIndex = thePageURL.indexOf("#");
     theLanguageIndex = thePageURL.indexOf("?language=");
-    //
-    // Add language filter to language selector link, depending on existing filter and anchor
-    //
     if (theLanguageIndex > -1) {
-      //
-      // Replace existing filter
-      //
       theURL = thePageURL.slice(0, theLanguageIndex) + "?language=" + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
     } else if (theHashIndex > -1) {
-      //
-      // Insert filter before anchor
-      //
       theURL = thePageURL.replace("#", "?language=" + window.languageCodeToCheck + "#")
     } else {
-      //
-      // Add filter
-      //
       theURL = thePageURL + "?language=" + window.languageCodeToCheck;
     }
     window.vocLanguagesSelector += '<li><a href="' + theURL + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
   return;
 }
-//
-// Check that there is a published Toolkit label, and language code is used
-//
 function getLanguageIsPublished(entryObject) {
   if (typeof entryObject[ "ToolkitLabel"] != "undefined") {
     if (typeof entryObject[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
@@ -809,31 +660,13 @@ function getLanguageIsPublished(entryObject) {
   }
   return;
 }
-//
-// Get rtl for language code from the Registry languages
-//
 function getRtl() {
-  //
-  // Returns a right-to-left flag for the current language code
-  //
   var theLanguageArray = "";
-  //
-  // Set the language code to filter/check as the current language code
-  //
   window.languageCodeToCheck = window.theCurrentLanguageCode;
   theLanguageArray = window.regLanguages.filter(getLanguageFromLanguages);
-  //
-  // Return the rtl value for the only entry in the array
-  //
   return theLanguageArray[0][ "rtl"];
 }
-//
-// Get entry data from jsonld
-//
 function getDefinition(entryObject) {
-  //
-  // Returns a definition from a jsonld entry
-  //
   var theDefinition = "";
   switch (window.theVocKind) {
     case "datatype":
@@ -847,17 +680,8 @@ function getDefinition(entryObject) {
   }
   return theDefinition;
 }
-//
-// Get entry label
-//
 function getLabel(entryObject) {
-  //
-  // Returns a label from a jsonld entry
-  //
   var theLabel = "";
-  //
-  // Value vocabularies use prefLabel property; element sets use label property
-  //
   if (window.theVocKind == "value" && typeof entryObject[ "prefLabel"] != "undefined") {
     theLabel = entryObject[ "prefLabel"];
   } else {
@@ -865,11 +689,7 @@ function getLabel(entryObject) {
   }
   return theLabel;
 }
-//
 function getLabelOrURI(row) {
-  //
-  // Returns a label, or URI if no label, from a jsonld row
-  //
   var theLabel = "";
   if (typeof row[ "label"] != "undefined") {
     theLabel = row[ "label"];
@@ -878,14 +698,7 @@ function getLabelOrURI(row) {
   }
   return theLabel;
 }
-//
-// Get hyperlink
-//
 function getLink(entryObject, isLinkOut, prefix) {
-  //
-  // Returns a hyperlink with label from a jsonld object
-  // Link is external, label is curie prefix, if specified
-  //
   var theLabel = "";
   var theLink = "";
   var theLinkIsExternal = false;
@@ -901,161 +714,67 @@ function getLink(entryObject, isLinkOut, prefix) {
   theLink = linkify(theLabel, theURI, theLinkIsExternal);
   return theLink;
 }
-//
-// Get the status object
-//
 function getStatus(entryObject) {
-  //
-  // Returns the status row from a jsonld object
-  //
   var theStatus = "";
   if (typeof entryObject.status != "undefined") {
     theStatus = entryObject.status;
   }
   return theStatus;
 }
-//
-// Get the URI of a vocabulary entry
-//
 function getURI(entryObject) {
-  //
-  // Returns a URI from a jsonld entry
-  //
   var theURI = "";
   if (typeof entryObject[ "@id"] != "undefined") {
     theURI = entryObject[ "@id"];
   }
   return theURI;
 }
-//
-// Get the value string for the current language from a jsonld entry
-//
 function getValueByLanguage(entryObject) {
-  //
-  // Returns formatted string for jsonld value of language code in jsonld entry
-  //
   var theString = "";
-  //
-  // Available in current language
-  //
   if (typeof entryObject[window.theCurrentLanguageCode] != "undefined") {
-    //
-    // Add explicit quotes to show it is a string value and markup as div with display direction
-    //
     theString = directify(quotify(entryObject[window.theCurrentLanguageCode]));
-  }
-  //
-  // Not available in current language: use default (English) and add qualifier to indicate not available in current language
-  // Add quotes to show it is a string value and markup as div
-  //
-  else {
+  } else {
     theString = divify(quotify(entryObject[window.theDefaultLanguageCode]) + " [@" + window.theDefaultLanguageCode + "; no @" + window.theCurrentLanguageCode + "]");
   }
   return theString;
 }
-//
-// Get the kind of vocabulary
-//
 function getVocKind() {
-  //
-  // Sets the kind of vocabulary from the vocabulary URI
-  // The kind is based on the URI pattern
-  //
   if (typeof window.theVocURI != "undefined") {
-    //
-    // ROF element set uses "rof" in URI/filepath
-    //
     if (window.theVocURI.indexOf("/rof/") > -1) {
       window.theVocKind = "rof";
-    }
-    //
-    // Value vocabulary uses "termlist" in URI/filepath
-    //
-    else if (window.theVocURI.indexOf("/termList/") > -1) {
+    } else if (window.theVocURI.indexOf("/termList/") > -1) {
       window.theVocKind = "value";
-    }
-    //
-    // Datatype element set uses "datatype" in URI/filepath
-    //
-    else if (window.theVocURI.indexOf("/datatype/") > -1) {
+    } else if (window.theVocURI.indexOf("/datatype/") > -1) {
       window.theVocKind = "datatype";
-    }
-    //
-    // Object element set uses "object" in URI/filepath
-    //
-    else if (window.theVocURI.indexOf("/object/") > -1) {
+    } else if (window.theVocURI.indexOf("/object/") > -1) {
       window.theVocKind = "object";
-    }
-    //
-    // Classes element set uses entity code "c" in URI/filepath
-    //
-    else if (window.theVocURI.indexOf("/c/") > -1) {
+    } else if (window.theVocURI.indexOf("/c/") > -1) {
       window.theVocKind = "class";
-    }
-    //
-    // Default: all other vocabularies are canonical element sets
-    //
-    else {
+    } else {
       window.theVocKind = "canonical";
     }
   }
   return;
 }
-//
-// Get permalink URL from URI
-//
 function getPermalink(uri) {
-  //
-  // Transform URI to URL with regular expression
-  //
   var thePermalink = "";
   if (typeof uri !== "undefined") {
     thePermalink = uri.replace(/^(http:\/\/)(.*)\/(.*)$/ig, "$1www.$2/#$3");
   }
   return thePermalink;
 }
-//
-// Format row of table column
-//
 function makeColumnRow(content, className) {
-  //
-  // Returns column row content in a wrapper div with direction parameter
-  //
   return divify(content, className);
 }
-//
-// Create Registry URL from entry URI
-//
 function getLanguageURL(permalink) {
-  //
-  // Returns permalink URL with current language parameter
-  //
   var theUrl = "";
   if (typeof permalink !== "undefined") {
     theUrl = permalink.replace("#", "?language=" + window.theCurrentLanguageCode + "#");
   }
   return theUrl;
 }
-//
-// Details display
-//
 function formatDetail(d) {
-  //
-  // Format table for details
-  // `d` is the original data object for the row
-  // Includes note (scope note), domain, range, inverse, subproperties, Toolkit label, Toolkit definition, status
-  //
-  // Initialize detail table header row as two columns
-  //
   var detailRow = formatDetailRow();
-  //
-  // Initialize detail table
-  //
   var detailTable = '<table class="pindex_detail">';
-  //
-  // Assemble table rows for specified fields
-  // Missing fields are ignored
-  //
   if (typeof d != "undefined") {
     if (typeof d.note != "undefined") {
       detailRow = formatDetailRow(getValueByLanguage(d.note), "Scope notes");
@@ -1091,9 +810,6 @@ function formatDetail(d) {
     }
     if (typeof d.altLabel != "undefined") {
       detailRow = formatDetailRow(getValueByLanguage(d.altLabel), "Alternate label");
-      //
-      // Alternate labels vary by language and may have no English original; do not display for 'undefined' content
-      //
       if (detailRow.indexOf("undefined") < 0) {
         detailTable += detailRow;
       }
@@ -1105,35 +821,21 @@ function formatDetail(d) {
   } else {
     detailTable += detailRow;
   }
-  //
-  // Finalize detail table
-  //
   detailTable += '</table>';
   return detailTable;
 }
-//
-// Format row for detail display
-//
 function formatDetailRow(rowValue, rowLabel) {
-  //
-  // Returns a two-column table row for the detail display
-  //
   var theDetailRow = "";
   var theRowValue = "";
   var theRowLabel = "";
   if (typeof rowValue != "undefined") {
     theRowValue = rowValue;
   } else {
-    //
-    // Row value defaults to global detail list
-    //
     theRowValue = window.detailList;
   }
   if (typeof rowLabel != "undefined") {
     theRowLabel = rowLabel + ":";
   }
-  // two columns; both columns have div wrapper for styling
-  
   if (theRowValue.length > 0) {
     theDetailRow = '<tr>' + '<td class="detailLabel">' + divify(theRowLabel) + '</td>' + '<td class="detailValue">' + divify(theRowValue) + '</td>' + '</tr>';
   } else {
@@ -1141,15 +843,7 @@ function formatDetailRow(rowValue, rowLabel) {
   }
   return theDetailRow;
 }
-//
-// Format detail list from array
-//
 function formatMultivalueDetail(detailArray) {
-  //
-  // Sets a global variable to a list of entries in the array of detail objects
-  //
-  // Sort array by URI
-  //
   detailArray.sort(function (a, b) {
     let x = a[ "@id"].toLowerCase();
     let y = b[ "@id"].toLowerCase();
@@ -1161,40 +855,19 @@ function formatMultivalueDetail(detailArray) {
     }
     return 0;
   });
-  // Initialize list
-  //
   window.detailList = '<ul>';
-  //
-  // Process each object in the array
-  //
   detailArray.forEach(formatValueForMultivalueDetail);
-  //
-  // Finalize list
-  //
   window.detailList += '</ul>';
   return;
 }
-//
-// Add an item to the detail list
-//
 function formatValueForMultivalueDetail(detailObject) {
-  //
-  // Adds an item to a global variable for a list of detail entries
-  // List item is formatted from jsonld detail object
-  //
   var label = quotify(getLabel(detailObject));
   var uri = getURI(detailObject);
   var theUrl = getLanguageURL(getPermalink(uri));
   var detailItem = listify(linkify(uri, theUrl) + " [" + label + "@" + theDefaultLanguageCode + "]");
-  //
-  // Add item to the global detail list
-  //
   window.detailList += detailItem;
   return;
 }
-//
-// Get and set page and global variables
-//
 function setVocDetails(json) {
   var filenameLocal = "";
   var filepathPart = "";
@@ -1213,23 +886,10 @@ function setVocDetails(json) {
   var theVocMenuLink = "";
   var theVocToDatatype = "";
   var theVocToObject = "";
-  //
-  // Extract the jsonld graph of vocabulary entries, then the first entry (always metadata), then the published entries
-  //
   theData = json[ "@graph"];
   window.theVocPublishedEntries = theData.filter(filterPublished);
-  //
-  // Get the global vocabulary title for the Header block
-  //
   window.theVocTitle = window.theVocMetadata.title[ "en"];
-  //
-  // Get the global vocabulary domain
-  //
   getVocDomain();
-  //
-  // Set the table title from the kind of vocabulary
-  // Warning! This is dependent on consistent use of vocabulary URI/filepaths in jsonld metadata
-  //
   switch (window.theVocKind) {
     case "class":
     theTableTitle = "Classes";
@@ -1244,42 +904,21 @@ function setVocDetails(json) {
     theTableTitle = "Properties";
   }
   theTableTitle += " Index";
-  //
-  // Get the vocabulary active entries total, namespace URI, version link, example Curie for the Reference block
-  //
   theVocEntriesTotal = window.theVocPublishedEntries.length;
   theVersionLink = '<a target="_blank" href="https://github.com/RDARegistry/RDA-Vocabularies/releases/tag/' + window.theVocMetadata.versionInfo + '">' + window.theVocMetadata.versionInfo + '</a>';
-  //
-  // Example curie is first published element in data and may not be the lowest in curie order
-  //
   theCurieExURI = getURI(window.theVocPublishedEntries[0]);
   theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, window.theVocPrefix), theCurieExURI);
-  //
-  // Element sets and value vocabularies have different filepath constructors
-  //
   switch (window.theVocKind) {
-    //
-    // Value vocabulary
-    //
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
     filepathPart = "termList";
-    //
-    // Get local part of hash URI: everything after last slash
-    //
     filenameLocal = window.theVocURI.substr(1 + theVocURI.lastIndexOf("/"));
     break;
-    //
-    // RDA/ONIX Framework
-    //
     case "rof":
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
     filenameLocal = "rof";
     break;
-    //
-    // Default for element sets
-    //
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
@@ -1312,9 +951,6 @@ function setVocDetails(json) {
       filenameLocal = "w";
       break;
     }
-    //
-    // Canonical, datatype, and object element sets have different filename constructors
-    //
     switch (window.theVocKind) {
       case "datatype":
       filenameLocal += "/datatype";
@@ -1324,30 +960,15 @@ function setVocDetails(json) {
       break;
     }
   }
-  //
-  // Set the file links for the Downloads block
-  //
   theLinkCSV = baseDomain + 'csv/' + filepathPart + '/' + window.theVocPrefix + '.csv';
   theLinkJSONLD = baseDomain + 'jsonld/' + filepathPart + '/' + filenameLocal + ".jsonld";
   theLinkNT = baseDomain + 'nt/' + filepathPart + '/' + filenameLocal + '.nt';
   theLinkXML = baseDomain + 'xml/' + filepathPart + '/' + filenameLocal + '.xml';
-  //
-  // Get the content for the Languages block
-  //
   theLanguagesBlock = formatLanguagesBlock();
-  //
-  // Get the content for the Semantics block
-  //
   theSemanticsBlock = formatSemanticsBlock();
-  //
-  // Expand Agent semantics to its subtypes
-  //
   if (window.theVocDomain == "Agent") {
     theSemanticsBlock = theSemanticsBlock.replace("Agent entity", "Agent entity or its subtypes");
   }
-  //
-  // Push values to the page
-  //
   document.getElementById("rightsStatement").innerHTML = window.theVocMetadata.rights[ "en"];
   document.getElementById("indexTitle").innerHTML = theTableTitle;
   document.getElementById("vocMenuLink").innerHTML = theVocMenuLink;
@@ -1370,25 +991,10 @@ function setVocDetails(json) {
   }
   return;
 }
-//
-// Format Languages block
-//
 function formatLanguagesBlock() {
-  //
-  // Returns formatted content based on published languages for the Languages Block
-  //
   var theLanguagesBlock = "";
-  //
-  // Set block header
-  //
   theLanguagesBlock += '<h3>Languages</h3>';
-  //
-  // Block content depends on the kind of vocabulary
-  //
   switch (window.theVocKind) {
-    //
-    // There are no translations for datatype and object element sets; English element label is only annotation
-    //
     case "datatype":
     theLanguagesBlock += '<p>A datatype element set uses English labels only.</p>';
     break;
@@ -1398,9 +1004,6 @@ function formatLanguagesBlock() {
     case "rof":
     theLanguagesBlock += '<p>The element set uses English labels only.</p>';
     break;
-    //
-    // Set languages selector list with item for each language used in published elements
-    //
     default:
     theLanguagesBlock += '<ul class="m-0 p-0">';
     window.regLanguages.forEach(getLanguageIsUsed);
@@ -1409,22 +1012,10 @@ function formatLanguagesBlock() {
   }
   return theLanguagesBlock;
 }
-//
-// Format Semantics block
-//
 function formatSemanticsBlock() {
-  //
-  // Returns formatted content based on the vocabulary kind for the Semantics Block
-  //
   var theSemanticsBlock = "";
-  //
-  // Set block header
-  //
   theSemanticsBlock += '<h3>Semantics</h3>';
   switch (window.theVocKind) {
-    //
-    // Canonical element set references domain and datatype and object element sets
-    //
     case "canonical":
     var theVocToDatatype = '<a href="' + window.theVocURI + 'datatype/' + '">' + window.theVocTitle.replace("properties", "datatype properties") + '</a>';
     var theVocToObject = '<a href="' + window.theVocURI + 'object/' + '">' + window.theVocTitle.replace("properties", "object properties") + '</a>';
@@ -1435,9 +1026,6 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>is linked from its child <strong>object</strong> property in ' + theVocToObject + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
-    //
-    // Datatype element set references domain and canonical element set, and literal range
-    //
     case "datatype":
     var theVocToParent = '<a href="' + window.theVocURI.replace("/datatype", "") + '">' + window.theVocTitle.replace("datatype properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
@@ -1447,9 +1035,6 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
-    //
-    // Object element set references domain and canonical element set, and entity range
-    //
     case "object":
     var theVocToParent = '<a href="' + window.theVocURI.replace("/object", "") + '">' + window.theVocTitle.replace("object properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the object element set:</p>';
@@ -1465,20 +1050,9 @@ function formatSemanticsBlock() {
   }
   return theSemanticsBlock;
 }
-//
-// Filters
-//
-// Filter for vocabulary data
-//
 function filterData(obj, index) {
-  //
-  // Filter excludes vocabulary metadata that is always first item in jsonld graph
-  //
   return index > 0;
 }
-//
-// Filter for vocabulary entries with published status
-//
 function filterPublished(value, index, array) {
   var isPublished = false;
   if (index > 0) {
@@ -1488,44 +1062,21 @@ function filterPublished(value, index, array) {
   }
   return isPublished;
 }
-//
-// Process vocabulary data if defined.
-//
 if (typeof dataSource !== "undefined") {
   $(document).ready(
   function () {
     var pageTable = $("#pindex");
     var table;
-    //
-    // Set table to datatable instance
-    //
     table = pageTable.DataTable({
       "ajax": {
         "url": dataSource,
         "dataType": 'json',
         "dataSrc": function (json) {
-          //
-          // Get vocabulary metadata; always first row of graph
-          //
           window.theVocMetadata = json[ "@graph"][0];
-          //
-          // Get vocabulary data; filter out first row of graph
-          //
           json.data = json[ "@graph"].filter(filterData);
           window.theVocData = json.data;
-          //
-          // Initialize global variables required for rendering
-          //
-          // Get vocabulary curie prefix
-          //
           getVocPrefix();
-          //
-          // Get the global vocabulary URI
-          //
           window.theVocURI = window.theVocMetadata[ "@id"];
-          //
-          // Get the global kind of vocabulary
-          //
           getVocKind();
           return json.data;
         }
@@ -1573,13 +1124,7 @@ if (typeof dataSource !== "undefined") {
         }
       }],
       "initComplete": function (settings, json) {
-        //
-        // Set page detail values from jsonld
-        //
         setVocDetails(json);
-        //
-        // Set language indicator style; border colour indicates on/selected
-        //
         $("#lang_" + window.theCurrentLanguageCode).css({
           "padding": "0.2rem", "border": "3px solid #446e9b", "border-radius": "0.5rem"
         });
@@ -1592,32 +1137,17 @@ if (typeof dataSource !== "undefined") {
       //      "responsive": true,
       "deferRender": true
     });
-    //
-    // Add event listener for expanding and collapsing details
-    //
     pageTable.children("tbody").on('click', 'td.detailsControl', function () {
-      //
-      // Get row containing the cell
-      //
       var tr = $(this).closest('tr');
       var row = table.row(tr);
       if (row.child.isShown()) {
-        //
-        // This row is already open - close it and reset expand details button
-        //
         row.child.hide();
         $(this).html('<button class="btnExpand" type="button"><i class="bi bi-arrows-expand"> </i></button>');
       } else {
-        //
-        // Open this row and set collapse details button
-        //
         row.child(formatDetail(row.data())).show();
         $(this).html('<button class="btnCollapse" type="button"><i class="bi bi-arrows-collapse"> </i></button>');
       }
     });
-    //
-    // Search Curie if local ID to search
-    //
     if (window.localIDToSearch.length > 0) {
       var pageInfo = "";
       var row = "";
@@ -1626,9 +1156,6 @@ if (typeof dataSource !== "undefined") {
       row = table.row(pageInfo.start);
       row.child(formatDetail(row.data())).show();
     }
-    //
-    // Set tooltip defaults
-    //
     $.protip({
       defaults: {
         delayIn: 500,
