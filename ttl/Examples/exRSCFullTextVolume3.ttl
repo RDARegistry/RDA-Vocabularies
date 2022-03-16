@@ -1,0 +1,56 @@
+@prefix ex: <http://example.com/> .
+@prefix rdaa: <http://rdaregistry.info/Elements/a/> .
+@prefix rdaco: <http://rdvocab.info/termList/RDAContentType/> .
+@prefix rdact: <http://rdvocab.info/termList/RDACarrierType/> .
+@prefix rdae: <http://rdaregistry.info/Elements/e/> .
+@prefix rdai: <http://rdaregistry.info/Elements/i/> .
+@prefix rdam: <http://rdaregistry.info/Elements/m/> .
+@prefix rdami: <http://rdvocab.info/termList/ModeIssue/> .
+@prefix rdamt: <http://rdvocab.info/termList/RDAMediaType/> .
+@prefix rdaw: <http://rdaregistry.info/Elements/w/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+#
+# Example: Volume (text) 3 from Complete examples – bibliographic records
+# 9 Dec 2015
+#
+ex:A1
+  rdaa:P50103 "Miguel de Cervantes Saavedra" ;
+  rdaa:P50117 "Cervantes Saavedra, Miguel de, 1547-1616" ;
+  rdaa:P50121 "1547" ;
+  rdaa:P50120 "1616" .
+ex:A2
+  rdaa:P50117 "Jarvis, Charles, 1675?-1739" ;
+  rdaa:P50121 "1675?" ;
+  rdaa:P50120 "1739" .
+ex:E1
+  rdae:P20001 rdaco:1020 ;
+  rdae:P20002 "Cervantes Saavedra, Miguel de, 1547-1616. Don Quixote. English" ;
+  rdae:P20006 "English"@en ;
+  rdae:P20037 ex:A2 ;
+  rdae:P20231 ex:W1 .
+ex:I1
+  rdai:P40003 "Binding: marbled paper over boards with a leather spine"@en ;
+  rdai:P40026 "Previously owned by Rosa del Valle, 1829-1860"@en .
+ex:M1
+  rdam:P30001 rdact:1049 ;
+  rdam:P30002 rdamt:1007 ;
+  rdam:P30003 rdami:1002 ;
+  rdam:P30011 "1828" ;
+  rdam:P30088 "Exeter" ;
+  rdam:P30103 ex:I1 ;
+  rdam:P30105 "translated from the original Spanish of Miguel de Cervantes Saavedra by Charles Jarvis, Esq." ;
+  rdam:P30135 ex:W1 ;
+  rdam:P30139 ex:E1 ;
+  rdam:P30156 "The life and exploits of Don Quixote de la Mancha" ;
+  rdam:P30169 "13 cm" ;
+  rdam:P30176 "J. & B. Williams" ;
+  rdam:P30181 "4 volumes"@en .
+ex:W1
+  rdaw:P10002 "Cervantes Saavedra, Miguel de, 1547-1616. Don Quixote" ;
+  rdaw:P10061 ex:A1 ;
+  rdaw:P10223 "Don Quixote" ;
+  rdaw:P10256 "A novel about a delusional knight calling himself &quot;Don Quixote,&quot; who is inspired to live out the adventures he has read about in chivalric romances"@en .
+rdaco:1020 skos:prefLabel "text"@en .
+rdact:1049 skos:prefLabel "volume"@en .
+rdami:1002 skos:prefLabel "multipart monograph"@en .
+rdamt:1007 skos:prefLabel "unmediated"@en .
