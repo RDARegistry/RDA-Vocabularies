@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description"
+      content="This is the technical documentation for the RDA: Resource Description and Access published value vocabularies and element sets." />
+    <meta name="keywords" content="RDA, vocabularies, documentation, registry" />
+    <meta name="author"
+      content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Page title -->
+    <title>RDA Registry | Examples</title>
+    <!-- Styles -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/rdaregistry.css" />
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+      aria-label="Navigation for RDA Registry">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">RDA Registry</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarRR" aria-controls="navbarRR" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarRR">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddElements" data-bs-toggle="dropdown"
+                aria-expanded="false">Elements</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Elements sub-menu">
+                <li><a class="dropdown-item" href="/Elements/">Elements</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/Elements/c/">Classes</a></li>
+                <li><a class="dropdown-item" href="/Elements/a/">Agent properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/e/">Expression properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/i/">Item properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/m/">Manifestation properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/n/">Nomen properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/p/">Place properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/t/">Timespan properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/w/">Work properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/x/">RDA Entity properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/u/">Unconstrained properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/rof/">RDA/ONIX Framework
+                  elements</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddValues" data-bs-toggle="dropdown"
+                aria-expanded="false">Values</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Values sub-menu">
+                <li><a class="dropdown-item" href="/termList/">Values</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/termList/">RDA values</a></li>
+                <li><a class="dropdown-item" href="/termList/#rof">RDA/ONIX Framework
+                  values</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddData" data-bs-toggle="dropdown"
+                aria-expanded="false">Data</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Data sub-menu">
+                <li><a class="dropdown-item" href="/rgData/">Data</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/rgData/rdaCuries.html">Curie prefixes</a></li>
+                <li><a class="dropdown-item" href="/Examples/" aria-current="page">Examples</a></li>
+                <li><a class="dropdown-item" href="http://rballs.info/">R-Balls</a></li>
+                <li><a class="dropdown-item" href="/rgDatasets/">Datasets</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddTools" data-bs-toggle="dropdown"
+                aria-expanded="false">Tools</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Tools sub-menu">
+                <li><a class="dropdown-item" href="/rgTools/">Tools</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/Maps/">Maps</a></li>
+                <li><a class="dropdown-item" href="/Aligns/">Alignments</a></li>
+                <li><a class="dropdown-item" href="/Profiles/">Profiles</a></li><li><a class="dropdown-item" href="/rgROF/">RDA/ONIX Framework</a></li>
+                <li><a class="dropdown-item" href="/rgArch/">Archaeology</a></li>
+                <li><a class="dropdown-item" href="/rimmf/">RIMMF</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddAbout" data-bs-toggle="dropdown"
+                aria-expanded="false">About</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="About sub-menu">
+                <li><a class="dropdown-item" href="/rgAbout/">About the RDA Registry</a></li> <li><a class="dropdown-item" href="/rgAbout/rgFAQ.html">FAQ</a></li> <li><hr class="dropdown-divider" /></li> <li><a class="dropdown-item" href="/rgGuide/">Guide for developers</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="ddProject" data-bs-toggle="dropdown" aria-expanded="false">GitHub Project</a> <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Project sub-menu"> <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies">GitHub Project</a></li> <li><hr class="dropdown-divider" /></li> <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies/releases">Releases</a></li> <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies/issues">Issues</a></li></ul> </li>
+            <li class="nav-item"><a class="nav-link" href="http://access.rdatoolkit.org"
+                target="_blank">RDA Toolkit</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container regDisplay">
+      <div class="row mt-3">
+        <h1><a href="/Examples/">Examples that use RDA vocabularies</a></h1>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-6">
+          <h2>Audio disc (performed music) from Complete examples – bibliographic records</h2>
+          <p>This example corresponds to <em>Audio disc (performed music)</em> from <a
+              href="http://www.rdatoolkit.org/sites/default/files/rsc_rda_complete_examples_bibliographic_april2016_0.pdf"
+              target="_blank">Complete examples - bibliographic records</a>.</p>
+          <div class="boxData p-4">
+            <pre>
+@prefix ex: &lt;http://example.com/&gt; .
+@prefix rdaa: &lt;http://rdaregistry.info/Elements/a/&gt; .
+@prefix rdabm: &lt;http://rdaregistry.info/termList/RDAbaseMaterial/&gt; .
+@prefix rdaco: &lt;http://rdaregistry.info/termList/RDAContentType/&gt; .
+@prefix rdact: &lt;http://rdaregistry.info/termList/RDACarrierType/&gt; .
+@prefix rdae: &lt;http://rdaregistry.info/Elements/e/&gt; .
+@prefix rdaef: &lt;http://rdaregistry.info/termList/encFormat/&gt; .
+@prefix rdaft: &lt;http://rdaregistry.info/termList/fileType/&gt; .
+@prefix rdam: &lt;http://rdaregistry.info/Elements/m/&gt; .
+@prefix rdami: &lt;http://rdaregistry.info/termList/ModeIssue/&gt; .
+@prefix rdamt: &lt;http://rdaregistry.info/termList/RDAMediaType/&gt; .
+@prefix rdarm: &lt;http://rdaregistry.info/termList/recMedium/&gt; .
+@prefix rdatr: &lt;http://rdaregistry.info/termList/typeRec/&gt; .
+@prefix rdau: &lt;http://rdaregistry.info/Elements/u/&gt; .
+@prefix rdaw: &lt;http://rdaregistry.info/Elements/w/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+#
+# Example: Audio disc (performed music) from Complete examples – bibliographic records
+# 11 May 2016
+#
+ex:A1
+  rdaa:P50103 "Tori Amos" ;
+  rdaa:P50117 "Amos, Tori" .
+ex:E1
+  rdae:P20001 rdaco:1011 ;
+  rdae:P20006 "English"@en ;
+  rdae:P20025 ex:A1 ;
+  rdae:P20219 "4:58, 4:06, 4:10, 4:26, 5:40, 3:12, 4:58, 3:12, 6:59, 4:38, 3:44, 6:51" ;
+  rdae:P20231 ex:W1 .
+ ex:M1
+  rdam:P30001 rdact:1004 ;
+  rdam:P30001 rdact:1013 ;
+  rdam:P30002 rdamt:1001 ;
+  rdam:P30002 rdamt:1003 ;
+  rdam:P30003 rdami:1001 ;
+  rdam:P30004 "82358-2" ;
+  rdam:P30007 "\u21171991" ;
+  rdam:P30011 "[1991?]" ;
+  rdam:P30088 "New York, New York" ;
+  rdam:P30105 "Tori Amos" ;
+  rdam:P30135 ex:W1 ;
+  rdam:P30139 ex:E1 ;
+  rdam:P30141 "http://www.gooselane.com" ;
+  rdam:P30156 "Little earthquakes" ;
+  rdam:P30169 "12 cm" ;
+  rdam:P30176 "Atlantic" ;
+  rdam:P30182 "1 audio disc"@en ;
+  rdam:P30208 rdabm:1014.
+ex:W1
+  rdaw:P10002 "Amos, Tori. Little earthquakes (Album)" .
+  rdaw:P10053 ex:A1 ;
+  rdaw:P10147 ex:W2 ;
+  rdaw:P10147 ex:W3 ;
+  rdaw:P10147 ex:W4 ;
+  rdaw:P10147 ex:W5 ;
+  rdaw:P10147 ex:W6 ;
+  rdaw:P10147 ex:W7 ;
+  rdaw:P10147 ex:W8 ;
+  rdaw:P10147 ex:W9 ;
+  rdaw:P10222 "Songs and instrumental music" .
+ex:W2
+  rdaw:P10002 "Amos, Tori. Crucify" .
+ex:W3
+  rdaw:P10002 "Amos, Tori. Girl" .
+ex:W4
+  rdaw:P10002 "Amos, Tori. Silent all these years" .
+ex:W5
+  rdaw:P10002 "Amos, Tori. Precious things" .
+ex:W6
+  rdaw:P10002 "Amos, Tori. Winter" .
+ex:W7
+  rdaw:P10002 "Amos, Tori. Happy phantom" .
+ex:W8
+  rdaw:P10002 "Amos, Tori. China" .
+ex:W9
+  rdaw:P10002 "Amos, Tori. Leather" .
+ex:W10
+  rdaw:P10002 "Amos, Tori. Mother" .
+ex:W11
+  rdaw:P10002 "Amos, Tori. Tear in your hand" .
+ex:W12
+  rdaw:P10002 "Amos, Tori. Me and a gun" .
+ex:W13
+  rdaw:P10002 "Amos, Tori. Little earthquakes (Song)" .
+rdabm:1014 skos:prefLabel "plastic"@en .
+rdaco:1011 skos:prefLabel "performed music"@en .
+rdact:1004 skos:prefLabel "audio disc"@en .
+rdact:1013 skos:prefLabel "computer disc"@en .
+rdami:1001 skos:prefLabel "single unit"@en .
+rdamt:1001 skos:prefLabel "audio"@en .
+rdamt:1003 skos:prefLabel "computer"@en .
+          </pre>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>Downloads</h3>
+          <div class="d-inline-flex list-group mb-2">
+            <a href="http://www.rdaregistry.info/ttl/Examples/exRSCFullAudioDiscPerformedMusic.ttl"
+              class="list-group-item list-group-item-action px-2 py-1">Turtle (text/turtle)</a>
+          </div>
+          <p>This example is also used for the <a
+              href="http://rballs.info/topics/m/rdaex/rdaexAudioDiscPerformedMusic.html"
+              target="_blank">RDA Example: Audio disc (performed music) r-ball</a>.</p>
+          <p>Note that variations in the RDF representations are intentional and are compatible with
+            RDA guidance and instructions.</p>
+        </div>
+      </div>
+    </main>
+    <footer class="container footDisplay">
+      <div class="row py-1 my-2">
+        <div class="col-md-2 p-2">
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img
+              alt="Creative Commons License" class="img-fluid"
+              src="https://licensebuttons.net/l/by/4.0/88x31.png" target="_blank" /></a>
+        </div>
+        <div class="col-md-4 p-2">
+          <p class="m-0 p-0"><strong><span xmlns:dct="http://purl.org/dc/terms/"
+                property="dct:title">RDA Vocabularies</span></strong> and <strong><span
+                xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA
+              Registry</span></strong> are licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by/4.0/deed.en_US" target="_blank">Creative
+              Commons Attribution 4.0 International License</a>.</p>
+          <p class="m-0 p-0">Based on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+              href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.</p>
+        </div>
+        <div class="col-md-4 p-2">
+          <p class="m-0 p-0" id="rightsStatement">Copyright © 2020 American Library Association,
+            Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library
+            and Information Professionals</p>
+        </div>
+        <div class="col-md-2 p-2">
+          <a href="https://www.rdatoolkit.org" target="_blank"><img src="../../rgImages/RDAlogo.jpg"
+              class="img-fluid" alt="RDA logo" /></a>
+        </div>
+      </div>
+      <p><em>This page was last updated 10 Mar 2022.</em></p>
+    </footer>
+    <!-- Scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
