@@ -87,34 +87,34 @@
                 <li><a class="dropdown-item" href="/Maps/">Maps</a></li>
                 <li><a class="dropdown-item" href="/Aligns/">Alignments</a></li>
                 <li><a class="dropdown-item" href="/Profiles/">Profiles</a></li>
+                <li><a class="dropdown-item" href="/rgROF/">RDA/ONIX Framework</a></li>
                 <li><a class="dropdown-item" href="/rgArch/">Archaeology</a></li>
                 <li><a class="dropdown-item" href="/rimmf/">RIMMF</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="ddAbout" data-bs-toggle="dropdown"
-                aria-current="page" aria-expanded="false">About</a>
+                aria-expanded="false">About</a>
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="About sub-menu">
-                <li><a class="dropdown-item" href="/rgAbout/">About</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/" aria-current="page">About the RDA Registry</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rgFAQ.html">FAQ</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="/rgAbout/issues.html">Issues</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/updates/">Updates</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/updates/versions.html">-
-                  Versions</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/updates/deprecation.html">-
-                    Deprecation</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/rdaref/">RDA Reference</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/rdaref/dataflow/">- Data flow</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/rdaref/translations/">-
-                  Translations</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/rdaont/">RDA ontology</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/rof.html">RDA/ONIX Framework</a></li>
+                <li><a class="dropdown-item" href="/rgGuide/">Guide for developers</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="/rgGuide/">Guide</a></li>
-            <li class="nav-item"><a class="nav-link"
-                href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank"
-              >Project</a></li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                id="ddProject" data-bs-toggle="dropdown" aria-expanded="false">GitHub Project</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Project sub-menu">
+                <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies"
+                    >GitHub Project</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item"
+                    href="https://github.com/RDARegistry/RDA-Vocabularies/releases"
+                  >Releases</a></li>
+                <li><a class="dropdown-item"
+                    href="https://github.com/RDARegistry/RDA-Vocabularies/issues">Issues</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="http://access.rdatoolkit.org"
                 target="_blank">RDA Toolkit</a></li>
           </ul>
@@ -130,6 +130,9 @@
           <div class="col-md-4">
             <div class="ms-3">
               <div class="btn-group-vertical" role="group" aria-label="About table of contents">
+                <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
+                  data-bs-target="#aInt" aria-expanded="false" aria-controls="aInt"
+                  >Introduction</button>
                 <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
                   data-bs-target="#aIss" aria-expanded="false" aria-controls="aIss">Issues</button>
                 <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
@@ -149,14 +152,18 @@
                 <button type="button" class="btn btnToc text-start ps-4" data-bs-toggle="collapse"
                   data-bs-target="#aTra" aria-expanded="false" aria-controls="aTra"
                   >Translations</button>
-                <button type="button" class="btn btnToc text-start" data-bs-toggle="collapse"
-                  data-bs-target="#aRof" aria-expanded="false" aria-controls="aRof">RDA/ONIX
-                  Framework</button>
               </div>
+            </div>
+            <div class="mt-3">
+              <p>For additional information see:</p>
+              <ul>
+                <li><a href="rgFAQ.html">Frequently Asked Questions</a></li>
+                <li><a href="../rgGuide/">Guide for developers</a></li>
+              </ul>
             </div>
           </div>
           <div class="col-md-8">
-            <div class="collapse show" id="aDefault" data-bs-parent="#aboutToc">
+            <div class="collapse show" id="aInt" data-bs-parent="#aboutToc">
               <div class="border border-dark p-4">
                 <h2>Introduction</h2>
                 <p>The RDA Registry contains vocabularies that represent the RDA entities, elements,
@@ -465,67 +472,6 @@
                   selected language is not available.</p>
               </div>
             </div>
-            <div class="collapse" id="aRof" data-bs-parent="#aboutToc">
-              <div class="border border-dark p-4">
-                <h2>RDA/ONIX Framework</h2>
-                <p>The <a href="http://www.rda-jsc.org/docs/5chair10.pdf">RDA/ONIX Framework for
-                    Resource Categorization</a> provides sets of defined attributes of resource
-                  content and resource carriers and specified primary values for a subset of the
-                  defined attributes.</p>
-                <p>The Framework is used to derive content and carrier categories specified in
-                  RDA.</p>
-                <p>The Framework attributes and values are represented in the RDA Registry as:</p>
-                <ul>
-                  <li><a href="../Elements/rof/index.html">RDA/ONIX Framework element set</a></li>
-                  <li>RDA/ONIX value vocabularies <ul>
-                      <li><a href="../termList/rofch/">ROF Character</a></li>
-                      <li><a href="../termList/rofem/">ROF Extension Mode</a></li>
-                      <li><a href="../termList/rofer/">ROF Extension Requirement</a></li>
-                      <li><a href="../termList/rofet/">ROF Extension Termination</a></li>
-                      <li><a href="../termList/rofhf/">ROF Housing Format</a></li>
-                      <li><a href="../termList/rofid/">ROF Image Dimensionality</a></li>
-                      <li><a href="../termList/rofim/">ROF Image Movement</a></li>
-                      <li><a href="../termList/rofin/">ROF Interaction</a></li>
-                      <li><a href="../termList/rofit/">ROF Intermediation Tool</a></li>
-                      <li><a href="../termList/rofrm/">ROF Revision Mode</a></li>
-                      <li><a href="../termList/rofrr/">ROF Revision Requirement</a></li>
-                      <li><a href="../termList/rofrt/">ROF Revision Termination</a></li>
-                      <li><a href="../termList/rofsm/">ROF Sensory Mode</a></li>
-                      <li><a href="../termList/rofsf/">ROF Storage Medium Format</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <p>The Framework is the basis of the RDA value vocabularies:</p>
-                <ul>
-                  <li><a href="../termList/RDACarrierType/">RDA Carrier Type</a></li>
-                  <li><a href="../termList/RDAContentType/">RDA Content Type</a></li>
-                  <li><a href="../termList/RDAMediaType/">RDA Media Type</a></li>
-                </ul>
-                <p>More specific RDA types use RDA refinements to RDA/ONIX value vocabularies:</p>
-                <ul>
-                  <li><a href="../termList/rofchrda/">ROF Character for RDA</a></li>
-                  <li><a href="../termList/roffgrda/">ROF Form/Genre for RDA</a></li>
-                  <li><a href="../termList/rofitrda/">ROF Intermediation Tool for RDA</a></li>
-                  <li><a href="../termList/rofsfrda/">ROF Storage Medium Format for RDA</a></li>
-                </ul>
-                <p>The Framework is intended for use in a hub-and-spoke mapping architecture.
-                  Categories from each schema are mapped to concepts in the ROF value vocabularies,
-                  instead of directly to each other. Categories from two different schema can be
-                  mapped by matching the values of their ROF concepts.</p>
-                <ul>
-                  <li><a href="../Aligns/index.html#rofrda">Alignments between RDA and RDA/ONIX
-                      Framework</a></li>
-                  <li><a href="../Maps/index.html#rofrda">Maps between RDA and RDA/ONIX
-                      Framework</a></li>
-                </ul>
-                <ul>
-                  <li><a href="../Aligns/index.html#isbd">Alignments between ISBD and RDA/ONIX
-                      Framework</a></li>
-                  <li><a href="../Maps/index.html#rofisbd">Maps between ISBD and RDA/ONIX
-                      Framework</a></li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -534,18 +480,18 @@
       <div class="row py-1 my-2">
         <div class="col-md-2 p-2">
           <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img
-            alt="Creative Commons License" class="img-fluid"
-            src="https://licensebuttons.net/l/by/4.0/88x31.png" target="_blank" /></a>
+              alt="Creative Commons License" class="img-fluid"
+              src="https://licensebuttons.net/l/by/4.0/88x31.png" target="_blank" /></a>
         </div>
         <div class="col-md-4 p-2">
           <p class="m-0 p-0"><strong><span xmlns:dct="http://purl.org/dc/terms/"
-            property="dct:title">RDA Vocabularies</span></strong> and <strong><span
-              xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA
+                property="dct:title">RDA Vocabularies</span></strong> and <strong><span
+                xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA
               Registry</span></strong> are licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by/4.0/deed.en_US" target="_blank">Creative
-                Commons Attribution 4.0 International License</a>.</p>
+              href="http://creativecommons.org/licenses/by/4.0/deed.en_US" target="_blank">Creative
+              Commons Attribution 4.0 International License</a>.</p>
           <p class="m-0 p-0">Based on a work at <a xmlns:dct="http://purl.org/dc/terms/"
-            href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.</p>
+              href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.</p>
         </div>
         <div class="col-md-4 p-2">
           <p class="m-0 p-0" id="rightsStatement">Copyright © 2020 American Library Association,
@@ -554,7 +500,7 @@
         </div>
         <div class="col-md-2 p-2">
           <a href="https://www.rdatoolkit.org" target="_blank"><img src="../../rgImages/RDAlogo.jpg"
-            class="img-fluid" alt="RDA logo" /></a>
+              class="img-fluid" alt="RDA logo" /></a>
         </div>
       </div>
       <p><em>This page was last updated 10 Mar 2022.</em></p>
