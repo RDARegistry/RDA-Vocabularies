@@ -909,6 +909,11 @@ function setVocDetails(json) {
   theCurieExURI = getURI(window.theVocPublishedEntries[0]);
   theVocCurieEx = linkify(makeCurieFromURI(theCurieExURI, window.theVocPrefix), theCurieExURI);
   switch (window.theVocKind) {
+    case "class":
+    theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
+    filepathPart = "Elements";
+    filenameLocal = "c";
+    break;
     case "value":
     theVocMenuLink = '<a href="/termList/">RDA value vocabularies</a>';
     filepathPart = "termList";
@@ -923,9 +928,6 @@ function setVocDetails(json) {
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
     switch (window.theVocDomain) {
-      case "Class":
-      filenameLocal = "c";
-      break;
       case "Agent":
       filenameLocal = "a";
       break;
