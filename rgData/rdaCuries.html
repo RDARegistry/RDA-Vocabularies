@@ -1,572 +1,560 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/rdagitData.dwt" codeOutsideHTMLIsLocked="false" -->
-<head>
-<!-- Meta-->
-<meta charset="utf-8">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="description" content="This is the technical documentation for the RDA: Resource Description and Access published value vocabularies and element sets.">
-<meta name="keywords" content="RDA, vocabularies, documentation, registry">
-<meta name="author" content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire">
-<meta name="viewport" content="width=device-width">
-<!-- InstanceBeginEditable name="Title" -->
-<title>RDA Registry | Data</title>
-<!-- InstanceEndEditable -->
-<!-- Icons-->
-<link rel="shortcut icon" href="http://www.rdatoolkit.org/sites/default/files/garland_favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
-<!--[if lt IE 9]>
-<script src="/bower_components/html5shiv/dist/html5shiv.js"></script><![endif]-->
-<!-- Styles -->
-<link rel="stylesheet" href="/bower_components/protip/protip.min.css">
-<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
-<link rel="stylesheet" href="/bower_components/datatables.net-dt/css/jquery.dataTables.css">
-<link rel="stylesheet" href="/styles/style.css"/>
-<link rel="stylesheet" href="/styles/rdagit.css"/>
-</head>
-<body>
-<!-- Markup-->
-<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
- <div class="container">
-  <div class="navbar-header">
-   <button type="button" data-toggle="collapse" data-target="#navbar-main" class="navbar-toggle"><span class="sr-only">Toggle navigation</span></button>
-   <a href="/" class="navbar-brand">RDA Registry</a>
-  </div>
-  <div id="navbar-main" class="collapse navbar-collapse">
-   <ul class="nav navbar-nav">
-    <li class="dropdown"><a href="/Elements/" class="dropdown-toggle" data-toggle="dropdown">Elements <b class="caret"></b></a>
-     <ul class="dropdown-menu">
-      <li><a href="/Elements/">Elements</a></li>
-      <li class="divider"></li>
-      <li><a href="/Elements/c/">Classes</a></li>
-      <li><a href="/Elements/a/">Agent properties</a></li>
-      <li><a href="/Elements/e/">Expression properties</a></li>
-      <li><a href="/Elements/i/">Item properties</a></li>
-      <li><a href="/Elements/m/">Manifestation properties</a></li>
-      <li><a href="/Elements/n/">Nomen properties</a></li>
-      <li><a href="/Elements/p/">Place properties</a></li>
-      <li><a href="/Elements/t/">Timespan properties</a></li>
-      <li><a href="/Elements/w/">Work properties</a></li>
-      <li><a href="/Elements/x/">RDA Entity properties</a></li>
-      <li><a href="/Elements/u/">Unconstrained properties</a></li>
-      <li><a href="/Elements/rof/">RDA/ONIX Framework elements</a></li>
-     </ul>
-    </li>
-    <li class="dropdown"><a href="/termList/" class="dropdown-toggle" data-toggle="dropdown">Values <b class="caret"></b></a>
-     <ul class="dropdown-menu">
-      <li><a href="/termList/">Values</a></li>
-      <li class="divider"></li>
-      <li><a href="/termList/">RDA values</a></li>
-      <li><a href="/termList/#rof">RDA/ONIX Framework values</a></li>
-     </ul>
-    </li>
-    <li class="dropdown"><a href="/rgData/" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
-     <ul class="dropdown-menu">
-      <li><a href="/rgData/">Data</a></li>
-      <li class="divider"></li>
-      <li><a href="/rgData/rdaCuries.html">Curie prefixes</a></li>
-      <li><a href="/Examples/">Examples</a></li>
-      <li><a href="http://rballs.info/">R-Balls</a></li>
-      <li><a href="/rgDatasets/">Datasets</a></li>
-     </ul>
-    </li>
-    <li class="dropdown"><a href="/rgTools/" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
-     <ul class="dropdown-menu">
-      <li><a href="/rgTools/">Tools</a></li>
-      <li class="divider"></li>
-      <li><a href="/Maps/">Maps</a></li>
-      <li><a href="/Aligns/">Alignments</a></li>
-      <li><a href="/Profiles/">Profiles</a></li> <li><a href="/rgArch/">Archaeology</a></li>
-      <li><a href="/rimmf/">RIMMF</a></li>
-     </ul>
-    </li>
-    <li class="dropdown"><a href="https://github.com/RDARegistry/RDA-Vocabularies/releases" class="dropdown-toggle" data-toggle="dropdown">Releases <b class="caret"></b></a>
-     <ul class="dropdown-menu">
-      <li><a href="https://github.com/RDARegistry/RDA-Vocabularies/releases">Releases</a></li>
-      <li class="divider"></li>
-     </ul>
-    </li>
-   </ul>
-   <ul class="nav navbar-nav navbar-right">
-    <li class="dropdown"><a href="/rgAbout/" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-     <ul class="dropdown-menu">
-      <li><a href="/rgAbout/">About</a></li>
-      <li class="divider"></li>
-      <li><a href="/rgAbout/issues.html">Issues</a></li>
-      <li><a href="/rgAbout/updates/">Updates</a></li>
-      <li><a href="/rgAbout/updates/versions.html">- Versions</a></li>
-      <li><a href="/rgAbout/updates/deprecation.html">- Deprecation</a></li>
-      <li><a href="/rgAbout/rdaref/">RDA Reference</a></li>
-      <li><a href="/rgAbout/rdaref/dataflow/">- Data flow</a></li>
-      <li><a href="/rgAbout/rdaref/translations/">- Translations</a></li>
-      <li><a href="/rgAbout/rdaont/">RDA ontology</a></li>
-      <li><a href="/rgAbout/rof.html">RDA/ONIX Framework</a></li>
-     </ul>
-    </li>
-    <li><a href="/rgFAQ">FAQ</a></li>
-    <li><a href="/rgGuide/">Guide</a></li>
-    <!-- <li><a href="/blog">Blog</a></li> -->
-    <li><a href="https://github.com/RDARegistry/RDA-Vocabularies" target="_blank">Project</a></li>
-    <li><a href="http://access.rdatoolkit.org" target="_blank">RDA Toolkit</a></li>
-   </ul>
-  </div>
- </div>
-</nav>
-<div class="container">
- <section id="content" class="content">
-  <article id="page" class="page">
-   <div class="page-content">
-    <div class="rg-pagecontent">
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description"
+      content="This is the technical documentation for the RDA: Resource Description and Access published value vocabularies and element sets." />
+    <meta name="keywords" content="RDA, vocabularies, documentation, registry" />
+    <meta name="author"
+      content="Jon Phipps, Diane Hillmann, James Hennelly, Deborah Fritz, Richard Fritz, Gordon Dunsire" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Page title -->
+    <title>RDA Registry | Data</title>
+    <!-- Styles -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/rdaregistry.css" />
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+      aria-label="Navigation for RDA Registry">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">RDA Registry</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarRR" aria-controls="navbarRR" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarRR">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddElements" data-bs-toggle="dropdown"
+                aria-expanded="false">Elements</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Elements sub-menu">
+                <li><a class="dropdown-item" href="/Elements/">Elements</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/Elements/c/">Classes</a></li>
+                <li><a class="dropdown-item" href="/Elements/a/">Agent properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/e/">Expression properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/i/">Item properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/m/">Manifestation properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/n/">Nomen properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/p/">Place properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/t/">Timespan properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/w/">Work properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/x/">RDA Entity properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/u/">Unconstrained properties</a></li>
+                <li><a class="dropdown-item" href="/Elements/rof/">RDA/ONIX Framework
+                  elements</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddValues" data-bs-toggle="dropdown"
+                aria-expanded="false">Values</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Values sub-menu">
+                <li><a class="dropdown-item" href="/termList/">Values</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/termList/">RDA values</a></li>
+                <li><a class="dropdown-item" href="/termList/#rof">RDA/ONIX Framework
+                  values</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddData" data-bs-toggle="dropdown"
+                aria-expanded="false">Data</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Data sub-menu">
+                <li><a class="dropdown-item" href="/rgData/">Data</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/rgData/rdaCuries.html" aria-current="page">Curie prefixes</a></li>
+                <li><a class="dropdown-item" href="/Examples/">Examples</a></li>
+                <li><a class="dropdown-item" href="http://rballs.info/">R-Balls</a></li>
+                <li><a class="dropdown-item" href="/rgDatasets/">Datasets</a></li>
 
-     <!-- InstanceBeginEditable name="PageContent" -->
-     <h1>Curie prefixes</h1>
-     <p>These prefixes are recommended for use in a compact URI (curie), and are used in RDA Registry documentation.</p>
-	 <ul>
-	  <li><a href="#es">Element sets</a></li>
-	  <li><a href="#vv">Value vocabularies</a></li>
-	 </ul>
-	 <a id="es"></a>
-	 <h3>Element sets</h3>
-     <table class="rg-table">
-      <tr>
-       <th>prefix</th>
-       <th>namespace</th>
-       <th>element set</th>
-      </tr>
-      <tr>
-       <td>rdac:</td>
-       <td>http://rdaregistry.info/Elements/c/</td>
-       <td>RDA Classes</td>
-      </tr>
-      <tr>
-       <td>rdaa:</td>
-       <td>http://rdaregistry.info/Elements/a/</td>
-       <td>Agent properties</td>
-      </tr>
-      <tr>
-       <td>rdaad:</td>
-       <td>http://rdaregistry.info/Elements/a/datatype/</td>
-       <td>Agent datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdaao:</td>
-       <td>http://rdaregistry.info/Elements/a/object/</td>
-       <td>Agent object properties</td>
-      </tr>
-      <tr>
-       <td>rdae:</td>
-       <td>http://rdaregistry.info/Elements/e/</td>
-       <td>Expression properties</td>
-      </tr>
-      <tr>
-       <td>rdaed:</td>
-       <td>http://rdaregistry.info/Elements/e/datatype/</td>
-       <td>Expression datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdaeo:</td>
-       <td>http://rdaregistry.info/Elements/e/object/</td>
-       <td>Expression object properties</td>
-      </tr>
-      <tr>
-       <td>rdai:</td>
-       <td>http://rdaregistry.info/Elements/i/</td>
-       <td>Item properties</td>
-      </tr>
-      <tr>
-       <td>rdaid:</td>
-       <td>http://rdaregistry.info/Elements/i/datatype/</td>
-       <td>Item datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdaio:</td>
-       <td>http://rdaregistry.info/Elements/i/object/</td>
-       <td>Item object properties</td>
-      </tr>
-      <tr>
-       <td>rdam:</td>
-       <td>http://rdaregistry.info/Elements/m/</td>
-       <td>Manifestation properties</td>
-      </tr>
-      <tr>
-       <td>rdamd:</td>
-       <td>http://rdaregistry.info/Elements/m/datatype/</td>
-       <td>Manifestation datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdamo:</td>
-       <td>http://rdaregistry.info/Elements/m/object/</td>
-       <td>Manifestation object properties</td>
-      </tr>
-      <tr>
-       <td>rdan:</td>
-       <td>http://rdaregistry.info/Elements/n/</td>
-       <td>Nomen properties</td>
-      </tr>
-      <tr>
-       <td>rdand:</td>
-       <td>http://rdaregistry.info/Elements/n/datatype/</td>
-       <td>Nomen datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdano:</td>
-       <td>http://rdaregistry.info/Elements/n/object/</td>
-       <td>Nomen object properties</td>
-      </tr>
-      <tr>
-       <td>rdap:</td>
-       <td>http://rdaregistry.info/Elements/p/</td>
-       <td>Place properties</td>
-      </tr>
-      <tr>
-       <td>rdapd:</td>
-       <td>http://rdaregistry.info/Elements/p/datatype/</td>
-       <td>Place datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdapo:</td>
-       <td>http://rdaregistry.info/Elements/p/object/</td>
-       <td>Place object properties</td>
-      </tr>
-      <tr>
-       <td>rdat:</td>
-       <td>http://rdaregistry.info/Elements/t/</td>
-       <td>Timespan properties</td>
-      </tr>
-      <tr>
-       <td>rdatd:</td>
-       <td>http://rdaregistry.info/Elements/t/datatype/</td>
-       <td>Timespan datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdato:</td>
-       <td>http://rdaregistry.info/Elements/t/object/</td>
-       <td>Timespan object properties</td>
-      </tr>
-      <tr>
-       <td>rdau:</td>
-       <td>http://rdaregistry.info/Elements/u/</td>
-       <td>Unconstrained properties</td>
-      </tr>
-      <tr>
-       <td>rdaw:</td>
-       <td>http://rdaregistry.info/Elements/w/</td>
-       <td>Work properties</td>
-      </tr>
-      <tr>
-       <td>rdawd:</td>
-       <td>http://rdaregistry.info/Elements/w/datatype/</td>
-       <td>Work datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdawo:</td>
-       <td>http://rdaregistry.info/Elements/w/object/</td>
-       <td>Work object properties</td>
-      </tr>
-      <tr>
-       <td>rdax:</td>
-       <td>http://rdaregistry.info/Elements/x/</td>
-       <td>RDA Entity properties</td>
-      </tr>
-      <tr>
-       <td>rdaxd:</td>
-       <td>http://rdaregistry.info/Elements/x/datatype/</td>
-       <td>RDA Entity datatype properties</td>
-      </tr>
-      <tr>
-       <td>rdaxo:</td>
-       <td>http://rdaregistry.info/Elements/x/object/</td>
-       <td>RDA Entity object properties</td>
-      </tr>
-     </table>
-     <p>The prefix is suggested on the Registry webpage for each <a href="/Elements/">element set</a>.</p>
-	 <a id="vv"></a>
-	 <h3>Value vocabularies</h3>
-     <table class="rg-table">
-      <tr>
-       <th>prefix</th>
-       <th>namespace</th>
-       <th>value vocabulary</th>
-      </tr>
-      <tr>
-       <td>rdaar:</td>
-       <td>http://rdaregistry.info/termList/AspectRatio/</td>
-       <td>RDA Aspect Ratio Designation</td>
-      </tr>
-      <tr>
-       <td>rdabf:</td>
-       <td>http://rdaregistry.info/termList/bookFormat/</td>
-       <td>RDA Book Format</td>
-      </tr>
-      <tr>
-       <td>rdabs:</td>
-       <td>http://rdaregistry.info/termList/broadcastStand/</td>
-       <td>RDA Broadcast Standard</td>
-      </tr>
-        <tr>
-         <td>rdacam:</td>
-         <td>http://rdaregistry.info/termList/RDACollectionAccrualMethod/</td>
-         <td>RDA Collection Accrual Method</td>
-        </tr>
-        <tr>
-         <td>rdacap:</td>
-         <td>http://rdaregistry.info/termList/RDACollectionAccrualPolicy/</td>
-         <td>RDA Collection Accrual Policy</td>
-        </tr>
-        <tr>
-         <td>rdacarx:</td>
-         <td>http://rdaregistry.info/termList/RDACarrierEU/</td>
-         <td>RDA Carrier Extent Unit</td>
-        </tr>
-       <td>rdacc:</td>
-       <td>http://rdaregistry.info/termList/RDAColourContent/</td>
-       <td>RDA Colour Content</td>
-      </tr>
-      <tr>
-       <td>rdacdt:</td>
-       <td>http://rdaregistry.info/termList/RDACartoDT/</td>
-       <td>RDA Cartographic Data Type</td>
-      </tr>
-      <tr>
-       <td>rdaco:</td>
-       <td>http://rdaregistry.info/termList/RDAContentType/</td>
-       <td>RDA Content Type</td>
-      </tr>
-      <tr>
-       <td>rdacpc:</td>
-       <td>http://rdaregistry.info/termList/configPlayback/</td>
-       <td>RDA Configuration of Playback Channels</td>
-      </tr>
-      <tr>
-       <td>rdact:</td>
-       <td>http://rdaregistry.info/termList/RDACarrierType/</td>
-       <td>RDA Carrier Type</td>
-      </tr>
-      <tr>
-       <td>rdaep:</td>
-       <td>http://rdaregistry.info/termList/RDAExtensionPlan/</td>
-       <td>RDA Extension Plan</td>
-      </tr>
-      <tr>
-       <td>rdafmn:</td>
-       <td>http://rdaregistry.info/termList/MusNotation/</td>
-       <td>RDA Form of Musical Notation</td>
-      </tr>
-      <tr>
-       <td>rdafnm:</td>
-       <td>http://rdaregistry.info/termList/formatNoteMus/</td>
-       <td>RDA Format of Notated Music</td>
-      </tr>
-      <tr>
-       <td>rdafnv:</td>
-       <td>http://rdaregistry.info/termList/noteMove/</td>
-       <td>RDA Form of Notated Movement</td>
-      </tr>
-      <tr>
-       <td>rdafr:</td>
-       <td>http://rdaregistry.info/termList/frequency/</td>
-       <td>RDA Frequency</td>
-      </tr>
-      <tr>
-       <td>rdafs:</td>
-       <td>http://rdaregistry.info/termList/fontSize/</td>
-       <td>RDA Font Size</td>
-      </tr>
-      <tr>
-       <td>rdaft:</td>
-       <td>http://rdaregistry.info/termList/fileType/</td>
-       <td>RDA File Type</td>
-      </tr>
-      <tr>
-       <td>rdaftn:</td>
-       <td>http://rdaregistry.info/termList/TacNotation/</td>
-       <td>RDA Form of Tactile Notation</td>
-      </tr>
-      <tr>
-       <td>rdagen:</td>
-       <td>http://rdaregistry.info/termList/RDAGeneration/</td>
-       <td>RDA Generation</td>
-      </tr>
-      <tr>
-       <td>rdagrp:</td>
-       <td>http://rdaregistry.info/termList/groovePitch/</td>
-       <td>RDA Groove Pitch of an Analog Cylinder</td>
-      </tr>
-      <tr>
-       <td>rdagw:</td>
-       <td>http://rdaregistry.info/termList/grooveWidth/</td>
-       <td>RDA Groove Width of an Analog Disc</td>
-      </tr>
-      <tr>
-       <td>rdaill:</td>
-       <td>http://rdaregistry.info/termList/IllusContent/</td>
-       <td>RDA Illustrative Content</td>
-      </tr>
-      <tr>
-       <td>rdaim:</td>
-       <td>http://rdaregistry.info/termList/RDAInteractivityMode/</td>
-       <td>RDA Interactivity Mode</td>
-      </tr>
-      <tr>
-       <td>rdalay:</td>
-       <td>http://rdaregistry.info/termList/layout/</td>
-       <td>RDA Layout</td>
-      </tr>
-      <tr>
-       <td>rdamat:</td>
-       <td>http://rdaregistry.info/termList/RDAMaterial/</td>
-       <td>RDA Material</td>
-      </tr>
-      <tr>
-       <td>rdami:</td>
-       <td>http://rdaregistry.info/termList/ModeIssue/</td>
-       <td>RDA Mode of Issuance</td>
-      </tr>
-      <tr>
-       <td>rdamt:</td>
-       <td>http://rdaregistry.info/termList/RDAMediaType/</td>
-       <td>RDA Media Type</td>
-      </tr>
-      <tr>
-       <td>rdapath:</td>
-       <td>http://rdaregistry.info/termList/RDARecordingMethods/</td>
-       <td>RDA Recording Methods</td>
-      </tr>
-      <tr>
-       <td>rdapf:</td>
-       <td>http://rdaregistry.info/termList/presFormat/</td>
-       <td>RDA Presentation Format</td>
-      </tr>
-      <tr>
-       <td>rdapm:</td>
-       <td>http://rdaregistry.info/termList/RDAproductionMethod/</td>
-       <td>RDA Production Method</td>
-      </tr>
-      <tr>
-       <td>rdapol:</td>
-       <td>http://rdaregistry.info/termList/RDAPolarity/</td>
-       <td>RDA Polarity</td>
-      </tr>
-      <tr>
-       <td>rdare:</td>
-       <td>http://rdaregistry.info/termList/RDARegionalEncoding/</td>
-       <td>RDA Regional Encoding</td>
-      </tr>
-      <tr>
-       <td>rdarm:</td>
-       <td>http://rdaregistry.info/termList/recMedium/</td>
-       <td>RDA Recording Medium</td>
-      </tr>
-      <tr>
-       <td>rdarr:</td>
-       <td>http://rdaregistry.info/termList/RDAReductionRatio/</td>
-       <td>RDA Reduction Ratio Designation</td>
-      </tr>
-      <tr>
-       <td>rdasca:</td>
-       <td>http://rdaregistry.info/termList/scale/</td>
-       <td>RDA Scale Designation</td>
-      </tr>
-      <tr>
-       <td>rdasco:</td>
-       <td>http://rdaregistry.info/termList/soundCont/</td>
-       <td>RDA Sound Content</td>
-      </tr>
-      <tr>
-       <td>rdasoi:</td>
-       <td>http://rdaregistry.info/termList/statIdentification/</td>
-       <td>RDA Status of Identification</td>
-      </tr>
-      <tr>
-       <td>rdasource :</td>
-       <td>http://rdaregistry.info/termList/RDARecordingSources/</td>
-       <td>RDA Recording Sources</td>
-      </tr>
-      <tr>
-       <td>rdaspc:</td>
-       <td>http://rdaregistry.info/termList/specPlayback/</td>
-       <td>RDA Special Playback Characteristic</td>
-      </tr>
-      <tr>
-       <td>rdatask:</td>
-       <td>http://rdaregistry.info/termList/RDATasks/</td>
-       <td>RDA User Tasks</td>
-      </tr>
-      <tr>
-       <td>rdatb:</td>
-       <td>http://rdaregistry.info/termList/RDATypeOfBinding/</td>
-       <td>RDA Type of Binding</td>
-      </tr>
-      <tr>
-       <td>rdatc:</td>
-       <td>http://rdaregistry.info/termList/trackConfig/</td>
-       <td>RDA Track Configuration</td>
-      </tr>
-      <tr>
-       <td>rdaterm:</td>
-       <td>http://rdaregistry.info/termList/RDATerms/</td>
-       <td>RDA Terms</td>
-      </tr>
-      <tr>
-       <td>rdatr:</td>
-       <td>http://rdaregistry.info/termList/typeRec/</td>
-       <td>RDA Type of Recording</td>
-      </tr>
-      <tr>
-        <td>rdaut:</td>
-        <td>http://rdaregistry.info/termList/RDAUnitOfTime/</td>
-        <td>RDA Unit of Time</td>
-      </tr>
-      <tr>
-       <td>rdavf:</td>
-       <td>http://rdaregistry.info/termList/videoFormat/</td>
-       <td>RDA Video Format</td>
-      </tr>
-	 </table>
-     <p>The prefix is suggested on the Registry webpage for each <a href="/termList/">value vocabulary</a>.</p>
-     <!-- InstanceEndEditable -->
-    </div>
-   </div>
-  </article>
- </section>
- <footer>
-  <div class="rg-footer">
-   <div class="row">
-    <div class="col-md-6">
-     <div class="rg-footer-part">
-      <strong><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA Vocabularies</span></strong> and <strong><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA Registry</span></strong> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.
-     </div>
-    </div>
-    <div class="col-md-2">
-     <div class="rg-footer-part">
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png"></a>
-     </div>
-    </div>
-    <div class="col-md-4">
-     <div class="rg-footer-part">
-      <a href="https://www.rdatoolkit.org"><img src="../../rgImages/RDAlogo.jpg" width="154" height="60" alt="RDA logo"></a>
-     </div>
-    </div>
-   </div>
-   <div class="date-updated">
-    <p>This page was last updated <!-- InstanceBeginEditable name="DateUpdated" -->22 Dec 2020<!-- InstanceEndEditable -->.</p>
-   </div>
-  </div>
- </footer>
-</div>
-<!-- Scripts-->
-<!-- InstanceBeginEditable name="Scripts" -->
-<script defer src="/bower_components/jquery/dist/jquery.js">
-</script>
-<script defer src="/bower_components/bootstrap/dist/js/bootstrap.js">
-</script>
-<script defer src="/bower_components/modernizr/modernizr.js">
-</script>
-<script defer src="/scripts/script.js">
-</script>
-<!-- InstanceEndEditable -->
-</body>
-<!-- InstanceEnd --></html>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddTools" data-bs-toggle="dropdown"
+                aria-expanded="false">Tools</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Tools sub-menu">
+                <li><a class="dropdown-item" href="/rgTools/">Tools</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/Maps/">Maps</a></li>
+                <li><a class="dropdown-item" href="/Aligns/">Alignments</a></li>
+                <li><a class="dropdown-item" href="/Profiles/">Profiles</a></li>
+                <li><a class="dropdown-item" href="/rgROF/">RDA/ONIX Framework</a></li>
+                <li><a class="dropdown-item" href="/rgArch/">Archaeology</a></li>
+                <li><a class="dropdown-item" href="/rimmf/">RIMMF</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="ddAbout" data-bs-toggle="dropdown"
+                aria-expanded="false">About</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="About sub-menu">
+                <li><a class="dropdown-item" href="/rgAbout/">About the RDA Registry</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rgFAQ.html">FAQ</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/rgGuide/">Guide for developers</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                id="ddProject" data-bs-toggle="dropdown" aria-expanded="false">GitHub Project</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Project sub-menu">
+                <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies"
+                    >GitHub Project</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item"
+                    href="https://github.com/RDARegistry/RDA-Vocabularies/releases"
+                  >Releases</a></li>
+                <li><a class="dropdown-item"
+                    href="https://github.com/RDARegistry/RDA-Vocabularies/issues">Issues</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="http://access.rdatoolkit.org"
+                target="_blank">RDA Toolkit</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container regDisplay">
+      <div class="row mt-3">
+        <h1>Curie prefixes</h1>
+      </div>
+      <p>These prefixes are recommended for use in a compact URI (curie), and are used in RDA
+        Registry documentation.</p>
+      <div class="row mt-2">
+        <div class="col-md-6">
+          <h2>Element sets</h2>
+          <p>The prefix is suggested on the Registry webpage for each <a href="/Elements/">element
+              set</a>.</p>
+          <table class="table table-bordered table-hover table-sm">
+            <tr>
+              <th>prefix</th>
+              <th>namespace</th>
+              <th>element set</th>
+            </tr>
+            <tr>
+              <td>rdac:</td>
+              <td>http://rdaregistry.info/Elements/c/</td>
+              <td>RDA Classes</td>
+            </tr>
+            <tr>
+              <td>rdaa:</td>
+              <td>http://rdaregistry.info/Elements/a/</td>
+              <td>Agent properties</td>
+            </tr>
+            <tr>
+              <td>rdaad:</td>
+              <td>http://rdaregistry.info/Elements/a/datatype/</td>
+              <td>Agent datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdaao:</td>
+              <td>http://rdaregistry.info/Elements/a/object/</td>
+              <td>Agent object properties</td>
+            </tr>
+            <tr>
+              <td>rdae:</td>
+              <td>http://rdaregistry.info/Elements/e/</td>
+              <td>Expression properties</td>
+            </tr>
+            <tr>
+              <td>rdaed:</td>
+              <td>http://rdaregistry.info/Elements/e/datatype/</td>
+              <td>Expression datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdaeo:</td>
+              <td>http://rdaregistry.info/Elements/e/object/</td>
+              <td>Expression object properties</td>
+            </tr>
+            <tr>
+              <td>rdai:</td>
+              <td>http://rdaregistry.info/Elements/i/</td>
+              <td>Item properties</td>
+            </tr>
+            <tr>
+              <td>rdaid:</td>
+              <td>http://rdaregistry.info/Elements/i/datatype/</td>
+              <td>Item datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdaio:</td>
+              <td>http://rdaregistry.info/Elements/i/object/</td>
+              <td>Item object properties</td>
+            </tr>
+            <tr>
+              <td>rdam:</td>
+              <td>http://rdaregistry.info/Elements/m/</td>
+              <td>Manifestation properties</td>
+            </tr>
+            <tr>
+              <td>rdamd:</td>
+              <td>http://rdaregistry.info/Elements/m/datatype/</td>
+              <td>Manifestation datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdamo:</td>
+              <td>http://rdaregistry.info/Elements/m/object/</td>
+              <td>Manifestation object properties</td>
+            </tr>
+            <tr>
+              <td>rdan:</td>
+              <td>http://rdaregistry.info/Elements/n/</td>
+              <td>Nomen properties</td>
+            </tr>
+            <tr>
+              <td>rdand:</td>
+              <td>http://rdaregistry.info/Elements/n/datatype/</td>
+              <td>Nomen datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdano:</td>
+              <td>http://rdaregistry.info/Elements/n/object/</td>
+              <td>Nomen object properties</td>
+            </tr>
+            <tr>
+              <td>rdap:</td>
+              <td>http://rdaregistry.info/Elements/p/</td>
+              <td>Place properties</td>
+            </tr>
+            <tr>
+              <td>rdapd:</td>
+              <td>http://rdaregistry.info/Elements/p/datatype/</td>
+              <td>Place datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdapo:</td>
+              <td>http://rdaregistry.info/Elements/p/object/</td>
+              <td>Place object properties</td>
+            </tr>
+            <tr>
+              <td>rdat:</td>
+              <td>http://rdaregistry.info/Elements/t/</td>
+              <td>Timespan properties</td>
+            </tr>
+            <tr>
+              <td>rdatd:</td>
+              <td>http://rdaregistry.info/Elements/t/datatype/</td>
+              <td>Timespan datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdato:</td>
+              <td>http://rdaregistry.info/Elements/t/object/</td>
+              <td>Timespan object properties</td>
+            </tr>
+            <tr>
+              <td>rdau:</td>
+              <td>http://rdaregistry.info/Elements/u/</td>
+              <td>Unconstrained properties</td>
+            </tr>
+            <tr>
+              <td>rdaw:</td>
+              <td>http://rdaregistry.info/Elements/w/</td>
+              <td>Work properties</td>
+            </tr>
+            <tr>
+              <td>rdawd:</td>
+              <td>http://rdaregistry.info/Elements/w/datatype/</td>
+              <td>Work datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdawo:</td>
+              <td>http://rdaregistry.info/Elements/w/object/</td>
+              <td>Work object properties</td>
+            </tr>
+            <tr>
+              <td>rdax:</td>
+              <td>http://rdaregistry.info/Elements/x/</td>
+              <td>RDA Entity properties</td>
+            </tr>
+            <tr>
+              <td>rdaxd:</td>
+              <td>http://rdaregistry.info/Elements/x/datatype/</td>
+              <td>RDA Entity datatype properties</td>
+            </tr>
+            <tr>
+              <td>rdaxo:</td>
+              <td>http://rdaregistry.info/Elements/x/object/</td>
+              <td>RDA Entity object properties</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <h2>Value vocabularies</h2>
+          <p>The prefix is suggested on the Registry webpage for each <a href="/termList/">value
+              vocabulary</a>.</p>
+          <table class="table table-bordered table-hover table-sm">
+            <tr>
+              <th>prefix</th>
+              <th>namespace</th>
+              <th>value vocabulary</th>
+            </tr>
+            <tr>
+              <td>rdaar:</td>
+              <td>http://rdaregistry.info/termList/AspectRatio/</td>
+              <td>RDA Aspect Ratio Designation</td>
+            </tr>
+            <tr>
+              <td>rdabf:</td>
+              <td>http://rdaregistry.info/termList/bookFormat/</td>
+              <td>RDA Book Format</td>
+            </tr>
+            <tr>
+              <td>rdabs:</td>
+              <td>http://rdaregistry.info/termList/broadcastStand/</td>
+              <td>RDA Broadcast Standard</td>
+            </tr>
+            <tr>
+              <td>rdacarx:</td>
+              <td>http://rdaregistry.info/termList/RDACarrierEU/</td>
+              <td>RDA Carrier Extent Unit</td>
+            </tr>
+            <tr>
+              <td>rdacc:</td>
+              <td>http://rdaregistry.info/termList/RDAColourContent/</td>
+              <td>RDA Colour Content</td>
+            </tr>
+            <tr>
+              <td>rdacdt:</td>
+              <td>http://rdaregistry.info/termList/RDACartoDT/</td>
+              <td>RDA Cartographic Data Type</td>
+            </tr>
+            <tr>
+              <td>rdaco:</td>
+              <td>http://rdaregistry.info/termList/RDAContentType/</td>
+              <td>RDA Content Type</td>
+            </tr>
+            <tr>
+              <td>rdacpc:</td>
+              <td>http://rdaregistry.info/termList/configPlayback/</td>
+              <td>RDA Configuration of Playback Channels</td>
+            </tr>
+            <tr>
+              <td>rdact:</td>
+              <td>http://rdaregistry.info/termList/RDACarrierType/</td>
+              <td>RDA Carrier Type</td>
+            </tr>
+            <tr>
+              <td>rdaep:</td>
+              <td>http://rdaregistry.info/termList/RDAExtensionPlan/</td>
+              <td>RDA Extension Plan</td>
+            </tr>
+            <tr>
+              <td>rdafmn:</td>
+              <td>http://rdaregistry.info/termList/MusNotation/</td>
+              <td>RDA Form of Musical Notation</td>
+            </tr>
+            <tr>
+              <td>rdafnm:</td>
+              <td>http://rdaregistry.info/termList/formatNoteMus/</td>
+              <td>RDA Format of Notated Music</td>
+            </tr>
+            <tr>
+              <td>rdafnv:</td>
+              <td>http://rdaregistry.info/termList/noteMove/</td>
+              <td>RDA Form of Notated Movement</td>
+            </tr>
+            <tr>
+              <td>rdafr:</td>
+              <td>http://rdaregistry.info/termList/frequency/</td>
+              <td>RDA Frequency</td>
+            </tr>
+            <tr>
+              <td>rdafs:</td>
+              <td>http://rdaregistry.info/termList/fontSize/</td>
+              <td>RDA Font Size</td>
+            </tr>
+            <tr>
+              <td>rdaft:</td>
+              <td>http://rdaregistry.info/termList/fileType/</td>
+              <td>RDA File Type</td>
+            </tr>
+            <tr>
+              <td>rdaftn:</td>
+              <td>http://rdaregistry.info/termList/TacNotation/</td>
+              <td>RDA Form of Tactile Notation</td>
+            </tr>
+            <tr>
+              <td>rdagen:</td>
+              <td>http://rdaregistry.info/termList/RDAGeneration/</td>
+              <td>RDA Generation</td>
+            </tr>
+            <tr>
+              <td>rdagrp:</td>
+              <td>http://rdaregistry.info/termList/groovePitch/</td>
+              <td>RDA Groove Pitch of an Analog Cylinder</td>
+            </tr>
+            <tr>
+              <td>rdagw:</td>
+              <td>http://rdaregistry.info/termList/grooveWidth/</td>
+              <td>RDA Groove Width of an Analog Disc</td>
+            </tr>
+            <tr>
+              <td>rdaill:</td>
+              <td>http://rdaregistry.info/termList/IllusContent/</td>
+              <td>RDA Illustrative Content</td>
+            </tr>
+            <tr>
+              <td>rdaim:</td>
+              <td>http://rdaregistry.info/termList/RDAInteractivityMode/</td>
+              <td>RDA Interactivity Mode</td>
+            </tr>
+            <tr>
+              <td>rdalay:</td>
+              <td>http://rdaregistry.info/termList/layout/</td>
+              <td>RDA Layout</td>
+            </tr>
+            <tr>
+              <td>rdamat:</td>
+              <td>http://rdaregistry.info/termList/RDAMaterial/</td>
+              <td>RDA Material</td>
+            </tr>
+            <tr>
+              <td>rdami:</td>
+              <td>http://rdaregistry.info/termList/ModeIssue/</td>
+              <td>RDA Mode of Issuance</td>
+            </tr>
+            <tr>
+              <td>rdamt:</td>
+              <td>http://rdaregistry.info/termList/RDAMediaType/</td>
+              <td>RDA Media Type</td>
+            </tr>
+            <tr>
+              <td>rdapath:</td>
+              <td>http://rdaregistry.info/termList/RDARecordingMethods/</td>
+              <td>RDA Recording Methods</td>
+            </tr>
+            <tr>
+              <td>rdapf:</td>
+              <td>http://rdaregistry.info/termList/presFormat/</td>
+              <td>RDA Presentation Format</td>
+            </tr>
+            <tr>
+              <td>rdapm:</td>
+              <td>http://rdaregistry.info/termList/RDAproductionMethod/</td>
+              <td>RDA Production Method</td>
+            </tr>
+            <tr>
+              <td>rdapol:</td>
+              <td>http://rdaregistry.info/termList/RDAPolarity/</td>
+              <td>RDA Polarity</td>
+            </tr>
+            <tr>
+              <td>rdare:</td>
+              <td>http://rdaregistry.info/termList/RDARegionalEncoding/</td>
+              <td>RDA Regional Encoding</td>
+            </tr>
+            <tr>
+              <td>rdarm:</td>
+              <td>http://rdaregistry.info/termList/recMedium/</td>
+              <td>RDA Recording Medium</td>
+            </tr>
+            <tr>
+              <td>rdarr:</td>
+              <td>http://rdaregistry.info/termList/RDAReductionRatio/</td>
+              <td>RDA Reduction Ratio Designation</td>
+            </tr>
+            <tr>
+              <td>rdasca:</td>
+              <td>http://rdaregistry.info/termList/scale/</td>
+              <td>RDA Scale Designation</td>
+            </tr>
+            <tr>
+              <td>rdasco:</td>
+              <td>http://rdaregistry.info/termList/soundCont/</td>
+              <td>RDA Sound Content</td>
+            </tr>
+            <tr>
+              <td>rdasoi:</td>
+              <td>http://rdaregistry.info/termList/statIdentification/</td>
+              <td>RDA Status of Identification</td>
+            </tr>
+            <tr>
+              <td>rdasource :</td>
+              <td>http://rdaregistry.info/termList/RDARecordingSources/</td>
+              <td>RDA Recording Sources</td>
+            </tr>
+            <tr>
+              <td>rdaspc:</td>
+              <td>http://rdaregistry.info/termList/specPlayback/</td>
+              <td>RDA Special Playback Characteristic</td>
+            </tr>
+            <tr>
+              <td>rdatask:</td>
+              <td>http://rdaregistry.info/termList/RDATasks/</td>
+              <td>RDA User Tasks</td>
+            </tr>
+            <tr>
+              <td>rdatb:</td>
+              <td>http://rdaregistry.info/termList/RDATypeOfBinding/</td>
+              <td>RDA Type of Binding</td>
+            </tr>
+            <tr>
+              <td>rdatc:</td>
+              <td>http://rdaregistry.info/termList/trackConfig/</td>
+              <td>RDA Track Configuration</td>
+            </tr>
+            <tr>
+              <td>rdaterm:</td>
+              <td>http://rdaregistry.info/termList/RDATerms/</td>
+              <td>RDA Terms</td>
+            </tr>
+            <tr>
+              <td>rdatr:</td>
+              <td>http://rdaregistry.info/termList/typeRec/</td>
+              <td>RDA Type of Recording</td>
+            </tr>
+            <tr>
+              <td>rdaut:</td>
+              <td>http://rdaregistry.info/termList/RDAUnitOfTime/</td>
+              <td>RDA Unit of Time</td>
+            </tr>
+            <tr>
+              <td>rdavf:</td>
+              <td>http://rdaregistry.info/termList/videoFormat/</td>
+              <td>RDA Video Format</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer class="container footDisplay">
+      <div class="row py-1 my-2">
+        <div class="col-md-2 p-2">
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img
+              alt="Creative Commons License" class="img-fluid"
+              src="https://licensebuttons.net/l/by/4.0/88x31.png" target="_blank" /></a>
+        </div>
+        <div class="col-md-4 p-2">
+          <p class="m-0 p-0"><strong><span xmlns:dct="http://purl.org/dc/terms/"
+                property="dct:title">RDA Vocabularies</span></strong> and <strong><span
+                xmlns:dct="http://purl.org/dc/terms/" property="dct:title">RDA
+              Registry</span></strong> are licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by/4.0/deed.en_US" target="_blank">Creative
+              Commons Attribution 4.0 International License</a>.</p>
+          <p class="m-0 p-0">Based on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+              href="http://rdaregistry.info" rel="dct:source">http://rdaregistry.info</a>.</p>
+        </div>
+        <div class="col-md-4 p-2">
+          <p class="m-0 p-0" id="rightsStatement">Copyright © 2020 American Library Association,
+            Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library
+            and Information Professionals</p>
+        </div>
+        <div class="col-md-2 p-2">
+          <a href="https://www.rdatoolkit.org" target="_blank"><img src="../../rgImages/RDAlogo.jpg"
+              class="img-fluid" alt="RDA logo" /></a>
+        </div>
+      </div>
+      <p><em>This page was last updated 10 Mar 2022.</em></p>
+    </footer>
+    <!-- Scripts-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

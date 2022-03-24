@@ -13,7 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Page title -->
-    <title>RDA Registry | Examples</title>
+    <title>RDA Registry | Tools</title>
     <!-- Styles -->
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
@@ -68,7 +68,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="ddData" data-bs-toggle="dropdown"
-                aria-current="page" aria-expanded="false">Data</a>
+                aria-expanded="false">Data</a>
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Data sub-menu">
                 <li><a class="dropdown-item" href="/rgData/">Data</a></li>
                 <li><hr class="dropdown-divider" /></li>
@@ -88,7 +88,7 @@
                 <li><a class="dropdown-item" href="/Maps/">Maps</a></li>
                 <li><a class="dropdown-item" href="/Aligns/">Alignments</a></li>
                 <li><a class="dropdown-item" href="/Profiles/">Profiles</a></li>
-                <li><a class="dropdown-item" href="/rgROF/">RDA/ONIX Framework</a></li>
+                <li><a class="dropdown-item" href="/rgROF/" aria-current="page">RDA/ONIX Framework</a></li>
                 <li><a class="dropdown-item" href="/rgArch/">Archaeology</a></li>
                 <li><a class="dropdown-item" href="/rimmf/">RIMMF</a></li>
               </ul>
@@ -97,25 +97,23 @@
               <a class="nav-link dropdown-toggle" href="#" id="ddAbout" data-bs-toggle="dropdown"
                 aria-expanded="false">About</a>
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="About sub-menu">
-                <li><a class="dropdown-item" href="/rgAbout/">About the RDA Registry</a></li>
-                <li><a class="dropdown-item" href="/rgAbout/rgFAQ.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/">About</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="/rgGuide/">Guide for developers</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/issues.html">Issues</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/">Updates</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/versions.html">-
+                  Versions</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/updates/deprecation.html">-
+                    Deprecation</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/">RDA Reference</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/dataflow/">- Data flow</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaref/translations/">-
+                  Translations</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rdaont/">RDA ontology</a></li>
+                <li><a class="dropdown-item" href="/rgAbout/rof.html" >RDA/ONIX Framework</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                id="ddProject" data-bs-toggle="dropdown" aria-expanded="false">GitHub Project</a>
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Project sub-menu">
-                <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies"
-                    >GitHub Project</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item"
-                    href="https://github.com/RDARegistry/RDA-Vocabularies/releases"
-                  >Releases</a></li>
-                <li><a class="dropdown-item"
-                    href="https://github.com/RDARegistry/RDA-Vocabularies/issues">Issues</a></li>
-              </ul>
-            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="ddProject" data-bs-toggle="dropdown" aria-expanded="false">GitHub Project</a> <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="Project sub-menu"> <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies">GitHub Project</a></li> <li><hr class="dropdown-divider" /></li> <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies/releases">Releases</a></li> <li><a class="dropdown-item" href="https://github.com/RDARegistry/RDA-Vocabularies/issues">Issues</a></li></ul> </li>
             <li class="nav-item"><a class="nav-link" href="http://access.rdatoolkit.org"
                 target="_blank">RDA Toolkit</a></li>
           </ul>
@@ -124,29 +122,68 @@
     </nav>
     <main class="container regDisplay">
       <div class="row mt-3">
-        <h1>Data that use RDA vocabularies</h1>
+        <h1>RDA/ONIX Framework</h1>
       </div>
-      <div class="row mt-2">
-        <div class="col-md-4">
-          <nav class="d-inline-flex list-group ms-3" aria-label="Navigation for data section">
-            <a href="rdaCuries.html" class="list-group-item list-group-item-action px-2 py-1">Curie
-              prefixes</a>
-            <a href="/Examples/" class="list-group-item list-group-item-action px-2 py-1"
-              >Examples</a>
-            <a href="http://rballs.info/" class="list-group-item list-group-item-action px-2 py-1"
-              >R-Balls</a>
-            <a href="/rgDatasets/" class="list-group-item list-group-item-action px-2 py-1"
-              >Datasets</a>
-          </nav>
+      <div class="row mt-2 gx-6">
+        <div class="col-md-6">
+          <p>The <a href="http://www.rda-jsc.org/docs/5chair10.pdf">RDA/ONIX Framework for Resource
+              Categorization</a> provides sets of defined attributes of resource content and
+            resource carriers and specified primary values for a subset of the defined
+            attributes.</p>
+          <p>The Framework is used to derive content and carrier categories specified in RDA.</p>
+          <p>The Framework attributes and values are represented in the RDA Registry as:</p>
+          <ul>
+            <li><a href="../Elements/rof/index.html">RDA/ONIX Framework element set</a></li>
+            <li>RDA/ONIX value vocabularies <ul>
+                <li><a href="../termList/rofch/">ROF Character</a></li>
+                <li><a href="../termList/rofem/">ROF Extension Mode</a></li>
+                <li><a href="../termList/rofer/">ROF Extension Requirement</a></li>
+                <li><a href="../termList/rofet/">ROF Extension Termination</a></li>
+                <li><a href="../termList/rofhf/">ROF Housing Format</a></li>
+                <li><a href="../termList/rofid/">ROF Image Dimensionality</a></li>
+                <li><a href="../termList/rofim/">ROF Image Movement</a></li>
+                <li><a href="../termList/rofin/">ROF Interaction</a></li>
+                <li><a href="../termList/rofit/">ROF Intermediation Tool</a></li>
+                <li><a href="../termList/rofrm/">ROF Revision Mode</a></li>
+                <li><a href="../termList/rofrr/">ROF Revision Requirement</a></li>
+                <li><a href="../termList/rofrt/">ROF Revision Termination</a></li>
+                <li><a href="../termList/rofsm/">ROF Sensory Mode</a></li>
+                <li><a href="../termList/rofsf/">ROF Storage Medium Format</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="col-md-8">
-          <p>This section contains links to data using the RDA vocabularies, including examples,
-            r-balls, and other datasets.</p>
+        <div class="col-md-6">
+          <p>The Framework is the basis of the RDA value vocabularies:</p>
+          <ul>
+            <li><a href="../termList/RDACarrierType/">RDA Carrier Type</a></li>
+            <li><a href="../termList/RDAContentType/">RDA Content Type</a></li>
+            <li><a href="../termList/RDAMediaType/">RDA Media Type</a></li>
+          </ul>
+          <p>More specific RDA types use RDA refinements to RDA/ONIX value vocabularies:</p>
+          <ul>
+            <li><a href="../termList/rofchrda/">ROF Character for RDA</a></li>
+            <li><a href="../termList/roffgrda/">ROF Form/Genre for RDA</a></li>
+            <li><a href="../termList/rofitrda/">ROF Intermediation Tool for RDA</a></li>
+            <li><a href="../termList/rofsfrda/">ROF Storage Medium Format for RDA</a></li>
+          </ul>
+          <p>The Framework is intended for use in a hub-and-spoke mapping architecture. Categories
+            from each schema are mapped to concepts in the ROF value vocabularies, instead of
+            directly to each other. Categories from two different schema can be mapped by matching
+            the values of their ROF concepts.</p>
+          <ul>
+            <li><a href="../Aligns/#rofrda">Alignments between RDA and RDA/ONIX Framework</a></li>
+            <li><a href="../Maps/#rofrda">Maps between RDA and RDA/ONIX Framework</a></li>
+          </ul>
+          <ul>
+            <li><a href="../Aligns/#isbd">Alignments between ISBD and RDA/ONIX Framework</a></li>
+            <li><a href="../Maps/#rofisbd">Maps between ISBD and RDA/ONIX Framework</a></li>
+          </ul>
         </div>
       </div>
     </main>
     <footer class="container footDisplay">
-      <div class="row py-1 my-2">
+      <div class="row py-1 mb-2">
         <div class="col-md-2 p-2">
           <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img
               alt="Creative Commons License" class="img-fluid"
@@ -172,7 +209,7 @@
               class="img-fluid" alt="RDA logo" /></a>
         </div>
       </div>
-      <p><em>This page was last updated 10 Mar 2022.</em></p>
+      <p><em>This page was last updated dd mmm yyyy.</em></p>
     </footer>
     <!-- Scripts-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
