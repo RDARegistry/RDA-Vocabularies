@@ -923,6 +923,9 @@ function setVocDetails(json) {
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
     switch (window.theVocDomain) {
+      case "Class":
+      filenameLocal = "c";
+      break;
       case "Agent":
       filenameLocal = "a";
       break;
