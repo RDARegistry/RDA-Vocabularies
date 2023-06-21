@@ -29,8 +29,8 @@
         
         
     
-        <owl:versionInfo>v5.0.11</owl:versionInfo>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-06-09</dc:modified>
+        <owl:versionInfo>v5.0.12</owl:versionInfo>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-06-20</dc:modified>
     </owl:Ontology>
 
 <!-- Properties -->
@@ -135,7 +135,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has abridger</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a resource by shortening an a related resource without changing the general meaning or manner of presentation.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a resource by shortening a resource of a related resource without changing the general meaning or manner of presentation.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60398"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60622"/>
@@ -514,7 +514,7 @@
 
   <rdfs:label xml:lang="en">has access point for entity</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/accessPointForEntity.en"/>
-  <skos:definition xml:lang="en">Relates an entity to an appellation of entity in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
+  <skos:definition xml:lang="en">Relates an entity to a nomen that is an appellation of entity in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60910"/>
 
 
@@ -1091,6 +1091,7 @@
         <rdfs:label xml:lang="fi">musikaaliversio (aineisto)</rdfs:label>
         <rdfs:label xml:lang="de">ist bearbeitet als Musiktheaterstück</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Musiktheaterressource, die auf einer anderen Ressource basiert.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston musiikkiteatteriaineistoon, joka perustuu toiseen aineistoon.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is adapted as novel -->
@@ -1479,7 +1480,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has addressee</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an agent to whom a resource or part of a resource is addressed.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent to whom a resource or a portion of a resource is addressed.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60374"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60690"/>
@@ -1585,7 +1586,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has agent history</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to biographical or historical information about an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a summary of information about the history of an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/agentHistory.en"/>
 
@@ -1668,6 +1669,7 @@
         <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka vastaa aggregoivan teoksen luomisesta valitsemalla ja järjestämällä muita aineistoja.</skos:definition>
         <rdfs:label xml:lang="de">hat Aggregator</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der für die Erstellung einer aggregierenden Ressource verantwortlich ist, indem er andere Ressourcen auswählt und zusammenstellt.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60447"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60428"/>
     </rdf:Description>
 
@@ -1696,6 +1698,7 @@
         <skos:definition xml:lang="fi">Liittää toimijan aineistoon, jossa toimija vastaa aggregoivan teoksen luomisesta valitsemalla ja järjestämällä muita aineistoja.</skos:definition>
         <rdfs:label xml:lang="de">ist Aggregator von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, bei der ein Akteur für die Aggregation verantwortlich ist, indem er andere Ressourcen auswählt und zusammenstellt.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60616"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60657"/>
     </rdf:Description>
 
@@ -2291,6 +2294,7 @@
         <skos:definition xml:lang="ar">يربط مصدر بوكيل مسؤول عن تصميم معماري، ويشمل ذلك عمل تمثيل تصويري لبيان كيف سيبدو مبنى أو هيكل آخر عند اكتماله.</skos:definition>
         <rdfs:label xml:lang="de">hat Architektin/Architekt</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der für einen architektonischen Entwurf verantwortlich ist, einschließlich einer bildlichen Darstellung, die zeigt, wie ein Gebäude oder eine andere Konstruktion nach der Fertigstellung aussehen soll.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka vastaa arkkitehtonisen suunnitelman luomisesta, mukaan lukien kuvaesityksestä, jonka tarkoitus on näyttää, miltä rakennus tai muu rakennelma näyttää valmiina.</skos:definition>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60473"/>
     </rdf:Description>
 
@@ -3870,6 +3874,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر ونظام مستخدم لتهيئة مصدر فيديو للبث التلفزيوني.</skos:definition>
         <rdfs:label xml:lang="de">hat Sendestandard</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem System, das zur Formatierung einer Videoressource für eine Fernsehsendung verwendet wird.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston järjestelmään, jonka mukaisesti videoaineisto muunnetaan televisiolähetystä varten.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has broader affiliated agent -->
@@ -3900,7 +3905,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has cadenza</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a musical resource that is an ornamental passage for a soloist added to a musical resource, such as a concerto, by the same or a different composer.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a musical resource that is an ornamental passage for a soloist added to a musical resource, such as a concerto, by the same or a different composer.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60204"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60116"/>
@@ -4004,7 +4009,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has capture information</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a place, date, or other information associated with the recording, filming, etc., of the content of a resource. </skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a place, date, or other information that is associated with the recording, filming, or other method of obtaining the content of a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/captureInformation.en"/>
 
@@ -4422,7 +4427,7 @@
 
   <rdfs:label xml:lang="en">has censor</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/censor.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a resource by revising the content for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content substantially unchanged.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a resource by revising the content of another resource for the purpose of suppressing content deemed objectionable on moral, political, military, or other grounds, but leaving the nature and general content substantially unchanged.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60852"/>
   <skos:scopeNote xml:lang="en">Substantial modification that results in the creation of a new resource is excluded.</skos:scopeNote>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60398"/>
@@ -4538,7 +4543,7 @@
 
   <rdfs:label xml:lang="en">has choral conductor</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/choralConductor.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a conductor who contributes to a musical resource by leading a choral performing group in a musical or dramatic presentation.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to an expression by leading a choral performing group in a musical or dramatic presentation.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60843"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60141"/>
 
@@ -4592,7 +4597,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has choreographer</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an agent who is responsible for a choreographic resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is responsible for creating a choreographic resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60447"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60662"/>
@@ -4674,7 +4679,7 @@
 
   <rdfs:label xml:lang="en">has choreography</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/choreography.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a resource that is a choreographic resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a choreographic resource that complements a resource.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60741"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60198"/>
 
@@ -4766,7 +4771,7 @@
 
   <rdfs:label xml:lang="en">has colleague</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/colleague.en"/>
-  <skos:definition xml:lang="en">Relates an agent to a fellow member of a profession, staff, or academic faculty.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is a fellow member of a profession, staff, or academic faculty.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60853"/>
 
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60454"/>
@@ -4945,6 +4950,7 @@
         <skos:definition xml:lang="ar">يربط مصدر بوكيل مسؤول عن إنتاج مصدر من خلال استخدام عمليات ميكانيكية ضوئية لإنتاج المطبوعات مباشرة من فيلم صلد من الجيلاتين أو من غيره من المواد الغروية التي تحتوي على أسطح مستقبلة أو طاردة للحبر.</skos:definition>
         <rdfs:label xml:lang="de">hat Lichtdruckerin/Lichtdrucker</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der für die Herstellung einer Ressource verantwortlich ist, indem er ein fotomechanisches Verfahren zur Herstellung von Abzügen direkt von einem gehärteten Film aus Gelatine oder einem anderen Kolloid verwendet, der druckerfarbenaufnehmende und -abweisende Oberflächen aufweist.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka osallistuu aineiston luomiseen tekemällä vedoksia suoraan kovettuneelta gelatiinifilmiltä tai muulta materiaalilta, jossa on mustetta imeviä ja hylkiviä pintoja.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is collotyper of -->
@@ -5454,7 +5460,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has component of merger</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent who formed a related agent by merging with one or more other agents to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who forms another agent by merging with one or more other agents.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60684"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/componentOfMerger.en"/>
@@ -5538,7 +5544,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has concordance</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource that is an index of all or selected words that occur in a textual resource. </skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a systematic guide of all or selected words that occur in a textual resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60291"/>
@@ -5795,6 +5801,7 @@
         <rdfs:label xml:lang="de">hat Inhaltstyp</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Kategorisierung, die zum einen die grundlegende Form der Kommunikation widerspiegelt, in der der Inhalt ausgedrückt wird, und zum andern die menschliche Wahrnehmung wiedergibt, durch die diese wahrgenommen werden soll.</skos:definition>
         <skos:scopeNote xml:lang="de">Für Inhalt, der in Form eines Bilds oder mehrerer Bilder ausgedrückt wird, spiegelt der Inhaltstyp auch die Anzahl räumlicher Dimensionen wider, in denen der Inhalt wahrgenommen werden soll, sowie die Wahrnehmung von vorhandener oder nicht vorhandener Bewegung.</skos:scopeNote>
+        <skos:scopeNote xml:lang="fi">Sisältötyyppi kuvaa myös mahdollista kuvasisällön hahmottamiseen vaikuttavaa moniulotteisuutta ja liikettä.</skos:scopeNote>
     </rdf:Description>
 
 <!-- Property: has context of use -->
@@ -6858,7 +6865,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has coordinates of cartographic content</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a mathematical system for identifying a place covered by the cartographic content of a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a place that is the area of coverage of a cartographic resource that is described using a mathematical system to identify its boundaries or location.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
 
@@ -6932,6 +6939,7 @@
         <rdfs:label xml:lang="fi">aineiston copyright-vuosi</rdfs:label>
         <rdfs:label xml:lang="de">ist Copyright-Datum von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Zeitraum in Beziehung zu einer Ressource, die mit einem Schutzanspruch nach dem Urheberrecht oder einem ähnlichen Regelwerk während eines Zeitraums in Verbindung steht.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää ajanjakson aineistoon, johon liittyy copyright-säädösten tai vastaavien säädösten alainen copyright-suojaus ajanjakson aikana.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has costume designer -->
@@ -6996,9 +7004,9 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has country associated with agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a country with which an agent is identified.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a place that is a country with which an agent is identified.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/countryAssociatedWithPerson.en"/>
+  
 
   <rdfs:label xml:lang="da">har land knyttet til agent</rdfs:label>
 
@@ -7011,6 +7019,7 @@
         <skos:definition xml:lang="fi">Liittää aineston maahan, johon toimija yhdistetään.</skos:definition>
         <rdfs:label xml:lang="de">hat Land, das mit einem Akteur in Verbindung steht</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Land, mit dem einem Akteur identifiziert wird.</skos:definition>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/countryAssociatedWithAgent.en"/>
     </rdf:Description>
 
 <!-- Property: is country associated with agent of -->
@@ -7040,7 +7049,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has court governed</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a court governed by court rules, regardless of their official nature.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent that is a court governed by court rules, regardless of their official nature.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60374"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60005"/>
@@ -7136,6 +7145,7 @@
         <skos:definition xml:lang="fi">Liittää toimijan aineistoon, jossa toimija on osallisena osalllisena valmistelemalla tuomioistuimen lausunnon julkaistavaksi.</skos:definition>
         <rdfs:label xml:lang="de">ist Gerichtsstenografin/Gerichtsstenograf von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, zu der er beiträgt, indem er eine Urteilsbegründung zur Veröffentlichung vorbereitet.</skos:definition>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P61090"/>
     </rdf:Description>
 
 <!-- Property: has coverage of content -->
@@ -7168,7 +7178,7 @@
 
   <rdfs:label xml:lang="en">has co-worker</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/coworker.en"/>
-  <skos:definition xml:lang="en">Relates an agent to an agent who is a colleague who works with or shares a task with a related agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is a colleague who works with or shares a task with another agent.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60859"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60853"/>
 
@@ -7307,6 +7317,7 @@
         <rdfs:label xml:lang="de">hat geistige Schöpferin/geistigen Schöpfer</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der für eine Ressource verantwortlich ist.</skos:definition>
         <skos:scopeNote xml:lang="de">Darunter fallen Akteure, die für die Schaffung einer Ressource mitverantwortlich sind, wenn sie entweder dieselbe Rolle ausführen, wie bei einer Zusammenarbeit zwischen zwei Schriftstellerinnen/Schriftstellern, oder unterschiedliche Rollen ausführen, wie bei einer Zusammenarbeit zwischen einer Komponistin/einem Komponisten und einer Textdichterin/einem Textdichter.</skos:scopeNote>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P61091"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60435"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60431"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60434"/>
@@ -7611,6 +7622,7 @@
         <skos:definition xml:lang="ar">يربط مصدر بوكيل يبتكر، أو يجمع، أو ينظم معرضًا أو مجموعة من المصادر.</skos:definition>
         <rdfs:label xml:lang="de">hat Kuratorin/Kurator</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der eine Ausstellung oder Sammlung einer Ressource konzipiert, zusammenstellt oder organisiert.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston siitä näyttelyn tai kokoelman suunnittelevaan, kokoavaan tai järjestävään toimijaan.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is curator of -->
@@ -7643,6 +7655,8 @@
         <skos:definition xml:lang="ar">يربط بين وكيل ومصدر تم تجميعه أو تنظيمه في معرض أو مجموعة.</skos:definition>
         <rdfs:label xml:lang="de">ist Kuratorin/Kurator von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, die in einer Ausstellung oder Sammlung aggregiert oder organisiert ist.</skos:definition>
+        <rdfs:label xml:lang="fi">kuraattori aineistossa</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää toimijan aineistoon, joka on koottu tai järjestetty näyttelyksi tai kokoelmaksi.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has current owner -->
@@ -7814,6 +7828,7 @@
         <skos:definition xml:lang="ar">يربط مصدر بوكيل يُمثل مؤدِ يُساهم في مصدر من خلال الرقص في عرض موسيقي أو درامي.</skos:definition>
         <rdfs:label xml:lang="de">hat Tänzerin/Tänzer</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ausführenden/einem Ausführenden, die/der zu einer Ressource beiträgt, indem sie/er in einer musikalischen, dramatischen oder ähnlichen Darbietung tanzt.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka on aineistossa osallisena esiintyjänä tanssimalla musiikki-, näytelmä-tms. esityksessä.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is dancer of -->
@@ -7946,7 +7961,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has date of birth</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a year an agent was born.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a timespan during which an agent was born.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60324"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dateOfBirth.en"/>
@@ -8038,7 +8053,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has date of conference</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a date or range of dates on which a conference, congress, meeting, exhibition, fair, festival, etc., was held.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a timespan during which a conference, exhibition, or other formally named and convened event is held.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60324"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dateOfConference.en"/>
@@ -8084,7 +8099,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has date of death</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a year an agent died.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a timespan during which an agent died.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60324"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dateOfDeath.en"/>
@@ -8176,7 +8191,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has date of establishment</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a date on which an agent was established or founded.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a timespan during which an agent is established or founded.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60324"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dateOfEstablishment.en"/>
@@ -8413,7 +8428,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has date of termination</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a date on which an agent was terminated or dissolved.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a timespan during which an agent is terminated or dissolved.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60324"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dateOfTermination.en"/>
@@ -8471,7 +8486,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has date of usage</rdfs:label>
-  <skos:definition xml:lang="en">Relates a nomen to a date or range of dates that is associated with the use of an appellation of an entity.</skos:definition>
+  <skos:definition xml:lang="en">Relates a nomen to a timespan that is a date or range of dates that is associated with the use of a nomen.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dateOfUsage.en"/>
 
@@ -8497,7 +8512,7 @@
   <rdfs:label xml:lang="en">is date of usage of</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dateOfUsageOf.en"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60075"/>
-  <skos:definition xml:lang="en">Relates a timespan to an appellation of an entity used during a timespan.</skos:definition>
+  <skos:definition xml:lang="en">Relates a timespan to a nomen that is an appellation of an entity used during a timespan.</skos:definition>
 <rdfs:label xml:lang="nl">is datum van gebruik van</rdfs:label>
     <rdfs:label xml:lang="ar">هو تاريخ استخدام لـ</rdfs:label>
         <skos:definition xml:lang="ar">يربط بين فترة زمنية وتسمية لكيان مستخدم خلال فترة زمنية</skos:definition>
@@ -8517,7 +8532,7 @@
 
   <rdfs:label xml:lang="en">has declination</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/declination.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an angular distance to a body on the celestial sphere measured north or south through 90° from the celestial equator along the hour circle of the body.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to the angular distance of a celestial body that is measured north or south through 90° from the celestial equator along the hour circle through the body.</skos:definition>
 
   <rdfs:label xml:lang="da">har deklination</rdfs:label>
 
@@ -8529,6 +8544,7 @@
         <rdfs:label xml:lang="fi">deklinaatio aineistossa</rdfs:label>
         <rdfs:label xml:lang="de">hat Deklination</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Winkelabstand eines Himmelskörpers vom Himmelsäquator, der nördlich oder südlich durch 90° vom Himmelsäquator entlang des Stundenkreises des Körpers gemessen wird.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston taivaankappaleen kulmaetäisyyteen, joka on mitattu taivaanekvaattorista pohjoiseen tai etelään 90°:een läpi kappaleen tuntiympyrää pitkin.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has dedicatee -->
@@ -8732,7 +8748,7 @@
 
   <rdfs:label xml:lang="en">has degree committee member</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/degreeCommitteeMember.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an agent serving on a committee that supervises a thesis or dissertation of a student.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who serves on a committee that supervises a thesis or dissertation of a student.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60816"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60374"/>
 
@@ -8826,7 +8842,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has degree supervisor</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an academic supervisor who is responsible for advising or overseeing thesis or dissertation research for an academic degree that results in a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is an academic supervisor who is responsible for advising or overseeing thesis or dissertation research for an academic degree that results in a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60447"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60649"/>
@@ -9122,7 +9138,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">is described by</rdfs:label>
-  <skos:definition xml:lang="en">Relates an entity to a resource that is a description of a entity.</skos:definition>
+  <skos:definition xml:lang="en">Relates an entity to a resource that is a description of an entity.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60806"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60190"/>
@@ -9554,6 +9570,9 @@
         <skos:altLabel xml:lang="ar">له تفاصيل لمحتوى ملون</skos:altLabel>
         <rdfs:label xml:lang="de">hat Details zum Farbinhalt</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu Details zu dem Vorhandensein von Farbe, Tönung und so weiter im Inhalt einer Ressource und den spezifischen vorhandenen Farben, Tönungen und so weiter (einschließlich Schwarz und Weiß).</skos:definition>
+        <rdfs:label xml:lang="fi">värisisällön tarkemmat tiedot</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää aineiston tietoihin, värien, (musta ja valkoinen mukaanlukien), sävyjen jne. esiintymisestä aineiston sisällössä.</skos:definition>
+        <skos:altLabel xml:lang="fi">värisisällön tarkemmat tiedot</skos:altLabel>
     </rdf:Description>
 
 <!-- Property: has details of configuration of playback channels -->
@@ -9994,6 +10013,8 @@
         <skos:definition xml:lang="ar">يربط بين مصدر وتفاصيل عن محتوى يهدف إلى توضيح محتوى أساسي لمصدر.</skos:definition>
         <rdfs:label xml:lang="de">hat Details zu illustrierendem Inhalt</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu Details zum Inhalt, die einen primären Inhalt einer Ressource verdeutlichen sollen.</skos:definition>
+        <rdfs:label xml:lang="fi">kuvituksellisen sisällön tarkemmat tietot</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää aineiston lisätietoihin sen ensisijaista sisältöä kuvittamaan tarkoitetusta sisällöstä.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has details of layout -->
@@ -10721,7 +10742,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has dimensions of cartographic image</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a measurement of a face of a map, etc.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a measurement of a face of a map or cartographic diagram, view, profile, or section.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60539"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/dimensionsOfCartographicImage.en"/>
@@ -11023,7 +11044,7 @@
 
   <rdfs:label xml:lang="en">has DJ</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/DJ.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an agent who mixes recorded tracks together during a live performance or in a recording studio to appear as one continuous track.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a resource by mixing recorded tracks together during a live performance or in a recording studio to appear as one continuous track.</skos:definition>
   <skos:scopeNote xml:lang="en">Remixing activities that substantially change the nature and content of the original resource, resulting in a new resource, and mixing and assembling the multiple tracks of a recording are excluded.</skos:scopeNote>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60886"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60398"/>
@@ -11045,6 +11066,8 @@
         <rdfs:label xml:lang="de">hat DJ</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der während eines Live-Auftritts oder in einem Aufnahme-Studio aufgenommene Einzelspuren (Kanäle) zu einem scheinbar ununterbrochen durchgehenden Klangerlebnis zusammen mischt.</skos:definition>
         <skos:scopeNote xml:lang="de">Darunter fallen keine Nachbearbeitungen, die die Art und den Inhalt der Originalressource substantiell verändern, so dass eine neue Ressource entsteht, sowie das Mischen und Zusammenlegen von mehreren Einzelspuren einer Aufnahme.</skos:scopeNote>
+        <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka osallistuu aineiston tekemiseen miksaamalla ääniraitoja yhteen yhtäjaksoiseksi raidaksi live-esityksessä tai äänitysstudiossa.</skos:definition>
+        <skos:scopeNote xml:lang="fi">Ei koske uudelleenmiksauksia, jotka olennaisesti muuttavat alkuperäisen aineiston luonnetta ja sisältöä johtaen uuteen aineistoon, eikä äänitteen useampien raitojen miksaamista ja yhdistelyä.</skos:scopeNote>
     </rdf:Description>
 
 <!-- Property: is DJ of -->
@@ -11087,7 +11110,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has donor</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a former owner of a resource that donated the resource to another owner.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is a former owner of a resource who donates the resource to another owner.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60401"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60012"/>
@@ -11162,6 +11185,7 @@
         <skos:definition xml:lang="ar">يربط مصدر بوكيل يُساهم في مصدر بواسطة مهندس معماري أو مخترع أو وكيل آخر من خلال وضع خطط أو رسومات مُفصلة للمباني، السفن، الطائرات، الآلات أو الأشياء أو غيرها من الإنشاءات.</skos:definition>
         <rdfs:label xml:lang="de">hat Technische Zeichnerin/Technischen Zeichner</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der zu einer Expression einer Architektin/eines Architekten, einer Erfinderin/eines Erfinders oder eines anderen Akteurs beiträgt, indem er detaillierte Pläne oder Zeichnungen für Gebäude, Schiffe, Flugzeuge, Maschinen, Objekte oder andere Konstruktionen anfertigt.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka osallistuu arkkitehdin, suunnittelijan tai muun toimijan aineistoon tuottamalla tarkkoja suunnitelmia tai piirroksia rakennuksista, laivoista, lentokoneista, laitteista, esineistä tai muista luomuksista.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is draftsman of -->
@@ -11381,6 +11405,8 @@
 
 
 <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
+    <rdfs:label xml:lang="fi">kesto</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää ajanjakson aineistoon, jolla on soittoaika, esitysaika, toistoaika tai muu kestoaika.</skos:definition>
     </rdf:Description>
 
 <!-- Property: DEPRECATED -->
@@ -11405,7 +11431,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has edition statement</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a statement identifying an edition to which a resource belongs.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a statement that identifies an edition to which a resource belongs.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/editionStatement.en"/>
 
@@ -11440,6 +11466,8 @@
   <skos:definition xml:lang="da">Relaterer en ressource til en agent, der har bidraget til en ressource ved at revidere eller præcisere indholdet, eller ved at udvælge og sammensætte ressourcer eller dele af ressourcer, af en eller flere ophavspersoner.</skos:definition>
 <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
     <rdfs:label xml:lang="fi">leikkaaja</rdfs:label>
+    <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka osallistuu aineiston tekemiseen sisältöä tarkistamalla tai selventämällä tai valitsemalla ja kokoamalla toisen tekijän tai tekijöiden aineistoja tai niiden osia.</skos:definition>
+        <skos:scopeNote xml:lang="fi">Johdannon, huomautusten tai muun olennaisen sisällön lisääminen, samoin aineiston vamistelu tuotantoa, julkaisua tai jakelua varten. Ei koske uuteen aineistoon johtavia merkittäviä korjauksia, mukautuksia jne, jotka merkittävästi muuttavat alkuperäisen aineiston luonnetta tai sisältöä.</skos:scopeNote>
     </rdf:Description>
 
 <!-- Property: has editorial director -->
@@ -11678,7 +11706,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has employee</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent employed by an agent to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is employed by an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60679"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/employee.en"/>
@@ -11701,7 +11729,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has employer</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent who employs an agent to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who employs an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60629"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/employer.en"/>
@@ -11746,12 +11774,12 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
-  <rdfs:label xml:lang="en">has enacting jurisdiction</rdfs:label>
+  <rdfs:label xml:lang="en">has enacting government</rdfs:label>
   <skos:definition xml:lang="en">Relates a resource to an agent who is a government enacting a resourcce that is a law, regulation, constitution, court rule, or other legislation.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60447"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60014"/>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/enactingJurisdiction.en"/>
+  
 
   <rdfs:label xml:lang="da">har vedtagende jurisdiktion</rdfs:label>
 
@@ -11763,6 +11791,7 @@
         <skos:definition xml:lang="fi">Liittää aineiston lainsäädännöllistä aineistoa kuten lakeja, perustuslakia, tuomioistuimen sääntöjä tai muuta lainsäädäntöä säätävään hallinnolliseen toimijaan.</skos:definition>
         <rdfs:label xml:lang="de">Normerlassende Gebietskörperschaft</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Regierung, die eine Ressource erlässt, bei dem es sich um ein Gesetz, eine Verordnung, eine Verfassung, eine Rechtsverordnung oder eine andere Gesetzgebung handelt.</skos:definition>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/enactingGovernment.en"/>
     </rdf:Description>
 
 <!-- Property: is enacting jurisdiction of -->
@@ -11770,12 +11799,12 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
-  <rdfs:label xml:lang="en">is enacting jurisdiction of</rdfs:label>
+  <rdfs:label xml:lang="en">is enacting government of</rdfs:label>
   <skos:definition xml:lang="en">Relates an agent to a resource that is a law, regulation, constitution, court rule, etc. enacted by a government body.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60672"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60096"/>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/enactingJurisdictionOf.en"/>
+  
 
   <rdfs:label xml:lang="da">er udøvende jurisdiktion af</rdfs:label>
 
@@ -11787,6 +11816,7 @@
         <skos:definition xml:lang="fi">Liittää toimijan valtiovallan aineistoon, kuten lakiin, asetukseen, perustuslakiin, tuomioistuinta koskevaan sääntöön tms.</skos:definition>
         <rdfs:label xml:lang="de">ist normerlassende Gebietskörperschaft von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, bei der es sich um ein Gesetz, eine Verordnung, eine Verfassung, eine Rechtsverordnung und so weiter handelt, das/die von einer Regierung erlassen wird.</skos:definition>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/enactingGovernmentOf.en"/>
     </rdf:Description>
 
 <!-- Property: has encoded bitrate -->
@@ -12521,7 +12551,7 @@
 
   <rdfs:label xml:lang="en">has fellow student</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/fellowStudent.en"/>
-  <skos:definition xml:lang="en">Relates an agent to an associate of another student who is also formally engaged in learning.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is an associate of another student who is also formally engaged in learning.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60861"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60454"/>
 
@@ -12543,7 +12573,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has field of activity of agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a field of endeavour, area of expertise, competence, responsibility, jurisdiction etc., in which an agent is engaged.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a field of endeavor, area of competence, or responsibility in which an agent is engaged. </skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/fieldOfActivityOfAgent.en"/>
 
@@ -12970,7 +13000,7 @@
 
   <rdfs:label xml:lang="en">has first alphanumeric designation of alternative sequence</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfAlternativeSequence.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a second or subsequent system of numbering presented in numeric or alphabetic form on the first issue or part of a sequence of numbering for a serial.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation in the form of numbers or alphabetic characters that is used to indicate the first in a concurrent sequence of numbering of the parts or iterations of a resource.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60533"/>
 
   <rdfs:label xml:lang="da">har alternativ numerisk og/eller alfabetisk betegnelse for første nummer eller del af en sekvens</rdfs:label>
@@ -12992,7 +13022,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has first alphanumeric designation of sequence</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation in numeric or alphabetic form presented on the first issue or part of a serial issued in a sequence of numbering.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation in the form of numbers or alphabetic characters that is used to indicate the first in a sequence of numbering of the parts or iterations of a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60533"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfSequence.en"/>
@@ -13018,7 +13048,7 @@
 
   <rdfs:label xml:lang="en">has first chronological designation of alternative sequence</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfAlternativeSequence.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a second or subsequent system of numbering presented in the form of a date on the first issue or part of a sequence of numbering for a serial.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation in the form of a date or other timespan that is used to indicate the first in a concurrent sequence of numbering of the parts or iterations of a resource.</skos:definition>
   <skos:scopeNote xml:lang="en">A designation includes a year; year and month; month, day, and year. A chronological designation of alternative sequence may include a date in a different calendar.</skos:scopeNote>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60533"/>
 
@@ -13045,7 +13075,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has first chronological designation of sequence</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation in date form presented on the first issue or part of a serial issued in a sequence of numbering.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation in the form of a date or other timespan that is used to indicate the first in a sequence of numbering of the parts or iterations of a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60533"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfSequence.en"/>
@@ -13329,7 +13359,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has founded agent of agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent who an agent founded to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who initiates an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60694"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/foundedAgentOfAgent.en"/>
@@ -13373,6 +13403,7 @@
         <rdfs:label xml:lang="fi">perustaja (toimija) aineistossa</rdfs:label>
         <rdfs:label xml:lang="de">ist Begründerin/Begründer einer Ressource von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, die mit einer Verantwortung eines Akteurs verbunden ist, eine fortlaufende, integrierende oder mehrteilig monografische Ressource einzuführen.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää toimijan aineistoon, johon liittyy toimijan vastuu sarja-aineiston, päivittyvän aineiston tai moniosaisen monografian luomisesta.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has founding agent of agent -->
@@ -13381,7 +13412,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has founder agent of agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent who founded an agent to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who initiates an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60687"/>
 
@@ -13451,6 +13482,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر ومصدر يعد اقتباسًا وترجمة إلى لغة أخرى لمصدر آخَر.</skos:definition>
         <rdfs:label xml:lang="de">ist frei übersetzt als</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressource, die sowohl eine Bearbeitung als auch eine Übersetzung einer anderen Ressource in eine andere Sprache ist.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston aineistoon, joka on sekä lähteenä olevan aineiston mukaelma että käännös toiselle kielelle.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is free translation of -->
@@ -13529,7 +13561,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has fuller form of name</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a full form of a part of a name represented only by an initial or abbreviation in a form chosen as a preferred name, or a part of a name not included in a form chosen as a preferred name.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a name of agent that includes the fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/fullerFormOfName.en"/>
 
@@ -13543,6 +13575,7 @@
         <rdfs:label xml:lang="fi">nimen täydellisempi muoto aineistossa</rdfs:label>
         <rdfs:label xml:lang="de">hat vollständigere Namensform</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer vollständigen Form eines Namens, dessen bevorzugte Namensform nur durch eine Initiale oder eine Abkürzung dargestellt wird, oder zu einem Teil eines Namens, der nicht als bevorzugte Namensform gewählt wird.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston alkukirjaimin, lyhenteellä tai muuten lyhennetyn tai muokatun nimen tai nimen osan täydellisempään muotoon.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has gender -->
@@ -13683,7 +13716,7 @@
 
   <rdfs:label xml:lang="en">has given name</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/givenName.en"/>
-  <skos:definition xml:lang="en">Relates an agent to a name given to an agent at birth or at some later point in addition to, or instead of, a surname.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a nomen that is a name of agent given at birth or at some later point in addition to, or instead of, a surname.</skos:definition>
 
   <rdfs:label xml:lang="da">har fornavn</rdfs:label>
 
@@ -13915,7 +13948,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has hereditary title</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a title of nobility, etc., associated with an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a word or phrase indicative of royalty, nobility, etc., associated with an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/hereditaryTitle.en"/>
 
@@ -13937,7 +13970,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has hierarchical subordinate</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent who is subordinate to a related agent to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is subordinate to another agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60680"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/hierarchicalSubordinate.en"/>
@@ -13960,7 +13993,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has hierarchical superior</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent who is hierarchically superior to a related agent to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is hierarchically superior to another agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60681"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/hierarchicalSuperior.en"/>
@@ -14151,7 +14184,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">is host institution of</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent hosting an event, exhibit, conference, etc., which gave rise to a resource to a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a resource that arises from a conference, exhibition, or other event that is hosted by an agent with little or no responsibility for the content.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60602"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60061"/>
@@ -14203,7 +14236,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has identifier for agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to an appellation of agent that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a nomen that is an appellation of agent that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/identifierForAgent.en"/>
 
@@ -14257,7 +14290,7 @@
 
   <rdfs:label xml:lang="en">has identifier for entity</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/identifierForEntity.en"/>
-  <skos:definition xml:lang="en">Relates an entity to an appellation of entity that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify an entity.</skos:definition>
+  <skos:definition xml:lang="en">Relates an entity to a nomen that is an appellation of entity that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify an entity.</skos:definition>
   <skos:scopeNote xml:lang="en">The coded string is usually independent of natural language and social naming conventions.</skos:scopeNote>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60928"/>
 
@@ -14345,7 +14378,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has identifier for resource</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an appellation of resource that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is an appellation of resource that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
 
@@ -14639,7 +14672,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has incidental music</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a musical resource that complements a resource that is a play or other resource for the stage that is realized as spoken word.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a musical resource that complements a resource that is a play or other work for the stage that is realized as spoken word.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60202"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/incidentalMusic.en"/>
@@ -14687,7 +14720,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has index</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource that is an index of the content of a resource that is a textual resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a systematic guide to the content of a resource that is a textual resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60302"/>
@@ -14728,6 +14761,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر ومصدر يمثل خدمة استخلاص وتكشيف تُفهرس محتويات مصدر آخَر.</skos:definition>
         <rdfs:label xml:lang="de">ist indexiert in</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressource, bei der es sich um einen Abstract- und Indexierungsdienst handelt, die die Inhalte einer ursprünglichen Expression indexiert.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston aineistoon, joka on tiivistelmä- ja indeksointipalvelu, joka sisältää toisen aineiston sisällön abstraktit.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is indexing for -->
@@ -14752,6 +14786,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر ومصدر تم تكشيف محتوياته بواسطة مصدر ذي صلة.</skos:definition>
         <rdfs:label xml:lang="de">ist Indexierung für</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressource, deren Inhalte durch eine in Beziehung stehende Ressource indexiert wurden.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston aineistoon, jonka sisältö on indeksoitu liittyvässä aineistossa.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is index to -->
@@ -14962,7 +14997,7 @@
 
   <rdfs:label xml:lang="en">has instrumental conductor</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/instrumentalConductor.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a conductor who contributes to a musical resource by leading an instrumental performing group in a musical or dramatic presentation.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a resource by leading an instrumental performing group in a musical or dramatic presentation.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60845"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60141"/>
 
@@ -15016,7 +15051,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has instrumentalist</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a performer who contributes to a resource by playing a musical instrument.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is a performer who contributes to a resource by playing a musical instrument.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60387"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60025"/>
@@ -15035,6 +15070,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر ومؤدِ يُساهم في مصدر من خلال العزف على آلة موسيقية.</skos:definition>
         <rdfs:label xml:lang="de">hat Instrumentalmusikerin/Instrumentalmusiker</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ausführenden/einem Ausführenden, die/der zu einer Ressource beiträgt, indem sie/er ein Musikinstrument spielt.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston esittäjään, joka osallistuu aineistoon soittamalla soitinta.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is instrumentalist of -->
@@ -15524,7 +15560,7 @@
 
   <rdfs:label xml:lang="en">has jointly held conference</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/jointlyHeldConference.en"/>
-  <skos:definition xml:lang="en">Relates an agent to an agent that that is a conference that is jointly held with a related conference.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is a conference that is jointly held with a related conference.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60903"/>
 
   <rdfs:label xml:lang="da">har konference afholdt i fællesskab</rdfs:label>
@@ -15593,7 +15629,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has jurisdiction governed</rdfs:label>
-  <skos:definition xml:lang="en">Relates a place that is a jurisdiction to an agent who is a government of a jurisdiction governed by a law, regulation, etc., that was enacted by another government.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a place that is a jurisdiction governed by a law, regulation, etc., that was enacted by another government.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P61018"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60015"/>
@@ -15617,7 +15653,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">is jurisdiction governed of</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a place that is a jurisdiction governed by a law, regulation, etc., that was enacted by another government.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a resource that involves a responsibility for managing the financial, technical, and organizational aspects of a production for stage, screen, sound recording, television, webcast, etc.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60097"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/jurisdictionGovernedOf.en"/>
@@ -15631,6 +15667,7 @@
         <skos:definition xml:lang="ar">يربط بين وكيل ومكان يخضع لسلطة قضائية يحكمها قانون، لائحة تنظيمية...إلخ، سنتها حكومة أخرى.</skos:definition>
         <rdfs:label xml:lang="de">ist geregelte Gebietskörperschaft von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einem Geografikum, das durch ein Gesetz, eine Verordnung und so weiter geregelt wird, das/die von einer anderen Regierung erlassen wurde.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää toimijan paikkaan, joka on toisen julkishallinnollisen yhteisön säätämien lakien, asetusten tms. alainen.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has key -->
@@ -15661,7 +15698,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has key title</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a title of resource that is assigned by an ISSN registration agency.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a title of resource that is assigned by an ISSN registration agency.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P61023"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/keyTitle.en"/>
@@ -15764,7 +15801,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has language of agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a language an agent uses in its communications, when writing for publication, broadcasting, etc.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a language that is used by an agent in its communications.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/languageOfAgent.en"/>
 
@@ -15822,6 +15859,7 @@
         <rdfs:label xml:lang="fi">kieliversio</rdfs:label>
         <rdfs:label xml:lang="de">hat Sprachversion</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressource, die durch Änderung der sprachlichen Zielgruppe einer Ressource erstellt wird.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston aineistoon, joka on luotu muuttamalla aineiston kieliyleisöä.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is language version of -->
@@ -15843,6 +15881,7 @@
         <rdfs:label xml:lang="de">ist Sprachversion von</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressource, deren sprachlichen Zielgruppe geändert wird, um eine Ressource zu schaffen.</skos:definition>
         <rdfs:label xml:lang="fi">aineiston kieliversio</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää aineiston aineistoon, jolla on aineiston luomiseksi muutettu kieliyleisö.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has last alphanumeric designation of alternative sequence -->
@@ -15853,7 +15892,7 @@
 
   <rdfs:label xml:lang="en">has last alphanumeric designation of alternative sequence</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfAlternativeSequence.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a second or subsequent system of numbering presented in numeric or alphabetic form on the last issue or part of a sequence of numbering for a serial.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation in the form of numbers or alphabetic characters that is used to indicate the last in a concurrent sequence of numbering of the parts or iterations of a resource.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60533"/>
 
   <rdfs:label xml:lang="da">har alternativ numerisk og/eller alfabetisk betegnelse for sidste nummer eller del af en sekvens</rdfs:label>
@@ -15875,7 +15914,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has last alphanumeric designation of sequence</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation in numeric or alphabetic form presented on the last issue or part of a serial issued in a sequence of numbering.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation in the form of numbers or alphabetic characters that is used to indicate the last in a sequence of numbering of the parts or iterations of a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60533"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfSequence.en"/>
@@ -15901,7 +15940,7 @@
 
   <rdfs:label xml:lang="en">has last chronological designation of alternative sequence</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfAlternativeSequence.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a second or subsequent system of numbering presented in the form of a date on the last issue or part of a sequence of numbering for a serial.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation in the form of a date or other timespan that is used to indicate the last in a concurrent sequence of numbering of the parts or iterations of a resource.</skos:definition>
   <skos:scopeNote xml:lang="en">A designation includes a year; year and month; month, day, and year. A chronological designation of alternative sequence may include a date in a different calendar.</skos:scopeNote>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60533"/>
 
@@ -15928,7 +15967,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has last chronological designation of sequence</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation in date form presented on the last issue or part of a serial issued in a sequence of numbering.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation in the form of a date or other timespan that is used to indicate the last in a sequence of numbering of the parts or iterations of a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60533"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfSequence.en"/>
@@ -15975,7 +16014,7 @@
 
   <rdfs:label xml:lang="en">has latitude</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/latitude.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a distance of a point on a planet or satellite measured north and south from the equator.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to the distance of a place on a planet or satellite that is measured north and south from the equator.</skos:definition>
 
   <rdfs:label xml:lang="da">har breddegrad</rdfs:label>
 
@@ -16020,7 +16059,7 @@
 
   <rdfs:label xml:lang="en">has letterer</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/letterer.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an illustrator who contributes to a comic book, graphic novel, etc., by drawing text and graphic sound effects.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a comic book, graphic novel, etc., by drawing the text and graphic sound effects.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60756"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60396"/>
 
@@ -16128,6 +16167,7 @@
         <rdfs:label xml:lang="fi">libretisti (toimija) aineistossa</rdfs:label>
         <rdfs:label xml:lang="de">ist Librettistin/Librettist von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, bei der ein Akteur für das Verfassen des Texts einer Oper, einer sonstigen Bühnenressource oder eines Oratoriums verantwortlich ist.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää toimijan aineistoon, jossa toimija vastaa oopperan tai muun musiikillisen näyttämöteoksen tai oratorion sanojen kirjoittamisesta.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has libretto -->
@@ -16136,7 +16176,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has libretto</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource that is realized as text that complements a resource that is an opera or other resource for the musical stage, or an oratorio.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a textual resource that complements a resource that is a musical or choreographic resource such as an opera, a ballet, or other resource for the musical stage, or an oratorio.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60198"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60117"/>
@@ -16334,7 +16374,7 @@
 
   <rdfs:label xml:lang="en">has local affiliate</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/localAffiliate.en"/>
-  <skos:definition xml:lang="en">Relates a local agent affiliated with a broader agent which acts for it and others at a broader organizational level to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent that is local who is affiliated with a broader body which acts for it and others at a broader organizational level.</skos:definition>
 
   <rdfs:label xml:lang="da">har lokal filial</rdfs:label>
 
@@ -16368,7 +16408,7 @@
 
   <rdfs:label xml:lang="en">has longitude</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/longitude.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a distance of a point on a planet or satellite measured east and west from a reference meridian.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to the distance of a place on a planet or satellite that is measured east and west from a reference meridian.</skos:definition>
 
   <rdfs:label xml:lang="da">har længdegrad</rdfs:label>
 
@@ -16389,7 +16429,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has longitude and latitude</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a place that identifies the area covered by the cartographic content of a resource using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a place that is the area of coverage of a cartographic resource that is identified using the longitude of the westernmost and easternmost boundaries and the latitude of the northernmost and southernmost boundaries.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60109"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/longitudeAndLatitude.en"/>
@@ -16566,6 +16606,8 @@
         <skos:definition xml:lang="ar">يربط بين وكيل ومصدر يتضمن إسهام وكيل في وضع مكياج أو مكياج ترقيعي لإنتاج فيلم أو في عرض موسيقي أو درامي أو ترفيهي.</skos:definition>
         <rdfs:label xml:lang="de">ist Maskenbildnerin/Maskenbildner von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, zu der ein Akteur beiträgt, indem er Schminke und Prothetik für eine Bewegtbildproduktion oder eine musikalische oder dramatische Darbietung oder Aufführung aufträgt.</skos:definition>
+        <rdfs:label xml:lang="fi">maskeeraaja aineistossa</rdfs:label>
+        <skos:definition xml:lang="fi">-</skos:definition>
     </rdf:Description>
 
 <!-- Property: has resource copyright statement -->
@@ -16831,23 +16873,20 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">has resource statement</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/resourceStatement.en"/>
-  <skos:definition xml:lang="en">Relates a resource to a resource statement about a series that is associated with a resource and a numbering of a resource within the series.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource statement appearing in a resource and deemed to be significant for users to understand how the resource represents itself.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
 
-<skos:scopeNote xml:lang="en">A resource series statement includes any or all of title of series, other title information of series, statement of responsibility relating to series, ISSN, or numbering within sequence.</skos:scopeNote>
+
     <rdfs:label xml:lang="nl">heeft resourcevermelding</rdfs:label>
     <rdfs:label xml:lang="ar">له بيان مصدر</rdfs:label>
         <skos:definition xml:lang="ar">يربط بين مصدر وبيان مصدر حول سلسلة مرتبطة بمصدر وترقيم مصدر داخل السلسلة.</skos:definition>
-        <skos:scopeNote xml:lang="ar">تتضمن بيان سلسلة لمصدر أي أو كل عنوان سلسلة، معلومات أخرى عن عنوان لسلسلة، بيان المسؤولية المتعلق بسلسلة، ترقيم دولي موحد للدوريات، أو ترقيم داخل التسلسل.</skos:scopeNote>
         <rdfs:label xml:lang="da">har oplysning om ressource</rdfs:label>
         <skos:definition xml:lang="da">Relaterer en ressource til en oplysning om ressource om en serie, der er knyttet til en ressource og nummrering af en ressource indenfor denne serie.</skos:definition>
-        <skos:scopeNote xml:lang="da">En oplysning om serie for en ressource omfatter en del eller hele titlen på en serie, ophavsangivelse vedrørende serien, ISSN eller nummerering i rækkefølge.</skos:scopeNote>
         <rdfs:label xml:lang="fi">aineistomerkintö</rdfs:label>
         <skos:definition xml:lang="fi">Liittää aineiston aineistomerkintöön liittyvästä sarjasta ja aineiston numeroinnista sarjassa.</skos:definition>
         <rdfs:label xml:lang="de">hat Ressourcenangabe</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressourcenangabe, die Informationen über eine Reihe enthält, mit der eine Ressource in Verbindung steht und die eine Zählung einer Ressource innerhalb der Reihe aufweist.</skos:definition>
-        <skos:scopeNote xml:lang="de">Darunter fallen eine, mehrere oder alle der folgenden Angaben: Titel einer Reihe, Titelzusätze einer Reihe, Verantwortlichkeitsangaben, die sich auf eine Reihe beziehen, ISSNs oder eine Zählung innerhalb einer Reihe.</skos:scopeNote>
     </rdf:Description>
 
 <!-- Property: has resource title and responsibility statement -->
@@ -16946,6 +16985,7 @@
         <skos:definition xml:lang="ar">يربط مصدر بوكيل مسؤول عن طبع، نسخ، طَرَح، أو مرتبط بأي طريقة أخرى بتصنيع مصدر منشور.</skos:definition>
         <rdfs:label xml:lang="de">hat Hersteller</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der für den Druck, die Vervielfältigung, den Guss oder eine andere Herstellungsmethode einer veröffentlichten Ressource verantwortlich ist.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka vastaa julkaistun aineiston painamisesta, monistamisesta, kirjasinten valamisesta tai muusta valmistustavasta.</skos:definition>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60411"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60418"/>
     </rdf:Description>
@@ -17217,7 +17257,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has member</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent who is a member of an agent to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is a member of an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60648"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/member.en"/>
@@ -17287,7 +17327,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has mergee</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent who merged with a related agent to form a third to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who merged with another agent to form a third.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60682"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/mergee.en"/>
@@ -17482,7 +17522,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has mode of issuance</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a categorization that reflects whether a resource is issued in one or more units.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/modeOfIssuance.en"/>
 
@@ -17504,7 +17544,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has moderator</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a performer who contributes to a resource by leading a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is a performer who contributes to a resource by leading a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60387"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60022"/>
@@ -17688,7 +17728,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has motion picture music</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a musical resource that complements a resource that is a motion picture.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a musical resource that complements a resource that is a motion picture.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60723"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60731"/>
@@ -17782,7 +17822,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has music</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a musical resource that complements a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a musical resource that complements a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60198"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60724"/>
@@ -18086,7 +18126,7 @@
 
   <rdfs:label xml:lang="en">has music programmer</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/musicProgrammer.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a resource by using electronic audio devices or computer software to generate sounds.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who contributes to a musical resource by using electronic audio devices or computer software to generate sounds.</skos:definition>
   <skos:scopeNote xml:lang="en">The creation of a new musical resource is excluded.</skos:scopeNote>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60888"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60398"/>
@@ -18147,7 +18187,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has name of agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to an appellation of agent in natural language and phrasing used in common discourse.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a nomen that is an appellation of agent in natural language and phrasing used in common discourse.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
 
@@ -18235,7 +18275,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has name of distributor</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a name of an agent who is responsible for distributing a published resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a name of an agent who is responsible for distributing a published resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/nameOfDistributor.en"/>
 
@@ -18283,7 +18323,7 @@
 
   <rdfs:label xml:lang="en">has name of entity</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/nameOfEntity.en"/>
-  <skos:definition xml:lang="en">Relates an entity to an appellation of entity in natural language and phrasing used in common discourse.</skos:definition>
+  <skos:definition xml:lang="en">Relates an entity to a nomen that is an appellation of entity in natural language and phrasing used in common discourse.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60909"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60947"/>
 
@@ -18408,7 +18448,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has name of place</rdfs:label>
-  <skos:definition xml:lang="en">Relates a place to an appellation of place in natural language and phrasing used in common discourse.</skos:definition>
+  <skos:definition xml:lang="en">Relates a place to a nomen that is an appellation of place in natural language and phrasing used in common discourse.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/nameOfPlace.en"/>
@@ -18521,7 +18561,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has name of publisher</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a name of an agent who is responsible for publishing, releasing, or issuing a published resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a name of an agent who is responsible for publishing, releasing, or issuing a published resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/nameOfPublisher.en"/>
 
@@ -18570,7 +18610,7 @@
 
   <rdfs:label xml:lang="en">has name of timespan</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/nameOfTimespan.en"/>
-  <skos:definition xml:lang="en">Relates a timespan to an appellation of timespan in natural language and phrasing used in common discourse.</skos:definition>
+  <skos:definition xml:lang="en">Relates a timespan to a nomen that is an appellation of timespan in natural language and phrasing used in common discourse.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60931"/>
 
 
@@ -19346,7 +19386,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has numbering of part</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a part resource within a whole resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a designation that is assigned to a resource to identify its position in a sequence of individual parts of a larger resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/numberingOfPart.en"/>
   <skos:scopeNote xml:lang="en">Numbering may consist of a numeral, a letter, any other character, or the combination of these with or without an accompanying caption, and/or a chronological designation.</skos:scopeNote>
@@ -19437,7 +19477,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has numbering within sequence</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation of a sequencing of a part or parts within a series.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a designation that is assigned to a resource to identify its position in a sequence of individual parts of a larger resource or parts or issues of a larger resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <skos:scopeNote xml:lang="en">Numbering may include dates or other timespans, alphanumeric or other characters, and an accompanying caption.</skos:scopeNote>
@@ -19483,7 +19523,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has number of conference</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation of a sequencing of a conference, etc., within a series of conferences, etc.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a designation of the sequencing of a conference, exhibition, or other formally named and convened event that gives rise to a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/numberOfConference.en"/>
 
@@ -19505,7 +19545,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has numeric designation of musical resource</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a serial number, opus number, or thematic index number assigned to a musical resource by a composer, publisher, or a musicologist.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a serial number, opus number, or thematic index number assigned to a musical resource by a composer, publisher, or a musicologist.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/numericDesignationOfMusicalResource.en"/>
   <skos:scopeNote xml:lang="en">A numeric designation of a musical resource includes a caption such as e.g., no., op., BWV, and it may include a numeral, a letter, a word, any other character, or the combination of these.</skos:scopeNote>
@@ -19572,6 +19612,7 @@
         <rdfs:label xml:lang="fi">numeerinen määrite</rdfs:label>
         <rdfs:label xml:lang="de">ist numerische Bezeichnung einer Musikressource von</rdfs:label>
         <skos:definition xml:lang="de">Setzt ein Nomen in Beziehung zu einer Musikressource, die über einen Identifikator für eine Ressource verfügt, der eine laufende Nummer, eine Opus-Nummer oder eine Werkverzeichnisnummer darstellt, die einer Musikressource durch eine Komponistin/einen Komponisten, einen Verlag oder eine Musikwissenschaftlerin/einen Musikwissenschaftler zugewiesen wird.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää nomenin musiikkiaineistoon, jolla on tunnisteena säveltäjän, julkaisijan tai musiikkitieteilijän sarjanumero, opusnumero tai temaattisen teosluettelon numero.</skos:definition>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60962"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60961"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60960"/>
@@ -19583,7 +19624,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has officer</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent holding an office in or commanding an agent to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who holds an office in an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/officer.en"/>
@@ -19617,7 +19658,7 @@
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
-  <rdfs:label xml:lang="en">has officer of</rdfs:label>
+  <rdfs:label xml:lang="en">is officer of</rdfs:label>
   <skos:definition xml:lang="en">Relates an agent to an agent holding an office in or commanding an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60633"/>
@@ -19745,7 +19786,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has onscreen presenter</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a performer who contributes to a resource by appearing on screen to provide contextual or background information. an on-screen presenter may appear in nonfiction moving image materials or in introductions to fiction moving image materials.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is a performer who contributes to a resource by appearing on screen to provide contextual or background information.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60387"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60018"/>
@@ -19840,7 +19881,7 @@
 
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/opusNumber.en"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60315"/>
-  <skos:definition xml:lang="en">Relates a resource to a numeric designation of musical resource assigned from a list of resources of a composer indicating the chronological order of composition.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a numeric designation of musical resource assigned from a list of resources of a composer indicating the chronological order of composition.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60962"/>
 <rdfs:label xml:lang="nl">heeft opusnummer</rdfs:label>
     <rdfs:label xml:lang="ar">له رقم قطعة موسيقية</rdfs:label>
@@ -19872,6 +19913,7 @@
         <rdfs:label xml:lang="fi">opusnumero aineistossa</rdfs:label>
         <rdfs:label xml:lang="de">ist Opus-Nummer von</rdfs:label>
         <skos:definition xml:lang="de">Setzt ein Nomen in Beziehung zu einer Musikressource, die über einen Identifikator für eine Ressource verfügt, der von einer Komponistin/einem Komponisten oder einem Verlag vergeben wird oder gemäß einem Nachschlagewerk oder Werkverzeichnis verwendet wird. Er gibt meist Aufschluss über die chronologische Reihenfolge der Komposition innerhalb eines Gesamtwerks.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää nomenin musiikkiaineistoon, jolla on säveltäjän aineistoluettelosta otettu numeerinen, sävellyksen kronologisen järjestyksen kertova tunniste.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is oratorio adaptation of -->
@@ -20449,7 +20491,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has owner</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an agent having legal possession of a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who has current or former legal possession of a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60632"/>
 
@@ -20525,7 +20567,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has panelist</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a performer who contributes to a resource by participating in a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is a performer who contributes to a resource by participating in a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60387"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60024"/>
@@ -20544,6 +20586,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر ومؤدِ يُساهم في مصدر من خلال المشاركة في برنامج، غالبًا مُذاع، حيث تتم مناقشة موضوعات، عادةً بمشاركة خبراء في المجالات المتعلقة بموضوع النقاش.</skos:definition>
         <rdfs:label xml:lang="de">hat Diskussionsteilnehmerin/Diskussionsteilnehmer</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ausführenden/einem Ausführenden, die/der zu einer Ressource beiträgt, indem sie/er an einer Veranstaltung (meist einer Sendung) teilnimmt, in der Themen üblicherweise mit Expertinnen/Experten diskutiert werden.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston esiintyjään, joka joka osallistuu aineiston tekemiseen osallistumalla ohjelmaan (usein lähetettyyn), jossa keskustellaan eri aiheista tavallisesti keskusteluun liittyvien aiheiden asiantuntijoiden kanssa.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is panelist of -->
@@ -20582,7 +20625,7 @@
 
   <rdfs:label xml:lang="en">has papermaker</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/papermaker.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an agent who is responsible for the production of paper used to manufacture a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is responsible for the making of paper used in a resource.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60747"/>
   
 
@@ -20638,7 +20681,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has parallel designation of edition</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation of edition in a language or script that differs from that recorded in a designation of edition element.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a designation of edition in another language or script.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/parallelDesignationOfEdition.en"/>
 
@@ -20660,7 +20703,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has parallel designation of named revision of edition</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a designation of a named revision of an edition in a language or script that differs from that recorded in a designation of a named revision of an edition element.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a designation of a named revision of an edition in another language or script.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/parallelDesignationOfNamedRevisionOfEdition.en"/>
 
@@ -20953,6 +20996,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر وبيان مسؤولية مرتبط بطبعة بلغة أو نص مختلف عن تلك المُسجلة داخل بيان المسؤولية المرتبط بعنصر طابعه.</skos:definition>
         <rdfs:label xml:lang="de">hat parallele Verantwortlichkeitsangabe, die sich auf eine Ausgabe bezieht</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Verantwortlichkeitsangabe einer Ausgabe in einer Sprache oder Schrift, die von der bereits erfassten Verantwortlichkeitsangabe einer Ausgabe abweicht.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston sen erikieliseen painokseen tai käsikirjoitukseen liittyvään vastuullisuusmerkintöön.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has parallel statement of responsibility relating to named revision of edition -->
@@ -20974,6 +21018,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر وبيان مسؤولية متعلق بمراجعة مسماة لطبعة بلغة أو نص مختلف عن تلك المُسجلة داخل بيان المسؤولية المرتبط بمراجعة مسماه لعنصر طابعه.</skos:definition>
         <rdfs:label xml:lang="de">hat parallele Verantwortlichkeitsangabe, die sich auf eine näher erläuterte Überarbeitung einer Ausgabe bezieht</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Verantwortlichkeitsangabe einer näher erläuterten Überarbeitung in einer Sprache oder Schrift, die von der bereits erfassten Verantwortlichkeitsangabe einer näher erläuterten Überarbeitung abweicht.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston erikieliseen nimettyyn uudistettuun painokseen tai käsikirjoitukseen liittyvään vastuullisuusmerkintöön.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has parallel statement of responsibility relating to series -->
@@ -21033,6 +21078,7 @@
         <skos:definition xml:lang="ar">يربط بين مصدر وبيان مسؤولية متعلق بعنوان مُنَاسِب بلغة أو نص مختلف عن تلك المُسجلة داخل بيان المسؤولية المرتبط بعنصر العنوان نفسه.</skos:definition>
         <rdfs:label xml:lang="de">hat parallele Verantwortlichkeitsangabe, die sich auf einen Haupttitel bezieht</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Verantwortlichkeitsangabe eines Haupttitels in einer Sprache oder Schrift, die von der bereits erfassten Verantwortlichkeitsangabe eines Haupttitels abweicht.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston sen erikieliseen painoksen tai käsikirjoituksen päänimekkeeseen liittyvään vastuullisuusmerkintöön.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has parallel title of series -->
@@ -21041,7 +21087,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has parallel title of series</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a title of a series in another language or script.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a title of series in another language or script.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/parallelTitleOfSeries.en"/>
@@ -21071,7 +21117,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has parallel title proper</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a title proper in another language or script.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a title proper in another language or script.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60369"/>
 
@@ -21788,7 +21834,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has period of activity of agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a date or range of dates indicative of a period in which an agent was active in its primary field of endeavor.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a timespan during which an agent is active in their primary field of endeavor.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60324"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/periodOfActivityOfAgent.en"/>
@@ -21962,7 +22008,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has place of birth</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a place where an agent is born..</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a place where an agent is born.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/placeOfBirth.en"/>
 
@@ -22054,7 +22100,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has place of conference</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a local place in which a conference, congress, meeting, exhibition, fair, festival, etc., was held.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a place where a conference, exhibition, or other formally named and convened event that gives rise to a resource is held.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P61018"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/placeOfConference.en"/>
@@ -22349,7 +22395,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has place of publication</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a place associated with the publication, release, or issuing of a published resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a place that is associated with the publication, release, or issuing of a published resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/placeOfPublication.en"/>
@@ -22401,7 +22447,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has place of residence</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a town, city, province, state, or country in which an agent resides or has resided, or another significant place associated with an agent other than place of birth, place of death, or residence.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a place where an agent resides or has resided.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/placeOfResidence.en"/>
   <skos:scopeNote xml:lang="en">A place where an agent has worked or studied is included.</skos:scopeNote>
@@ -22421,6 +22467,7 @@
         <rdfs:label xml:lang="de">hat Wohnort</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einem Ort, einer Stadt, einem Bundesland, einem Staat oder einem Land, in dem er wohnt oder gewohnt hat, oder zu einem anderen bedeutenden Ort, der mit einem Akteur in Verbindung steht, außer dem Geburts-, Sterbe- oder Wohnort.</skos:definition>
         <skos:scopeNote xml:lang="de">Darunter fällt ein Geografikum, in dem ein Akteur gearbeitet oder studiert hat.</skos:scopeNote>
+        <skos:definition xml:lang="fi">Liittää toimijan kaupunkiin, maakuntaan, osavaltioon tai maahan, jossa hän asuu tai on asunut, tai muuhun häneen liittyvään merkittävään paikkaan kuin syntymä-, kuolin- tai asuinpaikka.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is place of residence of -->
@@ -22441,6 +22488,8 @@
         <skos:definition xml:lang="da">Relaterer et sted til en agent, som bor eller har boet, eller er knyttet på anden måde end gennem fødsel, død, eller boende med et sted.</skos:definition>
         <rdfs:label xml:lang="de">ist Wohnort von</rdfs:label>
         <skos:definition xml:lang="de">Setzt ein Geografikum in Beziehung zu einem Akteur, der in diesem Geografikum wohnt oder gewohnt hat oder aus anderen Gründen als Geburt, Tod oder Wohnsitz mit diesem in Verbindung steht.</skos:definition>
+        <rdfs:label xml:lang="fi">asuinpaikka toimijalle</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää paikan toimijaan, joka asuu tai on asunut paikassa tai on muuten kuin syntymän, kuoleman tai oleskelun kautta suhteessa paikkaan.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has plaintiff -->
@@ -22555,7 +22604,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has plate number for notated music</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a numbering designation assigned to a notated music resource by a publisher.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is an identifier for resource other than a publisher number for notated music, assigned by a publisher to a notated music resource to indicate the printing plate used in the printing process.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60052"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/plateNumberForNotatedMusic.en"/>
@@ -22847,7 +22896,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has preferred name of agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a name of agent that is selected for preference in a specific application or context.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a nomen that is a name of agent that is selected for preference in a specific application or context.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60368"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/preferredNameOfAgent.en"/>
@@ -22895,7 +22944,7 @@
 
   <rdfs:label xml:lang="en">has preferred name of entity</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/preferredNameOfEntity.en"/>
-  <skos:definition xml:lang="en">Relates an entity to a name of entity that is selected for preference in a specific application or context.</skos:definition>
+  <skos:definition xml:lang="en">Relates an entity to a nomen that is a name of entity that is selected for preference in a specific application or context.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60939"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60951"/>
 <rdfs:label xml:lang="nl">heeft geprefereerde naam van entiteit</rdfs:label>
@@ -22938,7 +22987,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has preferred name of place</rdfs:label>
-  <skos:definition xml:lang="en">Relates a place to a name of place that is selected for preference in a specific application or context.</skos:definition>
+  <skos:definition xml:lang="en">Relates a place to a nomen that is a name of place that is selected for preference in a specific application or context.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60366"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/preferredNameOfPlace.en"/>
@@ -22987,7 +23036,7 @@
 
   <rdfs:label xml:lang="en">has preferred name of timespan</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/preferredNameOfTimespan.en"/>
-  <skos:definition xml:lang="en">Relates a timespan to a name of timespan that is selected for preference in a specific application or context.</skos:definition>
+  <skos:definition xml:lang="en">Relates a timespan to a nomen that is a name of timespan that is selected for preference in a specific application or context.</skos:definition>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60924"/>
 <rdfs:label xml:lang="nl">heeft geprefereerde naam van tijdspanne</rdfs:label>
     <rdfs:label xml:lang="ar">له اسم مفضل لفترة زمنية</rdfs:label>
@@ -23028,7 +23077,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has preferred title of resource</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a title of resource that is selected for preference in a specific application or context.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a title of resource that is selected for preference in a specific application or context.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60367"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/preferredTitleOfResource.en"/>
@@ -23390,7 +23439,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has producer</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an agent who is responsible for inscribing, fabricating, constructing, or other method of producing, an unpublished resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is responsible for most of the business aspects of a production for screen, sound recording, television, webcast, etc.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60374"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60668"/>
@@ -23487,7 +23536,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has producer of unpublished resource</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an agent who is responsible for inscribing, fabricating, constructing, etc., an unpublished resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is responsible for inscribing, fabricating, constructing, or other method of producing, an unpublished resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/producerOfUnpublishedResource.en"/>
 
@@ -23775,7 +23824,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has profession or occupation</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to an agent's vocation or avocation.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a vocation or avocation.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/professionOrOccupation.en"/>
 
@@ -23932,7 +23981,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">has project supervisor</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/projectSupervisor.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an academic supervisor who is responsible for advising or supervising a project undertaken by a student that results in a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is an academic supervisor who is responsible for advising or supervising a project undertaken by a student that results in a resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
 
@@ -23975,7 +24024,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has prominent member of agent</rdfs:label>
-  <skos:definition xml:lang="en">Relates an agent to a well-known individual who is a member of an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to an agent who is a well-known individual who is a member of an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/prominentMemberOfFamily.en"/>
 
@@ -24074,7 +24123,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has publisher number for notated music</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a numbering designation assigned to a notated music resource by a publisher.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is an identifier for resource other than a plate number for notated music, assigned by a publisher to a notated music resource.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60052"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/publisherNumberForNotatedMusic.en"/>
@@ -24163,7 +24212,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has puppeteer</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a performer who contributes to a resource by manipulating, controlling, or directing puppets or marionettes in a moving image production or a musical or dramatic presentation or entertainment.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is a performer who contributes to a resource by manipulating, controlling, or directing puppets or marionettes in a moving image production or a musical or dramatic presentation or entertainment.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60387"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60023"/>
@@ -24379,7 +24428,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has radio script</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource that is texual resource that complements a work that is a radio program.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is texual resource that complements a resource that is a radio program.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60198"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60285"/>
@@ -24490,7 +24539,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has real identity</rdfs:label>
-  <skos:definition xml:lang="en">Relates a real agent who assumes an alternate identity to an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a nomen that is a real appellation of an agent who uses another nomen.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/realIdentity.en"/>
 
@@ -25447,7 +25496,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">has related nomen of agent</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/relatedNomenOfAgent.en"/>
-  <skos:definition xml:lang="en">Relates an agent to an nomen that is associated with an agent.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a nomen that is associated with an agent.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61027"/>
@@ -26074,6 +26123,7 @@
         <rdfs:label xml:lang="de">hat mit Ressource in Beziehung stehende Ressource</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressource, die mit einer Ressource in Verbindung steht.</skos:definition>
         <skos:altLabel xml:lang="de">In Beziehung stehende Ressource</skos:altLabel>
+        <rdfs:label xml:lang="fi">aineistoon liittyvä aineisto</rdfs:label>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P61005"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P61006"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60208"/>
@@ -26329,7 +26379,7 @@
 
   <rdfs:label xml:lang="en">has relief representation</rdfs:label>
 
-  <skos:definition xml:lang="en">Relates a resource to a method of indicating the horizontal and vertical dimensions of land surface and terrain.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a cartographic representation of the surface forms of the earth or other celestial body, real or imaginary, by means of special graphic methods.</skos:definition>
 <skos:altLabel xml:lang="en">has relief type</skos:altLabel>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/reliefRepresentation.en"/>
     <rdfs:label xml:lang="nl">heeft reliëftype</rdfs:label>
@@ -26572,6 +26622,7 @@
         <rdfs:label xml:lang="de">ist Ersatz von</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressource, deren Inhalt durch den Inhalt einer anderen Ressource ersetzt und überflüssig wird.</skos:definition>
         <skos:scopeNote xml:lang="de">Im Allgemeinen trifft dieses Element auf eine statische Ressource oder eine integrierende Ressource zu.</skos:scopeNote>
+        <skos:scopeNote xml:lang="fi">Tämä elementti soveltuu yleensä staattiseen tai päivittyvään aineistoon.</skos:scopeNote>
     </rdf:Description>
 
 <!-- Property: is reprinted as -->
@@ -26866,7 +26917,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">is respondent of</rdfs:label>
-  <skos:definition xml:lang="en">Relates a candidate for a degree who defends or opposes a thesis provided by a praeses in an academic disputation to a resource.</skos:definition>
+  <skos:definition xml:lang="en">Relates an agent to a resource that is a thesis provided by the praeses in an academic disputation that is defended or opposed by a candidate for a degree.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60672"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60045"/>
@@ -27125,7 +27176,7 @@
 
   <rdfs:label xml:lang="en">has right ascension</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/rightAscension.en"/>
-  <skos:definition xml:lang="en">Relates a resource to an angular distance measured eastward on the equator from the vernal equinox to the hour circle through a celestial body, from 0 to 24 hours.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to the angular distance of a celestial body that is measured eastward on the equator from the vernal equinox to the hour circle through the body, from 0 to 24 hours.</skos:definition>
 
   <rdfs:label xml:lang="da">har rektascension</rdfs:label>
 
@@ -27137,6 +27188,7 @@
         <rdfs:label xml:lang="fi">rektaskensio aineistossa</rdfs:label>
         <rdfs:label xml:lang="de">hat Rektaszension</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Winkelabstand zwischen dem Frühlingspunkt und dem Längenkreis, der auf der Äquatorebene gegen den Uhrzeigersinn gemessen und in einem Maß von 0 bis 24 Stunden angegeben wird.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston taivaankappaleen kulmaetäisyyteen, joka on mitattu aikamitoissa taivaanekvaattoria pitkin kevättasauspisteestä vastapäivään.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has right ascension and declination -->
@@ -27145,7 +27197,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has right ascension and declination</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a system for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using angles of right ascension and declination.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a place that is the location of a celestial body that is the coverage of a cartographic resource and is identified using the angles of right ascension and declination.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60109"/>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/rightAscensionAndDeclination.en"/>
@@ -27263,7 +27315,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
   <rdfs:label xml:lang="en">has scheme of nomen</rdfs:label>
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/schemeOfNomen.en"/>
-  <skos:definition xml:lang="en">Relates a nomen to a scheme in which an appellation is established.</skos:definition>
+  <skos:definition xml:lang="en">Relates a nomen to a scheme in which a nomen is established.</skos:definition>
   <skos:scopeNote xml:lang="en">The scheme can be a value or vocabulary encoding scheme or a syntax encoding scheme.</skos:scopeNote>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
@@ -27325,7 +27377,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has screenplay</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a resource that is realized as text that complements a resource that uses a screenplay.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a resource that is a textual resource that complements a resource that uses a screenplay.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60198"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60201"/>
@@ -27698,7 +27750,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has seller</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a former owner of a resource that sold the resource to another owner.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is a former owner of a resource who sells the item to another owner.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60401"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60013"/>
@@ -27959,6 +28011,7 @@
         <rdfs:label xml:lang="de">ist Fortsetzungs-Version von</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ressource, deren Erweiterungsplan von sukzessiv auf statisch geändert wird, um eine Ressource zu erstellen.</skos:definition>
         <rdfs:label xml:lang="fi">sarjaversio aineistosta</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää aineiston aineistoon, jolla on laajennussuunnitelma, joka on muutettu peräkkäisestä staattiseksi aineiston luomiseksi.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has serial number -->
@@ -27971,7 +28024,7 @@
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/serialNumber.en"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60315"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60961"/>
-  <skos:definition xml:lang="en">Relates a resource to a numeric designation of musical resource assigned by a composer or a reference source that indicates a sequence of musical resources that share the same title or that share the same title and the same representative medium of performance.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is a numeric designation of musical resource that is assigned by a composer or a reference source that indicates a sequence of musical resources that share the same title or that share the same title and the same representative medium of performance.</skos:definition>
 <rdfs:label xml:lang="nl">heeft serienummer</rdfs:label>
     <rdfs:label xml:lang="ar">له رقم تسلسلي</rdfs:label>
         <skos:definition xml:lang="ar">يربط بين مصدر وتسمية رقمية لمصدر موسيقي يخصص من جانب ملحن أو مصدر مرجعي يشير إلى تسلسل المصادر الموسيقية التي تشترك في نفس العنوان أو التي تشترك في نفس العنوان ونفس وسيلة الأداء الممثلة.</skos:definition>
@@ -28029,6 +28082,7 @@
         <rdfs:label xml:lang="de">hat Gesamttitelangabe</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Angabe, die eine Reihe identifiziert, mit der eine Ressource in Verbindung steht und die eine Zählung einer Ressource innerhalb der Reihe aufweist.</skos:definition>
         <skos:scopeNote xml:lang="de">Darunter können auch Informationen fallen, die eine Unterreihe oder mehrere Unterreihen identifizieren, zu der/denen die zu beschreibende Ressource gehört. Darunter können auch Verantwortlichkeitsangaben fallen, die sich auf eine Reihe oder Unterreihe beziehen.</skos:scopeNote>
+        <skos:scopeNote xml:lang="fi">Sarjamerkintöön voi kuulua myös yhden tai useamman kuvailtavaan aineistoon sisältyvän alasarjan identifioiva tieto. Joskus sarjamerkintö sisältää sarjaan tai alasarjaan liittyviä vastuullisuusmerkintöjä.</skos:scopeNote>
     </rdf:Description>
 
 <!-- Property: is set to music as -->
@@ -28512,6 +28566,7 @@
         <rdfs:label xml:lang="fi">erikoistehosteiden tekijä (toimija) aineistossa</rdfs:label>
         <rdfs:label xml:lang="de">ist Special-effects-Provider von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, die einen Beitrag zum Entwurf und zur Erstellung von Spezialeffekten am Set leistet, wie zum Beispiel mechanische Effekte am Set und optische Effekte in der Kamera.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää toimijan aineistoon, jonka tekemiseen toimija osallistuu suunnittelemalla ja luomalla taltioinnin aikana tapahtuvat erikoistehosteet, kuten mekaaniset tehosteet ja kameralla toteutettavat optiset tehosteet.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has special issue -->
@@ -29871,6 +29926,7 @@
         <rdfs:label xml:lang="fi">televisio-ohjelman musiikki (aineisto)</rdfs:label>
         <rdfs:label xml:lang="de">hat Fernsehsendungsmusik</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Musikressource, die eine Fernsehsendung ergänzt.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston televisio-ohjelma-aineistoa täydentävään musiikkiaineistoon.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has television screenplay -->
@@ -30073,7 +30129,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has title</rdfs:label>
-  <skos:definition xml:lang="en">Relates an entity to an appellation in natural language and phrasing used in common discourse.</skos:definition>
+  <skos:definition xml:lang="en">Relates an entity to a nomen that is an appellation in natural language and phrasing used in common discourse.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
 
@@ -30139,7 +30195,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has title of resource</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to an appellation of resource in natural language and phrasing used in common discourse.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to a nomen that is an appellation of resource in natural language and phrasing used in common discourse.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 
   <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/titleOfResource.en"/>
@@ -30408,6 +30464,7 @@
         <rdfs:label xml:lang="de">hat Transkribiererin/Transkribierer</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Akteur, der zu einer Ressource beiträgt, indem er ungeschriebenen und nicht notierten Inhalt niederschreibt oder ihn von einem Notationssystem in ein anderes überträgt.</skos:definition>
         <skos:scopeNote xml:lang="de">Darunter fällt keine Transkription einer Musikressource für ein anderes Instrument oder ein anderes aufführendes Ensemble.</skos:scopeNote>
+        <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka osallistuu aineiston tekemiseen kirjoittamalla muistiin tai nuotintamalla kirjoittattoman tai nuotintamattoman sisällön tai muuttamalla sen merkintäjärjestelmästä toiseen.</skos:definition>
     </rdf:Description>
 
 <!-- Property: is transcriber of -->
@@ -31717,6 +31774,7 @@
         <rdfs:label xml:lang="fi">visuaalisten tehosteiden tekijä (toimija) aineistossa</rdfs:label>
         <rdfs:label xml:lang="de">ist Visual-effects-Provider von</rdfs:label>
         <skos:definition xml:lang="de">Setzt einen Akteur in Beziehung zu einer Ressource, zu der ein Akteur beiträgt, indem er in der Postproduktion visuelle Effekte entwirft und erstellt.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää toimijan aineistoon, jonka tekemiseen toimija osallistuu suunnittelemalla ja luomalla visuaaliset tehosteet jälkituotantovaiheessa.</skos:definition>
     </rdf:Description>
 
 <!-- Property: has voice actor -->
@@ -31725,7 +31783,7 @@
   <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
 
   <rdfs:label xml:lang="en">has voice actor</rdfs:label>
-  <skos:definition xml:lang="en">Relates a resource to a performer who contributes to a resource by providing a voice for characters in radio and audio productions and for animated characters in moving image resources as well as by providing voice-overs in radio and television commercials, dubbed resources, etc.</skos:definition>
+  <skos:definition xml:lang="en">Relates a resource to an agent who is an actor who contributes to a resource by providing the voice for characters in radio and audio productions and for animated characters in moving image resources, as well as by providing voice-overs in radio and television commercials, dubbed resources, etc.</skos:definition>
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60142"/>
   <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60027"/>
@@ -32247,7 +32305,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has access point for agent</rdfs:label>
-        <skos:definition xml:lang="en">Relates an agent to an appellation of agent in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
+        <skos:definition xml:lang="en">Relates an agent to a nomen that is an appellation of agent in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/accessPointForAgent.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61163"/>
@@ -32266,7 +32324,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has access point for place</rdfs:label>
-        <skos:definition xml:lang="en">Relates a place to an appellation of place in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
+        <skos:definition xml:lang="en">Relates a place to a nomen that is an appellation of place in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/accessPointForPlace.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61165"/>
@@ -32285,7 +32343,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has access point for resource</rdfs:label>
-        <skos:definition xml:lang="en">Relates a resource to an appellation of resource in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
+        <skos:definition xml:lang="en">Relates a resource to a nomen that is an appellation of resource in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/accessPointForResource.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61167"/>
@@ -32304,7 +32362,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has access point for timespan</rdfs:label>
-        <skos:definition xml:lang="en">Relates a timespan to an appellation of timespan in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
+        <skos:definition xml:lang="en">Relates a timespan to a nomen that is an appellation of timespan in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/accessPointForTimespan.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61169"/>
@@ -32416,7 +32474,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has identifier for place</rdfs:label>
-        <skos:definition xml:lang="en">Relates a place to an appellation of place that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a place.</skos:definition>
+        <skos:definition xml:lang="en">Relates a place to a nomen that is an appellation of place that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a place.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/identifierForPlace.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61180"/>
@@ -32440,7 +32498,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has identifier for timespan</rdfs:label>
-        <skos:definition xml:lang="en">Relates a timespan to an appellation of timespan that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a timespan.</skos:definition>
+        <skos:definition xml:lang="en">Relates a timespan to a nomen that is an appellation of timespan that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a timespan.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/identifierForTimespan.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61181"/>
@@ -32929,6 +32987,8 @@
         <skos:definition xml:lang="da">Relaterer en ressource til en agent, som er performer, der bidrager til en ressource, ved at undervise eller give en demonstration.</skos:definition>
         <rdfs:label xml:lang="de">hat Ausbilderin/Ausbilder</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einer Ausführenden/einem Ausführenden, die/der zu einer Ressource beiträgt, indem sie/er unterrichtet oder etwas demonstriert.</skos:definition>
+        <skos:definition xml:lang="fi">Liittää aineiston toimijaan, joka on aineistossa osallisena opettamalla tai antamalla havaintoesityksen.</skos:definition>
+        <rdfs:label xml:lang="fi">opettaja</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P61194">
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
@@ -32951,7 +33011,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has language of nomen</rdfs:label>
-        <skos:definition xml:lang="en">Relates a nomen to a language of an appellation.</skos:definition>
+        <skos:definition xml:lang="en">Relates a nomen to a language of a nomen.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/languageOfNomen.en"/>
     <rdfs:label xml:lang="nl">heeft taal van nomen</rdfs:label>
@@ -33016,6 +33076,7 @@
         <rdfs:label xml:lang="de">hat Namen eines Akteurs einer Ressource</rdfs:label>
         <skos:definition xml:lang="de">Setzt eine Ressource in Beziehung zu einem Namen eines Akteurs, der für den Vertrieb, den Druck, die Vervielfältigung, den Guss, das Veröffentlichen, das Release, die Herausgabe und so weiter einer veröffentlichten Ressource oder der für das Gravieren, Fabrizieren, Konstruieren und so weiter einer unveröffentlichten Ressource verantwortlich ist.</skos:definition>
         <rdfs:label xml:lang="fi">toimijan nimi</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää aineiston nomeniin, joka on painetun aineiston jakelusta, painamisesta, monistamisesta, julkaisemisesta jne. vastaavan toimijan nimi tai julkaisemattoman aineiston kirjoittamisesta, valmistamisesta, rakentamisesta jne. vastaavan toimijan nimi.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P61204">
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
@@ -33032,6 +33093,7 @@
         <rdfs:label xml:lang="de">ist Name eines Akteurs einer Ressource von</rdfs:label>
         <skos:definition xml:lang="de">Setzt ein Nomen in Beziehung zu einer Ressource, die über einen Namen eines Akteurs verfügt, der für den Vertrieb, den Druck, die Vervielfältigung, den Guss, das Veröffentlichen, das Release, die Herausgabe und so weiter oder für das Gravieren, Fabrizieren, Konstruieren und so weiter verantwortlich ist.</skos:definition>
         <rdfs:label xml:lang="fi">toimijan nimi</rdfs:label>
+        <skos:definition xml:lang="fi">Liittää nomenin aineistoon, jolla on painetun aineiston jakelusta, painamisesta, monistamisesta, julkaisemisesta jne. vastaavan toimijan nimi tai julkaisemattoman aineiston kirjoittamisesta, valmistamisesta, rakentamisesta jne. vastaavan toimijan nimi.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P61197">
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
@@ -33381,7 +33443,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has subcollection</rdfs:label>
-        <skos:definition xml:lang="en">Relates a manifestation to a manifestation of a collection work that is a discrete component of a manifestation of another collection work.</skos:definition>
+        <skos:definition xml:lang="en">Relates a resource to a resource of a collection resource that is a discrete component of a resource of another collection resource.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/subcollection.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61223"/>
@@ -33393,7 +33455,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">is subcollection of</rdfs:label>
-        <skos:definition xml:lang="en">Relates a manifestation to a manifestation of a collection work that has a manifestation of another collection work as a discrete component.</skos:definition>
+        <skos:definition xml:lang="en">Relates a resource to a resource of a collection resource that has a resource of another collection resource as a discrete component.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/subcollectionOf.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61222"/>
@@ -33429,7 +33491,7 @@
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/"/>
         <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
         <rdfs:label xml:lang="en">has location of collection</rdfs:label>
-        <skos:definition xml:lang="en">Relates a resource to a place where the resource of a collection resource is stored.</skos:definition>
+        <skos:definition xml:lang="en">Relates a resource to a place where a collection resource is stored.</skos:definition>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/locationOfCollection.en"/>
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P61227"/>
