@@ -774,7 +774,7 @@ function getVocKind() {
       window.theVocKind = "object";
     } else if (window.theVocURI.indexOf("/c/") > -1) {
       window.theVocKind = "class";
-      else if (window.theVocURI.indexOf("/u/") > -1) {
+    } else if (window.theVocURI.indexOf("/u/") > -1) {
       window.theVocKind = "unconstrained";	 
     } else {
       window.theVocKind = "canonical";
