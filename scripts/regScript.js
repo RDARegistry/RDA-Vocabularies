@@ -986,10 +986,10 @@ function setVocDetails(json) {
     }
     switch (window.theVocKind) {
       case "datatype":
-      filenameLocal += "/datatype/datatype";
+      filenameLocal += "/datatype";
       break;
       case "object":
-      filenameLocal += "/object/object";
+      filenameLocal += "/object";
       break;
     }
   }
