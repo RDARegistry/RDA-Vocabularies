@@ -678,8 +678,8 @@ function getLanguageIsUsed(languageObject) {
   return;
 }
 function getLanguageIsPublished(entryObject) {
-  if (typeof entryObject[ "ToolkitLabel"] != "undefined") {
-    if (typeof entryObject[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
+  if (typeof entryObject[ "label"] != "undefined") {
+    if (typeof entryObject[ "label"][window.languageCodeToCheck] != "undefined") {
       window.languageIsUsed = true;
     }
   }
@@ -977,16 +977,19 @@ function setVocDetails(json) {
       case "Timespan":
       filenameLocal = "t";
       break;
+	  case "Unconstrained":
+      filenameLocal = "u";
+      break;
       case "Work":
       filenameLocal = "w";
       break;
     }
     switch (window.theVocKind) {
       case "datatype":
-      filenameLocal += "/datatype";
+      filenameLocal += "/datatype/datatype";
       break;
       case "object":
-      filenameLocal += "/object";
+      filenameLocal += "/object/object";
       break;
     }
   }
