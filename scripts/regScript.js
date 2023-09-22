@@ -979,10 +979,7 @@ function setVocDetails(json) {
       case "Timespan":
       filenameLocal = "t";
       break;
-	  case "Unconstrained":
-      filenameLocal = "u";
-      break;
-      case "Work":
+	  case "Work":
       filenameLocal = "w";
       break;
     }
