@@ -951,6 +951,11 @@ function setVocDetails(json) {
     filepathPart = "Elements";
     filenameLocal = "rof";
     break;
+	case "unconstrained":
+    theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
+    filepathPart = "Elements";
+    filenameLocal = "u";
+    break;
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
