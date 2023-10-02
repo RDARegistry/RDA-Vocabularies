@@ -533,7 +533,7 @@ function getLanguageCodeFromURL() {
   var theURL = window.location.href;
   var theIndex = theURL.indexOf("language=");
   if (theIndex > 0) {
-    window.theCurrentLanguageCode = theURL.substr(theIndex + 9, 1);
+    window.theCurrentLanguageCode = theURL.substr(theIndex + 9, 10);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
