@@ -475,7 +475,7 @@ function setLanguagesData() {
       }
     }
   }, {
-    code: "zh", label: "Chinese", rtl: false,
+    code: "zh-Hans-CN", label: "Chinese (Simplified)", rtl: false,
     dtStrings: {
       "decimal": "",
       "emptyTable": "表中数据为空",
