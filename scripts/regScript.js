@@ -678,8 +678,8 @@ function getLanguageIsUsed(languageObject) {
   return;
 }
 function getLanguageIsPublished(entryObject) {
-  if (typeof entryObject[ "label"] != "undefined") {
-    if (typeof entryObject[ "label"][window.languageCodeToCheck] != "undefined") {
+  if (typeof entryObject[ "ToolkitLabel"] != "undefined") {
+    if (typeof entryObject[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
       window.languageIsUsed = true;
     }
   }
@@ -774,8 +774,6 @@ function getVocKind() {
       window.theVocKind = "object";
     } else if (window.theVocURI.indexOf("/c/") > -1) {
       window.theVocKind = "class";
-    } else if (window.theVocURI.indexOf("/u/") > -1) {
-      window.theVocKind = "unconstrained";	 
     } else {
       window.theVocKind = "canonical";
     }
@@ -951,11 +949,6 @@ function setVocDetails(json) {
     filepathPart = "Elements";
     filenameLocal = "rof";
     break;
-	case "unconstrained":
-    theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
-    filepathPart = "Elements";
-    filenameLocal = "u";
-    break;
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
@@ -984,7 +977,7 @@ function setVocDetails(json) {
       case "Timespan":
       filenameLocal = "t";
       break;
-	  case "Work":
+      case "Work":
       filenameLocal = "w";
       break;
     }
@@ -1062,7 +1055,7 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>is linked from its child <strong>datatype</strong> property in ' + theVocToDatatype + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '<li>is linked from its child <strong>object</strong> property in ' + theVocToObject + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
-	break;
+    break;
     case "datatype":
     var theVocToParent = '<a href="' + window.theVocURI.replace("/datatype", "") + '">' + window.theVocTitle.replace("datatype properties", "properties") + '</a>';
     theSemanticsBlock += '<p>Each property in the datatype element set:</p>';
@@ -1081,10 +1074,7 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>has an inverse property.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
-    break;	
-	case "unconstrained":
-    theSemanticsBlock += '<p>The properties in the unconstrained element set have no domain or range and have semantics that are independent of the IFLA Library Reference Model.</p>';
-	break;
+    break;
     default:
     theSemanticsBlock = "";
   }
