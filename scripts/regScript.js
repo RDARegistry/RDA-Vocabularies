@@ -774,6 +774,8 @@ function getVocKind() {
       window.theVocKind = "object";
     } else if (window.theVocURI.indexOf("/c/") > -1) {
       window.theVocKind = "class";
+	} else if (window.theVocURI.indexOf("/u/") > -1) {
+      window.theVocKind = "unconstrained";
     } else {
       window.theVocKind = "canonical";
     }
@@ -949,6 +951,11 @@ function setVocDetails(json) {
     filepathPart = "Elements";
     filenameLocal = "rof";
     break;
+	case "unconstrained":
+    theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
+    filepathPart = "Elements";
+    filenameLocal = "u";
+    break;
     default:
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
@@ -1075,6 +1082,9 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
+	case "unconstrained":
+    theSemanticsBlock += '<p>The properties in the unconstrained element set have no domain or range and have semantics that are independent of the IFLA Library Reference Model.</p>';
+	break;
     default:
     theSemanticsBlock = "";
   }
