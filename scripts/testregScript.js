@@ -530,16 +530,17 @@ window.onhashchange = function () {
   table.search('').column('Curie:name').search(window.localIDToSearch).draw();
 };
 function getLanguageCodeFromURL() {
+  var theLanguageParameter = "language=";
   var theURL = window.location.href;
-  var theIndex = theURL.indexOf("language=");
-  var theEnd = theURL.indexOf("#");
+  var theLanguageCodeIndex = theURL.indexOf(theLanguageParameter) + theLanguageParameter.length;
+  var theHashIndex = theURL.indexOf("#");
   var theCodeLength = 0;
-  if (theEnd < 0) {
-    theEnd = theURL.length + 1;
+  if (theHashIndex < 0) {
+    theHashIndex = theURL.length + 1;
   }
-  if (theIndex > 0) {
-    theCodeLength = theEnd - theIndex - 9;
-    window.theCurrentLanguageCode = theURL.substr(theIndex + 9, theCodeLength);
+  if (theLanguageIndex > 0) {
+    theCodeLength = theHashIndex - theLanguageCodeIndex;
+    window.theCurrentLanguageCode = theURL.substr(theLanguageCodeIndex, theCodeLength);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
