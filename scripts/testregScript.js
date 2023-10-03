@@ -534,7 +534,7 @@ function getLanguageCodeFromURL() {
   var theIndex = theURL.indexOf("language=");
   var theEnd = theURL.indexOf("#");
   var theCodeLength = 0;
-  if (theEnd == 0) {
+  if (theEnd < 0) {
     theEnd = theURL.length + 1;
   }
   if (theIndex > 0) {
