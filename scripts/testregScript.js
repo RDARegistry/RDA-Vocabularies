@@ -532,7 +532,7 @@ window.onhashchange = function () {
 function getLanguageCodeFromURL() {
   var theURL = window.location.href;
   var theIndex = theURL.indexOf("language=");
-  var theEnd = theURL.indexof("#");
+  var theEnd = theURL.indexOf("#");
   var theCodeLength = 0;
   if (theEnd == 0) {
     theEnd = theURL.length + 1;
