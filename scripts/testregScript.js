@@ -536,7 +536,7 @@ function getLanguageCodeFromURL() {
   var theHashIndex = 0;
   var theLanguageIndex = 0;
   var theCodeLength = 0;
-  theLanguageIndex = thePageURL.indexOf("language=");
+  theLanguageIndex = thePageURL.indexOf(theParameter);
   theHashIndex = thePageURL.indexOf("#");
   if (theHashIndex < 0) {
     theHashIndex = thePageURL.length + 1;
