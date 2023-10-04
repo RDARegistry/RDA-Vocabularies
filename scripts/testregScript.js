@@ -531,9 +531,9 @@ window.onhashchange = function () {
 };
 function getLanguageCodeFromURL() {
   var theURL = window.location.href;
-  var theIndex = theURL.indexOf("language=");
-  if (theIndex > 0) {
-    window.theCurrentLanguageCode = theURL.substr(theIndex + 9, 2);
+  var theLanguageIndex = theURL.indexOf("language=") + 9;
+  if (theLanguageIndex > 0) {
+    window.theCurrentLanguageCode = theURL.substr(theLanguageIndex, 2);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
