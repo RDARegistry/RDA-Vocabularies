@@ -677,8 +677,8 @@ function getLanguageIsUsed(languageObject) {
     theLanguageLabel = languageObject[ "label"];
     theHashIndex = thePageURL.indexOf("#");
     theLanguageIndex = thePageURL.indexOf(theParameter);
-    if (theLanguageIndex > -1) {
-      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
+    if ((theLanguageIndex > -1) && (theHashIndex > -1)) {
+      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck + thePageURL.slice(theHashIndex)
     } else if (theHashIndex > -1) {
       theURL = thePageURL.replace("#", "?" + theParameter + window.languageCodeToCheck + "#")
     } else {
