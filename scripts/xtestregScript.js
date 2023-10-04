@@ -531,9 +531,15 @@ window.onhashchange = function () {
 };
 function getLanguageCodeFromURL() {
   var theURL = window.location.href;
-  var theIndex = theURL.indexOf("language=");
-  if (theIndex > 0) {
-    window.theCurrentLanguageCode = theURL.substr(theIndex + 9, 2);
+  var theLanguageCodeIndex = theURL.indexOf("language=") + 9;
+  var theHashIndex = theURL.indexOf("#");
+  var theCodeLength = 0;
+  if (theHashIndex < 0) {
+    theHashIndex = theURL.length + 1;
+  }
+  if (theLanguageCodeIndex > 0) {
+    theCodeLength = theHashIndex - theLanguageCodeIndex;
+    window.theCurrentLanguageCode = theURL.substr(theLanguageCodeIndex, theCodeLength);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
