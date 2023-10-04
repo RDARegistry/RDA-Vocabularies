@@ -375,7 +375,7 @@ function setLanguagesData() {
         "sortDescending": ": activate to sort column descending"
       }
     }
-  },{
+  }, {
     code: "nl", label: "Dutch", rtl: false,
     dtStrings: {
       "decimal": ",",
@@ -666,6 +666,7 @@ function getLanguageFromLanguages(languageObject) {
 function getLanguageIsUsed(languageObject) {
   var theLanguageLabel = "";
   var thePageURL = window.location.href;
+  var theParameter = window.theLanguageParameter;
   var theURL = "";
   var theLanguageIndex = 0;
   var theHashIndex = 0;
@@ -675,13 +676,13 @@ function getLanguageIsUsed(languageObject) {
   if (window.languageIsUsed) {
     theLanguageLabel = languageObject[ "label"];
     theHashIndex = thePageURL.indexOf("#");
-    theLanguageIndex = thePageURL.indexOf("?language=");
+    theLanguageIndex = thePageURL.indexOf(theParameter);
     if (theLanguageIndex > -1) {
-      theURL = thePageURL.slice(0, theLanguageIndex) + "?language=" + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
+      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
     } else if (theHashIndex > -1) {
-      theURL = thePageURL.replace("#", "?language=" + window.languageCodeToCheck + "#")
+      theURL = thePageURL.replace("#", theParameter + window.languageCodeToCheck + "#")
     } else {
-      theURL = thePageURL + "?language=" + window.languageCodeToCheck;
+      theURL = thePageURL + theParameter + window.languageCodeToCheck;
     }
     window.vocLanguagesSelector += '<li><a href="' + theURL + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
@@ -784,7 +785,7 @@ function getVocKind() {
       window.theVocKind = "object";
     } else if (window.theVocURI.indexOf("/c/") > -1) {
       window.theVocKind = "class";
-	} else if (window.theVocURI.indexOf("/u/") > -1) {
+    } else if (window.theVocURI.indexOf("/u/") > -1) {
       window.theVocKind = "unconstrained";
     } else {
       window.theVocKind = "canonical";
@@ -804,8 +805,9 @@ function makeColumnRow(content, className) {
 }
 function getLanguageURL(permalink) {
   var theUrl = "";
+  var theParameter = window.theLanguageParameter;
   if (typeof permalink !== "undefined") {
-    theUrl = permalink.replace("#", "?language=" + window.theCurrentLanguageCode + "#");
+    theUrl = permalink.replace("#", "?" + theParameter + window.theCurrentLanguageCode + "#");
   }
   return theUrl;
 }
@@ -961,7 +963,7 @@ function setVocDetails(json) {
     filepathPart = "Elements";
     filenameLocal = "rof";
     break;
-	case "unconstrained":
+    case "unconstrained":
     theVocMenuLink = '<a href="/Elements/">RDA element sets</a>';
     filepathPart = "Elements";
     filenameLocal = "u";
@@ -1092,9 +1094,9 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
-	case "unconstrained":
+    case "unconstrained":
     theSemanticsBlock += '<p>The properties in the unconstrained element set have no domain or range and have semantics that are independent of the IFLA Library Reference Model.</p>';
-	break;
+    break;
     default:
     theSemanticsBlock = "";
   }
