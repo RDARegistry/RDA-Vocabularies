@@ -12,6 +12,7 @@ var languageCodeToCheck = "";
 var regLanguages = "";
 var theCurrentLanguageCode = "";
 var theDefaultLanguageCode = "en";
+var theLanguageParameter = "language=";
 var theDTStrings = "";
 var theVocData = "";
 var theVocDomain = "";
@@ -531,7 +532,7 @@ window.onhashchange = function () {
 };
 function getLanguageCodeFromURL() {
   var thePageURL = window.location.href;
-  var theParameter = "language=";
+  var theParameter = window.theLanguageParameter;
   var theHashIndex = 0;
   var theLanguageIndex = 0;
   var theCodeLength = 0;
