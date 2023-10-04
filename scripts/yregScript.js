@@ -530,8 +530,9 @@ window.onhashchange = function () {
   table.search('').column('Curie:name').search(window.localIDToSearch).draw();
 };
 function getLanguageCodeFromURL() {
+  var theLanguageParameter = "language=";
   var theURL = window.location.href;
-  var theLanguageCodeIndex = theURL.indexOf("language=") + 9;
+  var theLanguageCodeIndex = theURL.indexOf(theLanguageParameter) + theLanguageParameter.length;
   var theHashIndex = theURL.indexOf("#");
   var theCodeLength = 0;
   if (theHashIndex < 0) {
