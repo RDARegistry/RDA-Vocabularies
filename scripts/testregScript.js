@@ -541,7 +541,7 @@ function getLanguageCodeFromURL() {
   if (theHashIndex < 0) {
     theHashIndex = thePageURL.length + 1;
   }
-  theCodeLength = theHashIndex - theLanguageIndex;
+  theCodeLength = theHashIndex - (theLanguageIndex + theParameter.length);
   if (theLanguageIndex > -1) {
     window.theCurrentLanguageCode = thePageURL.substr(theLanguageIndex + theParameter.length, theCodeLength);
   } else {
