@@ -530,10 +530,11 @@ window.onhashchange = function () {
   table.search('').column('Curie:name').search(window.localIDToSearch).draw();
 };
 function getLanguageCodeFromURL() {
-  var theURL = window.location.href;
-  var theLanguageIndex = theURL.indexOf("language=");
-  if (theLanguageIndex > 0) {
-    window.theCurrentLanguageCode = theURL.substr(theLanguageIndex + 9, 2);
+  var thePageURL = window.location.href;
+  var theLanguageIndex = 0;
+  theLanguageIndex = thePageURL.indexOf("language=");
+  if (theLanguageIndex > -1) {
+    window.theCurrentLanguageCode = thePageURL.substr(theLanguageIndex + 9, 2);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
