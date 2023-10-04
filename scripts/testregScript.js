@@ -531,10 +531,17 @@ window.onhashchange = function () {
 };
 function getLanguageCodeFromURL() {
   var thePageURL = window.location.href;
+  var theHashIndex = 0;
   var theLanguageIndex = 0;
+  var theCodeLength = 0;
   theLanguageIndex = thePageURL.indexOf("language=");
+  theHashIndex = thePageURL.indexOf("#");
+  if (theHashIndex < 0) {
+    theHashIndex = thePageURL.length + 1;
+  }
+  theCodeLength = theHashIndex - theLanguageIndex;
   if (theLanguageIndex > -1) {
-    window.theCurrentLanguageCode = thePageURL.substr(theLanguageIndex + 9, 2);
+    window.theCurrentLanguageCode = thePageURL.substr(theLanguageIndex + 9, theCodeLength);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
