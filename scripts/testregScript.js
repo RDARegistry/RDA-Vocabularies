@@ -678,9 +678,12 @@ function getLanguageIsUsed(languageObject) {
     theHashIndex = thePageURL.indexOf("#");
     theLanguageIndex = thePageURL.indexOf(theParameter);
     if ((theLanguageIndex > -1) && (theHashIndex > -1)) {
-      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck + thePageURL.slice(theHashIndex)
-    } else if (theHashIndex > -1) {
-      theURL = thePageURL.replace("#", "?" + theParameter + window.languageCodeToCheck + "#")
+      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck + thePageURL.slice(theHashIndex);
+    } else if (theLanguageIndex > -1) {
+      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck;
+    }
+    else if (theHashIndex > -1) {
+      theURL = thePageURL.replace("#", "?" + theParameter + window.languageCodeToCheck + "#");
     } else {
       theURL = thePageURL + "?" + theParameter + window.languageCodeToCheck;
     }
