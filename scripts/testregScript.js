@@ -531,6 +531,7 @@ window.onhashchange = function () {
 };
 function getLanguageCodeFromURL() {
   var thePageURL = window.location.href;
+  var theParameter = "language=";
   var theHashIndex = 0;
   var theLanguageIndex = 0;
   var theCodeLength = 0;
@@ -541,7 +542,7 @@ function getLanguageCodeFromURL() {
   }
   theCodeLength = theHashIndex - theLanguageIndex;
   if (theLanguageIndex > -1) {
-    window.theCurrentLanguageCode = thePageURL.substr(theLanguageIndex + 9, theCodeLength);
+    window.theCurrentLanguageCode = thePageURL.substr(theLanguageIndex + theParameter.length, theCodeLength);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
