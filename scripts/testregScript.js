@@ -678,7 +678,7 @@ function getLanguageIsUsed(languageObject) {
     theHashIndex = thePageURL.indexOf("#");
     theLanguageIndex = thePageURL.indexOf(theParameter);
     if (theLanguageIndex > -1) {
-      theURL = thePageURL.slice(0, theLanguageIndex) + "?" + theParameter + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
+      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
     } else if (theHashIndex > -1) {
       theURL = thePageURL.replace("#", "?" + theParameter + window.languageCodeToCheck + "#")
     } else {
@@ -809,7 +809,8 @@ function getLanguageURL(permalink) {
   if (typeof permalink !== "undefined") {
     theUrl = permalink.replace("#", "?" + theParameter + window.theCurrentLanguageCode + "#");
   }
-  return theUrl;lan
+  return theUrl;
+  lan
 }
 function formatDetail(d) {
   var detailRow = formatDetailRow();
