@@ -691,8 +691,14 @@ function getLanguageIsUsed(languageObject) {
   return;
 }
 function getLanguageIsPublished(entryObject) {
-  if (typeof entryObject[ "ToolkitLabel"] != "undefined") {
-    if (typeof entryObject[ "ToolkitLabel"][window.languageCodeToCheck] != "undefined") {
+  var labelToCheck = "";
+  if (theVocKind = "unconstrained") {
+    labelToCheck = "label";
+  } else {
+    labelToCheck = "ToolkitLabel";
+  }
+  if (typeof entryObject[ labelToCheck] != "undefined") {
+    if (typeof entryObject[ labelToCheck][window.languageCodeToCheck] != "undefined") {
       window.languageIsUsed = true;
     }
   }
