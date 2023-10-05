@@ -485,7 +485,7 @@ function setLanguagesData() {
       "infoFiltered": "(由 _MAX_ 项结果过滤)",
       "thousands": ",",
       "lengthMenu": "显示 _MENU_ 项结果",
-      "loadingRecords": "Đang tải...",
+      "loadingRecords": "装载记录...",
       "processing": "处理中...",
       "search": "搜索:",
       "zeroRecords": "没有匹配结果",
