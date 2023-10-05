@@ -693,7 +693,7 @@ function getLanguageIsUsed(languageObject) {
 function getLanguageIsPublished(entryObject) {
   var labelToCheck = "";
   if (theVocKind = "unconstrained") {
-    labelToCheck = "Label";
+    labelToCheck = "label";
   } else {
     labelToCheck = "ToolkitLabel";
   }
