@@ -12,6 +12,7 @@ var languageCodeToCheck = "";
 var regLanguages = "";
 var theCurrentLanguageCode = "";
 var theDefaultLanguageCode = "en";
+var theLanguageParameter = "language=";
 var theDTStrings = "";
 var theVocData = "";
 var theVocDomain = "";
@@ -484,7 +485,7 @@ function setLanguagesData() {
       "infoFiltered": "(由 _MAX_ 项结果过滤)",
       "thousands": ",",
       "lengthMenu": "显示 _MENU_ 项结果",
-      "loadingRecords": "Đang tải...",
+      "loadingRecords": "装载记录...",
       "processing": "处理中...",
       "search": "搜索:",
       "zeroRecords": "没有匹配结果",
@@ -530,10 +531,19 @@ window.onhashchange = function () {
   table.search('').column('Curie:name').search(window.localIDToSearch).draw();
 };
 function getLanguageCodeFromURL() {
-  var theURL = window.location.href;
-  var theIndex = theURL.indexOf("language=");
-  if (theIndex > 0) {
-    window.theCurrentLanguageCode = theURL.substr(theIndex + 9, 2);
+  var thePageURL = window.location.href;
+  var theParameter = window.theLanguageParameter;
+  var theHashIndex = 0;
+  var theLanguageIndex = 0;
+  var theCodeLength = 0;
+  theLanguageIndex = thePageURL.indexOf(theParameter);
+  theHashIndex = thePageURL.indexOf("#");
+  if (theHashIndex < 0) {
+    theHashIndex = thePageURL.length + 1;
+  }
+  theCodeLength = theHashIndex - (theLanguageIndex + theParameter.length);
+  if (theLanguageIndex > -1) {
+    window.theCurrentLanguageCode = thePageURL.substr(theLanguageIndex + theParameter.length, theCodeLength);
   } else {
     window.theCurrentLanguageCode = window.theDefaultLanguageCode;
   }
@@ -656,6 +666,7 @@ function getLanguageFromLanguages(languageObject) {
 function getLanguageIsUsed(languageObject) {
   var theLanguageLabel = "";
   var thePageURL = window.location.href;
+  var theParameter = window.theLanguageParameter;
   var theURL = "";
   var theLanguageIndex = 0;
   var theHashIndex = 0;
@@ -665,13 +676,15 @@ function getLanguageIsUsed(languageObject) {
   if (window.languageIsUsed) {
     theLanguageLabel = languageObject[ "label"];
     theHashIndex = thePageURL.indexOf("#");
-    theLanguageIndex = thePageURL.indexOf("?language=");
-    if (theLanguageIndex > -1) {
-      theURL = thePageURL.slice(0, theLanguageIndex) + "?language=" + window.languageCodeToCheck + thePageURL.slice(theLanguageIndex + 12)
+    theLanguageIndex = thePageURL.indexOf(theParameter);
+    if ((theLanguageIndex > -1) && (theHashIndex > -1)) {
+      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck + thePageURL.slice(theHashIndex);
+    } else if (theLanguageIndex > -1) {
+      theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck;
     } else if (theHashIndex > -1) {
-      theURL = thePageURL.replace("#", "?language=" + window.languageCodeToCheck + "#")
+      theURL = thePageURL.replace("#", "?" + theParameter + window.languageCodeToCheck + "#");
     } else {
-      theURL = thePageURL + "?language=" + window.languageCodeToCheck;
+      theURL = thePageURL + "?" + theParameter + window.languageCodeToCheck;
     }
     window.vocLanguagesSelector += '<li><a href="' + theURL + '" id="lang_' + window.languageCodeToCheck + '">' + theLanguageLabel + '</a></li>';
   }
