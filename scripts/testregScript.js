@@ -681,8 +681,7 @@ function getLanguageIsUsed(languageObject) {
       theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck + thePageURL.slice(theHashIndex);
     } else if (theLanguageIndex > -1) {
       theURL = thePageURL.slice(0, theLanguageIndex) + theParameter + window.languageCodeToCheck;
-    }
-    else if (theHashIndex > -1) {
+    } else if (theHashIndex > -1) {
       theURL = thePageURL.replace("#", "?" + theParameter + window.languageCodeToCheck + "#");
     } else {
       theURL = thePageURL + "?" + theParameter + window.languageCodeToCheck;
@@ -813,7 +812,6 @@ function getLanguageURL(permalink) {
     theUrl = permalink.replace("#", "?" + theParameter + window.theCurrentLanguageCode + "#");
   }
   return theUrl;
-  lan
 }
 function formatDetail(d) {
   var detailRow = formatDetailRow();
