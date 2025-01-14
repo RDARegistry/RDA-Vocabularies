@@ -29,9 +29,9 @@
     
         
         
-    
-        <owl:versionInfo>v5.1.1</owl:versionInfo>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-06</dc:modified>
+    <rdf:type>owl:Ontology</rdf:type>
+        <owl:versionInfo>v5.2.0</owl:versionInfo>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-01-10</dc:modified>
     </owl:Ontology>
 
 <!-- Properties -->
@@ -3837,17 +3837,17 @@
 <!-- Property: DEPRECATED -->
 <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20331">
   <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
-  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008"/>
-  <rdfs:label xml:lang="en">has contributor to aggregated content (Deprecated)</rdfs:label>
-  <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/contributorToAggregatedContent.en"/>
+  
+  <rdfs:label xml:lang="en">has category of expression</rdfs:label>
+  
   <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   
   <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
-  <rdfs:range rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20331"/>
-  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20053"/>
   
-  <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/a/object/P50451"/>
+  <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20331"/>
+  
+  
+  
 
     
         
@@ -3873,7 +3873,11 @@
         
         
         
-    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20332"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00029"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/categoryOfExpression.en"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20332"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20042"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20043"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20026"/>
@@ -4181,7 +4185,6 @@
         
         
     <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20328"/>
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20331"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20448"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20389"/>
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20327"/>
@@ -12342,5 +12345,224 @@
         <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20577"/>
         <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20298"/>
     <rdfs:label xml:lang="fi">konkordanssihakemisto (teos)</rdfs:label>
+    </rdf:Description>
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20318">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has relief representation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/reliefRepresentation.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20318"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20001">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has content type</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/contentType.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20001"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20006">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has language of expression</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/languageOfExpression.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20006"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20061">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has form of tactile notation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/formOfTactileNotation.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20061"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20062"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20062">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has form of notation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/formOfNotation.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20062"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20061"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20063"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20064"/>
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/object/P20065"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20063">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has form of notated movement</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/formOfNotatedMovement.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20063"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20062"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20064">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has form of musical notation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/formOfMusicalNotation.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20064"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20062"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20065">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has script</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/script.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20065"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/object/P20062"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20209">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has format of notated music</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/formatOfNotatedMusic.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20209"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20215">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has medium of performance of musical content</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/mediumOfPerformanceOfMusicalContent.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20215"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20216">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has projection of cartographic content</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/projectionOfCartographicContent.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20216"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20290">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has aspect ratio designation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/aspectRatioDesignation.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20290"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20291">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has scale designation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/scaleDesignation.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20291"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20317">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has prime meridian</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/primeMeridian.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20317"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20322">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has intended audience of expression</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/intendedAudienceOfExpression.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20322"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20323">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has interactivity mode</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/interactivityMode.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20323"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20324">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has medium of performance of choreographic content</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/mediumOfPerformanceOfChoreographicContent.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20324"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20326">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has key of expression</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/keyOfExpression.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20326"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20333">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has related entity of expression</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/relatedEntityOfExpression.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20333"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/x/object/P00028"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20572">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has designation of version</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/designationOfVersion.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20572"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/e/object/P20573">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/e/object/"/>
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001"/>
+        <rdfs:label xml:lang="en">has colour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://rdaregistry.info/Elements/c/C10006"/>
+        <rdfs:range rdf:resource="http://rdaregistry.info/Elements/skos/Concept"/>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/e/object/colour.en"/>
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/e/P20573"/>
     </rdf:Description>
 </rdf:RDF>
