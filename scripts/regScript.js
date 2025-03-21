@@ -1098,7 +1098,7 @@ function formatSemanticsBlock() {
     theSemanticsBlock += '<ul class="list-unstyled ms-3 my-0 ps-1">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>has a range of the class that represents the related entity.</li>';
-    theSemanticsBlock += '<li>has an inverse property.</li>';
+    theSemanticsBlock += '<li>has an inverse property, excepting properties that do not have a range of a class that represents an RDA entity.</li>';
     theSemanticsBlock += '<li>is linked to its parent <strong>canonical</strong> property in ' + theVocToParent + ' by <em>rdfs:subPropertyOf</em>.</li>';
     theSemanticsBlock += '</ul>';
     break;
