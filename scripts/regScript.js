@@ -451,6 +451,31 @@ function setLanguagesData() {
       }
     }
   }, {
+    	code: "tr", label: "Turkish", rtl: false,
+    dtStrings: {
+      "decimal": ",",
+      "emptyTable": "Tabloda veri mevcut değil",
+      "info": "_TOTAL_ girişlerinin _START_ ile _END_ arası gösteriliyor",
+      "infoEmpty": "0 ile 0 arası gösteriliyor, toplam 0 kayıt",
+      "infoFiltered": "(toplam_MAX_kayıttan filtrelendi)",
+      "thousands": " ",
+      "lengthMenu": "_MENU_ girişlerini göster",
+      "loadingRecords": "Yükleniyor...",
+      "processing": "İşleniyor...",
+      "search": "Arama:",
+      "zeroRecords": "Eşleşen kayıt bulunamadı",
+      "paginate": {
+        "first": "İlk",
+        "last": "Son",
+        "previous": "Sonraki",
+        "next": "Önceki"
+      },
+      "aria": {
+        "sortAscending": ": sütunu artan şekilde sıralamak için etkinleştirin",
+        "sortDescending": ": sütunu azalan şekilde sıralamak için etkinleştir"
+      }
+    }
+  }, {
     code: "vi", label: "Vietnamese", rtl: false,
     dtStrings: {
       "decimal": "",
