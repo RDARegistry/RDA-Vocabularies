@@ -1101,7 +1101,7 @@ function formatSemanticsBlock() {
     case "canonical":
     var theVocToDatatype = '<a href="' + window.theVocURI + 'datatype/' + '">' + window.theVocTitle.replace("properties", "datatype properties") + '</a>';
     var theVocToObject = '<a href="' + window.theVocURI + 'object/' + '">' + window.theVocTitle.replace("properties", "object properties") + '</a>';
-    theSemanticsBlock += '<p>Each property in the canonical element set:</p>';
+    theSemanticsBlock += '<p>Each property in the canonical element set (where applicable):</p>';
     theSemanticsBlock += '<ul class="list-unstyled ms-3 my-0 ps-3">';
     theSemanticsBlock += '<li>has a domain of the class that represents the ' + window.theVocDomain + ' entity.</li>';
     theSemanticsBlock += '<li>is linked from its child <strong>datatype</strong> property in ' + theVocToDatatype + ' by <em>rdfs:subPropertyOf</em>.</li>';
