@@ -78,26 +78,26 @@ function setLanguagesData() {
   }, {
     code: "cs", label: "Czech", rtl: false,
     dtStrings: {
-      "decimal": "",
-      "emptyTable": "No data available in table",
-      "info": "Showing _START_ to _END_ of _TOTAL_ entries",
-      "infoEmpty": "Showing 0 to 0 of 0 entries",
-      "infoFiltered": "(filtered from _MAX_ total entries)",
-      "thousands": ",",
-      "lengthMenu": "Show _MENU_ entries",
-      "loadingRecords": "Loading...",
-      "processing": "Processing...",
-      "search": "Search:",
-      "zeroRecords": "No matching records found",
+      "decimal": ",",
+      "emptyTable": "V tabulce nejsou k dispozici žádná data",
+      "info": "Zobrazeno od _START_ do _END_ z _TOTAL_ záznamů",
+      "infoEmpty": "Zobrazeno od 0 do 0 z 0 záznamů",
+      "infoFiltered": "(filtrováno z celkem _MAX_ záznamů)",
+      "thousands": ".",
+      "lengthMenu": "Zobrazit _MENU_ záznamů",
+      "loadingRecords": "Načítání...",
+      "processing": "Probíhá zpracování...",
+      "search": "Vyhledávání:",
+      "zeroRecords": "Nenalezeny odpovídající záznamy",
       "paginate": {
-        "first": "First",
-        "last": "Last",
-        "next": "Next",
-        "previous": "Previous"
+        "first": "První",
+        "last": "Poslední",
+        "next": "Následující",
+        "previous": "Předcházející"
       },
       "aria": {
-        "sortAscending": ": activate to sort column ascending",
-        "sortDescending": ": activate to sort column descending"
+        "sortAscending": ": aktivujte pro vzestupné řazení sloupce",
+        "sortDescending": ": aktivujte pro sestupné řazení sloupce"
       }
     }
   }, {
